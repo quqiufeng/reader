@@ -208,6 +208,7 @@ void *rd_open(const char *path, int *err)
         "img{max-width:100%!important;height:auto!important;}"
         "table{max-width:100%!important;}"
         "a{color:#1B365D;text-decoration:none;}"
+        "*{font-style:normal !important;}"
         "pre,code{white-space:pre-wrap;}");
 
     char epub_path[PATH_MAX];
@@ -397,6 +398,7 @@ int rd_layout(void *handle, float w, float h, float em,
         "body{margin:0;padding:0 %.0fpx;font-style:normal !important;}"
         "p{margin:0 0 0.8em 0;line-height:%.2f;text-align:justify;font-style:normal !important;}"
         "i,em{font-style:normal !important;}"
+        "*{font-style:normal !important;}"
         "div,section{width:auto!important;max-width:100%%!important;}"
         "img{max-width:100%%!important;height:auto!important;}"
         "table{max-width:100%%!important;}"
