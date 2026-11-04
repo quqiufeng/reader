@@ -25,6 +25,7 @@ char *rd_list_dir(const char *path);
 char *rd_page_fonts(void *handle, int page);
 char *rd_page_links(void *handle, int page);
 char *rd_search(void *handle, const char *query, int start_page, int max_hits);
+int   rd_extract_book(const char *path, const char *out_dir);
 ]]
 
 local root = os.getenv("READER_ROOT") or "."
@@ -50,6 +51,10 @@ local M = {}
 
 function M.detect(path)
     return tonumber(lib.rd_detect_format(path))
+end
+
+function M.extract_book(path, out_dir)
+    return tonumber(lib.rd_extract_book(path, out_dir))
 end
 
 function M.open(path)
@@ -104,7 +109,7 @@ function M.free(p)
 end
 
 function M.save_pages_png(path, a, aw, ah, b, bw, bh, bg, gap)
-    return lib.rd_save_pages_png(path, a, aw, ah, b, bw, bh,
+    return lib.rd_save_pages_png(path, a, aw, ah, b, bw or 0, bh or 0,
         bg[1], bg[2], bg[3], gap or 5) == 0
 end
 

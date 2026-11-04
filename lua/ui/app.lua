@@ -177,6 +177,9 @@ local total = 0
 local pages = nil
 local is_txt = false
 local page = 0
+v.chapters = nil
+v.chapter_idx = 1
+v.chapter_mode = false
 local running = true
 
 v.snapshot_path = function()
@@ -295,16 +298,23 @@ local function book_rec()
     return rec
 end
 
-local function save_progress()
+function v.save_progress()
     if not book then return end
     local rec = book_rec()
     rec.page = page
     rec.updated = os.time()
-    rec.percent = total > 0 and ((page + 1) * 100.0 / total) or 0
+    if v.chapter_mode and v.chapters and #v.chapters > 0 then
+        rec.chapter = v.chapter_idx
+        local frac = total > 0 and ((page + 1) / total) or 0
+        rec.percent = ((v.chapter_idx - 1) + frac) * 100.0 / #v.chapters
+    else
+        rec.chapter = nil
+        rec.percent = total > 0 and ((page + 1) * 100.0 / total) or 0
+    end
     store.save_state(state_file, progress)
 end
 
-local function make_text(text, font, c)
+function v.make_text(text, font, c)
     if not font then return nil, 0, 0 end
     local w, h = ttf.size(font, text)
     local t = ttf.render_texture(ren, font, text, c[1], c[2], c[3], c[4] or 255)
@@ -314,12 +324,12 @@ end
 v.show_toast = function(text, seconds)
     if v.toast_tex then sdl.destroy_texture(v.toast_tex); v.toast_tex = nil end
     v.toast = text
-    v.toast_tex, v.toast_w, v.toast_h = make_text(text, f_page, theme.text)
+    v.toast_tex, v.toast_w, v.toast_h = v.make_text(text, f_page, theme.text)
     v.toast_until = v.now() + (seconds or 3)
     v.dirty = true
 end
 
-local function draw_toast()
+function v.draw_toast()
     if not v.toast or not v.toast_tex then return end
     if v.now() >= (v.toast_until or 0) then return end
     local pad = S(18)
@@ -348,16 +358,16 @@ local function rebuild_header_actions()
     if v.dual_tex then sdl.destroy_texture(v.dual_tex); v.dual_tex = nil end
     if v.shot_tex then sdl.destroy_texture(v.shot_tex); v.shot_tex = nil end
     if v.hdr_open_tex then sdl.destroy_texture(v.hdr_open_tex); v.hdr_open_tex = nil end
-    hdr_toc_tex, hdr_toc_w, hdr_toc_h = make_text("目录", f_page, theme.muted)
-    hdr_bm_tex, hdr_bm_w, hdr_bm_h = make_text("书签", f_page, theme.muted)
-    hdr_st_tex, hdr_st_w, hdr_st_h = make_text("设置", f_page, theme.muted)
-    v.fs_tex, v.fs_w, v.fs_h = make_text("全屏", f_page, theme.muted)
-    v.max_tex, v.max_w, v.max_h = make_text(v.max and "还原" or "最大化", f_page, theme.muted)
-    v.eye_tex, v.eye_w, v.eye_h = make_text("换色", f_page, theme.muted)
-    v.dual_tex, v.dual_w, v.dual_h = make_text(
+    hdr_toc_tex, hdr_toc_w, hdr_toc_h = v.make_text("目录", f_page, theme.muted)
+    hdr_bm_tex, hdr_bm_w, hdr_bm_h = v.make_text("书签", f_page, theme.muted)
+    hdr_st_tex, hdr_st_w, hdr_st_h = v.make_text("设置", f_page, theme.muted)
+    v.fs_tex, v.fs_w, v.fs_h = v.make_text("全屏", f_page, theme.muted)
+    v.max_tex, v.max_w, v.max_h = v.make_text(v.max and "还原" or "最大化", f_page, theme.muted)
+    v.eye_tex, v.eye_w, v.eye_h = v.make_text("换色", f_page, theme.muted)
+    v.dual_tex, v.dual_w, v.dual_h = v.make_text(
         (v.fs or v.dual) and "单栏" or "双栏", f_page, theme.muted)
-    v.shot_tex, v.shot_w, v.shot_h = make_text("截图", f_page, theme.muted)
-    v.hdr_open_tex, v.hdr_open_w, v.hdr_open_h = make_text("打开", f_page, theme.muted)
+    v.shot_tex, v.shot_w, v.shot_h = v.make_text("截图", f_page, theme.muted)
+    v.hdr_open_tex, v.hdr_open_w, v.hdr_open_h = v.make_text("打开", f_page, theme.muted)
     v.fs_x = W - S(24) - (v.fs_w or 0)
     v.max_x = v.fs_x - S(14) - (v.max_w or 0)
     v.eye_x = v.max_x - S(14) - (v.eye_w or 0)
@@ -370,14 +380,20 @@ local function rebuild_header_actions()
 end
 rebuild_header_actions()
 
-local function refresh_text()
+function v.refresh_text()
     if title_tex then sdl.destroy_texture(title_tex); title_tex = nil end
-    title_tex, title_w, title_h = make_text(title_text, f_title, theme.ink)
+    title_tex, title_w, title_h = v.make_text(title_text, f_title, theme.ink)
 
     if page_tex then sdl.destroy_texture(page_tex); page_tex = nil end
     local pct = total > 0 and ((page + 1) * 100.0 / total) or 0
     local ptxt
-    if (v.fs or v.dual) and not is_txt and doc and page > 0 and page + 2 <= total then
+    if v.chapter_mode then
+        if (v.fs or v.dual) and page + 2 <= total then
+            ptxt = string.format("第 %d-%d 页", page + 1, page + 2)
+        else
+            ptxt = string.format("第 %d 页", page + 1)
+        end
+    elseif (v.fs or v.dual) and not is_txt and doc and page > 0 and page + 2 <= total then
         ptxt = string.format("%d-%d / %d · %.1f%%", page + 1, page + 2, total, pct)
     else
         ptxt = string.format("%d / %d · %.1f%%", page + 1, total, pct)
@@ -385,7 +401,7 @@ local function refresh_text()
     if v.zoom and v.zoom ~= 1 then
         ptxt = ptxt .. string.format(" · %d%%", math.floor(v.zoom * 100 + 0.5))
     end
-    page_tex, page_w, page_h = make_text(ptxt, f_page, theme.muted)
+    page_tex, page_w, page_h = v.make_text(ptxt, f_page, theme.muted)
 end
 
 local textutil = require("ui.text")
@@ -486,7 +502,7 @@ local function close_book()
     close_toc()
     close_bm()
     close_st()
-    save_progress()
+    v.save_progress()
     if tex then sdl.destroy_texture(tex); tex = nil end
     if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
     if v.pcache then v.pcache:clear() end
@@ -507,6 +523,125 @@ local function close_book()
     v.content_sig_value = nil
     v.search_cache = {}
     book = nil
+    v.chapters = nil
+    v.chapter_idx = 1
+    v.chapter_mode = false
+end
+
+function v.ch_read_text(p)
+    local f = io.open(p, "rb")
+    if not f then return nil end
+    local s = f:read("*a")
+    f:close()
+    return s
+end
+
+function v.ch_unescape(s)
+    s = s:gsub("&lt;", "<"):gsub("&gt;", ">"):gsub("&quot;", '"')
+         :gsub("&apos;", "'"):gsub("&nbsp;", " ")
+    s = s:gsub("&#(%d+);", function(d)
+        local n = tonumber(d)
+        if n and n < 128 then return string.char(n) end
+        return ""
+    end)
+    return (s:gsub("&amp;", "&"))
+end
+
+function v.ch_strip(s)
+    s = s:gsub("<[^>]*>", "")
+    s = s:gsub("%s+", " ")
+    return (s:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
+function v.ch_join(base, rel)
+    if not rel or rel == "" then return base end
+    if rel:sub(1, 1) == "/" then return rel end
+    local parts = {}
+    for seg in (base .. "/" .. rel):gmatch("[^/]+") do
+        if seg == ".." then
+            table.remove(parts)
+        elseif seg ~= "." and seg ~= "" then
+            parts[#parts + 1] = seg
+        end
+    end
+    return "/" .. table.concat(parts, "/")
+end
+
+function v.ch_hash(s)
+    local h = 5381
+    for i = 1, #s do h = (h * 33 + s:byte(i)) % 4294967296 end
+    return string.format("%08x", h)
+end
+
+function v.ch_chapter_title(path)
+    local s = v.ch_read_text(path)
+    if not s then return nil end
+    local t = s:match("<h1[^>]*>(.-)</h1>")
+        or s:match("<h2[^>]*>(.-)</h2>")
+        or s:match("<h3[^>]*>(.-)</h3>")
+    if not t then return nil end
+    t = v.ch_strip(v.ch_unescape(t))
+    if t == "" or #t > 60 then return nil end
+    return t
+end
+
+function v.ch_parse(root)
+    local container = v.ch_read_text(root .. "/META-INF/container.xml")
+    local opf_rel = container and container:match('full%-path="([^"]+)"')
+    if not opf_rel then return nil end
+    local opf_path = v.ch_join(root, opf_rel)
+    local opf = v.ch_read_text(opf_path)
+    if not opf then return nil end
+    local opf_dir = opf_path:match("^(.*)/[^/]*$") or root
+
+    local manifest, ncx_href = {}, nil
+    for tag in opf:gmatch("<item%s+[^>]*>") do
+        local id = tag:match('id="([^"]*)"')
+        local href = tag:match('href="([^"]*)"')
+        local mt = tag:match('media%-type="([^"]*)"')
+        if href then
+            href = v.ch_unescape(href)
+            if id then manifest[id] = href end
+            if (mt and mt:find("dtbncx", 1, true)) or href:lower():match("%.ncx$") then
+                ncx_href = href
+            end
+        end
+    end
+
+    local spine = opf:match("<spine[^>]*>(.-)</spine>") or ""
+    local list = {}
+    for idref in spine:gmatch('<itemref[^>]-idref="([^"]-)"') do
+        local href = manifest[idref]
+        if href then
+            local clean = href:gsub("#.*$", "")
+            list[#list + 1] = { href = clean, path = v.ch_join(opf_dir, clean) }
+        end
+    end
+    if #list == 0 then return nil end
+
+    local titles = {}
+    if ncx_href then
+        local ncx = v.ch_read_text(v.ch_join(opf_dir, ncx_href))
+        if ncx then
+            local nav = ncx:match("<navMap[^>]*>(.*)</navMap>") or ncx
+            nav = nav:gsub("%s+", " ")
+            for text, src in nav:gmatch("<text[^>]*>(.-)</text>.-<content[^>]-src=\"([^\"]*)\"") do
+                local href = v.ch_unescape(src):gsub("#.*$", "")
+                titles[href] = v.ch_strip(v.ch_unescape(text))
+            end
+        end
+    end
+
+    for i, ch in ipairs(list) do
+        ch.title = titles[ch.href]
+        if not ch.title or ch.title == "" then
+            ch.title = v.ch_chapter_title(ch.path)
+        end
+        if not ch.title or ch.title == "" then
+            ch.title = string.format("第 %d 章", i)
+        end
+    end
+    return list
 end
 
 local function invert_rgba(pixels, w, h, stride)
@@ -652,7 +787,7 @@ v.save_content_snapshot = function(path)
     return ok
 end
 
-local function load_page(n, keep_scroll)
+function v.load_page(n, keep_scroll)
     local sig = v.content_sig()
     local invalidate = v.pending_layout or sig ~= v.content_sig_value
     if invalidate then
@@ -686,7 +821,7 @@ local function load_page(n, keep_scroll)
         tex_w, tex_h = W, H
         page = n
         v.sy = 0
-        refresh_text()
+        v.refresh_text()
         v.content_sig_value = v.content_sig()
         print(string.format("[reader] txt page %d/%d", page + 1, total))
         return true
@@ -700,7 +835,7 @@ local function load_page(n, keep_scroll)
     end
 
     local spread, _, _, _, target_w = v.view_metrics()
-    if spread and n == 0 then
+    if spread and n == 0 and not v.chapter_mode then
         target_w = math.max(160, W - S(48))
     end
     target_w = math.floor(target_w * v.zoom)
@@ -712,7 +847,7 @@ local function load_page(n, keep_scroll)
         tex, tex_w, tex_h = v.render_into(n, target_w)
     end
     if not tex then return false end
-    if spread and n > 0 and n + 1 < total then
+    if spread and (n > 0 or v.chapter_mode) and n + 1 < total then
         local ce2 = v.pcache:take(sig .. ":" .. (n + 1))
         if ce2 then
             v.p2, v.p2w, v.p2h = ce2.tex, ce2.w, ce2.h
@@ -727,7 +862,7 @@ local function load_page(n, keep_scroll)
     if v.p2 then v.load_links(page + 1) end
     v.sy = keep_scroll and (v.sy or 0) or 0
     v.sy = math.max(0, math.min(v.max_scroll(), v.sy))
-    refresh_text()
+    v.refresh_text()
     v.content_sig_value = sig
     print(string.format("[reader] page %d/%d  %dx%d%s", page + 1, total,
         tex_w, tex_h, v.p2 and " (+1)" or ""))
@@ -786,7 +921,29 @@ v.normalize_book_path = function(path)
     return path
 end
 
-local function open_book(path, start_page)
+function v.open_chapter(idx, local_page)
+    if not v.chapters or not v.chapters[idx] then return false end
+    if doc then rd.close(doc); doc = nil end
+    v.pcache:clear()
+    if tex then sdl.destroy_texture(tex); tex = nil end
+    if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
+    local h, err = rd.open(v.chapters[idx].path)
+    if not h then return false, err end
+    doc = h
+    v.chapter_idx = idx
+    total = rd.page_count(doc)
+    if total <= 0 then return false end
+    v.layout:reset()
+    v.content_sig_value = nil
+    v.pending_layout = true
+    local p = local_page or 0
+    if p < 0 then p = total - 1 end
+    p = math.max(0, math.min(total - 1, p))
+    page = p
+    return v.load_page(p)
+end
+
+function v.open_book(path, start_page)
     if not path or path == "" then return false, "empty path" end
     path = v.normalize_book_path(path)
     if v.close_panels then v.close_panels() end
@@ -799,9 +956,46 @@ local function open_book(path, start_page)
     is_txt = fmt == 5
     v.reflow = fmt == 2 or fmt == 3 or fmt == 4
 
+    local name = path:match("([^/]+)$") or path
+    name = name:gsub("%.%w+$", "")
+    title_text = truncate_utf8(name, 14)
+    v.zoom = 1.0
+    v.pan_x = 0
+
     if is_txt then
         local ok, err = build_txt_pages(path)
         if not ok then return false, err end
+    elseif v.reflow then
+        local root = "/dev/shm/native-reader-cache/book_" .. v.ch_hash(path)
+        local probe = root .. "/META-INF/container.xml"
+        local pf = io.open(probe, "rb")
+        if pf then pf:close() else rd.extract_book(path, root) end
+        v.chapters = v.ch_parse(root)
+        if v.chapters and #v.chapters > 0 then
+            v.chapter_mode = true
+            local rec = progress[path]
+            local sc, sp = 1, 0
+            if start_page ~= nil then
+                sp = start_page
+            elseif rec and rec.chapter then
+                sc, sp = rec.chapter, rec.page or 0
+            elseif rec and rec.page then
+                sp = rec.page
+            end
+            sc = math.max(1, math.min(#v.chapters, sc))
+            if v.open_chapter(sc, sp) then
+                v.refresh_text()
+                v.save_progress()
+                return true
+            end
+            v.chapter_mode = false
+            v.chapters = nil
+        end
+        local err
+        doc, err = rd.open(path)
+        if not doc then return false, "open failed: " .. tostring(err) end
+        total = rd.page_count(doc)
+        if total <= 0 then return false, "no pages" end
     else
         local err
         doc, err = rd.open(path)
@@ -823,15 +1017,10 @@ local function open_book(path, start_page)
     v.pending_layout = v.reflow
 
     page = 0
-    v.zoom = 1.0
-    v.pan_x = 0
-    local name = path:match("([^/]+)$") or path
-    name = name:gsub("%.%w+$", "")
-    title_text = truncate_utf8(name, 14)
-    refresh_text()
-    if not load_page(start) then return false, "render failed" end
-    refresh_text()
-    save_progress()
+    v.refresh_text()
+    if not v.load_page(start) then return false, "render failed" end
+    v.refresh_text()
+    v.save_progress()
     return true
 end
 
@@ -861,6 +1050,16 @@ local function draw_page()
 end
 
 local function load_toc_data()
+    if v.chapter_mode and v.chapters then
+        local t = {}
+        for i, ch in ipairs(v.chapters) do
+            t[#t + 1] = {
+                chapter = i, level = 0,
+                title = ch.title or string.format("第 %d 章", i),
+            }
+        end
+        return t
+    end
     if is_txt then
         local t = {}
         for i = 1, total do
@@ -910,13 +1109,13 @@ local function open_toc()
     toc.items = load_toc_data()
     toc.open = true
     toc.selected = 1
-    toc.title_tex, toc.title_w, toc.title_h = make_text("目录", f_title, theme.ink)
-    toc.count_tex, toc.count_w, toc.count_h = make_text(
+    toc.title_tex, toc.title_w, toc.title_h = v.make_text("目录", f_title, theme.ink)
+    toc.count_tex, toc.count_w, toc.count_h = v.make_text(
         string.format("%d 条", #toc.items), f_page, theme.muted)
-    toc.hint_tex, toc.hint_w, toc.hint_h = make_text(
+    toc.hint_tex, toc.hint_w, toc.hint_h = v.make_text(
         "↑/↓ 选择 · Enter 跳转 · T/Esc 关闭", f_page, theme.muted)
     if #toc.items == 0 then
-        toc.empty_tex, toc.empty_w, toc.empty_h = make_text("（无目录）", f_body, theme.muted)
+        toc.empty_tex, toc.empty_w, toc.empty_h = v.make_text("（无目录）", f_body, theme.muted)
     end
     rebuild_toc_texs()
 end
@@ -935,9 +1134,12 @@ local function toc_activate()
     local it = toc.items[toc.selected]
     if not it then return end
     close_toc()
-    if it.page and it.page >= 0 and it.page < total then
-        load_page(it.page)
-        save_progress()
+    if v.chapter_mode and v.chapters and it.chapter and v.chapters[it.chapter] then
+        v.open_chapter(it.chapter, 0)
+        v.save_progress()
+    elseif it.page and it.page >= 0 and it.page < total then
+        v.load_page(it.page)
+        v.save_progress()
     end
 end
 
@@ -965,7 +1167,7 @@ end
 
 local function refresh_bm_count()
     if bm_count_tex then sdl.destroy_texture(bm_count_tex); bm_count_tex = nil end
-    bm_count_tex, bm_count_w, bm_count_h = make_text(
+    bm_count_tex, bm_count_w, bm_count_h = v.make_text(
         string.format("%d 条", #bm_items), f_page, theme.muted)
 end
 
@@ -973,14 +1175,30 @@ local function add_bookmark(note)
     if not book then return false, "no book" end
     local rec = book_rec()
     rec.bookmarks = rec.bookmarks or {}
+    local cur_ch = v.chapter_mode and v.chapter_idx or nil
     for _, b in ipairs(rec.bookmarks) do
-        if b.page == page then return false, "bookmark exists" end
+        if b.page == page and (b.chapter or 1) == (cur_ch or 1) then
+            return false, "bookmark exists"
+        end
     end
-    local pct = total > 0 and ((page + 1) * 100.0 / total) or 0
+    local pct
+    if v.chapter_mode and v.chapters and #v.chapters > 0 then
+        local frac = total > 0 and ((page + 1) / total) or 0
+        pct = ((v.chapter_idx - 1) + frac) * 100.0 / #v.chapters
+    else
+        pct = total > 0 and ((page + 1) * 100.0 / total) or 0
+    end
+    local label
+    if v.chapter_mode then
+        label = string.format("第 %d 章 · 第 %d 页", v.chapter_idx, page + 1)
+    else
+        label = string.format("第 %d 页", page + 1)
+    end
     rec.bookmarks[#rec.bookmarks + 1] = {
         page = page,
+        chapter = cur_ch,
         percent = pct,
-        note = (note and note ~= "") and note or string.format("第 %d 页", page + 1),
+        note = (note and note ~= "") and note or label,
         created = os.time(),
     }
     table.sort(rec.bookmarks, function(a, b)
@@ -1017,7 +1235,10 @@ local function rebuild_bm_texs()
 
     for i = first, last do
         local b = bm_items[i]
-        local text = string.format("第 %d 页  %s", v.bookmark_page(b) + 1, b.note or "")
+        local label = b.chapter
+            and string.format("第 %d 章 · 第 %d 页", b.chapter, (b.page or 0) + 1)
+            or string.format("第 %d 页", v.bookmark_page(b) + 1)
+        local text = string.format("%s  %s", label, b.note or "")
         local w, h = ttf.size(f_body, text)
         local c = (i == bm_selected) and theme.ink or theme.text
         local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
@@ -1033,13 +1254,13 @@ local function open_bookmarks()
     bm_items = load_bookmarks_data()
     bm_open = true
     bm_selected = 1
-    bm_title_tex, bm_title_w, bm_title_h = make_text("书签", f_title, theme.ink)
+    bm_title_tex, bm_title_w, bm_title_h = v.make_text("书签", f_title, theme.ink)
     refresh_bm_count()
-    bm_hint_tex, bm_hint_w, bm_hint_h = make_text(
+    bm_hint_tex, bm_hint_w, bm_hint_h = v.make_text(
         "A 添加 · ↑/↓ 选择 · Enter 跳转 · Delete 删除 · B/Esc 关闭",
         f_page, theme.muted)
     if #bm_items == 0 then
-        bm_empty_tex, bm_empty_w, bm_empty_h = make_text("（暂无书签）", f_body, theme.muted)
+        bm_empty_tex, bm_empty_w, bm_empty_h = v.make_text("（暂无书签）", f_body, theme.muted)
     end
     rebuild_bm_texs()
 end
@@ -1058,10 +1279,15 @@ local function bm_activate()
     local b = bm_items[bm_selected]
     if not b then return end
     close_bm()
+    if v.chapter_mode and v.chapters and b.chapter and v.chapters[b.chapter] then
+        v.open_chapter(b.chapter, b.page or 0)
+        v.save_progress()
+        return
+    end
     local p = v.bookmark_page(b)
     if p >= 0 and p < total then
-        load_page(p)
-        save_progress()
+        v.load_page(p)
+        v.save_progress()
     end
 end
 
@@ -1073,7 +1299,7 @@ local function bm_remove()
     bm_selected = math.max(1, math.min(#bm_items, bm_selected))
     if #bm_items == 0 then
         if bm_empty_tex then sdl.destroy_texture(bm_empty_tex); bm_empty_tex = nil end
-        bm_empty_tex, bm_empty_w, bm_empty_h = make_text("（暂无书签）", f_body, theme.muted)
+        bm_empty_tex, bm_empty_w, bm_empty_h = v.make_text("（暂无书签）", f_body, theme.muted)
     end
     rebuild_bm_texs()
 end
@@ -1145,18 +1371,18 @@ local function apply_settings()
         if is_txt then
             build_txt_pages(book)
             page = math.max(0, math.min(total - 1, page))
-            load_page(page)
+            v.load_page(page)
         elseif v.pending_layout or old_dark ~= new_dark
             or (v.reflow and old_theme ~= settings.theme) then
-            load_page(page)
+            v.load_page(page)
         end
     end
-    refresh_text()
+    v.refresh_text()
     if st_open then
         if st_title_tex then sdl.destroy_texture(st_title_tex); st_title_tex = nil end
         if st_hint_tex then sdl.destroy_texture(st_hint_tex); st_hint_tex = nil end
-        st_title_tex, st_title_w, st_title_h = make_text("设置", f_title, theme.ink)
-        st_hint_tex, st_hint_w, st_hint_h = make_text(
+        st_title_tex, st_title_w, st_title_h = v.make_text("设置", f_title, theme.ink)
+        st_hint_tex, st_hint_w, st_hint_h = v.make_text(
             "↑/↓ 选择 · ←/→ 调整 · S/Esc 关闭", f_page, theme.muted)
         rebuild_st_texs()
     end
@@ -1170,8 +1396,8 @@ local function open_settings()
     close_bm()
     st_open = true
     st_selected = 1
-    st_title_tex, st_title_w, st_title_h = make_text("设置", f_title, theme.ink)
-    st_hint_tex, st_hint_w, st_hint_h = make_text(
+    st_title_tex, st_title_w, st_title_h = v.make_text("设置", f_title, theme.ink)
+    st_hint_tex, st_hint_w, st_hint_h = v.make_text(
         "↑/↓ 选择 · ←/→ 调整 · S/Esc 关闭", f_page, theme.muted)
     rebuild_st_texs()
 end
@@ -1216,17 +1442,17 @@ local function update_search_query_tex()
     if search.query_tex then sdl.destroy_texture(search.query_tex); search.query_tex = nil end
     if search.query == "" then
         search.query_tex, search.query_w, search.query_h =
-            make_text("输入关键词…", f_body, theme.muted)
+            v.make_text("输入关键词…", f_body, theme.muted)
     else
         search.query_tex, search.query_w, search.query_h =
-            make_text(search.query .. "|", f_body, theme.text)
+            v.make_text(search.query .. "|", f_body, theme.text)
     end
 end
 
 local function refresh_search_count()
     if search.count_tex then sdl.destroy_texture(search.count_tex); search.count_tex = nil end
     search.count_tex, search.count_w, search.count_h =
-        make_text(string.format("%d 条", #search.results), f_page, theme.muted)
+        v.make_text(string.format("%d 条", #search.results), f_page, theme.muted)
 end
 
 local function refresh_search_empty()
@@ -1234,7 +1460,7 @@ local function refresh_search_empty()
     if #search.results == 0 then
         local text = (search.query == "") and "输入关键词，按 Enter 搜索" or "无匹配结果"
         search.empty_tex, search.empty_w, search.empty_h =
-            make_text(text, f_body, theme.muted)
+            v.make_text(text, f_body, theme.muted)
     end
 end
 
@@ -1269,6 +1495,10 @@ local function rebuild_search_texs()
 end
 
 local function open_search()
+    if v.chapter_mode then
+        v.show_toast("当前格式暂不支持搜索", 2)
+        return
+    end
     close_toc()
     close_bm()
     close_st()
@@ -1277,8 +1507,8 @@ local function open_search()
     search.results = {}
     search.selected = 1
     search.first = 1
-    search.title_tex, search.title_w, search.title_h = make_text("搜索", f_title, theme.ink)
-    search.hint_tex, search.hint_w, search.hint_h = make_text(
+    search.title_tex, search.title_w, search.title_h = v.make_text("搜索", f_title, theme.ink)
+    search.hint_tex, search.hint_w, search.hint_h = v.make_text(
         "Enter 搜索 · ↑/↓ 选择 · Esc 关闭", f_page, theme.muted)
     update_search_query_tex()
     refresh_search_count()
@@ -1339,8 +1569,8 @@ local function search_activate()
     local p = r.page
     close_search()
     if p and p >= 0 and p < total then
-        load_page(p)
-        save_progress()
+        v.load_page(p)
+        v.save_progress()
     end
 end
 
@@ -1639,14 +1869,14 @@ v.browser_load = function(dir)
 
     v.browser_destroy()
     browser.title_tex, browser.title_w, browser.title_h =
-        make_text("打开书籍 · " .. dir, f_page, theme.ink)
+        v.make_text("打开书籍 · " .. dir, f_page, theme.ink)
     browser.count_tex, browser.count_w, browser.count_h =
-        make_text(string.format("%d 项", #browser.items), f_page, theme.muted)
-    browser.hint_tex, browser.hint_w, browser.hint_h = make_text(
+        v.make_text(string.format("%d 项", #browser.items), f_page, theme.muted)
+    browser.hint_tex, browser.hint_w, browser.hint_h = v.make_text(
         "↑/↓ 选择 · Enter 打开/进入 · Backspace 上级 · Esc 关闭", f_page, theme.muted)
     if #browser.items == 0 then
         browser.empty_tex, browser.empty_w, browser.empty_h =
-            make_text("目录为空或无法读取", f_body, theme.muted)
+            v.make_text("目录为空或无法读取", f_body, theme.muted)
     end
     v.browser_rebuild()
 end
@@ -1700,7 +1930,7 @@ v.browser_activate = function()
     v.last_browse_dir = browser.dir
     browser.open = false
     v.browser_destroy()
-    local ok, err = open_book(it.path, nil)
+    local ok, err = v.open_book(it.path, nil)
     if not ok then
         print("open failed: " .. tostring(err))
         browser.open = true
@@ -1741,18 +1971,18 @@ refresh_lib_texts = function()
     if lib.empty_tex then sdl.destroy_texture(lib.empty_tex); lib.empty_tex = nil end
     if lib.open_tex then sdl.destroy_texture(lib.open_tex); lib.open_tex = nil end
 
-    lib.title_tex, lib.title_w, lib.title_h = make_text("书库", f_title, theme.ink)
-    lib.count_tex, lib.count_w, lib.count_h = make_text(
+    lib.title_tex, lib.title_w, lib.title_h = v.make_text("书库", f_title, theme.ink)
+    lib.count_tex, lib.count_w, lib.count_h = v.make_text(
         string.format("%d 本", #lib.items), f_page, theme.muted)
-    lib.open_tex, lib.open_w, lib.open_h = make_text("＋ 打开新书", f_page, theme.ink)
-    lib.clear_tex, lib.clear_w, lib.clear_h = make_text("清空历史", f_page, theme.muted)
+    lib.open_tex, lib.open_w, lib.open_h = v.make_text("＋ 打开新书", f_page, theme.ink)
+    lib.clear_tex, lib.clear_w, lib.clear_h = v.make_text("清空历史", f_page, theme.muted)
     lib.open_x = W - S(48) - lib.count_w - S(24) - lib.open_w
     lib.clear_x = lib.open_x - S(16) - lib.clear_w
-    lib.hint_tex, lib.hint_w, lib.hint_h = make_text(
+    lib.hint_tex, lib.hint_w, lib.hint_h = v.make_text(
         "↑/↓ 选择 · Enter 打开 · Delete 清历史 · Shift+Delete 清空 · O 新书 · Esc 退出",
         f_page, theme.muted)
     if #lib.items == 0 then
-        lib.empty_tex, lib.empty_w, lib.empty_h = make_text(
+        lib.empty_tex, lib.empty_w, lib.empty_h = v.make_text(
             "暂无阅读历史 · 打开新书开始阅读", f_body, theme.muted)
     end
     lib.ui_w, lib.ui_h = W, H
@@ -1764,7 +1994,7 @@ local function open_library()
     close_bm()
     close_st()
     close_search()
-    save_progress()
+    v.save_progress()
     close_book()
     lib.open = true
     scan_library()
@@ -1785,7 +2015,7 @@ local function lib_activate()
     if not it then return end
     lib.open = false
     destroy_lib()
-    local ok, err = open_book(it.path, nil)
+    local ok, err = v.open_book(it.path, nil)
     if not ok then
         lib.open = true
         scan_library()
@@ -1867,14 +2097,16 @@ local function draw()
         library = draw_library,
         content = draw_page,
     })
-    draw_toast()
+    v.draw_toast()
     sdl.render_present(ren)
 end
 
 local function turn(delta)
     local n
     if v.spread_mode() then
-        if delta > 0 then
+        if v.chapter_mode then
+            n = (delta > 0) and (page + 2) or (page - 2)
+        elseif delta > 0 then
             n = (page == 0) and 1 or (page + 2)
         else
             n = (page <= 1) and 0 or (page - 2)
@@ -1882,11 +2114,28 @@ local function turn(delta)
     else
         n = page + delta
     end
+
+    if v.chapter_mode and v.chapters then
+        if delta > 0 and n >= total then
+            if v.chapter_idx < #v.chapters then
+                v.open_chapter(v.chapter_idx + 1, 0)
+                v.save_progress()
+            end
+            return
+        elseif delta < 0 and n < 0 then
+            if v.chapter_idx > 1 then
+                v.open_chapter(v.chapter_idx - 1, -1)
+                v.save_progress()
+            end
+            return
+        end
+    end
+
     if n < 0 then n = 0 end
     if n >= total then return end
     if n ~= page then
-        load_page(n)
-        save_progress()
+        v.load_page(n)
+        v.save_progress()
     end
 end
 
@@ -1912,7 +2161,7 @@ v.set_zoom = function(z)
     v.zoom = z
     v.pan_x = 0
     v.sy = 0
-    if book then load_page(page) end
+    if book then v.load_page(page) end
     v.dirty = true
 end
 
@@ -1971,8 +2220,8 @@ local function toggle_dual()
     if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
     v.pending_layout = v.reflow
-    if book then load_page(page) end
-    refresh_text()
+    if book then v.load_page(page) end
+    v.refresh_text()
 end
 
 local function toggle_eye()
@@ -2077,7 +2326,7 @@ v.ensure_content_size = function()
         if math.abs((tex_w or 0) - expected) > 2 or
            (v.p2 and math.abs((v.p2w or 0) - expected) > 2) then
             v.pending_layout = v.reflow
-            load_page(page)
+            v.load_page(page)
             dirty = true
         end
     end
@@ -2136,10 +2385,10 @@ local function apply_resize(nw, nh)
     v.sy = 0
     if book and content_changed then
         v.pending_layout = v.reflow
-        load_page(page)
+        v.load_page(page)
     else
         v.content_sig_value = sig
-        refresh_text()
+        v.refresh_text()
     end
     return true
 end
@@ -2157,7 +2406,7 @@ v.content_click = function(x, y)
                                ny >= l.y0 and ny <= l.y1 then
                                 local tp, _, oy = rd.link_at(doc, r.page, nx, ny)
                                 tp = tp or l.page
-                                load_page(tp)
+                                v.load_page(tp)
                                 if oy and oy > 0 then
                                     local h = tex_h
                                     if v.spread_mode() and tp == page + 1 then
@@ -2166,7 +2415,7 @@ v.content_click = function(x, y)
                                     v.sy = math.max(0, math.min(v.max_scroll(),
                                         math.floor(oy * h) - 60))
                                 end
-                                save_progress()
+                                v.save_progress()
                                 linked = true
                                 break
                             end
@@ -2311,7 +2560,7 @@ v.key_bm = function(k)
         refresh_bm_count()
         if #bm_items == 0 then
             if bm_empty_tex then sdl.destroy_texture(bm_empty_tex); bm_empty_tex = nil end
-            bm_empty_tex, bm_empty_w, bm_empty_h = make_text("（暂无书签）", f_body, theme.muted)
+            bm_empty_tex, bm_empty_w, bm_empty_h = v.make_text("（暂无书签）", f_body, theme.muted)
         end
         rebuild_bm_texs()
     end
@@ -2403,11 +2652,20 @@ local function state_table()
     if lib.open then
         return { library = true, count = #lib.items, library_dir = lib.dir }
     end
-    local pct = total > 0 and ((page + 1) * 100.0 / total) or 0
+    local pct
+    if v.chapter_mode and v.chapters and #v.chapters > 0 then
+        local frac = total > 0 and ((page + 1) / total) or 0
+        pct = ((v.chapter_idx - 1) + frac) * 100.0 / #v.chapters
+    else
+        pct = total > 0 and ((page + 1) * 100.0 / total) or 0
+    end
     return {
         book = book,
         page = page + 1,
         pages = total,
+        chapter = v.chapter_mode and v.chapter_idx or nil,
+        chapters = v.chapter_mode and v.chapters and #v.chapters or nil,
+        chapter_pages = v.chapter_mode and total or nil,
         percent = math.floor(pct * 10 + 0.5) / 10,
         bookmarks = #load_bookmarks_data(),
         format = is_txt and "txt" or "doc",
@@ -2644,7 +2902,7 @@ local function do_call(fn, args)
         if search.open then close_search() end
         lib.open = false
         destroy_lib()
-        local ok, err = open_book(args.path or "", args.page)
+        local ok, err = v.open_book(args.path or "", args.page)
         if not ok then return { ok = false, error = tostring(err) } end
         return { ok = true, state = state_table() }
     elseif fn == "reader.close" then
@@ -2712,9 +2970,17 @@ local function do_call(fn, args)
         return { ok = true, query = q, results = results }
     elseif fn == "reader.goto" then
         local n = tonumber(args.page or args.index)
-        if n then
-            load_page(math.max(0, math.min(total - 1, n - 1)))
-            save_progress()
+        local ch = tonumber(args.chapter)
+        if v.chapter_mode and v.chapters then
+            if ch and v.chapters[ch] then
+                v.open_chapter(ch, n and (n - 1) or 0)
+            elseif n then
+                v.load_page(math.max(0, math.min(total - 1, n - 1)))
+            end
+            v.save_progress()
+        elseif n then
+            v.load_page(math.max(0, math.min(total - 1, n - 1)))
+            v.save_progress()
         end
         return { ok = true, state = state_table() }
     elseif fn == "reader.bookmark.add" then
@@ -2783,7 +3049,7 @@ end
 if v.startup_sync and shot == "" then
     v.pending_initial = { book = initial_book, page = initial_page }
 elseif initial_book ~= "" then
-    local ok, err = open_book(initial_book, initial_page)
+    local ok, err = v.open_book(initial_book, initial_page)
     if not ok then error("open failed: " .. tostring(err)) end
 else
     open_library()
@@ -2819,7 +3085,7 @@ local function cleanup()
     if server then server:stop(); server = nil end
     if search.open then close_search() end
     if browser.open then v.browser_close() end
-    save_progress()
+    v.save_progress()
     close_book()
     if lib.open then destroy_lib() end
     if hdr_toc_tex then sdl.destroy_texture(hdr_toc_tex); hdr_toc_tex = nil end
@@ -2961,7 +3227,7 @@ while running do
             os.remove(v.dialog.done)
             v.dialog = nil
             if chosen and chosen ~= "" then
-                local ok, err = open_book(chosen, nil)
+                local ok, err = v.open_book(chosen, nil)
                 if not ok then
                     print("open failed: " .. tostring(err))
                     v.show_toast("打开失败：" .. tostring(err), 3)
@@ -2984,7 +3250,7 @@ while running do
         v.pending_initial = nil
         if pending then
             if pending.book and pending.book ~= "" then
-                local ok, err = open_book(pending.book, pending.page)
+                local ok, err = v.open_book(pending.book, pending.page)
                 if not ok then error("open failed: " .. tostring(err)) end
             else
                 open_library()
@@ -2993,8 +3259,8 @@ while running do
             if lib.open and refresh_lib_texts then refresh_lib_texts() end
             v.sy = 0
             v.pending_layout = v.reflow
-            if book then load_page(page) end
-            refresh_text()
+            if book then v.load_page(page) end
+            v.refresh_text()
         end
         v.dirty = true
     end

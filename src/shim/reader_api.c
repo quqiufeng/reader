@@ -6,10 +6,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <sys/time.h>
 #include <dirent.h>
 #include <unistd.h>
 #include <limits.h>
 #include <time.h>
+#include <strings.h>
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
@@ -20,6 +22,7 @@ typedef struct rd_doc {
 } rd_doc;
 
 int reader_mobi_to_epub(const char *src, const char *out);
+static int mobi_to_epub(const char *src, char *out, size_t outsz);
 
 static fz_context *font_cache_ctx = NULL;
 static fz_font *font_cache_regular = NULL;
@@ -155,10 +158,176 @@ static int ensure_dir(const char *path)
     return mkdir(path, 0700);
 }
 
+typedef struct cache_entry {
+    char *path;
+    time_t used;
+    long size;
+} cache_entry;
+
+static void cache_touch(const char *path)
+{
+    struct stat st;
+    if (stat(path, &st) != 0) return;
+    struct timeval tv[2];
+    tv[0].tv_sec = time(NULL);
+    tv[0].tv_usec = 0;
+    tv[1].tv_sec = st.st_mtime;
+    tv[1].tv_usec = 0;
+    utimes(path, tv);
+}
+
+static long cache_max_bytes(void)
+{
+    const char *env = getenv("READER_CACHE_MAX_MB");
+    long mb = env && env[0] ? atol(env) : 4096;
+    if (mb < 64) mb = 64;
+    return mb * 1024L * 1024L;
+}
+
+static int cache_entry_oldest(const void *a, const void *b)
+{
+    const cache_entry *x = (const cache_entry *)a;
+    const cache_entry *y = (const cache_entry *)b;
+    if (x->used != y->used) return x->used < y->used ? -1 : 1;
+    return 0;
+}
+
+static void cache_trim(const char *dir, long max_bytes)
+{
+    DIR *d = opendir(dir);
+    if (!d) return;
+    cache_entry *arr = NULL;
+    size_t n = 0, cap = 0;
+    long total = 0;
+    struct dirent *de;
+    while ((de = readdir(d)) != NULL) {
+        if (de->d_name[0] == '.') continue;
+        size_t len = strlen(de->d_name);
+        if (len < 6 || strcasecmp(de->d_name + len - 5, ".epub") != 0) continue;
+        char path[PATH_MAX];
+        snprintf(path, sizeof(path), "%s/%s", dir, de->d_name);
+        struct stat st;
+        if (stat(path, &st) != 0 || !S_ISREG(st.st_mode)) continue;
+        if (n == cap) {
+            size_t ncap = cap ? cap * 2 : 64;
+            cache_entry *tmp = (cache_entry *)realloc(arr, ncap * sizeof(*arr));
+            if (!tmp) break;
+            arr = tmp;
+            cap = ncap;
+        }
+        arr[n].path = strdup(path);
+        if (!arr[n].path) break;
+        arr[n].used = st.st_atime > st.st_mtime ? st.st_atime : st.st_mtime;
+        arr[n].size = (long)st.st_size;
+        total += (long)st.st_size;
+        n++;
+    }
+    closedir(d);
+    if (n > 0 && total > max_bytes) {
+        qsort(arr, n, sizeof(*arr), cache_entry_oldest);
+        for (size_t i = 0; i < n && total > max_bytes; i++) {
+            if (unlink(arr[i].path) == 0) total -= arr[i].size;
+        }
+    }
+    for (size_t i = 0; i < n; i++) free(arr[i].path);
+    free(arr);
+}
+
+static int safe_entry_name(const char *name)
+{
+    if (!name || !name[0]) return 0;
+    if (name[0] == '/') return 0;
+    if (strstr(name, "..")) return 0;
+    if (strchr(name, '\\')) return 0;
+    return 1;
+}
+
+int rd_extract_book(const char *path, const char *out_dir)
+{
+    if (!path || !out_dir) return -1;
+    fz_context *ctx = fz_new_context(NULL, NULL, FZ_STORE_DEFAULT);
+    if (!ctx) return -2;
+    fz_register_document_handlers(ctx);
+    char epub_path[PATH_MAX];
+    const char *src = path;
+    int fmt = rd_detect_format(path);
+    if (fmt == 3 || fmt == 4) {
+        if (mobi_to_epub(path, epub_path, sizeof(epub_path)) != 0) {
+            fz_drop_context(ctx);
+            return -3;
+        }
+        src = epub_path;
+    } else if (fmt != 2) {
+        fz_drop_context(ctx);
+        return -4;
+    }
+    if (ensure_dir(out_dir) != 0) {
+        fz_drop_context(ctx);
+        return -5;
+    }
+
+    int count = 0;
+    fz_archive *arch = NULL;
+    fz_buffer *buf = NULL;
+    fz_try(ctx) {
+        arch = fz_open_archive(ctx, src);
+        int n = fz_count_archive_entries(ctx, arch);
+        for (int i = 0; i < n; i++) {
+            const char *name = fz_list_archive_entry(ctx, arch, i);
+            if (!safe_entry_name(name)) continue;
+            size_t nlen = strlen(name);
+            if (nlen && name[nlen - 1] == '/') continue;
+            char dst[PATH_MAX];
+            if (snprintf(dst, sizeof(dst), "%s/%s", out_dir, name)
+                >= (int)sizeof(dst)) continue;
+            for (char *p = dst + strlen(out_dir) + 1; *p; p++) {
+                if (*p != '/') continue;
+                *p = 0;
+                ensure_dir(dst);
+                *p = '/';
+            }
+            fz_drop_buffer(ctx, buf);
+            buf = NULL;
+            buf = fz_read_archive_entry(ctx, arch, name);
+            unsigned char *data = NULL;
+            size_t blen = fz_buffer_storage(ctx, buf, &data);
+            FILE *f = fopen(dst, "wb");
+            if (!f) continue;
+            size_t w = fwrite(data, 1, blen, f);
+            fclose(f);
+            if (w == blen) count++;
+        }
+    }
+    fz_catch(ctx) {
+        count = -6;
+    }
+    fz_drop_buffer(ctx, buf);
+    fz_drop_archive(ctx, arch);
+    fz_drop_context(ctx);
+    return count;
+}
+
+static const char *epub_cache_dir(void)
+{
+    static const char *chosen = NULL;
+    if (chosen) return chosen;
+    const char *dirs[] = {
+        "/dev/shm/native-reader-cache",
+        "/tmp/native-reader-cache",
+    };
+    for (size_t i = 0; i < sizeof(dirs) / sizeof(dirs[0]); i++) {
+        if (ensure_dir(dirs[i]) == 0) {
+            chosen = dirs[i];
+            return chosen;
+        }
+    }
+    return NULL;
+}
+
 static int mobi_to_epub(const char *src, char *out, size_t outsz)
 {
-    const char *cache = "/tmp/native-reader-cache";
-    if (ensure_dir(cache) != 0) return -1;
+    const char *cache = epub_cache_dir();
+    if (!cache) return -1;
 
     char name[512];
     path_basename_noext(src, name, sizeof(name));
@@ -208,7 +377,7 @@ void *rd_open(const char *path, int *err)
         "img{max-width:100%!important;height:auto!important;}"
         "table{max-width:100%!important;}"
         "a{color:#1B365D;text-decoration:none;}"
-        "*{font-style:normal !important;}"
+        "*{font-family:sans-serif !important;font-style:normal !important;}"
         "pre,code{white-space:pre-wrap;}");
 
     char epub_path[PATH_MAX];
@@ -393,18 +562,19 @@ int rd_layout(void *handle, float w, float h, float em,
     if (line_factor < 1) line_factor = 1.6;
     if (margin < 0) margin = 0;
 
-    char css[768];
+    char css[1024];
     snprintf(css, sizeof(css),
-        "body{margin:0;padding:0 %.0fpx;font-style:normal !important;}"
-        "p{margin:0 0 0.8em 0;line-height:%.2f;text-align:justify;font-style:normal !important;}"
+        "body{margin:0;padding:0 %.0fpx;font-size:%.1fpt !important;font-style:normal !important;}"
+        "p{margin:0 0 0.8em 0;line-height:%.2f;text-align:justify;font-size:1em !important;font-style:normal !important;}"
         "i,em{font-style:normal !important;}"
-        "*{font-style:normal !important;}"
+        "*{font-family:sans-serif !important;font-style:normal !important;}"
+        "div,li,blockquote,td{font-size:1em !important;}"
         "div,section{width:auto!important;max-width:100%%!important;}"
         "img{max-width:100%%!important;height:auto!important;}"
         "table{max-width:100%%!important;}"
         "a{color:#1B365D;text-decoration:none;}"
         "pre,code{white-space:pre-wrap;}",
-        margin, line_factor);
+        margin, em, line_factor);
 
     int n = -1;
     fz_try(d->ctx) {
