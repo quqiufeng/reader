@@ -14,7 +14,23 @@ char *rd_search(void *handle, const char *query, int start_page, int max_hits);
 ]]
 
 local root = os.getenv("READER_ROOT") or "."
-local lib = ffi.load(root .. "/build/libreader_native.so")
+local candidates = {
+    root .. "/build/libreader_native.so",
+    root .. "/lib/libreader_native.so",
+    "libreader_native.so",
+}
+local lib, load_err
+for _, p in ipairs(candidates) do
+    local ok, h = pcall(ffi.load, p)
+    if ok then
+        lib = h
+        break
+    end
+    load_err = h
+end
+if not lib then
+    error("cannot load libreader_native.so: " .. tostring(load_err))
+end
 
 local M = {}
 

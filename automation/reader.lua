@@ -29,6 +29,7 @@ local function _load()
   local root = os.getenv("READER_ROOT") or "."
   local candidates = {
     root .. "/build/libreader_ctl.so",
+    root .. "/lib/libreader_ctl.so",
     root .. "/src/libreader_ctl.so",
     "libreader_ctl.so",
   }

@@ -4,6 +4,35 @@
 
 > 仅用于个人学习 / 自有设备研究。仓库中的反编译代码、资源、so、dex 版权归原厂所有，请勿传播或商用。
 
+## native-reader（桌面实现）
+
+基于 `native_reader.md` 的 LuaJIT FFI + C 桌面阅读器，支持 PDF / EPUB / MOBI / AZW3 / TXT，带书库、目录、进度、书签、设置、书内搜索和自动化测试。
+
+```bash
+./tools/build.sh                    # 编译
+./tools/run.sh                      # 打开书库
+./tools/run.sh testdata/sample.txt  # 直接打开一本书
+READER_LIBRARY=/path/to/books ./tools/run.sh
+./tools/package.sh                  # 打包
+./tools/install.sh                  # 安装到 ~/.local（含桌面图标）
+# 产物：dist/native-reader-linux-x64.tar.gz
+```
+
+安装后会创建：
+
+- `~/.local/bin/native-reader`
+- `~/.local/share/applications/native-reader.desktop`
+- `~/.local/share/icons/hicolor/*/apps/native-reader.png`
+- 图标使用 WordCard 的书本图标（`assets/icons/`）
+
+- 书库默认扫描 `~/Books` / `~/Downloads/book`，可用 `READER_LIBRARY` 指定
+- 阅读中 `Esc` 返回书库，`Q` 退出；`S` 设置，`T` 目录，`B` 书签，`/` 搜索
+
+- 依赖：SDL2、LuaJIT、MuPDF、libmobi、libxml2、libzip、SDL2_ttf
+- 自动化：`tools/auto_core.lua`（核心冒烟）、`tools/auto_smoke.lua`（UI 冒烟）
+- 字体：仓耳今楷02（`assets/fonts/`）
+- 设计 / 迁移：`native_reader.md`；开发规范：`AGENTS.md`
+
 ## 快速开始
 
 ### 构建去壳 APK

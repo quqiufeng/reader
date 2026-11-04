@@ -37,6 +37,7 @@ google-services.json
 # Reverse engineering work dirs
 .build/
 out/
+dist/
 artifacts/
 reference/base/
 

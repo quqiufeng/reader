@@ -17,6 +17,8 @@ typedef struct rd_doc {
     fz_document *doc;
 } rd_doc;
 
+int reader_mobi_to_epub(const char *src, const char *out);
+
 static int has_ext(const char *path, const char *ext)
 {
     size_t n = strlen(path), m = strlen(ext);
@@ -88,13 +90,7 @@ static int mobi_to_epub(const char *src, char *out, size_t outsz)
         return 0;
     }
 
-    const char *tool = getenv("READER_MOBITOOL");
-    if (!tool) tool = "/opt/libmobi/tools/mobitool";
-
-    char cmd[PATH_MAX * 3];
-    snprintf(cmd, sizeof(cmd), "'%s' -e -o '%s' '%s' >/dev/null 2>&1",
-             tool, cache, src);
-    int rc = system(cmd);
+    int rc = reader_mobi_to_epub(src, out);
     if (rc != 0) return -2;
 
     if (stat(out, &es) != 0 || es.st_size == 0) return -3;

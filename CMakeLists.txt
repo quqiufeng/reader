@@ -7,15 +7,24 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SDL2 REQUIRED sdl2)
 pkg_check_modules(LUAJIT REQUIRED luajit)
+pkg_check_modules(LIBZIP REQUIRED libzip)
+pkg_check_modules(LIBXML2 REQUIRED libxml-2.0)
 
-add_library(reader_native SHARED src/shim/reader_api.c)
+add_library(reader_native SHARED
+    src/shim/reader_api.c
+    src/shim/mobi_epub.c)
 target_include_directories(reader_native PRIVATE
     /opt/mupdf/include
-    ${CMAKE_SOURCE_DIR}/third_party/stb)
+    /opt/libmobi/src
+    ${CMAKE_SOURCE_DIR}/third_party/stb
+    ${LIBXML2_INCLUDE_DIRS})
 target_link_libraries(reader_native PRIVATE
     /opt/mupdf/build/release/libmupdf.a
     /opt/mupdf/build/release/libmupdf-third.a
-    m dl pthread)
+    /opt/libmobi/src/.libs/libmobi.a
+    ${LIBXML2_LIBRARIES}
+    ${LIBZIP_LIBRARIES}
+    z m dl pthread)
 set_target_properties(reader_native PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
     OUTPUT_NAME reader_native)

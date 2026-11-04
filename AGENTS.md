@@ -247,12 +247,15 @@ native-reader/
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j
+./tools/build.sh
+./tools/run.sh testdata/sample.txt
+./tools/package.sh
 ./build/native-reader
 luajit automation/native_demo.lua          # 窗口定位 / X11 兜底截图
 luajit tools/auto_smoke.lua                # 格式冒烟
 luajit -e 'package.path="automation/?.lua;"..package.path;
   local R=require("reader"); local c=assert(R.open());
-  c:openBook("testdata/epub/min.epub"); c:next();
+  c:openBook("testdata/sample.txt", 0);
   c:capture("/tmp/opencode/reader.png"); c:close()'
 ```
 

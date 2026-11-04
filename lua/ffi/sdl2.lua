@@ -31,6 +31,10 @@ typedef union SDL_Event {
 int SDL_Init(uint32_t flags);
 void SDL_Quit(void);
 SDL_Window *SDL_CreateWindow(const char *title, int x, int y, int w, int h, uint32_t flags);
+typedef struct SDL_RWops SDL_RWops;
+SDL_RWops *SDL_RWFromFile(const char *file, const char *mode);
+SDL_Surface *SDL_LoadBMP_RW(SDL_RWops *src, int freesrc);
+void SDL_SetWindowIcon(SDL_Window *win, SDL_Surface *icon);
 SDL_Renderer *SDL_CreateRenderer(SDL_Window *win, int index, uint32_t flags);
 SDL_Texture *SDL_CreateTexture(SDL_Renderer *r, uint32_t format, int access, int w, int h);
 SDL_Texture *SDL_CreateTextureFromSurface(SDL_Renderer *r, SDL_Surface *s);
@@ -87,6 +91,7 @@ M.SDLK_DELETE = 127
 M.SDLK_BACKSPACE = 8
 M.SDLK_SLASH = 47
 M.SDLK_F = 102
+M.SDLK_Q = 113
 
 function M.init()
     return lib.SDL_Init(M.INIT_VIDEO) == 0
@@ -99,6 +104,16 @@ end
 function M.create_window(title, w, h)
     return lib.SDL_CreateWindow(title, M.WINDOWPOS_CENTERED, M.WINDOWPOS_CENTERED,
         w, h, M.WINDOW_SHOWN)
+end
+
+function M.load_bmp(path)
+    local rw = lib.SDL_RWFromFile(path, "rb")
+    if rw == nil then return nil end
+    return lib.SDL_LoadBMP_RW(rw, 1)
+end
+
+function M.set_window_icon(win, icon)
+    lib.SDL_SetWindowIcon(win, icon)
 end
 
 function M.create_renderer(win)

@@ -5,6 +5,7 @@ local sdl = require("ffi.sdl2")
 local ttf = require("ffi.sdl2_ttf")
 local rd = require("ffi.reader")
 local automation = require("core.automation")
+local library = require("core.library")
 
 local initial_book = READER_BOOK or ""
 local shot = READER_SCREENSHOT or ""
@@ -12,15 +13,16 @@ local initial_page = tonumber(READER_PAGE or "")
 local zoom = tonumber(READER_ZOOM or "1.2") or 1.2
 local frames = tonumber(READER_FRAMES or "0") or 0
 
-if initial_book == "" then
-    error("usage: native-reader <book> [--screenshot out.png] [--page N] [--zoom Z] [--frames N]")
-end
-
 if not sdl.init() then error("SDL_Init failed") end
 if not ttf.init() then error("TTF_Init failed") end
 
 local W, H = 900, 1200
 local win = assert(sdl.create_window("native-reader", W, H), "SDL_CreateWindow failed")
+local icon = sdl.load_bmp("assets/icons/native-reader.bmp")
+if icon ~= nil then
+    sdl.set_window_icon(win, icon)
+    sdl.free_surface(icon)
+end
 local ren = assert(sdl.create_renderer(win), "SDL_CreateRenderer failed")
 
 local font_regular = os.getenv("READER_FONT")
@@ -133,18 +135,16 @@ local hdr_bm_tex, hdr_bm_w, hdr_bm_h
 local hdr_st_tex, hdr_st_w, hdr_st_h
 local hdr_bm_x, hdr_toc_x, hdr_st_x
 
-local toc_open = false
-local toc_items = {}
-local toc_selected = 1
-local toc_first = 1
-local toc_texs = {}
-local toc_title_tex, toc_title_w, toc_title_h
-local toc_count_tex, toc_count_w, toc_count_h
-local toc_hint_tex, toc_hint_w, toc_hint_h
-local toc_empty_tex, toc_empty_w, toc_empty_h
-local toc_line_h = 34
-local toc_visible = 20
-local toc_top = 120
+local toc = {
+    open = false,
+    items = {},
+    selected = 1,
+    first = 1,
+    texs = {},
+    line_h = 34,
+    visible = 20,
+    top = 120,
+}
 
 local bm_open = false
 local bm_items = {}
@@ -174,13 +174,27 @@ local search = {
     top = 180,
 }
 
+local lib = {
+    open = false,
+    items = {},
+    selected = 1,
+    first = 1,
+    texs = {},
+    dir = "",
+    line_h = 44,
+    visible = 12,
+    top = 120,
+}
+
+local refresh_lib_texts = nil
+
 local function save_state()
     local f = io.open(state_file, "w")
     if not f then return end
     f:write("return {\n")
     for path, rec in pairs(progress) do
-        f:write(string.format("[%q]={page=%d,updated=%d,bookmarks={\n",
-            path, rec.page or 0, rec.updated or 0))
+        f:write(string.format("[%q]={page=%d,updated=%d,percent=%.1f,bookmarks={\n",
+            path, rec.page or 0, rec.updated or 0, rec.percent or 0))
         for _, b in ipairs(rec.bookmarks or {}) do
             f:write(string.format("{page=%d,note=%q,created=%d},\n",
                 b.page or 0, b.note or "", b.created or 0))
@@ -205,6 +219,7 @@ local function save_progress()
     local rec = book_rec()
     rec.page = page
     rec.updated = os.time()
+    rec.percent = total > 0 and ((page + 1) * 100.0 / total) or 0
     save_state()
 end
 
@@ -364,12 +379,12 @@ local function build_txt_pages(path)
 end
 
 local function destroy_toc()
-    for _, t in ipairs(toc_texs) do sdl.destroy_texture(t.tex) end
-    toc_texs = {}
-    if toc_title_tex then sdl.destroy_texture(toc_title_tex); toc_title_tex = nil end
-    if toc_count_tex then sdl.destroy_texture(toc_count_tex); toc_count_tex = nil end
-    if toc_hint_tex then sdl.destroy_texture(toc_hint_tex); toc_hint_tex = nil end
-    if toc_empty_tex then sdl.destroy_texture(toc_empty_tex); toc_empty_tex = nil end
+    for _, t in ipairs(toc.texs) do sdl.destroy_texture(t.tex) end
+    toc.texs = {}
+    if toc.title_tex then sdl.destroy_texture(toc.title_tex); toc.title_tex = nil end
+    if toc.count_tex then sdl.destroy_texture(toc.count_tex); toc.count_tex = nil end
+    if toc.hint_tex then sdl.destroy_texture(toc.hint_tex); toc.hint_tex = nil end
+    if toc.empty_tex then sdl.destroy_texture(toc.empty_tex); toc.empty_tex = nil end
 end
 
 local function destroy_bm()
@@ -390,8 +405,8 @@ end
 
 local function close_toc()
     destroy_toc()
-    toc_open = false
-    toc_items = {}
+    toc.open = false
+    toc.items = {}
 end
 
 local function close_bm()
@@ -616,26 +631,26 @@ local function load_toc_data()
 end
 
 local function rebuild_toc_texs()
-    for _, t in ipairs(toc_texs) do sdl.destroy_texture(t.tex) end
-    toc_texs = {}
-    if #toc_items == 0 then return end
+    for _, t in ipairs(toc.texs) do sdl.destroy_texture(t.tex) end
+    toc.texs = {}
+    if #toc.items == 0 then return end
 
-    toc_selected = math.max(1, math.min(#toc_items, toc_selected))
-    local first = math.max(1, toc_selected - math.floor(toc_visible / 2))
-    if first + toc_visible - 1 > #toc_items then
-        first = math.max(1, #toc_items - toc_visible + 1)
+    toc.selected = math.max(1, math.min(#toc.items, toc.selected))
+    local first = math.max(1, toc.selected - math.floor(toc.visible / 2))
+    if first + toc.visible - 1 > #toc.items then
+        first = math.max(1, #toc.items - toc.visible + 1)
     end
-    toc_first = first
-    local last = math.min(#toc_items, first + toc_visible - 1)
+    toc.first = first
+    local last = math.min(#toc.items, first + toc.visible - 1)
 
     for i = first, last do
-        local it = toc_items[i]
+        local it = toc.items[i]
         local text = string.rep("  ", it.level or 0) .. (it.title or "")
         local w, h = ttf.size(f_body, text)
-        local c = (i == toc_selected) and theme.ink or theme.text
+        local c = (i == toc.selected) and theme.ink or theme.text
         local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
         if t then
-            toc_texs[#toc_texs + 1] = { tex = t, w = w, h = h, index = i }
+            toc.texs[#toc.texs + 1] = { tex = t, w = w, h = h, index = i }
         end
     end
 end
@@ -643,32 +658,32 @@ end
 local function open_toc()
     close_bm()
     close_st()
-    toc_items = load_toc_data()
-    toc_open = true
-    toc_selected = 1
-    toc_title_tex, toc_title_w, toc_title_h = make_text("目录", f_title, theme.ink)
-    toc_count_tex, toc_count_w, toc_count_h = make_text(
-        string.format("%d 条", #toc_items), f_page, theme.muted)
-    toc_hint_tex, toc_hint_w, toc_hint_h = make_text(
+    toc.items = load_toc_data()
+    toc.open = true
+    toc.selected = 1
+    toc.title_tex, toc.title_w, toc.title_h = make_text("目录", f_title, theme.ink)
+    toc.count_tex, toc.count_w, toc.count_h = make_text(
+        string.format("%d 条", #toc.items), f_page, theme.muted)
+    toc.hint_tex, toc.hint_w, toc.hint_h = make_text(
         "↑/↓ 选择 · Enter 跳转 · T/Esc 关闭", f_page, theme.muted)
-    if #toc_items == 0 then
-        toc_empty_tex, toc_empty_w, toc_empty_h = make_text("（无目录）", f_body, theme.muted)
+    if #toc.items == 0 then
+        toc.empty_tex, toc.empty_w, toc.empty_h = make_text("（无目录）", f_body, theme.muted)
     end
     rebuild_toc_texs()
 end
 
 local function toggle_toc()
-    if toc_open then close_toc() else open_toc() end
+    if toc.open then close_toc() else open_toc() end
 end
 
 local function toc_move(delta)
-    if #toc_items == 0 then return end
-    toc_selected = math.max(1, math.min(#toc_items, toc_selected + delta))
+    if #toc.items == 0 then return end
+    toc.selected = math.max(1, math.min(#toc.items, toc.selected + delta))
     rebuild_toc_texs()
 end
 
 local function toc_activate()
-    local it = toc_items[toc_selected]
+    local it = toc.items[toc.selected]
     if not it then return end
     close_toc()
     if it.page and it.page >= 0 and it.page < total then
@@ -710,23 +725,23 @@ local function draw_panel_items(texs, selected, empty_tex, empty_w, empty_h)
     if #texs == 0 then
         if empty_tex then
             local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = 48, toc_top, empty_w, empty_h
+            r.x, r.y, r.w, r.h = 48, toc.top, empty_w, empty_h
             sdl.render_copy(ren, empty_tex, nil, r)
         end
         return
     end
 
-    local y = toc_top
+    local y = toc.top
     for _, t in ipairs(texs) do
         if t.index == selected then
             set_color(theme.sel)
             local row = ffi.new("SDL_Rect")
-            row.x, row.y, row.w, row.h = 40, y - 4, W - 80, toc_line_h
+            row.x, row.y, row.w, row.h = 40, y - 4, W - 80, toc.line_h
             sdl.render_fill_rect(ren, row)
 
             set_color(theme.ink)
             local accent = ffi.new("SDL_Rect")
-            accent.x, accent.y, accent.w, accent.h = 40, y - 4, 4, toc_line_h
+            accent.x, accent.y, accent.w, accent.h = 40, y - 4, 4, toc.line_h
             sdl.render_fill_rect(ren, accent)
         end
 
@@ -736,10 +751,10 @@ local function draw_panel_items(texs, selected, empty_tex, empty_w, empty_h)
 
         set_color(theme.line)
         local line = ffi.new("SDL_Rect")
-        line.x, line.y, line.w, line.h = 40, y + toc_line_h - 1, W - 80, 1
+        line.x, line.y, line.w, line.h = 40, y + toc.line_h - 1, W - 80, 1
         sdl.render_fill_rect(ren, line)
 
-        y = y + toc_line_h
+        y = y + toc.line_h
     end
 end
 
@@ -751,10 +766,10 @@ local function draw_panel_hint(tex, w, h)
 end
 
 local function draw_toc()
-    draw_panel_frame(toc_title_tex, toc_title_w, toc_title_h,
-        toc_count_tex, toc_count_w, toc_count_h)
-    draw_panel_items(toc_texs, toc_selected, toc_empty_tex, toc_empty_w, toc_empty_h)
-    draw_panel_hint(toc_hint_tex, toc_hint_w, toc_hint_h)
+    draw_panel_frame(toc.title_tex, toc.title_w, toc.title_h,
+        toc.count_tex, toc.count_w, toc.count_h)
+    draw_panel_items(toc.texs, toc.selected, toc.empty_tex, toc.empty_w, toc.empty_h)
+    draw_panel_hint(toc.hint_tex, toc.hint_w, toc.hint_h)
     sdl.render_present(ren)
 end
 
@@ -802,12 +817,12 @@ local function rebuild_bm_texs()
     if #bm_items == 0 then return end
 
     bm_selected = math.max(1, math.min(#bm_items, bm_selected))
-    local first = math.max(1, bm_selected - math.floor(toc_visible / 2))
-    if first + toc_visible - 1 > #bm_items then
-        first = math.max(1, #bm_items - toc_visible + 1)
+    local first = math.max(1, bm_selected - math.floor(toc.visible / 2))
+    if first + toc.visible - 1 > #bm_items then
+        first = math.max(1, #bm_items - toc.visible + 1)
     end
     bm_first = first
-    local last = math.min(#bm_items, first + toc_visible - 1)
+    local last = math.min(#bm_items, first + toc.visible - 1)
 
     for i = first, last do
         local b = bm_items[i]
@@ -936,6 +951,9 @@ local function apply_settings()
         st_hint_tex, st_hint_w, st_hint_h = make_text(
             "↑/↓ 选择 · ←/→ 调整 · S/Esc 关闭", f_page, theme.muted)
         rebuild_st_texs()
+    end
+    if lib.open and refresh_lib_texts then
+        refresh_lib_texts()
     end
 end
 
@@ -1158,12 +1176,169 @@ local function draw_search()
     sdl.render_present(ren)
 end
 
+local function destroy_lib()
+    for _, t in ipairs(lib.texs) do sdl.destroy_texture(t.tex) end
+    lib.texs = {}
+    if lib.title_tex then sdl.destroy_texture(lib.title_tex); lib.title_tex = nil end
+    if lib.count_tex then sdl.destroy_texture(lib.count_tex); lib.count_tex = nil end
+    if lib.hint_tex then sdl.destroy_texture(lib.hint_tex); lib.hint_tex = nil end
+    if lib.empty_tex then sdl.destroy_texture(lib.empty_tex); lib.empty_tex = nil end
+end
+
+local function scan_library()
+    local env = os.getenv("READER_LIBRARY")
+    local candidates = {}
+    if env and env ~= "" then candidates[#candidates + 1] = env end
+    candidates[#candidates + 1] = home .. "/Books"
+    candidates[#candidates + 1] = home .. "/Downloads/book"
+    candidates[#candidates + 1] = "/home/quqiufeng/Downloads/book"
+
+    lib.items = {}
+    lib.dir = env or ""
+    for _, d in ipairs(candidates) do
+        local items = library.scan(d)
+        if items and #items > 0 then
+            lib.items = items
+            lib.dir = d
+            break
+        end
+    end
+    for _, it in ipairs(lib.items) do
+        local rec = progress[it.path]
+        it.percent = rec and rec.percent or nil
+    end
+end
+
+local function rebuild_lib_texs()
+    for _, t in ipairs(lib.texs) do sdl.destroy_texture(t.tex) end
+    lib.texs = {}
+    if #lib.items == 0 then return end
+
+    lib.selected = math.max(1, math.min(#lib.items, lib.selected))
+    local first = math.max(1, lib.selected - math.floor(lib.visible / 2))
+    if first + lib.visible - 1 > #lib.items then
+        first = math.max(1, #lib.items - lib.visible + 1)
+    end
+    lib.first = first
+    local last = math.min(#lib.items, first + lib.visible - 1)
+
+    for i = first, last do
+        local it = lib.items[i]
+        local pct = it.percent and string.format("%.1f%%", it.percent) or "未读"
+        local text = string.format("%s   %s   %s", it.format, it.name, pct)
+        local w, h = ttf.size(f_body, text)
+        local c = (i == lib.selected) and theme.ink or theme.text
+        local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
+        if t then
+            lib.texs[#lib.texs + 1] = { tex = t, w = w, h = h, index = i }
+        end
+    end
+end
+
+refresh_lib_texts = function()
+    if lib.title_tex then sdl.destroy_texture(lib.title_tex); lib.title_tex = nil end
+    if lib.count_tex then sdl.destroy_texture(lib.count_tex); lib.count_tex = nil end
+    if lib.hint_tex then sdl.destroy_texture(lib.hint_tex); lib.hint_tex = nil end
+    if lib.empty_tex then sdl.destroy_texture(lib.empty_tex); lib.empty_tex = nil end
+
+    lib.title_tex, lib.title_w, lib.title_h = make_text("书库", f_title, theme.ink)
+    lib.count_tex, lib.count_w, lib.count_h = make_text(
+        string.format("%d 本", #lib.items), f_page, theme.muted)
+    lib.hint_tex, lib.hint_w, lib.hint_h = make_text(
+        "↑/↓ 选择 · Enter 打开 · Esc 退出", f_page, theme.muted)
+    if #lib.items == 0 then
+        lib.empty_tex, lib.empty_w, lib.empty_h = make_text(
+            "书库为空 · 用 READER_LIBRARY 指定目录", f_body, theme.muted)
+    end
+    rebuild_lib_texs()
+end
+
+local function open_library()
+    close_toc()
+    close_bm()
+    close_st()
+    close_search()
+    save_progress()
+    close_book()
+    lib.open = true
+    scan_library()
+    lib.selected = 1
+    lib.first = 1
+    refresh_lib_texts()
+    sdl.stop_text_input()
+end
+
+local function lib_move(delta)
+    if #lib.items == 0 then return end
+    lib.selected = math.max(1, math.min(#lib.items, lib.selected + delta))
+    rebuild_lib_texs()
+end
+
+local function lib_activate()
+    local it = lib.items[lib.selected]
+    if not it then return end
+    lib.open = false
+    destroy_lib()
+    local ok, err = open_book(it.path, nil)
+    if not ok then
+        lib.open = true
+        scan_library()
+        refresh_lib_texts()
+        print("open failed: " .. tostring(err))
+    end
+end
+
+local function draw_lib_items()
+    if #lib.items == 0 then
+        if lib.empty_tex then
+            local r = ffi.new("SDL_Rect")
+            r.x, r.y, r.w, r.h = 56, lib.top, lib.empty_w, lib.empty_h
+            sdl.render_copy(ren, lib.empty_tex, nil, r)
+        end
+        return
+    end
+
+    local y = lib.top
+    for _, t in ipairs(lib.texs) do
+        if t.index == lib.selected then
+            set_color(theme.sel)
+            local row = ffi.new("SDL_Rect")
+            row.x, row.y, row.w, row.h = 40, y - 4, W - 80, lib.line_h
+            sdl.render_fill_rect(ren, row)
+
+            set_color(theme.ink)
+            local accent = ffi.new("SDL_Rect")
+            accent.x, accent.y, accent.w, accent.h = 40, y - 4, 4, lib.line_h
+            sdl.render_fill_rect(ren, accent)
+        end
+
+        local r = ffi.new("SDL_Rect")
+        r.x, r.y, r.w, r.h = 56, y, t.w, t.h
+        sdl.render_copy(ren, t.tex, nil, r)
+
+        set_color(theme.line)
+        local line = ffi.new("SDL_Rect")
+        line.x, line.y, line.w, line.h = 40, y + lib.line_h - 1, W - 80, 1
+        sdl.render_fill_rect(ren, line)
+
+        y = y + lib.line_h
+    end
+end
+
+local function draw_library()
+    draw_panel_frame(lib.title_tex, lib.title_w, lib.title_h,
+        lib.count_tex, lib.count_w, lib.count_h)
+    draw_lib_items()
+    draw_panel_hint(lib.hint_tex, lib.hint_w, lib.hint_h)
+    sdl.render_present(ren)
+end
+
 local function draw()
     if search.open then
         draw_search()
         return
     end
-    if toc_open then
+    if toc.open then
         draw_toc()
         return
     end
@@ -1173,6 +1348,10 @@ local function draw()
     end
     if st_open then
         draw_settings()
+        return
+    end
+    if lib.open then
+        draw_library()
         return
     end
     draw_page()
@@ -1188,6 +1367,9 @@ local function turn(delta)
 end
 
 local function state_table()
+    if lib.open then
+        return { library = true, count = #lib.items, library_dir = lib.dir }
+    end
     local pct = total > 0 and ((page + 1) * 100.0 / total) or 0
     return {
         book = book,
@@ -1219,7 +1401,7 @@ local function do_click(id)
         return { ok = true, state = state_table() }
     elseif id == "app.toc" then
         toggle_toc()
-        return { ok = true, open = toc_open }
+        return { ok = true, open = toc.open }
     elseif id == "app.bookmarks" then
         toggle_bookmarks()
         return { ok = true, open = bm_open }
@@ -1229,6 +1411,9 @@ local function do_click(id)
     elseif id == "app.search" then
         if search.open then close_search() else open_search() end
         return { ok = true, open = search.open }
+    elseif id == "app.library" then
+        open_library()
+        return { ok = true, library = true, count = #lib.items }
     elseif id == "app.quit" then
         running = false
         return { ok = true }
@@ -1239,6 +1424,8 @@ end
 local function do_call(fn, args)
     if fn == "reader.open" then
         if search.open then close_search() end
+        lib.open = false
+        destroy_lib()
         local ok, err = open_book(args.path or "", args.page)
         if not ok then return { ok = false, error = tostring(err) } end
         return { ok = true, state = state_table() }
@@ -1254,6 +1441,12 @@ local function do_call(fn, args)
         return { ok = true, state = state_table() }
     elseif fn == "reader.state" then
         return { ok = true, state = state_table() }
+    elseif fn == "reader.list" then
+        if not lib.open then scan_library() end
+        return { ok = true, items = lib.items, library_dir = lib.dir }
+    elseif fn == "app.library" or fn == "nav.books" then
+        open_library()
+        return { ok = true, library = true, count = #lib.items }
     elseif fn == "reader.toc" then
         return { ok = true, toc = load_toc_data() }
     elseif fn == "reader.search" then
@@ -1296,7 +1489,7 @@ local function do_call(fn, args)
     elseif fn == "app.toc" then
         if search.open then close_search() end
         toggle_toc()
-        return { ok = true, open = toc_open }
+        return { ok = true, open = toc.open }
     elseif fn == "app.bookmarks" then
         if search.open then close_search() end
         toggle_bookmarks()
@@ -1326,11 +1519,15 @@ local function do_call(fn, args)
 end
 
 local function actions()
-    return { "reader.next", "reader.prev", "app.toc", "app.bookmarks", "app.settings", "app.search", "app.quit" }
+    return { "reader.next", "reader.prev", "app.library", "app.toc", "app.bookmarks", "app.settings", "app.search", "app.quit" }
 end
 
-local ok, err = open_book(initial_book, initial_page)
-if not ok then error("open failed: " .. tostring(err)) end
+if initial_book ~= "" then
+    local ok, err = open_book(initial_book, initial_page)
+    if not ok then error("open failed: " .. tostring(err)) end
+else
+    open_library()
+end
 
 local server = nil
 if shot == "" then
@@ -1355,6 +1552,7 @@ local function cleanup()
     if search.open then close_search() end
     save_progress()
     close_book()
+    if lib.open then destroy_lib() end
     if hdr_toc_tex then sdl.destroy_texture(hdr_toc_tex); hdr_toc_tex = nil end
     if hdr_bm_tex then sdl.destroy_texture(hdr_bm_tex); hdr_bm_tex = nil end
     if hdr_st_tex then sdl.destroy_texture(hdr_st_tex); hdr_st_tex = nil end
@@ -1412,7 +1610,7 @@ while running do
                     search.query = remove_last_utf8(search.query)
                     update_search_query_tex()
                 end
-            elseif toc_open then
+            elseif toc.open then
                 if k == sdl.SDLK_UP then
                     toc_move(-1)
                 elseif k == sdl.SDLK_DOWN then
@@ -1463,8 +1661,26 @@ while running do
                 elseif k == sdl.SDLK_ESCAPE or k == sdl.SDLK_S then
                     close_st()
                 end
+            elseif lib.open then
+                if k == sdl.SDLK_UP then
+                    lib_move(-1)
+                elseif k == sdl.SDLK_DOWN then
+                    lib_move(1)
+                elseif k == sdl.SDLK_PAGEUP then
+                    lib_move(-10)
+                elseif k == sdl.SDLK_PAGEDOWN then
+                    lib_move(10)
+                elseif k == sdl.SDLK_RETURN or k == sdl.SDLK_RIGHT then
+                    lib_activate()
+                elseif k == sdl.SDLK_ESCAPE or k == sdl.SDLK_Q then
+                    running = false
+                elseif k == sdl.SDLK_S then
+                    open_settings()
+                end
             else
                 if k == sdl.SDLK_ESCAPE then
+                    open_library()
+                elseif k == sdl.SDLK_Q then
                     running = false
                 elseif k == sdl.SDLK_RIGHT or k == sdl.SDLK_PAGEDOWN then
                     turn(1)
@@ -1503,18 +1719,18 @@ while running do
                         search_activate()
                     end
                 end
-            elseif toc_open then
-                if y >= toc_top and y < toc_top + toc_visible * toc_line_h then
-                    local idx = toc_first + math.floor((y - toc_top) / toc_line_h)
-                    if idx >= 1 and idx <= #toc_items then
-                        toc_selected = idx
+            elseif toc.open then
+                if y >= toc.top and y < toc.top + toc.visible * toc.line_h then
+                    local idx = toc.first + math.floor((y - toc.top) / toc.line_h)
+                    if idx >= 1 and idx <= #toc.items then
+                        toc.selected = idx
                         rebuild_toc_texs()
                         toc_activate()
                     end
                 end
             elseif bm_open then
-                if y >= toc_top and y < toc_top + toc_visible * toc_line_h then
-                    local idx = bm_first + math.floor((y - toc_top) / toc_line_h)
+                if y >= toc.top and y < toc.top + toc.visible * toc.line_h then
+                    local idx = bm_first + math.floor((y - toc.top) / toc.line_h)
                     if idx >= 1 and idx <= #bm_items then
                         bm_selected = idx
                         rebuild_bm_texs()
@@ -1522,12 +1738,21 @@ while running do
                     end
                 end
             elseif st_open then
-                if y >= toc_top and y < toc_top + 4 * toc_line_h then
-                    local idx = math.floor((y - toc_top) / toc_line_h) + 1
+                if y >= toc.top and y < toc.top + 4 * toc.line_h then
+                    local idx = math.floor((y - toc.top) / toc.line_h) + 1
                     if idx >= 1 and idx <= 4 then
                         st_selected = idx
                         rebuild_st_texs()
                         st_adjust(1)
+                    end
+                end
+            elseif lib.open then
+                if y >= lib.top and y < lib.top + lib.visible * lib.line_h then
+                    local idx = lib.first + math.floor((y - lib.top) / lib.line_h)
+                    if idx >= 1 and idx <= #lib.items then
+                        lib.selected = idx
+                        rebuild_lib_texs()
+                        lib_activate()
                     end
                 end
             else
