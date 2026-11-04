@@ -764,7 +764,8 @@ return M
    - Lua：`busted` 或轻量断言；页面分区、进度计算、设置合并。
 2. **格式冒烟**（每个格式一个最小样本）
    - 打开 → 页数 > 0 → 渲染第 0 页 → 渲染 checksum 非空 → 目录/元数据。
-   - 样本：`testdata/pdf/min.pdf`、`epub/`、`mobi/`、`azw3/`、`txt/`、`chm/`、`cbz/`。
+   - 本机样本：`/home/quqiufeng/Downloads/book`，清单 `testdata/samples.lua`；`READER_BOOK_DIR` 可覆盖。
+   - 当前覆盖：2×PDF、1×EPUB、2×MOBI、1×AZW3（均无 DRM）；TXT/CHM/CBZ 待补样本。
 3. **交互测试**
    - next/prev、goto chapter、TOC 跳转、搜索、书签、主题/字体、缩放、双页、RTL。
 4. **视觉验收**

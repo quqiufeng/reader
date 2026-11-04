@@ -160,6 +160,9 @@ w:click(120, 240); w:key("ctrl+l")
 1. **单元**：C `ctest`；Lua 轻量断言（分区、进度、设置合并）。
 2. **格式冒烟**：`pdf / epub / mobi / azw3 / txt / chm / cbz` 各一个最小样本：
    打开 → 页数 > 0 → 渲染第 0 页 → 渲染输出非空 → 目录 / 元数据。
+   - 本机样本：`/home/quqiufeng/Downloads/book`，清单 `testdata/samples.lua`；
+     `READER_BOOK_DIR` 可覆盖；不把电子书复制进仓库。
+   - 当前样本：2×PDF、1×EPUB、2×MOBI、1×AZW3（均无 DRM）。
 3. **交互**：next / prev、goto、TOC、搜索、书签、主题 / 字体、缩放、双页、RTL。
 4. **视觉**：关键页截图 + golden 对比 / 读图。
 5. **回归矩阵**：格式 × 功能 × 主题。
@@ -201,6 +204,7 @@ w:click(120, 240); w:key("ctrl+l")
 - Lua：模块化；自动化脚本不启动外部进程；统一走 `automation/reader.lua`。
 - 复用而非重写：解析 / 渲染调 C 库（MuPDF / libmobi / libchmlib / libzip / litehtml）。
 - 不引入 Chrome / WebView / CEF / Electron。
+- 字体：默认仓耳今楷02（`assets/fonts/TsangerJinKai02-W04.ttf` / `W05`）；`READER_FONT` / `READER_FONT_BOLD` 可覆盖。
 - 提交信息：`feat/fix/style/docs/chore(scope): ...`。
 
 ---
@@ -214,6 +218,7 @@ native-reader/
 ├── CMakeLists.txt
 ├── src/                    # C 核心 + shim + worker
 ├── lua/                    # ui / core / render / ffi
+├── assets/fonts/           # 仓耳今楷02（UI/TXT 字体）
 ├── automation/             # reader.lua / x11.lua / xdo.lua / native_demo.lua
 ├── tools/                  # auto_smoke.lua / auto_visual.lua / run_headless.sh
 ├── testdata/               # 格式样本 + golden

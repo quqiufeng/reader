@@ -83,8 +83,11 @@ local function jstr(s)
   return '"' .. s .. '"'
 end
 
-function M:openBook(path)
-  return self:call('reader.open', ('{"path":%s}'):format(jstr(path)))
+function M:openBook(path, page)
+  local args = ('{"path":%s'):format(jstr(path))
+  if page then args = args .. (',"page":%d'):format(page) end
+  args = args .. '}'
+  return self:call('reader.open', args)
 end
 function M:closeBook() return self:call('reader.close') end
 function M:next() return self:call('reader.next') end

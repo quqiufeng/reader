@@ -1,0 +1,15 @@
+仓耳今楷02 阅读测试
+
+这是一段中文测试文本，用来验证 TXT 阅读器的分页、字体和行距。
+Native reader 使用 LuaJIT FFI + MuPDF + SDL2 + SDL2_ttf。
+
+English paragraph: The quick brown fox jumps over the lazy dog.
+This line tests Latin glyphs, wrapping, and mixed CJK/Latin text.
+
+第二段：窗口顶部显示书名，底部显示页码；左右方向键或点击屏幕左右区域翻页。
+字体使用仓耳今楷02，正文 22px，行高 36px。
+
+第三段：TXT 管线完全在 Lua 侧完成——读文件、按视口宽度断行、按页高分页，
+再用 SDL2_ttf 把每一行渲染成纹理。这样不需要额外的 C 解析器。
+
+结尾：如果你能看到这段文字，并且标题和页码也是仓耳字体，说明 UI 和 TXT 管线都工作正常。

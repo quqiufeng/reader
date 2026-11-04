@@ -16,7 +16,12 @@ for _, id in ipairs(c:actions()) do print("  " .. id) end
 print("\n== 状态 ==")
 print("  " .. tostring(c:state()))
 
-local sample = os.getenv("READER_SAMPLE") or "testdata/epub/min.epub"
+local manifest = dofile(dir .. "/../testdata/samples.lua")
+local entry = manifest.samples[1]
+for _, s in ipairs(manifest.samples) do
+  if s.format == "epub" then entry = s; break end
+end
+local sample = os.getenv("READER_SAMPLE") or (manifest.root .. "/" .. entry.file)
 print("\n== 打开样本: " .. sample)
 print("  " .. tostring(c:openBook(sample)))
 print("  " .. tostring(c:state()))
