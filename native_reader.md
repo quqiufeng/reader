@@ -611,3 +611,248 @@ end
 - 桌面用 SDL2 + LuaJIT + C shim，把 Android 的 Activity/View/WebView 职责拆成“场景 + 文档模型 + 渲染器”。
 
 按本文里程碑推进，可以先得到一个 PDF/TXT/EPUB 可用的桌面阅读器，再逐步补齐 MOBI/AZW3、CHM、漫画和高级功能。
+
+---
+
+## 附录 A：全自动开发/测试规范（参考 WordCard）
+
+> 已落地：`automation/xdo.lua`、`automation/x11.lua`、`automation/reader.lua`、`automation/native_demo.lua`；开发约定见根目录 `AGENTS.md`。
+>
+> 参考 `/opt/WordCard/AGENTS.md` 与 `/opt/WordCard/automation.md`，结合本项目 SDL2 + LuaJIT + C 的架构调整。
+>
+> 核心：**结构化操作 + 视觉验收**。Agent 自己构建、运行、用 API 操作、截图、读图、定位差异、改代码，形成闭环。
+
+### A.1 闭环
+
+```text
+设计 → 构建 → 会话内运行 → LuaJIT FFI 驱动 → 截图 → Read 读图
+  ▲                                                        │
+  └──────────────── 定位差异 ← 改代码 ←────────────────────┘
+```
+
+- 操作走**语义化 API**（`click(id)` / `call(fn,args)`），不靠像素猜坐标。
+- 截图只用于**验收**，不是每一步都做。
+- 失败时自动保存 `state.json + screenshot.png + app.log`，便于复盘。
+
+### A.2 与 WordCard 的对应
+
+| WordCard | native_reader |
+|---|---|
+| Flutter UI | SDL2 + Lua UI |
+| `libwordcard_ctl.so` + Unix socket | `libreader_ctl.so` + Unix socket |
+| `automation/wordcard.lua` | `automation/reader.lua` |
+| `automation/x11.lua` + `xdo.lua` | 同结构，窗口/截图用 FFI |
+| `ak_capture` 截 GL 窗口 | **优先自截图** `SDL_RenderReadPixels`；X11 截图兜底 |
+| `Automation.invoke(id)` | `Automation.invoke(id)` / `call(fn,args)` |
+| `agents` 能读图自检 | 同 |
+
+### A.3 进程内自动化桥
+
+应用内启动一个 Unix socket 服务（JSON Lines）：
+
+```text
+/tmp/native-reader-automation.sock
+```
+
+协议：
+
+```json
+{"cmd":"list"}
+{"cmd":"state"}
+{"cmd":"click","id":"reader.next"}
+{"cmd":"call","fn":"reader.open","args":{"path":"/books/a.epub"}}
+{"cmd":"call","fn":"app.capture","args":{"path":"/tmp/opencode/reader.png"}}
+```
+
+- `list`：返回当前页面可点击动作。
+- `state`：返回页面、书名、页码、进度、主题、目录位置等 JSON。
+- `click`：触发 UI 动作。
+- `call`：调用带参函数。
+- `ping`：存活检查。
+
+实现方式二选一：
+
+1. **C 控制库**（对齐 WordCard）：`libreader_ctl.so` 连 socket，LuaJIT FFI 只调 `ctl_open/call/list/state/click`。
+2. **纯 Lua socket 客户端**：`luasocket` / `luv` 直接说 JSON Lines；少一个 C 库。
+
+推荐 1，和 WordCard 一致，FFI 层稳定、易复用。
+
+### A.4 LuaJIT FFI 客户端
+
+`automation/reader.lua`：
+
+```lua
+local ffi = require("ffi")
+
+ffi.cdef[[
+typedef struct rdctl_t rdctl_t;
+rdctl_t* rdctl_open(const char* path);
+void     rdctl_close(rdctl_t* c);
+int      rdctl_call(rdctl_t* c, const char* req, char* out, int outlen);
+int      rdctl_list(rdctl_t* c, char* out, int outlen);
+int      rdctl_state(rdctl_t* c, char* out, int outlen);
+int      rdctl_click(rdctl_t* c, const char* id, char* out, int outlen);
+]]
+
+local M = {}
+M.__index = M
+M.BUF = 1024 * 1024
+
+function M.open(path)
+    path = path or os.getenv("READER_AUTOMATION_SOCK")
+        or "/tmp/native-reader-automation.sock"
+    local lib = ffi.load(os.getenv("RDCTL_LIB") or "reader_ctl")
+    local h = lib.rdctl_open(path)
+    if h == nil then return nil, "cannot connect: " .. path end
+    return setmetatable({ h = h, lib = lib }, M)
+end
+
+function M:raw(req)
+    local out = ffi.new("char[?]", M.BUF)
+    local n = self.lib.rdctl_call(self.h, req, out, M.BUF)
+    if n < 0 then return nil end
+    return ffi.string(out, n)
+end
+
+function M:state() return self:raw('{"cmd":"state"}') end
+function M:list() return self:raw('{"cmd":"list"}') end
+function M:click(id) return self:raw(('{"cmd":"click","id":"%s"}'):format(id)) end
+function M:call(fn, args) return self:raw(('{"cmd":"call","fn":"%s","args":%s}'):format(fn, args or "{}")) end
+
+function M:capture(path)
+    return self:call("app.capture", ('{"path":"%s"}'):format(path))
+end
+
+function M:close() self.lib.rdctl_close(self.h) end
+
+return M
+```
+
+### A.5 窗口与截图
+
+- **首选：应用自截图**（确定性最好，不依赖 X11）
+  - `app.capture` 调 `SDL_RenderReadPixels` 读当前帧，`stbi_write_png` 写文件。
+  - 适合 CI/Xvfb/dummy 渲染；不受窗口移动/缩放影响。
+- **兜底：X11 截图**（参考 WordCard 的 `ak_capture`）
+  - 仅当需要截整个窗口/多窗口时使用。
+  - 通过 LuaJIT FFI 调 `libagentkit.so` 的 `ak_capture`，不启动 `import`/`xdotool`/`wmctrl`。
+- 窗口控制（可选）：`automation/x11.lua` + `xdo.lua`，提供 `activate/center/move/click/key/type/capture`。
+
+### A.6 自动化命令表
+
+| 命令/函数 | 说明 |
+|---|---|
+| `nav.books` / `nav.goto` | 书库/页面跳转 |
+| `reader.open` | 打开 `path` |
+| `reader.close` | 关闭当前书 |
+| `reader.state` | 书名、格式、页码、章节、进度、主题 |
+| `reader.next` / `reader.prev` | 下一页/上一页 |
+| `reader.goto` | `{page|chapter|offset|percent}` |
+| `reader.toc` | 目录 JSON |
+| `reader.search` | 当前书搜索 |
+| `reader.bookmark.add/list/remove` | 书签 |
+| `reader.highlight.add/list` | 高亮/笔记 |
+| `settings.get/set` | 主题、字体、字号、行距、边距、单双页 |
+| `app.capture` | 截图到 `path` |
+| `app.state` | 进程/窗口/内存状态 |
+| `app.quit` | 退出 |
+
+### A.7 测试分层
+
+1. **单元测试**
+   - C：`ctest` / 自带断言；解析、分页、缓存、编码探测。
+   - Lua：`busted` 或轻量断言；页面分区、进度计算、设置合并。
+2. **格式冒烟**（每个格式一个最小样本）
+   - 打开 → 页数 > 0 → 渲染第 0 页 → 渲染 checksum 非空 → 目录/元数据。
+   - 样本：`testdata/pdf/min.pdf`、`epub/`、`mobi/`、`azw3/`、`txt/`、`chm/`、`cbz/`。
+3. **交互测试**
+   - next/prev、goto chapter、TOC 跳转、搜索、书签、主题/字体、缩放、双页、RTL。
+4. **视觉验收**
+   - 固定窗口尺寸/DPI/字体，截图后与 golden 对比（像素 diff 或人工 Read）。
+   - 关键画面：封面、正文首屏、夜间模式、设置页、目录、搜索结果。
+5. **回归矩阵**
+   - 格式 × 功能 × 主题；每次提交跑冒烟 + 关键视觉。
+6. **健壮性**
+   - 损坏文件、超大文件、缺字体、DRM、路径穿越、ZIP 炸弹（限制解压大小/比例）。
+
+### A.8 无头/CI 运行
+
+```bash
+# 逻辑测试：无窗口
+SDL_VIDEODRIVER=dummy ./build/native-reader --headless
+
+# 截图/渲染测试：Xvfb + 软件 GL
+Xvfb :99 -screen 0 1080x1920x24 &
+DISPLAY=:99 LIBGL_ALWAYS_SOFTWARE=1 ./build/native-reader &
+DISPLAY=:99 luajit tools/auto_smoke.lua
+
+# Wayland 无头
+XDG_RUNTIME_DIR=/run/user/1000 weston \
+  --backend=headless-backend.so --socket=wayland-0 --idle-time=0 &
+XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-0 ./build/native-reader &
+```
+
+注意：
+
+- **不要用 `systemd --user` 启动 UI**：缺 `XAUTHORITY`/GL 上下文，会“进程在、无窗口”。
+- 从图形会话进程继承 `DISPLAY`/`XAUTHORITY`（WordCard 的 `ensure_display` 思路）。
+- NVIDIA 驱动内核态/用户态版本要一致；自查 `nvidia-smi`、`/proc/driver/nvidia/version`、`glxinfo -B`。
+- 不要用 `pkill -f` 匹配自身命令行；用 `pkill -x` 或 `'llama-serve[r]'` 括号技巧。
+
+### A.9 标准闭环命令
+
+```bash
+# 1) 构建
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
+
+# 2) 会话内运行
+P=$(pgrep -x pcmanfm-qt | head -1)
+XA=$(tr '\0' '\n' < /proc/$P/environ | sed -n 's/^XAUTHORITY=//p')
+setsid env DISPLAY=:0 XAUTHORITY="$XA" XDG_RUNTIME_DIR=/run/user/1000 \
+  ./build/native-reader >/tmp/opencode/reader.log 2>&1 </dev/null & disown
+
+# 3) 驱动 + 截图
+luajit tools/auto_smoke.lua
+luajit -e 'package.path="automation/?.lua;"..package.path;
+  local R=require("reader"); local c=assert(R.open());
+  c:call("reader.open", "{\"path\":\"testdata/epub/min.epub\"}");
+  c:call("reader.next"); c:capture("/tmp/opencode/reader.png"); c:close()'
+
+# 4) Read /tmp/opencode/reader.png 看图 → 判差异 → 改代码 → 回到 1)
+```
+
+### A.10 失败产物
+
+每次自动化运行输出到：
+
+```text
+artifacts/<timestamp>/<case>/
+├── state_before.json
+├── state_after.json
+├── screenshot.png
+├── app.log
+└── result.json      # ok / error / timings
+```
+
+- 失败用例必须带截图 + 状态 + 日志尾部。
+- 视觉 diff 失败时同时保存 `expected.png` 和 `actual.png`。
+
+### A.11 规范约定
+
+- C：`cmake --build` 无 warning；C ABI 变更同步更新 LuaJIT `ffi.cdef` 和文档。
+- Lua：模块化；自动化脚本不启动外部进程（xdotool/wmctrl/import）；统一走 `automation/reader.lua`。
+- 提交信息：`feat/fix/style/docs/chore(scope): ...`。
+- Definition of Done：
+  1. 构建通过、无 warning；
+  2. 格式冒烟全过；
+  3. 关键视觉截图已 Read 验收；
+  4. `state` 断言通过；
+  5. 失败产物已归档；
+  6. 提交信息符合约定。
+
+### A.12 与 WordCard 的差异
+
+- WordCard 的 UI 是 Flutter，窗口截图走 X11/GL；本项目 UI 是 SDL2 + Lua，**优先应用自截图**，更稳定、更适合 CI。
+- 本项目 UI 就是 Lua，`Automation.invoke(id)` 可以在进程内直接调用 Lua 函数；外部 `luajit` 客户端仍通过 Unix socket 控制。
+- EPUB 没有 Chrome/WebView，视觉验收需要覆盖 litehtml/MuPDF 的排版差异，golden 截图按渲染后端分开存。
