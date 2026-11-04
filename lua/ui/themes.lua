@@ -8,10 +8,22 @@ return {
             sel = { 241, 239, 230 }, shadow = { 236, 232, 222 },
         },
         sepia = {
-            paper = { 243, 235, 215 }, card = { 250, 244, 226 },
-            line = { 214, 200, 170 }, ink = { 90, 58, 30 },
+            paper = { 245, 236, 217 }, card = { 250, 244, 230 },
+            line = { 216, 203, 174 }, ink = { 90, 58, 30 },
             text = { 60, 50, 35 }, muted = { 140, 120, 90 },
-            sel = { 238, 228, 206 }, shadow = { 228, 218, 196 },
+            sel = { 240, 231, 211 }, shadow = { 230, 218, 193 },
+        },
+        amber = {
+            paper = { 239, 228, 196 }, card = { 246, 238, 216 },
+            line = { 214, 200, 166 }, ink = { 122, 82, 45 },
+            text = { 58, 48, 34 }, muted = { 140, 122, 92 },
+            sel = { 233, 220, 186 }, shadow = { 222, 209, 178 },
+        },
+        mist = {
+            paper = { 220, 232, 213 }, card = { 234, 242, 229 },
+            line = { 190, 208, 182 }, ink = { 47, 93, 58 },
+            text = { 46, 58, 46 }, muted = { 104, 122, 102 },
+            sel = { 212, 226, 205 }, shadow = { 200, 216, 193 },
         },
         china = {
             paper = { 226, 240, 203 }, card = { 243, 248, 232 },
@@ -64,11 +76,12 @@ return {
     },
     ORDER = {
         "light", "moon", "bamboo", "china", "sepia",
-        "ochre", "lotus", "indigo", "cinnabar", "dark",
+        "amber", "mist", "ochre", "lotus", "indigo", "cinnabar", "dark",
     },
     NAMES = {
         light = "浅色", moon = "月白", bamboo = "竹青", china = "霜地",
-        sepia = "护眼", ochre = "赭石", lotus = "藕荷", indigo = "黛蓝",
+        sepia = "护眼", amber = "羊皮纸", mist = "雾松绿",
+        ochre = "赭石", lotus = "藕荷", indigo = "黛蓝",
         cinnabar = "朱砂", dark = "深色",
     },
     FONT_ORDER = { 18, 20, 22, 24, 26 },

@@ -8,6 +8,7 @@ int   rd_page_size(void *handle, int page, float *w, float *h);
 int   rd_layout(void *handle, float w, float h, float em,
                 float line_factor, float margin);
 int   rd_render_page(void *handle, int page, float zoom,
+                     int bg_r, int bg_g, int bg_b,
                      uint8_t **out, int *w, int *h, int *stride);
 void  rd_free(void *p);
 int   rd_save_png(const char *path, int w, int h, const uint8_t *rgba);
@@ -87,12 +88,13 @@ function M.link_at(h, page, nx, ny)
     return tonumber(out[0]), tonumber(ox[0]), tonumber(oy[0])
 end
 
-function M.render_page(h, page, zoom)
+function M.render_page(h, page, zoom, bg_r, bg_g, bg_b)
     local out = ffi.new("uint8_t*[1]")
     local w = ffi.new("int[1]")
     local hh = ffi.new("int[1]")
     local stride = ffi.new("int[1]")
-    local rc = lib.rd_render_page(h, page, zoom, out, w, hh, stride)
+    local rc = lib.rd_render_page(h, page, zoom,
+        bg_r or 255, bg_g or 255, bg_b or 255, out, w, hh, stride)
     if rc ~= 0 then return nil, rc end
     return out[0], tonumber(w[0]), tonumber(hh[0]), tonumber(stride[0])
 end

@@ -276,6 +276,7 @@ void  rd_close(void *doc);
 int   rd_page_count(void *doc);
 void  rd_page_size(void *doc, int page, int *w, int *h);
 int   rd_render_page(void *doc, int page, float zoom,
+                     int bg_r, int bg_g, int bg_b,
                      uint8_t **rgba, int *w, int *h);
 void  rd_free(void *p);
 
@@ -310,6 +311,7 @@ void *rd_open(const char *path, int *err);
 void rd_close(void *doc);
 int rd_page_count(void *doc);
 int rd_render_page(void *doc, int page, float zoom,
+                   int bg_r, int bg_g, int bg_b,
                    uint8_t **rgba, int *w, int *h);
 void rd_free(void *p);
 ]]
@@ -320,7 +322,7 @@ local n = R.rd_page_count(doc)
 
 local buf = ffi.new("uint8_t*[1]")
 local w, h = ffi.new("int[1]"), ffi.new("int[1]")
-if R.rd_render_page(doc, 0, 1.0, buf, w, h) == 0 then
+if R.rd_render_page(doc, 0, 1.0, 255, 255, 255, buf, w, h) == 0 then
     -- buf[0], w[0], h[0] -> SDL_UpdateTexture
     R.rd_free(buf[0])
 end

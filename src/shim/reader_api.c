@@ -684,10 +684,18 @@ char *rd_search(void *handle, const char *query, int start_page, int max_hits)
 }
 
 int rd_render_page(void *handle, int page_no, float zoom,
+                   int bg_r, int bg_g, int bg_b,
                    uint8_t **out, int *out_w, int *out_h, int *out_stride)
 {
     rd_doc *h = (rd_doc *)handle;
     if (!h || !h->doc || !out || !out_w || !out_h || !out_stride) return -1;
+
+    if (bg_r < 0) bg_r = 255;
+    if (bg_g < 0) bg_g = 255;
+    if (bg_b < 0) bg_b = 255;
+    if (bg_r > 255) bg_r = 255;
+    if (bg_g > 255) bg_g = 255;
+    if (bg_b > 255) bg_b = 255;
 
     fz_page *page = NULL;
     fz_pixmap *pix = NULL;
@@ -725,10 +733,10 @@ int rd_render_page(void *handle, int page_no, float zoom,
         if (n >= 4) {
             for (int x = 0; x < w; x++) {
                 uint8_t a = src[x * n + 3];
-                uint8_t inv = (uint8_t)(255 - a);
-                dst[x * 4 + 0] = (uint8_t)(src[x * n + 0] + inv);
-                dst[x * 4 + 1] = (uint8_t)(src[x * n + 1] + inv);
-                dst[x * 4 + 2] = (uint8_t)(src[x * n + 2] + inv);
+                int inv = 255 - a;
+                dst[x * 4 + 0] = (uint8_t)(src[x * n + 0] + (bg_r * inv + 127) / 255);
+                dst[x * 4 + 1] = (uint8_t)(src[x * n + 1] + (bg_g * inv + 127) / 255);
+                dst[x * 4 + 2] = (uint8_t)(src[x * n + 2] + (bg_b * inv + 127) / 255);
                 dst[x * 4 + 3] = 255;
             }
         } else if (n == 3) {

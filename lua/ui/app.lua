@@ -43,6 +43,7 @@ local v = {
     shot_tex = nil, shot_w = 0, shot_h = 0, shot_x = 0,
     hdr_open_tex = nil, hdr_open_w = 0, hdr_open_h = 0, hdr_open_x = 0,
     last_browse_dir = nil,
+    toast = nil, toast_tex = nil, toast_w = 0, toast_h = 0, toast_until = 0,
     rects = {}, links = {}, search_cache = {},
 }
 v.pcache = require("ui.page_cache").new(sdl, 4)
@@ -151,6 +152,7 @@ settings.line_factor = tonumber(settings.line_factor) or 1.6
 settings.margin = tonumber(settings.margin) or 72
 v.last_line = settings.line_factor
 v.last_margin = settings.margin
+v.last_theme = settings.theme
 
 local theme = THEMES[settings.theme]
 local body_size = settings.font_size
@@ -308,6 +310,33 @@ local function make_text(text, font, c)
     return t, w, h
 end
 
+v.show_toast = function(text, seconds)
+    if v.toast_tex then sdl.destroy_texture(v.toast_tex); v.toast_tex = nil end
+    v.toast = text
+    v.toast_tex, v.toast_w, v.toast_h = make_text(text, f_page, theme.text)
+    v.toast_until = v.now() + (seconds or 3)
+    v.dirty = true
+end
+
+local function draw_toast()
+    if not v.toast or not v.toast_tex then return end
+    if v.now() >= (v.toast_until or 0) then return end
+    local pad = S(18)
+    local bw = v.toast_w + pad * 2
+    local bh = v.toast_h + pad
+    local x = math.floor((W - bw) / 2)
+    local y = H - bh - S(70)
+    local box = ffi.new("SDL_Rect")
+    box.x, box.y, box.w, box.h = x, y, bw, bh
+    set_color(theme.card)
+    sdl.render_fill_rect(ren, box)
+    set_color(theme.line)
+    sdl.render_draw_rect(ren, box)
+    local tr = ffi.new("SDL_Rect")
+    tr.x, tr.y, tr.w, tr.h = x + pad, y + math.floor(pad / 2), v.toast_w, v.toast_h
+    sdl.render_copy(ren, v.toast_tex, nil, tr)
+end
+
 local function rebuild_header_actions()
     if hdr_toc_tex then sdl.destroy_texture(hdr_toc_tex); hdr_toc_tex = nil end
     if hdr_bm_tex then sdl.destroy_texture(hdr_bm_tex); hdr_bm_tex = nil end
@@ -323,8 +352,7 @@ local function rebuild_header_actions()
     hdr_st_tex, hdr_st_w, hdr_st_h = make_text("设置", f_page, theme.muted)
     v.fs_tex, v.fs_w, v.fs_h = make_text("全屏", f_page, theme.muted)
     v.max_tex, v.max_w, v.max_h = make_text(v.max and "还原" or "最大化", f_page, theme.muted)
-    v.eye_tex, v.eye_w, v.eye_h = make_text(
-        settings.theme == "sepia" and "浅色" or "护眼", f_page, theme.muted)
+    v.eye_tex, v.eye_w, v.eye_h = make_text("换色", f_page, theme.muted)
     v.dual_tex, v.dual_w, v.dual_h = make_text(
         (v.fs or v.dual) and "单栏" or "双栏", f_page, theme.muted)
     v.shot_tex, v.shot_w, v.shot_h = make_text("截图", f_page, theme.muted)
@@ -512,6 +540,12 @@ v.view_metrics = function()
     return spread, top, bottom, avail_h, target_w
 end
 
+v.page_bg_rgb = function()
+    if not v.reflow or settings.theme == "dark" then return nil end
+    local p = theme.paper
+    return p[1], p[2], p[3]
+end
+
 v.content_sig = function()
     local spread, _, _, avail_h, target_w = v.view_metrics()
     return v.view.signature({
@@ -521,6 +555,7 @@ v.content_sig = function()
         line_factor = settings.line_factor,
         margin = settings.margin,
         dark = settings.theme == "dark",
+        page_bg = (v.reflow and settings.theme ~= "dark") and settings.theme or 0,
     })
 end
 
@@ -570,7 +605,8 @@ v.render_into = function(idx, target_w)
     local z = tonumber(zoom) or 1.2
     if pw and pw > 0 then z = target_w / pw end
     z = math.max(0.05, math.min(8.0, z))
-    local pixels, w, h, stride = rd.render_page(doc, idx, z)
+    local br, bg, bb = v.page_bg_rgb()
+    local pixels, w, h, stride = rd.render_page(doc, idx, z, br, bg, bb)
     if not pixels then return nil end
     if settings.theme == "dark" then
         invert_rgba(pixels, w, h, stride or (w * 4))
@@ -596,7 +632,8 @@ v.save_content_snapshot = function(path)
         if not target_w or target_w <= 0 then return nil end
         local pw = rd.page_size(doc, idx)
         if not pw or pw <= 0 then return nil end
-        local pixels, w, h, stride = rd.render_page(doc, idx, target_w / pw)
+        local br, bg, bb = v.page_bg_rgb()
+        local pixels, w, h, stride = rd.render_page(doc, idx, target_w / pw, br, bg, bb)
         if not pixels then return nil end
         if settings.theme == "dark" then
             invert_rgba(pixels, w, h, stride or (w * 4))
@@ -1084,6 +1121,7 @@ local function apply_settings()
     local line_changed = v.last_line ~= settings.line_factor
     local margin_changed = v.last_margin ~= settings.margin
     local old_dark = theme == THEMES.dark
+    local old_theme = v.last_theme
 
     if font_changed then
         local nf = ttf.open(font_regular, S(settings.font_size)) or f_page
@@ -1096,6 +1134,7 @@ local function apply_settings()
     local new_dark = theme == THEMES.dark
     v.last_line = settings.line_factor
     v.last_margin = settings.margin
+    v.last_theme = settings.theme
 
     rebuild_header_actions()
     store.save_settings(settings_file, settings)
@@ -1105,7 +1144,8 @@ local function apply_settings()
             build_txt_pages(book)
             page = math.max(0, math.min(total - 1, page))
             load_page(page)
-        elseif v.pending_layout or old_dark ~= new_dark then
+        elseif v.pending_layout or old_dark ~= new_dark
+            or (v.reflow and old_theme ~= settings.theme) then
             load_page(page)
         end
     end
@@ -1819,7 +1859,8 @@ local function draw()
         library = draw_library,
         content = draw_page,
     })
-    if kind == "content" then sdl.render_present(ren) end
+    draw_toast()
+    sdl.render_present(ren)
 end
 
 local function turn(delta)
@@ -1927,7 +1968,7 @@ local function toggle_dual()
 end
 
 local function toggle_eye()
-    settings.theme = (settings.theme == "sepia") and "light" or "sepia"
+    settings.theme = cycle(THEME_ORDER, settings.theme, 1)
     apply_settings()
 end
 
@@ -2197,6 +2238,10 @@ v.on_mouse_down = function(x, y, button)
                 toggle_eye()
             elseif x >= v.dual_x then
                 toggle_dual()
+            elseif x >= v.shot_x then
+                v.take_snapshot()
+            elseif x >= v.hdr_open_x then
+                v.choose_book()
             elseif x >= hdr_bm_x then
                 open_bookmarks()
             elseif x >= hdr_toc_x then
@@ -2328,7 +2373,12 @@ v.take_snapshot = function()
     local path = v.snapshot_path()
     draw()
     local ok = v.save_content_snapshot(path)
-    if ok then print("snapshot: " .. path) end
+    if ok then
+        print("snapshot: " .. path)
+        v.show_toast("截图已保存：" .. path, 4)
+    else
+        v.show_toast("截图失败", 3)
+    end
     return ok, path
 end
 
@@ -2764,6 +2814,7 @@ local function cleanup()
     if v.dual_tex then sdl.destroy_texture(v.dual_tex); v.dual_tex = nil end
     if v.shot_tex then sdl.destroy_texture(v.shot_tex); v.shot_tex = nil end
     if v.hdr_open_tex then sdl.destroy_texture(v.hdr_open_tex); v.hdr_open_tex = nil end
+    if v.toast_tex then sdl.destroy_texture(v.toast_tex); v.toast_tex = nil end
     local seen = {}
     for _, f in ipairs({ f_title, f_page, f_body }) do
         if f and not seen[f] then
@@ -2877,6 +2928,11 @@ while running do
     end
 
     local now = v.now()
+    if v.toast and now >= (v.toast_until or 0) then
+        v.toast = nil
+        if v.toast_tex then sdl.destroy_texture(v.toast_tex); v.toast_tex = nil end
+        v.dirty = true
+    end
     if v.startup_sync and now >= v.startup_at then
         v.startup_sync = false
         local nw, nh = v.window_target_size()

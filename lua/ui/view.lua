@@ -17,6 +17,7 @@ function M.signature(p)
         p.line_factor or 1.6,
         p.margin or 72,
         p.dark and 1 or 0,
+        p.page_bg or 0,
     }, ":")
 end
 
