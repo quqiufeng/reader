@@ -44,6 +44,7 @@ local v = {
     hdr_open_tex = nil, hdr_open_w = 0, hdr_open_h = 0, hdr_open_x = 0,
     last_browse_dir = nil,
     toast = nil, toast_tex = nil, toast_w = 0, toast_h = 0, toast_until = 0,
+    dialog = nil,
     rects = {}, links = {}, search_cache = {},
 }
 v.pcache = require("ui.page_cache").new(sdl, 4)
@@ -788,6 +789,7 @@ end
 local function open_book(path, start_page)
     if not path or path == "" then return false, "empty path" end
     path = v.normalize_book_path(path)
+    if v.close_panels then v.close_panels() end
     close_book()
     book = path
     v.layout:reset()
@@ -1469,34 +1471,24 @@ local function scan_library()
 end
 
 v.choose_book = function()
+    if v.dialog then return end
     local cmd
     if os.execute("command -v zenity >/dev/null 2>&1") == 0 then
-        cmd = 'zenity --file-selection --modal --title="选择电子书" --filename="$HOME"'
+        cmd = string.format('zenity --file-selection --title=%q --filename=%q',
+            "选择电子书", home .. "/")
     elseif os.execute("command -v kdialog >/dev/null 2>&1") == 0 then
-        cmd = 'kdialog --getopenfilename "$HOME"'
+        cmd = string.format('kdialog --getopenfilename %q', home)
     else
+        v.open_browser()
         return
     end
     local out = os.tmpname()
-    local run = string.format(
-        '%s > %q 2>/dev/null & pid=$!; sleep 0.25; ' ..
-        'xdotool search --name "选择电子书" windowactivate >/dev/null 2>&1; wait $pid',
-        cmd, out)
-    os.execute(run)
-    local f = io.open(out, "rb")
-    local path = f and f:read("*l") or nil
-    if f then f:close() end
+    local done = out .. ".done"
     os.remove(out)
-    if not path or path == "" then return end
-    lib.open = false
-    destroy_lib()
-    local ok, err = open_book(path, nil)
-    if not ok then
-        print("open failed: " .. tostring(err))
-        lib.open = true
-        scan_library()
-        refresh_lib_texts()
-    end
+    os.remove(done)
+    os.execute(string.format("( %s > %q 2>/dev/null; : > %q ) &", cmd, out, done))
+    v.dialog = { out = out, done = done }
+    v.show_toast("请选择电子书…", 2)
 end
 
 local function rebuild_lib_texs()
@@ -1679,6 +1671,18 @@ v.browser_close = function()
     v.dirty = true
 end
 
+v.close_panels = function()
+    if search.open then close_search() end
+    if toc.open then close_toc() end
+    if bm_open then close_bm() end
+    if st_open then close_st() end
+    if browser.open then v.browser_close() end
+    if lib.open then
+        lib.open = false
+        destroy_lib()
+    end
+end
+
 v.browser_move = function(delta)
     if #browser.items == 0 then return end
     browser.selected = math.max(1, math.min(#browser.items, browser.selected + delta))
@@ -1700,6 +1704,9 @@ v.browser_activate = function()
         print("open failed: " .. tostring(err))
         browser.open = true
         v.browser_load(v.last_browse_dir)
+    elseif lib.open then
+        lib.open = false
+        destroy_lib()
     end
 end
 
@@ -2179,6 +2186,15 @@ end
 v.on_mouse_down = function(x, y, button)
     if button == 3 then
         go_back()
+    elseif browser.open then
+        if y >= browser.top and y < browser.top + browser.visible * browser.line_h then
+            local idx = browser.first + math.floor((y - browser.top) / browser.line_h)
+            if idx >= 1 and idx <= #browser.items then
+                browser.selected = idx
+                v.browser_rebuild()
+                v.browser_activate()
+            end
+        end
     elseif search.open then
         if y >= search.top and y < search.top + search.visible * search.line_h then
             local idx = search.first + math.floor((y - search.top) / search.line_h)
@@ -2932,6 +2948,26 @@ while running do
         v.toast = nil
         if v.toast_tex then sdl.destroy_texture(v.toast_tex); v.toast_tex = nil end
         v.dirty = true
+    end
+    if v.dialog then
+        local df = io.open(v.dialog.done, "rb")
+        if df then
+            df:close()
+            local pf = io.open(v.dialog.out, "rb")
+            local chosen = pf and pf:read("*l") or nil
+            if pf then pf:close() end
+            os.remove(v.dialog.out)
+            os.remove(v.dialog.done)
+            v.dialog = nil
+            if chosen and chosen ~= "" then
+                local ok, err = open_book(chosen, nil)
+                if not ok then
+                    print("open failed: " .. tostring(err))
+                    v.show_toast("打开失败：" .. tostring(err), 3)
+                end
+            end
+            v.dirty = true
+        end
     end
     if v.startup_sync and now >= v.startup_at then
         v.startup_sync = false
