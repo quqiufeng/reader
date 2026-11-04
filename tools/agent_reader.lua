@@ -5,6 +5,7 @@
 --   reader-agent text            # 当前页正文
 --   reader-agent read 5          # 连续读 5 页，输出 JSON
 --   reader-agent next 2
+--   reader-agent goto 3 | goto-chapter 5 1   # 章内页 / 第5章第1页
 --   reader-agent toc | toc.open | toc.select 3 | toc.activate 3
 --   reader-agent search 关键词 | search.open 关键词
 --   reader-agent settings | settings.open 1 | settings.adjust 2 1
@@ -93,6 +94,8 @@ elseif cmd == "prev" then
     emit(a:turn(-(num(2) or 1)))
 elseif cmd == "goto" then
     emit(a:goto(num(2)))
+elseif cmd == "goto-chapter" then
+    emit(a:gotoChapter(num(2), num(3)))
 elseif cmd == "text" then
     local r = a:text(num(2))
     if r and r.text then

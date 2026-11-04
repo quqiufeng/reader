@@ -261,18 +261,18 @@ a:close()
 调用函数（`call(fn,args)`）：
 | 函数 | 参数 / 说明 |
 |---|---|
-| `reader.open` | `{path, page}`，page 从 1 开始 |
+| `reader.open` | `{path, page}`，page 从 1 开始；EPUB/MOBI/AZW3 的 page 为章内页 |
 | `reader.close` | 关闭当前书 |
-| `reader.state` / `app.state` | 当前书、页码、总页数、进度、主题、双栏、缩放 |
-| `reader.next` / `reader.prev` | 翻页（双栏按 2 页步进） |
-| `reader.goto` | `{page}`（1 开始） |
-| `reader.text` | `{page}` 可省略，返回整页纯文本 |
+| `reader.state` / `app.state` | PDF/TXT：全书页码/页数；EPUB/MOBI/AZW3：`page`/`pages` 为章内页，另含 `chapter`、`chapters`、`chapter_pages` |
+| `reader.next` / `reader.prev` | 翻页（双栏按 2 页步进；章末自动切到下一章） |
+| `reader.goto` | `{page}` 当前章内页；`{chapter, page}` 跳到指定章；PDF/TXT 仍为全书页号 |
+| `reader.text` | `{page}` 可省略，返回整页纯文本（重排格式为章内页） |
 | `reader.scroll` | `{dy}` 或 `{delta}` 滚动 |
 | `reader.zoom` | `{zoom}` 或 `{z}`，0.5–3.0 |
 | `reader.pan` | `{dx}` 水平平移 |
-| `reader.toc` | 返回目录列表（不打开面板） |
-| `reader.search` | `{q}` 返回搜索结果（不打开面板） |
-| `reader.bookmark.add/list/remove` | `{note}` / 无 / `{index}` |
+| `reader.toc` | 不打开面板；PDF/TXT 返回 `{page,title}`，EPUB/MOBI/AZW3 返回 `{chapter,title}` |
+| `reader.search` | `{q}`；PDF/TXT 全书搜索，EPUB/MOBI/AZW3 仅当前章（UI 搜索已关闭） |
+| `reader.bookmark.add/list/remove` | `{note}` / 无 / `{index}`；重排格式书签含 `chapter` |
 | `settings.get` / `settings.set` | 主题、font_size、line_factor、margin |
 | `library.scan/select/activate/close` | 书库 |
 | `history.remove` | `{index}` 或 `{path}`，清除阅读历史（保留书签） |
@@ -293,7 +293,7 @@ local A = require("agent")
 local a = assert(A.new())
 
 a:openBook(path, page)   a:closeBook()      a:state()
-a:next()                 a:prev()           a:goto(page)
+a:next()                 a:prev()           a:goto(page) / a:gotoChapter(ch, page)
 a:text(page)             a:scroll(dy)      a:zoom(z)       a:pan(dx)
 a:toc()                  a:tocOpen()        a:tocSelect(i)  a:tocActivate(i)
 a:search(q)              a:searchOpen(q)    a:searchSelect(i) a:searchActivate(i)

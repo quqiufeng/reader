@@ -150,6 +150,7 @@ function M:handle(line)
             note = jget(line, "note"),
             theme = jget(line, "theme"),
             page = jgetnum(line, "page"),
+            chapter = jgetnum(line, "chapter"),
             index = jgetnum(line, "index"),
             selected = jgetnum(line, "selected"),
             row = jgetnum(line, "row"),

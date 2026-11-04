@@ -62,6 +62,7 @@ function M.draw(c)
             ybase = top - math.floor(v.sy)
         end
 
+        local framed = v.p2 ~= nil
         local function draw_one(t, tw, th, x, index)
             if not t then return end
             local dst = ffi.new("SDL_Rect")
@@ -73,15 +74,19 @@ function M.draw(c)
                 x = dst.x, y = dst.y, w = dst.w, h = dst.h, page = index,
             }
 
-            local shadow = ffi.new("SDL_Rect")
-            shadow.x, shadow.y, shadow.w, shadow.h = dst.x + S(4), dst.y + S(4), dst.w, dst.h
-            set_color(theme.shadow)
-            sdl.render_fill_rect(ren, shadow)
+            if framed then
+                local shadow = ffi.new("SDL_Rect")
+                shadow.x, shadow.y, shadow.w, shadow.h = dst.x + S(4), dst.y + S(4), dst.w, dst.h
+                set_color(theme.shadow)
+                sdl.render_fill_rect(ren, shadow)
+            end
 
             sdl.render_copy(ren, t, nil, dst)
 
-            set_color(theme.line)
-            sdl.render_draw_rect(ren, dst)
+            if framed then
+                set_color(theme.line)
+                sdl.render_draw_rect(ren, dst)
+            end
         end
 
         if spread then

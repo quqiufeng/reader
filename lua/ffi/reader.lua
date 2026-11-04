@@ -26,6 +26,7 @@ char *rd_page_fonts(void *handle, int page);
 char *rd_page_links(void *handle, int page);
 char *rd_search(void *handle, const char *query, int start_page, int max_hits);
 int   rd_extract_book(const char *path, const char *out_dir);
+int   rd_touch_path(const char *path);
 ]]
 
 local root = os.getenv("READER_ROOT") or "."
@@ -55,6 +56,10 @@ end
 
 function M.extract_book(path, out_dir)
     return tonumber(lib.rd_extract_book(path, out_dir))
+end
+
+function M.touch_path(path)
+    return tonumber(lib.rd_touch_path(path))
 end
 
 function M.open(path)

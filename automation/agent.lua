@@ -57,8 +57,17 @@ function Agent:closeBook() return decode(self.c:call("reader.close")) end
 function Agent:next() return decode(self.c:call("reader.next")) end
 function Agent:prev() return decode(self.c:call("reader.prev")) end
 
-function Agent:goto(page)
+function Agent:goto(page, chapter)
+    if chapter then
+        return decode(self.c:call("reader.goto",
+            ('{"chapter":%d,"page":%d}'):format(chapter, page)))
+    end
     return decode(self.c:call("reader.goto", ('{"page":%d}'):format(page)))
+end
+
+function Agent:gotoChapter(chapter, page)
+    return decode(self.c:call("reader.goto",
+        ('{"chapter":%d,"page":%d}'):format(chapter, page or 1)))
 end
 
 function Agent:text(page) return decode(self.c:text(page)) end

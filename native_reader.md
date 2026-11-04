@@ -747,11 +747,11 @@ return M
 | `nav.books` / `nav.goto` | 书库/页面跳转 |
 | `reader.open` | 打开 `path` |
 | `reader.close` | 关闭当前书 |
-| `reader.state` | 书名、格式、页码、章节、进度、主题 |
-| `reader.next` / `reader.prev` | 下一页/上一页 |
-| `reader.goto` | `{page|chapter|offset|percent}` |
-| `reader.toc` | 目录 JSON |
-| `reader.search` | 当前书搜索 |
+| `reader.state` | 书名、格式、页码/章节、进度、主题；重排格式含 `chapter/chapters/chapter_pages` |
+| `reader.next` / `reader.prev` | 下一页/上一页，章末自动切章 |
+| `reader.goto` | `{page}` 章内页；`{chapter,page}` 跳章；PDF/TXT 为全书页号 |
+| `reader.toc` | 目录 JSON；PDF/TXT 为 `page`，重排格式为 `chapter` |
+| `reader.search` | PDF/TXT 全书搜索；EPUB/MOBI/AZW3 仅当前章 |
 | `reader.bookmark.add/list/remove` | 书签 |
 | `reader.highlight.add/list` | 高亮/笔记 |
 | `settings.get/set` | 主题、字体、字号、行距、边距、单双页 |

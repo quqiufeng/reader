@@ -517,6 +517,7 @@ local function close_book()
     tex_w, tex_h = 0, 0
     v.p2w, v.p2h = 0, 0
     v.sy = 0
+    v.prefetch = nil
     v.pending_layout = false
     v.reflow = false
     v.layout:reset()
@@ -864,6 +865,14 @@ function v.load_page(n, keep_scroll)
     v.sy = math.max(0, math.min(v.max_scroll(), v.sy))
     v.refresh_text()
     v.content_sig_value = sig
+    v.prefetch = nil
+    if v.chapter_mode then
+        local step = spread and 2 or 1
+        local np = n + step
+        if np < total then
+            v.prefetch = { sig = sig, page = np, target_w = target_w }
+        end
+    end
     print(string.format("[reader] page %d/%d  %dx%d%s", page + 1, total,
         tex_w, tex_h, v.p2 and " (+1)" or ""))
     return true
@@ -922,17 +931,18 @@ v.normalize_book_path = function(path)
 end
 
 function v.open_chapter(idx, local_page)
-    if not v.chapters or not v.chapters[idx] then return false end
-    if doc then rd.close(doc); doc = nil end
+    if not v.chapters or not v.chapters[idx] then return false, "no chapter" end
+    local h, err = rd.open(v.chapters[idx].path)
+    if not h then return false, err end
+    local nt = rd.page_count(h)
+    if nt <= 0 then rd.close(h); return false, "no pages" end
+    if doc then rd.close(doc) end
+    doc = h
+    v.chapter_idx = idx
+    total = nt
     v.pcache:clear()
     if tex then sdl.destroy_texture(tex); tex = nil end
     if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
-    local h, err = rd.open(v.chapters[idx].path)
-    if not h then return false, err end
-    doc = h
-    v.chapter_idx = idx
-    total = rd.page_count(doc)
-    if total <= 0 then return false end
     v.layout:reset()
     v.content_sig_value = nil
     v.pending_layout = true
@@ -969,7 +979,12 @@ function v.open_book(path, start_page)
         local root = "/dev/shm/native-reader-cache/book_" .. v.ch_hash(path)
         local probe = root .. "/META-INF/container.xml"
         local pf = io.open(probe, "rb")
-        if pf then pf:close() else rd.extract_book(path, root) end
+        if pf then
+            pf:close()
+            rd.touch_path(root)
+        else
+            rd.extract_book(path, root)
+        end
         v.chapters = v.ch_parse(root)
         if v.chapters and #v.chapters > 0 then
             v.chapter_mode = true
@@ -2973,7 +2988,10 @@ local function do_call(fn, args)
         local ch = tonumber(args.chapter)
         if v.chapter_mode and v.chapters then
             if ch and v.chapters[ch] then
-                v.open_chapter(ch, n and (n - 1) or 0)
+                local ok, err = v.open_chapter(ch, n and (n - 1) or 0)
+                if not ok then
+                    return { ok = false, error = tostring(err), state = state_table() }
+                end
             elseif n then
                 v.load_page(math.max(0, math.min(total - 1, n - 1)))
             end
@@ -3289,6 +3307,17 @@ while running do
     if v.had_event then
         v.dirty = true
         v.had_event = false
+    end
+    if not v.dirty and v.prefetch then
+        local P = v.prefetch
+        v.prefetch = nil
+        if doc and not is_txt and P.sig == v.content_sig() and P.page < total then
+            local key = P.sig .. ":" .. P.page
+            if not v.pcache.map[key] then
+                local t, w, h = v.render_into(P.page, P.target_w)
+                if t then v.pcache:put(key, { tex = t, w = w, h = h }) end
+            end
+        end
     end
     v.drew = false
     if v.dirty then

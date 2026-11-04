@@ -23,6 +23,7 @@ typedef struct rd_doc {
 
 int reader_mobi_to_epub(const char *src, const char *out);
 static int mobi_to_epub(const char *src, char *out, size_t outsz);
+static void books_cache_trim(const char *cache_root, const char *keep);
 
 static fz_context *font_cache_ctx = NULL;
 static fz_font *font_cache_regular = NULL;
@@ -304,7 +305,126 @@ int rd_extract_book(const char *path, const char *out_dir)
     fz_drop_buffer(ctx, buf);
     fz_drop_archive(ctx, arch);
     fz_drop_context(ctx);
+    if (count > 0) {
+        char parent[PATH_MAX];
+        snprintf(parent, sizeof(parent), "%s", out_dir);
+        char *slash = strrchr(parent, '/');
+        if (slash) {
+            *slash = 0;
+            books_cache_trim(parent, out_dir);
+        }
+    }
     return count;
+}
+
+static long tree_size(const char *path)
+{
+    struct stat st;
+    if (lstat(path, &st) != 0) return 0;
+    if (!S_ISDIR(st.st_mode)) return (long)st.st_size;
+    DIR *d = opendir(path);
+    if (!d) return 0;
+    long total = 0;
+    struct dirent *de;
+    while ((de = readdir(d)) != NULL) {
+        if (de->d_name[0] == '.' &&
+            (de->d_name[1] == 0 || (de->d_name[1] == '.' && de->d_name[2] == 0)))
+            continue;
+        char p[PATH_MAX];
+        if (snprintf(p, sizeof(p), "%s/%s", path, de->d_name) >= (int)sizeof(p))
+            continue;
+        total += tree_size(p);
+    }
+    closedir(d);
+    return total;
+}
+
+static int tree_remove(const char *path)
+{
+    struct stat st;
+    if (lstat(path, &st) != 0) return -1;
+    if (!S_ISDIR(st.st_mode)) return unlink(path);
+    DIR *d = opendir(path);
+    if (!d) return -1;
+    struct dirent *de;
+    while ((de = readdir(d)) != NULL) {
+        if (de->d_name[0] == '.' &&
+            (de->d_name[1] == 0 || (de->d_name[1] == '.' && de->d_name[2] == 0)))
+            continue;
+        char p[PATH_MAX];
+        if (snprintf(p, sizeof(p), "%s/%s", path, de->d_name) >= (int)sizeof(p))
+            continue;
+        tree_remove(p);
+    }
+    closedir(d);
+    return rmdir(path);
+}
+
+typedef struct bookcache_entry {
+    char *path;
+    time_t used;
+    long size;
+} bookcache_entry;
+
+static int bookcache_oldest(const void *a, const void *b)
+{
+    const bookcache_entry *x = (const bookcache_entry *)a;
+    const bookcache_entry *y = (const bookcache_entry *)b;
+    if (x->used != y->used) return x->used < y->used ? -1 : 1;
+    return 0;
+}
+
+static void books_cache_trim(const char *cache_root, const char *keep)
+{
+    long max_bytes = cache_max_bytes();
+    DIR *d = opendir(cache_root);
+    if (!d) return;
+    bookcache_entry *arr = NULL;
+    size_t n = 0, cap = 0;
+    long total = 0;
+    struct dirent *de;
+    while ((de = readdir(d)) != NULL) {
+        if (strncmp(de->d_name, "book_", 5) != 0) continue;
+        char path[PATH_MAX];
+        if (snprintf(path, sizeof(path), "%s/%s", cache_root, de->d_name)
+            >= (int)sizeof(path)) continue;
+        struct stat st;
+        if (stat(path, &st) != 0 || !S_ISDIR(st.st_mode)) continue;
+        if (n == cap) {
+            size_t ncap = cap ? cap * 2 : 16;
+            bookcache_entry *tmp = (bookcache_entry *)realloc(arr, ncap * sizeof(*arr));
+            if (!tmp) break;
+            arr = tmp;
+            cap = ncap;
+        }
+        arr[n].path = strdup(path);
+        if (!arr[n].path) break;
+        arr[n].used = st.st_mtime;
+        arr[n].size = tree_size(path);
+        total += arr[n].size;
+        n++;
+    }
+    closedir(d);
+    if (n > 0 && total > max_bytes) {
+        qsort(arr, n, sizeof(*arr), bookcache_oldest);
+        for (size_t i = 0; i < n && total > max_bytes; i++) {
+            if (keep && strcmp(arr[i].path, keep) == 0) continue;
+            if (tree_remove(arr[i].path) == 0) total -= arr[i].size;
+        }
+    }
+    for (size_t i = 0; i < n; i++) free(arr[i].path);
+    free(arr);
+}
+
+int rd_touch_path(const char *path)
+{
+    if (!path) return -1;
+    struct timeval tv[2];
+    tv[0].tv_sec = time(NULL);
+    tv[0].tv_usec = 0;
+    tv[1].tv_sec = tv[0].tv_sec;
+    tv[1].tv_usec = 0;
+    return utimes(path, tv);
 }
 
 static const char *epub_cache_dir(void)
