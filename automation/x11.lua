@@ -202,7 +202,7 @@ end
 --   luajit -e 'package.path=".../automation/?.lua;"..package.path;
 --     require("x11").window("native-reader"):center():capture("/tmp/native_reader.png")'
 function M.once(title, path)
-    local w = assert(M.window(title or "native-reader"))
+    local w = assert(M.window(title or "reader"))
     if path then w:capture(path) end
     return w
 end

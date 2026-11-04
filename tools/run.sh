@@ -12,7 +12,8 @@ else
 fi
 
 export READER_ROOT="$ROOT"
-export LD_LIBRARY_PATH="$ROOT/lib:$ROOT/build:/usr/local/lib:${LD_LIBRARY_PATH:-}"
+MUPDF_LIBDIR="${READER_MUPDF_LIBDIR:-/opt/mupdf/build/shared-release}"
+export LD_LIBRARY_PATH="$ROOT/lib:$ROOT/build:$MUPDF_LIBDIR:/usr/local/lib:${LD_LIBRARY_PATH:-}"
 
 if [ -z "${DISPLAY:-}" ]; then
     export DISPLAY="${READER_DISPLAY:-:0}"

@@ -27,6 +27,7 @@ long send(int fd, const void *buf, size_t len, int flags);
 int close(int fd);
 int unlink(const char *path);
 int fcntl(int fd, int cmd, int arg);
+int chmod(const char *path, unsigned int mode);
 ]]
 
 local C = ffi.C
@@ -71,6 +72,7 @@ local function jget(s, key)
     if not v then return nil end
     return v:gsub("\\\\", "\\"):gsub('\\"', '"')
             :gsub("\\n", "\n"):gsub("\\r", "\r"):gsub("\\t", "\t")
+            :gsub("\\/", "/")
 end
 
 local function jgetnum(s, key)
@@ -106,6 +108,8 @@ function M.start(path, handlers)
         C.close(fd)
         error("automation: bind failed: " .. path)
     end
+    C.chmod(path, 0x1C0) -- 0700
+
     if C.listen(fd, 8) ~= 0 then
         C.close(fd)
         error("automation: listen failed")
@@ -144,9 +148,17 @@ function M:handle(line)
             path = jget(line, "path"),
             q = jget(line, "q"),
             note = jget(line, "note"),
+            theme = jget(line, "theme"),
             page = jgetnum(line, "page"),
             index = jgetnum(line, "index"),
-            theme = jget(line, "theme"),
+            selected = jgetnum(line, "selected"),
+            row = jgetnum(line, "row"),
+            delta = jgetnum(line, "delta"),
+            dy = jgetnum(line, "dy"),
+            dx = jgetfloat(line, "dx"),
+            zoom = jgetfloat(line, "zoom"),
+            z = jgetfloat(line, "z"),
+            count = jgetnum(line, "count"),
             font_size = jgetnum(line, "font_size"),
             line_factor = jgetfloat(line, "line_factor"),
             margin = jgetnum(line, "margin"),

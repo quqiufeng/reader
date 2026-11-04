@@ -95,6 +95,12 @@ function M:next() return self:call('reader.next') end
 function M:prev() return self:call('reader.prev') end
 function M:goto(pos) return self:call('reader.goto', pos or '{}') end
 function M:toc() return self:call('reader.toc') end
+function M:text(page)
+  if page then
+    return self:call('reader.text', ('{"page":%d}'):format(page))
+  end
+  return self:call('reader.text')
+end
 function M:search(q)
   return self:call('reader.search', ('{"q":%s}'):format(jstr(q)))
 end
@@ -111,7 +117,7 @@ function M:appState() return self:call('app.state') end
 function M:window(title)
   local x11 = require("x11")
   local custom = title or os.getenv("READER_WINDOW_TITLE")
-  local name = custom or "native-reader"
+  local name = custom or "reader"
   -- 优先 WM_CLASS，避免把终端/其他窗口误认成主窗口
   local w
   if custom then

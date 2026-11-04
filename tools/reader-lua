@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SELF="$(readlink -f "$0")"
+DIR="$(cd "$(dirname "$SELF")" && pwd)"
+
+if [ -f "$DIR/../automation/agent.lua" ]; then
+    ROOT="$(cd "$DIR/.." && pwd)"
+    LUA="$ROOT/third_party/luajit/src/luajit"
+elif [ -f "$DIR/automation/agent.lua" ]; then
+    ROOT="$DIR"
+    LUA="$ROOT/lib/luajit"
+else
+    echo "automation/agent.lua not found" >&2
+    exit 1
+fi
+
+if [ ! -x "$LUA" ]; then
+    LUA="$(command -v luajit || true)"
+fi
+if [ -z "$LUA" ]; then
+    echo "bundled luajit not found" >&2
+    exit 1
+fi
+
+export READER_ROOT="$ROOT"
+export LUA_PATH="$ROOT/automation/?.lua;$ROOT/lua/?.lua;$ROOT/lua/?/init.lua;;${LUA_PATH:-}"
+export LUA_CPATH="$ROOT/lib/lua/5.1/?.so;$ROOT/lib/lua/?.so;;${LUA_CPATH:-}"
+exec "$LUA" "$@"
