@@ -20,6 +20,7 @@ int   rd_link_at(void *handle, int page, float nx, float ny,
                  int *out_page, float *out_x, float *out_y);
 char *rd_toc(void *handle);
 char *rd_page_text(void *handle, int page);
+char *rd_list_dir(const char *path);
 char *rd_page_fonts(void *handle, int page);
 char *rd_page_links(void *handle, int page);
 char *rd_search(void *handle, const char *query, int start_page, int max_hits);
@@ -111,6 +112,14 @@ end
 
 function M.page_links(h, page)
     local p = lib.rd_page_links(h, page)
+    if p == nil then return "" end
+    local s = ffi.string(p)
+    lib.rd_free(p)
+    return s
+end
+
+function M.list_dir(path)
+    local p = lib.rd_list_dir(path)
     if p == nil then return "" end
     local s = ffi.string(p)
     lib.rd_free(p)

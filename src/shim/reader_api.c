@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <dirent.h>
 #include <unistd.h>
 #include <limits.h>
 #include <time.h>
@@ -512,6 +513,39 @@ char *rd_page_links(void *handle, int page_no)
 
     if (links) fz_drop_link(h->ctx, links);
     if (page) fz_drop_page(h->ctx, page);
+    if (!buf) {
+        buf = (char *)malloc(1);
+        if (buf) buf[0] = 0;
+    }
+    return buf;
+}
+
+char *rd_list_dir(const char *path)
+{
+    DIR *dir = opendir(path ? path : ".");
+    if (!dir) {
+        char *empty = (char *)malloc(1);
+        if (empty) empty[0] = 0;
+        return empty;
+    }
+
+    char *buf = NULL;
+    size_t len = 0, cap = 0;
+    struct dirent *e;
+    while ((e = readdir(dir)) != NULL) {
+        if (strcmp(e->d_name, ".") == 0 || strcmp(e->d_name, "..") == 0)
+            continue;
+        char full[PATH_MAX];
+        snprintf(full, sizeof(full), "%s/%s", path ? path : ".", e->d_name);
+        struct stat st;
+        if (stat(full, &st) != 0) continue;
+        const char *type = S_ISDIR(st.st_mode) ? "d" : "f";
+        buf_append(&buf, &len, &cap, type);
+        buf_append(&buf, &len, &cap, "\t");
+        buf_append(&buf, &len, &cap, e->d_name);
+        buf_append(&buf, &len, &cap, "\n");
+    }
+    closedir(dir);
     if (!buf) {
         buf = (char *)malloc(1);
         if (buf) buf[0] = 0;

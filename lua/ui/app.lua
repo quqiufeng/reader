@@ -32,6 +32,9 @@ local v = {
     cursor_arrow = nil, cursor_hand = nil, hover = false, hover_t = 0,
     dirty = true, had_event = false, drew = false,
     resize_pending = false, resize_due = 0, sync_at = 0,
+    resize_last_w = nil, resize_last_h = nil, force_reload = false,
+    startup_sync = false, startup_at = 0,
+    resize_target_w = nil, resize_target_h = nil, scale_ready = false,
     p2 = nil, p2w = 0, p2h = 0,
     fs_tex = nil, fs_w = 0, fs_h = 0, fs_x = 0,
     max_tex = nil, max_w = 0, max_h = 0, max_x = 0,
@@ -39,8 +42,11 @@ local v = {
     dual_tex = nil, dual_w = 0, dual_h = 0, dual_x = 0,
     shot_tex = nil, shot_w = 0, shot_h = 0, shot_x = 0,
     hdr_open_tex = nil, hdr_open_w = 0, hdr_open_h = 0, hdr_open_x = 0,
+    last_browse_dir = nil,
     rects = {}, links = {}, search_cache = {},
 }
+v.pcache = require("ui.page_cache").new(sdl, 4)
+
 local win = assert(sdl.create_window("reader", W, H), "SDL_CreateWindow failed")
 v.win_x, v.win_y = sdl.get_window_position(win)
 local icon = sdl.load_bmp("assets/icons/native-reader.bmp")
@@ -50,6 +56,7 @@ if icon ~= nil then
 end
 local ren = assert(sdl.create_renderer(win), "SDL_CreateRenderer failed")
 local function sync_scale()
+    if v.scale_ready then return end
     local ww, wh = sdl.get_window_size(win)
     local ow, oh = sdl.get_renderer_output_size(ren)
     if ww and wh and ww > 0 and wh > 0 and ow and oh then
@@ -59,10 +66,22 @@ local function sync_scale()
         elseif not v.ui_scale then
             v.ui_scale = v.scale_x
         end
-        W, H = ow, oh
+        v.scale_ready = true
     end
 end
 sync_scale()
+v.window_target_size = function()
+    return v.view.target_size(win, sdl, v.scale_x, v.scale_y, W, H)
+end
+ffi.cdef[[
+typedef struct { long tv_sec; long tv_usec; } reader_timeval;
+int gettimeofday(reader_timeval *tv, void *tz);
+]]
+v.now = function()
+    local tv = ffi.new("reader_timeval")
+    ffi.C.gettimeofday(tv, nil)
+    return tonumber(tv.tv_sec) + tonumber(tv.tv_usec) / 1000000
+end
 local function S(n)
     return math.floor(n * (v.ui_scale or 1) + 0.5)
 end
@@ -85,6 +104,10 @@ local settings_file = data_dir .. "/settings.lua"
 local themes = require("ui.themes")
 local store = require("ui.store")
 local panel = require("ui.panel")
+local renderer = require("ui.renderer")
+v.view = require("ui.view")
+v.layout = require("ui.layout").new(rd)
+v.content = require("ui.content")
 local window_file = data_dir .. "/window.lua"
 local wgeo = store.load(window_file)
 if wgeo and wgeo.w and wgeo.h and wgeo.w >= 480 and wgeo.h >= 480 then
@@ -102,6 +125,10 @@ if wgeo and wgeo.w and wgeo.h and wgeo.w >= 480 and wgeo.h >= 480 then
         v.max = true
         v.dual = true
         sdl.maximize_window(win)
+    end
+    if (v.fs or v.max) then
+        v.startup_sync = true
+        v.startup_at = v.now() + 0.30
     end
 end
 local THEMES = themes.THEMES
@@ -235,6 +262,23 @@ local lib = {
     top = S(120),
     open_tex = nil, open_w = 0, open_h = 0, open_x = 0,
     clear_tex = nil, clear_w = 0, clear_h = 0, clear_x = 0,
+    ui_w = 0, ui_h = 0,
+}
+
+local browser = {
+    open = false,
+    dir = "",
+    items = {},
+    selected = 1,
+    first = 1,
+    texs = {},
+    line_h = S(40),
+    visible = 14,
+    top = S(120),
+    title_tex = nil, title_w = 0, title_h = 0,
+    count_tex = nil, count_w = 0, count_h = 0,
+    hint_tex = nil, hint_w = 0, hint_h = 0,
+    empty_tex = nil, empty_w = 0, empty_h = 0,
 }
 
 local refresh_lib_texts = nil
@@ -416,6 +460,7 @@ local function close_book()
     save_progress()
     if tex then sdl.destroy_texture(tex); tex = nil end
     if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
+    if v.pcache then v.pcache:clear() end
     for _, t in ipairs(line_texs) do sdl.destroy_texture(t.tex) end
     line_texs = {}
     if title_tex then sdl.destroy_texture(title_tex); title_tex = nil end
@@ -429,6 +474,8 @@ local function close_book()
     v.sy = 0
     v.pending_layout = false
     v.reflow = false
+    v.layout:reset()
+    v.content_sig_value = nil
     v.search_cache = {}
     book = nil
 end
@@ -465,6 +512,18 @@ v.view_metrics = function()
     return spread, top, bottom, avail_h, target_w
 end
 
+v.content_sig = function()
+    local spread, _, _, avail_h, target_w = v.view_metrics()
+    return v.view.signature({
+        spread = spread, target_w = target_w, reflow = v.reflow,
+        avail_h = avail_h, zoom = v.zoom,
+        font_size = settings.font_size,
+        line_factor = settings.line_factor,
+        margin = settings.margin,
+        dark = settings.theme == "dark",
+    })
+end
+
 v.max_scroll = function()
     local _, _, _, avail_h = v.view_metrics()
     local mh = math.max(tex_h or 0, v.p2h or 0)
@@ -474,9 +533,11 @@ end
 v.relayout = function(frac)
     if not v.reflow or not doc then return end
     local _, _, _, avail_h, target_w = v.view_metrics()
-    local margin = math.min(settings.margin, math.floor(target_w / 8))
-    local nt = rd.layout(doc, target_w, avail_h,
+    local layout_w = v.view.layout_width(target_w)
+    local margin = math.min(settings.margin, math.floor(layout_w / 8))
+    local nt, hit = v.layout:apply(doc, layout_w, avail_h,
         settings.font_size, settings.line_factor, margin)
+    if hit then return end
     if nt and nt > 0 then
         total = nt
         page = math.max(0, math.min(total - 1,
@@ -554,8 +615,23 @@ v.save_content_snapshot = function(path)
 end
 
 local function load_page(n, keep_scroll)
-    if tex then sdl.destroy_texture(tex); tex = nil end
-    if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
+    local sig = v.content_sig()
+    local invalidate = v.pending_layout or sig ~= v.content_sig_value
+    if invalidate then
+        v.pcache:clear()
+        if tex then sdl.destroy_texture(tex); tex = nil end
+        if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
+    else
+        if tex then
+            v.pcache:put(sig .. ":" .. page, { tex = tex, w = tex_w, h = tex_h })
+            tex = nil
+        end
+        if v.p2 then
+            v.pcache:put(sig .. ":" .. (page + 1),
+                { tex = v.p2, w = v.p2w, h = v.p2h })
+            v.p2 = nil
+        end
+    end
     for _, t in ipairs(line_texs) do sdl.destroy_texture(t.tex) end
     line_texs = {}
     tex_w, tex_h, v.p2w, v.p2h = 0, 0, 0, 0
@@ -573,6 +649,7 @@ local function load_page(n, keep_scroll)
         page = n
         v.sy = 0
         refresh_text()
+        v.content_sig_value = v.content_sig()
         print(string.format("[reader] txt page %d/%d", page + 1, total))
         return true
     end
@@ -589,10 +666,21 @@ local function load_page(n, keep_scroll)
         target_w = math.max(160, W - S(48))
     end
     target_w = math.floor(target_w * v.zoom)
-    tex, tex_w, tex_h = v.render_into(n, target_w)
+    sig = v.content_sig()
+    local ce = v.pcache:take(sig .. ":" .. n)
+    if ce then
+        tex, tex_w, tex_h = ce.tex, ce.w, ce.h
+    else
+        tex, tex_w, tex_h = v.render_into(n, target_w)
+    end
     if not tex then return false end
     if spread and n > 0 and n + 1 < total then
-        v.p2, v.p2w, v.p2h = v.render_into(n + 1, target_w)
+        local ce2 = v.pcache:take(sig .. ":" .. (n + 1))
+        if ce2 then
+            v.p2, v.p2w, v.p2h = ce2.tex, ce2.w, ce2.h
+        else
+            v.p2, v.p2w, v.p2h = v.render_into(n + 1, target_w)
+        end
     end
     page = n
     v.pan_x = 0
@@ -602,6 +690,7 @@ local function load_page(n, keep_scroll)
     v.sy = keep_scroll and (v.sy or 0) or 0
     v.sy = math.max(0, math.min(v.max_scroll(), v.sy))
     refresh_text()
+    v.content_sig_value = sig
     print(string.format("[reader] page %d/%d  %dx%d%s", page + 1, total,
         tex_w, tex_h, v.p2 and " (+1)" or ""))
     return true
@@ -664,6 +753,9 @@ local function open_book(path, start_page)
     path = v.normalize_book_path(path)
     close_book()
     book = path
+    v.layout:reset()
+    v.content_sig_value = nil
+    v.last_browse_dir = path:match("^(.*)/[^/]*$")
     local fmt = rd.detect(path)
     is_txt = fmt == 5
     v.reflow = fmt == 2 or fmt == 3 or fmt == 4
@@ -705,173 +797,28 @@ local function open_book(path, start_page)
 end
 
 local function draw_page()
-    set_color(theme.paper)
-    sdl.render_clear(ren)
-    v.rects = {}
-    local spread, top, bottom, avail_h = v.view_metrics()
-
-    if is_txt then
-        local line_h = txt_line_height()
-        local card_x = math.max(S(24), S(settings.margin - 24))
-        local card_top = v.fs and S(24) or S(72)
-        local card = ffi.new("SDL_Rect")
-        card.x, card.y, card.w, card.h = card_x, card_top, W - 2 * card_x, H - card_top - S(64)
-        set_color(theme.card)
-        sdl.render_fill_rect(ren, card)
-        set_color(theme.line)
-        sdl.render_draw_rect(ren, card)
-
-        for i, t in ipairs(line_texs) do
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = S(settings.margin), card_top + S(24) + (i - 1) * line_h, t.w, t.h
-            sdl.render_copy(ren, t.tex, nil, r)
-        end
-    elseif tex then
-        local clip = ffi.new("SDL_Rect")
-        clip.x, clip.y, clip.w, clip.h = 0, top, W, avail_h
-        sdl.set_clip_rect(ren, clip)
-
-        local maxs = v.max_scroll()
-        v.sy = math.max(0, math.min(maxs, v.sy or 0))
-        local page_bottom = math.max(tex_h or 0, v.p2h or 0)
-        local total_w_now = tex_w + (v.p2 and (S(5) + v.p2w) or 0)
-        local max_pan = math.max(0, math.floor((total_w_now - W) / 2))
-        v.pan_x = math.max(-max_pan, math.min(max_pan, v.pan_x or 0))
-        local ybase
-        if maxs <= 0 then
-            ybase = top + math.floor((avail_h - page_bottom) / 2)
-        else
-            ybase = top - math.floor(v.sy)
-        end
-
-        local function draw_one(t, tw, th, x, index)
-            if not t then return end
-            local dst = ffi.new("SDL_Rect")
-            dst.x = math.floor(x)
-            dst.y = ybase
-            dst.w = tw
-            dst.h = th
-            v.rects[#v.rects + 1] = {
-                x = dst.x, y = dst.y, w = dst.w, h = dst.h, page = index,
-            }
-
-            local shadow = ffi.new("SDL_Rect")
-            shadow.x, shadow.y, shadow.w, shadow.h = dst.x + S(4), dst.y + S(4), dst.w, dst.h
-            set_color(theme.shadow)
-            sdl.render_fill_rect(ren, shadow)
-
-            sdl.render_copy(ren, t, nil, dst)
-
-            set_color(theme.line)
-            sdl.render_draw_rect(ren, dst)
-        end
-
-        if spread then
-            local gap = S(5)
-            local total_w = tex_w + (v.p2 and (gap + v.p2w) or 0)
-            local x = math.floor((W - total_w) / 2 + v.pan_x)
-            draw_one(tex, tex_w, tex_h, x, page)
-            if v.p2 then
-                draw_one(v.p2, v.p2w, v.p2h, x + tex_w + gap, page + 1)
-            end
-        else
-            draw_one(tex, tex_w, tex_h, (W - tex_w) / 2 + v.pan_x, page)
-        end
-        sdl.set_clip_rect(ren, nil)
-    end
-
-    if not v.fs then
-        if title_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = S(24), S(18), title_w, title_h
-            sdl.render_copy(ren, title_tex, nil, r)
-        end
-        if hdr_st_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = hdr_st_x, S(20), hdr_st_w, hdr_st_h
-            sdl.render_copy(ren, hdr_st_tex, nil, r)
-        end
-        if hdr_toc_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = hdr_toc_x, S(20), hdr_toc_w, hdr_toc_h
-            sdl.render_copy(ren, hdr_toc_tex, nil, r)
-        end
-        if hdr_bm_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = hdr_bm_x, S(20), hdr_bm_w, hdr_bm_h
-            sdl.render_copy(ren, hdr_bm_tex, nil, r)
-        end
-        if v.fs_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.fs_x, S(20), v.fs_w, v.fs_h
-            sdl.render_copy(ren, v.fs_tex, nil, r)
-        end
-        if v.max_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.max_x, S(20), v.max_w, v.max_h
-            sdl.render_copy(ren, v.max_tex, nil, r)
-        end
-        if v.eye_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.eye_x, S(20), v.eye_w, v.eye_h
-            sdl.render_copy(ren, v.eye_tex, nil, r)
-        end
-        if v.dual_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.dual_x, S(20), v.dual_w, v.dual_h
-            sdl.render_copy(ren, v.dual_tex, nil, r)
-        end
-        if v.shot_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.shot_x, S(20), v.shot_w, v.shot_h
-            sdl.render_copy(ren, v.shot_tex, nil, r)
-        end
-        if v.hdr_open_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = v.hdr_open_x, S(20), v.hdr_open_w, v.hdr_open_h
-            sdl.render_copy(ren, v.hdr_open_tex, nil, r)
-        end
-
-        set_color(theme.line)
-        local line = ffi.new("SDL_Rect")
-        line.x, line.y, line.w, line.h = S(24), S(58), W - S(48), 1
-        sdl.render_fill_rect(ren, line)
-        line.y = H - S(50)
-        sdl.render_fill_rect(ren, line)
-    end
-
-    if v.fs then
-        set_color(theme.line)
-        local line = ffi.new("SDL_Rect")
-        line.x, line.y, line.w, line.h = S(16), H - S(42), W - S(32), 1
-        sdl.render_fill_rect(ren, line)
-    end
-
-    if page_tex then
-        local r = ffi.new("SDL_Rect")
-        if v.fs then
-            r.x, r.y = math.floor((W - page_w) / 2), H - page_h - S(12)
-        else
-            r.x, r.y = W - page_w - S(24), H - S(38)
-        end
-        r.w, r.h = page_w, page_h
-        sdl.render_copy(ren, page_tex, nil, r)
-    end
-
-    local bar_x = v.fs and S(16) or S(24)
-    local bar_w = W - 2 * bar_x
-    local bar_y = H - S(7)
-
-    local bar_bg = ffi.new("SDL_Rect")
-    bar_bg.x, bar_bg.y, bar_bg.w, bar_bg.h = bar_x, bar_y, bar_w, math.max(2, S(3))
-    set_color(theme.line)
-    sdl.render_fill_rect(ren, bar_bg)
-
-    local bar_fg = ffi.new("SDL_Rect")
-    bar_fg.x, bar_fg.y, bar_fg.w, bar_fg.h = bar_x, bar_y,
-        math.floor(bar_w * (page + 1) / math.max(1, total)), math.max(2, S(3))
-    set_color(theme.ink)
-    sdl.render_fill_rect(ren, bar_fg)
+    v.content.draw({
+        sdl = sdl, ffi = ffi, ren = ren, W = W, H = H, S = S,
+        set_color = set_color,
+        is_txt = is_txt, settings = settings, theme = theme,
+        line_texs = line_texs, tex = tex, tex_w = tex_w, tex_h = tex_h,
+        v = v, page = page, total = total,
+        txt_line_height = txt_line_height,
+        title_tex = title_tex, title_w = title_w, title_h = title_h,
+        page_tex = page_tex, page_w = page_w, page_h = page_h,
+        hdr_st_tex = hdr_st_tex, hdr_st_w = hdr_st_w, hdr_st_h = hdr_st_h,
+        hdr_st_x = hdr_st_x,
+        hdr_toc_tex = hdr_toc_tex, hdr_toc_w = hdr_toc_w, hdr_toc_h = hdr_toc_h,
+        hdr_toc_x = hdr_toc_x,
+        hdr_bm_tex = hdr_bm_tex, hdr_bm_w = hdr_bm_w, hdr_bm_h = hdr_bm_h,
+        hdr_bm_x = hdr_bm_x,
+        fs_tex = v.fs_tex, fs_w = v.fs_w, fs_h = v.fs_h, fs_x = v.fs_x,
+        max_tex = v.max_tex, max_w = v.max_w, max_h = v.max_h, max_x = v.max_x,
+        eye_tex = v.eye_tex, eye_w = v.eye_w, eye_h = v.eye_h, eye_x = v.eye_x,
+        dual_tex = v.dual_tex, dual_w = v.dual_w, dual_h = v.dual_h, dual_x = v.dual_x,
+        shot_tex = v.shot_tex, shot_w = v.shot_w, shot_h = v.shot_h, shot_x = v.shot_x,
+        open_tex = v.hdr_open_tex, open_w = v.hdr_open_w, open_h = v.hdr_open_h, open_x = v.hdr_open_x,
+    })
 end
 
 local function load_toc_data()
@@ -1484,17 +1431,22 @@ end
 v.choose_book = function()
     local cmd
     if os.execute("command -v zenity >/dev/null 2>&1") == 0 then
-        cmd = 'zenity --file-selection --title="选择电子书" ' ..
-            '--file-filter="电子书 | *.pdf *.epub *.mobi *.azw3 *.txt *.chm *.cbz *.cbr"'
+        cmd = 'zenity --file-selection --modal --title="选择电子书" --filename="$HOME"'
     elseif os.execute("command -v kdialog >/dev/null 2>&1") == 0 then
-        cmd = 'kdialog --getopenfilename "$HOME" "电子书 (*.pdf *.epub *.mobi *.azw3 *.txt *.chm *.cbz *.cbr)"'
+        cmd = 'kdialog --getopenfilename "$HOME"'
     else
         return
     end
-    local f = io.popen(cmd)
-    if not f then return end
-    local path = f:read("*l")
-    f:close()
+    local out = os.tmpname()
+    local run = string.format(
+        '%s > %q 2>/dev/null & pid=$!; sleep 0.25; ' ..
+        'xdotool search --name "选择电子书" windowactivate >/dev/null 2>&1; wait $pid',
+        cmd, out)
+    os.execute(run)
+    local f = io.open(out, "rb")
+    local path = f and f:read("*l") or nil
+    if f then f:close() end
+    os.remove(out)
     if not path or path == "" then return end
     lib.open = false
     destroy_lib()
@@ -1562,6 +1514,178 @@ v.clear_history = function()
     return true
 end
 
+v.browser_destroy = function()
+    for _, t in ipairs(browser.texs) do sdl.destroy_texture(t.tex) end
+    browser.texs = {}
+    for _, k in ipairs({ "title_tex", "count_tex", "hint_tex", "empty_tex" }) do
+        if browser[k] then sdl.destroy_texture(browser[k]); browser[k] = nil end
+    end
+end
+
+v.browser_rebuild = function()
+    for _, t in ipairs(browser.texs) do sdl.destroy_texture(t.tex) end
+    browser.texs = {}
+    if #browser.items == 0 then return end
+
+    browser.selected = math.max(1, math.min(#browser.items, browser.selected))
+    local first = math.max(1, browser.selected - math.floor(browser.visible / 2))
+    if first + browser.visible - 1 > #browser.items then
+        first = math.max(1, #browser.items - browser.visible + 1)
+    end
+    browser.first = first
+    local last = math.min(#browser.items, first + browser.visible - 1)
+
+    for i = first, last do
+        local it = browser.items[i]
+        local text = (it.is_dir and "[目录] " or "") .. it.name
+        local w, h = ttf.size(f_body, text)
+        local c = (i == browser.selected) and theme.ink or theme.text
+        local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
+        if t then
+            browser.texs[#browser.texs + 1] = { tex = t, w = w, h = h, index = i }
+        end
+    end
+end
+
+v.browser_load = function(dir)
+    dir = tostring(dir or home)
+    dir = dir:gsub("/+$", "")
+    if dir == "" then dir = "/" end
+    browser.dir = dir
+    browser.items = {}
+    browser.selected = 1
+
+    local parent = dir:match("^(.*)/[^/]+$")
+    if parent and parent ~= "" then
+        browser.items[#browser.items + 1] = {
+            name = "..", is_dir = true, path = parent,
+        }
+    end
+
+    local gvfs = string.format("/run/user/%d/gvfs", tonumber(ffi.C.getuid()) or 1000)
+    if dir == home and rd.list_dir(gvfs) ~= "" then
+        browser.items[#browser.items + 1] = {
+            name = "[网络位置] " .. gvfs, is_dir = true, path = gvfs,
+        }
+    end
+    local dl = home .. "/Downloads/book"
+    if dir == home and rd.list_dir(dl) ~= "" then
+        browser.items[#browser.items + 1] = {
+            name = "[书库] " .. dl, is_dir = true, path = dl,
+        }
+    end
+
+    local exts = {
+        pdf = true, epub = true, mobi = true, azw3 = true,
+        txt = true, chm = true, cbz = true, cbr = true,
+    }
+    local raw = rd.list_dir(dir)
+    for line in raw:gmatch("[^\n]+") do
+        local typ, name = line:match("^(%a)\t(.+)$")
+        if typ and name and name:sub(1, 1) ~= "." then
+            if typ == "d" then
+                browser.items[#browser.items + 1] = {
+                    name = name, is_dir = true, path = dir .. "/" .. name,
+                }
+            else
+                local ext = name:match("%.([%w]+)$")
+                ext = ext and ext:lower() or ""
+                if exts[ext] then
+                    browser.items[#browser.items + 1] = {
+                        name = name, is_dir = false, path = dir .. "/" .. name,
+                    }
+                end
+            end
+        end
+    end
+
+    table.sort(browser.items, function(a, b)
+        if a.is_dir ~= b.is_dir then return a.is_dir end
+        return (a.name or ""):lower() < (b.name or ""):lower()
+    end)
+
+    v.browser_destroy()
+    browser.title_tex, browser.title_w, browser.title_h =
+        make_text("打开书籍 · " .. dir, f_page, theme.ink)
+    browser.count_tex, browser.count_w, browser.count_h =
+        make_text(string.format("%d 项", #browser.items), f_page, theme.muted)
+    browser.hint_tex, browser.hint_w, browser.hint_h = make_text(
+        "↑/↓ 选择 · Enter 打开/进入 · Backspace 上级 · Esc 关闭", f_page, theme.muted)
+    if #browser.items == 0 then
+        browser.empty_tex, browser.empty_w, browser.empty_h =
+            make_text("目录为空或无法读取", f_body, theme.muted)
+    end
+    v.browser_rebuild()
+end
+
+v.open_browser = function(start)
+    close_toc()
+    close_bm()
+    close_st()
+    close_search()
+    browser.open = true
+    local dir = start or v.last_browse_dir
+    if not dir or dir == "" then
+        if book then dir = book:match("^(.*)/[^/]*$") end
+    end
+    if not dir or dir == "" then dir = home end
+    v.browser_load(dir)
+    sdl.stop_text_input()
+end
+
+v.browser_close = function()
+    browser.open = false
+    v.browser_destroy()
+    v.dirty = true
+end
+
+v.browser_move = function(delta)
+    if #browser.items == 0 then return end
+    browser.selected = math.max(1, math.min(#browser.items, browser.selected + delta))
+    v.browser_rebuild()
+end
+
+v.browser_activate = function()
+    local it = browser.items[browser.selected]
+    if not it then return end
+    if it.is_dir then
+        v.browser_load(it.path)
+        return
+    end
+    v.last_browse_dir = browser.dir
+    browser.open = false
+    v.browser_destroy()
+    local ok, err = open_book(it.path, nil)
+    if not ok then
+        print("open failed: " .. tostring(err))
+        browser.open = true
+        v.browser_load(v.last_browse_dir)
+    end
+end
+
+v.draw_browser = function()
+    panel.frame(ren, W, H, theme, v.ui_scale, browser.title_tex, browser.title_w,
+        browser.title_h, browser.count_tex, browser.count_w, browser.count_h)
+    panel.items(ren, W, theme, v.ui_scale, browser.top, browser.line_h,
+        browser.texs, browser.selected, browser.empty_tex,
+        browser.empty_w, browser.empty_h)
+    panel.hint(ren, H, v.ui_scale, browser.hint_tex, browser.hint_w, browser.hint_h)
+    sdl.render_present(ren)
+end
+
+v.key_browser = function(k)
+    if k == sdl.SDLK_UP then v.browser_move(-1)
+    elseif k == sdl.SDLK_DOWN then v.browser_move(1)
+    elseif k == sdl.SDLK_PAGEUP then v.browser_move(-10)
+    elseif k == sdl.SDLK_PAGEDOWN then v.browser_move(10)
+    elseif k == sdl.SDLK_RETURN or k == sdl.SDLK_RIGHT then v.browser_activate()
+    elseif k == sdl.SDLK_BACKSPACE then
+        local parent = browser.dir:match("^(.*)/[^/]+$")
+        if parent and parent ~= "" then v.browser_load(parent) end
+    elseif k == sdl.SDLK_ESCAPE then v.browser_close()
+    end
+end
+
 refresh_lib_texts = function()
     if lib.title_tex then sdl.destroy_texture(lib.title_tex); lib.title_tex = nil end
     if lib.count_tex then sdl.destroy_texture(lib.count_tex); lib.count_tex = nil end
@@ -1583,6 +1707,7 @@ refresh_lib_texts = function()
         lib.empty_tex, lib.empty_w, lib.empty_h = make_text(
             "暂无阅读历史 · 打开新书开始阅读", f_body, theme.muted)
     end
+    lib.ui_w, lib.ui_h = W, H
     rebuild_lib_texs()
 end
 
@@ -1677,28 +1802,24 @@ local function draw_library()
 end
 
 local function draw()
-    if search.open then
-        draw_search()
-        return
-    end
-    if toc.open then
-        draw_toc()
-        return
-    end
-    if bm_open then
-        draw_bookmarks()
-        return
-    end
-    if st_open then
-        draw_settings()
-        return
-    end
-    if lib.open then
-        draw_library()
-        return
-    end
-    draw_page()
-    sdl.render_present(ren)
+    local kind = renderer.kind({
+        browser = browser.open,
+        search = search.open,
+        toc = toc.open,
+        bookmarks = bm_open,
+        settings = st_open,
+        library = lib.open,
+    })
+    renderer.draw(kind, {
+        browser = v.draw_browser,
+        search = draw_search,
+        toc = draw_toc,
+        bookmarks = draw_bookmarks,
+        settings = draw_settings,
+        library = draw_library,
+        content = draw_page,
+    })
+    if kind == "content" then sdl.render_present(ren) end
 end
 
 local function turn(delta)
@@ -1762,21 +1883,13 @@ v.toggle_fs = function()
     v.fs = not v.fs
     sdl.set_window_fullscreen(win, v.fs)
     sdl.delay(60)
-    local nw, nh
-    if v.fs then
-        nw, nh = sdl.get_renderer_output_size(ren)
-        if nw and nw > 0 and nh and nh > 0 then
-            W, H = nw, nh
-        end
-    else
-        W, H = v.win_w, v.win_h
-    end
+    v.resize_pending = true
+    v.resize_due = v.now() + 0.05
+    v.resize_target_w, v.resize_target_h = v.window_target_size()
+    v.resize_last_w, v.resize_last_h = nil, nil
     rebuild_header_actions()
     if lib.open and refresh_lib_texts then refresh_lib_texts() end
-    v.sy = 0
-    v.pending_layout = v.reflow
-    if book then load_page(page) end
-    refresh_text()
+    v.dirty = true
 end
 
 v.toggle_max = function()
@@ -1794,20 +1907,13 @@ v.toggle_max = function()
         sdl.restore_window(win)
     end
     sdl.delay(80)
-    if v.max then
-        local nw, nh = sdl.get_renderer_output_size(ren)
-        if nw and nw > 0 and nh and nh > 0 then
-            W, H = nw, nh
-        end
-    else
-        W, H = v.win_w, v.win_h
-    end
+    v.resize_pending = true
+    v.resize_due = v.now() + 0.05
+    v.resize_target_w, v.resize_target_h = v.window_target_size()
+    v.resize_last_w, v.resize_last_h = nil, nil
     rebuild_header_actions()
     if lib.open and refresh_lib_texts then refresh_lib_texts() end
-    v.sy = 0
-    v.pending_layout = v.reflow
-    if book then load_page(page) end
-    refresh_text()
+    v.dirty = true
 end
 
 local function toggle_dual()
@@ -1826,7 +1932,9 @@ local function toggle_eye()
 end
 
 local function go_back()
-    if search.open then
+    if browser.open then
+        v.browser_close()
+    elseif search.open then
         close_search()
     elseif toc.open then
         close_toc()
@@ -1852,7 +1960,12 @@ end
 
 v.update_cursor = function(x, y)
     local hand = false
-    if search.open then
+    if browser.open then
+        if y >= browser.top and y < browser.top + browser.visible * browser.line_h then
+            local idx = browser.first + math.floor((y - browser.top) / browser.line_h)
+            hand = idx >= 1 and idx <= #browser.items
+        end
+    elseif search.open then
         if y >= search.top and y < search.top + search.visible * search.line_h then
             local idx = search.first + math.floor((y - search.top) / search.line_h)
             hand = idx >= 1 and idx <= #search.results
@@ -1902,7 +2015,27 @@ v.update_cursor = function(x, y)
     v.set_cursor(hand)
 end
 
-local function apply_resize()
+v.ensure_content_size = function()
+    local dirty = false
+    if lib.open and (lib.ui_w ~= W or lib.ui_h ~= H) then
+        refresh_lib_texts()
+        dirty = true
+    end
+    if book and not is_txt and tex then
+        local spread, _, _, _, tw = v.view_metrics()
+        if spread and page == 0 then tw = math.max(160, W - S(48)) end
+        local expected = math.floor(tw * (v.zoom or 1) + 0.5)
+        if math.abs((tex_w or 0) - expected) > 2 or
+           (v.p2 and math.abs((v.p2w or 0) - expected) > 2) then
+            v.pending_layout = v.reflow
+            load_page(page)
+            dirty = true
+        end
+    end
+    return dirty
+end
+
+local function apply_resize(nw, nh)
     local mode_changed = false
     if not v.fs then
         local flags = sdl.get_window_flags(win)
@@ -1924,13 +2057,17 @@ local function apply_resize()
         end
     end
 
-    local nw, nh = sdl.get_renderer_output_size(ren)
+    if not nw or not nh or nw <= 0 or nh <= 0 then
+        nw, nh = v.window_target_size()
+    end
     if not nw or nw <= 0 or nh <= 0 then
         if not mode_changed then return false end
         nw, nh = W, H
     end
     local size_changed = nw ~= W or nh ~= H
-    if not size_changed and not mode_changed then return false end
+    if not size_changed and not mode_changed and not v.pending_layout then
+        return false
+    end
     W, H = nw, nh
     sync_scale()
     if not v.fs and not v.max then
@@ -1939,12 +2076,23 @@ local function apply_resize()
         v.win_x, v.win_y = sdl.get_window_position(win)
     end
 
+    if is_txt and book and size_changed then
+        build_txt_pages(book)
+        page = math.max(0, math.min(total - 1, page))
+    end
+    local sig = v.content_sig()
+    local content_changed = sig ~= v.content_sig_value or v.pending_layout
     rebuild_header_actions()
     if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
-    v.pending_layout = v.reflow
-    if book then load_page(page) end
-    refresh_text()
+    if book and content_changed then
+        v.pending_layout = v.reflow
+        load_page(page)
+    else
+        v.content_sig_value = sig
+        refresh_text()
+    end
+    return true
 end
 
 v.content_click = function(x, y)
@@ -2166,6 +2314,7 @@ end
 v.on_key = function(k, mod)
     if k == sdl.SDLK_F10 then v.toggle_max()
     elseif k == sdl.SDLK_F11 then v.toggle_fs()
+    elseif browser.open then v.key_browser(k)
     elseif search.open then v.key_search(k)
     elseif toc.open then v.key_toc(k)
     elseif bm_open then v.key_bm(k)
@@ -2564,7 +2713,9 @@ local function actions()
     return { "reader.next", "reader.prev", "app.library", "app.toc", "app.bookmarks", "app.settings", "app.search", "app.fullscreen", "app.maximize", "app.dual", "app.eye", "app.quit" }
 end
 
-if initial_book ~= "" then
+if v.startup_sync and shot == "" then
+    v.pending_initial = { book = initial_book, page = initial_page }
+elseif initial_book ~= "" then
     local ok, err = open_book(initial_book, initial_page)
     if not ok then error("open failed: " .. tostring(err)) end
 else
@@ -2600,6 +2751,7 @@ end
 local function cleanup()
     if server then server:stop(); server = nil end
     if search.open then close_search() end
+    if browser.open then v.browser_close() end
     save_progress()
     close_book()
     if lib.open then destroy_lib() end
@@ -2664,7 +2816,21 @@ while running do
                we == sdl.WINDOWEVENT_MAXIMIZED or
                we == sdl.WINDOWEVENT_RESTORED then
                 v.resize_pending = true
-                v.resize_due = os.clock() + 0.10
+                local ew, eh = ev[0].window.data1, ev[0].window.data2
+                if (we == sdl.WINDOWEVENT_SIZE_CHANGED or
+                    we == 5) and ew and eh and ew > 0 and eh > 0 then
+                    v.resize_target_w = math.floor(ew * (v.scale_x or 1) + 0.5)
+                    v.resize_target_h = math.floor(eh * (v.scale_y or 1) + 0.5)
+                else
+                    v.resize_target_w, v.resize_target_h = v.window_target_size()
+                end
+                if we == sdl.WINDOWEVENT_MAXIMIZED or
+                   we == sdl.WINDOWEVENT_RESTORED then
+                    v.resize_last_w, v.resize_last_h = nil, nil
+                    v.resize_due = v.now() + 0.05
+                else
+                    v.resize_due = v.now() + 0.20
+                end
             end
         elseif t == sdl.KEYDOWN then
             v.on_key(ev[0].key.sym, ev[0].key.mod)
@@ -2710,15 +2876,51 @@ while running do
         end
     end
 
-    local now = os.clock()
-    if now >= (v.sync_at or 0) then
+    local now = v.now()
+    if v.startup_sync and now >= v.startup_at then
+        v.startup_sync = false
+        local nw, nh = v.window_target_size()
+        if nw and nh and nw > 0 and nh > 0 then W, H = nw, nh end
+        rebuild_header_actions()
+        local pending = v.pending_initial
+        v.pending_initial = nil
+        if pending then
+            if pending.book and pending.book ~= "" then
+                local ok, err = open_book(pending.book, pending.page)
+                if not ok then error("open failed: " .. tostring(err)) end
+            else
+                open_library()
+            end
+        else
+            if lib.open and refresh_lib_texts then refresh_lib_texts() end
+            v.sy = 0
+            v.pending_layout = v.reflow
+            if book then load_page(page) end
+            refresh_text()
+        end
+        v.dirty = true
+    end
+    if not v.resize_pending and now >= (v.sync_at or 0) then
         v.sync_at = now + 0.5
         if apply_resize() then v.dirty = true end
+        if v.ensure_content_size() then v.dirty = true end
     end
-    if v.resize_pending and os.clock() >= v.resize_due then
-        v.resize_pending = false
-        apply_resize()
-        v.dirty = true
+    if v.resize_pending and v.now() >= v.resize_due then
+        local nw, nh = v.resize_target_w, v.resize_target_h
+        if not nw or not nh then nw, nh = v.window_target_size() end
+        if nw and nh and nw > 0 and nh > 0 then
+            if v.resize_last_w ~= nw or v.resize_last_h ~= nh then
+                v.resize_target_w, v.resize_target_h = nw, nh
+                v.resize_last_w, v.resize_last_h = nw, nh
+                v.resize_due = v.now() + 0.10
+            else
+                v.resize_pending = false
+                apply_resize(nw, nh)
+                v.dirty = true
+            end
+        else
+            v.resize_pending = false
+        end
     end
     if v.had_event then
         v.dirty = true

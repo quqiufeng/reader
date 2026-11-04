@@ -19,14 +19,14 @@ fi
 
 BK="$(mktemp -d)"
 trap 'rm -rf "$BK"' EXIT
-for f in settings.lua state.lua; do
+for f in settings.lua state.lua window.lua; do
     [ -f "$APP/$f" ] && cp "$APP/$f" "$BK/$f"
 done
 
 rm -rf "$APP"
 mkdir -p "$APP" "$PREFIX/bin" "$PREFIX/share/applications"
 cp -r "$DIST/." "$APP/"
-for f in settings.lua state.lua; do
+for f in settings.lua state.lua window.lua; do
     [ -f "$BK/$f" ] && cp "$BK/$f" "$APP/$f"
 done
 chmod +x "$APP/native-reader" "$APP/run.sh" "$APP/launch.sh" "$APP/reader-agent" "$APP/reader-lua" "$APP/lib/luajit"
