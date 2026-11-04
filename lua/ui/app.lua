@@ -1471,23 +1471,24 @@ local function scan_library()
 end
 
 v.choose_book = function()
-    if v.dialog then return end
     local cmd
     if os.execute("command -v zenity >/dev/null 2>&1") == 0 then
         cmd = string.format('zenity --file-selection --title=%q --filename=%q',
-            "选择电子书", home .. "/")
+            "选择电子书", (v.last_browse_dir or home) .. "/")
     elseif os.execute("command -v kdialog >/dev/null 2>&1") == 0 then
-        cmd = string.format('kdialog --getopenfilename %q', home)
+        cmd = string.format('kdialog --getopenfilename %q', v.last_browse_dir or home)
     else
         v.open_browser()
         return
     end
+    if v.dialog then return end
     local out = os.tmpname()
     local done = out .. ".done"
     os.remove(out)
     os.remove(done)
-    os.execute(string.format("( %s > %q 2>/dev/null; : > %q ) &", cmd, out, done))
-    v.dialog = { out = out, done = done }
+    os.execute(string.format(
+        "( timeout 300 %s > %q 2>/dev/null; : > %q ) &", cmd, out, done))
+    v.dialog = { out = out, done = done, started = v.now() }
     v.show_toast("请选择电子书…", 2)
 end
 
@@ -2966,6 +2967,11 @@ while running do
                     v.show_toast("打开失败：" .. tostring(err), 3)
                 end
             end
+            v.dirty = true
+        elseif now >= (v.dialog.started or now) + 310 then
+            os.remove(v.dialog.out)
+            os.remove(v.dialog.done)
+            v.dialog = nil
             v.dirty = true
         end
     end
