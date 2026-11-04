@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/itemSort" android:tag="layout/item_sort_common_0" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvSort" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ImageView android:id="@id/ivSort" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+</LinearLayout>

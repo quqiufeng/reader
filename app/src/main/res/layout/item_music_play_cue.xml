@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginLeft="@dimen/len_40" android:layout_marginRight="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_cue_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:drawableLeft="@drawable/icon_music_player_sound" android:drawablePadding="@dimen/len_8" />
+    <View android:layout_gravity="bottom" android:id="@id/musicBottomLine" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+</FrameLayout>

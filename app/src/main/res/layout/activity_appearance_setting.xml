@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_appearance_setting_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/manualSettingCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_17" android:text="@string/common_movies_547bea2d47" android:drawableLeft="@drawable/selector_30_30_circle_check_box" android:layout_marginStart="@dimen/apply_pad_common_left_right_8" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_16" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_below="@id/manualSettingCb">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_appearance_light" app:cornerRadius="@dimen/len_8" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/manualLightCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_wallpaper_9ff57a938b" android:drawableLeft="@drawable/icon_30_30_circle_unselect" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_appearance_dark" app:cornerRadius="@dimen/len_8" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/manualDarkCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_wallpaper_2a3ebfe427" android:drawableLeft="@drawable/icon_30_30_circle_unselect" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_12" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/systemSettingCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/app_string_key_286" android:drawableLeft="@drawable/selector_30_30_circle_check_box" android:layout_marginStart="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_display_follow_system_desc" android:layout_marginStart="@dimen/len_38" />
+            <View android:background="@color/color_f8f8fb" android:layout_width="fill_parent" android:layout_height="@dimen/len_8" android:layout_marginTop="@dimen/len_16" />
+            <include android:id="@id/lightSection" layout="@layout/layout_wallpaper_theme_section" />
+            <View android:id="@id/sectionDivider" android:background="@color/color_f8f8fb" android:layout_width="fill_parent" android:layout_height="@dimen/len_8" />
+            <include android:id="@id/darkSection" layout="@layout/layout_wallpaper_theme_section" />
+            <View android:background="@color/color_f8f8fb" android:layout_width="fill_parent" android:layout_height="@dimen/len_8" android:layout_marginTop="@dimen/len_8" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tv_shortcut_operation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_settings_quick_actions" android:includeFontPadding="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_28" android:layout_below="@id/tv_shortcut_operation">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_open_shortcut" app:cornerRadius="@dimen/len_8" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/openShortcutCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_settings_on" android:drawableLeft="@drawable/icon_30_30_circle_unselect" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_shortcut" app:cornerRadius="@dimen/len_8" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/closeShortcutCb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_settings_off" android:drawableLeft="@drawable/icon_30_30_circle_unselect" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" app:medium_bold="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvVersionTime" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:id="@id/tvDesc" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_4" />
+</LinearLayout>

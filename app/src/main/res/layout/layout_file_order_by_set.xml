@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvName" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_sort" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="top" android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_8" android:src="@drawable/icon_popup_close" />
+        </LinearLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutName" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <ImageView android:id="@id/ivName" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_name_asc_big" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_sort_name" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvOrderByName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/netdisk_string_key_11" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSize" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <ImageView android:id="@id/ivSize" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_size_desc_big" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_sort_size" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvOrderBySize" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_large" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutFileType" android:paddingLeft="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <ImageView android:id="@id/ivFileType" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_type_desc_big" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_sort_type_titleshowname" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvOrderByFileType" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/netdisk_string_key_11" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTime" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <ImageView android:id="@id/ivTime" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_modify_asc_big" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_sort_modified_time" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvOrderByTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_new_old" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutCreateTime" android:paddingLeft="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <ImageView android:id="@id/ivCreateTime" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_modify_asc_big" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_properties_created" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvOrderByCreateTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_new_old" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

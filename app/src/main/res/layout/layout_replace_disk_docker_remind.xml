@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_replace_disk_docker_remind_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_D0021B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:text="@string/common_disk_migration_impact" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_D0021B" android:id="@id/tvRemindApple" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_9" android:layout_marginRight="@dimen/len_20" android:text="@string/common_disk_migration_if_using_time_machine_pls_check_backup" android:lineSpacingExtra="@dimen/len_6" />
+</LinearLayout>

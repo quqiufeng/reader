@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/len_1" android:color="@color/button_day_425fff_night_657cff_lv1" />
+    <corners android:radius="@dimen/len_2" />
+</shape>

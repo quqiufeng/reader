@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_person_show_type_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_movies_52c0840d49" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAll" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_video_bar_all" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvAll" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_all" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMovie" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_video_bar_movie" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvMovie" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_movie" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutEpisode" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_video_bar_episode" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvEpisode" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_tv_show" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_modify_shooting_time_fail_retry_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/iv_nav_left" android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/color_333333" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_100" android:layout_marginRight="@dimen/len_100" android:singleLine="true" />
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:gravity="center" android:id="@id/tv_nav_right" android:tag="binding_4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_try_again" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <View android:tag="binding_5" style="@style/topBigTitleSeparatorLine" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/contentRv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

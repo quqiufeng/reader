@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/fragment_bt_download_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <RelativeLayout android:tag="binding_2" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_default_download_location" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_default_download_location_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_3" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_torrent_watch_folder" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_torrent_watch_folder_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_4" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_stop_seeding_settings" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_stop_seeding_settings_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_5" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_clipboard_monitoring" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_clipboard_monitoring_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:tag="binding_6" android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_7" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_usage_tips_and_help" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_usage_tips_and_help_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:tag="binding_8" android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:gravity="center_vertical" android:tag="binding_9" android:background="@color/color_F4F4F4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/download_string_key_61" />
+            <RelativeLayout android:tag="binding_10" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_download_tasks" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_11" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_12" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_13" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_upload_download_speed" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_14" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_15" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_16" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_peer_connnections" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_17" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_18" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_19" android:visibility="visible" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_port_configuration" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_20" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_21" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_switchcore_engine" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_22" android:lineSpacingExtra="@dimen/len_5" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="visible" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_23" android:visibility="gone" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/download_string_key_66" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/download_string_key_67" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="gone" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:visibility="gone" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/download_string_key_68" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/download_string_key_69" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="gone" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_24" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_doc_sync_settings_database_location" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_database_location_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:tag="binding_25" android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.core.widget.NestedScrollView android:tag="binding_26" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <RelativeLayout android:tag="binding_27" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_default_download_location" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_default_download_location_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_28" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_torrent_watch_folder" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_torrent_watch_folder_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_29" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_stop_seeding_settings" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_stop_seeding_settings_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:tag="binding_30" android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:gravity="center_vertical" android:tag="binding_31" android:background="@color/color_F4F4F4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/download_string_key_61" />
+            <RelativeLayout android:tag="binding_32" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_download_tasks" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_33" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_34" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_35" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_upload_download_speed" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_36" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_37" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_38" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_max_peer_connnections" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_39" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_40" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_41" android:visibility="visible" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_port_configuration" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_port_configuration_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_42" style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="visible" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_43" android:visibility="gone" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/download_string_key_66" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/download_string_key_67" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="gone" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:visibility="gone" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/download_string_key_68" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/download_string_key_69" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" android:visibility="gone" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_44" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_clipboard_monitoring" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_clipboard_monitoring_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_45" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_database_location" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_database_location_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_46" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_switchcore_switchengine" style="@style/setting_item_title_style" />
+                    <TextView android:tag="binding_47" android:lineSpacingExtra="@dimen/len_5" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+            <RelativeLayout android:tag="binding_48" style="@style/setting_item_layout_style">
+                <LinearLayout style="@style/setting_item_inner_layout_style">
+                    <TextView android:text="@string/common_downloads_settings_usage_tips_and_help" style="@style/setting_item_title_style" />
+                    <TextView android:text="@string/common_downloads_settings_usage_tips_and_help_desc_short" style="@style/setting_item_desc_style" />
+                </LinearLayout>
+                <ImageView style="@style/setting_item_next_icon_style" />
+            </RelativeLayout>
+            <ImageView android:tag="binding_49" android:background="@color/separate_line" style="@style/setting_item_separate_line_style" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

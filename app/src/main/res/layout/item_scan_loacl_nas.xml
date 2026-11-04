@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_106"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivNas" android:layout_width="@dimen/len_100" android:layout_height="@dimen/len_100" android:layout_marginRight="@dimen/len_10" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvNasName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvNasIp" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:gravity="center" android:id="@id/tvNasLogin" android:background="@drawable/bg_425fff_radius_22" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:text="@string/common_button_sign_in" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

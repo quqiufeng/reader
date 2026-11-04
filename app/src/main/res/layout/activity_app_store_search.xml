@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_app_store_search_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/back" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_black_44_44" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_edit_input" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:forceDarkAllowed="false">
+            <ImageView android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:src="@drawable/icon_home_page_search" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" />
+            <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:textColorHint="@color/common_subdesc" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/et_search_content" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_40" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_40" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_36" android:hint="@string/common_button_search" android:singleLine="true" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/input_edit_text_cursor" />
+            <ImageView android:id="@id/iv_clear_input" android:visibility="invisible" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <TextView android:enabled="false" android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center_vertical" android:id="@id/tv_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/len_36" android:text="@string/common_button_search" android:paddingStart="@dimen/len_10" android:paddingEnd="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:orientation="vertical" android:tag="layout/dialog_t2s_connect_0" android:background="@drawable/shape_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/include_connect_remind" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_t2s_connect_remind" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_t2s_connecting" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_t2s_connect_timeout" />
+</FrameLayout>

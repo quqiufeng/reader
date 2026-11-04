@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/item_wechat_setting_date_line_0" style="@style/item_check_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_16" android:text="@string/mobile_phone_backup_e0d60ddf0a" android:includeFontPadding="false" android:layout_marginEnd="@dimen/len_50" />
+    <Switch android:tag="binding_1" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:thumb="@drawable/selector_gray_switch_select_bg" android:layout_centerVertical="true" android:track="@drawable/switch_bg_style" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" android:forceDarkAllowed="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:id="@id/tv_right_desc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:includeFontPadding="false" android:layout_below="@id/tv_title" android:layout_marginEnd="@dimen/len_60" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_16" android:layout_below="@id/tv_right_desc" />
+</RelativeLayout>

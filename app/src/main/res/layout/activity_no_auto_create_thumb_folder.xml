@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_no_auto_create_thumb_folder_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/contentFl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/optionsLl">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/contentRv" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty_container" android:tag="binding_2" android:background="@color/transparent_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+            <ImageView android:id="@id/tv_upload_empty" android:layout_width="@dimen/len_250" android:layout_height="@dimen/len_150" android:src="@drawable/common_data_empty" android:forceDarkAllowed="false" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/common_subdesc" android:gravity="center_horizontal" android:id="@id/tv_upload_empty_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_file_no_data" />
+            <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="230.0" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/optionsLl" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/clearAllTv" android:tag="binding_3" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_42" android:minWidth="@dimen/len_163" android:text="@string/common_button_empty" android:layout_weight="1.0" android:layout_marginEnd="@dimen/len_20" />
+        <TextView android:textColor="@color/common_white" android:gravity="center" android:id="@id/addTv" android:background="@drawable/shape_425fff_radius_22" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_42" android:minWidth="@dimen/len_163" android:text="@string/common_button_add" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

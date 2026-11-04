@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_album_setting_download_again_0" style="@style/item_check_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_20" android:text="@string/mobile_phone_backup_backup_downloaded_photos_again" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:id="@id/tv_net" android:tag="binding_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" android:layout_below="@id/tv_title" />
+    <Switch android:id="@id/switch_disable" android:tag="binding_2" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_12" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:thumb="@drawable/selector_gray_switch_select_bg" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:track="@drawable/switch_bg_style" android:layout_marginEnd="@dimen/len_15" android:forceDarkAllowed="false" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_20" android:layout_below="@id/tv_net" />
+</RelativeLayout>

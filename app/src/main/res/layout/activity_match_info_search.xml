@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_match_info_search_0" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_1" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_white_44" />
+                <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_video_title" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_music_search_results" android:singleLine="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:id="@id/tabLayout" android:paddingLeft="@dimen/len_2" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center_vertical" android:paddingLeft="@dimen/len_13" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_movies_a3ac3caba1" />
+            <com.flyco.tablayout.SlidingTabLayout android:id="@id/videoPageTabLayout" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/color_425FFF" app:tl_indicator_corner_radius="@dimen/len_2" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_margin_bottom="0.0dip" app:tl_indicator_width="@dimen/len_20" app:tl_tab_padding="@dimen/len_13" app:tl_tab_space_equal="false" app:tl_textSelectColor="@color/white" app:tl_textSelectSize="@dimen/len_16" app:tl_textUnselectColor="@color/color_b3ffffff" app:tl_textUnselectSize="@dimen/len_16" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_99ffffff" android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/tvReportInfo" android:paddingLeft="@dimen/len_5" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_bdf91fe168" android:drawableRight="@drawable/icon_arrow_gray_7_9" android:drawablePadding="@dimen/len_5" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_subtitle" android:id="@id/tvSearchText" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.viewpager.widget.ViewPager android:id="@id/videoViewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    </LinearLayout>
+</FrameLayout>

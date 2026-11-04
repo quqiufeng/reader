@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_recovery_data_raid5_0" android:background="@color/white" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_28" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/title" android:tag="binding_1" android:paddingTop="@dimen/len_62" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttonLayout" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:id="@id/tvButton" android:tag="binding_2" android:background="@drawable/bg_common_commit_btn" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:text="@string/common_button_enter" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:id="@id/tvReboot" android:tag="binding_3" android:background="@drawable/bg_common_commit_btn" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:text="@string/business_string_key_121" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/c_D0021B" android:gravity="center" android:id="@id/tvTips" android:tag="binding_4" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/buttonLayout" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/layout_disk" android:paddingTop="@dimen/len_120" android:paddingBottom="@dimen/len_35" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_5" android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvTotalSize1" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_6" android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvTotalSize2" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_7" android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvTotalSize3" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_8" android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvTotalSize4" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/layout_disk" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/ivGroupState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/len_25" android:minHeight="@dimen/len_25" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_425FFF" android:id="@id/tvGroupProgress" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/tvTips1" android:tag="binding_9" android:paddingTop="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_progress" />
+</RelativeLayout>

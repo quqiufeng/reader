@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_create_video_album_0" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="horizontal" android:id="@id/flTitle" android:tag="binding_1" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivClose" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_white_44" />
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/len_110" android:layout_marginRight="@dimen/len_110" android:maxLines="1" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center|right" android:id="@id/tvModeChange" android:background="@drawable/video_button_selector_3" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_3" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:text="@string/common_movies_advanced_mode" android:includeFontPadding="false" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/layoutContent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

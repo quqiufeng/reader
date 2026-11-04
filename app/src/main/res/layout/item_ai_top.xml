@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_ai_top_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_5" style="@style/progress_carring" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_cancel_suc" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:maxWidth="@dimen/len_240" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/new_blue" android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" android:text="@string/common_button_close" android:includeFontPadding="false" />
+    </LinearLayout>
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+</LinearLayout>

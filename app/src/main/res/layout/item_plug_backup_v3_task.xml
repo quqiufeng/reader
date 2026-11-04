@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_plug_backup_v3_task_0" android:background="@drawable/shape_f4f6fa_12_bg" android:padding="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_16" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_20">
+        <FrameLayout android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_status" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:contentDescription="@null" />
+            <ProgressBar android:id="@id/progress_status" android:visibility="gone" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_plug_backup_v3_running" style="?android:progressBarStyleSmall" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_13" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_8" />
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:id="@id/tv_date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_8" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_active_metrics" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_16">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_plug_and_backup_memory_card" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_13" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_total_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" android:includeFontPadding="false" />
+            </LinearLayout>
+            <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_28" android:layout_marginStart="@dimen/len_6" android:layout_marginEnd="@dimen/len_15" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:id="@id/tv_backed_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_plug_and_backup_backed_up" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_13" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_backed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" android:includeFontPadding="false" />
+            </LinearLayout>
+            <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_28" android:layout_marginStart="@dimen/len_6" android:layout_marginEnd="@dimen/len_15" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.15">
+                <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:id="@id/tv_remaining_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_plug_and_backup_remaining" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_13" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_remaining_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" android:maxLines="1" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_width="@dimen/len_108" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:id="@id/layout_speed" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_speed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_9" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_speed_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:id="@id/layout_eject" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_eject" android:scaleType="centerInside" android:contentDescription="@null" />
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_eject" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_4" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="end|center" android:id="@id/tv_trailing_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:includeFontPadding="false" />
+        </FrameLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_12" android:max="100" android:progressDrawable="@drawable/progress_horizontal_blue" android:layout_marginEnd="@dimen/len_10" style="?android:progressBarStyleHorizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_validation_states" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_20" android:layout_marginTop="@dimen/len_22">
+        <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_phase_quantity" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_phase_check" android:scaleType="centerInside" android:contentDescription="@null" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_success_day_66c200_night_66c200_gray" android:id="@id/tv_phase_quantity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_4" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12">
+                <ImageView android:id="@id/iv_phase_hash" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_phase_check" android:scaleType="centerInside" android:contentDescription="@null" />
+                <ImageView android:id="@id/progress_phase_hash" android:visibility="gone" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_phase_loading" android:contentDescription="@null" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_success_day_66c200_night_66c200_gray" android:id="@id/tv_phase_hash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_4" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_phase_report" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_report_pending" android:scaleType="centerInside" android:contentDescription="@null" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_phase_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_4" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_failure" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_14">
+        <TextView android:textSize="@dimen/font_13" android:textStyle="bold" android:textColor="@color/text_error_day_db4437_night_f44336_gray" android:ellipsize="end" android:id="@id/tv_failure_reason" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_11" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center" android:id="@id/tv_view_detail" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_view_details" android:includeFontPadding="false" />
+        <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/ic_plug_backup_v3_chevron" android:scaleType="centerInside" android:contentDescription="@null" android:layout_marginStart="@dimen/len_7" />
+    </LinearLayout>
+</LinearLayout>

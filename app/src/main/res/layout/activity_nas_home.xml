@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_nas_home_0" android:background="@color/nas_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/top_bg_iv" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="218.0dip" android:scaleType="fitXY" />
+    <com.zentraedi.basic.function.ui.widget.CustomScrollView android:id="@id/nas_sv" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/rl_webview_content" android:layout_width="fill_parent" android:layout_height="@dimen/len_218">
+                    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_8f" android:layout_marginBottom="@dimen/len_5" android:scaleType="fitXY" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_17">
+                    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/avatar_iv" android:tag="binding_2" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginTop="@dimen/len_48" android:src="@mipmap/ic_launcher_round" android:elevation="@dimen/len_2" app:cornerRadius="@dimen/len_31" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginTop="@dimen/len_10">
+                        <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:gravity="center_vertical" android:id="@id/device_mode_tv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_unifydrive_name" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/font_21" android:textStyle="bold" android:gravity="center_vertical" android:id="@id/device_mode_tv1" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:includeFontPadding="false" />
+                        <LinearLayout android:gravity="center_vertical" android:id="@id/net_show_ll" android:background="@drawable/net_show_nomal_bg" android:padding="@dimen/len_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_18" android:layout_marginLeft="@dimen/len_11" android:layout_marginTop="1.0dip">
+                            <TextView android:textSize="@dimen/font_12" android:layout_gravity="center_vertical" android:id="@id/net_state_tv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:includeFontPadding="false" />
+                            <ImageView android:id="@id/net_status_iv" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/font_12" android:id="@id/space_des" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_below="@id/device_mode_tv" />
+                    <ProgressBar android:id="@id/space_seekbar" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:maxHeight="7.0dip" android:minHeight="7.0dip" android:thumb="@null" android:thumbOffset="8.0dip" android:layout_alignParentBottom="true" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" android:splitTrack="false" style="@android:style/Widget.ProgressBar.Horizontal" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:id="@id/test" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:text="@string/app_string_key_6" />
+                <LinearLayout android:orientation="vertical" android:background="@drawable/shadow_195116" android:layout_width="fill_parent" android:layout_height="@dimen/len_136" android:layout_marginLeft="@dimen/len_10f" android:layout_marginTop="@dimen/len_152" android:layout_marginRight="@dimen/len_10f">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_14" android:layout_marginRight="@dimen/len_8">
+                        <TextView android:textSize="@dimen/font_24" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                        <RelativeLayout android:layout_gravity="center_vertical" android:tag="binding_9" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_5" android:layout_toLeftOf="@id/tv_msg_tips">
+                            <ImageView android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/main_task_icon" android:scaleType="fitXY" />
+                            <View android:id="@id/v_file_List_unread" android:background="@drawable/bg_task_fail_red_tip" android:visibility="gone" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/tv_msg_tips" android:tag="binding_10" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_5" android:layout_alignParentRight="true">
+                            <ImageView android:layout_gravity="center_vertical" android:tag="binding_11" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/main_message_icon" android:scaleType="fitXY" />
+                            <View android:id="@id/v_file_List_unread_msg" android:background="@drawable/bg_task_fail_red_tip" android:visibility="gone" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subtitle" android:gravity="top" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_3f" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15f" android:layout_marginRight="@dimen/len_15">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_str1" android:tag="binding_13" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                    <TextView android:textSize="@dimen/font_14" android:ellipsize="end" android:tag="binding_14" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:maxLines="1" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/arrow_right" />
+                </LinearLayout>
+                <View android:id="@id/message_str1_subLine" android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/message_str2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_66">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_10" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:ellipsize="end" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:layout_marginRight="@dimen/len_10" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <TextView android:textColor="@color/home_enter_tv" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_17" android:background="@drawable/icon_enter" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_26" android:text="@string/common_button_enter" />
+                </LinearLayout>
+                <View android:id="@id/message_str2_subLine" android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_17" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_17">
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:id="@id/test_tt" android:tag="binding_18" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_album" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_photos" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_19" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_video" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_videos" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_20" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_file_management" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_file_management" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_21" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icon_home_download" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_download" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_17" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_17">
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_22" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_safe" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_security" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_23" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_safety_monitor" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_device_monitor" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_24" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_setting" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_settings" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_25" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_user" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_user" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_17" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_17">
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:tag="binding_26" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/icon_home_forum" app:imageHeight="1" app:imageWidth="1" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_app_forum" />
+                    </com.zentraedi.basic.function.ui.widget.TouchLinearLayout>
+                    <Space android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_0" />
+                    <com.zentraedi.basic.function.ui.widget.TouchLinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.zentraedi.basic.function.ui.widget.CustomScrollView>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_baidu_task_list_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refresh_layout" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include layout="@layout/layout_list_empty" />
+</LinearLayout>

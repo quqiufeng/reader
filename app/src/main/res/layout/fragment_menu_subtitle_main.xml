@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/fragment_menu_subtitle_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_subtitle_tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_white" />
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:id="@id/tvMenuTitle" android:tag="binding_3" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_player_setting_subtitles" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivCloseMenu" android:tag="binding_4" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:scaleType="centerInside" />
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/layoutSubtitleButton" android:tag="binding_5" android:layout_width="@dimen/len_120" android:layout_height="fill_parent">
+                <ImageView android:id="@id/ivSubtitleSearch" android:visibility="visible" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_search_subtitle_20" android:scaleType="centerInside" />
+                <ImageView android:id="@id/ivSubtitleAdd" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_add_subtitle_20" android:scaleType="centerInside" />
+                <ImageView android:id="@id/ivSubtitleConfig" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_adjust_subtitle_20" android:scaleType="centerInside" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/view_title_line" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTop" android:tag="binding_6" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_68" android:baselineAligned="false" android:weightSum="3.0">
+            <LinearLayout android:gravity="center" android:id="@id/layoutSearch" android:background="@drawable/gray_round_icon" android:layout_width="0.0dip" android:layout_height="@dimen/len_32" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0">
+                <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_search_white_12" />
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_movies_search_subtitles" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/layoutAdd" android:background="@drawable/gray_round_icon" android:layout_width="0.0dip" android:layout_height="@dimen/len_32" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0">
+                <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_add_white_12" />
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_movies_add_subtitles" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/layoutAdjust" android:background="@drawable/gray_round_icon" android:layout_width="0.0dip" android:layout_height="@dimen/len_32" android:layout_weight="1.0">
+                <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_player_adjust_subtitle_12" />
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_movies_adjust_subtitles" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/topLine" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:id="@id/layoutContent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutEmpty" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.legacy.widget.Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="55.0" />
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_240" android:layout_height="@dimen/len_120" android:src="@drawable/icon_player_subtitle_empty" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_video_not_have_subtitles" android:includeFontPadding="false" :paddingTop="@dimen/len_10" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:gravity="center" android:id="@id/tvSubTitleTip1" android:paddingTop="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_you_can_search_subtitles_or_add_downloaded" />
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_FF223D" android:layout_gravity="center_horizontal" android:id="@id/tvSubTitleTip2" android:paddingTop="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_231" />
+                <androidx.legacy.widget.Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="81.0" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/layoutSubtitleContainer" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

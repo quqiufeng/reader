@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_album_setting_common_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_48"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_item_album_setting_title" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_weight="1.0" android:layout_toLeftOf="@id/tv_album_setting_desc" android:layout_centerVertical="true" />
+    <View android:id="@id/view_red" android:tag="binding_2" android:background="@drawable/item_album_setting_common_red_round" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_toRightOf="@id/tv_item_album_setting_title" android:layout_alignTop="@id/tv_item_album_setting_title" />
+    <ImageView android:id="@id/iv_album_setting_right_arrow" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:layout_marginRight="@dimen/len_16" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/album_desc_text" android:gravity="right" android:id="@id/tv_album_setting_desc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_21" android:layout_toLeftOf="@id/iv_album_setting_right_arrow" android:layout_centerVertical="true" />
+    <View android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+</RelativeLayout>

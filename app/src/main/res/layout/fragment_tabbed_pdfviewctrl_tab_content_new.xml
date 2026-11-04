@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.view.DispatchFairInsetsFrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:consumeInsets="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/stub_progress" android:layout="@layout/fragment_tabbed_sub_progress_view_new" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/stub_pdfviewctrl" android:layout="@layout/fragment_tabbed_sub_pdfviewctrl_new" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/stub_password" android:layout="@layout/fragment_tabbed_sub_password_view_new" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/stub_overlay" android:layout="@layout/fragment_tabbed_sub_overlay_new" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.view.DispatchFairInsetsFrameLayout>

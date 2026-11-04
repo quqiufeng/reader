@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/cardRootLayout" android:tag="layout-sw600dp/layout_card_video_0" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_170" android:layout_marginTop="@dimen/len_25" android:layout_marginBottom="@dimen/len_5" android:paddingHorizontal="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layoutVideoEmpty" android:visibility="gone" android:layout_width="@dimen/len_320" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/len_210">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_7" android:layout_width="fill_parent" android:layout_height="@dimen/len_77">
+                <com.zentraedi.business.widget.ProportionShapeableImageView android:layout_width="@dimen/len_94" android:layout_height="@dimen/len_67" android:src="@drawable/icon_card_def_pad" app:proportHeight="172" app:proportWidth="240" app:shapeAppearance="@style/card_rounded_10" />
+                <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:layout_marginTop="@dimen/len_5" android:text="@string/common_movies_desc_short" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvVidoTurnOn" android:background="@drawable/selector_circle_blue_button_bg" android:layout_width="@dimen/len_153" android:layout_height="@dimen/len_32" android:layout_marginTop="@dimen/len_15" android:text="@string/common_movies_enable_movies" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:id="@id/layoutRow" android:layout_width="@dimen/len_486" android:layout_height="wrap_content">
+        <com.lihang.ShadowLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+            <com.zentraedi.home.view.HomeCardLayout android:id="@id/layoutRowCard1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.lihang.ShadowLayout>
+        <com.lihang.ShadowLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_10" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+            <com.zentraedi.home.view.HomeCardLayout android:id="@id/layoutRowCard2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.lihang.ShadowLayout>
+        <com.lihang.ShadowLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+            <com.zentraedi.home.view.HomeCardLayout android:id="@id/layoutRowCard3" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.lihang.ShadowLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_10">
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_search" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/len_7" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_3" app:hl_cornerRadius_rightBottom="@dimen/len_3" app:hl_shadowColor="@color/color_1A000000" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_2" app:hl_shadowOffsetY="@dimen/len_1">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_f4f6fa_8_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_width="@dimen/len_22" android:layout_height="@dimen/len_22" android:src="@drawable/icon_home_card_search" />
+                    <TextView android:textSize="@dimen/font_13" android:textColor="@color/color_666666" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_button_search" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_movies_library" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/len_7" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_3" app:hl_cornerRadius_rightBottom="@dimen/len_3" app:hl_shadowColor="@color/color_1A000000" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_2" app:hl_shadowOffsetY="@dimen/len_1">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_f4f6fa_8_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_width="@dimen/len_22" android:layout_height="@dimen/len_22" android:src="@drawable/icon_home_card_movies_library" />
+                    <TextView android:textSize="@dimen/font_13" android:textColor="@color/color_666666" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_movies_library" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.business.widget.ShadowCard android:padding="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" app:filling_radius="@dimen/len_10" app:shadow_color="@color/color_F4F4F4" app:shadow_radius="@dimen/len_10" app:shadow_size="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/bg_white_radis_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:layout_gravity="bottom" android:id="@id/gradientView" android:background="@drawable/bg_upgrade_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" />
+    </FrameLayout>
+</com.zentraedi.business.widget.ShadowCard>

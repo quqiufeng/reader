@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="layout/item_wechat_setting_jump_photo_file_0" android:minHeight="@dimen/len_46" android:layout_marginEnd="@dimen/len_15" style="@style/item_check_style"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_blue" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_5da2596f2a" android:includeFontPadding="false" />
+    <ImageView android:id="@id/iv_goto" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_arrow_gray_16_24" android:layout_marginStart="@dimen/len_5" app:tint="@color/common_blue" />
+</LinearLayout>

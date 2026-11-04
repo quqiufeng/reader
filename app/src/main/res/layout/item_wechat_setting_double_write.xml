@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_wechat_setting_double_write_0" android:layout_height="wrap_content" style="@style/item_check_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_D0021B" android:id="@id/tv_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_20" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_425FFF" android:id="@id/tv_goto" android:tag="binding_2" android:padding="@dimen/len_5" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/len_5" android:layout_centerVertical="true" android:drawableEnd="@drawable/icon_arrow_blue_6_9" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_20" android:layout_below="@id/tv_title" />
+</RelativeLayout>

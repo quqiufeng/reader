@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pdftron.pdf.widget.UniformWidthRelativeLayout android:id="@id/style_cell_layout" android:padding="@dimen/padding_xxsmall" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/style_image_view" android:padding="@dimen/icon_star_padding" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" android:contentDescription="@string/tools_grid_style_btn_description" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.9" /> /> </androidx.constraintlayout.widget.ConstraintLayout>
+</com.pdftron.pdf.widget.UniformWidthRelativeLayout>

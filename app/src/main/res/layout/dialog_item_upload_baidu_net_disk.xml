@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_item_upload_baidu_net_disk_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_80">
+        <ImageView android:tag="binding_1" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:tag="binding_3" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_42" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_black_start" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_start" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_black_pause" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_pause" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_cancel_task_black_24" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_cancel" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_retry_black_24" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_clear_all_task" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_virusscan_button_clear" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_batch_pause" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_upload_baidu_failed_file_list" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_file_failed_details" />
+    </LinearLayout>
+</LinearLayout>

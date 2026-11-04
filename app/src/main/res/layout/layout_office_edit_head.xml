@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_office_edit_head_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_15" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="middle" android:layout_gravity="center" android:id="@id/tv_nav_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:layout_marginBottom="@dimen/len_16">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_officedit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+    </LinearLayout>
+</LinearLayout>

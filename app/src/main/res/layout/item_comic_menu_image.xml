@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_comic_menu_image_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.utils.widget.ImageFilterView android:id="@id/pv_pic" android:layout_width="@dimen/len_75" android:layout_height="@dimen/len_75" android:src="@drawable/icon_def_comic_image" android:scaleType="centerCrop" app:round="@dimen/len_8" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_gravity="center" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="1" />
+</LinearLayout>

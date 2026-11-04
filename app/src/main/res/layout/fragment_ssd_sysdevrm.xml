@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_ssd_sysdevrm_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_26" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvTitle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_58" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_666666" android:id="@id/tvSubtitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:includeFontPadding="false" android:layout_below="@id/tvTitle" android:layout_centerHorizontal="true" />
+    <ScrollView android:id="@id/svContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_above="@id/flBottom" android:layout_below="@id/tvSubtitle">
+        <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" layout="@layout/layout_sysdevrm_ssd_group" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_7" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_6" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_7" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_6" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:lineSpacingExtra="@dimen/len_7" />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/flBottom" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/layout_ssd_pending_bottom_only_restart" />
+    </FrameLayout>
+</RelativeLayout>

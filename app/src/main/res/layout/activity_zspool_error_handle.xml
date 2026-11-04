@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_zspool_error_handle_0" android:background="@color/nas_white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_28" android:textStyle="bold" android:textColor="@color/color_ff262528" android:gravity="center" android:id="@id/tv_title" android:tag="binding_1" android:background="@color/nas_white" android:paddingTop="@dimen/len_58" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ImageView android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_black" />
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/sub_title" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_40" android:layout_marginRight="@dimen/len_20" android:layout_below="@id/tv_title" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/title_desc" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20" android:layout_below="@id/sub_title" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/flBottom" android:layout_below="@id/title_desc">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:tag="binding_5" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_20" android:layout_above="@id/bottom_desc" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/bottom_desc" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" app:layout_constraintVertical_chainStyle="packed" />
+        <View android:tag="binding_6" android:background="@drawable/shape_linear_gradient_v_fafafa_f9f9f9" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20" app:layout_constraintBottom_toBottomOf="@id/rvContent" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/bottom_desc" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_10" android:lineSpacingExtra="@dimen/len_7" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/rvContent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@id/flBottom" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_degrade_reset" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_reset_restart" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_rebuild" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_reset" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_lost" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_recover_raid1_lost_continue" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_degrade" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_delete_cache_only_read" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_delete_cache_read_write" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_writing_cache_read_write" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_restart" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_recover_raid5" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_recover_raid5" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_recover_double_raid1_lost_continue" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_change_raid1" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_shutdown_single_raid1" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_recover_continue_raid6" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_deferred_continue_raid6" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_deferred_reset_raid6" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_zspool_bottom_restart_recover_raid6" />
+    </FrameLayout>
+</RelativeLayout>

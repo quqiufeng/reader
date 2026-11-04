@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutToolBar" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_46"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvEpisodeTitle" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_6" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_summary_style" />
+    <ImageView android:id="@id/ivArrow" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_5" android:src="@drawable/icon_arrow_down" />
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ImageView android:id="@id/ivVideoListSort" android:padding="@dimen/len_10" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_sort_name_asc" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_select_rectangular_black_24dp" android:id="@id/controls_annotation_toolbar_tool_multi_select" android:title="@string/controls_annotation_toolbar_tool_description_multi_select" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_highlight_black_24dp" android:id="@id/controls_annotation_toolbar_tool_text_highlight" android:title="@string/controls_annotation_toolbar_tool_description_text_highlight" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_underline_black_24dp" android:id="@id/controls_annotation_toolbar_tool_text_underline" android:title="@string/controls_annotation_toolbar_tool_description_text_underline" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_strikeout_black_24dp" android:id="@id/controls_annotation_toolbar_tool_text_strikeout" android:title="@string/controls_annotation_toolbar_tool_description_text_strikeout" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_squiggly_black_24dp" android:id="@id/controls_annotation_toolbar_tool_text_squiggly" android:title="@string/controls_annotation_toolbar_tool_description_text_squiggly" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_freetext_black_24dp" android:id="@id/controls_annotation_toolbar_tool_freetext" android:title="@string/controls_annotation_toolbar_tool_description_freetext" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_freehand_black_24dp" android:id="@id/controls_annotation_toolbar_tool_freehand" android:title="@string/controls_annotation_toolbar_tool_description_freehand" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_free_highlight_black_24dp" android:id="@id/controls_annotation_toolbar_tool_free_highlighter" android:title="@string/controls_annotation_toolbar_tool_description_free_highlighter" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_annotation_eraser_black_24dp" android:id="@id/controls_annotation_toolbar_tool_eraser" android:title="@string/controls_annotation_toolbar_tool_description_eraser" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_undo_white_24dp" android:id="@id/controls_thumbnails_view_action_undo" android:title="@string/undo" android:checkable="false" app:showAsAction="ifRoom" />
+</menu>

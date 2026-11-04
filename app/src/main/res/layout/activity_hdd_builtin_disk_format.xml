@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_hdd_builtin_disk_format_0" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/font_28" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tvTitle" android:paddingTop="@dimen/len_58" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/business_string_key_56" />
+        <ImageView android:id="@id/ivAnim" android:layout_width="@dimen/len_132" android:layout_height="@dimen/len_132" android:src="@drawable/icon_anim_format" android:layout_centerInParent="true" />
+        <ImageView android:tag="binding_1" android:layout_width="@dimen/len_132" android:layout_height="@dimen/len_132" android:src="@drawable/icon_disk_2" android:layout_centerInParent="true" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:layout_marginRight="-5.0dip" android:layout_marginBottom="@dimen/len_10" android:src="@drawable/icon_formatting_error" android:layout_alignRight="@id/ivAnim" android:layout_alignBottom="@id/ivAnim" />
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:tag="binding_3" android:paddingTop="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ivAnim" />
+        <com.zentraedi.business.widget.DragFloatButton android:id="@id/fab" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginTop="@dimen/len_44" android:layout_marginRight="@dimen/len_5" android:src="@drawable/icon_flaot_help_center_70" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_4" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_5" />
+        <LinearLayout android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvRestart" android:background="@drawable/shape_425fff_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_user_restart_deivce" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:tag="binding_6" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_remote_assistance" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/dialog_collect_file_task_item_menu_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/lllayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/layout_title" android:paddingLeft="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivImage" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_20" android:src="@drawable/icon_dir_common" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:src="@drawable/icon_close_gray_42" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tvName" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:minHeight="@dimen/len_40" android:layout_toStartOf="@id/ivClose" android:layout_toEndOf="@id/ivImage" />
+        </RelativeLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:gravity="center_vertical" android:id="@id/stopCollectFl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:paddingStart="@dimen/len_15">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_pause_or_start" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_stop_black_24" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_pause_or_start" android:paddingLeft="@dimen/len_41" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_stop" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/clearHistoryFl" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_menu_clear" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_clear_all_task" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_menu_clear" android:paddingLeft="@dimen/len_41" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_virusscan_button_clear" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/retryFl" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_upload_new" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvMenuRetry" android:paddingLeft="@dimen/len_41" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_requests_restart" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/openDirFl" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_file_dir_black_enable" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/menuOpenText" android:paddingLeft="@dimen/len_41" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_file_show_in_folder" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_alignBottom="@id/lllayout" />
+</RelativeLayout>

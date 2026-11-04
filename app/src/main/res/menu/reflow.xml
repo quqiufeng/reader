@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_annotation_highlight_black_24dp" android:id="@id/qm_highlight" android:orderInCategory="1" android:title="@string/tools_qm_highlight" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_annotation_underline_black_24dp" android:id="@id/qm_underline" android:orderInCategory="1" android:title="@string/tools_qm_underline" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_annotation_squiggly_black_24dp" android:id="@id/qm_squiggly" android:orderInCategory="1" android:title="@string/tools_qm_squiggly" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_annotation_strikeout_black_24dp" android:id="@id/qm_strikeout" android:orderInCategory="1" android:title="@string/tools_qm_strikeout" app:showAsAction="always" />
+</menu>

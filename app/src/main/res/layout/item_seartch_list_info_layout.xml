@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_seartch_list_info_layout_0" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/len_65"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/coverLl" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/selectCb" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" />
+        <View android:tag="binding_2" android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="@dimen/len_0" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_file_manage_cover" android:tag="binding_3" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:scaleType="centerCrop" android:layout_toRightOf="@id/selectCb" app:imageHeight="1" app:imageWidth="1" />
+            <TextView android:textSize="@dimen/len_11" android:textColor="@color/video_time_text_color" android:gravity="right" android:id="@id/tv_video_duration" android:tag="binding_4" android:background="@drawable/shape_video_duration_bg" android:paddingRight="@dimen/len_1" android:paddingBottom="@dimen/len_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/iv_file_manage_cover" android:layout_alignRight="@id/iv_file_manage_cover" android:layout_alignBottom="@id/iv_file_manage_cover" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/llFileRightOptions" android:layout_width="wrap_content" android:layout_height="@dimen/len_65" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_5" android:visibility="gone" android:layout_width="@dimen/len_5" android:layout_height="@dimen/len_5" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_toLeftOf="@id/permissionDesc" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:layout_gravity="center_vertical" android:id="@id/permissionDesc" android:tag="binding_6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_file_manage_options" android:tag="binding_7" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_65" android:src="@drawable/icon_pic_item_more" android:layout_alignParentRight="true" />
+        <View android:tag="binding_8" android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="@dimen/len_0" />
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/ll_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_toLeftOf="@id/llFileRightOptions" android:layout_toRightOf="@id/coverLl">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_search_info_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_file_manage_title" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_dark_desc" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_dark_desc" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_12" android:ellipsize="end" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

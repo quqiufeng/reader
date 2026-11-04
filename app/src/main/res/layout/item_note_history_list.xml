@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_note_history_list_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_15" android:layout_marginBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_10" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+</LinearLayout>

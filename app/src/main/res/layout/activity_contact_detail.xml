@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_contact_detail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_toolbar" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+            <ImageView android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black_2" android:scaleType="fitCenter" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_title" android:tag="binding_3" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.zentraedi.business.widget.MediumTextView android:layout_gravity="center_vertical" android:id="@id/tvTitle" android:tag="binding_4" android:layout_weight="1.0" app:medium_bold="true" style="@style/bigTitleTextView" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_5" android:background="@drawable/shape_425fff_radius_22" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_28" android:text="@string/restore_to_phone" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" android:paddingHorizontal="@dimen/len_15" />
+        </LinearLayout>
+        <View android:layout_below="@id/ll_title" style="@style/topBigTitleSeparatorLine" />
+    </RelativeLayout>
+    <FrameLayout android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_contact_content" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:lineSpacingExtra="@dimen/len_10" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:tag="binding_7" android:background="@drawable/shape_restore_loading_bg" android:layout_width="@dimen/len_121" android:layout_height="@dimen/len_45" android:elevation="@dimen/len_3">
+            <ProgressBar android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/restoring" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

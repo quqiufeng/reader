@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_photos_album_prompt_delete" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/llResult" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_19" android:layout_height="@dimen/len_19" android:layout_marginRight="@dimen/len_7" android:src="@drawable/icon_attention" />
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="啊啊啊" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/tvDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffff8300" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/tvPrompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/llMoreSelect" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15">
+            <ImageView android:id="@id/iv_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_circle_unselected_30" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvSelectContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/llTwoButton" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_25">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:background="@drawable/shape_f4f4f4_radius_50" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+            <View android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_1" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:background="@drawable/blue_btn_selector_radius_20" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvKnown" android:background="@drawable/blue_btn_selector_radius_20" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_25" />
+    </LinearLayout>
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

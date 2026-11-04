@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.zentraedi.zspace.music.widget.EqualizerSeekBar android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</merge>

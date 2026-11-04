@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:left="3.0dip" android:top="3.0dip" android:right="0.0dip" android:bottom="3.0dip" />
+            <solid android:color="@color/scrollbar_panel_shadow_1" android:forceDarkAllowed="false" />
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:left="3.0dip" android:top="3.0dip" android:right="0.0dip" android:bottom="3.0dip" />
+            <solid android:color="@color/scrollbar_panel_shadow_2" android:forceDarkAllowed="false" />
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:left="3.0dip" android:top="3.0dip" android:right="0.0dip" android:bottom="3.0dip" />
+            <solid android:color="@color/scrollbar_panel_shadow_3" android:forceDarkAllowed="false" />
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:left="3.0dip" android:top="3.0dip" android:right="0.0dip" android:bottom="3.0dip" />
+            <solid android:color="@color/scrollbar_panel_shadow_4" android:forceDarkAllowed="false" />
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <margin android:left="3.0dip" android:top="3.0dip" android:right="0.0dip" android:bottom="3.0dip" />
+            <solid android:color="@color/scrollbar_panel_shadow_5" android:forceDarkAllowed="false" />
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="100.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="100.0dip" android:bottomRightRadius="0.0dip" />
+            <solid android:color="@color/scrollbar_panel_bg" android:forceDarkAllowed="false" />
+        </shape>
+    </item>
+</layer-list>

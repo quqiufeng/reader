@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_34">
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceChildCpu" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceChildMemory" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceChildIoRead" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceChildIoWrite" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:paddingLeft="@dimen/len_15" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_20" android:text="-" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_cccccc" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</LinearLayout>

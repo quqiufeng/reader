@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/corners_1affffff_5" android:paddingLeft="@dimen/apply_pad_common_left_right_12" android:paddingRight="@dimen/apply_pad_common_left_right_12" android:layout_width="wrap_content" android:layout_height="@dimen/len_30" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_5E76FF" android:gravity="center_vertical" android:id="@id/tvAdd" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_add" android:drawableLeft="@drawable/icon_add_blue_8" android:drawablePadding="@dimen/len_2" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingRight="@dimen/len_4" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/ivClose" android:visibility="visible" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:src="@drawable/icon_close_item" />
+</LinearLayout>

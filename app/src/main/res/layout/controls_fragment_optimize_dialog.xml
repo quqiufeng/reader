@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/basic_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/primary_text_size" android:textColor="?colorAccent" android:gravity="bottom" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/optimize_basic_title" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <RadioGroup android:id="@id/radio_basic_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <RadioButton android:id="@id/radio_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/optimize_basic_one" />
+                <RadioButton android:id="@id/radio_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/optimize_basic_second" />
+                <RadioButton android:id="@id/radio_third" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/optimize_basic_third" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:id="@id/advanced_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/primary_text_size" android:textColor="?colorAccent" android:gravity="bottom" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/optimize_advanced_title1" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <TextView android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/optimize_advanced_downsample_message1" android:layout_weight="1.0" />
+                <TextView android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/optimize_advanced_downsample_message2" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <Spinner android:id="@id/max_dpi_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <Spinner android:id="@id/resample_dpi_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/primary_text_size" android:textColor="?colorAccent" android:gravity="bottom" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/optimize_advanced_title2" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <TextView android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/tools_qm_color" android:layout_weight="0.4" />
+                <Spinner android:id="@id/compression_color_mode_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.6" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <TextView android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/optimize_advanced_compression_mono_mode" android:layout_weight="0.4" />
+                <Spinner android:id="@id/compression_mono_mode_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.6" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/quality_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <TextView android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/optimize_advanced_compression_quality" android:layout_weight="0.4" />
+                <Spinner android:id="@id/compression_quality_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.6" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="@dimen/primary_text_size" android:textColor="?colorAccent" android:gravity="bottom" android:id="@id/optimize_advanced" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/optimize_advanced" android:paddingStart="16.0dip" android:paddingEnd="10.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

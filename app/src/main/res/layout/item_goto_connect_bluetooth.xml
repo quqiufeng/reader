@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_goto_connect_bluetooth_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_scan_nas_code" android:tag="binding_1" android:background="@drawable/shape_ffffff_radius_20" android:padding="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_20" android:layout_marginRight="@dimen/len_20" android:text="@string/common_user_scan_device_qrcode" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_below="@id/tv_scan_nas_code" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@color/color_333333" android:tag="binding_2" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_bluetooth_network_distribution" android:includeFontPadding="false" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <View android:layout_gravity="center_vertical" android:background="@color/color_cccccc" android:visibility="gone" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <TextView android:textColor="@color/color_333333" android:tag="binding_3" android:padding="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_install_nfc" android:includeFontPadding="false" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </LinearLayout>
+</RelativeLayout>

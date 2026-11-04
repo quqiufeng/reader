@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/clParentView" android:tag="layout/activity_ai_plug_advanced_settings_0" android:background="@color/photo_bg" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/photo_navigation_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0" app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                <LinearLayout android:orientation="horizontal" android:id="@id/llMiddleTitle" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_title" android:tag="binding_2" android:singleLine="false" app:medium_bold="true" style="@style/bigTitleTextView" />
+                </LinearLayout>
+                <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/top_big_title_separate_line_margin_top" />
+                <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/tv_item" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/rl_navigation" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                    <ImageView android:id="@id/iv_nav_back" android:tag="binding_4" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="centerInside" android:layout_alignParentBottom="true" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/titleLayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:layout_marginRight="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:layout_centerHorizontal="true" android:alpha="0.0">
+                        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:gravity="center" android:id="@id/tvTopTitle" android:tag="binding_5" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:includeFontPadding="false" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="com.zentraedi.business.view.FixScrollingBehavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_16" android:text="@string/common_photos_basic_info" android:includeFontPadding="false" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_engine_version" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_engine_storage_location" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_16" />
+                <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/apply_pad_common_left_right_15">
+                        <Switch android:id="@id/timingCalculationSwitch" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="@dimen/len_20" android:layout_marginTop="@dimen/len_6" android:thumb="@drawable/switch_safety_circle_white" android:layout_alignParentRight="true" android:track="@drawable/switch_safety_bg_style" android:forceDarkAllowed="false" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_8" android:layout_toLeftOf="@id/timingCalculationSwitch">
+                            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_settings_scheduled_computing" android:layout_centerVertical="true" />
+                            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15">
+                        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_2" android:text="@string/common_photos_start_time" />
+                        <LinearLayout android:gravity="center_vertical" android:tag="binding_11" android:background="@drawable/shape_ffffff_border_33000000_radius_4" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_8" android:layout_below="@id/tvAiFaceDefinition">
+                            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_12" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:includeFontPadding="false" android:layout_weight="1.0" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_12" android:src="@drawable/icon_arrow_down_gray_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:paddingEnd="@dimen/apply_pad_common_left_right_15">
+                        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_end_time" />
+                        <LinearLayout android:gravity="center_vertical" android:tag="binding_14" android:background="@drawable/shape_ffffff_border_33000000_radius_4" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_8" android:layout_below="@id/tvAiFaceDefinition">
+                            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:includeFontPadding="false" android:layout_weight="1.0" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_12" android:src="@drawable/icon_arrow_down_gray_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+                <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_16">
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_ai_engine_management_change_storage_directory" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_photos_ai_engine_management_change_storage_directory_tips" android:paddingEnd="@dimen/apply_pad_common_left_right_15" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_white" android:gravity="center" android:tag="binding_16" android:background="@drawable/shape_425fff_radius_60" android:layout_width="@dimen/len_163" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_8" android:text="@string/common_photos_backup_backupsetting_change_directory" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="@dimen/len_0" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

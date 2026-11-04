@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_esata_switch_power_outage_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:fillViewport="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_20">
+            <ProgressBar android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_disk_migration_powering_off_expansion_unit" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_FF8300" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_disk_migration_dont_operate_disk_until_shutdown" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

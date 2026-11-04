@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout_title" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/len_14" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_238" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" />
+        <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutV4" android:background="@color/white" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <CheckBox android:id="@id/cbv4" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/check_selector_blue" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_0_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_888_res" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutV6" android:background="@color/white" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <CheckBox android:id="@id/cbv6" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/check_selector_blue" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_0_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_889_res" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_nfc_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_background" android:tag="binding_1" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_bottom_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <ImageView android:id="@id/iv_bottom_close" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <include android:id="@id/layout_recognize_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" layout="@layout/layout_recognize_device" />
+        <include android:id="@id/layout_nfc_no_open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" layout="@layout/layout_nfc_no_open" />
+        <include android:id="@id/layout_nfc_open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" layout="@layout/layout_nfc_open" />
+        <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+    </LinearLayout>
+</RelativeLayout>

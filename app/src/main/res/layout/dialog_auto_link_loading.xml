@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/ll_main" android:tag="layout/dialog_auto_link_loading_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dialogContentLl" android:background="@drawable/shape_circle_white_10_bg" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_39" android:layout_marginRight="@dimen/len_39" android:paddingStart="@dimen/len_24" android:paddingEnd="@dimen/len_24">
+        <ProgressBar android:id="@id/buttonLoading" android:layout_width="@dimen/len_22" android:layout_height="@dimen/len_22" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" android:layout_marginEnd="@dimen/len_9" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

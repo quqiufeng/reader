@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_photo_setting_head_same_0" style="@style/style_item_photo_setting_head_outer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_photo_similarity" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_photo_setting_sm" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/iv_photo_similarity">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_photo_similarity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_54820dbc51" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_66753c5f3c" />
+    </LinearLayout>
+</RelativeLayout>

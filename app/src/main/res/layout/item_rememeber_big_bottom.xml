@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ll_background" android:tag="layout/item_rememeber_big_bottom_0" android:background="@drawable/shape_425ff_radius_0" android:padding="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.utils.widget.ImageFilterView android:id="@id/pv_pic" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_60" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/rl_video" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_60">
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/white" android:gravity="right" android:id="@id/tv_video_time" android:background="@drawable/shape_gradient_black_bg" android:paddingRight="@dimen/len_2" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_18" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

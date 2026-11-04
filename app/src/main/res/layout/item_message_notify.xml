@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_message_notify_0" android:paddingTop="@dimen/apply_pad_common_top_bottom_phone_0_pad_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/tool_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tv_placeholder" android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/iv_level" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_5" android:layout_toRightOf="@id/tv_placeholder" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/message_title" android:ellipsize="end" android:id="@id/tv_message_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_13" android:singleLine="true" android:layout_toRightOf="@id/iv_level" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/message_sub_title" android:id="@id/tv_message_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_2" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_below="@id/tv_message_title" />
+        <ImageView android:background="@color/message_split_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_below="@id/tv_message_desc" />
+        <TextView android:tag="binding_3" android:background="@drawable/icon_delete_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="horizontal" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/message_check_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_view" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_blue_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

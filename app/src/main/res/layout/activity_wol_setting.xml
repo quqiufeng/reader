@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:tag="layout/activity_wol_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srlEnableLoadMore="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+    <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_change_error_progress_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_error_68" />
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_horizontal" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_35" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_migration_460bbc1a9b" />
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textStyle="bold" android:textColor="@color/common_title" android:paddingBottom="@dimen/len_11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_migration_800bff943c" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" app:point_color="@color/common_title" />
+                <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_efa939cc54" app:medium_bold="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_7b2c48b6ba" android:lineSpacingExtra="@dimen/len_3" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" app:point_color="@color/common_title" />
+                <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_phone_or_device_network_issue" app:medium_bold="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_afb2d70ce4" android:lineSpacingExtra="@dimen/len_3" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" app:point_color="@color/common_title" />
+                <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_other_errors_or_issues" app:medium_bold="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_f34220e08c" android:lineSpacingExtra="@dimen/len_3" />
+            <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:id="@id/tvHelperTips" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_dbabe67ca6" android:lineSpacingExtra="@dimen/len_3" />
+        </LinearLayout>
+    </ScrollView>
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="@dimen/len_15" />
+    <TextView android:textSize="@dimen/intl_font_content_12" android:textColor="@color/color_FF8300" android:gravity="center_horizontal" android:paddingBottom="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_migration_e512449578" />
+    <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvExit" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_34" android:maxWidth="624.0dip" android:text="@string/common_button_exit" />
+</LinearLayout>

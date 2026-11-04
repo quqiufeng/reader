@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_share_face_no_ap_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_400" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:id="@id/tv_tips" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_file_face_to_face_use_camera_scan_qrcode" />
+    <ImageView android:id="@id/iv_enable_no_ap" android:layout_width="@dimen/len_160" android:layout_height="@dimen/len_160" android:layout_marginTop="@dimen/len_24" android:layout_below="@id/tv_tips" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font_16" android:id="@id/tv_code" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_below="@id/iv_enable_no_ap" android:layout_centerHorizontal="true" />
+</RelativeLayout>

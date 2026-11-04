@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/contentFl" android:tag="layout/activity_ip_configure_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/shared_file_tip" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_photos_4946a69bbb" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+</FrameLayout>

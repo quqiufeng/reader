@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:tag="layout/activity_115_auth_0" android:background="@drawable/shape_ffffff_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center" android:paddingTop="@dimen/len_24" android:paddingBottom="@dimen/len_34" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nas_new_netdisk_1" />
+        <ImageView android:layout_gravity="right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+    </FrameLayout>
+    <FrameLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/len_205" android:layout_height="@dimen/len_205">
+        <ImageView android:layout_gravity="center" android:id="@id/ivQr" android:layout_width="@dimen/len_205" android:layout_height="@dimen/len_205" />
+        <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:tag="binding_1" android:background="@color/color_50p_000000" android:padding="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pb_loading" android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:paddingLeft="@dimen/len_24" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_24" android:paddingBottom="@dimen/len_34" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cloud_a935e42fb4" />
+</LinearLayout>

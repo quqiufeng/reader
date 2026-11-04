@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_file_category_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/fileTitle" layout="@layout/layout_navigation_bar_2" />
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+        <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:text="@string/common_nas_string_key_344_res" app:medium_bold="true" style="@style/bigTitleTextView" />
+        <ImageView android:id="@id/iv_help" android:tag="binding_1" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+        <ImageView android:id="@id/extendIv" android:visibility="gone" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleExtendImageView" />
+        <ImageView android:layout_below="@id/tv_item" style="@style/topBigTitleSeparatorLine" />
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <LinearLayout android:orientation="vertical" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_file_manage_mine" android:tag="binding_3" android:background="@color/common_bg_color" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

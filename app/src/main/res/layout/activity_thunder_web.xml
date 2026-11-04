@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_web_content" android:tag="layout/activity_thunder_web_0" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/view_status_bar" android:tag="binding_1" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+    <RelativeLayout android:id="@id/rl_nav" android:background="@color/background_day_ffffff_night_191919" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_below="@id/view_status_bar">
+        <ImageView android:gravity="center" android:id="@id/tv_nav_back" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_page_44_44" />
+        <ImageView android:gravity="center" android:id="@id/tv_nav_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_page_44_44" android:layout_toRightOf="@id/tv_nav_back" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_100" android:layout_marginRight="@dimen/len_100" android:singleLine="true" />
+    </RelativeLayout>
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_nav" />
+    <FrameLayout android:id="@id/loadingContent" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_nav" />
+</RelativeLayout>

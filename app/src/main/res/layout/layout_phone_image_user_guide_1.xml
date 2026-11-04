@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.business.manager.guide.TransparentView android:layout_gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_vertical_bias="0.25"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

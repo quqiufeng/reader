@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layoutItemRoot" android:padding="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.basic.function.ui.imageview.ProportionShapeableImageView android:layout_gravity="center_vertical" android:id="@id/sivCover" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/per_music_bg_1" android:scaleType="centerCrop" app:proportShapeableHeight="14" app:proportShapeableWidth="10" app:shapeAppearance="@style/roundedCornerStyle" />
+        <ImageView android:id="@id/ll_mid_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_6" android:layout_marginBottom="@dimen/len_6" android:src="@drawable/icon_pick_music_play" android:layout_alignRight="@id/sivCover" android:layout_alignBottom="@id/sivCover" />
+        <com.zentraedi.zspace.music.widget.SongPlayAnimView android:id="@id/play_anim" android:visibility="gone" android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:layout_alignRight="@id/sivCover" android:layout_alignBottom="@id/sivCover" app:songAnimColor="@color/white" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_28" android:layout_marginBottom="@dimen/len_10" android:lines="1" android:layout_alignLeft="@id/sivCover" android:layout_alignBottom="@id/sivCover" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llParent" android:tag="layout/fragment_process_monitor_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.flyco.tablayout.SlidingTabLayout android:id="@id/tabLayout" android:paddingTop="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" app:tl_indicator_color="@color/color_425fff" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_width="@dimen/len_20" app:tl_tab_padding="@dimen/len_15" app:tl_textBold="SELECT" app:tl_textSelectColor="@color/color_333333" app:tl_textSelectSize="@dimen/font_16" app:tl_textUnselectColor="@color/common_desc" app:tl_textUnselectSize="@dimen/font_16" />
+        <ImageView android:id="@id/iv_switch_direction" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_process_switch_to_portrait" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.zentraedi.business.view.NoScrollViewPager android:id="@id/viewPage" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

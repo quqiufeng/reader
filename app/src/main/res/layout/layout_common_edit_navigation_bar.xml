@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootRl" android:tag="layout/layout_common_edit_navigation_bar_0" android:background="@color/color_FFD0E4FF" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_left" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_1" android:src="@drawable/icon_close_page_44_44" android:layout_alignParentBottom="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_50" android:layout_marginRight="@dimen/len_50" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvNavSubtitle" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/color_425FFF" android:gravity="center" android:id="@id/tv_nav_right" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerVertical="true" />
+    <ImageView android:tag="binding_6" android:background="@color/nav_separate_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_base_select_detail_backup_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/layoutNav" layout="@layout/layout_backup_select_navigation_bar" />
+    <RelativeLayout android:id="@id/contentLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layoutNav">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layoutTabBar">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <View android:background="@drawable/bg_shadow_top" android:layout_width="fill_parent" android:layout_height="@dimen/len_4" android:layout_above="@id/layoutTabBar" />
+        <RelativeLayout android:id="@id/layoutTabBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/llSavePath" android:paddingLeft="@dimen/apply_pad_common_left_right_13" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_backup_save_path" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:ellipsize="middle" android:id="@id/tvNasPath" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_blue" android:id="@id/tvModifyPath" android:tag="binding_3" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_change" android:includeFontPadding="false" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:tag="binding_4" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_15" android:text="@string/common_button_ok" android:layout_below="@id/llSavePath" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

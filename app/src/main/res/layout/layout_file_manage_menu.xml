@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_layout" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" />
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_action" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_view_failed_logs" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/viewFailedLogsIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_quick_view" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/viewFailedLogsTv" android:paddingLeft="@dimen/len_36" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_file_task_view_failed_log" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_pause_or_start" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_pause_or_start" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_pause_black_24" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_pause_or_start" android:paddingLeft="@dimen/len_36" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_pause_all" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_clear_done" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_clear_complete_task" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_36" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_clear_completed" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_clear_all" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_delete_black" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_36" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_clear_all" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_retry" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_retry_black_24" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_36" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_retry_failed" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_20" android:layout_below="@id/ll_layout" />
+</RelativeLayout>

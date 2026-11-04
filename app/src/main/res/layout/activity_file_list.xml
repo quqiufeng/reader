@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_file_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/len_15" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/ptpTipsTv" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:includeFontPadding="false" android:layout_below="@id/tv_item" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+                <ImageView android:id="@id/iv_help" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+                <ImageView android:id="@id/extendIv" android:visibility="gone" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleExtendImageView" />
+                <ImageView android:layout_below="@id/ptpTipsTv" style="@style/topBigTitleSeparatorLine" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/file_list_title" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_navigation_bar_new" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@id/fl_file_manage" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <Space android:id="@id/sp_bottom" android:visibility="gone" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_60" />
+        <Space android:tag="binding_4" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_60" />
+    </LinearLayout>
+    <include android:layout_gravity="bottom" android:id="@id/ll_item_option" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_bottom_options_height" layout="@layout/layout_file_list_bottom_options" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/none_item_video_filter" android:tag="binding_5" android:background="@color/common_bg_color" android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_filter_any_duration" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <View android:background="@color/share_divider_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:gravity="center" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <View android:background="@color/share_divider_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:gravity="center" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <View android:background="@color/share_divider_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:gravity="center" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.zentraedi.business.widget.FunctionIntroduceLayout android:layout_gravity="bottom|center" android:id="@id/layoutFunction" android:visibility="gone" android:layout_width="@dimen/len_256" android:layout_height="@dimen/len_40" android:layout_marginBottom="@dimen/len_60" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.zentraedi.business.widget.DragFloatButton android:layout_gravity="bottom|center|right" android:id="@id/listen_video_fab" android:tag="binding_10" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_80" android:layout_marginBottom="@dimen/len_70" android:src="@drawable/icon_listen_video_entry" android:scaleType="fitCenter" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

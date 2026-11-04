@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/quick_menu" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/bg_view" android:background="@drawable/quickmenu_bg_rect" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:elevation="4.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/main_group" android:paddingTop="@dimen/padding_small" android:paddingBottom="@dimen/padding_small" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:elevation="@dimen/quick_menu_elevation">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/group2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_small" android:layout_marginRight="@dimen/padding_small" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/divider" android:visibility="gone" android:fitsSystemWindows="false" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:scaleType="centerCrop" android:alpha="0.15" app:srcCompat="@drawable/hairline" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/group1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_small" android:layout_marginRight="@dimen/padding_small" />
+    </LinearLayout>
+    <ScrollView android:id="@id/overflow_group_root" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" android:elevation="@dimen/quick_menu_elevation">
+        <LinearLayout android:orientation="vertical" android:id="@id/overflow_group" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageButton android:id="@id/back_btn" android:padding="@dimen/quick_menu_button_padding" android:layout_width="@dimen/quick_menu_button_size" android:layout_height="@dimen/quick_menu_button_size" android:contentDescription="@string/tools_qm_back" android:alpha="0.54" app:srcCompat="@drawable/ic_arrow_back_black_24dp" style="@style/Base.Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

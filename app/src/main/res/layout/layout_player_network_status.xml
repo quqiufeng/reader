@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layoutRoot" android:tag="layout/layout_player_network_status_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_network_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/common_white" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_network" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_setting_nonet" android:singleLine="true" />
+</FrameLayout>

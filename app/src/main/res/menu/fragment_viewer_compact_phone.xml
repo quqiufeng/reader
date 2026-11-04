@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/action_tabs" android:title="@string/action_tabs" app:showAsAction="always" />
+    <item android:id="@id/undo" android:visible="false" android:title="@string/undo" app:showAsAction="always" />
+</menu>

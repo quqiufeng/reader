@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fl_inner" android:background="#ff000000" android:paddingLeft="@dimen/header_footer_left_right_padding" android:paddingTop="@dimen/header_footer_top_bottom_padding" android:paddingRight="@dimen/header_footer_left_right_padding" android:paddingBottom="@dimen/header_footer_top_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_pull_to_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="正在加载" android:layout_marginStart="10.0dip" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/tv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_pull_to_start" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/tv_last_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingTop="16.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/tools_dialog_link_external_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/dialog_external_link" />
+    <EditText android:id="@id/tools_dialog_link_external_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/dialog_link_example" android:inputType="textUri" android:imeOptions="actionDone" />
+    <RadioButton android:id="@id/tools_dialog_link_internal_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:checked="false" android:text="@string/dialog_internal_link" />
+    <EditText android:id="@id/tools_dialog_link_internal_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numeric="integer" android:inputType="number" android:imeOptions="actionDone" />
+</LinearLayout>

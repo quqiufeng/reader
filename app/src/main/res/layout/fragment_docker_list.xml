@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/fragment_docker_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty" android:paddingTop="@dimen/len_110" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/len_220" android:layout_height="@dimen/len_150" android:src="@drawable/common_data_empty" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_virusscan_no_data" />
+    </LinearLayout>
+</FrameLayout>

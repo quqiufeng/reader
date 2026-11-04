@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_download_task_center_0" android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:tag="binding_1" android:background="@color/toolbar_color" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/iv_nav_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="centerInside" android:onClick="clickFinish" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:id="@id/tv_nav_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_50" android:layout_marginRight="@dimen/len_50" android:text="@string/common_button_download" />
+    </RelativeLayout>
+    <View android:background="@color/share_divider_line" android:layout_width="wrap_content" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:background="@color/net_prompt" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+        <TextView android:textColor="@color/task_center_alnormal_text" android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_5" android:background="@color/net_prompt" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+        <TextView android:textColor="@color/task_center_alnormal_text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/storage_alnormal_desc" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_download_tab" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <TextView android:textStyle="bold" android:id="@id/tv_downloading" android:tag="binding_7" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/file_upload_uploading" android:layout_alignParentBottom="true" android:onClick="clickDownloading" />
+        <View android:id="@id/v_downloading" android:tag="binding_8" android:background="@drawable/shape_setting_monitor_indicator" android:layout_width="wrap_content" android:layout_height="@dimen/len_3" android:layout_alignLeft="@id/tv_downloading" android:layout_alignRight="@id/tv_downloading" android:layout_alignParentBottom="true" />
+        <TextView android:gravity="center_vertical" android:id="@id/tv_download_fail" android:tag="binding_9" android:paddingTop="@dimen/len_7" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_26" android:text="@string/common_status_failed" android:layout_toRightOf="@id/tv_downloading" android:layout_alignParentBottom="true" android:onClick="clickDownloadFail" />
+        <View android:id="@id/v_download_fail" android:tag="binding_10" android:background="@drawable/shape_setting_monitor_indicator" android:layout_width="wrap_content" android:layout_height="@dimen/len_3" android:layout_alignLeft="@id/tv_download_fail" android:layout_alignRight="@id/tv_download_fail" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/fl_download_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

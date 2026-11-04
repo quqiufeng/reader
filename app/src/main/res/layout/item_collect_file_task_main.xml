@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_collect_file_task_main_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/coverIv" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_dir_common" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="middle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_15" android:layout_toStartOf="@id/checkTv" android:layout_toEndOf="@id/coverIv" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center" android:id="@id/checkTv" android:tag="binding_2" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:text="@string/common_button_view" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_course_type_filter_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/leftLl" android:tag="binding_1" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="243.0">
+        <androidx.legacy.widget.Space android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="@dimen/len_0" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="@dimen/len_10" />
+    </LinearLayout>
+    <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="15.0" />
+    <RelativeLayout android:gravity="end|center" android:orientation="horizontal" android:tag="binding_4" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="117.0">
+        <ImageView android:id="@id/arrowIv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_gray_arrow_8_12" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_7" android:layout_toStartOf="@id/arrowIv" />
+        <ImageView android:tag="binding_7" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/blue_check_mark" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

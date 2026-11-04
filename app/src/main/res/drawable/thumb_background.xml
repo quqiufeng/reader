@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/len_2" android:color="@color/seek_bar_thumb_stroke_ffffff_night_191919" />
+    <size android:height="@dimen/len_14" android:width="@dimen/len_14" />
+    <solid android:color="@color/seek_bar_thumb_solid_333333_night_ffffff" />
+    <corners android:radius="@dimen/len_10" />
+</shape>

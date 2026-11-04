@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty_container" android:tag="layout/layout_baby_album_empty_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tv_upload_empty" android:layout_width="@dimen/len_250" android:layout_height="@dimen/len_150" android:layout_marginTop="@dimen/len_101" android:src="@drawable/common_data_empty" android:forceDarkAllowed="false" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tv_upload_empty_desc" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_baby_album_no_data" android:includeFontPadding="false" />
+    <LinearLayout android:gravity="center" android:id="@id/addLl" android:tag="binding_3" android:background="@drawable/selector_add_album" android:layout_width="@dimen/len_155" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_40" android:layout_below="@id/pubMemberRv" android:forceDarkAllowed="false">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/confirm_add_album" android:gravity="center" android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="@dimen/len_42" android:text="@string/common_button_add" android:drawableLeft="@drawable/icon_white_add" android:drawablePadding="@dimen/len_2" />
+    </LinearLayout>
+</LinearLayout>

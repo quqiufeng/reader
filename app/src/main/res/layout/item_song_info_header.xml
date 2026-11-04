@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivCover" android:layout_width="@dimen/len_125" android:layout_height="@dimen/len_125" android:layout_marginTop="@dimen/len_30" android:layout_marginBottom="@dimen/len_30" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/ivHelper" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_5" android:src="@drawable/icon_help_black" android:layout_alignLeft="@id/ivCover" android:layout_alignTop="@id/ivCover" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5" />
+    <FrameLayout android:orientation="vertical" android:id="@id/tipsLayout" android:visibility="gone" android:layout_width="@dimen/len_216" android:layout_height="wrap_content" android:layout_marginLeft="-101.5dip" android:layout_marginTop="@dimen/len_5" android:layout_below="@id/ivHelper" android:layout_alignLeft="@id/ivHelper">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_17" android:layout_height="@dimen/len_7" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/white" android:background="@drawable/shape_cc171717_radius_8" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_6" android:paddingRight="@dimen/len_30" android:paddingBottom="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:text="@string/common_music_song_details_cover_change_describe" android:lineSpacingExtra="@dimen/len_4" />
+        <ImageView android:layout_gravity="right" android:id="@id/ivTipsClose" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginTop="@dimen/len_7" android:src="@drawable/icon_close_white_40" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/ivCoverLayout" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginRight="-15.0dip" android:layout_marginBottom="-10.0dip" android:layout_alignRight="@id/ivCover" android:layout_alignBottom="@id/ivCover">
+        <ImageView android:layout_gravity="center" android:id="@id/ivCoverEdit" android:background="@drawable/shape_f4f4f4_radius_15" android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:src="@drawable/icon_edit_gray_14" android:scaleType="center" />
+    </FrameLayout>
+</RelativeLayout>

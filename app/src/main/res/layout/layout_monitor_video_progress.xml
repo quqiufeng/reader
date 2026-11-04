@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:tag="layout/layout_monitor_video_progress_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_11" android:textColor="@color/button_white" android:id="@id/tv_current_time" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <SeekBar android:id="@id/seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/len_3" android:progressDrawable="@drawable/bg_video_seekbar" android:minHeight="@dimen/len_3" android:thumb="@drawable/selector_seekbar_thumb" android:layout_marginStart="@dimen/len_45" android:layout_marginEnd="@dimen/len_45" />
+    <TextView android:textSize="@dimen/font_11" android:textColor="@color/button_white" android:id="@id/tv_total_time" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_alignParentEnd="true" />
+</RelativeLayout>

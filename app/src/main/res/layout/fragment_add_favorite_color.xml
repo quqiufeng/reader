@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/actionbar_elevation">
+        <androidx.appcompat.widget.Toolbar android:theme="?pt_toolbar_theme" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:navigationContentDescription="@string/tools_misc_close" app:navigationIcon="@drawable/ic_close_white_24dp" app:popupTheme="?pt_toolbar_popup_theme" app:title="@string/controls_add_favorite_color" app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" style="?pt_toolbar_style" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="@dimen/actionbar_elevation" app:tabGravity="fill" app:tabMaxWidth="0.0dip" app:tabMode="fixed" style="?pt_stamp_tab_layout_style">
+        <com.google.android.material.tabs.TabItem android:icon="@drawable/ic_thumbnails_grid_black_24dp" android:id="@id/standard_tab" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:icon="@drawable/ic_custom_color_white_24dp" android:id="@id/advanced_tab" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rotationY="@integer/view_pager_rotation_y" />
+</LinearLayout>

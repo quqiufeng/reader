@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="18.0sp" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_music_add_music_to_list" app:medium_bold="true" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAll" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_file_all" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_all_songs" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutFolder" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_menu_folder" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_content_management_added_folders" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutPlaylist" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_menu_select" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_personal_playlist" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSinger" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_menu_singer" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_song_details_artist" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutGenre" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_menu_genre" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_song_genre" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAlbum" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_menu_music_album" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_album" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

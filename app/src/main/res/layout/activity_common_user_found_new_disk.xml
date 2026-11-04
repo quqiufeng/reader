@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_common_user_found_new_disk_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_28" android:textColor="@color/disk_page_title" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_58" android:text="@string/business_string_key_150" android:layout_centerHorizontal="true" />
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/icon_user_found_disk_lock" android:layout_width="@dimen/len_110" android:layout_height="@dimen/len_107" />
+    <TextView android:textSize="@dimen/font_18" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_32" android:text="@string/business_string_key_151" />
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="210.0" />
+    <RelativeLayout android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_60">
+        <Button android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_1" android:background="@drawable/btn_selector_2" android:layout_width="@dimen/len_155" android:layout_height="@dimen/len_42" android:text="@string/common_nas_string_key_507_res" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+        <Button android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_2" android:background="@drawable/btn_selector_2" android:visibility="gone" android:layout_width="@dimen/len_155" android:layout_height="@dimen/len_42" android:text="@string/common_nas_string_key_1308_res" android:includeFontPadding="false" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

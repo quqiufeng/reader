@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedRootLayout" android:tag="layout/fragment_video_match_info_feed_0" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="horizontal" android:id="@id/layoutFilter" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_34">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:gravity="center" android:id="@id/tvFilterType" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_movies_all" android:drawableRight="@drawable/icon_arrow_down" android:drawablePadding="@dimen/len_5" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvFilterArea" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_movies_08e6c102c4" android:drawableRight="@drawable/icon_arrow_down" android:drawablePadding="@dimen/len_5" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:gravity="center" android:layout_gravity="right" android:id="@id/tvFilterTime" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_filter_time_any" android:drawableRight="@drawable/icon_arrow_down" android:drawablePadding="@dimen/len_5" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/layoutContent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_91" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.zentraedi.business.refresh.DarkRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_video_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.zentraedi.business.refresh.DarkLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <com.zentraedi.video.view.VideoPageStatusLayout android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_91" />
+        <com.zentraedi.video.view.VideoButtonLayout android:layout_gravity="bottom" android:id="@id/layoutButton" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91" />
+        <com.zentraedi.video.view.MatchInfoFilterTypeLayout android:id="@id/layoutFilterType" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.video.view.MatchInfoFilterAreaLayout android:id="@id/layoutFilterArea" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.video.view.MatchInfoFilterTimeLayout android:id="@id/layoutFilterTime" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

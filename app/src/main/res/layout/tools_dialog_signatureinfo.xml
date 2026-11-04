@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_permission" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_permission" />
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_name" />
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_location" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_location" />
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_contact" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_contact_info" />
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_reason" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_reason" />
+    <com.pdftron.pdf.dialog.digitalsignature.SignatureInfoView android:id="@id/sig_info_signing_time" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:info_label="@string/tools_digitalsignature_signing_time" />
+</LinearLayout>

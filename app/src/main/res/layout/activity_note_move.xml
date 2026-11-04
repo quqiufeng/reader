@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootLayout" android:tag="layout/activity_note_move_0" android:background="@color/transparent_60_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_white_top_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvCreate" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_notepad_new_category" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/len_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/file_string_key_336" android:includeFontPadding="false" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" />
+            <View android:layout_gravity="bottom" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/layoutName" android:layout_width="fill_parent" android:layout_height="@dimen/len_92" android:layout_below="@id/layoutTitle">
+            <RelativeLayout android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_68" android:layout_height="@dimen/len_68" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15">
+                <View android:background="@drawable/shape_f4f4f4_radius_5" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="-5.0dip" android:layout_marginRight="-5.0dip" android:layout_alignTop="@id/center" android:layout_alignRight="@id/center" />
+                <View android:id="@id/center" android:background="@drawable/shape_e4e4e4_radius_5" android:layout_width="@dimen/len_55" android:layout_height="@dimen/len_55" android:layout_centerInParent="true" />
+                <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_width="@dimen/len_53" android:layout_height="wrap_content" android:layout_marginLeft="-6.0dip" android:src="@drawable/icon_file_note" android:layout_alignLeft="@id/center" android:layout_alignTop="@id/center" app:proportHeight="104" app:proportWidth="92" />
+            </RelativeLayout>
+            <ImageView android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="@dimen/len_68" android:layout_height="@dimen/len_68" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_file_note" />
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvFileName" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:lineSpacingExtra="@dimen/len_5" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layoutBottom" android:layout_below="@id/layoutName" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <View android:id="@id/topLine" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_below="@id/layoutName" />
+        <LinearLayout android:id="@id/layoutBottom" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvOk" android:tag="binding_4" android:background="@drawable/blue_btn_selector_radius_20" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_ok" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

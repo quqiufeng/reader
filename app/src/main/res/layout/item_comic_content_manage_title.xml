@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_comic_content_manage_title_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingEnd="@dimen/apply_pad_common_left_right_phone_0_pad_5"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_30" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_comics_added_in_comics" />
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+</LinearLayout>

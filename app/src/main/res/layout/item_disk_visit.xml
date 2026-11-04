@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_disk_visit_0" android:background="@color/setting_monitor_tab_page" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <com.zentraedi.business.widget.MyTextView android:textSize="@dimen/font_12" android:textColor="@color/disk_visit_content" android:ellipsize="end" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:singleLine="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

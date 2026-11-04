@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_zspool_bottom_delete_cache_read_write_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_20" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_1" android:background="@drawable/shape_circle_blue_22_bg" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_shut_down" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginEnd="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_2" android:background="@drawable/shape_circle_blue_22_bg" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_storage_delete_read_write_cache" android:includeFontPadding="false" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_3" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_sign_out" />
+        <View android:background="@drawable/shape_cccccc_radius_1" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_4" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_remote_assistance" />
+    </LinearLayout>
+</LinearLayout>

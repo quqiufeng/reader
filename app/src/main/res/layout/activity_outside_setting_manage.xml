@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:tag="layout/activity_outside_setting_manage_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_25" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/outside_setting_prompt" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_outside_dev" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+            <View android:tag="binding_3" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:tag="binding_4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:text="@string/file_string_key_114" />
+            <ImageView android:tag="binding_5" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_net_protocol" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10" android:nestedScrollingEnabled="false" />
+            <View android:tag="binding_7" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <TextView android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:text="@string/file_string_key_115" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:tag="binding_8" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:text="@string/file_string_key_116" />
+            <ImageView android:tag="binding_9" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_available_in_net" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+            <View android:tag="binding_11" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="@dimen/len_10" android:layout_weight="1.0" />
+            <include android:id="@id/emptyLayoutV3" layout="@layout/layout_outside_setting_manage_empty" />
+            <View android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="@dimen/len_80" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:tag="binding_13" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginBottom="@dimen/len_34" android:text="@string/common_file_enable_storage_service" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20" />
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

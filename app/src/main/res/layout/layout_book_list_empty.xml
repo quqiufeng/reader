@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty_container" android:tag="layout/layout_book_list_empty_0" android:background="@color/transparent_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+    <ImageView android:id="@id/tv_upload_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_data_empty" android:forceDarkAllowed="false" />
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:gravity="center_horizontal" android:id="@id/tvEmpty" android:paddingBottom="@dimen/len_35" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_comics_no_data" />
+    <Button android:textSize="@dimen/font_16" android:textColor="@color/button_text_day_ffffff_night_ffffff_lv1" android:gravity="center" android:id="@id/buttonAdd" android:background="@drawable/selector_button_blue" android:paddingLeft="@dimen/len_53" android:paddingRight="@dimen/len_53" android:layout_width="wrap_content" android:layout_height="@dimen/len_42" android:text="@string/common_movies_add" android:drawableLeft="@drawable/icon_add_white_18" android:drawablePadding="@dimen/len_2" android:textAllCaps="false" />
+    <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="230.0" />
+</LinearLayout>

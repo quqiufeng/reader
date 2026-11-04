@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_help_center_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:text="@string/common_app_help_and_feedback" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView style="@style/topBigTitleSeparatorLine" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/flashTitleLayout" android:tag="binding_2" android:background="@color/nas_white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                    <ImageView android:gravity="center" android:id="@id/iv_back" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_home_black" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_80" android:layout_marginRight="@dimen/len_80">
+                        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tv_top_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_app_help_and_feedback" android:singleLine="true" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:paddingBottom="@dimen/len_112" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:text="@string/common_settings_help_center_following_support_options" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_help_center_unify" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/ud_help_center" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_settings_help_center" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_email" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:padding="@dimen/len_5f" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/ud_help_email" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_settings_support_email" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_remote" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/ud_help_remote" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_settings_remote_assistance" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:text="@string/common_settings_help_center_following_support_options" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_25">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llForum" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:padding="@dimen/len_5f" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_ai_assistant_44" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_app_ai_assistant" />
+                    </LinearLayout>
+                    <androidx.legacy.widget.Space android:tag="binding_9" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llHelpCenter" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_help_center_44" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_settings_help_center" />
+                    </LinearLayout>
+                    <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llOfficialAccount" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_official_account_44" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_cloud_unifydrive_folder_name" />
+                    </LinearLayout>
+                    <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llServicePhone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_service_phone_44" android:scaleType="fitCenter" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/phone_num" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_50" android:text="@string/app_string_key_208" />
+                <LinearLayout android:layout_marginTop="@dimen/len_16" style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbAppInfo" android:tag="binding_10" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:text="@string/app_string_key_209" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_11" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_12" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_13" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_14" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetAppInfo" android:tag="binding_15" android:text="@string/common_button_submit" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:tag="binding_16" style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbServiceInfo" android:tag="binding_17" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:text="@string/app_string_key_211" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_18" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_19" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_20" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_21" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetServiceInfo" android:tag="binding_22" android:text="@string/common_movies_get" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_23" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:tag="binding_24" style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbNasNetInfo" android:tag="binding_25" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:text="@string/app_string_key_213" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_26" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_27" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_28" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_29" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetNasNetInfo" android:tag="binding_30" android:text="@string/common_movies_get" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_31" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:tag="binding_32" style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbNetSpeed" android:tag="binding_33" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:text="@string/app_string_key_214" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_34" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_35" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_36" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_37" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetNetSpeed" android:tag="binding_38" android:text="@string/app_string_key_215" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_39" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbWifi" android:tag="binding_40" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:id="@id/tvWifiStrength" android:text="@string/app_string_key_216" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_41" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_42" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_43" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_44" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetWifi" android:tag="binding_45" android:text="@string/common_movies_get" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:tag="binding_46" style="@style/help_center_option_layout_style">
+                    <CheckBox android:id="@id/cbRemoteCode" android:tag="binding_47" style="@style/help_center_option_checkBox_style" />
+                    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:text="@string/app_string_key_217" style="@style/help_center_option_title_style" />
+                        <LinearLayout android:tag="binding_48" style="@style/help_center_option_state_layout_style">
+                            <ProgressBar android:tag="binding_49" style="@style/help_center_option_progress_style" />
+                            <TextView android:tag="binding_50" style="@style/help_center_option_state_progress_text_style" />
+                            <TextView android:tag="binding_51" style="@style/help_center_option_state_result_text_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@id/tvGetRemoteCode" android:tag="binding_52" android:text="@string/common_nas_string_key_885_res" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_53" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_54" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_219" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_38" />
+                    <TextView android:enabled="true" android:textColor="@color/common_title" android:id="@id/tvGetResource" android:text="@string/common_nas_string_key_241_res" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_55" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_56" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_221" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_38" />
+                    <TextView android:enabled="true" android:textColor="@color/common_title" android:id="@id/tvGetDeviceRunStatus" android:text="@string/common_nas_string_key_241_res" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_57" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tvNetworkConnectivity" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/app_string_key_222" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_38" />
+                    <TextView android:enabled="true" android:textColor="@color/common_title" android:id="@id/tvCheckNetworkStatus" android:text="@string/app_string_key_223" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_58" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:text="@string/app_string_key_224" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_38" />
+                    <TextView android:enabled="true" android:textColor="@color/common_title" android:id="@id/tvCheckNoSleepReason" android:text="@string/app_string_key_225" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_59" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_60" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_61" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_38" />
+                    <TextView android:enabled="true" android:textColor="@color/common_title" android:id="@id/tvNasTestReason" android:text="@string/app_string_key_225" style="@style/help_center_option_state_submit_style" />
+                </LinearLayout>
+                <ImageView android:tag="binding_62" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_38" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tvCopy" android:tag="binding_63" android:background="@drawable/blue_btn_selector_radius_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_34" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

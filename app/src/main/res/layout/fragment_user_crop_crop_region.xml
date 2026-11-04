@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/page_crop_host" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/image_crop_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <FrameLayout android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/blank_page_placeholder" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/user_crop_page_view_margin">
+                <com.pdftron.pdf.widget.ContentLoadingRelativeLayout android:layout_gravity="center" android:id="@id/blank_page_progress_bar_host" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleLarge" />
+                </com.pdftron.pdf.widget.ContentLoadingRelativeLayout>
+            </FrameLayout>
+        </FrameLayout>
+        <com.pdftron.pdf.widget.PTCropImageView android:id="@id/image_crop_view" android:background="@drawable/user_crop_border" android:padding="@dimen/corner_thickness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:cropToPadding="false" />
+    </FrameLayout>
+</RelativeLayout>

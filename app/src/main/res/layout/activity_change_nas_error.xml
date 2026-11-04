@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_change_nas_error_0" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black_44_44" />
+        <TextView android:textSize="@dimen/intl_font_title_26" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_horizontal" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_40" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_migration_bc8417918c" />
+        <FrameLayout android:id="@id/layoutContent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <com.zentraedi.business.widget.DragFloatButton android:layout_gravity="bottom|center|right" android:id="@id/helperButton" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginBottom="@dimen/len_85" android:src="@drawable/icon_flaot_help_center_70" android:scaleType="fitCenter" />
+</FrameLayout>

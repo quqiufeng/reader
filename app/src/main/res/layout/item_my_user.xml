@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_my_user_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <ImageView android:tag="binding_3" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_7" android:src="@drawable/icon_arrow_gray_2" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+</FrameLayout>

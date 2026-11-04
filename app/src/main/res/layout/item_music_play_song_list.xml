@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/clPlayList" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/clListContent" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layoutPlay" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/len_10" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llMusicContent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ProgressBar android:id="@id/playLoading" android:visibility="gone" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginRight="@dimen/len_6" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+                <ImageView android:id="@id/iv_playing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="19.0dip" android:layout_marginRight="@dimen/len_8" android:src="@drawable/icon_music_player_sound" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutError" android:paddingTop="@dimen/len_7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Space android:id="@id/layoutErrorSpace" android:layout_width="@dimen/len_26" android:layout_height="0.0dip" />
+                <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_D0021B" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_23e4bce77b" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_425FFF" android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/tvLastPlay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_music_458d93f1d3" />
+        <FrameLayout android:gravity="center" android:layout_gravity="center|right" android:id="@id/layoutCueExpand" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44">
+            <ProgressBar android:layout_gravity="center" android:id="@id/v_scanning_btn_bg" android:visibility="gone" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" />
+            <ImageView android:layout_gravity="center" android:id="@id/ivCueExpand" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_arrow_bottom_44" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center|right" android:id="@id/iv_delete" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_more_light_gray_44" android:scaleType="center" />
+    </LinearLayout>
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvCueView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

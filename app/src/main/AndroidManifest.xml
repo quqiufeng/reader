@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="com.zentraedi.zspace" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.tencent.mobileqq"/>
+        <package android:name="com.alibaba.android.rimet"/>
+        <package android:name="com.hihonor.mediadatacenter"/>
+        <package android:name="com.android.creator"/>
+        <package android:name="com.zhuoyi.security.lite"/>
+        <package android:name="com.freeme.secureguard"/>
+        <package android:name="com.android.secureguard"/>
+        <package android:name="com.mdid.msa"/>
+        <package android:name="com.samsung.android.deviceidservice"/>
+        <package android:name="com.coolpad.deviceidsupport"/>
+        <package android:name="com.heytap.openid"/>
+        <package android:name="com.huawei.hff"/>
+        <package android:name="com.huawei.hms"/>
+        <package android:name="com.huawei.hwid"/>
+        <package android:name="com.huawei.hwid.tv"/>
+        <package android:name="com.huawei.works"/>
+    </queries>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="freemme.permission.msa"/>
+    <uses-permission android:name="freemme.permission.msa.SECURITY_ACCESS"/>
+    <uses-permission android:name="oplus.permission.settings.LAUNCH_FOR_EXPORT"/>
+    <uses-permission android:name="com.vivo.identifier.permission.OAID_STATE_DIALOG"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <permission android:name="com.zentraedi.zspace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.zentraedi.zspace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/common_unifydrive_name" android:largeHeap="true" android:maxAspectRatio="2.4" android:name="com.stub.StubApp" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:theme="@style/ApplicationTheme" android:usesCleartextTraffic="true">
+        <provider android:authorities="com.zentraedi.zspace.startup-anchor" android:exported="false" android:initOrder="1000" android:name="com.zentraedi.zspace.startup.StartupAnchorProvider"/>
+        <provider android:authorities="com.zentraedi.zspace.pdftron.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.zentraedi.zspace.provider.PdftronCompatFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/pdftron_provider_paths"/>
+        </provider>
+        <provider android:authorities="com.zentraedi.zspace.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.zentraedi.zspace.provider.AgentWebCompatFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/web_files_public"/>
+        </provider>
+        <meta-data android:name="firebase_data_collection_default_enabled" android:value="false"/>
+        <meta-data android:name="com.zentraedi.basic.function.picture.OkhttpGlideModule" android:value="AppGlideModule"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data android:name="notch.config" android:value="portrait|landscape"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="mi"/>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="2Rxr2sSaGDhgslyyngZou3McTMPXba5f"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.SplashActivity" android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="magnet"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter android:label="保存到极空间">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.zentraedi.zspace.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SearchNasDevicesActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.FirstLoginRegisterSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.zentraedi.zspace.activity.NasDevicesActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.NotFoundNasDevicesActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.RegisterWithNasIdActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.LoginActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.LoginLocalUserActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.zentraedi.zspace.nfc.NFCRegisterActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.NasStatusActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.LoginStateCheckActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.RegisterActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ResetPwdActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.UserCenterOldActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.UserCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateChildUserActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateLocalUserActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateLocalUserTipsActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.zentraedi.zspace.activity.NasRegisterTipsActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateChildUserSucActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.MyUserActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.UserManagerActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.AccountConfigActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.AccountUpgradeTipsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.LocalUserResetPasswordActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.AccountUpgradeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountConfigActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.AccountPublicFileConfigActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ChildUserVerifyActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.RegisterUserSuccessActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ChangePwdActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ChangeChildPwdActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.MessageNotifyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SafetyVerifyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.AccountLanDisableActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SafetyMonitorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SafetyLoginLogActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SafetyLoginDeviceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SafetyLanDisableActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CaptureActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ChangeNasResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.DbRecoveryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ResetPwdStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ResetPwdNormalActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ForumAuthorizeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ForumAuthorizeResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ForumWebActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.DebugHttpProxyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.UserRemarkSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ThunderWebActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.WechatBackupMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.WechatBackupWebActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateAccountGuideActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.CreateFamilyAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyPictureBackupSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.DeleteFamilyAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountPermissionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.ForbidsFamilyAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountDeviceManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountPhotoServiceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.VisitorHomeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.IpDirectLoginSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.IpDirectLoginActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.OfflineLoginActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.activity.OfflineHomeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.IpDirectLoginHelperActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyServiceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.FamilyAccountAuthorityManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SwitchUserActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.utils.doraemon.DebugNasChannelActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.OpenFamilyAccountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.NetworkStatusDiagnoseActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.EnterDeviceSNToRegisterErrorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.SafetyVirusActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.PersonalInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.RecommendToFriendsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.MyRecommendationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.MyPointsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.PointsShopActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.activity.RealRegisterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.home.activity.NasHomeActivity" android:screenOrientation="behind" android:theme="@style/HomeTransparentTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.ShortCutActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.AllAppActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.EditAllAppActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.ThirdFileDealActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.EditHomePageCardActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.HomeCardEditActivity" android:screenOrientation="behind"/>
+        <activity android:name="com.zentraedi.home.activity.AppShortcutHandleActivity" android:theme="@style/loadingTransparent"/>
+        <receiver android:exported="false" android:name="com.zentraedi.home.utils.AppShortcutJumpUtil$MyReceiver"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.HelpCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.AppShortcutSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.MessageCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.UserNameSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.MyAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.MyAccountNumberActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.HeadPortraitPreviewActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.ModifyUserPhoneActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.DeleteAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.AppearanceSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.activity.LoginUserListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.scanlogin.ScanLoginActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.home.scanlogin.ScanLogin2Activity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.appstore.activity.AppStoreMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.appstore.activity.AppDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.appstore.activity.SelectLocationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.appstore.activity.AppStoreSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.RetouchMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.PanoramaRenderListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.PanoramaRenderAddFileActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.PanoramaRenderSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.RetouchDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.SmartSubtitlesActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.EngineSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.ImageCompressionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.VideoCompressionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.retouch.activity.AddWatermarkActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.officedit.OfficeEditMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.officedit.OfficeEditSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.officedit.OfficeEditHistoryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AiTaskDetailsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.HiddenPetsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PetsTypeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.big.BigPhotoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.detail.AlbumDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PetsRecognitionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AiPetsAlbumSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.zentraedi.photo.home.demo.PhotoMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.zentraedi.photo.home.activity.TimeLineYearDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.zentraedi.photo.home.activity.YearDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BigPictureShowActivity" android:screenOrientation="behind" android:theme="@style/ImageBrowseTransition"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumBackupManageActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.releasespace.activity.ShowDeleteHistoryDataActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.releasespace.activity.AlbumReleaseSpaceSearchResultActivityNew" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.RepeatedPhotoTipActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.MusicAlbumActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.FamilyAddPicPopupActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.SelectTemplateActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.MusicPreviewActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.TemplatePreviewActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.MusicAlbumListDisplayActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoDateDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BackupNewUserAlbumSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PicFileStructDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AINormalAlbumListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumHolidayDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PortraitRecognitionActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.HiddenPortraitActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.SceneClassificationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PortraitPhotoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.releasespace.activity.AlbumReleaseSpaceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.releasespace.activity.AlbumReleaseSpaceSearchResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumMergeActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.NormalAlbumListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PubPhotoAlbumListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoAlbumEmptyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.CreatePhotoAlbumActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AddAlbumActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.remember.AddRememberActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumManageActivity" android:screenOrientation="behind" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumContentManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumMemberActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoAlbumDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoAlbumSelectCoverActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PortraitAlbumManageActivity" android:screenOrientation="behind" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.SceneFootprintHolidayAlbumManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.CreateBabyAlbumActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.baby.activity.BabyAlbumActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BabyAlbumMomentDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BabyAlbumMomentGalleryActivity" android:screenOrientation="behind" android:theme="@style/babygallery"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BabyAlbumMomentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BabyAlbumDayDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.BabyAlbumBabyListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoNetSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoDbManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AIAlbumSettingItemActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PersonalizationSettingsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AutoHideFaceAlbumSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.NormalAlbumDayDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.TimeLineDayDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumAddPicTypeSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumAddPicActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumSortActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PubAlbumSortActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AlbumSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AIPlugActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AIPlugAdvancedSettingsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.RememberAlbumIntroActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.RememberAlbumListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.RememberAlbumActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PublicRememberDynamicStateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.CreateAlbumPersonalActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.TimeLineContentFilterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.TodayInHistoryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.AISelectPhotoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.ChangeLocationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.activity.PhotoGalleryActivity" android:screenOrientation="behind" android:theme="@style/closeEdgeTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.photo.quickmanage.QuickManageActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.WechatSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.WechatBackupListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ExtinguishingScreenActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.BackupMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.AlbumBackupSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.AlbumAutoBackupEditActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.DirectoryBackupEditActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.DirectoryBackupActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.BackupAlbumSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.BackupAlbumDetailSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.BackupVideoSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.BackupLocalMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StorageFileActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StorageDocumentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StorageAllFileActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StorageDirectoryActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StoragePhotoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.StorageDirectoryVerifyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.NewUserBackupAlbumSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsBackupMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsReadActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsBackupActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsBackupListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsRestoreInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsCompareActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsRestoreActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactsBackupDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatbackup.activity.ContactDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskLoginActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskFileActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskSyncSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.BaiduLinkDownloadActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.NetDiskFailFileActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.Life115AuthActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.baidunetdisk.activity.DownloadBaiduNetDiskActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.classroom.activity.ClassroomMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.classroom.activity.ClassroomSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.classroom.activity.CourseTypeManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseFolderActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseLastStudyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseMemberManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseContentManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseManageActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseChooseTypeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseMultiChoiceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseNotebookActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.classroom.activity.CourseDownloadingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filesquare.ui.help.FileSquareHelperActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filesquare.FileSquareActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filesquare.FileSquareDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileListActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.DownloadTaskCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.CleanCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.MyShareFileListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashDeliverActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.PhotoBackupActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.DirectoryBackupListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileUploadActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskCenterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskFileProcessActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskVideoTranscodeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskFileUploadActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskFileDownloadActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NasSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.CleanDuplicateFilesActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileDedupeHomeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileDedupeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.TaskUnCompressActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashDeliverMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileHiddenSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.PersonalFileSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileOuterDeviceSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:name="com.zentraedi.filemanage.activity.SafeBoxActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:name="com.zentraedi.filemanage.activity.SafeBoxListActivity" android:screenOrientation="behind"/>
+        <activity android:name="com.zentraedi.filemanage.activity.SafeBoxSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteLastDeleteActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteClassifySortActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteHistoryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteHistorySettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteFilterActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteMoveActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoteEditActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashDeliverGuideActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.OutsideSettingManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.OutSideFragmentCleanActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.JackGuideActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.SmbMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.OssMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.CloudMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.WebdavMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FtpMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.SftpMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ALiYunWebdavMountActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.MountDirActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filesquare.ui.setting.GroupPermissionListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NasSearchIndexSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoCreateSearchIndexFolderActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ThumbSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NoAutoCreateThumbFolderActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileSortStyleSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.PersonalFileSortStyleSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileCategoryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.NewFileManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.UploadToBaiduNetDiskListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.UploadBaiduFailedListActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileRecycleBinActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ReceiveFlashListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashNoTaskActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FlashSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileSquareQuotaSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.SameNameFileSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.DownloadToPhoneFailedListActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileUploadFailedListActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.LabelListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileProcessFailedListActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.AddOutsideDeviceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileVersionSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.DownloadToPhoneListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.BatchUncompressActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.EditMarkdownActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.PreviewMarkdownActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ViewMarkdownActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileMarkdownActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FloatNoteCreateEntranceActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ClassifyMoveActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.RecycleBinAutoCleanActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.ZipFilePreviewActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filemanage.activity.FileHashCheckSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.docker.activity.DockerMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.docker.activity.DockerSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.virtual_machine.activity.VirtualMachineMainActivity" android:screenOrientation="behind"/>
+        <activity android:name="com.zentraedi.setting.activity.DiskStatsDebugActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NasLocalNetInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SystemSettingsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.TypeFaceSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.CheckUpdateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.AboutUsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NasMonitorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ShareSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.RemoteHelpActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.LoginRemoteHelpActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.MyShareOthersListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SharedActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NetworkRelevantActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NasNetworkInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.setting.activity.NetworkSlowEditActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.setting.activity.NetworkSlowShowActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NasInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageSpaceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SettingRecordActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.MoreSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DebugActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NfsSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.FtpSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DlnaSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NasHardwareInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SambaSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.WebDavSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.AfpSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.FileAndShareSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DiskRemoteMountSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagementMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagerAdminActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageOptimizationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagerConsumerActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NetworkPortSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.HdmiDesktopSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.LinkAggregationManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SsdStateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DiskInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SettingExpansionPlanActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SafeDoubleCatalogActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IpConfigureActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ServiceVersionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SystemCheckVersionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SystemUpgradeStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UpgradeMethodActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SmartCheckActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SmartCheckSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SmartCheckDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IhmSmartCheckActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IhmCheckDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DdnsSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.HardwareSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UpsSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.BootPowerActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SftpSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ServiceProcessActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ServiceControlActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PhoneNetworkActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagerSsdActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagerEsataActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManagerEsataChangeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.CacheExpansionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.CacheSwitchUsageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.CpuAndMemoryInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DiskIndexActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NetSpeedActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SsdIndexActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageUsageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageUsageDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.WifiConfigActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.WifiReconnectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.FsFragmentClearActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SleepDetectionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageManageMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.CommonStoragePoolDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StoragePermissionSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.EquipmentExpansionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.MountDiskIntoUsbActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.MountDiskIntoUsbV3Activity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StoragePoolUsedDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UsbDiskPatternSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.BluetoothControlMatchTipsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.T2PrivacySecuritySetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ZsPoolExceptionDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ModifySambaMountPointNameActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IPv6SettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PlugBackupSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PlugBackupMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PlugBackupRuleSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PlugBackupFailedActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PlugBackupListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.plugbackup.v3.ui.PlugBackupV3TaskActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.plugbackup.v3.ui.PlugBackupV3ReportActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SetCapacityPoolActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UserQuotaListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UserQuotaDetailsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.UserQuotaSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SSHSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IPBlockadeRuleActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.IPBlockadeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.FireWallActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.LoginSafetyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ConnectModeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ConnectMoreSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DeviceConnectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DeviceConnectTestProgressActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DeviceConnectTestReportActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DeviceConnectTestMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.WolSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.StorageSSDCacheHitRateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.MountDiskPartListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.JoinExistPoolActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.DiskWipeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PerformanceLineActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ThirdNetworkSupportActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.SimpleNetworkModeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.PortAggregationModeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.NetworkPriorityActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.setting.activity.ThirdWifiListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoHomeActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.ClassificationListManagerActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.video.activity.SubtitleSearchActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.video.activity.SubtitlePreviewActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.video.activity.VideoDetailsActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoModifyActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSubtitleDownloadActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.video.activity.VideoPersonActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoFileDetailsActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CustomAlbumFileListActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SeriesAddListActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.AddVideoFolderPopupActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSearchActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CollectionSkipActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CollectionSmartSkipActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CollectionSmartSkipResultActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoFavoritesActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSuggestedActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoWatchedActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SeriesDetailsActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.ShareClassificationSettingActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.MovieVersionAddActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SeriesAddVideoActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoAddSeriesActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.AddToCustomAlbumActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.AlbumDeleteFileActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoContentManageActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoFolderActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSharedManageActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSuggestedManageActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoHomeSettingActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.video.activity.VideoMediaLibraryServiceActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.ClassificationManageActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSortSettingActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.AutoSeriesSetActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SeriesSearchAlbumActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SeriesCreateActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoAlbumCreateActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CustomAlbumTagActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CustomAlbumActorEditActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CustomAlbumCoverEditActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoCoverSelectAlbumActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoCoverSelectPhotoActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.CustomAlbumAddActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.DownloadedVideoActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoTmdbRankActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoAlbumDownloadActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoMatchInfoReportActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.MatchInfoSearchResultActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.MoveAlbumListActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.SearchAlbumListActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoSearchSeasonsActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.EditAlbumEpisodeActivity" android:screenOrientation="behind" android:theme="@style/AppThemeVideo" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoInfoPluginActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.video.activity.VideoContentLostActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatflashbackup.activity.WechatFlashBackupStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatflashbackup.activity.WechatFlashBackupSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.wechatflashbackup.activity.WechatFlashBackupContentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicDatabaseMigrationActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.zentraedi.zspace.music.ui.MusicMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.zentraedi.zspace.music.ui.MusicHomeSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.music.ui.MusicPlayerActivity" android:screenOrientation="behind" android:theme="@style/AppTransTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.zspace.music.ui.AudiobookMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicShowNameSetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.PlaylistAddContentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.PlaylistSearchAddContentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SongBatchEditActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicPlaylistAddSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicPlaylistDetailsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicFeaturedDetailsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicFormatDescriptionActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SongEffectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicMediaLibraryServiceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.AllPlaylistManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.PlaylistDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicCollectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicPlayHistoryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicPlayFormatActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicPlayCacheActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicLyricsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicLyricsAddActivity" android:screenOrientation="behind" android:theme="@style/float_layer" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SongInfoActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicAlbumDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicAlbumDetailDetailActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SingerDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.PlaylistManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.PlaylistSetUserActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SongTrackActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.SongEqualizerActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicContentManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.MusicSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.music.ui.LyricsSearchActivity" android:screenOrientation="behind"/>
+        <service android:exported="true" android:foregroundServiceType="mediaPlayback" android:name="com.zentraedi.zspace.music.notification.MusicPlayerService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.zentraedi.zspace.music.bluetooth.BluetoothReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zspace.monitor.activity.MonitorMainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:name="com.zspace.monitor.activity.MonitorDetailActivity" android:screenOrientation="behind" android:theme="@style/MonitorDetailTheme"/>
+        <receiver android:exported="false" android:name="com.zentraedi.player.receiver.PipBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.zentraedi.zspace.ACTION_MEDIA_CONTROL"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.zentraedi.player.activity.VideoPlayerActivity" android:resizeableActivity="true" android:screenOrientation="behind" android:supportsPictureInPicture="true" android:theme="@style/playerVideoTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.player.activity.SubtitlePreMatchActivity" android:screenOrientation="behind" android:theme="@style/playerPageTheme"/>
+        <activity android:exported="false" android:name="com.zentraedi.datarecovery.activity.DataRecoveryActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.zentraedi.datarecovery.activity.DataRecoveryFileListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.base.compose.preview.ComposeDemoActivity" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DeletePromptActivity" android:screenOrientation="behind" android:theme="@style/haha"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DownloadPhoneBtActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.AddDownLinkActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.BtDownloadMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.BTDownloadDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.BtDownloadSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DownloadDirActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DownloadNumActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.UploadAndDownloadSpeedActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.TorrentMakeSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.LinkPeerNumActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.FtpAndHttpSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.PortConfigActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.BtDownloadFileSelectActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DownloadSelectActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.DownloadDatabaseChangeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.ClipBoardMonitorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.download.activity.ChangeDownloadPathActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.share.activity.SharePhotoActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.Q2BluetoothConnectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.BluetoothHotspotActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.BluetoothConnectByHttpActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.WlanHotspotSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.WlanShareHelpActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.WlanHelpActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.BluetoothWifiGuideActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.blueteethuse.activity.BluetoothHotspotGuideActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.FileCollectMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.QuickCollectPopupActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.CustomCollectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.FileCollectMyTaskActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.CollectTaskDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.CollectStatisticsActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.filecollect.activity.CollectResultSharePopupActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasGuideActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasSearchDeviceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasSearchResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasScanResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasInputSNActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasCheckActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasErrorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.NasConnectErrorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasInputAccountActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasVerifyMethodActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasProgressActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.ChangeNasSuccessActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.CreateChildAccountActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.CreateChildPhoneAccountActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.CreateChildOfflineAccountActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.user.nas.activity.CreateChildPasswordActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.share.activity.ShareListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskInfoMoveIntroduceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskReplaceSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.SsdReplaceSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.CheckDiskUsageForReplaceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskReplacePrepareResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskSwitchStatusActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskMigrateStatusActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskReplaceHasEnoughSpaceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.ESataReplaceStatusActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.ESataSwitchFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.DiskReplaceChooseMovingDiskActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.ESataReplaceSelectActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.EsataMoveNoticeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.SsdReplacePrepareResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.diskdata.activity.SsdSwitchFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.hdmi.activity.RemoteControlActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.hdmi.activity.HdmiMenuActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.hdmi.activity.HdmiEpisodeActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.BookMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookMainActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookCategoryManagerActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.HomeBlockManagerActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookCategoryDetailsActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookContentManagerActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookListDetailsActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.v2.BookOfflineActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.SearchBookActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.BookMainDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.BookContentManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.BookLibCategoryManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.BookCategoryDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zbooklibrary.activity.OfflineBookMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.zentraedi.comic.activity.ComicReaderActivity" android:screenOrientation="behind">
+            <intent-filter>
+                <action android:name="com.zentraedi.comic.comicReaderActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicContentManagementActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicReadSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicCodeBookManagementActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicCategoryManagementActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicCategoryContentManagementActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicCropImageActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicStretcherImageActivity" android:screenOrientation="behind" android:theme="@style/NasActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.comic.activity.SelectPhoneImageActivity" android:screenOrientation="behind" android:theme="@style/loadingTransparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.zspace.comic.ComicReadingRecordActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicSubDirActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.comic.activity.ComicMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.OfflineComicMainActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicListDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicSearchActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicCompressionBrowserActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.OfflineComicDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.zentraedi.comic.activity.ComicSearchDetailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.outreader.activity.ZReaderActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.outreader.activity.ReaderSettingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.outreader.activity.EditTxtActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.outreader.activity.LocalTxtActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.outreader.activity.ZReaderTypefaceActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zentraedi.outreader.v2.activity.NewZReaderActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.SsdFormatStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.PendingSsdStorageSecondActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.PendingSsdReadSecondActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.PendingSsdWRSecondActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.SsdRewriteBackActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.ssddata.activity.CommonUserSsdChangeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.dlna_cybergarage.activity.MusicDlnaListActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.remoteaccess.activity.RemoteAccessActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.remoteaccess.activity.AddOrEditRemoteAccessActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.remoteaccess.activity.RemoteIconPreviewActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.remoteaccess.activity.RemoteAccessManagePwdActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolMultiStateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolFormattingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolFormatFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolFormatStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolErrorHandleActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ExtensionPoolActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolCreateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolCreateSsdCacheActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolCreateSsdCacheStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.ZsPoolFormatCacheFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.RepairPoolActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.DiskEncryptionForgetPwdActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspool.activity.NoValidPoolActivity" android:screenOrientation="behind"/>
+        <meta-data android:name="pdftron_license_key" android:value="Beijing Zentraedi Intelligence Information Technology Co., Ltd (zspace.cn):OEM:Zspace::IA+:AMS(20231121):4BCCDD7307CA34F30B31B4C9B273382F4E6F2F8F36427B0C541DD45C9570AE4AB2B6F5C7"/>
+        <activity android:name="com.zentraedi.zspace.pdftron.TestPDFTronActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.pdftron.pdf.controls.DocumentActivity" android:theme="@style/PDFTronAppTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zspace.pdftron.CustomDocumentActivity" android:theme="@style/PDFTronAppTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.zs_business.baiduMap.read.CnReaderActivity" android:screenOrientation="behind"/>
+        <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.ExitAppActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.ApmReportsActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.WebViewActivity" android:theme="@style/closeEdgeTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.LocalHtmlTextActivity" android:theme="@style/closeEdgeTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.RemoteAccessWebViewActivity" android:screenOrientation="behind"/>
+        <provider android:authorities="com.zentraedi.zspace" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent101848523"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskStateResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskFormatStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.ExternalDiskFormatStartActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskFormattingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.ESataResetActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskSmartCheckActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.NasRestartingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.business.disk.activity.RaidRecoveringActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.business.disk.activity.DiskBootPrepareActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.NewUserDiskCheckingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.CommonUserFindNewDiskActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.upgrade.activity.NasSystemUpgradeResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.upgrade.activity.NasServiceUpgradeResultActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.reader.ReaderActivity"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.PermissionActivity" android:screenOrientation="behind" android:theme="@style/loadingTransparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.HddBuiltinDiskStateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.HddBuiltinDiskFormatActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskMultiStateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskChangeNextActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskChangeAddPluginActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.DiskFormatFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.SsdFormatReadFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.ExternalDiskFormatFinishActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.ExternalDiskFormatFailActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.business.disk.activity.RecoveryDataSystemActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.business.disk.activity.RecoveryDataRaid1Activity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.zentraedi.business.disk.activity.RecoveryDataRaid5Activity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.RegisterWelcomeActivity" android:screenOrientation="behind"/>
+        <service android:name="com.zentraedi.business.video.base.CheckFontService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.SmttWebViewActivity" android:screenOrientation="behind"/>
+        <service android:label="dexopt" android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService" android:process=":dexopt"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.FloatEntranceActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.BaseFragmentActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.LoginBaiduNetDiskWebActivity" android:theme="@style/float_layer" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.NetDiskLogoutWebActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.share.SharePhotoActivity" android:screenOrientation="behind" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.PhotoAndVideoMoreDetailInfoActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.nastiming.NasTimingOpenAndCloseActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.disk.activity.ExternalDiskDetailForFormatActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.imgedit.CropImageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.modifyshootingtime.ModifyShootingTimeFailRetryActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.LabelManageActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.LabelsOrganizeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.AddLabelActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.debug.activity.DebugListActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.NetworkPingActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.PhoneImagePickerActivity" android:theme="@style/float_layer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.ShutdownEsataActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.shutdown.activity.ShutdownActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.PhoneImageSelectorActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.PhoneImageSelectorProxyActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.zentraedi.business.activity.ShareEmailActivity" android:screenOrientation="behind"/>
+        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="com.zsapce.filetransfer.service.FileTransferForegroundService"/>
+        <activity android:name="com.bun.miitmdid.utilsforrequestpermission.PermissionTransparentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:ads-identifier" android:value="ads-identifier:3.4.62.300"/>
+        <activity android:exported="false" android:name="com.zentraedi.panorama.PanoramaViewerActivity" android:theme="@style/PanoramaViewerTheme"/>
+        <service android:name="com.kwai.koom.javaoom.analysis.HeapAnalyzeService" android:process=":heap_analysis"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.firebase.sessions.SessionLifecycleService"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <uses-library android:name="android.ext.adservices" android:required="false"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="standard" android:name="com.just.agentweb.ActionActivity" android:theme="@style/actionActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <meta-data android:name="huawei_module_scankit_local" android:value="21500301"/>
+        <meta-data android:name="huawei_module_scankit_sdk_version" android:value="scanplus:2.15.0.301"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:scanplus" android:value="scanplus:2.15.0.301"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:huawei_module_scankit" android:value="1"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:hmscore" android:value="1"/>
+        <activity android:configChanges="navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.huawei.hms.hmsscankit.ScanKitActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:launchMode="singleInstance" android:name="com.zentraedi.zspace.ddshare.DDShareActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.tencent.tbs.one.optional.TBSOneStandaloneService" android:process=":standalone"/>
+        <meta-data android:name="networkservice_netdiag" android:value="com.huawei.hms.network.netdiag.NetDiagnosisService"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:null:huawei_module_quic_pro" android:value="-1"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:null:huawei_module_quic" android:value="-1"/>
+        <meta-data android:name="networkservice_config" android:value="com.huawei.hms.network.conf.api.ConfigService"/>
+        <meta-data android:name="networkservice_dns" android:value="com.huawei.hms.network.dns.DNSService"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:network-api" android:value="network-api:8.0.1.316"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:dynamic-api" android:value="dynamic-api:1.0.25.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader" android:value="11"/>
+        <service android:exported="false" android:name="com.huawei.agconnect.core.ServiceDiscovery"/>
+        <uses-library android:name="com.huawei.camerakit.impl" android:required="false"/>
+        <meta-data android:name="networkservice_ai" android:value="com.huawei.hms.network.ai.AIPolicyService"/>
+    </application>
+</manifest>

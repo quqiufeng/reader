@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_fire_wall_interface_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_security_firewall_3def636d98" android:layout_weight="1.0" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <View android:tag="binding_3" android:background="@color/color_F4F6FA" android:layout_width="wrap_content" android:layout_height="@dimen/len_10" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:tag="binding_4" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_5" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.7" />
+        <ImageView android:layout_width="@dimen/len_250" android:layout_height="@dimen/len_150" android:src="@drawable/icon_fire_wall_empty" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_security_firewall_01e6a85513" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

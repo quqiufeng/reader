@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_photo_backup_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/iv_file" android:tag="binding_1" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_8" app:proportHeight="1" app:proportWidth="1" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/shape_60_black_border_5" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_5" android:layout_alignBottom="@id/iv_file" android:layout_marginEnd="@dimen/len_3" android:layout_alignEnd="@id/iv_file">
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_marginEnd="@dimen/len_5" />
+        <ProgressBar android:tag="binding_3" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/white" android:id="@id/tv_status_desc" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

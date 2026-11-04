@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_course_list_last_title_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1422_res" android:layout_weight="1.0" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:gravity="center_vertical" android:tag="binding_1" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_more" android:drawablePadding="@dimen/len_5" android:drawableEnd="@drawable/icon_arrow_gray_7_9" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <View android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</LinearLayout>

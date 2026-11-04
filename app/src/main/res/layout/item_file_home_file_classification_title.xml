@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_file_home_file_classification_title_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_file_categories" />
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_notepad_all" />
+    <ImageView android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_6_10" />
+</LinearLayout>

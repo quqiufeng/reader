@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/noteSortLayout" android:tag="layout/layout_dialog_note_list_sort_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.widget.BlurImageView android:id="@id/biImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignTop="@id/llContent" android:layout_alignBottom="@id/llContent" app:tl_radius="@dimen/len_15" app:tr_radius="@dimen/len_15" />
+    <LinearLayout android:orientation="vertical" android:id="@id/llContent" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popu_title" android:layout_width="0.0dip" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_sort" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivPopupClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" />
+        </LinearLayout>
+        <View android:id="@id/v_divider_line" android:background="@color/share_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:tag="binding_1" style="@style/dialog_file_list_sort_item">
+            <ImageView android:tag="binding_2" style="@style/dialog_file_list_sort_icon" />
+            <TextView android:id="@id/tvSort2" android:text="@string/common_sort_modified_time" style="@style/dialog_file_list_sort_title" />
+            <TextView android:id="@id/tvSortSub2" android:tag="binding_3" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/dialog_file_list_sort_subtitle" />
+            <ImageView android:visibility="gone" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_item_selected" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+        </LinearLayout>
+        <LinearLayout android:tag="binding_4" style="@style/dialog_file_list_sort_item">
+            <ImageView android:tag="binding_5" style="@style/dialog_file_list_sort_icon" />
+            <TextView android:id="@id/tvSort1" android:text="@string/common_sort_creation_time" style="@style/dialog_file_list_sort_title" />
+            <TextView android:id="@id/tvSortSub1" android:tag="binding_6" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/dialog_file_list_sort_subtitle" />
+            <ImageView android:visibility="gone" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_item_selected" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

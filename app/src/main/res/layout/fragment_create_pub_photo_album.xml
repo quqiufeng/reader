@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_create_pub_photo_album_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_family_album_creation_desc" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_9" android:layout_weight="1.0" />
+            <include android:id="@id/pubPhotoAlbumPublicLayout" layout="@layout/layout_pub_photo_album_public" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

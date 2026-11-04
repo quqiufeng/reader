@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_show_hidden_portrait_0" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:id="@id/llMultiSelect" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_choice_24_24_enable" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_multi_select" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_hind_face" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/button_tab_hide_face" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_hind_face" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_hide_people" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_merge_face" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/button_tab_merge_face" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_merge_face" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_merge_people" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_my_relative" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/button_set_relation" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_album_relationship" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_show_hidden" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_hide_portrait_album_24_24_black" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_account_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_hidden_peoples" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_show_setting" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_portrait_setting_24_24_black" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_show_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_cd37765c33" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_portrait_sort" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_portrait_sort_24_24_black" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_portrait_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_sort" />
+    </LinearLayout>
+</LinearLayout>

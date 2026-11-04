@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_search_book_0" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/iv_back" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_page_44_44" android:scaleType="fitCenter" />
+        <FrameLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:layout_weight="1.0">
+            <com.zentraedi.business.view.BaseEditText android:ellipsize="middle" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/et_search_content" android:tag="binding_2" android:paddingLeft="@dimen/len_35" android:paddingRight="@dimen/len_42" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/common_reader_f6017f755b" android:singleLine="true" android:imeOptions="actionSearch" style="@style/EditTextSupportNightStyle" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginLeft="@dimen/len_10" android:src="@drawable/icon_home_page_search" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/iv_clear_input" android:tag="binding_3" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_bottom_menu_text_color" android:gravity="center" android:id="@id/tv_search" android:tag="binding_4" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_button_search" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_5" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_reader_0e48b615f9" android:layout_weight="1.0" app:medium_bold="true" />
+        <ImageView android:id="@id/iv_clear_history" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:src="@drawable/icon_delete_gray_28" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_history" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_5" />
+    <FrameLayout android:id="@id/layoutContainer" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

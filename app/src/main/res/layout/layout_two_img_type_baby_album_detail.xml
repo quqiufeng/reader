@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_two_img_type_baby_album_detail_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/img1Rl" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/img1" android:tag="binding_1" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <CheckBox android:id="@id/cb_select" android:tag="binding_2" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:tag="binding_3" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/img1" />
+        <View android:tag="binding_4" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/img2Rl" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_2" android:layout_toRightOf="@id/img1Rl">
+        <ImageView android:id="@id/img2" android:tag="binding_6" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <CheckBox android:tag="binding_7" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:tag="binding_8" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/img2" />
+        <View android:tag="binding_9" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

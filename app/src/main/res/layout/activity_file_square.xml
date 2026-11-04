@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_file_square_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:textColor="@color/selector_text_111111_cccccc" android:id="@id/tv_item" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView android:id="@id/iv_help" android:visibility="gone" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:id="@id/tv_desc" android:tag="binding_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:includeFontPadding="false" android:layout_below="@id/tv_item" android:lineSpacingExtra="@dimen/len_5" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+                <ImageView android:id="@id/iv_separate" android:layout_marginTop="@dimen/len_14" android:layout_below="@id/tv_desc" style="@style/topBigTitleSeparatorLine" />
+                <LinearLayout android:orientation="vertical" android:id="@id/squareSettingLl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_separate">
+                    <RelativeLayout android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15">
+                        <LinearLayout android:orientation="horizontal" android:id="@id/llSquareOpenStatus" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+                            <Switch android:layout_gravity="center_vertical" android:tag="binding_5" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchMinWidth="@dimen/len_38" />
+                        </LinearLayout>
+                        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:id="@id/switchTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_settings_enable_group_files" />
+                    </RelativeLayout>
+                    <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_file_settings_group_management" android:layout_marginStart="@dimen/len_15" />
+                </LinearLayout>
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/fileTitle" layout="@layout/layout_file_navigation_bar_new_transparent" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@id/flContent" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <Space android:id="@id/sp_bottom" android:tag="binding_8" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_84" />
+    </LinearLayout>
+    <RadioGroup android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/rgBottomTab" android:background="@drawable/custom_white_top_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_60" android:checkedButton="@id/rbHomeTab">
+        <RadioButton android:id="@id/rbHomeTab" android:tag="binding_9" android:text="@string/common_atv_movies_list" android:drawableTop="@drawable/select_file_square_home_icon" style="@style/file_square_bottom_nav" />
+        <RadioButton android:id="@id/rbDustbinTab" android:tag="binding_10" android:text="@string/common_status_deleted" android:drawableTop="@drawable/select_file_square_dustbin_icon" style="@style/file_square_bottom_nav" />
+        <RadioButton android:id="@id/rbSettingTab" android:tag="binding_11" android:text="@string/common_button_settings" android:drawableTop="@drawable/select_file_square_setting_icon" style="@style/file_square_bottom_nav" />
+    </RadioGroup>
+    <include android:layout_gravity="bottom" android:id="@id/bottomOption" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_bottom_options_height" android:layout_alignParentBottom="true" layout="@layout/layout_file_list_bottom_options" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

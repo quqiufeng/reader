@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/photoSortLayout" android:tag="layout/dialog_album_detail_list_style_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="@dimen/len_56" android:text="@string/common_photos_74236d7cf7" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_15" />
+        <ImageView android:id="@id/iv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:id="@id/v_divider_line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_date" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_84893bcaa8" android:drawablePadding="@dimen/len_10" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_change_time" android:layout_marginStart="@dimen/len_15" />
+            <ImageView android:layout_gravity="right" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_item_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_year" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_b93482ee0d" android:drawablePadding="@dimen/len_10" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_time_line_photo_year_24" />
+            <ImageView android:layout_gravity="right" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_item_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_file" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_movies_folder_view" android:drawablePadding="@dimen/len_10" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_time_line_photo_image_24" />
+            <ImageView android:layout_gravity="right" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_item_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_position" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_693b5977e2" android:drawablePadding="@dimen/len_10" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_view_position" />
+            <ImageView android:layout_gravity="right" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_item_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/layout_portrait" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_face" android:drawablePadding="@dimen/len_10" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_view_portrait" android:layout_marginStart="@dimen/len_15" />
+            <ImageView android:layout_gravity="right" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_item_selected" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

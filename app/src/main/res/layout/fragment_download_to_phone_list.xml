@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_download_to_phone_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.flyco.tablayout.PureTabLayout android:id="@id/selectTypeTab" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/common_blue" app:tl_indicator_corner_radius="@dimen/len_1" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_margin_bottom="0.0dip" app:tl_indicator_width="83.0dip" app:tl_tab_padding="13.0dip" app:tl_tab_space_equal="false" app:tl_textSelectColor="@color/color_ff333333" app:tl_textSelectSize="@dimen/font_16" app:tl_textUnselectColor="@color/color_bf666666" app:tl_textUnselectSize="@dimen/font_16" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/downloadListRv" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_list_empty" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_list_empty" />
+</RelativeLayout>

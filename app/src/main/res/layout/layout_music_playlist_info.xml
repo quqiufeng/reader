@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_detail_info_black" />
+                <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:paddingLeft="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_playlist_details" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_playlist_name" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/tvName" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:text="@string/common_music_c3d800f944" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:text="@string/common_photos_creator" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_8">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/tvNickName" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tvUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:text="@string/common_photos_other_members" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tvEmptyUser" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_no_playlist_member_added_yet" />
+        <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/rvList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:minHeight="@dimen/len_150" app:maxHeight="@dimen/len_250" />
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_member_permissions" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_member_permission_view_only" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

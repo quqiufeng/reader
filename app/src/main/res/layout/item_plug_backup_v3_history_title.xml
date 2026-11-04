@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:tag="layout/item_plug_backup_v3_history_title_0" android:paddingTop="@dimen/len_18" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_plug_and_backup_history_tasks" android:includeFontPadding="false" android:paddingStart="@dimen/len_30" android:paddingEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

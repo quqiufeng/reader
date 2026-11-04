@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_content" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivSortIcon" android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvSortName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <ImageView android:id="@id/ivSelect" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_item_selected" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tv_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="（" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvEnd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tv_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="）" android:includeFontPadding="false" />
+    <RelativeLayout android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

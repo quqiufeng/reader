@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_video_subtitle_select_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_player_setting_subtitles" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_68" android:paddingHorizontal="@dimen/len_15">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutSearch" android:background="@drawable/shape_2c3053_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_32" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0">
+            <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_search_subtitle_20" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_video_title" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_search_subtitles" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutAdd" android:background="@drawable/shape_2c3053_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_32" android:layout_weight="1.0">
+            <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_add_white_18" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_video_title" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_add_subtitles" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/rvContent" android:layout_width="fill_parent" android:layout_height="@dimen/len_345" android:minHeight="@dimen/len_345" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutEmpty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_345">
+        <androidx.legacy.widget.Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="55.0" />
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_240" android:layout_height="@dimen/len_120" android:src="@drawable/icon_player_subtitle_empty" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_player_no_subtitles" android:includeFontPadding="false" :paddingTop="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:gravity="center" android:id="@id/tvSubTitleTip1" android:paddingTop="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_you_can_search_subtitles_or_add_downloaded" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_FF223D" android:layout_gravity="center_horizontal" android:id="@id/tvSubTitleTip2" android:paddingTop="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_231" />
+        <androidx.legacy.widget.Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="81.0" />
+    </LinearLayout>
+</LinearLayout>

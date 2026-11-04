@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_user_quota_pool_tips_0" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_6" android:paddingBottom="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_425FFF" android:id="@id/tvSizeTips" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_5" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_storage_limit_deviation_explanation" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_right_blue" />
+</LinearLayout>

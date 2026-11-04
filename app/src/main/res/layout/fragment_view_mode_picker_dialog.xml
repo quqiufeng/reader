@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/view_mode_scrollview" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/scroll_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/primary_text_size" android:textColor="?colorAccent" android:gravity="bottom" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pref_viewmode_title" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/fragment_view_mode_button_layout" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <TableLayout android:id="@id/fragment_view_mode_button_table_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">
+                        <LinearLayout android:orientation="horizontal" android:id="@id/fragment_view_mode_button_single" android:background="?selectableItemBackground" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:layout_weight="1.0" android:contentDescription="@string/pref_viewmode_singlepage" android:paddingEnd="10.0dip" android:layout_marginEnd="4.0dip">
+                            <androidx.appcompat.widget.AppCompatImageView android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_view_mode_single_black_24dp" />
+                            <TextView android:textColor="?android:textColorPrimary" android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pref_viewmode_singlepage_short" android:textAlignment="textStart" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/fragment_view_mode_button_facing" android:background="?selectableItemBackground" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_weight="1.0" android:contentDescription="@string/pref_viewmode_facing" android:paddingEnd="10.0dip" android:layout_marginStart="4.0dip">
+                            <androidx.appcompat.widget.AppCompatImageView android:padding="5.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:srcCompat="@drawable/ic_view_mode_facing_black_24dp" />
+                            <TextView android:textColor="?android:textColorPrimary" android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pref_viewmode_facing_short" android:singleLine="false" android:textAlignment="textStart" />
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:orientation="horizontal" android:id="@id/fragment_view_mode_button_reflow" android:background="?selectableItemBackground" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:layout_weight="1.0" android:contentDescription="@string/pref_viewmode_reflow" android:paddingEnd="10.0dip" android:layout_marginEnd="4.0dip">
+                            <androidx.appcompat.widget.AppCompatImageView android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_view_mode_reflow_black_24dp" />
+                            <TextView android:textColor="?android:textColorPrimary" android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pref_viewmode_reflow_short" android:textAlignment="textStart" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/fragment_view_mode_button_cover" android:background="?selectableItemBackground" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_weight="1.0" android:contentDescription="@string/pref_viewmode_facingcover" android:paddingEnd="10.0dip" android:layout_marginStart="4.0dip">
+                            <androidx.appcompat.widget.AppCompatImageView android:padding="5.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:srcCompat="@drawable/ic_view_mode_cover_black_24dp" />
+                            <TextView android:textColor="?android:textColorPrimary" android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pref_viewmode_facingcover_short" android:textAlignment="textStart" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <ListView android:id="@id/fragment_view_mode_picker_dialog_listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:choiceMode="multipleChoice" android:minHeight="?listPreferredItemHeight" android:headerDividersEnabled="true" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

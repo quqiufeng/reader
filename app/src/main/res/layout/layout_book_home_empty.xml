@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:tag="layout/layout_book_home_empty_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_empty_container" android:background="@color/transparent_bg" android:paddingBottom="@dimen/len_80" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_book_home_empty" android:forceDarkAllowed="false" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_28" android:layout_marginTop="@dimen/len_40" android:layout_marginRight="@dimen/len_28">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_book_home_empty_1" />
+            <TextView android:textSize="@dimen/font_13" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:text="@string/common_reader_support_multiple_format" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_28" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_28">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_book_home_empty_2" />
+            <TextView android:textSize="@dimen/font_13" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:text="@string/common_reader_smooth_reading_experience" />
+        </LinearLayout>
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+        <LinearLayout android:gravity="center" android:id="@id/buttonAdd" android:background="@drawable/selector_button_blue" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_add_white_bg_transparent" android:scaleType="fitCenter" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_text_day_ffffff_night_ffffff_lv1" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_movies_add" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

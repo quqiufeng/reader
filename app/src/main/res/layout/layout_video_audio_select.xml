@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_video_audio_select_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_transcoding_a26c70a9e8" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/rvContent" android:layout_width="fill_parent" android:layout_height="@dimen/len_345" android:minHeight="@dimen/len_345" />
+</LinearLayout>

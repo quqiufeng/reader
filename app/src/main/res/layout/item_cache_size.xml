@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/itemRootLayout" android:tag="layout/item_cache_size_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_12"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_333333" android:id="@id/checkButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/select_blue_30" android:minHeight="@dimen/len_30" />
+</FrameLayout>

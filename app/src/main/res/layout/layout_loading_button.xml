@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_loading_button_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <ProgressBar android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress" />
+        <TextView android:textSize="@dimen/font_16" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_button_text" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

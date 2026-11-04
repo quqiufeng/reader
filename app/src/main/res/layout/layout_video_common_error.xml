@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layoutNetError" android:tag="layout/layout_video_common_error_0" android:background="@color/color_video_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="198.0" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10" android:src="@drawable/icon_dark_empty_2" />
+    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_b3ffffff" android:layout_gravity="center_horizontal" android:id="@id/tvNetErrorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/retryButton" android:tag="binding_1" android:background="@drawable/video_button_selector_3" android:layout_width="@dimen/len_140" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_30">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/buttonLoading" android:tag="binding_2" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+        <TextView android:textSize="@dimen/len_16" android:gravity="center" android:id="@id/tvRetry" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="@dimen/len_42" android:text="@string/common_nas_string_key_1249_res" android:includeFontPadding="false" />
+    </LinearLayout>
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="312.0" />
+</LinearLayout>

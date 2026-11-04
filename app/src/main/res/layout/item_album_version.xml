@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/transparent_bg" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivCover" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_5" />
+        <View android:layout_gravity="center" android:id="@id/viewPlay" android:background="@drawable/icon_video_play" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:gravity="right" android:layout_gravity="bottom" android:id="@id/tvVideoDuration" android:padding="@dimen/len_2" android:paddingRight="@dimen/len_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_18" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/ivDownload" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_downloaded_2" />
+        <ImageView android:id="@id/ivStroke" android:background="@drawable/shape_stroke_33ffffff_5" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layoutFolder" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_40">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:id="@id/tvVersion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:id="@id/tvVideoTitle" android:paddingTop="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+        <TextView android:textSize="11.0dip" android:textColor="@color/color_b3ffffff" android:id="@id/tvVideoPath" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+</LinearLayout>

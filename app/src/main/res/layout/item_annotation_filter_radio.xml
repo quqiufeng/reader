@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout_root" android:background="@color/annotation_filter_item_background" android:paddingLeft="@dimen/padding_medium" android:paddingRight="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="vertical" android:id="@id/radio_group_filter_state" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:layout_gravity="start" android:id="@id/radio_show_all" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/annotation_filter_title_show_all" android:textAlignment="textStart" android:layoutDirection="rtl" />
+        <RadioButton android:layout_gravity="start" android:id="@id/radio_hide_all" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/annotation_filter_title_hide_all" android:textAlignment="textStart" android:layoutDirection="rtl" />
+        <RadioButton android:layout_gravity="start" android:id="@id/radio_apply_filter" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/annotation_filter_title_apply_filter" android:textAlignment="textStart" android:layoutDirection="rtl" />
+        <RadioButton android:layout_gravity="start" android:id="@id/radio_apply_filter_annotation_list" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/annotation_filter_title_apply_filter_aanotation_list" android:textAlignment="textStart" android:layoutDirection="rtl" />
+    </RadioGroup>
+</LinearLayout>

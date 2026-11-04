@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutToolBar" android:paddingLeft="@dimen/len_5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/len_46"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivEpisodeFilter" android:paddingRight="@dimen/len_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/video_filter_white" />
+    <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <TextView android:textSize="12.0dip" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:id="@id/tvCount" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

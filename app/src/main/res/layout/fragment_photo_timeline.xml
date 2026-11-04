@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_photo_timeline_0" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.photo.view.TimelineRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <com.zentraedi.business.extendedview.ExtendedRecycleView android:scrollbarThumbVertical="@color/transparent_bg" android:id="@id/rv_picture_content" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" app:scrollBarPanel="@layout/scrollbarpanel" app:smallPanel="@layout/small_scrollbarpanel" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.zentraedi.photo.view.TimelineRefreshLayout>
+        <FrameLayout android:tag="binding_2" android:background="@drawable/shape_timeline_radio_group_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_8" android:layout_alignParentBottom="true" android:elevation="3.0dip">
+            <RadioGroup android:orientation="horizontal" android:id="@id/rg_tab_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:checkedButton="@id/rb_day">
+                <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                <FrameLayout style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_year" android:text="@string/common_photos_years" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_month" android:text="@string/common_photos_months" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_day" android:text="@string/common_photos_days" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+            </RadioGroup>
+        </FrameLayout>
+        <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_100" layout="@layout/layout_loading" />
+        <include android:id="@id/no_wifi_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_100" layout="@layout/fragment_no_wifi_first_start" />
+        <include android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_100" layout="@layout/fragment_picture_empty" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_photo_new_user" />
+    <com.zentraedi.business.widget.FunctionIntroduceLayout android:id="@id/layoutFunction" android:tag="binding_3" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_marginBottom="@dimen/len_20" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

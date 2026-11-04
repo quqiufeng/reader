@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/len_73" android:layout_height="@dimen/len_73" android:layout_marginRight="@dimen/len_8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivPhoto" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/ivPhotoSelect" android:background="@drawable/shape_4d000000_8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <CheckBox android:textColorHighlight="@color/transparent_bg" android:layout_gravity="right" android:id="@id/photoSelect" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:checked="false" android:button="@drawable/selector_check_circle_box" />
+    <View android:layout_gravity="right" android:id="@id/cbClick" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" />
+    <View android:id="@id/ivPhotoShow" android:background="@drawable/shape_clean_photo_select" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

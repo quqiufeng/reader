@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/itemLayout" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_album_relationship_family" />
+    <ImageView android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/ivOpen" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_8" android:src="@drawable/icon_arrow_8_12" android:rotation="90.0" />
+    <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</FrameLayout>

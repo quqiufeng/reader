@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_wechat_pic_video_content_0" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:tag="binding_1" android:background="@drawable/shape_e4e8ef_radius_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_175">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/blurIv" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/roundedCorner10Style" />
+        <ImageView android:id="@id/coverIv" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+        <com.google.android.material.imageview.ShapeableImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:background="@drawable/bg_album_gradient_vector" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shapeAppearance="@style/rounded10CornerStyle" />
+        <ImageView android:tag="binding_5" android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_wechat_video_play" android:layout_centerInParent="true" />
+        <FrameLayout android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_centerInParent="true">
+            <ProgressBar android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminateDrawable="@drawable/anim_wechat_robot_loading" android:indeterminateBehavior="repeat" android:layout_centerInParent="true" />
+            <ImageView android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_wechat_fail" android:layout_centerInParent="true" />
+            <ImageView android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_wechat_file_deleted" android:layout_centerInParent="true" />
+        </FrameLayout>
+        <com.zentraedi.wechatflashbackup.view.CircleProgressView android:tag="binding_9" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_centerInParent="true" app:cp_bgColor="#ffd3d3d3" app:cp_max="100" app:cp_progressColor="@android:color/white" app:cp_strokeWidth="4.0dip" />
+        <LinearLayout android:orientation="horizontal" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_8" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_10">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_8" />
+        </LinearLayout>
+        <CheckBox android:tag="binding_13" android:background="@null" android:clickable="false" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_margin="@dimen/len_10" android:button="@drawable/selector_grid_circle_check_box_32_32" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_34">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_666666_cccccc" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_666666_cccccc" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_wxrobot_fetchingfiles" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_db4437" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/selector_text_666666_cccccc" android:tag="binding_17" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_wechat_delete" android:layout_marginEnd="@dimen/len_16" />
+        <ImageView android:tag="binding_19" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_wechat_share" android:layout_marginEnd="@dimen/len_16" />
+        <ImageView android:tag="binding_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_wechat_folder" />
+    </LinearLayout>
+</LinearLayout>

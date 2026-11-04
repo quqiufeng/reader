@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/valueSettingLayout" android:tag="layout/layout_sort_common_0" android:background="@drawable/dialog_bottom_background" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:text="@string/common_sort_by" android:includeFontPadding="false" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSort" android:background="@drawable/selector_button_line" android:paddingLeft="@dimen/len_11" android:paddingRight="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="@dimen/len_24">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/selector_button_line_text_color" android:gravity="center_vertical" android:id="@id/tvTitleSort" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/ivTitleSort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_up_grey_14" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/srotRecyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

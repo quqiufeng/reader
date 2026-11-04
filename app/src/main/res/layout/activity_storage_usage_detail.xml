@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_storage_usage_detail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/titleTv" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="@dimen/len_0" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:tag="binding_3" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                    <ImageView android:id="@id/iv_back" android:tag="binding_4" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:gravity="center_vertical" android:id="@id/tv_setting" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_app_settings" android:layout_alignParentEnd="true" app:medium_bold="true" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutBarTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+                        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_top_title" android:tag="binding_5" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/scrollLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View style="@style/topBigTitleSeparatorLine" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:includeFontPadding="false" />
+                <View android:background="@color/color_cccccc" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_6" android:layout_marginRight="@dimen/len_6" />
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_6" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_15">
+                <View android:id="@id/personalAccountUsageV" android:background="@color/color_425fff" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                <View android:id="@id/teamGroupUsageV" android:background="@color/color_FFD504" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                <View android:id="@id/systemUsageV" android:background="@color/color_53CC88" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                <View android:id="@id/freeV" android:background="@color/color_a6d8dce2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="100.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_8" />
+            <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_16" />
+            <RelativeLayout android:id="@id/personalAccountUsageRl" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/personalAccountUsedRl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                    <View android:background="@drawable/shape_425ff_radius_2" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/personalAccountUsedTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_39" android:text="@string/common_app_personal_files" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/personalExtendIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_up" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/personalAccountUsageRv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_below="@id/personalAccountUsedRl" />
+            </RelativeLayout>
+            <View android:tag="binding_13" android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_15" />
+            <RelativeLayout android:id="@id/teamGroupUsageRl" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/teamGroupUsedRl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                    <View android:background="@drawable/shape_ffd504_radius_2" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/teamGroupUsedTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_39" android:text="@string/common_app_family_files" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/teamGroupExtendIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_up" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/teamGroupUsageRv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_below="@id/teamGroupUsedRl" />
+            </RelativeLayout>
+            <View android:tag="binding_16" android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_15" />
+            <RelativeLayout android:id="@id/systemUsageRl" android:tag="binding_17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/systemUsedRl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                    <View android:background="@drawable/shape_53cc88_radius_2" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/systemUsedTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_39" android:text="@string/common_monitor_storage_system" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/systemExtendIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_up" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/systemUsageRv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_below="@id/systemUsedRl" />
+            </RelativeLayout>
+            <View android:tag="binding_19" android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_15" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_FF8300" android:tag="binding_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:text="@string/common_prompt_note" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:tag="binding_21" android:paddingBottom="@dimen/len_50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_9" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_system_others_desc" />
+            <include layout="@layout/layout_empty_img_txt" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

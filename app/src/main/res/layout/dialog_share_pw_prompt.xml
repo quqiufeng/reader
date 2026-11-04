@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_radius_15" android:paddingTop="@dimen/len_25" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_share" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_18" android:layout_marginRight="@dimen/len_20" android:text="@string/common_file_share_copy_link_share_desc" android:lineSpacingExtra="@dimen/len_5" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_shared_password" />
+            <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvPrompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tvCancel" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_42" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tvConfirm" android:background="@drawable/shape_425fff_radius_22" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_42" android:text="@string/common_button_share" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_20" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

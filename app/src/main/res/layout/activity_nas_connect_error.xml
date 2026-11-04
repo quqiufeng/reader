@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_nas_connect_error_0" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black_44_44" />
+        <TextView android:textSize="@dimen/intl_font_title_26" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_40" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_error_68" />
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_horizontal" android:tag="binding_2" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_FF8300" android:tag="binding_3" android:background="@drawable/shape_1aff8300_radius_10" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_4" android:paddingTop="@dimen/len_35" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_10" app:point_color="@color/common_title" />
+                    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:tag="binding_5" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_10" app:point_color="@color/common_title" />
+                    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:tag="binding_6" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_10" app:point_color="@color/common_title" />
+                    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:tag="binding_7" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:tag="binding_8" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.PointView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_10" app:point_color="@color/common_title" />
+                    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:tag="binding_9" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_FF8300" android:id="@id/tvWarn" android:paddingTop="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_425FFF" android:gravity="center_vertical" android:id="@id/tvCheckNasIP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_install_enter_ip_view_device_status" android:drawableRight="@drawable/icon_arrow_blue_8_12" android:drawablePadding="@dimen/len_5" />
+                <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:id="@id/tvContact" android:paddingTop="@dimen/len_25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_migration_dbabe67ca6" android:lineSpacingExtra="@dimen/len_3" />
+            </LinearLayout>
+        </ScrollView>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="@dimen/len_15" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvButton" android:tag="binding_10" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_34" android:maxWidth="624.0dip" />
+    </LinearLayout>
+    <com.zentraedi.business.widget.DragFloatButton android:layout_gravity="bottom|center|right" android:id="@id/helperButton" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginBottom="@dimen/len_85" android:src="@drawable/icon_flaot_help_center_70" android:scaleType="fitCenter" />
+</FrameLayout>

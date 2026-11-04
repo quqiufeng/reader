@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_template_preview_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:tag="binding_1" android:background="@drawable/icon_template_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_45" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/save_template_text" android:gravity="center" android:tag="binding_2" android:background="@drawable/shape_select_template" android:layout_width="@dimen/len_200" android:layout_height="@dimen/len_45" android:layout_marginBottom="@dimen/len_50" android:text="@string/common_nas_string_key_1650_res" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

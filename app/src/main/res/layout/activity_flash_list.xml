@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_flash_list_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tv_receive_flash">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:paddingBottom="@dimen/top_big_title_separate_line_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0" app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                    <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:text="@string/common_app_lightning" app:medium_bold="true" style="@style/bigTitleTextView" />
+                    <ImageView android:id="@id/iv_help" android:tag="binding_2" style="@style/topBigTitleHelper" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <RelativeLayout android:id="@id/flashTitleLayout" android:tag="binding_3" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                        <ImageView android:gravity="center" android:id="@id/iv_back" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_home_black" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_132" android:layout_marginRight="@dimen/len_132">
+                            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tv_top_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_app_lightning" android:singleLine="true" android:includeFontPadding="false" />
+                                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_flash_help" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_helper" android:scaleType="centerInside" android:layout_marginStart="@dimen/len_5" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <ImageView android:id="@id/iv_more" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_more_black_44_44" android:layout_alignParentRight="true" />
+                        <ImageView android:id="@id/iv_setting" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_setting_black_44" android:layout_toStartOf="@id/iv_more" />
+                        <ImageView android:id="@id/iv_nav_right_add" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_add_black2_44" android:layout_toLeftOf="@id/iv_setting" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <View android:id="@id/titleLineView" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tv_receive_flash" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.zentraedi.business.widget.DragFloatButton android:layout_gravity="bottom|center|right" android:id="@id/fab" android:visibility="gone" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginBottom="@dimen/len_30" android:src="@drawable/icon_flash_list_float_bt" android:scaleType="fitCenter" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_receive_flash" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_34" android:text="@string/common_photos_receive_lightning_transfer" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+</RelativeLayout>

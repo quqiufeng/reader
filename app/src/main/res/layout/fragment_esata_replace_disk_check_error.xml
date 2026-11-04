@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_esata_replace_disk_check_error_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_20" android:fillViewport="true" android:layout_above="@id/messageTv">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_20">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:layout_marginTop="@dimen/len_30" android:src="@drawable/icon_common_option_failed" app:tint="#ffff7a00" />
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_disk_migration_disk_detection_issue" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_666666" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:text="@string/common_disk_migration_problematic_drive" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+            <androidx.recyclerview.widget.RecyclerView android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:gravity="center" android:id="@id/messageTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_35" android:layout_marginRight="@dimen/len_35" android:layout_marginBottom="@dimen/len_10" android:text="@string/common_disk_migration_pls_click_retry_if_still_cant_proceed" android:layout_above="@id/retryTv" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:id="@id/retryTv" android:tag="binding_3" android:background="@drawable/shape_circle_blue_20_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_10" android:text="@string/common_button_try_again" android:layout_above="@id/llBottom" />
+    <include android:id="@id/llBottom" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" android:layout_marginBottom="@dimen/len_10" android:layout_alignParentBottom="true" layout="@layout/layout_cancel_or_help" />
+    <include layout="@layout/layout_loading" />
+</RelativeLayout>

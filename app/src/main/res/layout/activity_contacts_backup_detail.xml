@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_contacts_backup_detail_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_contacts" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/layout_loading" />
+</FrameLayout>

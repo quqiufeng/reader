@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/popup_dark_operation_0" android:background="@color/color_d9111111" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ll_head" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_dark_title" android:ellipsize="end" android:gravity="center" android:id="@id/tv_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:singleLine="true" android:layout_centerVertical="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_8" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" />
+        <View android:background="@color/dark_separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_head" android:layout_alignParentBottom="true" />
+</RelativeLayout>

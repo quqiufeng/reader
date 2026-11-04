@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_book_category_detail_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/navigationBarLayout" layout="@layout/layout_basic_navigation_bar" />
+    <RelativeLayout android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_13">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="end" android:id="@id/playlistNameTv" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_16" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/addContentTv" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/playlistDirCountTv" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_8" android:layout_below="@id/playlistNameTv" />
+        <TextView android:textColor="@color/common_white" android:gravity="center" android:id="@id/addContentTv" android:tag="binding_3" android:background="@drawable/shape_425fff_radius_5" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_36" android:layout_marginRight="@dimen/len_15" android:text="@string/common_movies_add" android:drawableLeft="@drawable/icon_add_white_18" android:drawablePadding="@dimen/len_2" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View style="@style/separate_line_match" />
+    <FrameLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <include android:id="@id/layout_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_list_empty" />
+    </FrameLayout>
+</LinearLayout>

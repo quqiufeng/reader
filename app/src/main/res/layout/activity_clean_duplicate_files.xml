@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_clean_duplicate_files_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.filemanage.view.FileCleanStartLayout android:id="@id/pageCleanStart" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.filemanage.view.FileCleanScanningLayout android:id="@id/pageCleanScanning" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.filemanage.view.FileCleanCleaningLayout android:id="@id/pageCleanCleaning" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.filemanage.view.FileCleanResultLayout android:id="@id/pageCleanResult" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.filemanage.view.FileScanResultLayout android:id="@id/pageScanResult" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/page_result_filter" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/page_clean_result_type_filter" />
+    <include android:id="@id/ll_result_net_error" android:background="@color/common_white" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/v_title_bar" layout="@layout/layout_list_net_error" />
+    <ProgressBar android:layout_gravity="center" android:tag="binding_6" android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:src="@drawable/icon_loading" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+</FrameLayout>

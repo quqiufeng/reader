@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_file_device_select_layout_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/apply_pad_item_fixed_height_60">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:scaleType="centerInside" android:layout_centerVertical="true" android:forceDarkAllowed="true" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+    </LinearLayout>
+    <LinearLayout android:tag="binding_4" android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:tag="binding_5" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_5" android:scaleType="centerInside" android:layout_marginEnd="@dimen/len_10" android:forceDarkAllowed="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_1" android:layout_marginBottom="@dimen/len_1">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:ellipsize="end" android:tag="binding_6" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_10" />
+            </LinearLayout>
+            <ProgressBar android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_12" android:max="100" android:progressDrawable="@drawable/storage_slide_pool_progress_bar" android:thumb="@null" android:thumbOffset="8.0dip" android:splitTrack="false" style="@android:style/Widget.ProgressBar.Horizontal" />
+            <LinearLayout android:orientation="horizontal" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:tag="binding_10" android:background="@drawable/shape_f4f4f4_radius_50" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_plug_and_backup_select_entire_device" android:layout_marginEnd="@dimen/len_16" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:tag="binding_11" android:background="@drawable/shape_f4f4f4_radius_50" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_choose_folder" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

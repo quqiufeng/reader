@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_setting_visit_0" android:background="@color/setting_monitor_tab_page" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_prompt" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_visit_prompt" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:tag="binding_1" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_prompt">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/disk_visit_prompt" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_no_data" android:layout_centerInParent="true" />
+</RelativeLayout>

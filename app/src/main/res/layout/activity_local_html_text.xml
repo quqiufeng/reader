@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_local_html_text_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleLayout" android:background="@color/common_white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/iv_back" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+            <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:layout_marginRight="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:singleLine="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ScrollView android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:autoLink="web" android:linksClickable="true" android:id="@id/tv_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_6" />
+    </ScrollView>
+</LinearLayout>

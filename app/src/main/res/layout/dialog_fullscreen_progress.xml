@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/solid_e6000000_radius_5" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_45" android:layout_centerInParent="true">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_dark_title" android:layout_gravity="center_vertical" android:id="@id/progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:paddingStart="@dimen/len_10" />
+        <ImageView android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_white" android:text="@string/nas_xml_string_key_69_temp" />
+    </LinearLayout>
+</RelativeLayout>

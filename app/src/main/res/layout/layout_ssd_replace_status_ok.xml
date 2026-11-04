@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/layout_ssd_replace_status_ok_0" android:layout_width="@dimen/len_91" android:layout_height="@dimen/len_91"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/len_85" android:layout_height="@dimen/len_85" android:layout_marginLeft="@dimen/len_6" android:layout_marginTop="@dimen/len_6" android:src="@drawable/icon_ssd_vertical_85_85" />
+    <ImageView android:id="@id/ivStatus" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_status_ok_18" />
+</FrameLayout>

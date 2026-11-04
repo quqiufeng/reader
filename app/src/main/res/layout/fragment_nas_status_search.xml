@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/fragment_nas_status_search_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        <ProgressBar android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminate="true" android:indeterminateDrawable="@drawable/anim_blue_50_50_loading" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_138" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="3.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_warning" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_139" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_140" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="3.0" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvRetryScan" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_3" android:paddingTop="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_142" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:layout_gravity="center|right" android:id="@id/tvRetryScan2" android:background="@drawable/shape_border_cccccc_14" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_rescan" android:includeFontPadding="false" />
+        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvNas" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="bottom|center" android:id="@id/tvInputIp" android:tag="binding_4" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_54" android:text="@string/app_string_key_347" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_5" android:background="@color/white" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_warning" />
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_145" app:medium_bold="true" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_check_mobile_network_try_again" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="4.0" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvWifiRetry" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+</LinearLayout>

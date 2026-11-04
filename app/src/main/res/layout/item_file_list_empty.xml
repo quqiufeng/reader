@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/item_file_list_empty_0" android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/itemImage" android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_45" android:layout_marginTop="@dimen/len_8" android:src="@color/default_shadow_color" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/itemText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_1" android:layout_marginRight="@dimen/len_15" android:text="@string/common_file_upload_files" />
+</LinearLayout>

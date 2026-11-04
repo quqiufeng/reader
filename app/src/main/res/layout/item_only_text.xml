@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_only_text_0" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    <ImageView android:layout_gravity="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_item_selected" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

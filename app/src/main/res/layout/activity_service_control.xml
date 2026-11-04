@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_service_control_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_46">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_services" android:layout_weight="1.0" style="@style/intl_text_title_font16" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_processes" />
+        <ImageView android:tag="binding_3" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_arrow_gray_6_10" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <include layout="@layout/layout_list_empty" />
+</LinearLayout>

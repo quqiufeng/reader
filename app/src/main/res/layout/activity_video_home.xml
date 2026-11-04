@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootLayout" android:tag="layout/activity_video_home_0" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.business.view.NoScrollViewPager android:id="@id/contentViewPager2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_70" />
+    <RadioGroup android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/rg_tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/len_70" android:checkedButton="@id/rb_home_tab">
+        <RadioButton android:id="@id/rb_home_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_home" android:drawableTop="@drawable/video_radio_btn_home_selector" style="@style/video_style_radiobutton" />
+        <RadioButton android:id="@id/rb_my_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_myLibrary" android:drawableTop="@drawable/video_radio_btn_my_selector" style="@style/video_style_radiobutton" />
+        <RadioButton android:id="@id/rb_share_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_shared" android:drawableTop="@drawable/video_radio_btn_share_selector" style="@style/video_style_radiobutton" />
+        <RadioButton android:id="@id/rb_setting_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_settings" android:drawableTop="@drawable/video_radio_btn_setting_selector" android:layout_weight="1.0" style="@style/video_style_radiobutton" />
+    </RadioGroup>
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginBottom="@dimen/len_70" />
+    <FrameLayout android:id="@id/layoutService" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:tag="binding_1" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_84">
+            <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_home_white" android:scaleType="centerInside" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_cccccc" android:gravity="center" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_service_upgrade_date_updating" android:lineSpacingExtra="@dimen/len_3" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_cccccc" android:gravity="center" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_pls_wait_before_using" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.zentraedi.business.widget.DragFloatButton android:layout_gravity="bottom|center|right" android:id="@id/listen_video_fab" android:tag="binding_2" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_80" android:layout_marginBottom="@dimen/len_70" android:src="@drawable/icon_listen_video_entry" android:scaleType="fitCenter" />
+</FrameLayout>

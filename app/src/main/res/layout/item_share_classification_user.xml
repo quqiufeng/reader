@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_share_classification_user_0" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutContent" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_30" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/ivSelect" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/len_14" android:ellipsize="end" android:gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSelect" android:tag="binding_3" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_unselect_blue_rect_30_disable" android:layout_alignLeft="@id/ivSelect" android:layout_alignTop="@id/ivSelect" android:layout_alignRight="@id/ivSelect" android:layout_alignBottom="@id/ivSelect" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_30" android:layout_marginRight="@dimen/len_15" android:layout_below="@id/layoutContent" />
+</RelativeLayout>

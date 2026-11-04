@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_ffffff_radius_10" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_15" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15" android:paddingVertical="@dimen/apply_pad_item_top_bottom_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvNasName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvUserName" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right" />
+</LinearLayout>

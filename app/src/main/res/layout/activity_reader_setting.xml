@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_reader_setting_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_comics_volume_key" android:layout_weight="1.0" />
+        <Switch android:id="@id/switchVolume" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_reader_status_bar" android:layout_weight="1.0" />
+        <Switch android:id="@id/switchStatusBars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_reader_bottom_bar" android:layout_weight="1.0" />
+        <Switch android:id="@id/switchNavigationBars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_reader_one_handed_mode" android:layout_weight="1.0" />
+        <Switch android:id="@id/switchClickLeft" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutLockTime" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_reader_cad5a12442" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_14" android:gravity="center_vertical" android:id="@id/tvLockTime" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_gray_arrow_8_12" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+</LinearLayout>

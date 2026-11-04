@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_music_home_setting_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_top" android:background="@color/color_fffaeb" android:paddingLeft="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_4" android:paddingBottom="@dimen/len_4" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@string/common_music_selected_sections_will_appear_and_drag" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_top_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_page_44_44" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

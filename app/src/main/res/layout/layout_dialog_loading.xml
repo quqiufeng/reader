@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingLeft="@dimen/len_40" android:paddingTop="@dimen/len_30" android:paddingRight="@dimen/len_40" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+    <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_content" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_content_tips" />
+</LinearLayout>

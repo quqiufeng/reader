@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_custom_collect_path_tag_0" android:layout_width="wrap_content" android:layout_height="@dimen/len_28" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivTick" android:tag="binding_1" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_6" android:layout_marginTop="@dimen/len_9" android:layout_marginBottom="@dimen/len_9" android:src="@drawable/icon_nike_white_10" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_2" android:layout_marginRight="@dimen/len_6" android:layout_toRightOf="@id/ivTick" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_cccccc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

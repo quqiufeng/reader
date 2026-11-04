@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/cardRootLayout" android:tag="layout/layout_card_photos_edit_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layoutPhotoModule" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_15">
+        <com.lihang.ShadowLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="168.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+            <com.zentraedi.home.view.HomeCardLayout android:id="@id/photoCard" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.lihang.ShadowLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="79.0" android:layout_marginStart="@dimen/len_10">
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_smart_ai_card" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+                <com.zentraedi.basic.function.ui.imageview.CornerImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_home_card_smart_ai" android:scaleType="centerCrop" app:corners="@dimen/len_8" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="41.0" />
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_smart_ai" android:singleLine="true" android:includeFontPadding="false" />
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="11.0" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_ai_search" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+                <com.zentraedi.basic.function.ui.imageview.CornerImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_home_card_today" android:scaleType="centerCrop" app:corners="@dimen/len_8" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="41.0" />
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_on_this_day" android:singleLine="true" android:includeFontPadding="false" />
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="11.0" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="79.0" android:layout_marginStart="@dimen/len_10">
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_album_card" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+                <com.zentraedi.basic.function.ui.imageview.CornerImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_home_card_album" android:scaleType="centerCrop" app:corners="@dimen/len_8" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="41.0" />
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_albums" android:singleLine="true" android:includeFontPadding="false" />
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="11.0" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+            <com.lihang.ShadowLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:hl_cornerRadius_leftBottom="@dimen/len_5" app:hl_cornerRadius_rightBottom="@dimen/len_5" app:hl_shadowColor="@color/color_home_card_shadow" app:hl_shadowHiddenLeft="true" app:hl_shadowHiddenRight="true" app:hl_shadowHiddenTop="true" app:hl_shadowLimit="@dimen/len_10">
+                <com.zentraedi.basic.function.ui.imageview.CornerImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_home_card_map" android:scaleType="centerCrop" app:corners="@dimen/len_8" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="41.0" />
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_map" android:singleLine="true" android:includeFontPadding="false" />
+                    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="11.0" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

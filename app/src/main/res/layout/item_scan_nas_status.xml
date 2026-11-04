@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_80f4f4f4_radius_15" android:paddingLeft="@dimen/len_16" android:paddingTop="@dimen/apply_pad_item_top_bottom_20" android:paddingRight="@dimen/len_16" android:paddingBottom="@dimen/apply_pad_item_top_bottom_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivNas" android:layout_width="@dimen/len_124" android:layout_height="@dimen/len_124" android:layout_marginRight="@dimen/len_10" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvNasName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvNasIp" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:gravity="center" android:id="@id/tvNasLogin" android:background="@drawable/bg_425fff_radius_22" android:layout_width="@dimen/len_74" android:layout_height="@dimen/len_28" android:text="@string/common_button_connect" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

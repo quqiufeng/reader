@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty_container" android:tag="layout/layout_note_list_empty_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="100.0" />
+    <ImageView android:id="@id/tv_upload_empty" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_130" android:src="@drawable/note_list_empty" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tvNoteTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_no_data" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tvNoteText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" />
+    <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="230.0" />
+</LinearLayout>

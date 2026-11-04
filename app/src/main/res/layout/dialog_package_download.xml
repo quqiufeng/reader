@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:padding="@dimen/len_25" android:layout_width="@dimen/len_345" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivStatus" android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_upgrade_fail" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="right" android:id="@id/tvSize" android:paddingBottom="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ProgressBar android:id="@id/pbProgress" android:layout_width="fill_parent" android:layout_height="@dimen/len_4" android:max="100" android:progressDrawable="@drawable/bg_progress_blue" style="?android:progressBarStyleHorizontal" />
+    <LinearLayout android:id="@id/buttonLayout" android:paddingTop="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/button_blue" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvDownloadCancel" android:background="@drawable/shape_blue_border_5_white_bg" android:visibility="gone" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_44" android:text="@string/common_button_cancel" />
+        <Space android:id="@id/space" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvRetry" android:background="@drawable/bg_common_commit_btn" android:visibility="gone" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_44" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+</LinearLayout>

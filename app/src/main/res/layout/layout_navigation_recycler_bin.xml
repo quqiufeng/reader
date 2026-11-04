@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/file_list_title_container" android:tag="layout/layout_navigation_recycler_bin_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black" android:onClick="goHome" />
+    <ImageView android:id="@id/iv_nav_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_black" android:layout_toRightOf="@id/iv_nav_back" android:onClick="clickFinish" />
+    <ImageView android:gravity="center" android:id="@id/iv_nav_cancel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_webview" android:onClick="clickCancelSelect" />
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/toolbar_title" android:gravity="center" android:id="@id/tv_nav_select_all" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_button_select_all" android:layout_alignParentRight="true" android:onClick="clickSelectAll" android:layout_marginEnd="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/selectLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:layout_marginStart="@dimen/len_16" android:layout_toEndOf="@id/iv_nav_cancel">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/selectedNumTv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/fileNumTv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:layout_marginRight="@dimen/apply_pad_common_top_bottom_phone_88_pad_132">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutCenterTitle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_file_management" android:singleLine="true" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/rightNavTv" android:visibility="gone" android:layout_width="@dimen/len_38" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_button_multi_select" android:onClick="clickOption" />
+        <ImageView android:id="@id/searchIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/filemanager_top_search" android:onClick="showSearch" />
+        <ImageView android:id="@id/settingIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/filemanager_top_setting" />
+        <RelativeLayout android:id="@id/iv_nav_sort" android:layout_width="@dimen/len_40" android:layout_height="wrap_content" android:layout_toLeftOf="@id/iv_nav_right">
+            <pl.droidsonroids.gif.GifImageView android:id="@id/iv_file_list_task" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/filemanager_top_trans" android:onClick="clickTaskCenter" />
+            <View android:id="@id/v_file_List_unread" android:background="@drawable/bg_task_fail_red_tip" android:layout_width="@dimen/len_5" android:layout_height="@dimen/len_5" android:layout_marginTop="@dimen/len_3" android:layout_marginRight="@dimen/len_3" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_nav_right" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/filemanager_top_more" android:onClick="clickOption" />
+    </LinearLayout>
+</RelativeLayout>

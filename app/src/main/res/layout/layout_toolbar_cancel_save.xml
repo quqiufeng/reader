@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_toolbar_cancel_save_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="0.0dip" android:layout_alignParentBottom="true" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15" android:layout_marginStart="1.0dip" android:layout_alignParentStart="true" />
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15" android:layout_alignParentEnd="true" />
+</RelativeLayout>

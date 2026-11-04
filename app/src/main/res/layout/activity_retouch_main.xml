@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_retouch_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_15">
+        <LinearLayout android:orientation="horizontal" android:id="@id/rv_video_compression" android:tag="binding_1" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_video_compression" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_video_compression" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_adjust_video_resolution" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_image_compression" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_image_compression" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_adjust_image_resolution" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_smart_subtitles" android:tag="binding_3" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_smart_subtitles" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_98cf5455de" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_subtitles_from_video_audio" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_limit_function" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:tag="binding_4" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+                <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_old_photo_retouch" />
+                <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_1a9694ec66" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_3e773b44ce" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:tag="binding_5" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+                <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_photo_coloring" />
+                <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_cb6a5a28c4" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_beeee6c062" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:tag="binding_6" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+                <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_photo_video_improve_clarity" />
+                <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_4ebc661a1f" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/photo_video_improve_clarity_desc" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_panorama_render" android:background="@drawable/shape_border_e4e4e4_circle_10" android:padding="@dimen/len_15" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:src="@drawable/icon_panorama_render" />
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_panorama_render" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_80000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/common_transcoding_panorama_render_description" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_view_format" android:tag="binding_7" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_425FFF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_transcoding_e2f44c0c86" android:layout_marginEnd="@dimen/len_5" />
+            <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_blue_arrow_8_12" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/layout_loading" />
+</FrameLayout>

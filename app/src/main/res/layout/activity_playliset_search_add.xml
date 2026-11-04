@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_playliset_search_add_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_1" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:contentInsetStart="0.0dip" tl:layout_collapseMode="pin">
+        <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+            <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black_2" />
+            <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+            <ImageView android:layout_gravity="right" android:id="@id/ivClose" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_gray_40" />
+            <View android:layout_gravity="bottom" android:id="@id/toolbarLine" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_42">
+        <ImageView android:id="@id/ivPathBack" android:tag="binding_3" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" />
+        <View android:id="@id/view_separate" android:background="@drawable/icon_bt_path_split" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_28" android:layout_marginLeft="@dimen/len_2" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvPathView" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <FrameLayout android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSearch" android:background="@drawable/shape_f4f4f4_radius_8" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginRight="@dimen/len_57">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_home_page_search" />
+            <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:textColorHint="@color/color_999999" android:gravity="center_vertical" android:id="@id/etSearch" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_6" android:paddingRight="@dimen/len_6" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/common_music_4b84d60e65" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/input_edit_text_cursor" />
+            <ImageView android:id="@id/ivClearInput" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/len_16" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/tvSearch" android:tag="binding_4" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_search" />
+    </FrameLayout>
+    <com.flyco.tablayout.SlidingTabLayout android:id="@id/listTabLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" tl:tl_indicator_bounce_enable="true" tl:tl_indicator_color="@color/color_425FFF" tl:tl_indicator_corner_radius="@dimen/len_1" tl:tl_indicator_height="@dimen/len_2" tl:tl_indicator_margin_bottom="@dimen/len_5" tl:tl_indicator_width="@dimen/len_20" tl:tl_tab_padding="12.0dip" tl:tl_tab_space_equal="false" tl:tl_textBold="SELECT" tl:tl_textSelectColor="@color/color_333333" tl:tl_textSelectSize="@dimen/len_16" tl:tl_textUnselectColor="@color/color_bf666666" tl:tl_textUnselectSize="@dimen/len_16" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+</LinearLayout>

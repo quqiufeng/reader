@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetTop="@dimen/len_15" android:insetBottom="@dimen/len_1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list>
+        <item>
+            <shape>
+                <solid android:color="#ffe4e4e4" />
+            </shape>
+        </item>
+        <item android:bottom="0.5dip">
+            <shape>
+                <solid android:color="@color/login_background" />
+            </shape>
+        </item>
+    </layer-list>
+</inset>

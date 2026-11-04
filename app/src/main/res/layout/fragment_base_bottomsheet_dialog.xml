@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/container" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:outlineProvider="bounds"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.core.widget.NestedScrollView android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/bottom_sheet" android:background="@drawable/annot_style_view_background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:elevation="16.0dip" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

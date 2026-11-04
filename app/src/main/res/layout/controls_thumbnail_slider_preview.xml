@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/controls_thumbnail_slider_thumbview" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/controls_thumbnail_slider_thumbview_thumb_container" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_margin="8.0dip" android:elevation="@dimen/elevation_high" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/controls_thumbnail_slider_thumbview_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" android:contentDescription="@string/controls_thumbnail_slider_thumbview_thumb_description" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@android:color/white" android:layout_gravity="bottom|center" android:id="@id/controls_thumbnail_slider_thumbview_pagenumber" android:background="@drawable/controls_thumbnail_slider_thumbview_bg" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

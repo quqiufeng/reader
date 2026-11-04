@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_10">
+        <CheckBox android:id="@id/cbSelect" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_selector_30" />
+        <LinearLayout android:orientation="vertical" android:id="@id/llMiddle" android:paddingBottom="@dimen/apply_pad_item_top_bottom_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_15">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_10">
+                <com.zentraedi.business.widget.MarkView android:id="@id/markView" android:visibility="gone" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_marginEnd="@dimen/len_6" app:markColor="@color/color_DB4437" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tv_pin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:drawableRight="@drawable/note_list_pin" android:drawablePadding="@dimen/len_2" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvSummary" android:paddingTop="@dimen/len_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" />
+                <LinearLayout android:gravity="center_vertical" android:id="@id/layoutClassify" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/classifyIcon" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:src="@drawable/icon_notebook_gray" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvClassifyName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="@dimen/len_44" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ivMarkdownIcon" android:visibility="gone" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_14" android:src="@drawable/icon_markdown_blue" android:layout_centerHorizontal="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <Space android:id="@id/spaceMarkdown" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_12" />
+                <ImageView android:id="@id/ivMore" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/note_item_more" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/line" android:background="@color/color_E4E4E4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+</LinearLayout>

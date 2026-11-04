@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_about_us_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView android:id="@id/iv_help" android:tag="binding_3" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+                <View android:layout_below="@id/tv_item" style="@style/topBigTitleSeparatorLine" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="@dimen/len_0" app:layout_collapseMode="pin">
+                <include android:id="@id/need_help_title" layout="@layout/base_app_title_bar_layout" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="com.zentraedi.business.view.FixScrollingBehavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_about_us_icon" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginTop="@dimen/intl_top_bottom_20" android:src="@drawable/logo" />
+            <TextView android:textSize="@dimen/font_26" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_unifydrive_name" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_16" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_about_us_desc" style="@style/intl_text_content_font14" />
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_20" />
+            <RelativeLayout android:id="@id/rl_about_us_service" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_install_user_agreement" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_about_us_privacy" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_install_privacy_policy" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_about_us_contact" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_contact_us" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/layoutUpgradeCheck" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_update_check" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:id="@id/checkUpgradeRed" android:background="@drawable/shape_raduis_red" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/ivIcon" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_log_upload" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_submit_logs" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_clean_cache" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginBottom="@dimen/len_45">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_clear_cache" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_settings_select_enable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

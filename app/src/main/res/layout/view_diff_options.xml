@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/diff_select_file_layout_1" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="@dimen/label_text_size" android:layout_gravity="center_vertical" android:id="@id/diff_file_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/diff_select_file_title" android:layout_weight="1.0" />
+        <Button android:textColor="?colorAccent" android:id="@id/diff_select_file_1" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_misc_select" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/diff_color_layout_1" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="@dimen/label_text_size" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/diff_color_title" android:layout_weight="1.0" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/diff_color_1" android:layout_width="24.0dip" android:layout_height="24.0dip" app:srcCompat="@drawable/ic_circle_black_24dp" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/diff_color_chevron_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/action_button_min_padding" android:tint="?android:colorForeground" android:alpha="0.54" android:layout_marginEnd="@dimen/action_button_min_padding" app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </LinearLayout>
+    <com.pdftron.pdf.controls.AdvancedColorView android:id="@id/diff_color_picker_1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.appcompat.widget.SwitchCompat android:gravity="center_vertical" android:id="@id/diff_annotation_switch_1" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginRight="@dimen/padding_large" android:checked="true" android:text="@string/diff_annotations_on" android:layout_marginEnd="@dimen/padding_large" />
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="@dimen/padding_large" android:alpha="0.15" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/diff_select_file_layout_2" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="@dimen/label_text_size" android:layout_gravity="center_vertical" android:id="@id/diff_file_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/diff_select_file_title" android:layout_weight="1.0" />
+        <Button android:textColor="?colorAccent" android:id="@id/diff_select_file_2" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_misc_select" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/diff_color_layout_2" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="@dimen/label_text_size" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/diff_color_title" android:layout_weight="1.0" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/diff_color_2" android:layout_width="24.0dip" android:layout_height="24.0dip" app:srcCompat="@drawable/ic_circle_black_24dp" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/diff_color_chevron_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/action_button_min_padding" android:tint="?android:colorForeground" android:alpha="0.54" android:layout_marginEnd="@dimen/action_button_min_padding" app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </LinearLayout>
+    <com.pdftron.pdf.controls.AdvancedColorView android:id="@id/diff_color_picker_2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.appcompat.widget.SwitchCompat android:gravity="center_vertical" android:id="@id/diff_annotation_switch_2" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginRight="@dimen/padding_large" android:checked="true" android:text="@string/diff_annotations_on" android:layout_marginEnd="@dimen/padding_large" />
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="@dimen/padding_large" android:alpha="0.15" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/diff_blend_layout" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="@dimen/label_text_size" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/diff_blend_mode" android:layout_weight="1.0" />
+        <Spinner android:layout_gravity="center_vertical" android:id="@id/diff_blend_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button android:textColor="?colorAccent" android:layout_gravity="center" android:id="@id/diff_compare" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:text="@string/diff_compare" />
+</LinearLayout>

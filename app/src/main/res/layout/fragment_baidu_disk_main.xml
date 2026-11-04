@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_baidu_disk_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/pageLayout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:id="@id/bottomLine" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottomLayout" android:background="@color/white" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/len_71">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layoutFile" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:tag="binding_1" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" />
+            <TextView android:textSize="12.0dip" android:tag="binding_2" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_browse" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layoutTask" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:tag="binding_4" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" />
+            <TextView android:textSize="12.0dip" android:tag="binding_5" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_doc_sync_auto_backup" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layoutUser" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:tag="binding_6" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" />
+            <TextView android:textSize="12.0dip" android:tag="binding_7" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_more" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_net_backup_main_0" android:background="@drawable/shape_stroke_netdisk_login_button" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_95" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:tag="binding_1" android:layout_width="@dimen/len_55" android:layout_height="@dimen/len_55" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:ellipsize="end" android:tag="binding_3" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_right_30" />
+</LinearLayout>

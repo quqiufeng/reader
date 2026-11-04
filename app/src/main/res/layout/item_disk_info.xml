@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_disk_info_0" android:background="@color/nas_white" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_16" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_5" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center" android:tag="binding_3" android:background="@drawable/shape_border_cccccc_22_transparent_bg" android:layout_width="@dimen/len_66" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/len_10" android:text="@string/common_button_format" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:gravity="center" android:tag="binding_4" android:background="@drawable/shape_425fff_radius_22" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_d009b0e322" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_6" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" style="@style/disk_info_lable2" />
+        <TextView android:textColor="@color/button_blue" android:tag="binding_7" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_button_defragment" style="@style/disk_info_lable2" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_8" android:paddingLeft="@dimen/len_2" android:layout_width="@dimen/len_8" android:layout_height="fill_parent" android:src="@drawable/icon_blue_arrow_8_12" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_string_key_209" android:includeFontPadding="false" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_10" android:includeFontPadding="false" style="@style/disk_info_lable2" />
+        <View android:layout_gravity="center_vertical" android:tag="binding_11" android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" />
+        <TextView android:tag="binding_12" android:includeFontPadding="false" style="@style/disk_info_lable2" />
+    </LinearLayout>
+    <TextView android:textColor="@color/button_red" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_fragmentation_high" style="@style/disk_info_lable2" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_13">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_string_key_210" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_15" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" style="@style/disk_info_lable2" />
+        <TextView android:textColor="@color/button_blue" android:tag="binding_16" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_storage_9e4fa35c99" style="@style/disk_info_lable2" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_17" android:paddingLeft="@dimen/len_2" android:layout_width="@dimen/len_8" android:layout_height="fill_parent" android:src="@drawable/icon_blue_arrow_8_12" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_string_key_212" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_19" style="@style/disk_info_lable2" />
+        <View android:layout_gravity="center_vertical" android:background="@color/separate_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_5" />
+        <TextView android:tag="binding_20" android:layout_marginLeft="@dimen/len_5" style="@style/disk_info_lable2" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_21" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_question_gray_12_12" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_22" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_string_key_213" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_23" style="@style/disk_info_lable2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/setting_string_key_214" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_24" style="@style/disk_info_lable2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:tag="binding_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_27" style="@style/disk_info_lable2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_204843d9b2" style="@style/disk_info_lable2" />
+        <TextView android:tag="binding_28" style="@style/disk_info_lable2" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_12" android:layout_gravity="center_vertical" android:tag="binding_29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" />
+    <RelativeLayout android:tag="binding_30" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/button_red" android:id="@id/tvImbricateRemind" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_793e3f4326" style="@style/disk_info_lable2" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvIgnoreImbricateRemind" android:tag="binding_31" android:background="@drawable/shape_f4f4f4_radius_14" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:text="@string/common_button_ignore" android:layout_below="@id/tvImbricateRemind" />
+        <TextView android:textColor="@color/color_999999" android:gravity="center_vertical" android:id="@id/tvKnowMoreImbricate" android:tag="binding_32" android:paddingRight="@dimen/len_3" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_nas_string_key_516_res" android:layout_toRightOf="@id/tvIgnoreImbricateRemind" android:layout_alignTop="@id/tvIgnoreImbricateRemind" style="@style/disk_info_lable2" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivKnowMoreImbricate" android:tag="binding_33" android:paddingLeft="@dimen/len_2" android:layout_width="0.0px" android:layout_height="0.0px" android:src="@drawable/icon_arrow_light_gray" android:scaleType="centerInside" android:layout_toRightOf="@id/tvKnowMoreImbricate" android:layout_alignTop="@id/tvIgnoreImbricateRemind" />
+    </RelativeLayout>
+</LinearLayout>

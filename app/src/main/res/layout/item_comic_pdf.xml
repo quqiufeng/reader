@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/ll_layout" android:tag="layout/item_comic_pdf_0" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.reader.pdf.MuPdfPageView android:id="@id/pdf_view" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

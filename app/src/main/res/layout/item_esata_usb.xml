@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_esata_usb_0" android:paddingTop="@dimen/apply_pad_common_top_bottom_phone_0_pad_22" android:paddingBottom="@dimen/apply_pad_common_top_bottom_phone_0_pad_22" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingEnd="@dimen/apply_pad_common_left_right_phone_0_pad_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivIcon" android:tag="binding_1" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:src="@drawable/icon_esata_35" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_13" android:layout_marginEnd="@dimen/len_10" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:src="@drawable/icon_esata_35" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_13" android:layout_marginEnd="@dimen/len_10" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_15">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:ellipsize="middle" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_12" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_15" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

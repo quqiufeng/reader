@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_bar_root" android:tag="layout/fm_layout_common_navigation_bar_0" android:background="@drawable/fm_shape_nav_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_left" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/nav_title_black" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_50" android:layout_marginRight="@dimen/len_50" android:singleLine="true" />
+    <View android:background="@color/color_14F67F4E" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

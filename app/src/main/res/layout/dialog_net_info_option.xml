@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_net_info_option_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_action" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray_40" android:scaleType="fitCenter" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_ip_configure" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_ip_black_24" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/tvLineNetConfig" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_monitor_ip" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <ImageView android:id="@id/ivSeparateLine1" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_56" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_ipv6_test" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_ipv6_test_black_24" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_ipv6_test" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <ImageView android:id="@id/ivSeparateLine2" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_56" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/llWifiConfig" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_wifi_black_24" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_monitor_wifi_settings" />
+    </LinearLayout>
+</LinearLayout>

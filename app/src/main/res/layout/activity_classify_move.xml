@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootLayout" android:tag="layout/activity_classify_move_0" android:background="@color/transparent_60_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_white_top_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvCreate" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_notepad_new_category" android:includeFontPadding="false" android:paddingStart="@dimen/apply_pad_common_left_right_15" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:text="@string/common_nas_string_key_440_res" android:includeFontPadding="false" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" />
+            <View android:layout_gravity="bottom" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/moveClassifyDescTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_notepad_choose_move_another_primary_category" android:layout_below="@id/layoutTitle" android:layout_marginStart="@dimen/len_15" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_10" android:layout_above="@id/layoutBottom" android:layout_below="@id/moveClassifyDescTv" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <LinearLayout android:id="@id/layoutBottom" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvOk" android:tag="binding_2" android:background="@drawable/blue_btn_selector_radius_20" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_ok" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

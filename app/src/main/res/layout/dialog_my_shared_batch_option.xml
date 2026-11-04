@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_my_shared_batch_option_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_action" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:id="@id/rl_clear_overdue_task" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:src="@drawable/icon_clear_overdue_task" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_expired" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_clear_all_task" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:src="@drawable/icon_clear_all_task" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_all" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_cancel_all_task" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:src="@drawable/icon_cancel_black_24" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_cancel_all" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_clear_canceled_task" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginBottom="@dimen/len_34">
+        <ImageView android:src="@drawable/icon_clear_canceled_task" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_canceled" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+</LinearLayout>

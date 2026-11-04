@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_collection_skip_handle_0" android:background="@drawable/corners_0fffffff_8" android:paddingTop="@dimen/len_14" android:paddingBottom="@dimen/len_11" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_12" android:layout_marginStart="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_opening_duration" android:layout_marginEnd="@dimen/len_16" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_99ffffff" android:id="@id/tvPrevious" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:background="@color/color_99ffffff" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_8" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_99ffffff" android:id="@id/tvStart" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_edit_start" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_edit_white_16" />
+    </LinearLayout>
+    <com.zentraedi.video.view.DualThumbSeekBar android:id="@id/sbStart" android:paddingBottom="@dimen/len_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_12" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_12" android:layout_marginStart="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_closing_duration" android:layout_marginEnd="@dimen/len_16" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_99ffffff" android:id="@id/tvEnd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:background="@color/color_99ffffff" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_8" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_99ffffff" android:id="@id/tvPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_edit_end" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_edit_white_16" />
+    </LinearLayout>
+    <com.zentraedi.video.view.DualThumbSeekBar android:id="@id/sbEnd" android:paddingBottom="@dimen/len_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_F44336" android:id="@id/no_duration_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_13" android:text="@string/common_movies_duration_undetected" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+</LinearLayout>

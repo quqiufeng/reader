@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_note_sub_classify_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_49" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_15" android:lines="1" />
+    <View android:tag="binding_2" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+</LinearLayout>

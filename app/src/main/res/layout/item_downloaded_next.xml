@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_item" android:tag="layout/item_downloaded_next_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_98"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.RoundImageView android:id="@id/iv_icon_cover" android:tag="binding_1" android:layout_width="@dimen/len_90" android:layout_height="@dimen/len_68" android:layout_marginLeft="@dimen/len_15" android:scaleType="center" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/download_home_title_text" android:ellipsize="end" android:id="@id/tv_file_name" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_13" android:layout_marginRight="@dimen/len_15" android:maxLines="2" android:layout_toRightOf="@id/iv_icon_cover" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:layout_toRightOf="@id/iv_icon_cover" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/download_home_desc_text" android:id="@id/tv_volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" />
+    </LinearLayout>
+</RelativeLayout>

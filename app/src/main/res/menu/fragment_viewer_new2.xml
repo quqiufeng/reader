@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/action_tabs" android:orderInCategory="1" android:title="@string/action_tabs" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_white_24dp" android:id="@id/action_search" android:title="@string/action_search" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_viewing_mode_white_24dp" android:id="@id/action_viewmode" android:orderInCategory="200" android:title="@string/action_view_mode" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_thumbnails_grid_black_24dp" android:id="@id/action_thumbnails" android:title="@string/pref_viewmode_thumbnails" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_outline_white_24dp" android:id="@id/action_outline" android:title="@string/action_outline" app:showAsAction="ifRoom" />
+    <item android:id="@id/undo" android:visible="false" android:title="@string/undo" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_share_white" android:id="@id/action_share" android:orderInCategory="1" android:title="@string/action_file_share" app:showAsAction="ifRoom" />
+    <item android:id="@id/action_self_share" android:orderInCategory="1" android:title="@string/common_button_share" app:showAsAction="never" />
+    <item android:id="@id/action_open_with_wps" android:orderInCategory="1" android:title="@string/common_nas_string_key_635_res" app:showAsAction="never" />
+    <item android:id="@id/action_open_with_z_read" android:orderInCategory="1" android:title="@string/common_file_open_with_reader" app:showAsAction="never" />
+    <item android:id="@id/action_open_with_z_comic" android:orderInCategory="1" android:title="@string/common_nas_string_key_637_res" app:showAsAction="never" />
+    <item android:id="@id/action_open_with_other_app" android:orderInCategory="1" android:title="@string/common_file_open_with_another_app_on_your_phone" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_view_mode_reflow_black_24dp" android:id="@id/action_reflow_mode" android:orderInCategory="1" android:title="@string/pref_viewmode_reflow" android:checkable="true" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_bookmarks_white_24dp" android:id="@id/action_bookmark_add" android:orderInCategory="1" android:title="@string/action_add_bookmark" app:showAsAction="always" />
+    <item android:id="@id/action_pdf_layers" android:visible="false" android:orderInCategory="200" android:title="@string/action_pdf_layers" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_attachment_black_24dp" android:id="@id/action_file_attachment" android:visible="false" android:orderInCategory="200" android:title="@string/action_file_attachments" app:showAsAction="never" />
+    <item android:id="@id/action_digital_signatures" android:visible="false" android:orderInCategory="200" android:title="@string/dialog_digital_signature_list" app:showAsAction="never" />
+    <item android:id="@id/action_editpages" android:orderInCategory="200" android:title="@string/action_editpages_more" app:showAsAction="never">
+        <menu>
+            <item android:id="@id/action_addpage" android:title="@string/action_add" app:showAsAction="never" />
+            <item android:id="@id/action_deletepage" android:title="@string/action_delete" app:showAsAction="never" />
+            <item android:id="@id/action_rotatepage" android:title="@string/action_rotate" app:showAsAction="never" />
+            <item android:id="@id/action_export_pages" android:title="@string/action_export_pages" app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@id/action_export_options" android:orderInCategory="200" android:title="@string/action_export_options" app:showAsAction="never">
+        <menu>
+            <item android:id="@id/menu_export_copy" android:title="@string/action_export_original" app:showAsAction="never" />
+            <item android:id="@id/menu_export_flattened_copy" android:title="@string/action_export_flatten" app:showAsAction="never" />
+            <item android:id="@id/menu_export_optimized_copy" android:title="@string/action_export_optimize" app:showAsAction="never" />
+            <item android:id="@id/menu_export_cropped_copy" android:title="@string/action_export_cropped" app:showAsAction="never" />
+            <item android:id="@id/menu_export_password_copy" android:title="@string/action_export_password" app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:icon="@drawable/ic_print_black_24dp" android:id="@id/action_print" android:orderInCategory="400" android:title="@string/action_file_print" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_close_black_24dp" android:id="@id/action_close_tab" android:visible="false" android:orderInCategory="1000" android:title="@string/action_close_tab" app:showAsAction="never" />
+</menu>

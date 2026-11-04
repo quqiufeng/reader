@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_unused_hard_disk_more_option_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_74" android:layout_marginTop="@dimen/len_7">
+        <ImageView android:id="@id/image" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_toStartOf="@id/close" android:layout_toEndOf="@id/image" />
+        <ImageView android:id="@id/close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:id="@id/createNewPoolTv" android:text="@string/common_butotn_new_storage" android:drawableStart="@drawable/icon_add_square_black_24" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/extToUsbTv" android:text="@string/common_storage_mount_as_external_device" android:drawableStart="@drawable/icon_file_blue_usb_black" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/removeExplainTv" android:text="@string/common_prompt_removal_instructions" android:drawableStart="@drawable/icon_detail_info_black" style="@style/unused_hard_disk_more_option_text" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+</LinearLayout>

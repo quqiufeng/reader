@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/pop_task_item_uncompress_layout_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_item_icon" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_7" android:layout_marginTop="@dimen/len_19" android:src="@drawable/icon_file_type_zip" android:scaleType="centerInside" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:gravity="center|left" android:id="@id/tv_item_name" android:tag="binding_1" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_54" android:minHeight="@dimen/len_40" android:maxLines="4" app:layout_constraintLeft_toRightOf="@id/iv_item_icon" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/iv_close" android:background="@drawable/icon_close_gray_40" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_9" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/iv_item_divider" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_1_px" android:layout_marginTop="@dimen/len_20" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_item_name" />
+    <RelativeLayout android:id="@id/rl_retry_task" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_item_divider">
+        <ImageView android:src="@drawable/icon_retry_black_24" android:scaleType="centerInside" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_try_again" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_see_dir" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/rl_retry_task">
+        <ImageView android:src="@drawable/icon_file_dir_black_enable" android:scaleType="centerInside" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/task_see_uncompress_files" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_clean_current" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/rl_see_dir">
+        <ImageView android:src="@drawable/icon_clear_all_task" android:scaleType="centerInside" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/task_clean_current_task" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

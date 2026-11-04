@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/navContent" android:tag="layout/layout_navigation_bar_3_0" android:background="@color/toolbar_color" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="centerInside" android:onClick="clickFinish" />
+    <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:id="@id/tv_nav_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_50" android:layout_marginRight="@dimen/len_50" android:text="@string/file_backup_center_title" />
+</RelativeLayout>

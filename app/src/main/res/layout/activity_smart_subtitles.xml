@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/activity_smart_subtitles_0" android:background="@drawable/bg_safe" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/clParentView" android:background="@color/white" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_smart_subtitles_operate">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0" app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/llMiddleTitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_title" android:tag="binding_3" app:medium_bold="true" style="@style/bigTitleTextView" />
+                        <ImageView android:tag="binding_4" style="@style/topBigTitleHelper" />
+                    </LinearLayout>
+                    <com.zentraedi.business.view.ExpandableTextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/title_desc_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:lineSpacingExtra="@dimen/len_2" />
+                    <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/top_big_title_separate_line_margin_top" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_5" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <include android:id="@id/navigationBarLayout" layout="@layout/layout_new_action_bar_for_base" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <View android:id="@id/titleLineView" android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginStart="@dimen/apply_pad_common_left_right_15">
+                    <ProgressBar android:layout_gravity="center_vertical" android:tag="binding_8" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" />
+                    <ImageView android:layout_gravity="center_vertical" android:tag="binding_9" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_pause" android:scaleType="fitCenter" />
+                    <ImageView android:layout_gravity="center_vertical" android:tag="binding_10" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_success_solid_18_18" android:scaleType="fitCenter" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:ellipsize="middle" android:layout_gravity="center_vertical" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_15" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:ellipsize="middle" android:layout_gravity="center_vertical" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    <View android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                    <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </LinearLayout>
+            <FrameLayout android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginHorizontal="@dimen/apply_pad_common_left_right_15">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_border_cccccc_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_227" android:layout_marginTop="@dimen/len_30">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add_file_compress" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_transcoding_subtitles_from_video_audio" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:gravity="center" android:tag="binding_15" android:background="@drawable/button_selector_2" android:layout_width="@dimen/len_140" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_20" android:text="@string/common_button_add" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:tag="binding_16" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:id="@id/layout_adding_files" layout="@layout/layout_adding_files" />
+            </FrameLayout>
+            <include layout="@layout/layout_loading" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include android:id="@id/layout_smart_subtitles_operate" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_smart_subtitles_operate" />
+</RelativeLayout>

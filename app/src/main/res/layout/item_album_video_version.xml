@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_0dffffff_8" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_marginBottom="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_e6ffffff" android:id="@id/tvVersionCount" android:paddingTop="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:id="@id/tvOpenAll" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_read_more" />
+        <ImageView android:id="@id/ivOpenAll" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_down_8" />
+    </LinearLayout>
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

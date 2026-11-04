@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_choice_mode_0" android:background="@color/nas_white" android:padding="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:tag="binding_1" android:background="@drawable/bg_choice_mode" android:layout_width="@dimen/len_109" android:layout_height="@dimen/len_87">
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="8.0" />
+        <ImageView android:layout_gravity="center_horizontal" android:tag="binding_2" android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_45" android:scaleType="centerInside" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="6.0" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="15.0" />
+    </LinearLayout>
+</FrameLayout>

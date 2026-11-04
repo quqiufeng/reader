@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_change_nas_disk_error_middle_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:paddingLeft="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" android:text="@string/business_string_key_501" android:includeFontPadding="false" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+        <View android:layout_gravity="center_vertical" android:background="@drawable/shape_circle_black_4_bg" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginLeft="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/business_string_key_502" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+        <View android:layout_gravity="center_vertical" android:background="@drawable/shape_circle_black_4_bg" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginLeft="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subtitle" android:id="@id/tvDesc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+        <View android:layout_gravity="center_vertical" android:background="@drawable/shape_circle_black_4_bg" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginLeft="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subtitle" android:id="@id/tvDesc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/business_string_key_502" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:text="@string/common_migration_power_off_and_power_on_retry_migration" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_4" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_gravity="center_horizontal" android:id="@id/tvRemoteHelp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_7" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:textStyle="bold" android:textColor="@color/button_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:text="@string/common_migration_af3fb529c8" android:includeFontPadding="false" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_blue_arrow_8_12" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:paddingTop="@dimen/apply_pad_item_fixed_height_32" android:paddingBottom="@dimen/apply_pad_item_fixed_height_32" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:paddingVertical="@dimen/apply_pad_item_fixed_height_32" app:cardCornerRadius="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_5" android:layout_marginRight="@dimen/apply_pad_common_left_right_5">
+        <TextView android:textColor="@android:color/black" android:id="@id/tv_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_496" />
+        <TextView android:textColor="@android:color/black" android:id="@id/tv_report_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_497" />
+        <TextView android:textColor="@android:color/black" android:id="@id/tv_log_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1327_res" />
+        <TextView android:textColor="@android:color/black" android:id="@id/tv_hprof_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_499" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

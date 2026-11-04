@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/fileSortLayout" android:tag="layout/layout_dialog_book_list_sort_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popu_title" android:layout_width="0.0dip" android:layout_height="@dimen/len_60" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_sort" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivPopupClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+        </LinearLayout>
+        <View android:id="@id/v_divider_line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:tag="binding_2" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:tag="binding_6" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:tag="binding_10" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:tag="binding_14" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

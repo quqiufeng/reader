@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_part_pic_list_0" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/filterSortLayout" layout="@layout/item_head_filter" />
+    <TextView android:textColor="@color/common_desc" android:id="@id/tvShareTips" android:background="@color/color_787E9D_15" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_568d2f320a" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_pic_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

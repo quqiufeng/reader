@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rootLayout" android:tag="layout/activity_remember_album_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ll_bottom">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_78">
+                    <include android:id="@id/item_family_share_album_top_title" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_family_share_album_top_title" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <LinearLayout android:orientation="vertical" android:id="@id/album_title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/toolbar" layout="@layout/layout_album_detail_navigation_bar" />
+                        <include android:id="@id/layout_edit_navigation_bar" layout="@layout/layout_edit_navigation_bar" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <RelativeLayout android:id="@id/none_error_title" android:tag="binding_3" android:background="@color/album_detail_error_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_77" android:layout_below="@id/album_title">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/album_detail_error_text" android:gravity="center" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                <ImageView android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_album_detail_error_close" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/contentRl" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/selector_text_333333_cccccc" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/len_5" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvPersonalPhotoAlbum" android:paddingBottom="@dimen/len_54" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/layout_edit_tab_bar" android:layout_width="fill_parent" android:layout_height="60.0dip" layout="@layout/layout_photo_edit_mode_tab_bar" />
+    </LinearLayout>
+    <include android:id="@id/layout_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_160" layout="@layout/layout_list_empty" />
+</RelativeLayout>

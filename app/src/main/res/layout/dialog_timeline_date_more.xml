@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="操作" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_5" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" />
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_25" />
+</LinearLayout>

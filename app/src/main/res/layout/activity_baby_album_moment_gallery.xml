@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:tag="layout/activity_baby_album_moment_gallery_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zhpan.bannerview.BannerViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/llTop" android:tag="binding_1" android:background="@color/color_80000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivBack" android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_nav_back_white" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/font_22" android:textColor="@color/color_FFFFFF" android:layout_gravity="center_vertical" android:id="@id/title" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <LinearLayout android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_12">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_FFFFFF" android:tag="binding_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_6" android:includeFontPadding="false" />
+                <ImageView android:tag="binding_6" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_close_white_14" android:scaleType="fitXY" />
+                <ImageView android:tag="binding_7" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_correct_white_14" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_right" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_12">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_FFFFFF" android:id="@id/tv_nav_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_6" android:text="@string/common_file_original_photo" android:includeFontPadding="false" />
+                <ImageView android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_correct_white_14" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/icon_play" android:tag="binding_9" android:layout_width="@dimen/len_53" android:layout_height="@dimen/len_53" android:layout_marginLeft="@dimen/len_18" android:layout_marginBottom="@dimen/len_18" android:layout_above="@id/llBottom" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/llBottom" android:background="@color/color_80000000" android:layout_width="fill_parent" android:layout_height="@dimen/len_64" android:layout_alignParentBottom="true">
+        <ImageView android:tag="binding_10" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_11" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:src="@drawable/icon_moment_turn" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_12" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_13" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:src="@drawable/icon_moment_more" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_14" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:src="@drawable/icon_moment_share" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_15" android:padding="@dimen/len_18" android:layout_width="0.0dip" android:layout_height="@dimen/len_64" android:src="@drawable/icon_moment_download" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

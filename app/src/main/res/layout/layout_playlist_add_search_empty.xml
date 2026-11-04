@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:gravity="center_vertical" android:id="@id/tvEmpty" android:paddingBottom="@dimen/len_80" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_40" android:layout_marginRight="@dimen/len_40" android:text="@string/common_music_search_results_none" android:lineSpacingExtra="@dimen/len_4" />
+</merge>

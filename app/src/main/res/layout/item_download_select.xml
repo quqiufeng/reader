@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_download_select_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_content" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_62">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:scaleType="fitCenter" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_5" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" android:layout_marginTop="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:layout_marginBottom="@dimen/len_18" android:layout_weight="1.0" />
+        <LinearLayout android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/cb" android:tag="binding_6" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_margin="@dimen/len_8" android:button="@drawable/checkbox_selector_rectangle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/ll_content">
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

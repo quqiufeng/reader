@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/clParentView" android:tag="layout/activity_base_new_action_bar_0" android:background="@color/white" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0" app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                <LinearLayout android:orientation="horizontal" android:id="@id/llMiddleTitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_title" android:tag="binding_3" android:singleLine="false" app:medium_bold="true" style="@style/bigTitleTextView" />
+                    <ImageView android:tag="binding_4" style="@style/topBigTitleHelper" />
+                </LinearLayout>
+                <com.zentraedi.business.view.ExpandableTextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/title_desc_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/top_big_title_padding_bottom" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" style="@style/intl_text_content_font14" />
+                <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/top_big_title_separate_line_margin_top" />
+                <View android:id="@id/titleLineView" android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_5" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/navigationBarLayout" layout="@layout/layout_new_action_bar_for_base" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/contentNSV" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="com.zentraedi.business.view.FixScrollingBehavior">
+        <FrameLayout android:id="@id/flBase" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout android:id="@id/noScrollViewContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.zentraedi.business.view.FixScrollingBehavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

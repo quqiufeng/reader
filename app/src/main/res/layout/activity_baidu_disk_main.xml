@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_baidu_disk_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/mainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/statusLayout" android:tag="binding_1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/layoutTitle" android:tag="binding_2" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+            <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_home_black" />
+            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_cloud_baidu" />
+        </FrameLayout>
+        <include android:id="@id/errorLayout" layout="@layout/layout_error" />
+    </LinearLayout>
+</FrameLayout>

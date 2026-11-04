@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_head_portrait_preview_0" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_toolbar" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_nav_left" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_user_change_picture" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_5" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/nas_white" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_user_profile_picture" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_toStartOf="@id/tv_nav_right" android:layout_toEndOf="@id/tv_nav_left" />
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_nav_right" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_user_change_picture" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_head_portrait" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    </FrameLayout>
+</LinearLayout>

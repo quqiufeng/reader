@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/toast_layout_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/refresh_icon_iv" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/icon_loading_indicator" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="#ffffffff" android:id="@id/refresh_text_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/common_prompt_loading" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="62.0dip">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_settings_time" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/optionspicker" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="335.0dip" android:minHeight="180.0dip">
+        <com.contrarywind.view.WheelView android:id="@id/options1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.contrarywind.view.WheelView android:id="@id/options2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.contrarywind.view.WheelView android:id="@id/options3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_confirm" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_20" android:text="@string/common_button_ok" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_change_nas_search_device_0" android:background="@color/color_F4F4F4" android:paddingTop="@dimen/len_34" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black_44_44" />
+    <TextView android:textSize="@dimen/intl_font_title_26" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_horizontal" android:paddingTop="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_migration_bc8417918c" />
+    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/common_title" android:gravity="center_horizontal" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_prompt_scanning_for_new_devices" />
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="80.0" />
+    <com.zentraedi.basic.function.ui.widget.ProportionFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/len_32" android:layout_marginRight="@dimen/len_32" app:layout_ratio="1.0">
+        <com.zentraedi.user.view.RippleView android:layout_width="fill_parent" android:layout_height="fill_parent" app:rippleColor="@color/color_cccccc" app:rippleCount="3" app:rippleInterval="@dimen/len_40" app:strokeWidth="@dimen/len_1" />
+        <View android:layout_gravity="center" android:background="@drawable/shape_ffffff_radius_60" android:layout_width="@dimen/len_79" android:layout_height="@dimen/len_79" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_find" />
+    </com.zentraedi.basic.function.ui.widget.ProportionFrameLayout>
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="251.0" />
+</LinearLayout>

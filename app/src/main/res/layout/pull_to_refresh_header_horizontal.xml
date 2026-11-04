@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_inner" android:background="#ff000000" android:paddingLeft="5.0dip" android:paddingTop="@dimen/header_footer_top_bottom_padding" android:paddingRight="5.0dip" android:paddingBottom="@dimen/header_footer_top_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_pull_to_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="wrap_content" android:text="正在加载" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_progress" android:layout_width="25.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_pull_to_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/tv_last_name" android:layout_width="16.0dip" android:layout_height="wrap_content" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:layout_gravity="center" android:id="@id/tv_desc" android:layout_width="16.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginStart="5.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

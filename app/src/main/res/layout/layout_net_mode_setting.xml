@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/cb_normal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:button="@drawable/checkbox_selector" android:text="@string/app_string_key_247" />
+        <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/cb_limit" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_40" android:button="@drawable/checkbox_selector" android:text="@string/app_string_key_248" />
+    </RadioGroup>
+</LinearLayout>

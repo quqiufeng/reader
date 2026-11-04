@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_note_classify_sort_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/labelNameTv" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_50" />
+    <ImageView android:id="@id/iv_album_setting_right_arrow" android:tag="binding_2" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_arrow_gray_16_24" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" android:layout_alignParentEnd="true" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+</RelativeLayout>

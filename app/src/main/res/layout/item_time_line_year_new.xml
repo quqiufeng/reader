@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/cv_root_card" android:tag="layout/item_time_line_year_new_0" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/len_8" app:cardElevation="@dimen/dp_0" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_e4e4e4_border_radius_8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/iv_year" android:background="@color/pic_thumb_default_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:proportHeight="92" app:proportWidth="165" />
+            <LinearLayout android:gravity="center" android:background="@drawable/shape_gradient_black_bg" android:paddingTop="@dimen/len_4" android:paddingBottom="@dimen/len_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/iv_year">
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/nas_white" android:id="@id/tv_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_9" android:textStyle="bold" android:textColor="@color/nas_white" android:id="@id/tv_desc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                <ImageView android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginStart="@dimen/len_4" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.zentraedi.photo.view.MonthDaysMatrixView android:id="@id/view_month_days_matrix" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_marginBottom="@dimen/len_8" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_8" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

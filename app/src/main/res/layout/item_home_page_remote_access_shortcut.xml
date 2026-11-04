@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:tag="layout/item_home_page_remote_access_shortcut_0" android:paddingLeft="@dimen/len_2" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_2" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_2" android:paddingVertical="@dimen/len_8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_icon" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_60">
+        <androidx.cardview.widget.CardView android:id="@id/cv_icon_remote" android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_45" android:layout_centerInParent="true" app:cardCornerRadius="@dimen/len_10" app:cardElevation="@dimen/len_0">
+            <ImageView android:id="@id/iv_icon_remote" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/contentRl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font_18" android:textColor="@color/common_white" android:gravity="center" android:id="@id/tv_content_remote" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView android:id="@id/iv_short_cut_remote" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:layout_marginBottom="@dimen/len_7" android:src="@drawable/icon_home_page_short_cut_16_16" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_7" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_title" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_3" android:layout_marginTop="@dimen/len_0" android:layout_marginRight="@dimen/len_3" android:maxLines="2" android:layout_marginHorizontal="@dimen/len_3" />
+</LinearLayout>

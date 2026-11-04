@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_hard_disk_more_option_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_toStartOf="@id/close" />
+        <ImageView android:id="@id/close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:id="@id/extToUsbTv" android:visibility="gone" android:text="@string/common_storage_e3df4604e6" app:drawableStartCompat="@drawable/icon_file_blue_usb_black" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/format" android:visibility="gone" android:text="@string/common_storage_format" app:drawableStartCompat="@drawable/icon_format_hard_drive" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/fragment_manage" android:visibility="gone" android:text="@string/common_storage_disk_defragment" app:drawableStartCompat="@drawable/icon_fragment_manage" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/smart_status" android:visibility="gone" android:text="@string/common_storage_smart_test" app:drawableStartCompat="@drawable/icon_view_smart_status" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/permission_set" android:visibility="gone" android:text="@string/common_install_permission_configuration" app:drawableStartCompat="@drawable/icon_file_square_permission_black_enable" style="@style/unused_hard_disk_more_option_text" />
+    <TextView android:id="@id/disk_wipe" android:visibility="gone" android:text="@string/common_storage_30be759413" app:drawableStartCompat="@drawable/icon_disk_wipe" style="@style/unused_hard_disk_more_option_text" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+</LinearLayout>

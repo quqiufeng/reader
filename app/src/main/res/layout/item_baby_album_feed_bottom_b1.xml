@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_baby_album_feed_bottom_b1_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/contentLl" android:paddingTop="@dimen/len_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_26" android:layout_marginRight="@dimen/len_15">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/thumbIv" android:tag="binding_1" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:cornerLeftBottom="true" app:cornerRadius="@dimen/len_8" app:imageHeight="1" app:imageWidth="1" />
+            <View android:tag="binding_2" android:background="@drawable/shape_album_selected_bg_left_bottom_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/thumbIv" android:layout_alignBottom="@id/thumbIv" android:layout_alignStart="@id/thumbIv" android:layout_alignEnd="@id/thumbIv" />
+            <View android:tag="binding_3" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+            <CheckBox android:id="@id/cb_select" android:tag="binding_4" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <ImageView android:tag="binding_5" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumbIv" />
+            <ImageView android:tag="binding_6" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <Space android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_2" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/thumb2Iv" android:tag="binding_8" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_8" app:cornerRightBottom="true" app:imageHeight="1" app:imageWidth="2" />
+            <View android:tag="binding_9" android:background="@drawable/shape_album_selected_bg_right_bottom_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/thumb2Iv" android:layout_alignBottom="@id/thumb2Iv" android:layout_alignStart="@id/thumb2Iv" android:layout_alignEnd="@id/thumb2Iv" />
+            <CheckBox android:tag="binding_10" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <ImageView android:tag="binding_11" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumb2Iv" />
+            <ImageView android:tag="binding_12" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+            <View android:tag="binding_13" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/len_0" android:layout_marginLeft="@dimen/len_10" android:layout_alignTop="@id/contentLl" android:layout_alignBottom="@id/contentLl">
+        <ImageView android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_6" />
+        <View android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

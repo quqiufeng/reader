@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_dialog_multiple_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/ivSelect" android:tag="binding_1" android:clickable="false" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_toRightOf="@id/ivSelect" android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_downloaded_video_more_opt_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_14" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_audiobook_multi_select" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_white" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llMultipleChoice" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_select_2" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_multi_select" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llDelAll" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_delete_white" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_movies_3283575db6" />
+    </LinearLayout>
+</LinearLayout>

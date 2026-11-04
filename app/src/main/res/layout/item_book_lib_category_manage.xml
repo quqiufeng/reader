@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_book_lib_category_manage_0" android:background="@color/common_white" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/titleLl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="end" android:id="@id/playlistNameTv" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:maxWidth="@dimen/len_300" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/playlistDirCountTv" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/playlistNameTv" android:layout_alignBottom="@id/playlistNameTv" />
+    </LinearLayout>
+    <ImageView android:id="@id/arrowIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_arrow_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_25" android:layout_below="@id/titleLl">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_425FFF" android:id="@id/deletePlaylistTv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_delete" />
+        <View android:tag="binding_4" android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_425FFF" android:id="@id/editPlaylistTv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_rename" />
+        <View android:tag="binding_6" android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_425FFF" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_add" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_time_line_month_pic_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.photo.view.TimelineRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srlEnableLoadMore="false">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_month_list" android:paddingBottom="@dimen/len_120" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-20.0dip" />
+    </com.zentraedi.photo.view.TimelineRefreshLayout>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_loading" />
+    <include android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/fragment_picture_empty" />
+</RelativeLayout>

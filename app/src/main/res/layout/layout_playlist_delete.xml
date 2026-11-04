@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_action" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutDissolveList" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_dissolve_list_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_dissolve_playlist" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutMoveOut" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_music_moveout_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_remove_from_playlist" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

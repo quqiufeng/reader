@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/toolbar_container" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/actionbar_elevation">
+        <androidx.appcompat.widget.Toolbar android:theme="?pt_toolbar_theme" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:navigationContentDescription="@string/tools_misc_close" app:navigationIcon="@drawable/ic_arrow_back_white_24dp" app:popupTheme="?pt_toolbar_popup_theme" app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" style="?pt_toolbar_style" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/dig_sig_info_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

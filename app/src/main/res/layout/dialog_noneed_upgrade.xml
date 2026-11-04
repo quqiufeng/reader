@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_5_bg" android:layout_width="@dimen/len_270" android:layout_height="@dimen/len_135">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_prompt_notice" />
+        <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_subtitle" android:layout_gravity="center_horizontal" android:id="@id/tv_upgrade_des" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_settings_update_already_up_to_date" />
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginTop="@dimen/len_20" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_black" android:gravity="center" android:id="@id/tv_confirm" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_ok" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

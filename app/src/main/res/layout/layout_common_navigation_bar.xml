@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_bar_root" android:tag="layout/layout_common_navigation_bar_0" android:background="@color/toolbar_color" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_nav_left" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="centerInside" />
+    <ImageView android:id="@id/iv_nav_finish" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black" android:scaleType="centerInside" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/nav_title_black" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/iv_nav_title_icon" android:visibility="gone" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/toolbar_right_text" android:gravity="center" android:id="@id/tv_nav_right" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/ivNavRight" android:tag="binding_4" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/ivNavRightTwo" android:tag="binding_5" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:layout_toLeftOf="@id/ivNavRight" />
+</RelativeLayout>

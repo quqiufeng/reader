@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_custom_collect_path_tag_add_0" android:background="@drawable/shape_f4f4f4_radius_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_28" android:layout_marginBottom="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivTick" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginLeft="@dimen/len_12" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:src="@drawable/icon_plus_black_8" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_12" android:text="@string/common_button_add" android:layout_toRightOf="@id/ivTick" android:layout_centerVertical="true" />
+</RelativeLayout>

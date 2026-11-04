@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_40"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/color_video_title" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/tvKeyWord" android:paddingLeft="@dimen/len_21" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="@dimen/len_40" android:singleLine="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/color_99ffffff" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/tvTotleCount" android:paddingLeft="@dimen/len_10" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="@dimen/len_40" android:singleLine="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/color_99ffffff" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/tvSelectCount" android:paddingLeft="@dimen/len_5" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="@dimen/len_40" android:singleLine="true" android:layout_weight="1.0" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/color_5E76FF" android:gravity="center_vertical" android:id="@id/tvSelect" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_40" android:text="@string/common_button_select_all" android:singleLine="true" />
+</LinearLayout>

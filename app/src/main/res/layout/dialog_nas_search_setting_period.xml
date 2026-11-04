@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/dialog_nas_search_setting_period_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popup_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <ImageView android:id="@id/iv_popu_close" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+    <View android:id="@id/v_divider_line" android:background="@color/share_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/tv_popup_title" />
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/contentRv" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_popup_title" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/common_bottom_dialog_space_height" android:layout_below="@id/contentRv" />
+</RelativeLayout>

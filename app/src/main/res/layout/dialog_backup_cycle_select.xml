@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_backup_cycle_select_0" android:background="@drawable/dialog_bottom_background" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_file_settings_frequency" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray_40" android:scaleType="fitCenter" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:id="@id/ll_2_hour" style="@style/backup_cycle_layout_style">
+        <CheckBox android:id="@id/cb_2_hour" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector_24_new" />
+        <TextView android:id="@id/tv_every_1" android:layout_width="0.0px" android:layout_marginLeft="@dimen/len_10" android:text="@string/setting_string_key_342" android:layout_weight="1.0" style="@style/backup_cycle_textview_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_4_hour" style="@style/backup_cycle_layout_style">
+        <CheckBox android:id="@id/cb_4_hour" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector_24_new" />
+        <TextView android:id="@id/tv_every_2" android:layout_width="0.0px" android:layout_marginLeft="@dimen/len_10" android:text="@string/setting_string_key_343" android:layout_weight="1.0" style="@style/backup_cycle_textview_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_24_hour" style="@style/backup_cycle_layout_style">
+        <CheckBox android:id="@id/cb_24_hour" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector_24_new" />
+        <TextView android:id="@id/tv_every_3" android:layout_width="0.0px" android:layout_marginLeft="@dimen/len_10" android:text="@string/setting_string_key_344" android:layout_weight="1.0" style="@style/backup_cycle_textview_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_3_day" style="@style/backup_cycle_layout_style">
+        <CheckBox android:id="@id/cb_3_day" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector_24_new" />
+        <TextView android:id="@id/tv_every_4" android:layout_width="0.0px" android:layout_marginLeft="@dimen/len_10" android:text="@string/setting_string_key_345" android:layout_weight="1.0" style="@style/backup_cycle_textview_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_7_day" style="@style/backup_cycle_layout_style">
+        <CheckBox android:id="@id/cb_7_day" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:button="@drawable/checkbox_selector_24_new" />
+        <TextView android:id="@id/tv_every_5" android:layout_width="0.0px" android:layout_marginLeft="@dimen/len_10" android:text="@string/setting_string_key_346" android:layout_weight="1.0" style="@style/backup_cycle_textview_style" />
+    </LinearLayout>
+</LinearLayout>

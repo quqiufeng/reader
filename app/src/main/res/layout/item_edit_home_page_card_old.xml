@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:tag="layout/item_edit_home_page_card_old_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_8" app:cardCornerRadius="@dimen/len_10" app:cardElevation="@dimen/len_0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/len_124">
+        <FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_43">
+            <ImageView android:layout_gravity="right" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitEnd" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:includeFontPadding="false" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="horizontal" android:tag="binding_3" android:layout_width="@dimen/len_100" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_nav_title_icon" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_helper_14" android:scaleType="fitCenter" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:layout_marginRight="@dimen/len_15" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_80">
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="19.0" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:tag="binding_6" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_48" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="43.0" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_8" android:layout_width="@dimen/len_56" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:tag="binding_9" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_48" android:src="@drawable/icon_home_album" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="43.0" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_11" android:layout_width="@dimen/len_56" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:tag="binding_12" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_48" android:src="@drawable/icon_home_album" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="43.0" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_14" android:layout_width="@dimen/len_56" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:tag="binding_15" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_48" android:src="@drawable/icon_home_album" android:scaleType="fitCenter" />
+                <TextView android:textSize="@dimen/font_13" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="19.0" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@color/color_bf666666" android:gravity="center_vertical" android:id="@id/tvCloud" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_music_ff31b8e8a7" />
+    <View android:id="@id/idCloudLine" android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" android:layout_marginLeft="@dimen/len_10" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/color_bf666666" android:gravity="center_vertical" android:id="@id/tvOffline" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_music_8d4fa14ee9" />
+</merge>

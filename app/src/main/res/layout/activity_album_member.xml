@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/activity_album_member_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/sv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:tag="binding_1" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_88" />
+            <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_albums_member_management" android:includeFontPadding="false" />
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_20" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_19" android:includeFontPadding="false" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_10">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_9" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30">
+                <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_other_members" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_15" />
+                <ImageView android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add_black_15_16" android:layout_marginEnd="@dimen/len_15" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:gravity="center" android:tag="binding_6" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nas_string_setting_text_198" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_15" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:tag="binding_7" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_15" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15">
+                        <ImageView android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_member_permission_add_and_delete" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_43">
+                        <ImageView android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_member_permission_view_only" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:tag="binding_14" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:tag="binding_15" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_photos_albums_member_management" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</FrameLayout>

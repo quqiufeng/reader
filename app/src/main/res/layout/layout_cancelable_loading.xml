@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_cancelable_loading_0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="220.0" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_circle_white_5_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/len_15" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/file_string_key_177" android:includeFontPadding="false" />
+            <ImageView android:id="@id/closeIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_gray_42" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="295.0" />
+</LinearLayout>

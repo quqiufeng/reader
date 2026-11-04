@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_time_line_year_detail_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_78">
+                    <include android:id="@id/layout_time_line_month_head" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_time_line_month_head" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/photo_title_layout" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layout_move_nav" layout="@layout/layout_file_struct_detail_navigation_bar" />
+                        <include android:id="@id/layout_edit_navigation_bar" layout="@layout/layout_edit_month_photo_navigation_bar" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/contentLl" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:id="@id/id_tv_sort" android:tag="binding_3" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" app:medium_bold="true" />
+                    <ImageView android:tag="binding_4" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/mapModeIv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_5" />
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" app:medium_bold="true" />
+                    <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height">
+                        <ImageView android:tag="binding_7" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+                        <ImageView android:tag="binding_8" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_select_black_44_selector_2" android:layout_alignParentRight="true" android:forceDarkAllowed="false" />
+                        <ImageView android:id="@id/iv_filter_icon" android:tag="binding_9" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_filter_black_selector" />
+                        <ImageView android:id="@id/iv_more_icon" android:tag="binding_10" android:padding="@dimen/len_10" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/selector_more_black_24_24_enabled" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPagerYearDetail" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_13" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/fragment_tab" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+            <View android:background="@drawable/shape_timeline_radio_group_bg2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/rg_tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/len_30" android:layout_margin="@dimen/len_5" android:checkedButton="@id/rb_day">
+                <RadioButton android:id="@id/rb_month" android:paddingLeft="@dimen/len_4" android:paddingRight="@dimen/len_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_months" android:singleLine="true" android:layout_weight="1.0" style="@style/style_pic_text_timeline" />
+                <RadioButton android:id="@id/rb_day" android:paddingLeft="@dimen/len_4" android:paddingRight="@dimen/len_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_days" android:singleLine="true" android:layout_weight="1.0" style="@style/style_pic_text_timeline" />
+                <RadioButton android:id="@id/rb_position" android:paddingLeft="@dimen/len_4" android:paddingRight="@dimen/len_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_location" android:singleLine="true" android:layout_weight="1.0" style="@style/style_pic_text_timeline" />
+                <RadioButton android:id="@id/rb_portrait" android:paddingLeft="@dimen/len_4" android:paddingRight="@dimen/len_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_aispace_d002fe9c13" android:singleLine="true" android:layout_weight="1.0" style="@style/style_pic_text_timeline" />
+            </RadioGroup>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_edit_tab_bar2" android:tag="binding_12" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/layout_edit_tab_bar_album" android:layout_width="fill_parent" android:layout_height="65.0dip" layout="@layout/layout_photo_edit_mode_tab_bar" />
+    </LinearLayout>
+</RelativeLayout>

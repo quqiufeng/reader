@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="annotation_dialog_context_menu">
+        <item>@string/controls_misc_delete_annotation</item>
+        <item>@string/controls_misc_delete_annotation_on_page</item>
+        <item>@string/controls_misc_delete_all_annotations</item>
+    </string-array>
+    <array name="arrow_presets">
+        <item>@style/ArrowStyle1</item>
+        <item>@style/ArrowStyle2</item>
+        <item>@style/ArrowStyle3</item>
+        <item>@style/ArrowStyle4</item>
+    </array>
+    <array name="callout_presets">
+        <item>@style/CalloutPresetStyle1</item>
+        <item>@style/CalloutPresetStyle2</item>
+        <item>@style/CalloutPresetStyle3</item>
+        <item>@style/CalloutPresetStyle4</item>
+    </array>
+    <array name="cloud_presets">
+        <item>@style/CloudStyle1</item>
+        <item>@style/CloudStyle2</item>
+        <item>@style/CloudStyle3</item>
+        <item>@style/CloudStyle4</item>
+    </array>
+    <array name="color_only_presets">
+        <item>@style/AnnotPresetStyle1</item>
+        <item>@style/AnnotPresetStyle2</item>
+        <item>@style/AnnotPresetStyle3</item>
+        <item>@style/AnnotPresetStyle4</item>
+    </array>
+    <string-array name="coustom_album_country_list">
+        <item>@string/common_filter_region_mainland</item>
+        <item>@string/common_filter_region_hong_kong</item>
+        <item>@string/common_filter_region_taiwan</item>
+        <item>@string/common_filter_region_united_states</item>
+        <item>@string/common_filter_region_japan</item>
+        <item>@string/common_filter_region_united_kingdom</item>
+        <item>@string/common_filter_region_france</item>
+        <item>@string/common_filter_region_germany</item>
+        <item>@string/common_filter_region_south_korea</item>
+        <item>@string/common_filter_region_italy</item>
+        <item>@string/common_filter_region_canada</item>
+        <item>@string/common_filter_region_india</item>
+        <item>@string/common_filter_region_spain</item>
+        <item>@string/common_filter_region_brazil</item>
+        <item>@string/common_filter_region_sweden</item>
+        <item>@string/common_filter_region_australia</item>
+        <item>@string/common_filter_region_denmark</item>
+        <item>@string/common_filter_region_russia</item>
+        <item>@string/common_filter_region_thailand</item>
+        <item>@string/common_filter_region_mexico</item>
+        <item>@string/common_filter_region_poland</item>
+        <item>@string/common_filter_region_argentina</item>
+        <item>@string/common_filter_region_ireland</item>
+        <item>@string/common_filter_region_belgium</item>
+    </string-array>
+    <string-array name="coustom_album_language_list">
+        <item>@string/common_movies_language_english</item>
+        <item>@string/common_movies_language_mandarin_chinese</item>
+        <item>@string/common_movies_language_cantonese</item>
+        <item>@string/common_movies_language_japanese</item>
+        <item>@string/common_movies_language_korean</item>
+        <item>@string/common_movies_language_french</item>
+        <item>@string/common_movies_language_italian</item>
+        <item>@string/common_movies_language_spanish</item>
+        <item>@string/common_movies_language_german</item>
+        <item>@string/common_movies_language_thai</item>
+        <item>@string/common_movies_language_no_dialogue</item>
+    </string-array>
+    <string-array name="coustom_album_type_list">
+        <item>@string/common_movies_filter_genre_drama</item>
+        <item>@string/common_movies_filter_genre_children</item>
+        <item>@string/common_movies_filter_genre_comedy</item>
+        <item>@string/common_movies_filter_genre_biography</item>
+        <item>@string/common_movies_filter_genre_action</item>
+        <item>@string/common_movies_filter_genre_history</item>
+        <item>@string/common_movies_filter_genre_romance</item>
+        <item>@string/common_movies_filter_genre_war</item>
+        <item>@string/common_movies_filter_genre_sci_fi</item>
+        <item>@string/common_movies_filter_genre_crime</item>
+        <item>@string/common_movies_filter_genre_animation</item>
+        <item>@string/common_movies_filter_genre_western</item>
+        <item>@string/common_movies_filter_genre_mystery</item>
+        <item>@string/common_movies_filter_genre_fantasy</item>
+        <item>@string/common_movies_filter_genre_thriller</item>
+        <item>@string/common_movies_filter_genre_adventure</item>
+        <item>@string/common_movies_filter_genre_horror</item>
+        <item>@string/common_movies_filter_genre_disaster</item>
+        <item>@string/common_movies_filter_genre_documentary</item>
+        <item>@string/common_movies_filter_genre_martial_arts</item>
+        <item>@string/common_movies_filter_genre_short</item>
+        <item>@string/common_movies_filter_genre_costume_drama</item>
+        <item>@string/common_movies_filter_genre_erotica</item>
+        <item>@string/common_movies_filter_genre_sports</item>
+        <item>@string/common_movies_filter_genre_homosexuality</item>
+        <item>@string/common_movies_filter_genre_opera</item>
+        <item>@string/common_movies_filter_genre_music</item>
+        <item>@string/common_movies_filter_genre_film_noir</item>
+        <item>@string/common_movies_filter_genre_musical</item>
+        <item>@string/common_movies_filter_genre_reality_show</item>
+        <item>@string/common_movies_filter_genre_family</item>
+        <item>@string/common_movies_filter_genre_talk_show</item>
+    </string-array>
+    <string-array name="default_stylus_tool_mode_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>33</item>
+        <item>51</item>
+    </string-array>
+    <string-array name="default_stylus_tool_modes">
+        <item>@string/controls_annotation_toolbar_tool_description_line</item>
+        <item>@string/controls_annotation_toolbar_tool_description_arrow</item>
+        <item>@string/controls_annotation_toolbar_tool_description_rectangle</item>
+        <item>@string/controls_annotation_toolbar_tool_description_oval</item>
+        <item>@string/controls_annotation_toolbar_tool_description_freehand</item>
+        <item>@string/controls_annotation_toolbar_tool_description_text_underline</item>
+        <item>@string/controls_annotation_toolbar_tool_description_text_highlight</item>
+        <item>@string/controls_annotation_toolbar_tool_description_text_squiggly</item>
+        <item>@string/controls_annotation_toolbar_tool_description_text_strikeout</item>
+        <item>@string/controls_annotation_toolbar_tool_description_free_highlighter</item>
+        <item>@string/annot_smart_pen</item>
+    </string-array>
+    <string-array name="diff_blend_array">
+        <item>@string/diff_bl_compatible</item>
+        <item>@string/diff_bl_normal</item>
+        <item>@string/diff_bl_multiply</item>
+        <item>@string/diff_bl_screen</item>
+        <item>@string/diff_bl_difference</item>
+        <item>@string/diff_bl_darken</item>
+        <item>@string/diff_bl_lighten</item>
+        <item>@string/diff_bl_color_dodge</item>
+        <item>@string/diff_bl_color_burn</item>
+        <item>@string/diff_bl_exclusion</item>
+        <item>@string/diff_bl_hard_light</item>
+        <item>@string/diff_bl_overlay</item>
+        <item>@string/diff_bl_soft_light</item>
+        <item>@string/diff_bl_luminosity</item>
+        <item>@string/diff_bl_hue</item>
+        <item>@string/diff_bl_saturation</item>
+        <item>@string/diff_bl_color</item>
+    </string-array>
+    <array name="eraser_presets">
+        <item>@style/EraserStyle1</item>
+        <item>@style/EraserStyle2</item>
+        <item>@style/EraserStyle3</item>
+        <item>@style/EraserStyle4</item>
+    </array>
+    <string-array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </string-array>
+    <array name="fill_only_presets">
+        <item>@style/AnnotPresetStyle4</item>
+        <item>@style/AnnotPresetStyle3</item>
+        <item>@style/AnnotPresetStyle5</item>
+        <item>@style/AnnotPresetStyle7</item>
+    </array>
+    <string-array name="filter_area_list">
+        <item>@string/common_movies_08e6c102c4</item>
+        <item>@string/common_filter_region_mainland</item>
+        <item>@string/common_filter_region_hong_kong</item>
+        <item>@string/common_filter_region_taiwan</item>
+        <item>@string/common_filter_region_united_states</item>
+        <item>@string/common_filter_region_united_kingdom</item>
+        <item>@string/common_filter_region_france</item>
+        <item>@string/common_filter_region_germany</item>
+        <item>@string/common_filter_region_italy</item>
+        <item>@string/common_filter_region_spain</item>
+        <item>@string/common_filter_region_canada</item>
+        <item>@string/common_filter_region_ireland</item>
+        <item>@string/common_filter_region_sweden</item>
+        <item>@string/common_filter_region_denmark</item>
+        <item>@string/common_filter_region_japan</item>
+        <item>@string/common_filter_region_south_korea</item>
+        <item>@string/common_filter_region_india</item>
+        <item>@string/common_filter_region_thailand</item>
+        <item>@string/common_filter_region_russia</item>
+        <item>@string/common_filter_region_iran</item>
+        <item>@string/common_filter_region_australia</item>
+        <item>@string/common_filter_region_brazil</item>
+    </string-array>
+    <array name="free_date_text_presets">
+        <item>@style/FreeTextDatePresetStyle1</item>
+        <item>@style/FreeTextDatePresetStyle2</item>
+        <item>@style/FreeTextDatePresetStyle3</item>
+        <item>@style/FreeTextDatePresetStyle4</item>
+    </array>
+    <array name="free_text_presets">
+        <item>@style/FreeTextPresetStyle1</item>
+        <item>@style/FreeTextPresetStyle2</item>
+        <item>@style/FreeTextPresetStyle3</item>
+        <item>@style/FreeTextPresetStyle4</item>
+    </array>
+    <array name="freehand_highlighter_presets">
+        <item>@style/FreeHighlighterStyle4</item>
+        <item>@style/FreeHighlighterStyle3</item>
+        <item>@style/FreeHighlighterStyle5</item>
+        <item>@style/FreeHighlighterStyle6</item>
+    </array>
+    <array name="freehand_presets">
+        <item>@style/AnnotPresetStyle4</item>
+        <item>@style/AnnotPresetStyle3</item>
+        <item>@style/AnnotPresetStyle5</item>
+        <item>@style/AnnotPresetStyle6</item>
+        <item>@style/AnnotPresetStyle1</item>
+    </array>
+    <array name="highlight_presets">
+        <item>@style/HighlightPresetStyle1</item>
+        <item>@style/HighlightPresetStyle2</item>
+        <item>@style/HighlightPresetStyle3</item>
+        <item>@style/HighlightPresetStyle4</item>
+    </array>
+    <array name="home_classification_image_id">
+        <item>@drawable/bg_home_class_1</item>
+        <item>@drawable/bg_home_class_2</item>
+        <item>@drawable/bg_home_class_3</item>
+        <item>@drawable/bg_home_class_4</item>
+        <item>@drawable/bg_home_class_5</item>
+        <item>@drawable/bg_home_class_6</item>
+        <item>@drawable/bg_home_class_7</item>
+        <item>@drawable/bg_home_class_8</item>
+        <item>@drawable/bg_home_class_9</item>
+    </array>
+    <array name="huawei_module_network_services" />
+    <string-array name="icon_colors">
+        <item>\#FF1744</item>
+        <item>\#FF9800</item>
+        <item>\#FFFF00</item>
+        <item>\#76FF03</item>
+        <item>\#00E676</item>
+        <item>\#00B0FF</item>
+        <item>\#304FFE</item>
+        <item>\#D500F9</item>
+        <item>\#FF00FF</item>
+        <item>\#FFFFFF</item>
+    </string-array>
+    <array name="music_play_drawable">
+        <item>@drawable/audio_book_anim_0</item>
+        <item>@drawable/audio_book_anim_1</item>
+        <item>@drawable/audio_book_anim_2</item>
+        <item>@drawable/audio_book_anim_3</item>
+        <item>@drawable/audio_book_anim_4</item>
+        <item>@drawable/audio_book_anim_5</item>
+        <item>@drawable/audio_book_anim_6</item>
+        <item>@drawable/audio_book_anim_7</item>
+        <item>@drawable/audio_book_anim_8</item>
+        <item>@drawable/audio_book_anim_9</item>
+        <item>@drawable/audio_book_anim_10</item>
+        <item>@drawable/audio_book_anim_11</item>
+        <item>@drawable/audio_book_anim_12</item>
+        <item>@drawable/audio_book_anim_13</item>
+        <item>@drawable/audio_book_anim_14</item>
+        <item>@drawable/audio_book_anim_15</item>
+        <item>@drawable/audio_book_anim_16</item>
+        <item>@drawable/audio_book_anim_17</item>
+        <item>@drawable/audio_book_anim_18</item>
+        <item>@drawable/audio_book_anim_19</item>
+        <item>@drawable/audio_book_anim_20</item>
+        <item>@drawable/audio_book_anim_21</item>
+        <item>@drawable/audio_book_anim_22</item>
+        <item>@drawable/audio_book_anim_23</item>
+        <item>@drawable/audio_book_anim_24</item>
+        <item>@drawable/audio_book_anim_25</item>
+        <item>@drawable/audio_book_anim_26</item>
+        <item>@drawable/audio_book_anim_27</item>
+        <item>@drawable/audio_book_anim_28</item>
+        <item>@drawable/audio_book_anim_29</item>
+        <item>@drawable/audio_book_anim_30</item>
+        <item>@drawable/audio_book_anim_31</item>
+        <item>@drawable/audio_book_anim_32</item>
+        <item>@drawable/audio_book_anim_33</item>
+        <item>@drawable/audio_book_anim_34</item>
+        <item>@drawable/audio_book_anim_35</item>
+        <item>@drawable/audio_book_anim_36</item>
+        <item>@drawable/audio_book_anim_37</item>
+    </array>
+    <array name="networkkit_httpdns_anycastip_array" />
+    <string-array name="optimize_compression_color_mode">
+        <item>@string/optimize_compression_color_mode_no_compression</item>
+        <item>@string/optimize_compression_color_mode_png</item>
+        <item>@string/optimize_compression_color_mode_jpeg</item>
+        <item>@string/optimize_compression_color_mode_jpeg2000</item>
+    </string-array>
+    <string-array name="optimize_compression_mono_mode">
+        <item>PNG</item>
+        <item>JBIG2</item>
+    </string-array>
+    <string-array name="optimize_downsampling_max_options">
+        <item>@string/optimize_downsampling_max_options_1</item>
+        <item>@string/optimize_downsampling_max_options_2</item>
+        <item>@string/optimize_downsampling_max_options_3</item>
+        <item>@string/optimize_downsampling_max_options_4</item>
+        <item>@string/optimize_downsampling_max_options_5</item>
+        <item>@string/optimize_downsampling_max_options_6</item>
+        <item>@string/optimize_downsampling_max_options_7</item>
+        <item>@string/optimize_downsampling_max_options_8</item>
+    </string-array>
+    <string-array name="optimize_downsampling_resample_options">
+        <item>@string/optimize_downsampling_resample_options_1</item>
+        <item>@string/optimize_downsampling_resample_options_2</item>
+        <item>@string/optimize_downsampling_resample_options_3</item>
+        <item>@string/optimize_downsampling_resample_options_4</item>
+        <item>@string/optimize_downsampling_resample_options_5</item>
+    </string-array>
+    <string-array name="optimize_quality_options">
+        <item>@string/optimize_quality_options_low</item>
+        <item>@string/optimize_quality_options_medium</item>
+        <item>@string/optimize_quality_options_high</item>
+        <item>@string/optimize_quality_options_max</item>
+    </string-array>
+    <string-array name="preset_colors">
+        <item>\#f1a099</item>
+        <item>\#ffc67b</item>
+        <item>\#ffe6a2</item>
+        <item>\#80e5b1</item>
+        <item>\#92e8e8</item>
+        <item>\#a6a1e6</item>
+        <item>\#e2a1e6</item>
+        <item>\#e44234</item>
+        <item>\#ff8d00</item>
+        <item>\#ffcd45</item>
+        <item>\#00cc63</item>
+        <item>\#25d2d1</item>
+        <item>\#4e7de9</item>
+        <item>\#c544ce</item>
+        <item>\#88271f</item>
+        <item>\#b54800</item>
+        <item>\#d69a00</item>
+        <item>\#007a3b</item>
+        <item>\#167e7d</item>
+        <item>\#2e4b8b</item>
+        <item>\#76287b</item>
+        <item>no_fill_color</item>
+        <item>\#ffffff</item>
+        <item>\#cdcdcd</item>
+        <item>\#9c9c9c</item>
+        <item>\#696969</item>
+        <item>\#373737</item>
+        <item>\#000000</item>
+    </string-array>
+    <string-array name="preset_highlight_colors">
+        <item>\#ff0000</item>
+        <item>\#ff7f02</item>
+        <item>\#ffff00</item>
+        <item>\#00ff00</item>
+        <item>\#00ffff</item>
+        <item>\#0000ff</item>
+        <item>\#ff00ff</item>
+        <item>\#ff6666</item>
+        <item>\#ffb267</item>
+        <item>\#ffff66</item>
+        <item>\#66ff66</item>
+        <item>\#6bfcfc</item>
+        <item>\#6666ff</item>
+        <item>\#ff66ff</item>
+        <item>\#ff9999</item>
+        <item>\#ffcb99</item>
+        <item>\#ffff99</item>
+        <item>\#99ff99</item>
+        <item>\#b2ffff</item>
+        <item>\#9999ff</item>
+        <item>\#ff99ff</item>
+        <item>\#ffcccc</item>
+        <item>\#ffe5cc</item>
+        <item>\#ffffcc</item>
+        <item>\#ccffcc</item>
+        <item>\#dcffff</item>
+        <item>\#ccccff</item>
+        <item>\#ffccff</item>
+    </string-array>
+    <string-array name="ruler_base_unit">
+        <item>@string/unit_pt</item>
+        <item>@string/unit_in</item>
+        <item>@string/unit_mm</item>
+        <item>@string/unit_cm</item>
+    </string-array>
+    <string-array name="ruler_precision">
+        <item>1</item>
+        <item>0.1</item>
+        <item>0.01</item>
+        <item>0.001</item>
+        <item>0.0001</item>
+    </string-array>
+    <array name="ruler_presets">
+        <item>@style/RulerStyle1</item>
+        <item>@style/RulerStyle2</item>
+        <item>@style/RulerStyle3</item>
+        <item>@style/RulerStyle4</item>
+    </array>
+    <string-array name="ruler_translate_unit">
+        <item>@string/unit_pt</item>
+        <item>@string/unit_in</item>
+        <item>@string/unit_mm</item>
+        <item>@string/unit_cm</item>
+        <item>@string/unit_ft</item>
+        <item>@string/unit_yd</item>
+        <item>@string/unit_m</item>
+        <item>@string/unit_km</item>
+        <item>@string/unit_mi</item>
+    </string-array>
+    <string-array name="signature_colors">
+        <item>\#000080</item>
+        <item>\#000000</item>
+        <item>\#B40404</item>
+    </string-array>
+    <array name="signature_presets">
+        <item>@style/SignaturePresetStyle1</item>
+        <item>@style/SignaturePresetStyle2</item>
+        <item>@style/SignaturePresetStyle3</item>
+        <item>@style/SignaturePresetStyle4</item>
+    </array>
+    <string-array name="stickynote_icons">
+        <item>Comment</item>
+        <item>Help</item>
+        <item>InsertCaret</item>
+        <item>Star</item>
+        <item>LightBulb</item>
+        <item>NewParagraph</item>
+        <item>CrossMark</item>
+        <item>CheckMark</item>
+        <item>LocationPin</item>
+        <item>ThumbsUp</item>
+    </string-array>
+    <array name="stroke_only_presets">
+        <item>@style/AnnotPresetStyle4</item>
+        <item>@style/AnnotPresetStyle3</item>
+        <item>@style/AnnotPresetStyle5</item>
+        <item>@style/AnnotPresetStyle6</item>
+    </array>
+    <string-array name="style_ink_eraser_mode">
+        <item>@string/tools_eraser_ink_mode_pixel</item>
+        <item>@string/tools_eraser_ink_mode_stroke</item>
+    </string-array>
+    <string-array name="style_picker_date_formats">
+        <item>@string/style_picker_date_format1</item>
+        <item>@string/style_picker_date_format2</item>
+        <item>@string/style_picker_date_format3</item>
+        <item>@string/style_picker_date_format4</item>
+        <item>@string/style_picker_date_format5</item>
+    </string-array>
+    <array name="text_markup_presets">
+        <item>@style/TextMarkupStyle1</item>
+        <item>@style/TextMarkupStyle2</item>
+        <item>@style/TextMarkupStyle3</item>
+        <item>@style/TextMarkupStyle4</item>
+    </array>
+    <string-array name="usb_format_list">
+        <item>exFAT</item>
+        <item>NTFS</item>
+    </string-array>
+    <string-array name="usb_volume_unit">
+        <item>GB</item>
+        <item>TB</item>
+    </string-array>
+    <string-array name="user_bookmark_dialog_context_menu">
+        <item>@string/controls_misc_rename_bookmark</item>
+        <item>@string/controls_misc_delete_bookmark</item>
+        <item>@string/controls_misc_delete_all_bookmarks</item>
+    </string-array>
+    <array name="widget_presets">
+        <item>@style/WidgetPreset1</item>
+        <item>@style/WidgetPreset2</item>
+        <item>@style/WidgetPreset3</item>
+        <item>@style/WidgetPreset4</item>
+    </array>
+</resources>

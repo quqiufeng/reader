@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/popup_shared_setting_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/headRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/dialog_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_movies_sharing_setting" android:layout_centerVertical="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_8" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/separate_line" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/contentLl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_19" />
+            <TextView android:id="@id/shareTypeTipTv" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/apply_pad_common_left_right_15" />
+            <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/pubMemberRv" android:tag="binding_5" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxHeight="@dimen/len_293" />
+        </LinearLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/contentLl" android:layout_alignBottom="@id/contentLl" layout="@layout/layout_loading" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_34">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:tag="binding_6" android:background="@drawable/shape_circle_gray_22_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_change" android:layout_weight="1.0" />
+        <View android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_1" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:tag="binding_7" android:background="@drawable/shape_circle_blue_22_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_cancel_sharing" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

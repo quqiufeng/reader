@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutToolBar" android:paddingLeft="@dimen/len_5" android:paddingTop="@dimen/len_11" android:paddingBottom="@dimen/len_11" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivSort" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:scaleType="center" />
+    <com.zentraedi.business.widget.MediumTextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_sort_released_time_desc" android:includeFontPadding="false" app:medium_bold="true" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/color_b3ffffff" android:gravity="center_vertical" android:id="@id/tvCount" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ImageView android:id="@id/ivViewer" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_viewer" />
+</LinearLayout>

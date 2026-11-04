@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/padding_medium"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.pdftron.pdf.widget.VerticalTextView android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle" android:gravity="start|bottom|center" android:id="@id/favorite_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favorites" />
+        <com.pdftron.pdf.utils.ExpandableGridView android:id="@id/favorite_color_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_large" android:numColumns="6" android:layout_marginStart="@dimen/padding_large" style="@style/PresetColorGridViewStyle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.pdftron.pdf.widget.VerticalTextView android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle" android:gravity="end|bottom|center" android:id="@id/recent_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recent" />
+        <com.pdftron.pdf.utils.ExpandableGridView android:id="@id/recent_color_grid" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_large" android:numColumns="6" android:layout_marginStart="@dimen/padding_large" style="@style/PresetColorGridViewStyle" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@id/recent_color_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_large" android:text="@string/tools_recent_color_grid_hint" android:alpha="0.54" android:layout_marginStart="@dimen/padding_large" />
+    </LinearLayout>
+</LinearLayout>

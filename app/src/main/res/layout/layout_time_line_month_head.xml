@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contentRl" android:tag="layout/layout_time_line_month_head_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_5" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <TextView android:textSize="@dimen/len_32" android:textStyle="bold" android:textColor="@color/selector_text_333333_cccccc" android:ellipsize="middle" android:id="@id/tv_nav_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/selector_text_666666_cccccc" android:ellipsize="middle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_5" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/title_container" />
+</RelativeLayout>

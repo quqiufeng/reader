@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_14" android:gravity="center" android:id="@id/tvRange" android:background="@drawable/shape_2c3053_radius_5" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_28" android:singleLine="true" android:layout_marginEnd="@dimen/len_10" android:paddingHorizontal="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_download_to_phone_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView android:id="@id/iv_help" android:tag="binding_3" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+                <ImageView android:tag="binding_4" android:layout_below="@id/tv_item" style="@style/topBigTitleSeparatorLine" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <FrameLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/layoutTitle" android:tag="binding_6" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                        <ImageView android:gravity="center" android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+                        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutBarTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/navigation_img_width_and_height" android:layout_centerHorizontal="true">
+                            <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_top_title" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                            <ImageView android:layout_gravity="center_vertical" android:id="@id/titleHelpIv" android:tag="binding_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper" android:scaleType="centerInside" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+                            <RelativeLayout android:id="@id/iv_nav_sort" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:layout_toLeftOf="@id/iv_nav_right" android:layout_marginStart="@dimen/len_12">
+                                <pl.droidsonroids.gif.GifImageView android:id="@id/iv_file_list_task" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/filemanager_top_trans" android:onClick="clickTaskCenter" />
+                                <View android:id="@id/v_file_List_unread" android:background="@drawable/bg_task_fail_red_tip" android:layout_width="@dimen/len_5" android:layout_height="@dimen/len_5" android:layout_marginTop="@dimen/len_3" android:layout_marginRight="@dimen/len_3" android:layout_alignParentRight="true" />
+                            </RelativeLayout>
+                            <ImageView android:id="@id/iv_more" android:tag="binding_9" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/filemanager_top_more" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <include android:id="@id/editModeLayout" layout="@layout/layout_navigation_bar_edit_mode" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@id/fl_file_manage" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <Space android:id="@id/sp_bottom" android:tag="binding_10" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_84" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:tag="binding_11" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_84">
+        <TextView android:textColor="@color/selector_text_333333_cccccc" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tvBottomPopupDelete" android:tag="binding_12" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_delete" android:includeFontPadding="false" android:drawablePadding="@dimen/len_2" android:layout_weight="1.0" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

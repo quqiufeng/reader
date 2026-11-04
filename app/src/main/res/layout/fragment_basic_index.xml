@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/fragment_basic_index_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+        <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_temperature" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_z2_temp_prompt" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_temperature" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:layout_gravity="center_vertical" android:id="@id/tv_z2_cpu_temp_label" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_cpu_temp_oval" android:drawablePadding="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:layout_gravity="center_vertical" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1549_res" android:includeFontPadding="false" android:layout_centerVertical="true" />
+            <RelativeLayout android:tag="binding_6" android:background="@drawable/disk_one_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_70" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_7" style="@style/nas_info_disk_temp_text" />
+            <View android:tag="binding_8" style="@style/nas_info_line_spelite_line" />
+            <RelativeLayout android:tag="binding_9" android:background="@drawable/disk_two_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_71" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_10" style="@style/nas_info_disk_temp_text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_temperature" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:layout_gravity="center_vertical" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_cpu_temp_oval" android:drawablePadding="@dimen/len_4" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:layout_gravity="center_vertical" android:id="@id/tv_disks_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1549_res" android:includeFontPadding="false" android:layout_toLeftOf="@id/tv_disks_temp_one" android:layout_centerVertical="true" />
+            <RelativeLayout android:tag="binding_14" android:background="@drawable/disk_one_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_70" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_15" style="@style/nas_info_disk_temp_text" />
+            <View android:tag="binding_16" style="@style/nas_info_line_spelite_line" />
+            <RelativeLayout android:tag="binding_17" android:background="@drawable/disk_two_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_71" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_18" style="@style/nas_info_disk_temp_text" />
+            <View android:tag="binding_19" style="@style/nas_info_line_spelite_line" />
+            <RelativeLayout android:tag="binding_20" android:background="@drawable/disk_three_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_72" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_21" android:layout_height="fill_parent" style="@style/nas_info_disk_temp_text" />
+            <View android:tag="binding_22" style="@style/nas_info_line_spelite_line" />
+            <RelativeLayout android:tag="binding_23" android:background="@drawable/disk_four_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                <TextView android:text="@string/setting_string_key_73" style="@style/nas_info_disk_line_color_indicator_text" />
+            </RelativeLayout>
+            <TextView android:tag="binding_24" style="@style/nas_info_disk_temp_text" />
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_temp" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_docker_cpu_usage" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:tag="binding_25" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginRight="2.0dip" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_cpu_used_oval" android:drawablePadding="@dimen/len_4" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_cpu_used" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_docker_momery_usage" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_memory_usable" android:tag="binding_26" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:id="@id/line_memory" android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" android:layout_toLeftOf="@id/tv_memory_usable" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_memory_used" android:tag="binding_27" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_toLeftOf="@id/line_memory" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_memory_used" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <LinearLayout android:orientation="horizontal" android:tag="binding_28" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1546_res" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_busy_prompt" android:tag="binding_29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1546_res" android:includeFontPadding="false" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_busy" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:layout_gravity="center_vertical" android:tag="binding_30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1549_res" android:includeFontPadding="false" android:layout_toLeftOf="@id/tv_disks_temp_one" android:layout_centerVertical="true" />
+                <RelativeLayout android:tag="binding_31" android:background="@drawable/disk_one_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                    <TextView android:text="@string/setting_string_key_70" style="@style/nas_info_disk_line_color_indicator_text" />
+                </RelativeLayout>
+                <TextView android:tag="binding_32" style="@style/nas_info_disk_temp_text" />
+                <View android:tag="binding_33" style="@style/nas_info_line_spelite_line" />
+                <RelativeLayout android:tag="binding_34" android:background="@drawable/disk_two_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                    <TextView android:text="@string/setting_string_key_71" style="@style/nas_info_disk_line_color_indicator_text" />
+                </RelativeLayout>
+                <TextView android:tag="binding_35" style="@style/nas_info_disk_temp_text" />
+                <View android:tag="binding_36" style="@style/nas_info_line_spelite_line" />
+                <RelativeLayout android:tag="binding_37" android:background="@drawable/disk_three_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                    <TextView android:text="@string/setting_string_key_72" style="@style/nas_info_disk_line_color_indicator_text" />
+                </RelativeLayout>
+                <TextView android:tag="binding_38" style="@style/nas_info_disk_temp_text" />
+                <View android:tag="binding_39" style="@style/nas_info_line_spelite_line" />
+                <RelativeLayout android:tag="binding_40" android:background="@drawable/disk_four_line_bg" style="@style/nas_info_disk_line_color_indicator_layout">
+                    <TextView android:text="@string/setting_string_key_73" style="@style/nas_info_disk_line_color_indicator_text" />
+                </RelativeLayout>
+                <TextView android:tag="binding_41" style="@style/nas_info_disk_temp_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_disk_busy" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:tag="binding_42" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:id="@id/tvNetSpeedTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1548_res" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_speed_upload" android:tag="binding_43" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_upload_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:id="@id/line_speed" android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" android:layout_toLeftOf="@id/tv_speed_upload" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_speed_download" android:tag="binding_44" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_download_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_toLeftOf="@id/line_speed" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_speed" android:tag="binding_45" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:tag="binding_46" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_vm_be642bc191" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_net_port_one_speed_upload" android:tag="binding_47" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_upload_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:id="@id/line_net_port_one_speed" android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" android:layout_toLeftOf="@id/tv_net_port_one_speed_upload" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_net_port_one_speed_download" android:tag="binding_48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_download_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_toLeftOf="@id/line_net_port_one_speed" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_net_port_one_speed" android:tag="binding_49" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:tag="binding_50" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_vm_6f148dff95" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_net_port_two_speed_upload" android:tag="binding_51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_upload_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:id="@id/line_net_port_two_speed" android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" android:layout_toLeftOf="@id/tv_net_port_two_speed_upload" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_net_port_two_speed_download" android:tag="binding_52" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_download_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_toLeftOf="@id/line_net_port_two_speed" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_net_port_two_speed" android:tag="binding_53" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <RelativeLayout android:tag="binding_54" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/setting_basic_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_28516c3589" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_wifi_speed_upload" android:tag="binding_55" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_upload_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:id="@id/line_wifi_speed" android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" android:layout_toLeftOf="@id/tv_wifi_speed_upload" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:id="@id/tv_wifi_speed_download" android:tag="binding_56" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/setting_basic_download_speed_oval" android:drawablePadding="@dimen/len_4" android:layout_toLeftOf="@id/line_wifi_speed" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_wifi_speed" android:tag="binding_57" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_file_sort_style_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titleLayout" android:tag="binding_1" android:background="@color/file_manage_guide_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/ivBack" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_file_settings_sort" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:tag="binding_2" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

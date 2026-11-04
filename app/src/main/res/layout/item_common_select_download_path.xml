@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_common_select_download_path_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_49">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <View android:layout_gravity="center_vertical" android:background="@color/color_cccccc" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_8" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/popup_timeline_date_detail_more_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/popup_photo_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/popup_photo_separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <View android:background="@color/popup_photo_separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:id="@id/rl_rename" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/iv_rename" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_save_as_album" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/item_more_pop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_4677d0dfe7" android:layout_toRightOf="@id/iv_rename" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/popup_photo_separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</LinearLayout>

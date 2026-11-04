@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:id="@id/topSpace" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <FrameLayout android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" android:scaleType="center" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:id="@id/tvSelectCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_please_select" android:includeFontPadding="false" app:medium_bold="true" />
+            <TextView android:textSize="11.0dip" android:textColor="@color/color_999999" android:id="@id/tvAllCount" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <com.zentraedi.business.widget.MediumTextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/tvSelectAll" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_select_all" app:medium_bold="true" />
+    </FrameLayout>
+    <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvMusicList" android:layoutAnimation="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <FrameLayout android:background="@color/white" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_71">
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvDownload" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:text="@string/common_button_download" />
+    </FrameLayout>
+</merge>

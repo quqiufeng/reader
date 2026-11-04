@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:tag="layout/item_select_color_0" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginEnd="@dimen/len_15" app:cardCornerRadius="@dimen/len_15" app:cardElevation="@dimen/len_0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/circleView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_gravity="center" android:id="@id/selectedView" android:background="@drawable/shape_stroke_ffffff_solid_transparent_13" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" />
+</androidx.cardview.widget.CardView>

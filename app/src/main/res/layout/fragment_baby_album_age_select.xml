@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/fragment_baby_album_age_select_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="72.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/ageYearRv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/age_bottom_view" android:background="@drawable/shape_baby_age_filter_year_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ageYearRv" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/ageMouthRv" android:background="@color/common_white" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="228.0" />
+</LinearLayout>

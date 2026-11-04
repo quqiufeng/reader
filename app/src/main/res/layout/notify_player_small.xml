@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_music_bg" android:layout_width="54.0dip" android:layout_height="64.0dip" android:src="@drawable/music_notification_right_bg" android:layout_alignParentRight="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/optionLayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_toLeftOf="@id/iv_music_bg">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_previous" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_music_notification_back" android:scaleType="center" />
+        <ImageView android:id="@id/player_pause" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/icon_music_notification_play" android:scaleType="center" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_next" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_music_notification_next" android:scaleType="center" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_music_notification_close" android:scaleType="center" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/optionLayout">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/music_notification_title" android:ellipsize="middle" android:gravity="start|center|top" android:id="@id/player_song_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/music_notification_subtitle" android:ellipsize="end" android:id="@id/player_author_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

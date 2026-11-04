@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_release_space_search_result_details_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_video_title" android:layout_width="fill_parent" android:layout_height="@dimen/len_45" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_30" android:lines="1" android:layout_centerVertical="true" android:layout_toStartOf="@id/tv_video_size" android:layout_alignParentStart="true" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/tv_video_size" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/len_5" android:layout_centerVertical="true" android:drawableEnd="@drawable/icon_arrow_down" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_3" android:background="@color/color_FFFAEB" android:layout_width="fill_parent" android:layout_height="@dimen/len_45">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_666666" android:layout_gravity="center" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_666666" android:layout_gravity="center" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_view" android:layout_marginEnd="@dimen/len_15" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_details" android:paddingBottom="@dimen/len_80" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

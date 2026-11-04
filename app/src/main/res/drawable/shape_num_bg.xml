@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/len_1" android:color="@color/nas_info_num_stroke" />
+    <solid android:color="@color/stroage_space_bg" />
+    <size android:height="@dimen/len_14" android:width="@dimen/len_14" />
+</shape>

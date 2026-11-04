@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_create_child_user_suc_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/sv_rootview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white_background" android:paddingLeft="@dimen/len_25" android:paddingRight="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="2.0" />
+            <ImageView android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_60" android:src="@drawable/user_center_success" android:scaleType="centerCrop" />
+            <TextView android:textSize="@dimen/font_24" android:textStyle="bold" android:textColor="@color/title_color" android:id="@id/tvCreateTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_14" android:text="@string/common_prmopt_create_success" android:includeFontPadding="false" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_24">
+                <ViewStub android:id="@id/phone_prompt" android:layout="@layout/item_create_phone_result_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ViewStub android:id="@id/offline_prompt" android:layout="@layout/item_create_offline_result_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/item_create_user_success_bg" android:padding="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_666666" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/color_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_user_password" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="3.0" />
+            <ImageView android:layout_width="@dimen/len_128" android:layout_height="@dimen/len_128" android:src="@drawable/download_qr" />
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/title_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_user_scan_the_qrcode_to_install_device" android:includeFontPadding="true" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="2.0" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_other_installation_method" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15">
+                <com.zentraedi.business.widget.PointView android:layout_width="4.0dip" android:layout_height="4.0dip" app:point_color="@color/color_666666" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_user_iphone_users_search_on_appstore" android:includeFontPadding="true" android:lineHeight="@dimen/len_18" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.PointView android:layout_width="4.0dip" android:layout_height="4.0dip" app:point_color="@color/color_666666" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_user_android_users_search_on_google_play" android:includeFontPadding="true" android:lineHeight="@dimen/len_18" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.PointView android:layout_width="4.0dip" android:layout_height="4.0dip" app:point_color="@color/color_666666" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_user_open_url_on_computer_browser" android:includeFontPadding="true" android:lineHeight="@dimen/len_18" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="3.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/btn_text_color_white" android:gravity="center" android:id="@id/btn_register" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginBottom="@dimen/len_15" android:text="@string/common_button_share" android:includeFontPadding="false" android:onClick="SharePhoto" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

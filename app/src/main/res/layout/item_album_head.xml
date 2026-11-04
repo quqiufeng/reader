@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_album_head_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_46"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:tag="binding_1" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <ImageView android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_5" android:layout_toEndOf="@id/tv_title" />
+</RelativeLayout>

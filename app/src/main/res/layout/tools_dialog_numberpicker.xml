@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableRow android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <NumberPicker android:id="@id/tools_dialog_numberpicker_integer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="0" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:text="." />
+            <NumberPicker android:id="@id/tools_dialog_numberpicker_decimal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="2" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

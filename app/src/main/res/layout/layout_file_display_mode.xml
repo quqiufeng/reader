@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_display_mode" android:tag="layout/layout_file_display_mode_0" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_file_view" android:layout_weight="1.0" />
+        <ImageView android:id="@id/close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:scaleType="center" />
+    </LinearLayout>
+    <View android:id="@id/line0" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_17" android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/gridMode" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_file_display_black_list" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_view_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_2" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_17" android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/listDetailMode" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_file_display_black_list_detail" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_view_details" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_3" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_17" android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/listMode" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_file_display_black_grid" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_view_small_icons" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bigIconLl" android:tag="binding_4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_17" android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_24" android:src="@drawable/icon_file_display_black_big_icon" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_view_large_icons" />
+    </LinearLayout>
+    <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/common_bottom_dialog_space_height" />
+</LinearLayout>

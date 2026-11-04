@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:tag="layout/dialog_bottom_seting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_d9000000_15" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_28" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_30">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:id="@id/tv_brilliance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_player_brightness" />
+            <ImageView android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_comic_luminance" android:layout_marginStart="@dimen/len_43" />
+            <androidx.appcompat.widget.AppCompatSeekBar android:id="@id/luminance_seek_bar" android:layout_width="@dimen/len_155" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:layout_marginRight="@dimen/dp_5" android:maxHeight="@dimen/len_2" android:progressDrawable="@drawable/progress_style_h_scene" android:minHeight="@dimen/len_2" android:thumb="@drawable/comic_seekbar_thumb" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="@id/iv_last_chapter" app:layout_constraintRight_toRightOf="@id/iv_next_chapter" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+            <ImageView android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_comic_luminance" />
+            <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/ck_luminance" android:background="@drawable/selector_30_30_circle_check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_storage_system" />
+        </LinearLayout>
+        <View android:layout_width="wrap_content" android:layout_height="@dimen/len_10" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_64">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/len_100" android:text="@string/common_comics_page_direction" />
+            <TextView android:textSize="@dimen/font_14" android:gravity="center" android:id="@id/tv_normal" android:tag="binding_1" android:paddingLeft="@dimen/dp_5" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/dp_5" android:paddingBottom="@dimen/len_12" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_64" android:text="@string/common_button_simple_mode" />
+            <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_manga" android:tag="binding_2" android:paddingLeft="@dimen/dp_5" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/dp_5" android:paddingBottom="@dimen/len_12" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_64" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_comics_to_the_right" />
+            <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_scroll" android:tag="binding_3" android:paddingLeft="@dimen/dp_5" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/dp_5" android:paddingBottom="@dimen/len_12" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_64" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_comics_downward" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_65">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/len_100" android:text="@string/common_comics_screen" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_portrait_landscape_vertical" android:tag="binding_4" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_40" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_portrait_landscape_land" android:tag="binding_5" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/len_100" android:text="@string/common_comics_layout" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_layout_common" android:tag="binding_6" android:layout_width="0.0dip" android:layout_height="@dimen/len_40" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_layout_common" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_player_default" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_8" android:layout_width="0.0dip" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_9" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_layout_single" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_single_page" />
+            </LinearLayout>
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/len_9" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/len_100" android:text="@string/common_comics_zoom_mode" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_custom" android:tag="binding_10" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_66">
+                <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_zoom_custom" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_option_custom" />
+                <TextView android:textSize="@dimen/font_10" android:gravity="center_horizontal" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_long_press_edit" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_13" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_66" android:layout_marginLeft="@dimen/len_10">
+                <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_zoom_height" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_match" />
+                <TextView android:textSize="@dimen/font_10" android:gravity="center_horizontal" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_f7d71d2313" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_16" android:layout_width="@dimen/len_81" android:layout_height="@dimen/len_66" android:layout_marginLeft="@dimen/len_10">
+                <TextView android:textSize="@dimen/font_14" android:gravity="center_horizontal" android:id="@id/tv_zoom_width" android:tag="binding_17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_match" />
+                <TextView android:textSize="@dimen/font_10" android:gravity="center_horizontal" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_33ca628253" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

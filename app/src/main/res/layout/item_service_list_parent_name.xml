@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/len_156" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llName" android:layout_width="@dimen/len_156" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ivServiceParentArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_gray_arrow_down_10_6" />
+        <ImageView android:id="@id/ivServiceParentIcon" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginLeft="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvServiceParentName" android:paddingLeft="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_15" android:maxLines="1" />
+    </LinearLayout>
+    <View android:background="@color/color_cccccc" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</LinearLayout>

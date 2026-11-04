@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_baby_album_feed_top_a2_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/contentRl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_26" android:layout_marginRight="@dimen/len_15">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/thumbIv" android:tag="binding_1" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/len_2" android:scaleType="centerCrop" app:cornerLeftTop="true" app:cornerRadius="@dimen/len_8" app:cornerRightTop="true" app:imageHeight="1" app:imageWidth="3" />
+        <View android:tag="binding_2" android:background="@drawable/shape_album_selected_bg_top_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/thumbIv" android:layout_alignBottom="@id/thumbIv" android:layout_alignStart="@id/thumbIv" android:layout_alignEnd="@id/thumbIv" />
+        <CheckBox android:id="@id/cb_select" android:tag="binding_3" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:tag="binding_4" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumbIv" />
+        <ImageView android:tag="binding_5" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+        <View android:tag="binding_6" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/len_0" android:layout_marginLeft="@dimen/len_10" android:layout_alignTop="@id/contentRl" android:layout_alignBottom="@id/contentRl">
+        <ImageView android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_6" />
+        <View android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

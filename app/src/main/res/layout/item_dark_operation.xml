@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_dark_operation_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_icon" android:tag="binding_1" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/common_dark_subtitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_toRightOf="@id/iv_icon" android:layout_centerVertical="true" />
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/pb_right" android:tag="binding_3" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_dark" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

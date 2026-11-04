@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_modify_samba_mount_point_name_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/tvSubtitle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/modify_mount_point_name_page_subtitle" android:lineSpacingExtra="@dimen/len_7" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+    <View android:id="@id/viewSeparate" android:layout_below="@id/tvSubtitle" style="@style/topBigTitleSeparatorLine" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/viewSeparate" />
+    <include layout="@layout/layout_loading" />
+</RelativeLayout>

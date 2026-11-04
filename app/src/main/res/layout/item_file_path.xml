@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:id="@id/tvName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+    <TextView android:textSize="@dimen/len_11" android:textColor="@color/color_99ffffff" android:id="@id/tvPath" android:paddingTop="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+</LinearLayout>

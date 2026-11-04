@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="4" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutEdit" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:textColorHint="@color/color_333333" android:id="@id/etText" android:background="@color/transparent_bg" android:padding="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/len_5" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/input_edit_text_cursor" />
+        <ImageView android:id="@id/ivClear" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:src="@drawable/icon_clear_gray_28" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvContent" android:padding="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/len_4" />
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_425FFF" android:id="@id/tvMore" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

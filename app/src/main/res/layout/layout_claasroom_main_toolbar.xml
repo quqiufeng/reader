@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_navigation" android:tag="layout/layout_claasroom_main_toolbar_0" android:background="@color/toolbar_color" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:gravity="center" android:id="@id/tv_nav_left" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_45" android:layout_marginRight="@dimen/len_45" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_nav_title_icon" android:tag="binding_3" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper" />
+    </LinearLayout>
+    <ImageView android:tag="binding_4" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_add_black2_44" android:scaleType="fitCenter" android:layout_toStartOf="@id/setting" />
+    <ImageView android:id="@id/setting" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_setting_black_44" android:layout_alignParentEnd="true" />
+    <ImageView android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

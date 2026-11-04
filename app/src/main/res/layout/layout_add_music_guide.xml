@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center|right" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:background="@drawable/stroke_frame" android:padding="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:text="@string/common_music_662fb7de75" android:lineSpacingExtra="@dimen/len_3" />
+    <ImageView android:padding="@dimen/len_5" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_7" android:layout_marginBottom="@dimen/len_7" android:src="@drawable/music_guide_icon" />
+    <ImageView android:id="@id/ivIcon" android:background="@drawable/bg_solid_ffffff_radius_40" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_7" android:layout_marginBottom="@dimen/len_42" android:src="@drawable/icon_music_play_list" />
+</LinearLayout>

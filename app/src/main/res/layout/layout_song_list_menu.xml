@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_action" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:gravity="center_vertical" android:id="@id/selectLayout" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSelect" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_choice_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvSelect" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_audiobook_multi_select" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/downloadAllLayout" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivDownloadAll" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_download_black_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvDownloadAll" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_103574e1af" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_rename" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_menu_clear" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_rename_enable_black" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_menu_clear" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_rename" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_album_info" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_music_album_info" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_album_album_details" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_delete" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_delete_black" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvDelete" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_3e2878592e" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_share" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:background="@drawable/icon_music_share_2" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_playlist_shared" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_manager" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_pause_or_start" android:background="@drawable/icon_manage_black" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvPlaylistInfo" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_playlist_mannage" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/menu_remove" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_music_moveout_24_24_enable" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_remove_from_playlist" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

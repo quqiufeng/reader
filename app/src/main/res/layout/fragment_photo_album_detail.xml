@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_photo_album_detail_0" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.photo.view.TimelineRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srlEnableLoadMore="false" app:srlEnableRefresh="false">
+            <com.zentraedi.business.extendedview.ExtendedRecycleView android:scrollbarThumbVertical="@color/transparent_bg" android:id="@id/rv_picture_content" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:scrollBarPanel="@layout/scrollbarpanel" app:smallPanel="@layout/small_scrollbarpanel" />
+        </com.zentraedi.photo.view.TimelineRefreshLayout>
+        <include android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/fragment_picture_empty" />
+    </RelativeLayout>
+</RelativeLayout>

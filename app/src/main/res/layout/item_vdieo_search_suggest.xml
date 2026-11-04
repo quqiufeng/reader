@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_vdieo_search_suggest_0" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_40"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvText" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.0" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_top_left" />
+</LinearLayout>

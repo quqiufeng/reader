@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_change_location_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/mapContentFl" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:paddingBottom="@dimen/len_30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_current_location" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bg_gradient_99000000_66000000_40000000" android:layout_width="fill_parent" android:layout_height="@dimen/len_140">
+            <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/backIv" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_white" />
+                <TextView android:textColor="@color/common_white" android:id="@id/confirmTv" android:background="@drawable/button_selector_2" android:paddingTop="@dimen/len_7" android:paddingBottom="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/common_button_ok" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <FrameLayout android:id="@id/showSearchLayoutFl" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_80" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:gravity="center_vertical" android:id="@id/searchLayoutTv" android:tag="binding_2" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_10" android:text="@string/common_photos_60125efc81" android:drawableStart="@drawable/icon_search_gray_36_36" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/searchLayoutLl" android:background="@drawable/shape_add_album" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="570.0dip" android:layout_alignParentBottom="true" app:behavior_peekHeight="80.0dip" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <View android:layout_gravity="center_horizontal" android:background="@drawable/shape_e4e4e4_radius_5" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_3" android:layout_marginTop="@dimen/len_5" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_14">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_f4f4f4_radius_8" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginStart="@dimen/len_15" android:layout_toStartOf="@id/closeIv">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_nas_search" />
+                <com.zentraedi.business.view.BaseEditText android:textSize="14.0sp" android:textColor="@color/color_333333" android:textColorHint="@color/color_999999" android:id="@id/etSearchContent" android:tag="binding_3" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_6" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/common_photos_60125efc81" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/input_edit_text_cursor" />
+                <ImageView android:id="@id/ivClearInput" android:tag="binding_4" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+            </LinearLayout>
+            <ImageView android:id="@id/closeIv" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/contentRv" android:paddingBottom="@dimen/len_50" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_10" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

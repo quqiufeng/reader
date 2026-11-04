@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_file_home_more_serve_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_82"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:tag="binding_1" style="@style/file_home_item_layout_style">
+        <ImageView android:tag="binding_2" style="@style/file_home_normal_item_image_view_style" />
+        <TextView android:tag="binding_3" android:layout_marginTop="@dimen/len_6" style="@style/file_home_item_layout_text_view_style" />
+    </LinearLayout>
+    <LinearLayout android:tag="binding_4" style="@style/file_home_item_layout_style">
+        <ImageView android:tag="binding_5" style="@style/file_home_normal_item_image_view_style" />
+        <TextView android:tag="binding_6" android:layout_marginTop="@dimen/len_6" style="@style/file_home_item_layout_text_view_style" />
+    </LinearLayout>
+    <LinearLayout android:tag="binding_7" style="@style/file_home_item_layout_style">
+        <ImageView android:tag="binding_8" style="@style/file_home_normal_item_image_view_style" />
+        <TextView android:tag="binding_9" android:layout_marginTop="@dimen/len_6" style="@style/file_home_item_layout_text_view_style" />
+    </LinearLayout>
+    <LinearLayout android:tag="binding_10" style="@style/file_home_item_layout_style">
+        <ImageView android:tag="binding_11" style="@style/file_home_normal_item_image_view_style" />
+        <TextView android:tag="binding_12" android:layout_marginTop="@dimen/len_6" style="@style/file_home_item_layout_text_view_style" />
+    </LinearLayout>
+</LinearLayout>

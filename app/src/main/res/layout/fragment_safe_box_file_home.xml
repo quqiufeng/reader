@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:tag="layout/fragment_safe_box_file_home_0" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_4" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutFile" android:background="@drawable/bg_card_file" android:layout_width="0.0dip" android:layout_height="@dimen/len_96" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/iocn_safe_box_folder45" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_files" />
+    </LinearLayout>
+    <androidx.legacy.widget.Space android:layout_width="@dimen/len_15" android:layout_height="0.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutNote" android:background="@drawable/bg_card_note" android:layout_width="0.0dip" android:layout_height="@dimen/len_96" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/iocn_safe_box_note" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_app_memo" />
+    </LinearLayout>
+</LinearLayout>

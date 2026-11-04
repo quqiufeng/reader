@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_disk_index_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/tv_video_size" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:tag="binding_2" android:background="@drawable/icon_arrow_black_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_12" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_temperature" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_temp" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/setting_basic_item_title" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_utilzation" android:includeFontPadding="false" />
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@id/chart_disk_busy" android:layout_width="fill_parent" android:layout_height="166.0dip" />
+    </LinearLayout>
+    <TextView android:gravity="center" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/len_100" android:text="@string/setting_string_key_266" />
+</LinearLayout>

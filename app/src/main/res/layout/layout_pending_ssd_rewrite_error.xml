@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_pending_ssd_rewrite_error_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_26" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvTitle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_58" android:includeFontPadding="false" android:layout_below="@id/iv_back" android:layout_centerHorizontal="true" />
+    <ScrollView android:id="@id/svContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_above="@id/rlBottom" android:layout_below="@id/tvTitle">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/layoutGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_32" layout="@layout/layout_pending_rewrite_error_ssd_group" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:lineSpacingExtra="@dimen/len_6" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_red" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20" android:lineSpacingExtra="@dimen/len_6" />
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:text="@string/ssddata_string_key_46" android:lineSpacingExtra="@dimen/len_7" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20">
+                    <View android:background="@drawable/shape_circle_666666" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/ssddata_string_key_47" android:lineSpacingExtra="@dimen/len_7" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20">
+                    <View android:background="@drawable/shape_circle_666666" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_nas_string_key_1639_res" android:lineSpacingExtra="@dimen/len_7" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/ssddata_string_key_7" android:lineSpacingExtra="@dimen/len_7" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/rlBottom" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/layout_ssd_pending_bottom_shutdown_restart_force_rewrite" />
+        <include layout="@layout/layout_ssd_pending_bottom_shutdown_restart_force_invalid" />
+    </RelativeLayout>
+</RelativeLayout>

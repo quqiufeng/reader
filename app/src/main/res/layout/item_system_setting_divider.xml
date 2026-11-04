@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_system_setting_divider_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:tag="binding_1" android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/len_15" />
+    <View android:tag="binding_2" android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/len_46" />
+    <View android:tag="binding_3" android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+</FrameLayout>

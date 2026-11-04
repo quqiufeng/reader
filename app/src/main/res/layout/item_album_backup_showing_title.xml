@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_album_backup_showing_title_0" style="@style/item_check_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backup_detail_doing_backup_title" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_15" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/contentLl" android:tag="layout/timeline_operate_item_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:id="@id/tvSort" android:tag="binding_1" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" app:medium_bold="true" />
+    <ImageView android:tag="binding_2" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginStart="@dimen/apply_pad_common_left_right_15">
+        <ImageView android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_select_black_44_selector_2" android:forceDarkAllowed="false" />
+        <ImageView android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:forceDarkAllowed="false" />
+        <ImageView android:id="@id/iv_filter_icon" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_filter_black_selector" android:layout_marginEnd="@dimen/len_4" android:forceDarkAllowed="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/eSataDiskCl" android:tag="layout/item_unused_learn_more_0" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_425FFF" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/icon_arrow_blue_6_9" android:drawablePadding="@dimen/len_5" />
+</FrameLayout>

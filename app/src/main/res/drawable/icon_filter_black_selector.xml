@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:state_selected="true" android:drawable="@drawable/icon_filtered_black_disable_44" />
+    <item android:state_enabled="true" android:state_selected="true" android:drawable="@drawable/icon_filtered_black_44" />
+    <item android:state_enabled="false" android:state_selected="false" android:drawable="@drawable/icon_filter_black_disable_44" />
+    <item android:drawable="@drawable/icon_filter_black_44" />
+</selector>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_esata_switch_disk_ready_error_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_20" android:layout_above="@id/buttonFl">
+        <ScrollView android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/len_20" android:fillViewport="true">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:background="@drawable/shape_solid_80f4f4f4_stroke_80e4e4e4_radius_8" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/blueRightIv" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_11" android:layout_marginTop="@dimen/len_37" android:src="@drawable/icon_arrow_4_blue_right" android:layout_centerHorizontal="true" />
+                        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_20" android:layout_toLeftOf="@id/blueRightIv">
+                            <RelativeLayout android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_85">
+                                <ImageView android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_80" android:src="@drawable/icon_disk_vertical_green_44_85" />
+                                <TextView android:textColor="#d9cccccc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_11" android:layout_marginBottom="@dimen/len_5" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                            </RelativeLayout>
+                            <TextView android:textColor="@color/color_666666" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" />
+                            <TextView android:textColor="@color/color_666666" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_toRightOf="@id/blueRightIv">
+                            <RelativeLayout android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_85">
+                                <ImageView android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_80" android:src="@drawable/icon_disk_vertical_green_44_85" />
+                                <TextView android:textColor="#d9cccccc" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_11" android:layout_marginBottom="@dimen/len_5" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                            </RelativeLayout>
+                            <TextView android:textColor="@color/color_666666" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" />
+                            <TextView android:textColor="@color/color_666666" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_14" android:id="@id/desc2Tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:layout_marginTop="@dimen/len_30" android:src="@drawable/icon_common_option_failed" />
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_50" android:text="@string/common_disk_migration_drive_to_be_migrated" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:text="@string/common_disk_migration_target_drive_for_data_write" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:text="@string/common_disk_migration_pls_complete_steps_and_click_retry" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+                    <LinearLayout android:orientation="horizontal" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_9">
+                        <ImageView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_9" android:src="@drawable/shape_circle_5_333333_bg" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_6" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+                        <ImageView android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_9" android:src="@drawable/shape_circle_5_333333_bg" />
+                        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_disk_migration_ensure_target_drive_for_expansion_unit" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_6" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_90" android:text="@string/common_prompt_if_retry_fails_pls_contact_wechat_official_account" />
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+        <LinearLayout android:id="@id/cbLl" android:tag="binding_15" android:background="@drawable/bg_white_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/len_90" android:layout_alignParentBottom="true">
+            <CheckBox android:textColor="@color/color_cc666666" android:gravity="center" android:id="@id/checkBox" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_12" android:layout_marginTop="@dimen/len_40" android:button="@drawable/selector_30_30_circle_check_box" android:text="@string/common_disk_migration_confirm_above_steps_completed" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/buttonFl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/llBottom">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tvNext" android:tag="binding_16" android:background="@drawable/blue_btn_selector_radius_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_20" android:text="@string/common_disk_migration_623199de10" />
+        <TextView android:enabled="false" android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tvStart" android:tag="binding_17" android:background="@drawable/blue_btn_selector_radius_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_20" android:text="@string/common_button_try_again" />
+    </FrameLayout>
+    <include android:id="@id/llBottom" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" android:layout_marginBottom="@dimen/len_10" android:layout_alignParentBottom="true" layout="@layout/layout_cancel_or_help" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layoutNavigation" layout="@layout/layout_loading" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_user_data_0" android:background="@drawable/custom_divider_user_center" android:paddingTop="@dimen/apply_pad_item_top_bottom_18" android:paddingBottom="@dimen/apply_pad_item_top_bottom_18" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_user_center_avatar" android:tag="binding_1" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_19" app:imageHeight="1" app:imageWidth="1" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/font_14" android:textColor="#ff333333" android:id="@id/tv_user_center_user_name" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_12" android:id="@id/tv_user_center_state" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <View android:id="@id/line_user_center" android:background="#ff9e9e9e" android:layout_width="0.5dip" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_7" android:layout_marginRight="@dimen/len_7" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/user_center_state_normal" android:id="@id/tv_user_center_status" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <View android:id="@id/line_net_status" android:tag="binding_5" android:background="#ff9e9e9e" android:layout_width="0.5dip" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_7" android:layout_marginRight="@dimen/len_7" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/user_center_state_normal" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_348" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/iv_user_center_right_arrow" android:tag="binding_7" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/right_arrow" />
+</LinearLayout>

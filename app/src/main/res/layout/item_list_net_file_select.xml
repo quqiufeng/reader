@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:paddingTop="@dimen/apply_pad_common_top_bottom_phone_0_pad_17" android:paddingBottom="@dimen/apply_pad_common_top_bottom_phone_0_pad_17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingEnd="@dimen/apply_pad_common_left_right_phone_0_pad_5">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/len_13" android:paddingBottom="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <CheckBox android:id="@id/cbSelect" android:visibility="gone" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/len_8" android:layout_marginTop="@dimen/len_5" android:button="@drawable/selector_32_32_circle_check_box" />
+                <ImageView android:id="@id/ivFileIcon" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_10" android:scaleType="centerCrop" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:ellipsize="middle" android:id="@id/tvFileName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_6" />
+                <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:id="@id/tvFileDesc" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <ImageView android:id="@id/ivNext" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_arrow_gray" android:scaleType="center" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/cover" android:background="@color/color_99ffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

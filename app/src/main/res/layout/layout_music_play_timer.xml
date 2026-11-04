@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_music_timer" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutPlayCurrent" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_current" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_music_timer_current" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutPlayTwo" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_two_later" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_music_timer_after_2" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutPlayThree" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_three_later" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_music_timer_after_3" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_15_minutes" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_15_minutes" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_audiobook_timer_15mins" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:layout_gravity="center_vertical" android:id="@id/tv_15_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_30_minutes" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_30_minutes" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_audiobook_timer_30mins" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:layout_gravity="center_vertical" android:id="@id/tv_30_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_60_minutes" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_60_minutes" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_audiobook_timer_60mins" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:layout_gravity="center_vertical" android:id="@id/tv_60_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_cancel" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_unselect_2" />
+                <ImageView android:id="@id/iv_cancel" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_24_24_circle_select_2" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_music_timer_cancel" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

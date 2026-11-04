@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/layoutVideo" android:background="@color/white" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center_vertical" android:id="@id/tvVideo" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/business_string_key_388" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" />
+    </LinearLayout>
+    <View android:id="@id/line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/layoutForum" android:background="@color/white" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center_vertical" android:id="@id/tvForum" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/business_string_key_389" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivForum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" />
+    </LinearLayout>
+    <View android:id="@id/shadow" android:background="@drawable/cutom_white_bottom_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+</LinearLayout>

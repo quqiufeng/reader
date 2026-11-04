@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollLayout" android:tag="layout/activity_storage_management_main_new_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/nas_white" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/item_storage_management_sata" />
+        <include layout="@layout/item_storage_management_ssd" />
+        <include layout="@layout/item_storage_management_esata" />
+    </LinearLayout>
+</ScrollView>

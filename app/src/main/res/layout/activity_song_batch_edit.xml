@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_song_batch_edit_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <ImageView android:background="@drawable/music_backdrop" android:layout_width="fill_parent" android:layout_height="@dimen/len_260" />
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:tag="binding_1" android:background="@color/transparent_bg" android:paddingTop="@dimen/len_34" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:contentScrim="@color/transparent_bg" tl:layout_scrollFlags="scroll|exitUntilCollapsed" tl:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:id="@id/headerLayout" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:layout_collapseMode="parallax" tl:layout_collapseParallaxMultiplier="0.0">
+                <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvTitle" android:paddingTop="@dimen/len_54" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_0cb74721e0" android:maxLines="1" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_583af908c2" android:lineSpacingExtra="@dimen/len_4" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" tl:contentInsetEnd="0.0dip" tl:contentInsetStart="0.0dip" tl:layout_collapseMode="pin">
+                <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black_2" />
+                    <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/color_333333" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:paddingLeft="@dimen/len_88" android:paddingRight="@dimen/len_88" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_music_0cb74721e0" android:singleLine="true" android:alpha="0.0" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <View style="@style/topBigTitleSeparatorLine" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_91" tl:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout android:layout_gravity="bottom" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91">
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvButton" android:tag="binding_2" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:text="@string/common_button_save" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

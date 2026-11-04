@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_file_default_sort_by_setting_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_23" android:text="@string/common_file_settings_default_sort" />
+    <RadioGroup android:orientation="vertical" android:id="@id/defaultSortRg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/titleTv">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <RadioButton android:id="@id/updateTimeDescRb" android:tag="binding_1" android:layout_marginLeft="@dimen/len_8" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_modified_time" android:drawableLeft="@drawable/arrow_list_dialog_up" android:layout_toRightOf="@id/updateTimeDescRb" />
+            <RadioButton android:id="@id/updateTimeAscRb" android:tag="binding_2" android:layout_marginLeft="@dimen/len_194" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_modified_time" android:drawableLeft="@drawable/arrow_list_dialog_down" android:layout_toRightOf="@id/updateTimeAscRb" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <RadioButton android:id="@id/nameAscRb" android:tag="binding_3" android:layout_marginLeft="@dimen/len_8" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_name" android:drawableLeft="@drawable/arrow_list_dialog_up" android:layout_toRightOf="@id/nameAscRb" />
+            <RadioButton android:id="@id/nameDescRb" android:tag="binding_4" android:layout_marginLeft="@dimen/len_194" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_name" android:drawableLeft="@drawable/arrow_list_dialog_down" android:layout_toRightOf="@id/nameDescRb" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <RadioButton android:id="@id/sizeAscRb" android:tag="binding_5" android:layout_marginLeft="@dimen/len_8" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_size" android:drawableLeft="@drawable/arrow_list_dialog_up" android:layout_toRightOf="@id/sizeAscRb" />
+            <RadioButton android:id="@id/sizeDescRb" android:tag="binding_6" android:layout_marginLeft="@dimen/len_194" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_size" android:drawableLeft="@drawable/arrow_list_dialog_down" android:layout_toRightOf="@id/sizeDescRb" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <RadioButton android:id="@id/typeNameAscRb" android:tag="binding_7" android:layout_marginLeft="@dimen/len_8" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_type" android:drawableLeft="@drawable/arrow_list_dialog_up" android:layout_toRightOf="@id/typeNameAscRb" />
+            <RadioButton android:id="@id/typeNameDescRb" android:tag="binding_8" android:layout_marginLeft="@dimen/len_194" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_m_8" android:text="@string/common_sort_type" android:drawableLeft="@drawable/arrow_list_dialog_down" android:layout_toRightOf="@id/typeNameDescRb" />
+        </RelativeLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_12" />
+    </RadioGroup>
+</RelativeLayout>

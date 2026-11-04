@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/selector_file_manager_navigation_list" android:id="@id/action_list" android:title="@string/common_button_files" />
+    <item android:icon="@drawable/selector_file_manager_navigation_discover" android:id="@id/action_discover" android:title="@string/common_button_discover" />
+    <item android:icon="@drawable/selector_file_manager_navigation_setting" android:id="@id/action_settings" android:title="@string/common_button_settings" />
+</menu>

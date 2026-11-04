@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/fragment_playlist_add_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_42">
+            <ImageView android:id="@id/ivBack" android:tag="binding_2" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" />
+            <View android:id="@id/view_separate" android:background="@drawable/icon_bt_path_split" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_28" android:layout_marginLeft="@dimen/len_2" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvPath" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <View android:tag="binding_3" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:tag="binding_4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSearch" android:background="@drawable/shape_f4f4f4_radius_8" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginRight="@dimen/len_57">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_home_page_search" />
+                <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:paddingLeft="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_4b84d60e65" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:layout_gravity="right" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_search" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:tag="binding_5" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_46">
+            <CheckBox android:id="@id/cbSelectAll" android:tag="binding_6" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/checkbox_selector_30" />
+            <TextView android:textSize="@dimen/len_16" android:id="@id/tvContentNumber" android:tag="binding_7" android:paddingLeft="@dimen/len_5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivFilter" android:tag="binding_8" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_sort_name_asc_v2_enable" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" android:forceDarkAllowed="false" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_71">
+                <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rvFile" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            <FrameLayout android:layout_gravity="bottom" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_71">
+                <TextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvButton" android:tag="binding_9" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:text="@string/common_button_ok" />
+            </FrameLayout>
+            <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/layoutStatus" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/loadingLayout" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+    </FrameLayout>
+</FrameLayout>

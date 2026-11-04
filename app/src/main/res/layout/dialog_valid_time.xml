@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:tag="layout/dialog_valid_time_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/share_time_duoration" android:gravity="center_vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_file_share_expiration_date" android:layout_weight="1.0" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/tv_close" android:background="@drawable/icon_popup_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/cb_valid_time_three" android:tag="binding_2" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/threeDaysTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_share_code_valid_three" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_valid_time_five" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/cb_valid_time_five" android:tag="binding_4" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/fiveDaysTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_share_code_valid_five" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/cb_valid_time_seven" android:tag="binding_6" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/sevenDaysTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_share_code_valid_seven" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <CheckBox android:id="@id/cb_valid_time_thirty" android:tag="binding_8" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/thirtyDaysTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_share_code_valid_thirty" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginBottom="@dimen/len_34">
+        <CheckBox android:id="@id/cb_valid_time_six_month" android:tag="binding_10" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/sixMonthsTv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginBottom="@dimen/len_34">
+        <CheckBox android:id="@id/cb_valid_time_permanent" android:tag="binding_12" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/select_blue_24" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/permanentTv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

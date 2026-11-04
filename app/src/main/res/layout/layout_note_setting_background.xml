@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_note_setting_background_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_notepad_settings_background" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_50" android:layout_marginTop="@dimen/len_12">
+        <RelativeLayout android:tag="binding_1" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:tag="binding_2" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_gray2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_118" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_3" android:background="@drawable/shape_e8ecf5_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10">
+            <View android:tag="binding_4" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_119" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_5" android:background="@drawable/shape_dfe6df_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:tag="binding_6" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_120" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_50" android:layout_marginTop="@dimen/len_10">
+        <RelativeLayout android:tag="binding_7" android:background="@drawable/shape_fae5f0_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:tag="binding_8" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_121" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_9" android:background="@drawable/shape_e9e3f4_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10">
+            <View android:tag="binding_10" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_122" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_11" android:background="@drawable/shape_f8f1e8_radius_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:tag="binding_12" android:background="@drawable/shape_blue_stroke_radius_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_123" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

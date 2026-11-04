@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/contentRoot" android:tag="layout/fragment_music_set_tab_0" android:background="@color/white" android:paddingBottom="@dimen/bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <ImageView android:background="@drawable/music_backdrop" android:layout_width="fill_parent" android:layout_height="@dimen/len_260" />
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/transparent_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:contentScrim="@color/transparent_bg" tl:layout_scrollFlags="scroll|exitUntilCollapsed" tl:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:id="@id/headerLayout" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:layout_collapseMode="parallax" tl:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tvTitle" android:paddingBottom="@dimen/top_big_title_separate_line_margin_top_15" android:text="@string/common_button_settings" tl:medium_bold="true" style="@style/bigTitleTextView" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_2" android:background="@color/transparent_bg" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" tl:contentInsetStart="0.0dip" tl:layout_collapseMode="pin">
+                <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_home_black" />
+                    <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_111111" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_button_settings" android:singleLine="true" android:alpha="0.0" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <FrameLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/headLine" android:background="@color/day_line_music" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" tl:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_60" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rlMusicPlayListManage" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_playlist_mannage" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/addMusicToZMusicRl" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_64">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_content_management" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rlNetWarn" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_90">
+                <RelativeLayout android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/swNet">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:id="@id/tvMusicNetTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_290de8de59" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:id="@id/tvMusicNetDesc" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_558060a4f5" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <Switch android:textColor="@color/common_title" android:layout_gravity="center|right" android:id="@id/swNet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_17" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:thumb="@drawable/selector_gray_switch_select_bg" android:layout_alignParentRight="true" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" android:forceDarkAllowed="false" />
+                </RelativeLayout>
+                <View android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/layoutLrc" android:tag="binding_3" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/swLrcSmart">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_c6230c6ea6" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lrc_smart_tips" android:includeFontPadding="false" />
+                </LinearLayout>
+                <Switch android:textColor="@color/common_title" android:layout_gravity="center|right" android:id="@id/swLrcSmart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_17" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:thumb="@drawable/selector_gray_switch_select_bg" android:layout_alignParentRight="true" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" android:forceDarkAllowed="false" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutCache" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_32774ebaf7" android:includeFontPadding="false" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </FrameLayout>
+            <RelativeLayout android:id="@id/fl_float" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/sw_float">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_372150676c" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_ad9692b545" android:includeFontPadding="false" />
+                </LinearLayout>
+                <Switch android:textColor="@color/common_title" android:layout_gravity="center|right" android:id="@id/sw_float" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_17" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:thumb="@drawable/selector_gray_switch_select_bg" android:layout_alignParentRight="true" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" android:forceDarkAllowed="false" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSongNameSet" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/ll_rule">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_settings_display_song_title" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_edea674cbe" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/ll_rule" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvSongNameSet" android:paddingRight="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_1a2b604b1e" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_16_24" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_64">
+                <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_home_setting" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_movies_049036d589" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_16_24" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutFormat" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/ll_quality">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_e2f5347878" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_72886fb4af" android:includeFontPadding="false" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/ll_quality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_90">
+                <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutDolbySound" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_audiobook_sound_effect_settings" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_deb8c83291" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:id="@id/tvSoundEffect" android:paddingRight="@dimen/len_7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_filter_audio_dolby_atmos" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                </FrameLayout>
+                <View android:layout_gravity="bottom" android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMediaLibraryService" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_media_library_service" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_allow_software_access_library" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@id/layoutDatabaseMigration" android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+                <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_databasemigration" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+            <View android:layout_gravity="bottom" android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <RelativeLayout android:id="@id/rlMusicFormat" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_80">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_15" android:layout_toLeftOf="@id/iv_support">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:id="@id/tvTypeTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_audiobook_support_format_description_title" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:id="@id/tvMusicTypeDesc" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_d9e46cdb27" android:includeFontPadding="false" android:layout_below="@id/tvTypeTitle" />
+                </LinearLayout>
+                <ImageView android:id="@id/iv_support" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMusicTips" android:tag="binding_4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_settings_usage_instructions" android:includeFontPadding="false" />
+                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" />
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_64">
+                <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutUploadLog" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_111111" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_music_2805251b3e" android:includeFontPadding="false" />
+                    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" />
+                </FrameLayout>
+                <View android:layout_gravity="bottom" android:background="@color/line_thick_f4f6fa_night_111111" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_family_add_pub_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_81"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_select" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_65" android:layout_marginTop="@dimen/len_10" />
+    <RelativeLayout android:id="@id/rlIcon" android:background="@drawable/shape_album_thumb" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_65" android:layout_marginTop="@dimen/len_8" android:layout_toRightOf="@id/iv_select">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_icon" android:tag="binding_2" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_65" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_5" />
+        <ImageView android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icon_album_placeholder" android:layout_alignTop="@id/iv_icon" android:layout_alignBottom="@id/iv_icon" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:layout_toLeftOf="@id/iv_goto" android:layout_toRightOf="@id/rlIcon">
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="20.0" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_title" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="12.0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="20.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_goto" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_27" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" />
+    <View android:tag="binding_7" android:layout_width="@dimen/len_40" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_120" android:layout_alignParentBottom="true" />
+</RelativeLayout>

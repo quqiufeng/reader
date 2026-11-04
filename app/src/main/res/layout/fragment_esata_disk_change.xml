@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_esata_disk_change_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/font_28" android:textStyle="bold" android:textColor="@color/color_ff262528" android:gravity="center" android:id="@id/tv_title" android:tag="binding_2" android:paddingTop="@dimen/len_58" android:layout_width="401.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_666666" android:gravity="center" android:id="@id/tvSubtitle" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_25" android:layout_centerHorizontal="true" />
+        <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rv_content" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_16" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rv_content" layout="@layout/layout_esata_change_middle_1" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+        <include layout="@layout/layout_esata_change_bottom_continue_dilate_reset" />
+        <include layout="@layout/layout_esata_change_bottom_continue_reset" />
+        <include layout="@layout/layout_esata_change_bottom_continue_reset2" />
+        <include layout="@layout/layout_esata_change_bottom_continue_reset3" />
+        <include layout="@layout/layout_esata_change_bottom_continue_reset4" />
+        <include layout="@layout/layout_esata_change_bottom_continue_handlenew_reset2" />
+        <include layout="@layout/layout_esata_change_bottom_continue_handlenew_reset" />
+        <include layout="@layout/layout_esata_change_bottom_continue_remove_reset" />
+        <include layout="@layout/layout_esata_change_bottom_continue_remove_reset2" />
+        <include layout="@layout/layout_esata_change_bottom_dilate_remove_reset" />
+        <include layout="@layout/layout_esata_change_bottom_handlenew_remove_reset" />
+        <include layout="@layout/layout_esata_change_bottom_remove_reset" />
+        <include layout="@layout/layout_esata_change_bottom_remove_restart" />
+        <include layout="@layout/layout_esata_change_disable_continue" />
+    </LinearLayout>
+    <include layout="@layout/layout_loading" />
+    <com.zentraedi.business.widget.DragFloatButton android:id="@id/fab" android:tag="binding_6" android:layout_width="@dimen/len_70" android:layout_height="@dimen/len_70" android:layout_marginTop="@dimen/len_44" android:layout_marginRight="@dimen/apply_pad_common_left_right_5" android:src="@drawable/icon_flaot_help_center_70" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+</RelativeLayout>

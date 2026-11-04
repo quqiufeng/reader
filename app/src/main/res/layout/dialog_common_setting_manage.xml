@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:tag="layout/dialog_common_setting_manage_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_monitor_device_management" android:layout_centerVertical="true" app:medium_bold="true" />
+            <ImageView android:id="@id/tv_close_dialog" android:tag="binding_1" android:background="@drawable/icon_close_gray_44" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_0" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <RelativeLayout android:id="@id/rl_transfer_setting" android:tag="binding_2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <TextView android:id="@id/tv_transfer" android:background="@drawable/icon_transfer_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_sign_out" android:layout_toRightOf="@id/tv_transfer" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_remote_close" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <TextView android:id="@id/tv_remote_close" android:background="@drawable/icon_remote_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_shut_down" android:layout_toRightOf="@id/tv_remote_close" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_sub_account_remote_close" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <TextView android:id="@id/tv_sub_account_remote_close" android:background="@drawable/icon_remote_close_unable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/cannot_remote_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_shut_down" android:layout_toRightOf="@id/tv_sub_account_remote_close" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <TextView android:id="@id/tv_restart_nas" android:background="@drawable/icon_restart_nas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" style="@style/ignore_dark_mode_style" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_user_restart_deivce" android:layout_toRightOf="@id/tv_restart_nas" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <TextView android:id="@id/tv_sub_account_restart_nas" android:background="@drawable/icon_restart_nas_unable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/cannot_remote_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_user_restart_deivce" android:layout_toRightOf="@id/tv_sub_account_restart_nas" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

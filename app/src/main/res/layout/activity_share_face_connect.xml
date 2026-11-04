@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_share_face_connect_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:minHeight="@dimen/len_400"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:id="@id/tv_wifi_tips" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_425fff" android:id="@id/tv_open_help" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:drawableRight="@drawable/icon_arrow_blue_9_12" android:drawablePadding="@dimen/len_5" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_enable_hotspot" android:layout_width="@dimen/len_160" android:layout_height="@dimen/len_160" android:layout_marginTop="@dimen/len_25" android:layout_marginBottom="@dimen/len_89" />
+</LinearLayout>

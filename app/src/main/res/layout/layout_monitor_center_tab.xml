@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:tag="layout/layout_monitor_center_tab_0" android:background="@color/white" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.legacy.widget.Space android:tag="binding_1" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="3.0" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_bf666666" android:gravity="center" android:tag="binding_2" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:text="@string/monitor_detail_timely_play" android:layout_weight="2.0" />
+    <View android:layout_gravity="center_vertical" android:background="@drawable/shape_e4e4e4_radius_1" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_16" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_bf666666" android:gravity="center" android:tag="binding_3" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:text="@string/monitor_detail_video" android:layout_weight="2.0" />
+    <androidx.legacy.widget.Space android:tag="binding_4" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="3.0" />
+</LinearLayout>

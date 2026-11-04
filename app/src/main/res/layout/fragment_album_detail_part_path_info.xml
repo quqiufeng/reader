@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_album_detail_part_path_info_0" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout_path_content" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" layout="@layout/layout_path" />
+    <TextView android:textSize="@dimen/len_14" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tvPathName" android:paddingLeft="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_46" android:layout_below="@id/layout_path_content" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tvPathName" android:layout_alignParentBottom="true">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_folder_info" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <FrameLayout android:id="@id/albumDetailFl" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tvPathName" />
+    <include android:id="@id/layout_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tvPathName" layout="@layout/layout_list_empty" />
+</RelativeLayout>

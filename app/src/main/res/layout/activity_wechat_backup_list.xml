@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_wechat_backup_list_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:text="@string/common_photos_backup_queue" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView style="@style/topBigTitleSeparatorLine" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="@dimen/len_0" app:layout_collapseMode="pin">
+                <include android:id="@id/toolbar" layout="@layout/common_toolbar" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="horizontal" android:tag="binding_3" android:background="@color/color_FFFAEB" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_40">
+            <TextView android:textColor="@color/color_666666" android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_30" android:layout_marginBottom="@dimen/len_10" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_12" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/iv_tips_close" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/rl_backup_tab" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/tv_backup_process" android:tag="binding_6" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/file_string_key_159" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_backup_process" android:layout_alignLeft="@id/tv_backup_process" android:layout_alignRight="@id/tv_backup_process">
+                <View android:layout_gravity="center" android:id="@id/v_backup_process" android:tag="binding_7" android:background="@drawable/shape_setting_monitor_indicator" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_2" />
+            </FrameLayout>
+            <TextView android:id="@id/tv_backup_fail" android:tag="binding_8" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_26" android:layout_toRightOf="@id/tv_backup_process" />
+            <View android:id="@id/error_tips" android:tag="binding_9" android:background="@drawable/bg_task_fail_red_tip" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginLeft="@dimen/len_2" android:layout_marginTop="@dimen/len_8" android:layout_toRightOf="@id/tv_backup_fail" android:layout_alignTop="@id/tv_backup_fail" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_backup_fail" android:layout_alignLeft="@id/tv_backup_fail" android:layout_alignRight="@id/tv_backup_fail">
+                <View android:layout_gravity="center" android:id="@id/v_download_fail" android:tag="binding_10" android:background="@drawable/shape_setting_monitor_indicator" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_2" />
+            </FrameLayout>
+        </RelativeLayout>
+        <androidx.viewpager.widget.ViewPager android:id="@id/vp_backup" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

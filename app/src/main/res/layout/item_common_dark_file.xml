@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_common_dark_file_0" android:paddingTop="@dimen/apply_pad_item_top_bottom_12" android:paddingBottom="@dimen/apply_pad_item_top_bottom_12" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_head" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_0" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/len_8" android:layout_centerVertical="true" />
+        <FrameLayout android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_5">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:tag="binding_5" android:background="@drawable/shape_album_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cornerRadius="@dimen/len_5" />
+            <View android:layout_gravity="bottom" android:background="@drawable/shape_gradient_black_bottom_corner_5_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_18" />
+            <TextView android:textSize="@dimen/len_10" android:textColor="@color/nas_white" android:layout_gravity="bottom|center|right" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_1" android:includeFontPadding="false" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_7" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_5" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_info" android:tag="binding_8" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/rl_folder_goto" android:layout_toRightOf="@id/ll_head" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center_vertical" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:tag="binding_10" android:paddingTop="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/rl_folder_goto" android:tag="binding_11" android:layout_width="@dimen/len_44" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_light_gray" />
+        <ImageView android:layout_gravity="center" android:tag="binding_13" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_pic_item_more" />
+    </FrameLayout>
+    <View android:tag="binding_14" android:background="@color/transparent_white_foreground" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

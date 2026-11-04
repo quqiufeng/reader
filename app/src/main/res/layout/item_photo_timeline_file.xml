@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_photo_timeline_file_0" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/bg_time_line_file" android:layout_width="@dimen/len_120" android:layout_height="@dimen/len_100">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/iv_image_one" android:tag="binding_1" android:layout_width="@dimen/len_53" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_13" android:scaleType="centerCrop" android:layout_marginStart="@dimen/len_6" app:shapeAppearance="@style/photo_rounded_5" />
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/iv_image_tow" android:tag="binding_2" android:layout_width="@dimen/len_53" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_13" android:scaleType="centerCrop" android:layout_marginStart="@dimen/len_2" android:layout_toEndOf="@id/iv_image_one" app:shapeAppearance="@style/photo_rounded_5" />
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/iv_image_three" android:tag="binding_3" android:layout_width="@dimen/len_53" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_2" android:scaleType="centerCrop" android:layout_below="@id/iv_image_one" android:layout_marginStart="@dimen/len_6" app:shapeAppearance="@style/photo_rounded_5" />
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/iv_image_four" android:tag="binding_4" android:layout_width="@dimen/len_53" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_2" android:scaleType="centerCrop" android:layout_below="@id/iv_image_tow" android:layout_marginStart="@dimen/len_2" android:layout_toEndOf="@id/iv_image_three" app:shapeAppearance="@style/photo_rounded_5" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_000000" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_999999" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

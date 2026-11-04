@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_disk_state_result_0" android:background="@drawable/bg_login_check" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_34" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="150.0" />
+        <ImageView android:id="@id/ivNas" android:tag="binding_2" android:layout_width="@dimen/len_200" android:layout_height="@dimen/len_200" android:scaleType="centerInside" style="@style/ignore_dark_mode_style" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:gravity="center" android:id="@id/tvUserType" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_administrator" />
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_26" android:textColor="@color/color_333333" android:gravity="center" android:paddingBottom="@dimen/len_30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_install_connecting" app:medium_bold="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:gravity="right" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <androidx.legacy.widget.Space android:layout_width="@dimen/len_20" android:layout_height="0.0dip" />
+            <pl.droidsonroids.gif.GifImageView android:layout_gravity="center_horizontal" android:id="@id/ivLoginCheckStateLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <androidx.legacy.widget.Space android:layout_width="@dimen/len_20" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:gravity="left" android:id="@id/tv_nas_devices_name" android:tag="binding_4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="286.0" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvLogout" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_sign_out" />
+            <View android:background="@drawable/shape_cccccc_radius_8" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_15" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvOfflineLogin" android:tag="binding_5" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_offline_mode" />
+            <View android:tag="binding_6" android:background="@drawable/shape_cccccc_radius_8" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_15" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvCheckNetworkStatus" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_network_diagnostics" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="20.0dip" />
+    </LinearLayout>
+</FrameLayout>

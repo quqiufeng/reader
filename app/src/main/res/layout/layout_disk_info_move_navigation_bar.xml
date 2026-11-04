@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_bar_root" android:tag="layout/layout_disk_info_move_navigation_bar_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_left" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="fill_parent" android:src="@drawable/icon_home_black" android:scaleType="centerInside" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_44" android:layout_marginRight="@dimen/len_44">
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivHelp" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper" />
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

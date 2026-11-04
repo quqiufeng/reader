@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_album_search_result_file_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_8" android:layout_marginEnd="@dimen/apply_pad_common_left_right_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.legacy.widget.Space android:tag="binding_1" android:layout_width="@dimen/apply_pad_common_left_right_10" android:layout_height="wrap_content" />
+    <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkBox" android:tag="binding_2" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/selector_30_30_circle_check_box" android:layout_marginStart="@dimen/len_3" android:layout_marginEnd="@dimen/len_8" />
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivContent" android:tag="binding_3" android:layout_width="@dimen/len_109" android:layout_height="@dimen/len_109" android:scaleType="centerCrop" app:imageHeight="1" app:imageWidth="1" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/common_subdesc" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_safety_verify_select_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_26" android:textStyle="bold" android:textColor="@color/title_color" android:gravity="center" android:id="@id/tv_safety_verify_selector_title" android:layout_width="fill_parent" android:layout_height="@dimen/len_72" android:text="@string/safety_verify_selector_title" android:includeFontPadding="false" />
+    <View android:id="@id/line1" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/title_color" android:id="@id/tv_safety_verify_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_20" android:text="@string/common_user_authentication_smscode" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tv_safety_verify_sms_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_8" android:text="@string/common_user_authentication_sendsmscode" android:includeFontPadding="false" android:layout_below="@id/tv_safety_verify_sms" />
+        <ImageView android:id="@id/iv_safety_verify_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_25" android:src="@drawable/icon_arrow_right_12_12" android:layout_alignTop="@id/tv_safety_verify_sms" android:layout_alignBottom="@id/tv_safety_verify_sms_desc" android:layout_alignParentRight="true" />
+        <View android:id="@id/line_sms" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_20" android:layout_below="@id/tv_safety_verify_sms_desc" />
+    </RelativeLayout>
+</LinearLayout>

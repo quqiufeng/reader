@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.readium.r2.navigator.epub.fxl.R2FXLLayout android:id="@id/r2FXLLayout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:focusable="false" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_gravity="center" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <org.readium.r2.navigator.R2BasicWebView android:layout_gravity="end" android:id="@id/firstWebView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layerType="hardware" />
+                <org.readium.r2.navigator.R2BasicWebView android:layout_gravity="start" android:id="@id/secondWebView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layerType="hardware" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</org.readium.r2.navigator.epub.fxl.R2FXLLayout>

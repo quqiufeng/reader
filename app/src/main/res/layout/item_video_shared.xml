@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_video_shared_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_57"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_e6ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvName" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_115" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:layout_gravity="center|right" android:id="@id/tvSet" android:background="@drawable/shape_425fff_radius_22" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:text="@string/common_button_settings" />
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+</FrameLayout>

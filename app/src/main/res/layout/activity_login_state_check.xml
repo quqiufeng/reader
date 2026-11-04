@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/flBg" android:tag="layout/activity_login_state_check_0" android:background="@drawable/bg_login_check" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.legacy.widget.Space android:id="@id/spaceIconTop" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="205.0" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivNas" android:tag="binding_1" android:layout_width="@dimen/len_200" android:layout_height="@dimen/len_200" android:scaleType="centerInside" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivZ423Nas" android:tag="binding_2" android:visibility="gone" android:layout_width="@dimen/len_250" android:layout_height="@dimen/len_250" android:scaleType="fitCenter" />
+        <androidx.legacy.widget.Space android:id="@id/spaceIconBottom" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="357.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_3" android:paddingTop="@dimen/len_34" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="64.0" />
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_26" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center" android:id="@id/tvTitle" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" app:medium_bold="true" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvErrorTitle" android:tag="binding_5" android:paddingLeft="@dimen/len_25" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_25" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="340.0" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:gravity="center" android:id="@id/tvUserType" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_click_day_425fff_night_657cff_gray" android:id="@id/tvCheckNasStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_view_device_status" android:includeFontPadding="false" />
+            <View android:id="@id/viewSeparate" android:background="@drawable/shape_dividing_cccccc" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_13" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_click_day_425fff_night_657cff_gray" android:id="@id/tvCheckNetworkStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_network_diagnostics" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_16" android:gravity="right" android:tag="binding_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <androidx.legacy.widget.Space android:layout_width="@dimen/len_20" android:layout_height="0.0dip" />
+            <pl.droidsonroids.gif.GifImageView android:layout_gravity="center_horizontal" android:id="@id/ivLoading" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <androidx.legacy.widget.Space android:layout_width="@dimen/len_20" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/len_16" android:gravity="left" android:id="@id/tv_nas_devices_name" android:tag="binding_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:tag="binding_11" android:background="@drawable/shape_14ff8300_radius_8" android:padding="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginStart="@dimen/len_25" android:layout_marginEnd="@dimen/len_25">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_ffff8300" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="70.0" />
+        <TextView android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_logout" android:tag="binding_14" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_logout" />
+            <View android:tag="binding_15" android:background="@drawable/shape_cccccc_radius_8" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_15" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvOfflineLogin" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_offline_mode" />
+            <View android:tag="binding_16" android:background="@drawable/shape_cccccc_radius_8" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_15" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvCheckNetworkStatus2" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_network_diagnostics" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="10.0dip" android:layout_height="20.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:tag="binding_17" android:paddingLeft="@dimen/len_25" android:paddingRight="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="@dimen/len_42">
+            <androidx.legacy.widget.Space android:tag="binding_18" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/selector_button_grey_text_color" android:gravity="center" android:id="@id/tvTry" android:background="@drawable/selector_button_grey" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_try_again" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <androidx.legacy.widget.Space android:layout_width="@dimen/len_20" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/len_16" android:textColor="@color/selector_button_blue_text_color" android:gravity="center" android:id="@id/tvLoginOut" android:background="@drawable/selector_button_blue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_user_logout" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <androidx.legacy.widget.Space android:tag="binding_19" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

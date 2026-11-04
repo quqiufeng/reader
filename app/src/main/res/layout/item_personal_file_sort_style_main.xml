@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_personal_file_sort_style_main_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/ivSelect" android:tag="binding_1" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/selector_30_30_circle_check_box" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_8" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center_vertical" android:id="@id/tvTitle" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/ivSelect" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ivArrow" android:tag="binding_3" android:visibility="gone" android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

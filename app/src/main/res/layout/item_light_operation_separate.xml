@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:tag="layout/item_light_operation_separate_0" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

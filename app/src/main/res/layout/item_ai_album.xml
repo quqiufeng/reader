@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_ai_album_0" android:paddingLeft="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/len_109" android:layout_height="wrap_content">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:tag="binding_1" android:layout_width="@dimen/len_109" android:layout_height="@dimen/len_109" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_5" app:imageHeight="1" app:imageWidth="1" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/album_name" android:ellipsize="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/album_num" android:ellipsize="end" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

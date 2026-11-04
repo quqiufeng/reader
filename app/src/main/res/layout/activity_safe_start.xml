@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/activity_safe_start_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/navSafe" layout="@layout/layout_safe_navigation_bar" />
+    <FrameLayout android:id="@id/fragmentContainer" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/navSafe" />
+    <include android:id="@id/ll_result_net_error" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/navSafe" layout="@layout/layout_list_net_error" />
+</RelativeLayout>

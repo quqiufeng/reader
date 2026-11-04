@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_phone_image_selector_folder_0" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15" android:paddingVertical="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_icon" android:tag="binding_1" android:layout_width="@dimen/len_48" android:layout_height="@dimen/len_48" android:scaleType="centerCrop" android:layout_marginEnd="@dimen/len_10" app:cornerRadius="@dimen/len_5" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_subdesc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=")" android:includeFontPadding="false" />
+</LinearLayout>

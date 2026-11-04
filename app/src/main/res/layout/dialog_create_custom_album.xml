@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/shape_1c1f33_radius_15" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_25" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_18" android:textColor="@color/color_video_title" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_movies_custom_album" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:paddingTop="@dimen/len_18" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_movies_custom_album_desc" android:lineSpacingExtra="@dimen/len_6" />
+        <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_35" android:layout_marginRight="@dimen/len_35" android:src="@drawable/video_gudie_create_album" app:proportHeight="275" app:proportWidth="280" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/len_23" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/white" android:gravity="center" android:id="@id/tvCancel" android:background="@drawable/shape_2c3053_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+            <Space android:layout_width="20.0dip" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/white" android:gravity="center" android:id="@id/tvCreate" android:background="@drawable/shape_425fff_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_movies_custom_album_new" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

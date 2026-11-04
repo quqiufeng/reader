@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/contentLayout" android:tag="layout/fragment_book_mark_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <com.zentraedi.business.widget.MediumTextView android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" app:medium_bold="true" />
+        <TextView android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:gravity="center" android:id="@id/tv_clear" android:background="@drawable/shape_border_cccccc_22_transparent_bg" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_24" android:text="@string/common_button_empty" android:layout_marginEnd="@dimen/len_15" android:paddingHorizontal="@dimen/len_15" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

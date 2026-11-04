@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_file_upload_fail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_top" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:background="@drawable/icon_upload_fail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/upload_fail_tip" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" />
+        <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/uploading_start_pause" android:id="@id/tv_retry_all_fail_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_action" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_separate" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_10" android:layout_below="@id/ll_top" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/iv_separate" />
+    <ImageView android:id="@id/iv_no_content" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_150" android:src="@drawable/common_data_empty" android:layout_centerHorizontal="true" />
+    <TextView android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_nas_string_key_972_res" android:layout_below="@id/iv_no_content" android:layout_centerHorizontal="true" />
+</RelativeLayout>

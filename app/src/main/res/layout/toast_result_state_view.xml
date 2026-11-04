@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/shape_d9333333_radius_5" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivState" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_7" android:src="@drawable/icon_toast_success" />
+    <TextView android:textSize="@dimen/font_13" android:textColor="@color/nas_white" android:id="@id/tvContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_20" />
+</LinearLayout>

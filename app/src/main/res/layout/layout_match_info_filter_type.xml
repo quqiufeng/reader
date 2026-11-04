@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/rootLayout" android:background="@color/color_80000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutContent" android:background="@color/color_video_bg" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAll" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:id="@id/tvAll" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_all" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivSelectAll" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_select_blue_s14" />
+        </LinearLayout>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMovie" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:id="@id/tvMovie" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_movie" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivSelectMovie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_select_blue_s14" />
+        </LinearLayout>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutEpisode" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:id="@id/tvEpisod" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_tv_show" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ivSelectEpisode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_select_blue_s14" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

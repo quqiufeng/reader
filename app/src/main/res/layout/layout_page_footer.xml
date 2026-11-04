@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/len_17" android:paddingRight="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="@dimen/len_30" android:paddingStart="@dimen/len_17" android:paddingEnd="@dimen/len_17"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_12" android:id="@id/read_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+    <TextView android:textSize="@dimen/font_12" android:id="@id/tv_typeface_download" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_toRightOf="@id/read_progress" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_20" android:layout_toEndOf="@id/read_progress" />
+    <TextView android:textSize="@dimen/font_12" android:id="@id/current_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_14" android:layout_toLeftOf="@id/battery_progress" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_14" android:layout_toStartOf="@id/battery_progress" />
+    <com.zentraedi.reader.BatteryView android:id="@id/battery_progress" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_8" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

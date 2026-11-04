@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/activity_portrait_photo_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/layoutHead" android:layout_width="fill_parent" android:layout_height="@dimen/len_222">
+        <ImageView android:id="@id/ivHeadBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <View android:background="@drawable/shape_gradient_4d00_0000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutRelation" android:tag="binding_1" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/tvRelation" android:tag="binding_2" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_album_relationship" android:drawableRight="@drawable/icon_arrow_white_down" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@id/tvCount" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_628_res" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutName" android:tag="binding_4" android:paddingTop="@dimen/len_6" android:paddingBottom="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/layoutRelation" android:layout_centerHorizontal="true">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tvName" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_his_or_her_name" />
+            <ImageView android:id="@id/ivEdit" android:tag="binding_5" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_white_edit_2" />
+        </LinearLayout>
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivHead" android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_72" android:layout_above="@id/layoutName" android:layout_centerHorizontal="true" app:cornerRadius="@dimen/len_72" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_num" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ivHead" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/toolbar" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/ivBack" android:tag="binding_8" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/ivSelectAll" android:tag="binding_9" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="right" android:id="@id/ivMore" android:tag="binding_10" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_more_white" android:scaleType="centerInside" />
+        <ImageView android:id="@id/tvCancel" android:tag="binding_11" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_white" android:scaleType="centerInside" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/layoutBottomMenu" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="@dimen/len_60" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvShare" android:tag="binding_14" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_share" android:drawablePadding="@dimen/len_3" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvAddAlbum" android:tag="binding_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_photos_addtoalbum" android:drawablePadding="@dimen/len_3" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvDelete" android:tag="binding_16" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_delete" android:drawablePadding="@dimen/len_3" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvDownload" android:tag="binding_17" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_download" android:drawablePadding="@dimen/len_3" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:tag="binding_18" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_425FFF" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvPhotoRemove" android:tag="binding_19" android:background="@drawable/shape_dialog_cancel_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_363c9831f8" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <Space android:tag="binding_20" android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvPhotoMove" android:tag="binding_21" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_d213da0d12" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvSceneRemove" android:tag="binding_22" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_photos_a63c1da020" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layoutBottomMenu" android:layout_below="@id/layoutHead">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/contentList" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layoutHead" />
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:tag="layout/activity_storage_all_file_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titleLayout" android:tag="binding_1" android:background="@color/file_manage_guide_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" android:layout_toRightOf="@id/ivBack" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_100" android:layout_marginRight="@dimen/len_100">
+            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/navigation_sub_title_text_size" android:textColor="@color/color_666666" android:id="@id/fileNumTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_fetching" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvRight" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_select_all" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/contentLayout" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/locationLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_backup_select_tab_bar" />
+        <View android:background="@drawable/bg_shadow_top" android:layout_width="fill_parent" android:layout_height="@dimen/len_4" android:layout_above="@id/locationLayout" />
+        <FrameLayout android:id="@id/layoutPath" android:paddingLeft="@dimen/apply_pad_common_left_right_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivPathBack" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_move_to_up_level" />
+            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center_vertical" android:id="@id/rvPath" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_35" />
+            <ImageView android:layout_gravity="center_vertical" android:background="@drawable/icon_vertical_line" android:layout_width="wrap_content" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/len_32" />
+        </FrameLayout>
+        <View android:id="@id/line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/layoutPath" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/locationLayout" android:layout_below="@id/line" />
+        <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

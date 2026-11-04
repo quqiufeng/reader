@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_picture_sync_shutdown_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_16" android:layout_marginBottom="@dimen/len_1" android:layout_centerHorizontal="true">
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:src="@drawable/icon_sync_shut" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_6" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_blue" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_513_res" android:singleLine="true" />
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

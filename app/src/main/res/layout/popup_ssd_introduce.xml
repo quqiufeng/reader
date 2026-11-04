@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/popup_ssd_introduce_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_blank" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ll_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/business_string_key_125" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/tvSubtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_40" android:layout_marginRight="@dimen/len_20" android:lineSpacingExtra="@dimen/len_8" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_20" android:text="@string/business_string_key_126" android:lineSpacingExtra="@dimen/len_7" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_index1" android:background="@drawable/shape_circle_gray_10_bg" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginLeft="@dimen/len_20" android:text="@string/business_string_key_127" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/business_string_key_128" android:layout_toRightOf="@id/tv_index1" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_222" android:layout_height="@dimen/len_156" android:layout_marginTop="@dimen/len_20" android:src="@drawable/icon_ssd_install_1" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_index2" android:background="@drawable/shape_circle_gray_10_bg" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginLeft="@dimen/len_20" android:text="@string/business_string_key_129" />
+                    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/business_string_key_130" android:layout_toRightOf="@id/tv_index2" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_328" android:layout_height="@dimen/len_163" android:layout_marginTop="@dimen/len_25" android:layout_marginBottom="@dimen/len_32" android:src="@drawable/icon_ssd_install_2" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:tag="layout/item_playlist_pop_member_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:enabled="false" android:id="@id/selectCb" android:tag="binding_1" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_8" />
+    <com.zentraedi.business.view.AvatarImageView android:id="@id/iv_avatar" android:tag="binding_2" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_5" android:layout_toEndOf="@id/selectCb" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_5" android:layout_toEndOf="@id/iv_avatar">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/nickNameTv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/accountTv" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

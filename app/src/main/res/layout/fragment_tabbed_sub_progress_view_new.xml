@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pdftron.pdf.widget.ContentLoadingRelativeLayout android:id="@id/progress_bar_layout" android:background="?android:colorBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/Widget.AppCompat.ProgressBar" />
+</com.pdftron.pdf.widget.ContentLoadingRelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/layoutRoot" android:tag="layout/fragment_video_search_result_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvVideoFeed" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.video.view.VideoPageStatusLayout android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_file_manage_mine_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/requestTooLongLl" android:background="#fff0f3ff" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" style="@style/progress_carring" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:tag="binding_2" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/none_file_sub_title_option_layout" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_below="@id/requestTooLongLl">
+        <FrameLayout android:id="@id/fl_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_4" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/selector_file_sort_text_color" android:tag="binding_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        </FrameLayout>
+        <ImageView android:id="@id/iv_sort" android:tag="binding_6" android:padding="@dimen/len_5" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginTop="@dimen/len_1" android:scaleType="center" android:layout_centerVertical="true" android:layout_toEndOf="@id/fl_sort" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/selectIv" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/clearAllIv" />
+            <ImageView android:id="@id/clearAllIv" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:tag="binding_9" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:scaleType="centerInside" />
+            <ImageView android:id="@id/iv_file_list_mode" android:tag="binding_10" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/iv_file_search" android:tag="binding_11" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/bg_file_search_icon_drawable_selector" android:scaleType="centerInside" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center_vertical" android:tag="binding_12" android:background="@color/color_E4E4E4" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_file_manage_mine" android:tag="binding_13" android:paddingBottom="@dimen/len_80" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <ImageView android:id="@id/toTopIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_24" android:src="@drawable/icon_file_list_to_top" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+    <include android:id="@id/layout_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_list_empty" />
+    <include android:id="@id/shared_to_me_list_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_shared_to_me_list_empty" />
+    <include android:id="@id/share_list_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_common_share_list_all_empty" />
+    <include android:id="@id/recyclerEmpty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_recycler_bin_empty" />
+    <com.zentraedi.filemanage.view.FileListEmptyLayout android:id="@id/fileListEmptyLayout" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" />
+    <include android:id="@id/ll_result_net_error" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_list_net_error" />
+    <include android:id="@id/recycleBinErrorLl" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_recycle_bin_request_error" />
+    <include android:id="@id/fileFilterEmptyView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/none_file_sub_title_option_layout" layout="@layout/layout_list_empty" />
+    <include android:id="@id/requestAllFileLoadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_cancelable_loading" />
+</RelativeLayout>

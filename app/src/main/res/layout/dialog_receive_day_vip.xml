@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="vertical" android:id="@id/valueSettingLayout" android:tag="layout/dialog_receive_day_vip_0" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/rootLayout" android:background="@drawable/shape_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_69" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_24" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_common_option_success" />
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/text_color_day_111111_night_ffffff" android:gravity="center" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_28" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_cloud_claim_successful" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutReceive" android:background="@drawable/button_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_text_day_ffffff_night_ffffff_lv1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_ok" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

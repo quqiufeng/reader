@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/base_title_layout" android:tag="layout/base_app_title_bar_layout_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:id="@id/base_title_left_text" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/base_title_left_image" android:tag="binding_3" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_70" android:layout_marginRight="@dimen/len_70">
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/common_title" android:gravity="center" android:id="@id/base_title_center_title" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_nav_title_icon" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper_album" android:scaleType="centerInside" android:layout_toRightOf="@id/base_title_center_title" />
+    </RelativeLayout>
+    <LinearLayout android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/base_title_right_text" android:tag="binding_7" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" />
+        <ImageView android:id="@id/base_title_right_image" android:tag="binding_8" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:scaleType="fitCenter" />
+    </LinearLayout>
+</RelativeLayout>

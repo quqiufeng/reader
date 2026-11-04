@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/popup_message_layout_0" android:background="@drawable/shape_circle_notification_5_bg" android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:minHeight="@dimen/len_87"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_18">
+        <ImageView android:id="@id/none_notification_delete_icon" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_suc_18" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/notification_file_delete_complete" android:singleLine="true" android:layout_toRightOf="@id/none_notification_delete_icon" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_notification_delete_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:ellipsize="end" android:id="@id/tv_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/moblie_net_tip_new" />
+</LinearLayout>

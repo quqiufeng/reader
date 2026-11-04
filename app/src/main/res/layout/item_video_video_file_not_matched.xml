@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layoutItemRoot" android:tag="layout/item_video_video_file_not_matched_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutContent" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/len_15">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layoutLeftSpace" android:paddingLeft="@dimen/len_3" android:paddingRight="@dimen/len_3" android:visibility="gone" android:layout_width="@dimen/len_36" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_3">
+            <CheckBox android:enabled="false" android:id="@id/cbSelect" android:visibility="gone" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="@dimen/len_55" android:layout_height="@dimen/len_55">
+            <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivVideoCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_5" />
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_play_small" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:id="@id/tvVideoName" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" android:paddingHorizontal="@dimen/len_10" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivMore" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_more_video_gray_44" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginHorizontal="@dimen/len_15" />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/fragment_upload_fail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ll_upload_status" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_46" android:layout_marginTop="@dimen/len_15">
+        <ImageView android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_upload_fail" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/upload_fail_tip" android:tag="binding_2" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/button_blue" android:gravity="center_vertical" android:id="@id/tv_upload_fail_retry" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_10" android:text="@string/common_button_action" />
+    </LinearLayout>
+    <View android:id="@id/v_task_fail_divider" android:background="@color/share_divider_line" android:layout_width="wrap_content" android:layout_height="@dimen/len_0_5" android:layout_below="@id/ll_upload_status" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_upload_fail" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/v_task_fail_divider" />
+    <include android:id="@id/ll_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/include_fail_task_no_content" />
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_wlan_hotspot_set_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/transparent_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:id="@id/headerLayout" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:paddingBottom="@dimen/len_14" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tvTitle" android:text="@string/common_mesh_wlan_hotspot" app:medium_bold="true" style="@style/bigTitleTextView" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_2" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                    <ImageView android:id="@id/ivBack" android:layout_width="@dimen/len_44" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+                    <ImageView android:layout_gravity="right" android:id="@id/ivClose" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" android:scaleType="center" android:layout_toRightOf="@id/ivBack" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/text_color_day_111111_night_ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_mesh_wlan_hotspot" android:layout_centerHorizontal="true" />
+                    <View android:id="@id/toolbarLine" android:background="@color/color_cce4e4e4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:ellipsize="end" android:id="@id/tvWlanInfo" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" app:ellipsisColor="@color/color_425FFF" />
+            <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0dip" android:textColor="@color/text_color_day_111111_night_ffffff" android:id="@id/tv_swtich" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/blueteethuse_string_key_10" android:layout_weight="1.0" />
+                <Switch android:textColor="@color/common_title" android:layout_gravity="center|right" android:id="@id/swNet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" android:forceDarkAllowed="false" />
+            </LinearLayout>
+            <View android:layout_marginTop="@dimen/len_20" style="@style/intl_common_shape_line" />
+            <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvNetTips" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+                <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_425FFF" android:id="@id/tvMore" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:layout_width="0.0px" android:layout_height="0.0px" android:text="@string/more_precautions" android:drawableRight="@drawable/icon_arrow_right_blue" android:drawablePadding="@dimen/len_5" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_monitor_ip" />
+                        <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_425FFF" android:gravity="center|right" android:id="@id/tvCopy" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_20" android:text="@string/common_button_copy" android:layout_weight="1.0" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layoutNetStatus" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blueteethuse_string_key_11" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/color_D0021B" android:paddingTop="@dimen/len_8" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_wlan_hotspot_cant_connect_internet" android:lineSpacingExtra="@dimen/len_3" />
+                    <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_file_name" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutPassword" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_user_password" android:layout_weight="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:id="@id/tvPassword" android:tag="binding_6" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutBand" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_monitor_network_band" android:layout_weight="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_7" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="@dimen/len_56" android:text="@string/common_mesh_tech_standard" android:layout_weight="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:text="@string/blueteethuse_string_key_57" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_mesh_max_connections" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <LinearLayout android:gravity="center" android:id="@id/layoutConnectCount" android:visibility="gone" android:layout_width="@dimen/len_46" android:layout_height="@dimen/len_22">
+                        <ImageView android:visibility="gone" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_5" android:src="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_link_type" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_9" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAutoClose" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_mesh_auto_close" android:layout_weight="1.0" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_share_hotspot" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_settings_wlan_hotspot_share" android:layout_weight="1.0" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+                <FrameLayout android:id="@id/tvRefresh" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_mesh_connected_devices" />
+                    <ImageView android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" android:src="@drawable/icon_refresh" />
+                </FrameLayout>
+                <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvContent" android:tag="binding_10" android:paddingLeft="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginBottom="@dimen/len_40" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

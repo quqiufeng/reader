@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/rootLayout" android:tag="layout/activity_book_main_v2_0" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.business.view.NoScrollViewPager android:id="@id/contentViewPager2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_70" />
+    <View android:layout_gravity="bottom" android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginBottom="@dimen/len_70" />
+    <RadioGroup android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/rg_tab_layout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_70" android:checkedButton="@id/rb_home_tab">
+        <RadioButton android:id="@id/rb_home_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_home" android:drawableTop="@drawable/book_radio_btn_home_selector" style="@style/book_style_radiobutton" />
+        <RadioButton android:id="@id/rb_my_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_library" android:drawableTop="@drawable/book_radio_btn_my_selector" style="@style/book_style_radiobutton" />
+        <RadioButton android:id="@id/rb_setting_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_settings" android:drawableTop="@drawable/book_radio_btn_setting_selector" android:layout_weight="1.0" style="@style/book_style_radiobutton" />
+    </RadioGroup>
+    <LinearLayout android:layout_gravity="bottom" android:tag="binding_2" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_70">
+        <Button android:enabled="false" android:textSize="@dimen/font_12" android:textColor="@color/selector_bottom_menu_text_color" android:id="@id/buttonBookshelf" android:background="@color/transparent_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_add_to_bookshelf" android:drawableTop="@drawable/selector_move_enable_black_enabled" android:layout_weight="1.0" />
+        <Button android:enabled="false" android:textSize="@dimen/font_12" android:textColor="@color/selector_bottom_menu_text_color" android:id="@id/buttonDelete" android:background="@color/transparent_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_delete" android:drawableTop="@drawable/selector_delete_black_24_24_enabled" android:layout_weight="1.0" />
+        <Button android:enabled="false" android:textSize="@dimen/font_12" android:textColor="@color/selector_bottom_menu_text_color" android:id="@id/buttonDownload" android:background="@color/transparent_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_download" android:drawableTop="@drawable/selector_download_black_24_24_enabled" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:gravity="center_vertical" android:background="?android:colorBackground" android:padding="@dimen/padding_large" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rotationY="@integer/view_pager_rotation_y"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pdftron.pdf.controls.AdvancedColorView android:id="@id/advanced_color_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" />
+        <androidx.appcompat.widget.AppCompatButton android:enabled="false" android:layout_gravity="center_horizontal" android:id="@id/add_color_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/advanced_color_button_margin_top" android:text="@string/controls_add_advanced_color" style="@style/Widget.AppCompat.Button.Colored" />
+        <com.pdftron.pdf.utils.ExpandableGridView android:id="@id/added_colors" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="100.0dip" android:layout_marginTop="@dimen/alert_dialog_side_padding" android:layout_marginBottom="@dimen/padding_large" android:horizontalSpacing="@dimen/padding_medium" android:verticalSpacing="@dimen/padding_xsmall" android:stretchMode="none" android:columnWidth="@dimen/quick_menu_button_size" android:numColumns="auto_fit" android:layout_marginStart="@dimen/action_button_min_padding" android:layout_marginEnd="@dimen/action_button_min_padding" app:expanded="true" />
+    </LinearLayout>
+</ScrollView>

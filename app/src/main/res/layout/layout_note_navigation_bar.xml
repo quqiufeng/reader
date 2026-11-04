@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/titleLayout" android:tag="layout/layout_note_navigation_bar_0" android:background="@drawable/icon_safe_box_title_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.widget.GradientView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:centerColor="#80d9d9d9" app:endColor="#80d2d2d2" app:startColor="#80bababa" app:upperMiddleColor="#b3f2f2f2" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center" android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="center" />
+        <Space android:layout_width="@dimen/len_44" android:layout_height="0.0dip" />
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/titleCenterLayout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.zentraedi.business.widget.MarkView android:id="@id/markView" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_toLeftOf="@id/tvTitle" android:layout_centerVertical="true" app:markColor="@color/color_D0021B" />
+            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="end" android:gravity="center" android:id="@id/tvTitle" android:paddingRight="@dimen/len_23" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:singleLine="true" />
+            <com.zentraedi.business.widget.NoteSaveStatusView android:id="@id/noteStatusView" android:visibility="visible" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_15" android:layout_alignRight="@id/tvTitle" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/navigation_img_width_and_height" android:layout_alignParentRight="true">
+            <ImageView android:gravity="center" android:id="@id/ivMore" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_toolbar_more" android:scaleType="center" />
+            <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/color_425FFF" android:gravity="center" android:id="@id/tvRight" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_status_completed" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_movies_9ab0cb6943" app:medium_bold="true" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:gravity="center_vertical" android:id="@id/layoutFolderTiled" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_folder_tiled_view" />
+                <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_view_tile" />
+            </FrameLayout>
+            <FrameLayout android:gravity="center_vertical" android:id="@id/layoutFolderNested" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_folder_nested_view" />
+                <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_view_nested" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

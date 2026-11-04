@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_set_sync_dir_0" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_11" android:paddingBottom="@dimen/len_11" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivFileIcon" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_dir_yellow" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/len_30" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+        <TextView android:textSize="@dimen/intl_font_content_12" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_2" android:paddingTop="@dimen/len_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+    <ImageView android:tag="binding_3" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:scaleType="center" />
+</LinearLayout>

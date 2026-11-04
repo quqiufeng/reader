@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_menu_episode_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layoutEpRoot" android:background="@color/color_1ABBC5FF" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_66">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvSubTitle" android:paddingTop="@dimen/len_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|center|right" android:id="@id/ivDownload" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_downloaded_2" />
+</FrameLayout>

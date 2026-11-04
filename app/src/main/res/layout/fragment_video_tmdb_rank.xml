@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_video_tmdb_rank_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/shape_circle_425fff_8_8" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:backgroundTint="@color/color_FFF44336" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_80ffffff" android:id="@id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_3" android:singleLine="true" android:includeFontPadding="false" />
+        <View android:background="@drawable/shape_circle_425fff_8_8" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginLeft="@dimen/len_24" android:backgroundTint="@color/color_425FFF" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_80ffffff" android:id="@id/tvDownloaded" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_3" android:singleLine="true" android:includeFontPadding="false" />
+        <View android:background="@drawable/shape_circle_425fff_8_8" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginLeft="@dimen/len_24" android:backgroundTint="@color/color_FF59C280" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_80ffffff" android:id="@id/tvSeen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_3" android:singleLine="true" android:includeFontPadding="false" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivFilter" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_filter_white_44" android:scaleType="center" />
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.DarkRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_60" />
+        <FrameLayout android:id="@id/contentLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvVideoList" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_4" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.zentraedi.video.view.VideoPageStatusLayout android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <com.zentraedi.business.refresh.DarkLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

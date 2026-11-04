@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_video_episode_desc_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_movies_episode_summary" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_52">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tvEpisode" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" app:medium_bold="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutPlay" android:background="@drawable/shape_425fff_radius_22" android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_28">
+            <ImageView android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_video_play" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_play" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.zentraedi.business.widget.MaxHeightNestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" app:mMaxViewHeight="@dimen/len_300">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:id="@id/tvDesc" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+        </LinearLayout>
+    </com.zentraedi.business.widget.MaxHeightNestedScrollView>
+</LinearLayout>

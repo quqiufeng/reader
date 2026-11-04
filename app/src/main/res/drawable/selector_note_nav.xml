@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <bitmap android:src="@drawable/icon_note_nav_enable" />
+    </item>
+    <item android:state_checked="true">
+        <bitmap android:src="@drawable/icon_note_nav_enable" />
+    </item>
+    <item android:drawable="@drawable/note_tab_disable" />
+</selector>

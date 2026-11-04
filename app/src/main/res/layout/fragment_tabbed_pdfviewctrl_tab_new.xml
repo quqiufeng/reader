@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/tab_horizontal_padding" android:paddingEnd="@dimen/tab_horizontal_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageButton android:id="@id/tab_pdfviewctrl_close_button" android:background="?selectableItemBackground" android:padding="@dimen/icon_min_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/action_close_tab" app:srcCompat="@drawable/ic_close_black_18dp" />
+    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tab_pdfviewctrl_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

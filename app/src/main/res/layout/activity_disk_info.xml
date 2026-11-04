@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_disk_info_0" android:background="@color/stroage_space_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_47">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_16" android:gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

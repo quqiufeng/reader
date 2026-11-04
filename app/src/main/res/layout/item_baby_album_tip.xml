@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_baby_album_tip_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_48"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@drawable/selector_bf6666_3333333" android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_babyalbum_growth" android:layout_marginStart="@dimen/len_15" />
+    <View android:layout_gravity="center_vertical" android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+    <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@drawable/selector_bf6666_3333333" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_babyalbum_milestones" />
+</LinearLayout>

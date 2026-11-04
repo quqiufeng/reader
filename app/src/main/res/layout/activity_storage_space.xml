@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_storage_space_0" android:focusableInTouchMode="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" layout="@layout/toolbar_setting_monitor" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/stroage_space_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center_vertical" android:tag="binding_2" android:background="@color/storage_time_bg" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_35" />
+            <TextView android:tag="binding_3" style="@style/storage_space_title" />
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <include android:id="@id/layout_pie_chart" android:layout_width="fill_parent" android:layout_height="@dimen/len_150" layout="@layout/layout_pie_chart" />
+            <LinearLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_58" android:layout_marginTop="@dimen/len_10">
+                <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/storage_space_desc" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" />
+            </LinearLayout>
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <LinearLayout android:orientation="vertical" android:background="@color/nas_white" android:paddingLeft="@dimen/apply_pad_common_left_right_0" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/ll_disk_one" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_10" android:layout_below="@id/rl_storage">
+                    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/disk_name" android:id="@id/tv_disk_one" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_14" android:gravity="right" android:id="@id/tv_disk_one_status" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/disk_used" android:id="@id/tv_disk_one_used" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:singleLine="true" android:layout_toLeftOf="@id/tv_disk_one_status" />
+                    <ProgressBar android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_7" android:layout_marginRight="@dimen/len_10" android:progressDrawable="@drawable/nas_info_disk_used_progress_bg" android:layout_toLeftOf="@id/tv_disk_one_used" android:layout_toRightOf="@id/tv_disk_one" android:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/ll_disk_two" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:layout_below="@id/ll_disk_one">
+                    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/disk_name" android:id="@id/disk_two" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/font_14" android:gravity="right" android:id="@id/tv_disk_two_status" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/disk_used" android:id="@id/tv_disk_two_used" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:singleLine="true" android:layout_toLeftOf="@id/tv_disk_two_status" />
+                    <ProgressBar android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_7" android:layout_marginRight="@dimen/len_10" android:progressDrawable="@drawable/nas_info_disk_used_progress_bg" android:layout_toLeftOf="@id/tv_disk_two_used" android:layout_toRightOf="@id/disk_two" android:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                </RelativeLayout>
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/raid_model_tip" android:id="@id/tv_raid_tip" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:text="@string/raid_model_tip" android:layout_below="@id/ll_disk_two" />
+            </LinearLayout>
+            <TextView android:text="@string/account_info" style="@style/storage_space_title" />
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <TextView android:gravity="center" android:tag="binding_15" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_58" android:text="@string/common_file_no_data" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view_sub_account" android:tag="binding_16" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="@string/common_nas_string_key_1544_res" style="@style/storage_space_title" />
+            <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <TextView android:gravity="center" android:tag="binding_17" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_58" android:text="@string/common_file_no_data" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view_disk_record" android:tag="binding_18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_60" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

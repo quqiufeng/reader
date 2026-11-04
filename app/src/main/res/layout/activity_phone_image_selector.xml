@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_phone_image_selector_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <RelativeLayout android:tag="binding_1" android:background="@color/color_CCFFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:drawablePadding="@dimen/len_5" android:layout_alignParentBottom="true" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_close" android:tag="binding_3" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/action_bar_close" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/fl_container_folder" android:tag="binding_4" android:background="@color/color_cc000000" android:paddingBottom="@dimen/len_250" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

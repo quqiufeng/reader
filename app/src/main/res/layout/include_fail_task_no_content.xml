@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/include_fail_task_no_content_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tv_upload_empty" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_130" android:layout_marginTop="@dimen/len_150" android:src="@drawable/common_data_empty" />
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/common_subdesc" android:id="@id/tv_upload_empty_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_nas_string_key_972_res" />
+</LinearLayout>

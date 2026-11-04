@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_photo_feed_c1_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+        <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/thumbIv" android:tag="binding_1" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:proportHeight="1" app:proportWidth="1" />
+        <CheckBox android:tag="binding_2" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:tag="binding_3" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumbIv" />
+        <ImageView android:tag="binding_4" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+        <View android:tag="binding_5" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <Space android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_2" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/thumb2Iv" android:tag="binding_7" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:proportHeight="1" app:proportWidth="1" />
+            <CheckBox android:tag="binding_8" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <ImageView android:tag="binding_9" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumb2Iv" />
+            <ImageView android:tag="binding_10" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+            <View android:tag="binding_11" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <Space android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_2" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/thumb3Iv" android:tag="binding_13" android:background="@color/color_F5F8FF" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_2" android:scaleType="centerCrop" app:proportHeight="1" app:proportWidth="1" />
+            <CheckBox android:tag="binding_14" android:clickable="false" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:button="@drawable/selector_18_18_blue_circle" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <ImageView android:tag="binding_15" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:src="@drawable/icon_album_like" android:layout_alignBottom="@id/thumb3Iv" />
+            <ImageView android:tag="binding_16" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginTop="@dimen/len_3" android:src="@drawable/icon_live_picture_white" android:layout_marginStart="@dimen/len_3" />
+            <View android:tag="binding_17" android:background="@drawable/shape_gradient_black_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_16" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_2" android:layout_marginBottom="@dimen/len_1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

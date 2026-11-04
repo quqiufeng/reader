@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_change_nas_result_0" android:background="@color/nas_white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_close" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/action_bar_close" />
+    <TextView android:textSize="@dimen/font_26" android:textStyle="bold" android:textColor="@color/change_nas_title" android:gravity="center" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_64" android:layout_marginRight="@dimen/len_32" android:includeFontPadding="false" />
+    <LinearLayout android:orientation="vertical" android:tag="binding_3" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title">
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="210.0" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_subtitle" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_migration_fc9100720b" android:includeFontPadding="false" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="275.0" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_red" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginRight="@dimen/len_32" android:layout_marginBottom="@dimen/len_70" android:text="@string/common_migration_93a1449166" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_7" />
+    </LinearLayout>
+    <include android:id="@id/layout_suc" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/iv_close" layout="@layout/layout_suc_result_for_change" />
+    <include android:id="@id/layout_fail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title" layout="@layout/layout_fail_result_for_change" />
+</RelativeLayout>

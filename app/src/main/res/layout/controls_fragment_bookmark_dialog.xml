@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rotationY="@integer/view_pager_rotation_y"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <com.pdftron.pdf.widget.recyclerview.SimpleRecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/controls_bookmark_recycler_view" android:background="?android:colorBackground" android:paddingBottom="@dimen/list_padding_footer" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:id="@id/control_bookmark_textview_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/controls_bookmark_dialog_empty" />
+    <com.pdftron.pdf.widget.PTFloatingActionButton android:id="@id/control_bookmark_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_button_margin" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" fab:fab_size="normal" fab:srcCompat="@drawable/ic_add_white_24dp" style="@style/FloatingActionButtonStyle" />
+</RelativeLayout>

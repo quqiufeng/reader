@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhpan.bannerview.BannerViewPager android:id="@id/layoutBanner" android:tag="layout/viewstub_video_home_banner_0" android:layout_width="fill_parent" android:layout_height="460.0dip" app:bvp_indicator_checked_color="#b3ffffff" app:bvp_indicator_gravity="end" app:bvp_indicator_normal_color="#33ffffff" app:bvp_indicator_radius="@dimen/len_4" app:bvp_interval="6000"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_base_select_backup_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/layoutNav" layout="@layout/layout_backup_select_navigation_bar" />
+    <RelativeLayout android:id="@id/contentLayout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layoutNav">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/prompt" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_46" android:text="@string/common_photos_37ca598889" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layoutTabBar" android:layout_below="@id/prompt">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <View android:background="@drawable/bg_shadow_top" android:layout_width="fill_parent" android:layout_height="@dimen/len_4" android:layout_above="@id/layoutTabBar" />
+        <include android:id="@id/layoutTabBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_backup_select_tab_bar" />
+    </RelativeLayout>
+</RelativeLayout>

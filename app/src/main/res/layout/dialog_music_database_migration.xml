@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/dialog_music_database_migration_0" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="false" android:paddingHorizontal="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:padding="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/loading" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:indeterminateDrawable="@drawable/anim_blue_loading" />
+            <ImageView android:id="@id/statusIcon" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/dialog_title" android:id="@id/tvTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_10" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pathSelector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_marginStart="@dimen/len_42">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/dialog_desc" android:id="@id/tvPath" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:src="@drawable/arrow_down_16_16" android:layout_marginStart="@dimen/len_8" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_db4437" android:id="@id/tvError" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginStart="@dimen/len_42" />
+        <LinearLayout android:orientation="vertical" android:id="@id/resultContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_marginStart="@dimen/len_42">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/dialog_desc" android:id="@id/tvTarget" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/dialog_desc" android:id="@id/tvProgress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_FF8300" android:id="@id/tvSuggestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_music_rescanisrecommended" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_24">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/btnCancel" android:background="@drawable/shape_circle_gray_22_bg" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_cancel" android:layout_weight="1.0" android:layout_marginEnd="@dimen/len_10" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_text" android:gravity="center" android:id="@id/btnConfirm" android:background="@drawable/btn_selector_2" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_ok" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_10" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

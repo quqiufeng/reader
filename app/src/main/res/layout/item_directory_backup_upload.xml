@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_directory_backup_upload_0" android:background="@color/white" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivFileImage" android:tag="binding_1" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:scaleType="centerCrop" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_15" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_333333" android:ellipsize="middle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_999999" android:ellipsize="middle" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_666666" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:singleLine="true" android:includeFontPadding="false" />
+        <ProgressBar android:id="@id/pbSchedule" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:layout_marginTop="@dimen/len_10" android:max="100" android:progressDrawable="@drawable/progress_horizontal_blue" style="@style/progress_bar_horizontal_style" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <TextView android:textSize="@dimen/font_11" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="15.0dip" android:includeFontPadding="false" />
+            <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_D0021B" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

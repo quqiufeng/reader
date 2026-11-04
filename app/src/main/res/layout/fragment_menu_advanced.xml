@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_menu_advanced_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="horizontal" android:id="@id/layout_tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_white" />
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center" android:id="@id/tvMenuTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_player_advanced_settings" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivCloseMenu" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:scaleType="centerInside" />
+        <View android:layout_gravity="bottom" android:id="@id/view_title_line" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    </FrameLayout>
+    <ScrollView android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_atv_movies_decoding_method" />
+            <RadioGroup android:orientation="horizontal" android:id="@id/rgDecodeMode" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:id="@id/cbHardware" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/len_24" android:checked="true" android:button="@null" android:text="@string/common_player_hardware_decoding" android:drawableLeft="@drawable/select_blue_24" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+                <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:id="@id/cbSoftware" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/len_24" android:checked="false" android:button="@null" android:text="@string/common_player_software_decoding" android:drawableLeft="@drawable/select_blue_24" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+            </RadioGroup>
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/nas_white" android:paddingTop="@dimen/len_46" android:paddingBottom="@dimen/len_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_atv_movies_demux_method" />
+            <RadioGroup android:orientation="horizontal" android:id="@id/rgFormatMode" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:id="@id/cbDefaultFormat" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/len_24" android:checked="true" android:button="@null" android:text="@string/common_player_default_demuxing" android:drawableLeft="@drawable/select_blue_24" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+                <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:id="@id/cbNativeFormat" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/len_24" android:checked="false" android:button="@null" android:text="@string/common_player_native_demuxing" android:drawableLeft="@drawable/select_blue_24" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+            </RadioGroup>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_46" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/business_string_key_60" android:lineSpacingExtra="@dimen/len_6" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

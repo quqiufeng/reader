@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_album_backup_set_more_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_ba85213c1e" android:layout_weight="1.0" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <ImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/mobile_phone_backup_1e10ad02e7" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_download_skip" android:padding="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_3" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/apply_pad_common_left_right_3">
+        <CheckBox android:tag="binding_1" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_47af9dba2b" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_download_again" android:padding="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_3" android:layout_marginRight="@dimen/apply_pad_common_left_right_3">
+        <CheckBox android:tag="binding_2" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_f998bb5870" />
+    </LinearLayout>
+    <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_4" />
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:text="@string/mobile_phone_backup_a15cb6ded9" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_same_skip" android:padding="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_3" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/apply_pad_common_left_right_3">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:tag="binding_3" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_skip" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_bfe6f95868" android:layout_marginStart="@dimen/len_23" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_same_again" android:padding="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_3" android:layout_marginRight="@dimen/apply_pad_common_left_right_3">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:tag="binding_4" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_generate_a_copy" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_phone_backup_6e84390b26" android:layout_marginStart="@dimen/len_23" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_bottom" android:background="@drawable/selector_bg_425fff_cfd6ff_corner_50" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_margin="@dimen/len_15" android:text="@string/common_button_ok" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_20" />
+</LinearLayout>

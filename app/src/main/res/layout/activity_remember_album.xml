@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_root" android:tag="layout/activity_remember_album_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:background="@drawable/bg_remember" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/navigationBarRl" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/navigationBarLayout" layout="@layout/layout_remember_album_navigation_bar" />
+        <include android:id="@id/editNavigationBarLayout" layout="@layout/layout_remember_album_edit_navigation_bar" />
+    </RelativeLayout>
+    <RelativeLayout android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/navigationBarRl">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/synchronizingLl" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="54.0dip">
+            <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_nas_string_key_551_res" />
+        </LinearLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layoutBottom" android:layout_below="@id/synchronizingLl">
+            <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_picture_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <include android:id="@id/layoutBottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_photo_album_list_bottom_options" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom" android:tag="binding_5" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:tag="binding_6" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_1" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/sp_16" android:textColor="@color/color_333333" android:textColorHint="@color/color_999999" android:id="@id/et_input" android:tag="binding_7" android:background="@drawable/shape_ffffff_radius_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/len_200" android:minHeight="@dimen/len_34" android:hint="@string/common_photos_album_title_placeholder" android:imeOptions="actionSend" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:layout_gravity="center" android:tag="binding_8" android:background="@drawable/shape_425fff_radius_8" android:paddingLeft="@dimen/len_7" android:paddingTop="@dimen/len_3" android:paddingRight="@dimen/len_7" android:paddingBottom="@dimen/len_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_send" android:layout_marginEnd="@dimen/len_10" />
+    </LinearLayout>
+</RelativeLayout>

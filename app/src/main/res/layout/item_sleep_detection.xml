@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_sleep_detection_0" android:background="@drawable/shape_f4f6fa_border_e4e4e4_5_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_16"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="@color/common_title" android:visibility="invisible" android:minWidth="@dimen/len_75" android:text="@string/common_monitor_sleep_detection_affected_scenarios" style="@style/sleep_detection_item_content" />
+            <TextView android:textStyle="bold" android:textColor="@color/common_title" android:minWidth="@dimen/len_75" android:text="@string/common_monitor_sleep_detection_features" style="@style/sleep_detection_item_content" />
+        </FrameLayout>
+        <View android:background="@color/separate_line" android:layout_width="@dimen/len_0_5" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/common_desc" android:tag="binding_1" style="@style/sleep_detection_item_content" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:textColor="@color/common_title" android:minWidth="@dimen/len_75" android:text="@string/common_monitor_sleep_detection_affected_scenarios" style="@style/sleep_detection_item_content" />
+        <View android:background="@color/separate_line" android:layout_width="@dimen/len_0_5" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/common_desc" android:tag="binding_2" style="@style/sleep_detection_item_content" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:textColor="@color/common_title" android:minWidth="@dimen/len_75" android:text="@string/common_monitor_sleep_detection_recommendations" style="@style/sleep_detection_item_content" />
+        <View android:background="@color/separate_line" android:layout_width="@dimen/len_0_5" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/common_desc" android:tag="binding_3" style="@style/sleep_detection_item_content" />
+    </LinearLayout>
+</LinearLayout>

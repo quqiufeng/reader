@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/navSafe" android:tag="layout/layout_action_bar_note_last_delete_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:gravity="center" android:id="@id/ivBack" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvSelectAll" android:tag="binding_2" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_select_all" android:singleLine="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/clMiddle" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_80" android:layout_marginRight="@dimen/len_80" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:gravity="center" android:id="@id/tvTitle" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/navigation_sub_title_text_size" android:textColor="@color/color_999999" android:ellipsize="middle" android:gravity="center" android:id="@id/tvSubTitle" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_3" android:singleLine="true" />
+            <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:gravity="center" android:id="@id/ivSelectExit" android:tag="binding_6" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" android:scaleType="fitCenter" />
+    <View android:id="@id/titleLineView" android:tag="binding_7" android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

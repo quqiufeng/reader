@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedRootLayout" android:tag="layout/fragment_video_sort_setting_0" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_25" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="horizontal" android:id="@id/rgSort" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbAsc" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@drawable/select_blue_30" android:text="@string/common_comics_ascending" android:layout_weight="1.0" />
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbDesc" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@drawable/select_blue_30" android:text="@string/common_comics_deascending" android:layout_weight="1.0" />
+    </RadioGroup>
+    <RadioGroup android:orientation="vertical" android:id="@id/rgField" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbName" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:button="@drawable/select_blue_30" />
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbScore" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:button="@drawable/select_blue_30" />
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbReleasedTime" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:button="@drawable/select_blue_30" />
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbAddedTime" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:button="@drawable/select_blue_30" />
+        <RadioButton android:textSize="@dimen/intl_font_content_14" android:textColor="@color/white" android:id="@id/rbUpdatedTime" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:button="@drawable/select_blue_30" />
+    </RadioGroup>
+</LinearLayout>

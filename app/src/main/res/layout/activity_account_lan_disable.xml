@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_account_lan_disable_0" android:paddingLeft="@dimen/len_32" android:paddingRight="@dimen/len_32" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_18" android:textColor="@color/title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:text="@string/app_string_key_369" android:includeFontPadding="false" android:lineSpacingMultiplier="1.2" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_red" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:tag="binding_1" android:background="@drawable/shape_red_border_5_white_bg" android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_50" android:text="@string/confirm_account_disable" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/error_text" android:gravity="center" android:id="@id/tv_error" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" />
+    <TextView android:textStyle="bold" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_50" android:text="@string/app_string_key_370" />
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_16" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_371" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="#ff666666" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/app_string_key_372" android:includeFontPadding="false" android:lineHeight="@dimen/len_18" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_16" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_373" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="#ff666666" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/app_string_key_374" android:includeFontPadding="false" android:lineHeight="@dimen/len_18" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+        <TextView android:textSize="@dimen/font_16" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_375" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="#ffd0021b" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/app_string_key_376" android:includeFontPadding="false" android:lineHeight="@dimen/len_18" />
+    </LinearLayout>
+</LinearLayout>

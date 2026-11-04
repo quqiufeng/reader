@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/pop_flash_need_pw_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_lightning_settings_password_required" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:scaleType="centerInside" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:tag="binding_3" style="@style/ups_setting_time_select_img_style" />
+        <TextView android:text="@string/common_button_yes" style="@style/ups_setting_time_select_text_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:layout_marginBottom="@dimen/len_34">
+        <ImageView android:tag="binding_5" style="@style/ups_setting_time_select_img_style" />
+        <TextView android:text="@string/common_button_no" style="@style/ups_setting_time_select_text_style" />
+    </LinearLayout>
+</LinearLayout>

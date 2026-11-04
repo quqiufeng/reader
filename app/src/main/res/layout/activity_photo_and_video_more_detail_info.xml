@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_photo_and_video_more_detail_info_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:tag="binding_1" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/navigationBarLayout" layout="@layout/layout_list_empty" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/navigationBarLayout" layout="@layout/layout_loading" />
+</RelativeLayout>

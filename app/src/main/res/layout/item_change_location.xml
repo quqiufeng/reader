@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_change_location_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:tag="binding_1" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/locationTitleTv" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginEnd="@dimen/len_10" android:layout_toStartOf="@id/isSelectedIv" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:layout_below="@id/locationTitleTv" android:layout_marginEnd="@dimen/len_10" android:layout_toStartOf="@id/isSelectedIv">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/locationDetailTv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/isSelectedIv" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_blue_tick_18_18" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:tag="binding_5" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+</LinearLayout>

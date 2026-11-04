@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_sleep_detection_no_task_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_sleep_8db9cea80c" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/sleep_detection_no_task_desc" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" android:text="@string/setting_string_key_360" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_0a6e46b4f3" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_6f727c3cac" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_97801bcf33" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_6992042198" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_359db1ca74" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_b708959d90" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_c7df643cbf" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_8e655f7d01" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_b52927265b" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_afcb8b265d" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_f0ebac0041" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_471fbce16e" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10">
+            <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_sleep_a7b9c138a9" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_blue" android:id="@id/helperTv" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_marginTop="@dimen/len_10" android:text="@string/common_button_learn_more" android:drawablePadding="@dimen/len_5" android:drawableEnd="@drawable/icon_arrow_blue_6_9" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_sleep_8db9cea80c" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+</RelativeLayout>

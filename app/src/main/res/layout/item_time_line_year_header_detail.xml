@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_time_line_year_header_detail_0" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_16"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:id="@id/tv_year_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginStart="@dimen/len_8" />
+    <TextView android:textSize="@dimen/font_10" android:textColor="#ff66c200" android:id="@id/tv_organized_tag" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已整理" android:paddingStart="@dimen/len_4" android:paddingEnd="@dimen/len_4" android:layout_marginStart="@dimen/len_10" />
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_view_all" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_see_all" />
+        <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_arrow_right_666666_6_9" android:layout_marginStart="@dimen/len_4" />
+    </LinearLayout>
+</LinearLayout>

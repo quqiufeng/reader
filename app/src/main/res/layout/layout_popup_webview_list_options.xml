@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_popup_webview_list_options_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popup_title" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:text="@string/common_player_menu" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <ImageView android:id="@id/iv_popu_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_9" android:src="@drawable/icon_close_gray_40" android:layout_alignParentEnd="true" />
+    <View android:id="@id/v_divider_line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/tv_popup_title" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/v_divider_line">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/common_button_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/refreshRl" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/refreshIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_webview_refresh" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/selector_text_333333_cccccc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_refresh" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/refreshIv" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/screenRl" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/screenIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_webview_screen" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_remote_access_rotate_page" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/screenIv" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/copyLinkRl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/copyLinkIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_webview_copy_link" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_copy_link" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/copyLinkIv" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/changeUiRl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/changeUiIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_webview_switch_computer" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/common_title" android:id="@id/changeUiTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_remote_access_switch_ua" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/changeUiIv" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/configRemoteAccessRl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/configRemoteAccessIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_config_remote_access" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/common_title" android:id="@id/configRemoteAccessTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_remote_access_61f9121dba" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/configRemoteAccessIv" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@id/setDefaultRl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <ImageView android:id="@id/setDefaultIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_remote_set_default" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+                <TextView android:textColor="@color/common_title" android:id="@id/setDefaultTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_remote_access_08b634511f" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/setDefaultIv" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

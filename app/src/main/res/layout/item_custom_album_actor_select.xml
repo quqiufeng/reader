@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/shape_0fffffff_radius_5" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_50" android:layout_marginLeft="@dimen/apply_pad_common_left_right_5" android:layout_marginRight="@dimen/apply_pad_common_left_right_5" android:layout_marginBottom="@dimen/len_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingRight="@dimen/len_4" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivAdd" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:src="@drawable/icon_add_white_14" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvSubTitle" android:paddingTop="@dimen/len_10" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_time_line_content_filter_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_5" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_photo" android:background="@drawable/shape_f8fbff_radius_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_10" app:imageHeight="1" app:imageWidth="1" />
+        <ImageView android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_no_cover" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:tag="binding_3" android:background="@drawable/bg_4d000000_00000000_8_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/layout_photo" android:layout_alignBottom="@id/layout_photo" />
+    <ImageView android:tag="binding_4" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_delete_circle_white_16_16" android:layout_alignTop="@id/layout_photo" android:layout_alignEnd="@id/layout_photo" />
+    <ImageView android:tag="binding_5" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/layout_photo" android:layout_alignEnd="@id/layout_photo" />
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/common_title" android:ellipsize="end" android:id="@id/title" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:singleLine="true" android:layout_below="@id/layout_photo" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5" />
+    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/common_subdesc" android:ellipsize="end" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:singleLine="true" android:layout_below="@id/title" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="line">
+            <size android:width="@dimen/len_4" />
+            <stroke android:width="@dimen/len_4" android:color="@color/color_EEEEEE" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="line">
+                <size android:width="@dimen/len_4" />
+                <stroke android:width="@dimen/len_4" android:color="@color/color_425FFF" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>

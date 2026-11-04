@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:tag="layout/item_remote_access_0" android:background="#ffd5c098" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_74" app:cardCornerRadius="@dimen/len_8" app:cardElevation="@dimen/len_0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/contentRl" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/apply_pad_item_fixed_height_56">
+        <View android:background="@drawable/bg_gradient_00000000_1a000000_radius_8" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:gravity="center" android:background="@drawable/shape_circle_white_22_bg" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_24" android:gravity="center" android:id="@id/initialsTv" android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+            <com.google.android.material.imageview.ShapeableImageView android:id="@id/iconIv" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" app:shapeAppearance="@style/ImageCircleStyle" />
+            <ImageView android:layout_gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_blue_add" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_white" android:ellipsize="end" android:id="@id/remarksTv" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_74" android:layout_marginEnd="@dimen/len_59" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_bfffffff" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_74" android:layout_marginEnd="@dimen/len_59" />
+        </LinearLayout>
+        <ImageView android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_more_white" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

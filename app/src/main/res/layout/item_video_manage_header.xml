@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutLike" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/ivLike" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_add_like" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvLike" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_add_to_favirote" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutMark" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/ivMark" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_mark_viewed" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvMark" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_mark_as_watched" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutSkip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/ivSkip" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/skip_pre_movie_white" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvSkip" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_skip_intro" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutDelete" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/ivDelete" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_delete_white" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/tvDelete" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_delete" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</FrameLayout>

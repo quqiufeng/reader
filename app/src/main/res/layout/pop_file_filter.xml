@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/pop_file_filter_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_filter" android:layout_weight="1.0" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/closeIv" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" android:scaleType="centerInside" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_16" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@id/allFileCb" android:checked="true" android:text="@string/common_filter_all" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+        <LinearLayout android:orientation="vertical" android:id="@id/middleCbLl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <CheckBox android:gravity="start|center" android:id="@id/folderCb" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:text="@string/common_file_categories_folders" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+                <CheckBox android:gravity="start|center" android:id="@id/documentCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_documents" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <CheckBox android:gravity="start|center" android:id="@id/pictureCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_images" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+                <CheckBox android:gravity="start|center" android:id="@id/videoCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_videos" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <CheckBox android:gravity="start|center" android:id="@id/audioCb" android:layout_width="@dimen/len_0" android:text="@string/common_player_audio" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+                <CheckBox android:gravity="start|center" android:id="@id/torrentCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_torrents" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <CheckBox android:gravity="start|center" android:id="@id/apkCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_applications" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+                <CheckBox android:gravity="start|center" android:id="@id/zipCb" android:layout_width="@dimen/len_0" android:text="@string/common_file_categories_zips" android:layout_weight="1.0" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <CheckBox android:id="@id/customFileTypeCb" android:clickable="false" android:layout_marginTop="@dimen/len_20" android:text="@string/common_file_custom_file_extensions" style="@style/style_30_blue_checkbox_666666_14_radiobutton" />
+            <View android:id="@id/customFileTypeView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/customFileTypeCb" android:layout_alignBottom="@id/customFileTypeCb" android:layout_alignStart="@id/customFileTypeCb" android:layout_alignEnd="@id/customFileTypeCb" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:ellipsize="end" android:id="@id/customFileTypeTv" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_29" />
+            <TextView android:textColor="@color/common_blue" android:id="@id/modifyCustomTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_change" android:layout_marginStart="@dimen/len_49" android:layout_marginEnd="@dimen/len_15" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_25">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/confirmTv" android:background="@drawable/shape_circle_blue_22_bg" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:text="@string/common_button_ok" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

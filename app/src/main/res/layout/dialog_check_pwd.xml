@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/dialog_check_pwd_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingTop="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:text="@string/common_prompt_notice" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_16" android:layout_marginRight="@dimen/len_20" android:text="@string/common_storage_admin_enter_password_confirm" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_7" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tv_account" android:background="@drawable/shape_f4f4f4_radius_8" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:includeFontPadding="false" />
+        <com.zentraedi.business.widget.PasswordEditView android:id="@id/password_edit" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/error_text" android:id="@id/tv_error_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_25">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+            <View android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_1" />
+            <RelativeLayout android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:id="@id/llConfirm" android:background="@drawable/bg_cfd6ff_radius_22" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                    <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/pbLoading" android:visibility="gone" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_white" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_ok" android:includeFontPadding="false" />
+                    <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:id="@id/tv_confirm" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_nas_info_4_single_0" android:background="@drawable/shape_border_e4e4e4_circle_8" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:id="@id/tvTitle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_14" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvDesc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_14" android:includeFontPadding="false" android:layout_below="@id/tvTitle" android:layout_centerHorizontal="true" />
+</RelativeLayout>

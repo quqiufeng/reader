@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_menu_audio_0" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:enabled="false" android:id="@id/menu_check_box" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_20" android:checked="false" android:button="@drawable/select_blue_24" />
+    <ProgressBar android:id="@id/pbLoading" android:padding="@dimen/len_4" android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_20" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_35" android:paddingTop="@dimen/len_21" android:paddingBottom="@dimen/len_21" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_42">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_e6ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_80ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvSubTitle" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_35" />
+</FrameLayout>

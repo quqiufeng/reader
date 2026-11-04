@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/layout_collect_task_detail_bottom_button_0" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/selector_text_d0021b_cccccc" android:gravity="center" android:layout_gravity="bottom" android:id="@id/taskStatusTv" android:tag="binding_1" android:background="@drawable/selector_bg_d0021b_cccccc" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_40" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_34" />
+</FrameLayout>

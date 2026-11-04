@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.reader.pdf.MuPdfPageView android:id="@id/pdf_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/pdf_rl_progress" android:background="@color/color_E6ffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/pb_progress" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_centerInParent="true" android:indeterminateTint="@color/color_FFBC00" android:indeterminateTintMode="src_atop" style="@style/Base.Widget.AppCompat.ProgressBar" />
+    </RelativeLayout>
+</merge>

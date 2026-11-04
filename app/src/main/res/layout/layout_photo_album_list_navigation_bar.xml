@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_photo_album_list_navigation_bar_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_left" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_middle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_85" android:layout_marginRight="@dimen/len_85" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/common_white" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_5" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="@dimen/len_5" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+        <ImageView android:gravity="center" android:id="@id/navAddIv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_add_white_44" />
+        <ImageView android:gravity="center" android:id="@id/iv_quick_manage" android:tag="binding_4" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_select_image_w" android:scaleType="centerInside" />
+        <ImageView android:gravity="center" android:id="@id/tv_nav_right" android:tag="binding_5" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_more_white" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

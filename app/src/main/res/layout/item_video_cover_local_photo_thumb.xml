@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_video_cover_local_photo_thumb_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/iv_background" android:tag="binding_1" android:background="@color/color_F4F4F4" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:proportHeight="1" app:proportWidth="1" />
+    <CheckBox android:id="@id/cb_select" android:tag="binding_2" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/select_blue_rect_30_border" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

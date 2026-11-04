@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_music_lyrics_0" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_arrow_down_black" />
+        <ImageView android:layout_gravity="right" android:id="@id/ivLrc" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginRight="@dimen/len_44" android:src="@drawable/icon_search_lrc" android:scaleType="center" />
+        <ImageView android:layout_gravity="right" android:id="@id/ivMore" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_more_black_album_44_44" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvLyrics" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_80" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_50" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:background="@drawable/music_lyrics_cover_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_120" />
+        <View android:layout_gravity="bottom" android:background="@drawable/music_lyrics_cover_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_200" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.zentraedi.business.widget.NewScrollTextView android:textSize="@dimen/len_22" android:textColor="@color/color_333333" android:id="@id/tvMusicTitle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" app:clickEnable="false" app:isHorizontal="true" app:speed="1.3" app:textGravity="-1" app:text_color="@color/color_333333" app:text_size="@dimen/len_22" />
+                <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="@dimen/len_10" />
+                <com.zentraedi.business.widget.NewScrollTextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:id="@id/tvMusicSubTitle" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" app:clickEnable="false" app:isHorizontal="true" app:speed="1.3" app:textGravity="-1" app:text_color="@color/color_999999" app:text_size="@dimen/len_14" />
+            </LinearLayout>
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_666666" android:layout_gravity="right" android:id="@id/tvCopyLrc" android:background="@drawable/shape_border_cccccc_radius_14" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_copy_lyric" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:gravity="center" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_music_no_lyrics" />
+    </FrameLayout>
+</LinearLayout>

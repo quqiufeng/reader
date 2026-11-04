@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_usb_disk_pattern_phone_external_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:id="@id/phoneExternalCb" android:tag="binding_1" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_30_30_circle_check_box" android:text="@string/common_settings_flashdrive_insertinmobile" android:layout_marginStart="@dimen/len_8" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/selector_text_666666_cccccc" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_settings_flashdrive_insertinmobile_desc" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_38" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+    <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_16" />
+</LinearLayout>

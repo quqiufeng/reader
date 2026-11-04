@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.business.widget.ProportionShapeableImageView android:id="@id/ivCard" android:background="@drawable/shape_home_card_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:proportHeight="96" app:proportWidth="96" app:shapeAppearance="@style/card_rounded_10" />
+        <com.zentraedi.business.widget.BlurBgImageView android:id="@id/ivBlur" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.widget.ProportionShapeableImageView android:id="@id/ivCardLoading" android:background="@drawable/shape_home_card_image" android:padding="@dimen/len_0_5" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/home_panel_loading_animation" android:scaleType="centerCrop" app:proportHeight="96" app:proportWidth="96" app:shapeAppearance="@style/card_rounded_10" app:strokeColor="#ffe6e6e6" app:strokeWidth="@dimen/len_1" />
+        <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:textColor="@color/nas_white" android:id="@id/tvCardTitle" android:background="@drawable/bg_80000000_gradient_top" android:paddingTop="@dimen/len_13" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_photos_photos" android:includeFontPadding="false" android:paddingStart="@dimen/len_10" />
+        <FrameLayout android:layout_gravity="end" android:id="@id/flEye" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivEye" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:layout_marginLeft="@dimen/len_7" android:layout_marginTop="@dimen/len_11" android:layout_marginRight="@dimen/len_7" android:layout_marginBottom="@dimen/len_11" android:src="@drawable/icon_home_card_eye_show" android:layout_marginHorizontal="@dimen/len_7" android:layout_marginVertical="@dimen/len_11" />
+        </FrameLayout>
+    </FrameLayout>
+</merge>

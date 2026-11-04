@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_root_layout" android:layout_width="fill_parent" android:layout_height="@dimen/len_64"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/cb_select" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/apply_pad_common_left_right_8" android:button="@drawable/selector_30_30_circle_check_box" android:layout_centerVertical="true" />
+    <ImageView android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/len_4" android:src="@drawable/icon_bt_38" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" android:layout_marginBottom="@dimen/len_2" android:lines="2" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rlMain" android:tag="layout/activity_edit_txt_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlNav" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/closeIv" android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:ellipsize="end" android:gravity="center" android:id="@id/tvNavTitle" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_250" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <LinearLayout android:layout_width="@dimen/len_18" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/apply_pad_common_left_right_6" android:layout_toRightOf="@id/tvNavTitle" android:layout_alignParentBottom="true">
+            <com.zentraedi.business.widget.NoteSaveStatusView android:layout_gravity="center" android:id="@id/noteStatusView" android:visibility="visible" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_15" android:layout_marginRight="@dimen/len_100" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/apply_pad_common_left_right_10" android:text="@string/common_button_save" android:layout_toLeftOf="@id/ivPenEdit" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/ivPenEdit" android:tag="binding_6" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_more_44" />
+        </LinearLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rlNav">
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center|left|top" android:id="@id/etContent" android:background="@null" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_34" android:lineSpacingExtra="@dimen/len_4" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_7" android:background="@color/common_white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rlNav">
+        <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_list_data_error" />
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_file_doc_load_failed_cause_doc_large_or_others" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:text="@string/business_string_key_377" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

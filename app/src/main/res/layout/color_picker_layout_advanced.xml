@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <androidx.appcompat.widget.AppCompatEditText android:textSize="@dimen/primary_text_size" android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/color_edit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="asdasd" android:singleLine="true" android:selectAllOnFocus="true" android:inputType="textNoSuggestions" android:imeOptions="actionDone" android:alpha="0.54" />
+        <com.pdftron.pdf.widget.ColorHuePickerWheel android:id="@id/color_hue_picker" android:layout_width="@dimen/color_hue_size" android:layout_height="@dimen/color_hue_size" android:layout_marginTop="@dimen/preview_padding" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/padding_medium" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/prev_color" android:background="@drawable/rounded_corners_left" android:layout_width="@dimen/advanced_color_preview_width" android:layout_height="@dimen/advanced_color_preview_height" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/curr_color" android:background="@drawable/rounded_corners_right" android:layout_width="@dimen/advanced_color_preview_width" android:layout_height="@dimen/advanced_color_preview_height" />
+        </LinearLayout>
+        <com.pdftron.pdf.widget.ColorSatValuePickerBoard android:id="@id/color_saturation_picker" android:layout_width="@dimen/color_hue_size" android:layout_height="@dimen/color_hue_size" android:layout_marginTop="@dimen/icon_min_padding" />
+    </LinearLayout>
+</LinearLayout>

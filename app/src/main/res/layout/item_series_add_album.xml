@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_8" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingBottom="@dimen/apply_pad_item_top_bottom_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:id="@id/checkbox" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+    <ImageView android:id="@id/ivCover" android:layout_width="@dimen/len_55" android:layout_height="@dimen/len_73" android:layout_marginLeft="@dimen/len_5" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:id="@id/tvVideoName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_99ffffff" android:ellipsize="end" android:id="@id/tvCenter" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_99ffffff" android:ellipsize="end" android:id="@id/tvBottom" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

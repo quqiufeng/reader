@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_time_line_pic_year_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.photo.view.TimelineRefreshLayout android:id="@id/content_refreshlayout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:scrollbarThumbVertical="@color/transparent_bg" android:id="@id/rv_picture_content" android:tag="binding_2" android:paddingBottom="@dimen/len_120" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-20.0dip" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.zentraedi.photo.view.TimelineRefreshLayout>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_loading" />
+    <include android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/fragment_picture_empty" />
+</RelativeLayout>

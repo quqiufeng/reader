@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_menu_subtitle_search_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_21" android:paddingBottom="@dimen/len_21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_46" android:lineSpacingExtra="@dimen/len_5" />
+    <ImageView android:layout_gravity="center|right" android:id="@id/ivStatus" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_30_30_circle_deny" android:scaleType="center" />
+    <ProgressBar android:layout_gravity="center|right" android:id="@id/pbLoading" android:padding="@dimen/len_14" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" />
+    <View android:layout_gravity="bottom" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+</FrameLayout>

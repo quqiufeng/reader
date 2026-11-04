@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/relationTv" android:background="@drawable/shape_f4f4f4_radius_5" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:paddingRight="@dimen/apply_pad_common_left_right_8" android:layout_width="wrap_content" android:layout_height="@dimen/apply_pad_item_fixed_height_28" android:layout_margin="@dimen/len_5" android:drawableRight="@drawable/icon_close_black_10" android:drawablePadding="@dimen/len_4"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_ftp_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_gravity="center_vertical" android:id="@id/tv_dlna_prompt" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <Switch android:enabled="false" android:layout_gravity="center|right" android:id="@id/switch_toggle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:forceDarkAllowed="false" />
+        <RelativeLayout android:layout_gravity="center|right" android:id="@id/llswitch" android:layout_width="@dimen/len_80" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ImageView android:layout_marginBottom="@dimen/len_15" style="@style/intl_common_shape_line" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/llTourist" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_8">
+        <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_111111_night_ffffff" android:tag="binding_4" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="@drawable/selector_30_30_square_check_box" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_6" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:id="@id/tv_sync" android:tag="binding_6" android:background="@drawable/shape_f4f4f4_radius_20" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_6" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_12" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_fileservice_sync_name" />
+    <LinearLayout android:orientation="vertical" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+        <LinearLayout android:orientation="horizontal" android:id="@id/llQuickPath" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_8">
+            <RadioButton android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_111111_night_ffffff" android:tag="binding_8" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="@string/common_settings_ftp_quick_path" android:drawableLeft="@drawable/selector_30_30_square_check_box" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_6" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_settings_ftp_enable_desc" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_12" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_10" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_ftp_file_path" />
+                <TextView android:textSize="@dimen/font_12" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" />
+            </LinearLayout>
+            <ImageView android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:tag="binding_12" android:background="@drawable/shape_ftp_bg" android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_ftp_camera_settings_reference" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_monitor_ip_address" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvFtpIp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_user_port" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/nas_xml_string_key_96_temp" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_settings_ftp_path_or_mount_point" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/nas_xml_string_key_102_temp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_111111_night_ffffff" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:text="@string/common_settings_usage" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_5">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_access_method" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="：" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_client_only" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_settings_address" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="：" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/tv_explain" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:lineSpacingExtra="@dimen/len_5" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_16">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_ftp_ftps_port" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="：" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/nas_xml_string_key_96_temp" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+    <include layout="@layout/layout_ftp_passive" />
+    <androidx.legacy.widget.Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:tag="binding_19" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_prompt_note" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <View android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_8" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_316c2d9892" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_21" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <View android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_8" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_db475dcc53" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:tag="binding_22" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <View android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" android:layout_marginTop="@dimen/len_8" android:layout_marginEnd="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_ftp_sync_update" />
+    </LinearLayout>
+    <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_34" />
+</LinearLayout>

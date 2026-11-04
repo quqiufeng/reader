@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_hdmi_menu_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/color_2e2e2e" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_555" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/rl_nav" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_dark_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_player_menu" android:layout_centerInParent="true" />
+            <ImageView android:tag="binding_1" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:src="@drawable/navigation_shape" android:scaleType="fitXY" android:layout_below="@id/rl_nav" />
+        <com.flyco.tablayout.SlidingTabLayout android:id="@id/pageTabLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:layout_below="@id/rl_nav" android:paddingStart="@dimen/len_3" android:paddingEnd="@dimen/len_3" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/button_blue" app:tl_indicator_corner_radius="@dimen/len_1" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_margin_bottom="@dimen/len_13" app:tl_indicator_width_equal_title="true" app:tl_tab_padding="10.0dip" app:tl_textSelectColor="@color/button_blue" app:tl_textSelectSize="@dimen/font_16" app:tl_textUnselectColor="@color/color_999999" app:tl_textUnselectSize="@dimen/font_16" />
+        <androidx.viewpager.widget.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/pageTabLayout" android:layout_alignParentBottom="true" android:overScrollMode="never" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:src="@drawable/navigation_shape" android:scaleType="fitXY" android:layout_below="@id/pageTabLayout" />
+    </RelativeLayout>
+</RelativeLayout>

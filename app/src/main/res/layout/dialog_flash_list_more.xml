@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_flash_list_more_0" android:paddingBottom="@dimen/len_60" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_launch_flash" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginTop="@dimen/len_20" android:src="@drawable/icon_launch_flash" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_1" android:layout_marginBottom="@dimen/len_25" android:text="@string/common_button_send" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="2.0" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_receive_flash" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginTop="@dimen/len_20" android:src="@drawable/icon_receive_flash" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_1" android:layout_marginBottom="@dimen/len_25" android:text="@string/common_button_receive" />
+        </LinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

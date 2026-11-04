@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_menu_audio_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="horizontal" android:id="@id/layout_tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_white" />
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center" android:id="@id/tvMenuTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_transcoding_a26c70a9e8" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivCloseMenu" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:scaleType="centerInside" />
+        <View android:layout_gravity="bottom" android:id="@id/view_title_line" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvContent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

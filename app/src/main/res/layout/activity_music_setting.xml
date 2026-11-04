@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_music_setting_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:id="@id/headerLayout" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tvTitle" android:paddingBottom="@dimen/top_big_title_separate_line_margin_top" android:text="@string/common_button_settings" app:medium_bold="true" style="@style/bigTitleTextView" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_2" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black_2" />
+                    <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_button_settings" android:singleLine="true" android:layout_centerHorizontal="true" android:alpha="0.0" />
+                    <View android:id="@id/toolbarLine" android:background="@color/color_E4E4E4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/headLine" android:background="@color/day_line_music" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rlMusicPlayListManage" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_nas_string_key_695_res" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/addMusicToZMusicRl" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_content_management" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:id="@id/rlNetWarn" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_76">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:id="@id/tvMusicNetTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_290de8de59" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvMusicNetDesc" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_558060a4f5" android:includeFontPadding="false" android:layout_below="@id/tvMusicNetTitle" />
+                </LinearLayout>
+                <Switch android:textColor="@color/common_title" android:layout_gravity="center|right" android:id="@id/swNet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:thumb="@drawable/selector_gray_switch_select_bg" android:track="@drawable/switch_bg_style" android:switchPadding="@dimen/len_10" android:showText="false" android:forceDarkAllowed="false" />
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </FrameLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutDolbySound" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_76">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_audiobook_sound_effect_settings" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_deb8c83291" android:includeFontPadding="false" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvSoundEffect" android:paddingRight="@dimen/len_7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_filter_audio_dolby_atmos" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </FrameLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSongNameSet" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_76">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_settings_display_song_title" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_edea674cbe" android:includeFontPadding="false" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvSongNameSet" android:paddingRight="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_1a2b604b1e" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_16_24" />
+                </LinearLayout>
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+            </FrameLayout>
+            <RelativeLayout android:id="@id/rlMusicFormat" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_76">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:id="@id/tvTypeTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_audiobook_support_format_description_title" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvMusicTypeDesc" android:paddingTop="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_d9e46cdb27" android:includeFontPadding="false" android:layout_below="@id/tvTypeTitle" />
+                </LinearLayout>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMusicTips" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <TextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_settings_usage_instructions" android:includeFontPadding="false" />
+                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" />
+                <View android:layout_gravity="bottom" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="layout/layout_cancel_or_help_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_disk_migration_740b982141" android:includeFontPadding="false" />
+    <View android:layout_gravity="center" android:tag="binding_2" android:background="@color/color_cccccc" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_14" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_settings_remote_assistance" android:includeFontPadding="false" />
+</LinearLayout>

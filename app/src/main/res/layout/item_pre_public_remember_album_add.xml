@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootRl" android:tag="layout/item_pre_public_remember_album_add_0" android:background="@color/color_f0f3ff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivAlbum" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_8" app:cornerRightTop="true" app:imageHeight="1" app:imageWidth="1" />
+    <ImageView android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:src="@drawable/icon_add_album" android:layout_centerInParent="true" />
+</RelativeLayout>

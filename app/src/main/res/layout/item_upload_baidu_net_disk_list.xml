@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_upload_baidu_net_disk_list_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:tag="binding_1" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_2" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_39" />
+    <RelativeLayout android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_file" android:tag="binding_3" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="middle" android:id="@id/tv_name" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/iv_file" />
+        <RelativeLayout android:id="@id/llPath" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_toRightOf="@id/iv_file" android:layout_below="@id/tv_name">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:ellipsize="middle" android:id="@id/tv_path" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_44" android:singleLine="true" android:includeFontPadding="false" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/startOrPauseIv" android:tag="binding_6" android:visibility="invisible" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:ellipsize="end" android:id="@id/tv_size" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/iv_file" android:layout_below="@id/llPath" />
+        <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_toRightOf="@id/iv_file" android:layout_below="@id/tv_size">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0">
+                <ProgressBar android:id="@id/pb_upload_baidu" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:max="100" android:progressDrawable="@drawable/bg_progress_blue" style="?android:progressBarStyleHorizontal" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_below="@id/pb_upload_baidu">
+                    <TextView android:textSize="@dimen/font_11" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/file_string_key_203" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_D0021B" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="15.0dip" android:text="@string/common_photos_a25d1b62f8" android:includeFontPadding="false" android:drawableRight="@drawable/icon_red_arrow_24" />
+                    <TextView android:textSize="@dimen/font_11" android:gravity="center_vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/font_11" android:textColor="@color/common_desc" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/font_11" android:textColor="@color/common_desc" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_more" android:tag="binding_13" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_more_black_24_24_enable" />
+                <View android:id="@id/v_folder_upload_failed" android:tag="binding_14" android:background="@drawable/bg_task_fail_red_tip" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:layout_marginLeft="@dimen/len_24" android:layout_marginTop="@dimen/len_4" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/layout_adding_files_0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="@color/nas_white" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/len_5" app:cardElevation="@dimen/len_4">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_15" android:paddingVertical="@dimen/len_10">
+            <ProgressBar android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:text="@string/common_transcoding_adding_files" android:includeFontPadding="false" android:layout_marginHorizontal="@dimen/len_8" />
+            <ImageView android:tag="binding_1" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_close_black_48" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

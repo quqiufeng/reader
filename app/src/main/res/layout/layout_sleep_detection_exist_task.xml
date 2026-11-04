@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_sleep_detection_exist_task_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_monitor_sleep_detection_result_desc" />
+    <androidx.recyclerview.widget.RecyclerView android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:layout_marginBottom="@dimen/len_18" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

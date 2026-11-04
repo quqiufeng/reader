@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_network_ping_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/network" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_common_left_right_10" android:text="@string/business_string_key_92" android:hint="@string/business_hint_string_key_0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_common_left_right_10">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_93" android:layout_marginStart="@dimen/apply_pad_common_left_right_10" />
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/count" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/business_string_key_94" android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/apply_pad_common_left_right_10">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business_string_key_95" android:layout_marginStart="@dimen/apply_pad_common_left_right_10" />
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/timeout" android:padding="@dimen/apply_pad_common_left_right_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/business_string_key_96" android:inputType="number" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/start" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_margin="@dimen/apply_pad_common_left_right_15" android:text="@string/business_string_key_97" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/result" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/apply_pad_common_left_right_10" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

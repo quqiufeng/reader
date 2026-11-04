@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/itemRootLayout" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/len_96" android:layout_height="@dimen/len_72">
+        <ImageView android:id="@id/ivVideoImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_video_folder_60_45" android:scaleType="center" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="bottom|center|right" android:id="@id/tvDuration" android:padding="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/ivDownload" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_downloaded_2" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_3" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_96">
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_E4E4E4" android:ellipsize="end" android:id="@id/tvItemTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_3" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_50p_ffffff" android:ellipsize="middle" android:id="@id/tvDesc" android:paddingTop="@dimen/len_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+</FrameLayout>

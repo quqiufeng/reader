@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_navigation" android:tag="layout/common_toolbar_new_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:textSize="@dimen/font_14" android:gravity="center" android:id="@id/tv_nav_letv_nav_leftft" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" />
+    <ImageView android:gravity="center" android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/len_45" android:layout_marginRight="@dimen/len_45" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/toolbar_title" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tv_nav_title" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_nav_title_icon" android:tag="binding_4" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_helper" />
+    </LinearLayout>
+    <ImageView android:tag="binding_5" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/common_desc" android:gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_8" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:scaleType="fitXY" />
+        <TextView android:textSize="@dimen/navigation_action_text_size" android:layout_gravity="center_vertical" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_add" />
+    </LinearLayout>
+    <ImageView android:id="@id/toolbar_separate_line" android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

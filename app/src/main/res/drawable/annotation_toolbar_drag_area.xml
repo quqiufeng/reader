@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/selector_annotation_toolbar_drag_area_background" />
+    <stroke android:width="@dimen/annotation_toolbar_drag_area_dash_stroke_width" android:color="?pt_annot_toolbar_icon" android:dashWidth="@dimen/annotation_toolbar_drag_area_dash_width" android:dashGap="@dimen/annotation_toolbar_drag_area_dash_gap" />
+    <corners android:radius="4.0dip" />
+</shape>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_zspool_no_m2_on_sata_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_28" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_title" android:background="@color/nas_white" android:paddingTop="@dimen/len_58" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_storage_58bc82ff38" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/rl_sata" android:paddingLeft="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_40" android:layout_below="@id/tv_title">
+        <RelativeLayout android:id="@id/iv_image_sata" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_84">
+            <ImageView android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_84" android:src="@drawable/icon_zs_pool_sata" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_zs_pool_no" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_no_sata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_not_recognized_interface_disk" android:layout_marginStart="@dimen/len_15" android:layout_toEndOf="@id/iv_image_sata" />
+        <TextView android:tag="binding_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_no_sata" android:layout_marginStart="@dimen/len_15" android:layout_toEndOf="@id/iv_image_sata" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:layout_below="@id/rl_sata" android:paddingStart="@dimen/len_20" android:paddingEnd="@dimen/len_20">
+        <RelativeLayout android:id="@id/iv_image_ssd" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_84">
+            <ImageView android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_84" android:src="@drawable/icon_zs_pool_m2" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_zs_pool_no" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_no_ssd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_not_recognized_interface_disk" android:layout_marginStart="@dimen/len_15" android:layout_toEndOf="@id/iv_image_ssd" />
+        <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_support_m2_storage_not_detected" android:layout_below="@id/tv_no_ssd" android:layout_marginStart="@dimen/len_15" android:layout_toEndOf="@id/iv_image_ssd" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:tag="binding_2" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:text="@string/common_disk_migration_dd3d7fb6a5" android:layout_above="@id/llBottom" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/llBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_26" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:tag="binding_3" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_sign_out" android:includeFontPadding="false" />
+        <View android:layout_gravity="center_vertical" android:background="@color/color_cccccc" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:tag="binding_4" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_remote_assistance" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

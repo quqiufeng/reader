@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/len_4" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_8" android:layout_marginRight="@dimen/apply_pad_common_left_right_8">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:id="@id/tvTitleName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" app:medium_bold="true" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:gravity="center_vertical" android:id="@id/tvAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_see_all" android:drawableRight="@drawable/icon_arrow_gray_7_9" android:drawablePadding="@dimen/len_3" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvEmpty" android:paddingLeft="@dimen/apply_pad_common_left_right_10" android:paddingTop="@dimen/len_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

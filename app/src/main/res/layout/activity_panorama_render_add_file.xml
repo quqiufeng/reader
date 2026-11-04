@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_panorama_render_add_file_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_24" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_back" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" android:contentDescription="@string/common_button_back" />
+        <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/panorama_render_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_transcoding_add_file" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/panorama_render_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_18" android:text="@string/common_transcoding_panorama_add_supported_formats" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_add_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_add_empty_panel" android:background="@drawable/bg_panorama_add_empty" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="226.0dip">
+                <ImageView android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_panorama_add_empty_plus" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/panorama_render_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_24" android:text="@string/common_transcoding_panorama_no_material" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/panorama_render_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_transcoding_panorama_tap_add_material" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/panorama_render_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/panorama_render_add_output_tip" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_source_files" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <include android:id="@id/layout_render_parameters" android:visibility="gone" layout="@layout/item_panorama_render_source_footer" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_actions" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_20" android:paddingEnd="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/panorama_render_title" android:gravity="center" android:id="@id/btn_cancel" android:background="@drawable/bg_panorama_add_cancel" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+        <View android:layout_width="@dimen/len_20" android:layout_height="1.0dip" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_start_render" android:background="@drawable/bg_panorama_render_primary_button" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_transcoding_panorama_start_render" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/file_discover_fragment_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_slide_external" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_4" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_slide_pools" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-12.0dip" android:layout_marginBottom="@dimen/len_24" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="4" />
+            <View android:tag="binding_4" android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_11" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_top_content" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_24" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="4" />
+            <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_11" />
+            <androidx.recyclerview.widget.RecyclerView android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_40" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="4" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

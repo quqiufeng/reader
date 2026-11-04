@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_100"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:id="@id/tv_last_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_no_more" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

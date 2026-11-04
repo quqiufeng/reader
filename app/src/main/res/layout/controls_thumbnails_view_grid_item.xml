@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/item_image_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/controls_thumbnails_view_image_selector" android:layout_centerInParent="true">
+            <com.google.android.material.imageview.ShapeableImageView android:layout_gravity="center" android:id="@id/item_image" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/controls_thumbnails_view_description" app:strokeColor="@color/controls_thumbnails_view_bg" app:strokeWidth="1.0dip" />
+        </FrameLayout>
+    </RelativeLayout>
+    <com.pdftron.pdf.widget.InertCheckBox android:id="@id/item_check" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    <TextView android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/item_text" android:background="@drawable/controls_thumbnails_view_rounded_edges" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAlignment="center" />
+</RelativeLayout>

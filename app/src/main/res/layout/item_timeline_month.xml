@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_timeline_month_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/iv_month" android:tag="binding_1" android:background="@color/pic_thumb_default_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/len_2" android:scaleType="centerCrop" app:proportHeight="250" app:proportWidth="375" />
+    <View android:background="@drawable/shape_gradient_black_bg_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/iv_month" android:layout_alignBottom="@id/iv_month" />
+    <TextView android:textSize="@dimen/font_28" android:textStyle="bold" android:textColor="@color/nas_white" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_18" android:layout_marginTop="@dimen/len_18" android:includeFontPadding="false" />
+    <LinearLayout android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_month">
+        <include android:id="@id/layout_date_1_of_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/item_timeline_month_date_1" />
+        <View android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:id="@id/layout_date_2_of_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/item_timeline_month_date_1" />
+        <View android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:id="@id/layout_date_3_of_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/item_timeline_month_date_1" />
+    </LinearLayout>
+    <LinearLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_month">
+        <include android:id="@id/layout_date_1_of_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" layout="@layout/item_timeline_month_date_2" />
+        <View android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:id="@id/layout_date_2_of_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/item_timeline_month_date_1" />
+    </LinearLayout>
+    <include android:id="@id/layout_date_1_of_1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_month" layout="@layout/item_timeline_month_date_3" />
+</RelativeLayout>

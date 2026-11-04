@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_create_photo_album_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/toolbar" layout="@layout/layout_album_detail_navigation_bar" />
+    <androidx.core.widget.NestedScrollView android:id="@id/contentNsv" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/contentTopTitle" layout="@layout/item_no_recyclerview_top_title" />
+            <View android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <RadioGroup android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/rg_tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:checkedButton="@id/rb_personal_tab">
+                <RadioButton android:id="@id/rb_personal_tab" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_personal_album" android:drawableLeft="@drawable/selector_30_30_circle_check_box" style="@style/style_create_photo_album_button" />
+                <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rb_pub_tab" android:tag="binding_2" android:text="@string/common_photos_family_album" android:drawableLeft="@drawable/selector_30_30_circle_check_box" style="@style/style_create_photo_album_button" />
+                <Space android:tag="binding_3" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/rb_baby_tab" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:text="@string/common_photos_baby_album" android:drawableLeft="@drawable/selector_30_30_circle_check_box" style="@style/style_create_photo_album_button" />
+            </RadioGroup>
+            <FrameLayout android:id="@id/fl_create_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_8" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/confirm_add_album" android:gravity="center" android:layout_gravity="end" android:tag="binding_4" android:background="@drawable/selector_add_album" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_22" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_50" android:text="@string/common_button_ok" android:forceDarkAllowed="false" />
+</LinearLayout>

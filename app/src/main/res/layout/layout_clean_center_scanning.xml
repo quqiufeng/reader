@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/layout_clean_center_scanning_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fl_anim_container" android:layout_width="@dimen/len_270" android:layout_height="@dimen/len_216" android:layout_marginTop="@dimen/len_25" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed">
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/ivImage" android:layout_width="fill_parent" android:layout_height="fill_parent" app:lottie_autoPlay="true" app:lottie_fileName="search_file_lottie.json" app:lottie_imageAssetsFolder="photo_images/" app:lottie_loop="true" app:lottie_speed="1.0" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_48" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fl_anim_container">
+        <TextView android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_scanning_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/intl_text_content_font16" />
+        <TextView android:textColor="@color/color_999999" android:id="@id/tv_progress_desc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" style="@style/intl_text_content_font12" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

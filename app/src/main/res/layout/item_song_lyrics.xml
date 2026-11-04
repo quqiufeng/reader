@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.zspace.music.widget.LrcLineTextView android:textSize="16.0dip" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:ellipsize="end" android:id="@id/tvLyrics" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" app:line_normal_color="@color/text_color_day_666666_night_bfffffff_level2" app:line_normal_size="@dimen/len_16" app:line_play_color="@color/text_click_day_425fff_night_657cff_gray" app:line_play_size="@dimen/len_22" app:line_progress_bold="true" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_map_no_authorize_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_background" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_8" app:imageHeight="158" app:imageWidth="345" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:gravity="center" android:tag="binding_2" android:background="@drawable/button_selector_2" android:layout_width="@dimen/len_126" android:layout_height="@dimen/len_28" android:layout_centerInParent="true" />
+</RelativeLayout>

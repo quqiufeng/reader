@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_nav" android:tag="layout/layout_file_struct_detail_navigation_bar_0" android:background="@color/photo_navigation_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_back" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+    <ImageView android:id="@id/iv_nav_finish" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_page_44_44" android:layout_toEndOf="@id/iv_nav_back" android:forceDarkAllowed="false" />
+    <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="middle" android:gravity="center" android:id="@id/tv_nav_title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/navigation_img_width_and_height" android:layout_marginRight="@dimen/navigation_img_width_and_height" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

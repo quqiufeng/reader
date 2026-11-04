@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_dark_folder_group_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_head" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/rl_fold" android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10">
+            <ImageView android:tag="binding_3" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_6" android:src="@drawable/icon_dark_folded_to_bottom" android:layout_centerInParent="true" />
+            <ImageView android:tag="binding_4" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_10" android:src="@drawable/icon_dark_folded_to_right" android:layout_centerInParent="true" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_5" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_3" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_info" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:layout_toLeftOf="@id/rl_selection" android:layout_toRightOf="@id/ll_head" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:ellipsize="middle" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_8" android:paddingTop="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/rl_selection" android:tag="binding_9" android:paddingLeft="@dimen/len_10" android:layout_width="@dimen/len_48" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_10" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" />
+        <CheckBox android:enabled="false" android:layout_gravity="center_vertical" android:tag="binding_11" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+    </FrameLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignLeft="@id/ll_info" android:layout_alignParentBottom="true" />
+    <View android:tag="binding_12" android:background="#991f1f1f" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

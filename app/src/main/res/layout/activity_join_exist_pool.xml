@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_join_exist_pool_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_weight="1.0" />
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/bottomButtonRl" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_15" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/expansionOrHandleNowTv" android:tag="binding_1" android:background="@drawable/selector_circle_blue_button_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:text="@string/common_storage_f0c4bc4ba7" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/resetStorageTv" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_18" android:text="@string/common_virusscan_suspicious_file_action_no" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

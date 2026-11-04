@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:tag="layout/activity_photo_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager_main" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rlTabBottom" />
+    <RelativeLayout android:id="@id/rlTabBottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <RadioGroup android:orientation="horizontal" android:id="@id/rg_tab_layout" android:background="@color/color_c7ffffff" android:paddingTop="@dimen/len_3" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkedButton="@id/rb_pic">
+                <RadioButton android:id="@id/rb_pic" android:text="@string/common_photos_photos" android:drawableTop="@drawable/radio_home_tab_picture" android:forceDarkAllowed="false" style="@style/style_home_tab_radiobutton" />
+                <RadioButton android:id="@id/rb_footprint" android:text="@string/common_photos_footprint" android:drawableTop="@drawable/radio_home_tab_footprint" android:forceDarkAllowed="false" style="@style/style_home_tab_radiobutton" />
+                <RadioButton android:id="@id/rb_album" android:text="@string/common_photos_albums" android:drawableTop="@drawable/radio_home_tab_album" android:forceDarkAllowed="false" style="@style/style_home_tab_radiobutton" />
+                <RadioButton android:id="@id/rb_find" android:text="@string/common_photos_smart_ai" android:drawableTop="@drawable/radio_home_tab_find" android:forceDarkAllowed="false" style="@style/style_home_tab_radiobutton" />
+                <RadioButton android:id="@id/rb_setting" android:text="@string/common_button_settings" android:drawableTop="@drawable/radio_home_tab_setting" android:forceDarkAllowed="false" style="@style/style_home_tab_radiobutton" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:id="@id/ll_edit_tab_bar" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/layout_edit_tab_bar_photo" android:layout_width="fill_parent" android:layout_height="65.0dip" layout="@layout/layout_photo_edit_mode_tab_bar" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/ll_edit_tab_bar2" android:tag="binding_3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/layout_edit_tab_bar_album" android:layout_width="fill_parent" android:layout_height="65.0dip" layout="@layout/layout_photo_edit_mode_tab_bar" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

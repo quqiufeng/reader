@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_file_collect_main_0" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_302" android:layout_height="@dimen/len_172" android:layout_marginTop="@dimen/len_30" android:src="@drawable/bg_collect_main" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_20" android:text="@string/common_requests_desc" android:lineSpacingExtra="@dimen/len_5" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <include android:id="@id/layoutQuickCollectOption" layout="@layout/layout_collect_option_icon" />
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+    <include android:id="@id/layoutCustomCollectOption" layout="@layout/layout_collect_option_icon" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/fileCollectMyTaskLl" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvQuickCollect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_requests_my" android:includeFontPadding="false" />
+        <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_gray_arrow_8_12" />
+    </LinearLayout>
+    <View android:tag="binding_1" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+    <androidx.recyclerview.widget.RecyclerView android:tag="binding_2" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_ups_external_nut_server_0" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_gray_40" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" style="@style/separate_line_match" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_open" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <CheckBox android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_1" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/select_blue_24" android:text="@string/common_settings_on" android:paddingStart="@dimen/len_10" android:paddingEnd="@dimen/len_10" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_close" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_34" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <CheckBox android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_2" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/select_blue_24" android:text="@string/common_settings_off" android:paddingStart="@dimen/len_10" android:paddingEnd="@dimen/len_10" />
+    </LinearLayout>
+</LinearLayout>

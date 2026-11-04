@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_shudown_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/bg_shutdown_page_top" app:imageHeight="528" app:imageWidth="375" />
+    <include layout="@layout/layout_shudown_confirm" />
+    <include layout="@layout/layout_shudown_done" />
+    <include layout="@layout/layout_loading" />
+</RelativeLayout>

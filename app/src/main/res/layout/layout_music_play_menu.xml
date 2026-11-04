@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_action" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutShare" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivShare" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_share_black_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tvShare" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_share" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutAddToPlaylist" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_add_playlist_24_24_enable" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_add_to_playlist" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutCountdown" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_timing" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_timer" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/tvCountdown" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutSearchLrc" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSearchLrc" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_search_lrc" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_match_lyrics" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutCancelSearchLrc" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_search_lrc_cancel" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_match_button_unmatch" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layoutPlayEqualizer" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_music_equalizer_black_24_24" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_equalizer" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/detailInfoFl" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_music_info_black_24_24" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/detailInfoTv" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_song_info" />
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@id/detailFileInfo" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/common_dialog_menu_item_height">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/common_dialog_menu_item_icon" android:layout_height="@dimen/common_dialog_menu_item_icon" android:src="@drawable/icon_detail_info_black" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_music_file_info" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

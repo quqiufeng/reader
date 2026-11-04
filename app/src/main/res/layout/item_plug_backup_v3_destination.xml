@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_plug_backup_v3_destination_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:ellipsize="middle" android:id="@id/tv_path" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:maxLines="1" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tv_summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_2" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_click_day_425fff_night_657cff_gray" android:gravity="center" android:id="@id/tv_view_files" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:text="@string/common_button_view_files" android:includeFontPadding="false" android:paddingEnd="@dimen/len_16" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_click_day_425fff_night_657cff_gray" android:gravity="center" android:id="@id/tv_report" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:text="@string/common_plug_and_backup_backup_report" android:includeFontPadding="false" android:paddingEnd="@dimen/len_18" />
+    </LinearLayout>
+</LinearLayout>

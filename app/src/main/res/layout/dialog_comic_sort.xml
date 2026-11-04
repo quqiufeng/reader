@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_comic_sort_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_sort" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_15" />
+        <ImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:id="@id/v_divider_line" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:id="@id/layout_add_time" style="@style/dialog_file_list_sort_item">
+        <ImageView android:tag="binding_1" style="@style/dialog_file_list_sort_icon" />
+        <TextView android:text="@string/common_comics_added_time2" style="@style/dialog_file_list_sort_title" />
+        <TextView android:tag="binding_2" style="@style/dialog_file_list_sort_subtitle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layout_name" style="@style/dialog_file_list_sort_item">
+        <ImageView android:tag="binding_3" style="@style/dialog_file_list_sort_icon" />
+        <TextView android:text="@string/common_comics_name" style="@style/dialog_file_list_sort_title" />
+        <TextView android:tag="binding_4" style="@style/dialog_file_list_sort_subtitle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layout_size" style="@style/dialog_file_list_sort_item">
+        <ImageView android:tag="binding_5" style="@style/dialog_file_list_sort_icon" />
+        <TextView android:text="@string/common_comics_size" style="@style/dialog_file_list_sort_title" />
+        <TextView android:tag="binding_6" style="@style/dialog_file_list_sort_subtitle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layout_type" style="@style/dialog_file_list_sort_item">
+        <ImageView android:tag="binding_7" style="@style/dialog_file_list_sort_icon" />
+        <TextView android:text="@string/common_comics_type" style="@style/dialog_file_list_sort_title" />
+        <TextView android:tag="binding_8" style="@style/dialog_file_list_sort_subtitle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layout_update_time" style="@style/dialog_file_list_sort_item">
+        <ImageView android:tag="binding_9" style="@style/dialog_file_list_sort_icon" />
+        <TextView android:text="@string/common_comics_date_modified" style="@style/dialog_file_list_sort_title" />
+        <TextView android:tag="binding_10" style="@style/dialog_file_list_sort_subtitle" />
+    </LinearLayout>
+</LinearLayout>

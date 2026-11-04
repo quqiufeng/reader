@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_book_library_operation_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/tv_close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray_40" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:id="@id/ll_select" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_select_black_24" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_button_multi_select" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_group_name" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_rename_enable_black" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_movies_rename_category" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_add_content" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_add_enable_black" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_movies_add" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_add_category" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_add_category_black_24" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_comics_add_category" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_delete_group" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_delete_black_24_24_enable" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_movies_delete_category" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_list_view" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_list_display_black_24" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_file_view_details" style="@style/bookshelf_more_dialog_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_grid_view" style="@style/bookshelf_more_dialog_layout_style">
+        <ImageView android:src="@drawable/icon_grid_display_black_24" style="@style/bookshelf_more_dialog_icon_style" />
+        <TextView android:text="@string/common_nas_string_key_1053_res" style="@style/bookshelf_more_dialog_text_style" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_reader_db0cff5484" />
+    </LinearLayout>
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_35" />
+</LinearLayout>

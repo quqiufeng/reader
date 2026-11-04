@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/videoItemLayout" android:paddingLeft="@dimen/len_7" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivSelect" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_45" android:src="@drawable/icon_unselect_blue_rect_30" />
+    <FrameLayout android:background="@drawable/shape_333333_radius_5" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45" android:layout_marginLeft="@dimen/len_5">
+        <ImageView android:id="@id/ivCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/ivStatus" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_downloaded" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_45">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_movies_no_matching_episode_number" android:maxLines="1" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvSize" android:paddingBottom="@dimen/len_5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lineSpacingExtra="@dimen/len_4" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvPath" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+</LinearLayout>

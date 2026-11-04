@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/rootLayout" android:tag="layout/activity_album_sort_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:orientation="vertical" android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_40" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout android:orientation="vertical" android:id="@id/tipsRootLayout" android:tag="binding_1" android:background="@color/common_white" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/topTitleTv" android:text="@string/common_button_sort" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <View android:layout_marginTop="@dimen/len_14" style="@style/topBigTitleSeparatorLine" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <FrameLayout android:id="@id/titleLayout" android:tag="binding_2" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+                    <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:layout_gravity="center" android:id="@id/tvNavTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_sort" android:includeFontPadding="false" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <FrameLayout android:id="@id/tipsLayout" android:tag="binding_4" android:background="@color/color_long_press" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center_vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_file_long_press_drag_adjust_sorting" />
+            <ImageView android:layout_gravity="right" android:id="@id/tipsClose" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_close_gray" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/contentRv" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" layout="@layout/layout_list_empty" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

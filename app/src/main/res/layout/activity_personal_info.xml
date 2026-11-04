@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_personal_info_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_80" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_profile_picture" />
+            <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <com.zentraedi.business.view.AvatarImageView android:layout_gravity="center_vertical" android:id="@id/iv_head_portrait" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:layout_marginEnd="@dimen/len_10" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_80" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_settings_nickname" />
+            <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_10" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_gray_arrow_8_12" />
+        </LinearLayout>
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <include layout="@layout/layout_loading" />
+</FrameLayout>

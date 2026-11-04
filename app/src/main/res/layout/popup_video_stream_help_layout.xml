@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/popup_video_stream_help_layout_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_d9000000_radius_8" android:paddingLeft="@dimen/len_7" android:paddingRight="@dimen/len_7" android:layout_width="@dimen/len_270" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:paddingHorizontal="@dimen/len_7">
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:id="@id/tv_message" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:layout_marginBottom="@dimen/len_6" android:text="@string/video_stream_cop_tips" android:layout_weight="1.0" android:layout_marginVertical="@dimen/len_6" />
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_close_white_32" android:scaleType="centerInside" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_7" android:src="@drawable/icon_arrow_black_top" android:translationY="@dimen/len_0_5" android:layout_marginEnd="@dimen/len_15" />
+</FrameLayout>

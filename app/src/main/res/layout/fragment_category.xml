@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rl_container" android:tag="layout/fragment_category_0" android:background="@color/background_day_ffffff_night_191919" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <com.zentraedi.business.widget.MediumTextView android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" app:medium_bold="true" />
+        <ImageView android:id="@id/ivSwitchView" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_viewer_list_44_44" />
+        <ImageView android:id="@id/ivSwitchSort" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_sort_asc" />
+    </LinearLayout>
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <com.zentraedi.outreader.widget.fastscrollview.FastScrollRecyclerView android:id="@id/srv_category_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:forceDarkAllowed="false" app:fastScrollPopupTextColor="@android:color/primary_text_dark" app:fastScrollThumbColor="@color/color_D2D2D2" app:fastScrollThumbInactiveColor="@color/color_D2D2D2" app:fastScrollTrackColor="@color/transparent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvPreview" android:paddingTop="@dimen/len_5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_4" />
+</LinearLayout>

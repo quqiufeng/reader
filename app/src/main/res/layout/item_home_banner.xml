@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/itemRootLayout" android:tag="layout/item_home_banner_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.video.view.SizeChangeImageView android:id="@id/ivCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <View android:layout_gravity="bottom" android:background="@drawable/gradient_black_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/len_130" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_72" android:layout_marginLeft="@dimen/len_6" android:src="@drawable/icon_play_white" />
+        <FrameLayout android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/len_32" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tvTitle" android:paddingRight="@dimen/len_45" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="@dimen/len_24" android:textStyle="bold" android:textColor="@color/color_FFB744" android:layout_gravity="bottom|center|right" android:id="@id/tvScore" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:id="@id/tvSubTitle" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/setLayout" android:tag="layout/dialog_ai_set_role_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_62">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_album_relationship" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" />
+    </FrameLayout>
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_16" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbSelf" android:tag="binding_1" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_self" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbFamily" android:tag="binding_2" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_family" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbPartner" android:tag="binding_3" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_partner" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_16" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbFriend" android:tag="binding_4" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_friend" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbClassmate" android:tag="binding_5" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_classmate" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbColleague" android:tag="binding_6" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_photos_album_relationship_colleague" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_16" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_16" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:textSize="14.0sp" android:gravity="center" android:id="@id/cbOther" android:tag="binding_7" android:background="@drawable/checkbox_role_selector" android:layout_width="0.0dip" android:layout_height="@dimen/len_36" android:button="@color/transparent_bg" android:text="@string/common_filter_other" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

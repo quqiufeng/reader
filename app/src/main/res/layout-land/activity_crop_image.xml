@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.imgedit.CropImageView android:id="@id/iv_crop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_130" android:layout_marginTop="@dimen/len_40" android:layout_marginRight="@dimen/len_130" android:layout_marginBottom="@dimen/len_120" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_92" android:layout_marginRight="@dimen/len_20" android:layout_alignParentEnd="true">
+        <RelativeLayout android:gravity="center" android:background="@drawable/shape_1affffff_radius_8_bg" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_11" android:layout_width="@dimen/len_80" android:layout_height="@dimen/len_60">
+            <CheckBox android:id="@id/check_width" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@drawable/selector_24_24_blue_circle" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_match" android:layout_toEndOf="@id/check_width" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_33ca628253" android:layout_below="@id/check_width" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:background="@drawable/shape_1affffff_radius_8_bg" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_11" android:layout_width="@dimen/len_80" android:layout_height="@dimen/len_60" android:layout_marginTop="@dimen/len_20">
+            <CheckBox android:id="@id/check_height" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_24_24_blue_circle" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_match" android:layout_toEndOf="@id/check_height" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_comics_f7d71d2313" android:layout_below="@id/check_height" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rl_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_15" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_65" android:text="@string/common_button_cancel" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/tv_save" android:background="@drawable/shape_1affffff_radius_50_bg" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_65" android:text="@string/common_button_save" android:layout_centerInParent="true" />
+        <TextView android:enabled="false" android:textSize="@dimen/font_16" android:textColor="@color/selector_text_26ffffff_ffffff_color" android:gravity="center" android:id="@id/tv_reset" android:layout_width="@dimen/len_65" android:layout_height="@dimen/len_65" android:layout_marginRight="@dimen/len_15" android:text="@string/common_button_recovery" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_course_add_member_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_71"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/selected" android:tag="binding_1" android:background="@null" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_16" android:button="@drawable/selector_30_30_circle_check_box" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_10" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/name" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:singleLine="true" android:includeFontPadding="false" android:layout_marginEnd="@dimen/len_15" android:layout_toEndOf="@id/selected" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:singleLine="true" android:includeFontPadding="false" android:layout_below="@id/name" android:layout_marginEnd="@dimen/len_15" android:layout_toEndOf="@id/selected" />
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_service_list_0" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_f4f6fa_radius_8" android:paddingTop="@dimen/len_8" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_52" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:text="@string/common_monitor_hardware_cpu" style="@style/nas_info_title_text" />
+            <TextView android:id="@id/tvCPUUsage" android:tag="binding_1" style="@style/nas_info_info_data" />
+        </LinearLayout>
+        <View android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_0_5" android:layout_height="@dimen/len_25" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:text="@string/common_monitor_hardware_momery" style="@style/nas_info_title_text" />
+            <TextView android:id="@id/tvMemoryUse" android:tag="binding_2" style="@style/nas_info_info_data" />
+        </LinearLayout>
+        <View android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_0_5" android:layout_height="@dimen/len_25" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:text="@string/common_monitor_read" style="@style/nas_info_title_text" />
+            <TextView android:id="@id/tvStorageRead" android:tag="binding_3" style="@style/nas_info_info_data" />
+        </LinearLayout>
+        <View android:background="@color/setting_basic_item_title_line" android:layout_width="@dimen/len_0_5" android:layout_height="@dimen/len_25" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:text="@string/common_monitor_write" style="@style/nas_info_title_text" />
+            <TextView android:id="@id/tvStorageWrite" android:tag="binding_4" style="@style/nas_info_info_data" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_10">
+        <LinearLayout android:orientation="vertical" android:id="@id/llServiceLeft" android:layout_width="@dimen/len_156" android:layout_height="fill_parent" android:layout_marginStart="@dimen/len_15">
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_5" android:background="@drawable/shape_f4f6fa_radius_8_left" android:layout_width="@dimen/len_156" android:layout_height="@dimen/len_34">
+                <TextView android:textSize="@dimen/font_12" android:gravity="center_vertical" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_file_name" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_2" />
+                <ImageView android:tag="binding_7" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvListName" android:paddingBottom="@dimen/len_34" android:clipToPadding="false" android:layout_width="@dimen/len_156" android:layout_height="fill_parent" android:overScrollMode="never" />
+        </LinearLayout>
+        <com.zentraedi.setting.view.CustomHorizontalScrollView android:id="@id/hsService" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_toRightOf="@id/llServiceLeft" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_f4f6fa_radius_8_right" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" android:layout_marginEnd="@dimen/len_15">
+                    <LinearLayout android:gravity="center_vertical" android:tag="binding_8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_12" android:gravity="center_vertical" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_monitor_hardware_cpu" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_2" />
+                        <ImageView android:tag="binding_10" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:tag="binding_11" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_12" android:gravity="center_vertical" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_monitor_hardware_momery" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_2" />
+                        <ImageView android:tag="binding_13" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:tag="binding_14" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_12" android:gravity="center_vertical" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_monitor_read" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_2" />
+                        <ImageView android:tag="binding_16" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:tag="binding_17" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_12" android:gravity="center_vertical" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_monitor_write" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_2" />
+                        <ImageView android:tag="binding_19" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_action" android:layout_marginStart="@dimen/len_15" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/len_15">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvListContent" android:paddingBottom="@dimen/len_34" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.zentraedi.setting.view.CustomHorizontalScrollView>
+        <View android:id="@id/vServiceShadowBullet" android:background="@drawable/bg_process_shadow_bullet" android:visibility="gone" android:layout_width="@dimen/len_6" android:layout_height="fill_parent" android:layout_toRightOf="@id/llServiceLeft" />
+    </RelativeLayout>
+</LinearLayout>

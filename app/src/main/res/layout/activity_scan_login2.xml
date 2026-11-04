@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rootLayout" android:tag="layout/activity_scan_login2_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SurfaceView android:layout_gravity="center" android:id="@id/scanner_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/scannerContent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/guideLayout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivGuide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tv_login_guide" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/color_CCCCCC" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/dp_40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_378" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tvClick" android:background="@drawable/shape_a1ffffff_radius_15_bg" android:layout_width="@dimen/len_68" android:layout_height="@dimen/len_28" android:text="@string/common_button_got_it" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="bottom|center" android:id="@id/btn_flash" android:background="?selectableItemBackground" android:padding="6.0dip" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="30.0dip" android:src="@drawable/flash_off" android:scaleType="centerInside" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/scanSuccessLayout" android:tag="binding_2" android:background="#f2000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/icon_user" android:drawablePadding="@dimen/len_10" />
+            <ImageView android:paddingBottom="@dimen/len_25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_35" android:layout_marginRight="@dimen/len_35" android:src="@drawable/icon_arrow_right" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_device" android:drawableTop="@drawable/icon_tv" android:drawablePadding="@dimen/len_10" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_cccccc" android:gravity="center_horizontal" android:paddingTop="@dimen/len_60" android:paddingBottom="@dimen/len_60" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_login_current_account_authorize" />
+        <TextView android:enabled="true" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tvButton" android:background="@drawable/shape_425fff_radius_22" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_ok" />
+    </LinearLayout>
+    <FrameLayout android:orientation="horizontal" android:id="@id/titleLayout" android:paddingTop="@dimen/len_22" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_user_scan_to_login" />
+    </FrameLayout>
+</RelativeLayout>

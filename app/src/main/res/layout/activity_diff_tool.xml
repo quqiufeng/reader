@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/diff_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:theme="?pt_toolbar_theme" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="4.0dip" app:navigationIcon="@drawable/ic_arrow_back_white_24dp" app:popupTheme="?pt_toolbar_popup_theme" app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" style="?pt_toolbar_style" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.pdftron.pdf.widget.DiffOptionsView android:id="@id/diff_options_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+    <com.pdftron.pdf.widget.FragmentLayout android:id="@id/container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

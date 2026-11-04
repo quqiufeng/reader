@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_video_person_detail_0" android:background="@color/color_video_detail_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.video.view.SizeChangeImageView android:id="@id/ivPerson" android:layout_width="fill_parent" android:layout_height="@dimen/len_400" android:scaleType="centerCrop" />
+    <com.zentraedi.video.view.LinearGradientView android:id="@id/ivPersonCover" android:layout_width="fill_parent" android:layout_height="@dimen/len_400" />
+    <View android:id="@id/viewPadMask" android:background="@drawable/shape_video_persion_mask" android:visibility="gone" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_400" android:layout_marginLeft="@dimen/len_335" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srlEnablePreviewInEditMode="false">
+        <com.zentraedi.video.view.VideoRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_100" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/layoutRoot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/transparent_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_400" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/layoutPersonInfo" android:background="@drawable/shape_video_top_cover_2" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                        <TextView android:textSize="@dimen/len_22" android:textStyle="bold" android:textColor="@color/color_video_title" android:tag="binding_1" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:tag="binding_2" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:tag="binding_3" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:id="@id/tvBirthday" android:tag="binding_4" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:id="@id/tvAddress" android:tag="binding_5" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="@dimen/len_10" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/toolLayout" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_46">
+                    <ImageView android:id="@id/ivSort" android:layout_width="@dimen/len_16" android:layout_height="wrap_content" android:scaleType="center" />
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tvSortTitle" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_sort_released_time_desc" android:includeFontPadding="false" app:medium_bold="true" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvShowCount" android:tag="binding_6" android:paddingLeft="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/ivFilter" android:visibility="visible" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_filter_white_44" />
+                    <ImageView android:id="@id/ivViewStyle" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_view_ode_block_white" />
+                </LinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_video_feed" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <com.zentraedi.video.view.VideoPageStatusLayout android:id="@id/staticLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.zentraedi.business.refresh.DarkLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetEnd="0.0dip" app:contentInsetStart="0.0dip">
+        <FrameLayout android:id="@id/layoutTitle" android:tag="binding_7" android:background="@drawable/shape_video_top_cover_1" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_white" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:singleLine="true" android:layout_centerHorizontal="true" android:alpha="0.0" />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+</FrameLayout>

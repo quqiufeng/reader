@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_config_family_account_0" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_64"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="14.0dip" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_2" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+    <CheckBox android:enabled="false" android:tag="binding_3" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_selector" />
+    <ImageView android:tag="binding_4" android:background="@drawable/icon_32_32_circle_selected_disable" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:scaleType="center" />
+</LinearLayout>

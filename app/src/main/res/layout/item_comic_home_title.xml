@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_comic_home_title_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:id="@id/lookMoreTv" android:tag="binding_2" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_more" android:drawablePadding="@dimen/len_4" android:drawableEnd="@drawable/icon_player_gray_arrow_8_12" />
+</LinearLayout>

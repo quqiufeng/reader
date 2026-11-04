@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootRl" android:tag="layout/item_remember_album_edit_mode_thumb_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_thumb" android:layout_width="fill_parent" android:layout_height="@dimen/len_64">
+        <CheckBox android:id="@id/cb_select" android:tag="binding_1" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/selector_30_30_circle_check_box" android:layout_marginStart="@dimen/len_8" />
+        <RelativeLayout android:background="@drawable/shape_f3f6fb_radius_8" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginStart="@dimen/len_5">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivThumb" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_8" app:imageHeight="1" app:imageWidth="1" />
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icon_no_cover" android:layout_alignTop="@id/ivThumb" android:layout_alignBottom="@id/ivThumb" app:imageHeight="1" app:imageWidth="1" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/album_thumb_title_text" android:ellipsize="end" android:id="@id/tv_title" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="@dimen/len_15" />
+    </LinearLayout>
+</RelativeLayout>

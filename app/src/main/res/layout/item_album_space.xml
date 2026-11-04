@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.business.widget.MediumTextView android:textSize="16.0dip" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvText" android:paddingLeft="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_45" app:medium_bold="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

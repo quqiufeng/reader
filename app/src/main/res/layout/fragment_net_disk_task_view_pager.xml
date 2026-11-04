@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_net_disk_task_view_pager_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.flyco.tablayout.SlidingTabLayout android:id="@id/tabLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:paddingStart="@dimen/len_5" android:paddingEnd="@dimen/len_5" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/button_blue" app:tl_indicator_corner_radius="@dimen/len_3" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_margin_bottom="@dimen/len_5" app:tl_indicator_width="@dimen/len_20" app:tl_tab_padding="10.0dip" app:tl_tab_space_equal="false" app:tl_textBold="SELECT" app:tl_textSelectColor="@color/selector_text_333333_cccccc" app:tl_textSelectSize="@dimen/font_16" app:tl_textUnselectColor="@color/selector_text_666666_cccccc" app:tl_textUnselectSize="@dimen/font_16" />
+    <com.zentraedi.business.view.NoScrollViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tabLayout" android:overScrollMode="never" />
+</RelativeLayout>

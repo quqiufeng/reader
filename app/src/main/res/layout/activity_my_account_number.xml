@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_my_account_number_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/title_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_phone_number" android:layout_toStartOf="@id/btn_phone" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:layout_below="@id/title_phone" android:layout_toStartOf="@id/btn_phone" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:id="@id/btn_phone" android:tag="binding_2" android:background="@drawable/shape_f4f4f4_radius_50" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_modify" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View style="@style/separate_line_match_left_15" />
+    <RelativeLayout android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/title_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_email" android:layout_toStartOf="@id/btn_email" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:layout_below="@id/title_email" android:layout_toStartOf="@id/btn_email" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:id="@id/btn_email" android:tag="binding_4" android:background="@drawable/shape_f4f4f4_radius_50" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View style="@style/separate_line_match_left_15" />
+</LinearLayout>

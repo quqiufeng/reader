@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_scene_classification_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/contentLl" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_thumb" android:background="@drawable/shape_photo_album_bg_radius_10" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivThumb" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:scaleType="centerCrop" app:cornerRadius="@dimen/len_10" app:imageHeight="1" app:imageWidth="1" />
+            <CheckBox android:id="@id/cb_select" android:tag="binding_3" android:clickable="false" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginTop="@dimen/len_6" android:button="@drawable/selector_16_16_blue_circle" android:layout_alignTop="@id/ivThumb" android:layout_alignRight="@id/ivThumb" android:layout_marginEnd="@dimen/len_6" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_thumb" android:paddingStart="@dimen/len_5" android:paddingEnd="@dimen/len_5">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

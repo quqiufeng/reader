@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="165.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_music_bg" android:background="@drawable/icon_listen_video_entry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/il_header" android:layout_width="fill_parent" android:layout_height="18.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip">
+        <ImageView android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@mipmap/ic_launcher_round" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/music_notification_name" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/common_player_play_as_audio" android:includeFontPadding="false" />
+    </LinearLayout>
+    <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/music_notification_title" android:ellipsize="middle" android:gravity="start|center|top" android:id="@id/player_song_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_toLeftOf="@id/iv_music_bg" android:layout_below="@id/il_header" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/music_notification_subtitle" android:id="@id/player_author_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_toLeftOf="@id/iv_music_bg" android:layout_below="@id/player_song_name" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="60.0dip" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_previous" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_music_notification_back" android:scaleType="center" />
+        <ImageView android:id="@id/player_pause" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/icon_music_notification_play" android:scaleType="center" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_next" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_music_notification_next" android:scaleType="center" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/player_close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/icon_music_notification_close" android:scaleType="center" />
+    </LinearLayout>
+</RelativeLayout>

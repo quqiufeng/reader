@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_94" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivFileIcon" android:layout_width="@dimen/len_31" android:layout_height="@dimen/len_35" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_18">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/panorama_render_title" android:ellipsize="end" android:id="@id/tvFileName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/panorama_render_desc" android:id="@id/tvFileDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" />
+        <ProgressBar android:id="@id/progressTask" android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:layout_marginTop="@dimen/len_4" android:max="100" android:progressTint="#ff4c62ff" android:progressBackgroundTint="#fff1f1f1" style="?android:progressBarStyleHorizontal" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <ProgressBar android:id="@id/progressLoading" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginEnd="@dimen/len_5" android:indeterminateTint="#ff4c62ff" />
+                <TextView android:textSize="@dimen/font_14" android:id="@id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_80000000" android:id="@id/tvProgressPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_14" android:id="@id/tvStatusDetail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:maxLines="2" />
+    </LinearLayout>
+    <TextView android:textSize="22.0sp" android:textColor="@color/panorama_render_desc" android:gravity="center" android:id="@id/btnTaskMore" android:layout_width="32.0dip" android:layout_height="44.0dip" android:text="⋮" android:contentDescription="@string/panorama_task_actions" />
+</LinearLayout>

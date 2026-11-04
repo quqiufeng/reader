@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:layout_width="81.0dip" android:layout_height="40.0dip" android:layout_marginTop="@dimen/page_jump_button_margin" android:layout_marginBottom="@dimen/page_jump_button_margin" android:layout_marginStart="@dimen/page_jump_button_margin" android:layout_marginEnd="@dimen/page_jump_button_margin" app:cardBackgroundColor="?android:colorBackground" app:cardCornerRadius="@dimen/page_jump_button_radius" app:cardElevation="@dimen/elevation_low" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.AppCompatImageButton android:id="@id/search_button_prev" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@string/search_prev" app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp" />
+            <View android:id="@id/page_nav_divider" android:background="@color/pt_subtle_utility_color" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <androidx.appcompat.widget.AppCompatImageButton android:id="@id/search_button_next" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@string/search_next" app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

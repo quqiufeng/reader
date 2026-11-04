@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="layout/item_create_course_tag_0" android:background="@drawable/shape_f4f4f4_radius_5" android:paddingLeft="@dimen/len_12" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_12" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/len_5"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add_black_5" android:layout_marginEnd="@dimen/len_4" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_black_1" android:layout_marginStart="@dimen/len_4" />
+</LinearLayout>

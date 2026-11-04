@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_account" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/title_color" android:id="@id/tv_username" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <View android:background="@color/title_color" android:layout_width="@dimen/len_0_5" android:layout_height="@dimen/len_12" android:layout_marginLeft="@dimen/len_5" android:layout_marginTop="@dimen/len_2" android:layout_marginRight="@dimen/len_5" android:layout_marginBottom="@dimen/len_2" />
+        <TextView android:textSize="@dimen/font_12" android:id="@id/tv_user_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+    <RadioGroup android:layout_gravity="center" android:orientation="horizontal" android:id="@id/rg_user_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16">
+        <RadioButton android:textSize="@dimen/font_14" android:textColor="#ff666666" android:id="@id/rb_state_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/select_blue_30" android:text="@string/common_user_active" />
+        <RadioButton android:textSize="@dimen/font_14" android:textColor="#ff666666" android:id="@id/rb_state_disable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:button="@drawable/select_blue_30" android:text="@string/common_button_disable" />
+    </RadioGroup>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_25">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_1" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:background="@drawable/shape_425fff_radius_22" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

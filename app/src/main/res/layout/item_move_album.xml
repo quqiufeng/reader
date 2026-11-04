@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/transparent_bg" android:paddingLeft="@dimen/len_8" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_73">
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/cbSelect" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_30" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/videoCoverLayout" android:background="@drawable/bg_film_radius_8" android:layout_width="@dimen/len_55" android:layout_height="@dimen/len_73">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_2" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:id="@id/tvVideoName" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutInfo" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/layoutActor" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_726_res" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvActor" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

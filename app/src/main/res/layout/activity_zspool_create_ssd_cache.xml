@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_zspool_create_ssd_cache_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_bar_root" android:tag="binding_1" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_nav_left" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/len_22" android:textStyle="bold" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_storage_ssd_cache" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/len_130" android:layout_height="@dimen/len_130" android:src="@drawable/common_data_empty" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_999999" android:paddingTop="@dimen/len_4" android:paddingBottom="@dimen/len_40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:text="@string/common_storage_no_ssd_cache" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvCreate" android:background="@drawable/button_selector_2" android:paddingLeft="@dimen/len_40" android:paddingRight="@dimen/len_40" android:layout_width="wrap_content" android:layout_height="@dimen/len_42" android:text="@string/common_button_new" />
+    </LinearLayout>
+</LinearLayout>

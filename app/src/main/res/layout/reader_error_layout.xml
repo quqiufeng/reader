@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_reader_error" android:tag="layout/reader_error_layout_0" android:background="@color/color_ffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_error_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_50">
+        <ImageView android:id="@id/iv_error_back" android:paddingLeft="@dimen/len_28" android:paddingRight="@dimen/len_28" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/left_back_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:paddingStart="@dimen/len_28" android:paddingEnd="@dimen/len_28" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/iv_error_line" android:background="@color/color_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_below="@id/rl_error_bar" />
+    <View android:background="@drawable/top_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/len_5" android:layout_below="@id/iv_error_line" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/iv_feedback_img" android:background="@drawable/bg_read_feed_back" android:visibility="gone" android:layout_width="@dimen/len_175" android:layout_height="@dimen/len_140" android:layout_marginBottom="@dimen/len_40" />
+        <TextView android:textSize="@dimen/font_15" android:textColor="@color/color_4D000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_reader_777cfd5c1b" />
+        <TextView android:textSize="@dimen/font_15" android:textColor="@color/color_4D000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_reader_hard_to_restore" />
+        <TextView android:textSize="@dimen/font_13" android:textColor="@color/color_FFFFFF" android:gravity="center" android:id="@id/tv_feedback" android:background="@drawable/bg_read_feedback_yellow" android:paddingLeft="@dimen/len_25" android:paddingTop="@dimen/len_11" android:paddingRight="@dimen/len_25" android:paddingBottom="@dimen/len_11" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_70" android:text="@string/common_reader_593582cfa5" android:paddingStart="@dimen/len_25" android:paddingEnd="@dimen/len_25" />
+        <TextView android:textSize="@dimen/font_15" android:textColor="@color/color_99000000" android:gravity="center" android:id="@id/tv_reload" android:background="@drawable/round_corner10_white_ee" android:layout_width="@dimen/len_99" android:layout_height="@dimen/len_32" android:layout_marginTop="@dimen/len_40" android:text="@string/common_button_reload" />
+    </LinearLayout>
+</RelativeLayout>

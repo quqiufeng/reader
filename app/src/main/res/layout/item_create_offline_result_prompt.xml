@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_user_each_account_has_its_own_storage_to_safe" />
+    <TextView android:textSize="@dimen/font_14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_user_local_offline_accounts_not_have_login_verfication" />
+</LinearLayout>

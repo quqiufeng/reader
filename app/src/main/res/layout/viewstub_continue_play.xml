@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/continuePlayLayout" android:background="@drawable/bg_player_continue_play_bg" android:paddingLeft="@dimen/len_8" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/len_38"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_player_resuming" android:layout_marginStart="@dimen/len_10" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvContinuePlay" android:background="@drawable/shape_stroke_ffffff_solid_transparent_5" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:text="@string/business_string_key_225" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivCancelContinuePlay" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/icon_close_white_32" />
+</LinearLayout>

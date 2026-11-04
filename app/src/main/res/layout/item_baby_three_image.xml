@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contentRl" android:tag="layout/item_baby_three_image_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_10" android:paddingEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/contentLl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/len_9">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="middle" android:id="@id/albumNameTv" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:ellipsize="middle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_8" />
+            <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <ImageView android:id="@id/tv_edit" android:tag="binding_3" android:padding="@dimen/len_8" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tv_des" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginStart="@dimen/len_15" />
+        <RelativeLayout android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_76" android:layout_marginTop="@dimen/len_12" android:layout_marginBottom="@dimen/len_15" android:layout_marginStart="@dimen/len_15">
+            <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/len_76" android:src="@drawable/icon_bg_baby_empty" android:scaleType="fitXY" />
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_babyalbum_nophotos" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/photo_recycler" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_12" android:layout_marginBottom="@dimen/len_15" android:layout_marginStart="@dimen/len_15" android:nestedScrollingEnabled="false" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_16">
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_999999" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_add" android:tag="binding_8" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" />
+            <ImageView android:id="@id/iv_delete" android:tag="binding_9" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginStart="@dimen/len_20" />
+            <ImageView android:id="@id/iv_zan" android:tag="binding_10" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginStart="@dimen/len_20" />
+            <ImageView android:id="@id/iv_comment" android:tag="binding_11" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginStart="@dimen/len_20" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:tag="binding_12" android:background="@drawable/shape_f4f4f4_radius_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginStart="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_blue" android:id="@id/likeUsersTv" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:drawableLeft="@drawable/icon_thumbs_up_blue" android:drawablePadding="@dimen/len_5" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+            <View android:tag="binding_14" android:background="@color/color_60p_e4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_comment" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:layout_marginStart="@dimen/len_10" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/contentLl" android:layout_alignBottom="@id/contentLl">
+        <ImageView android:tag="binding_16" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_28" android:layout_marginBottom="@dimen/len_6" />
+        <View android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

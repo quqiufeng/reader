@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_zspool_format_select_detail_0" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_tick" android:visibility="gone" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:src="@drawable/icon_disk_format_select_tick" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_000000" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/iv_tick" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/tv_desc" android:tag="binding_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" android:paddingStart="@dimen/len_10" android:layout_toStartOf="@id/iv_show_more" />
+    <ImageView android:id="@id/iv_show_more" android:tag="binding_3" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_8" android:src="@drawable/icon_arrow_down_gray_12" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_8" android:layout_marginEnd="@dimen/len_10" android:layout_alignParentEnd="true" />
+    <View android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignLeft="@id/tv_desc" android:layout_alignParentRight="true" />
+</RelativeLayout>

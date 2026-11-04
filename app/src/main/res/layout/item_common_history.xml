@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:tag="layout/item_common_history_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:tag="binding_1" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:ellipsize="end" android:id="@id/storagePoolTv" android:tag="binding_2" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_item_top_bottom_15" />
+    <ImageView android:tag="binding_3" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_change_pwd_0" android:background="@color/white_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/title_color" android:layout_gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" />
+    <com.zentraedi.basic.function.ui.edittext.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_32" app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+        <com.zentraedi.business.view.BaseEditText android:id="@id/et_input_pwd" android:tag="binding_2" android:paddingRight="@dimen/len_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_52" android:hint="@string/common_user_old_password" android:inputType="textPassword" style="@style/CustomAppTheme_textInputEditText" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:tag="binding_3" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+            <View android:id="@id/input_pwd_line" android:tag="binding_4" android:background="#ffe1e1e1" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:layout_centerVertical="true" />
+            <CheckBox android:id="@id/cb_show_input_pwd" android:tag="binding_5" android:background="@drawable/edit_password_eye_selector" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:button="@null" />
+        </LinearLayout>
+    </com.zentraedi.basic.function.ui.edittext.TextInputLayout>
+    <com.zentraedi.basic.function.ui.edittext.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_32" app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+        <com.zentraedi.business.view.BaseEditText android:id="@id/et_set_new_pwd" android:tag="binding_6" android:paddingRight="@dimen/len_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_52" android:hint="@string/common_movies_set_new_password" android:inputType="textPassword" style="@style/CustomAppTheme_textInputEditText" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:tag="binding_7" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+            <View android:id="@id/view_set_new_pwd_line" android:tag="binding_8" android:background="#ffe1e1e1" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:layout_centerVertical="true" />
+            <CheckBox android:id="@id/cb_show_set_new_pwd" android:tag="binding_9" android:background="@drawable/edit_password_eye_selector" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:button="@null" />
+        </LinearLayout>
+    </com.zentraedi.basic.function.ui.edittext.TextInputLayout>
+    <com.zentraedi.basic.function.ui.edittext.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_32" app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+        <com.zentraedi.business.view.BaseEditText android:id="@id/et_set_pwd_confirm" android:tag="binding_10" android:paddingRight="@dimen/len_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_52" android:hint="@string/common_nas_string_key_844_res" android:inputType="textPassword" style="@style/CustomAppTheme_textInputEditText" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:tag="binding_11" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+            <View android:tag="binding_12" android:background="#ffe1e1e1" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:layout_centerVertical="true" />
+            <CheckBox android:tag="binding_13" android:background="@drawable/edit_password_eye_selector" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:button="@null" />
+        </LinearLayout>
+    </com.zentraedi.basic.function.ui.edittext.TextInputLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/rl_change_pwd_btn" android:tag="binding_14" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_50" android:layout_marginRight="@dimen/len_32">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/register_btn_text_color" android:gravity="center" android:id="@id/tv_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_ok" android:includeFontPadding="false" android:layout_centerInParent="true" />
+        <ProgressBar android:tag="binding_15" android:padding="@dimen/len_8" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:layout_marginRight="1.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress" android:layout_toLeftOf="@id/tv_text" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/error_text" android:gravity="center" android:id="@id/tv_change_error" android:tag="binding_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_32" />
+    </RelativeLayout>
+</LinearLayout>

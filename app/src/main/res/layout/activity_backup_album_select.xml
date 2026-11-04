@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_backup_album_select_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_nav" android:tag="binding_1" android:background="@color/photo_navigation_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/mobile_phone_backup_2ba76b7066" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_nav">
+        <View android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_14">
+            <ImageView android:id="@id/iv_select" android:tag="binding_4" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/len_8" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_subtitle_1" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/tv_subtitle_2" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_subtitle_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:layout_toRightOf="@id/tv_subtitle_3" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:id="@id/tv_subtitle_3" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_select" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_7" android:background="@color/nas_white" android:paddingBottom="@dimen/len_30" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_cloud_backup_to" android:layout_weight="1.0" />
+                    <ImageView android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:src="@drawable/icon_edit_gray_14" app:tint="@color/common_subdesc" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:ellipsize="end" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:maxLines="1" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_month_folder" android:tag="binding_10" android:background="@drawable/shape_f6f6f6_radius_8" android:padding="@dimen/len_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="middle" android:tag="binding_11" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_1" />
+                <ImageView android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/arrow_down_16_16" android:layout_marginEnd="@dimen/len_1" app:tint="@color/common_subdesc" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_15" android:text="@string/common_cloud_start_backup" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_more_set" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_25" android:text="@string/mobile_phone_backup_ba85213c1e" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_loading" />
+</RelativeLayout>

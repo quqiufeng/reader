@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/color_picker_container" android:background="@drawable/color_picker_view_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/toolbar" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:paddingStart="@dimen/action_button_min_padding" android:paddingEnd="@dimen/action_button_min_padding" style="?toolbarStyle">
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/back_btn" android:background="?selectableItemBackgroundBorderless" android:padding="@dimen/icon_min_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?android:colorForeground" android:alpha="0.54" app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+        <TextView android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" android:id="@id/toolbar_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/icon_min_padding" android:text="@string/tools_annotation_border_style" android:layout_weight="1.0" android:alpha="0.54" android:layout_marginStart="@dimen/icon_min_padding" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/style_picker_container" android:paddingTop="@dimen/padding_medium" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/style_picker_view_pager_height" android:paddingStart="@dimen/padding_large" android:paddingEnd="@dimen/padding_large" />
+</LinearLayout>

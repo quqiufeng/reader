@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_popup_album_list_edit_mode_more_options_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popup_title" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_more" />
+    <ImageView android:id="@id/ivPopupClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_9" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_popup_title">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/setCoverRl" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/setCoverIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_set_cover" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_toRightOf="@id/setCoverIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/addToOtherAlbumRl" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/addToOtherAlbumIv" android:tag="binding_4" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/selector_text_333333_cccccc" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_add_to_album" android:layout_toRightOf="@id/addToOtherAlbumIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/addToRememberAlbumRl" android:tag="binding_6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/addToRememberAlbumIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_create_album" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_add_to_memory_book" android:layout_toRightOf="@id/addToRememberAlbumIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/modifyShootingTimeRl" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/modifyShootingTimeIv" android:tag="binding_8" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_change_time" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/selector_text_333333_cccccc" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_modify_capture_time" android:layout_toRightOf="@id/modifyShootingTimeIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/modifyLocationRl" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/modifyLocationIv" android:tag="binding_11" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_change_location" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/selector_text_333333_cccccc" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_modifylocation" android:layout_toRightOf="@id/modifyLocationIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/labelManageRl" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/labelManageIv" android:tag="binding_14" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_label" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/selector_text_333333_cccccc" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_file_labels" android:layout_toRightOf="@id/labelManageIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/moveToOtherFaceAlbumRl" android:tag="binding_16" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <ImageView android:id="@id/moveToOtherFaceAlbumIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_move_enable_black" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_photos_movetopersonalbum" android:layout_toRightOf="@id/moveToOtherFaceAlbumIv" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

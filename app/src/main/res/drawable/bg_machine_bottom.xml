@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#ff3c3b42" />
+    </item>
+    <item android:gravity="left">
+        <bitmap android:src="@drawable/machine_bottom_state_left_vein" android:tileMode="clamp" />
+    </item>
+    <item android:gravity="bottom">
+        <bitmap android:gravity="bottom" android:src="@drawable/machine_bottom_state_bottom_vein" />
+    </item>
+</layer-list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_1c1f33_radius_top_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_filter" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvFilter" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_6" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pbLoading" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91">
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvReset" android:background="@drawable/shape_2c3053_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/common_button_reset" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tvSure" android:background="@drawable/shape_425fff_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_20" android:text="@string/common_button_ok" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

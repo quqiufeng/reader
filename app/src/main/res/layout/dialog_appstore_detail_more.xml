@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_appstore_detail_more_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_appstore_open" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_appstore_open" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_open" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_check_upgrade" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_appstore_check_upgrade" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_store_check_upgrade" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_appstore_start" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_black_start" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_enable" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_appstore_close" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_appstore_stop" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_51d4937b4f" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_appstore_restart" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_restart_nas" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_restart" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_appstore_uninstall" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_appstore_uninstall" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_vm_43f4154894" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_add_home" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_21" android:layout_height="@dimen/len_21" android:src="@drawable/icon_file_home_shortcut_black" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_17" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_store_f3aa59d8c1" android:layout_marginStart="@dimen/len_11" />
+    </LinearLayout>
+</LinearLayout>

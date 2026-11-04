@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_disk_group_for_change_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/font_15" android:layout_below="@id/tv_title">
+        <include android:layout_width="@dimen/len_32" android:layout_height="wrap_content" layout="@layout/layout_disk_item_for_change" />
+        <Space android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:layout_width="@dimen/len_32" android:layout_height="wrap_content" layout="@layout/layout_disk_item_for_change" />
+        <Space android:tag="binding_3" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:layout_width="@dimen/len_32" android:layout_height="wrap_content" layout="@layout/layout_disk_item_for_change" />
+        <Space android:tag="binding_4" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_1" />
+        <include android:layout_width="@dimen/len_32" android:layout_height="wrap_content" layout="@layout/layout_disk_item_for_change" />
+    </LinearLayout>
+</RelativeLayout>

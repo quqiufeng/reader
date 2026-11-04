@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_file_square_detail_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView android:id="@id/iv_separate" android:layout_below="@id/tv_item" style="@style/topBigTitleSeparatorLine" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/fileTitle" layout="@layout/layout_file_navigation_bar_new_transparent" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@id/flContent" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <Space android:id="@id/sp_bottom" android:tag="binding_4" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_84" />
+    </LinearLayout>
+    <include android:layout_gravity="bottom" android:id="@id/bottomOption" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_bottom_options_height" android:layout_alignParentBottom="true" layout="@layout/layout_file_list_bottom_options" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

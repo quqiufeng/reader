@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/pop_task_center_show_operation_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/flash_delivery_batch_task_title" android:layout_centerVertical="true" />
+        <TextView android:id="@id/tv_close" android:tag="binding_1" android:background="@drawable/icon_close_gray_40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:background="@drawable/icon_black_start" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_start_task" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:background="@drawable/icon_pause_black_24" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_pause_task" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:background="@drawable/icon_clear_all_task" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_completed" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:background="@drawable/icon_clear_all_task" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_failed" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+    <RelativeLayout android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <TextView android:background="@drawable/icon_delete_black_24_24_enable" style="@style/flash_delivery_operation_icon_style" />
+        <TextView android:text="@string/common_button_clear_all" style="@style/flash_delivery_operation_text_style" />
+    </RelativeLayout>
+</LinearLayout>

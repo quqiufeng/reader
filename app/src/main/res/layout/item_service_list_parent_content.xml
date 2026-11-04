@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceParentCpu" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceParentMemory" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceParentIoRead" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvServiceParentIoWrite" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/llServiceParentAction" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="@dimen/len_118" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvServiceParentActionNone" android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_20" android:text="-" android:layout_marginStart="@dimen/len_15" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_425FFF" android:gravity="center" android:id="@id/tvServiceParentActionRestart" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_restart" android:layout_marginStart="@dimen/len_15" />
+            <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_DB4437" android:gravity="center" android:id="@id/tvServiceParentActionStop" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_stop" />
+            <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/color_cccccc" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</LinearLayout>

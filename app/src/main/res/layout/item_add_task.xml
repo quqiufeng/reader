@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_task" android:tag="layout/item_add_task_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_link_black_24" android:scaleType="fitCenter" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" />
+</LinearLayout>

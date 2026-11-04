@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_photo_date_detail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/content_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:scrollbarThumbVertical="@color/transparent_bg" android:id="@id/rv_content" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include android:id="@id/layout_error" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_album_error" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/fragment_picture_empty" />
+    <include android:id="@id/layout_navigation_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_260" layout="@layout/layout_photo_date_navigation_bar" />
+</RelativeLayout>

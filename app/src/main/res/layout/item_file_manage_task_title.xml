@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/taskTitleRootLayout" android:tag="layout/item_file_manage_task_title_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/line" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:id="@id/tvTitle" android:background="@color/white" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

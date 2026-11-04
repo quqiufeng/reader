@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:tag="layout/fragment_time_line_all_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:tag="binding_1" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/layout_timeline_collapsing" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="vertical" android:tag="binding_2" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_78">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_history" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_8" android:layout_marginStart="@dimen/len_15" />
+                    <include android:id="@id/layout_time_line_head_select" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_time_line_head_select" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <LinearLayout android:orientation="vertical" android:id="@id/photo_title_layout" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layout_navigation_bar_short" layout="@layout/layout_time_line_navigation_bar_new" />
+                        <include android:id="@id/layout_navigation_bar_edit" layout="@layout/layout_edit_navigation_bar_new" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <RelativeLayout android:id="@id/layout_timeline_new_user_nav" android:tag="binding_5" android:background="@color/photo_navigation_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                <ImageView android:id="@id/iv_nav_back" android:tag="binding_6" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_home_black" android:scaleType="centerInside" />
+            </RelativeLayout>
+            <include android:id="@id/timeline_operate" layout="@layout/timeline_operate_item" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/layout_timeline_content_root" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <include android:id="@id/layout_timeline_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_100" layout="@layout/layout_loading" />
+            <include android:id="@id/layout_timeline_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_100" layout="@layout/fragment_picture_empty" />
+            <include android:id="@id/layout_timeline_new_user" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_photo_new_user_new" />
+            <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager_time_line" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:id="@id/layout_timeline_bottom_tabs" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:layout_marginBottom="@dimen/len_13" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/fragment_day" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+            <com.zentraedi.business.widget.BlurBgImageView android:id="@id/bgBlurImageView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/len_5" />
+            <View android:background="@drawable/shape_timeline_radio_group_bg2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RadioGroup android:orientation="horizontal" android:id="@id/rg_tab_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_30" android:layout_margin="@dimen/len_5" android:checkedButton="@id/rb_day">
+                <FrameLayout android:layout_marginRight="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_file" android:layout_width="fill_parent" android:text="@string/common_button_files" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout android:layout_marginLeft="@dimen/len_2_5" android:layout_marginRight="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_year" android:layout_width="fill_parent" android:text="@string/common_photos_years" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout android:layout_marginLeft="@dimen/len_2_5" android:layout_marginRight="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_month" android:layout_width="fill_parent" android:text="@string/common_photos_months" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout android:layout_marginLeft="@dimen/len_2_5" android:layout_marginRight="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_day" android:layout_width="fill_parent" android:text="@string/common_photos_days" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout android:layout_marginLeft="@dimen/len_2_5" android:layout_marginRight="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <RadioButton android:id="@id/rb_today" android:layout_width="fill_parent" android:text="@string/common_photos_d0b0d638cd" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+                <FrameLayout android:id="@id/layout_light_picker" android:layout_marginLeft="@dimen/len_2_5" style="@style/style_pic_tab_timeline">
+                    <Button android:id="@id/rb_light_picker" android:layout_width="fill_parent" android:text="@string/common_photos_pick" style="@style/style_pic_text_timeline" />
+                </FrameLayout>
+            </RadioGroup>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

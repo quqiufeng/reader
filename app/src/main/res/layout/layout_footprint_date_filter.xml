@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_top_circle_white_radius_20" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="523.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_fd7c9783c1" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_pop" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_8" android:text="@string/common_movies_info_year" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llYearToggle" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:paddingStart="12.0dip" android:paddingEnd="8.0dip">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_111111" android:id="@id/tvYearDisplay" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_filter_all" android:layout_weight="1.0" />
+                <ImageView android:id="@id/ivYearArrow" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_18" android:src="@drawable/icon_arrow_down_gray_12" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="@dimen/len_54" android:layout_height="0.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_111111" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_8" android:text="@string/common_photos_889ed18be4" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llMonthToggle" android:background="@drawable/shape_f4f4f4_radius_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:paddingStart="12.0dip" android:paddingEnd="8.0dip">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_111111" android:id="@id/tvMonthDisplay" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_filter_all" android:layout_weight="1.0" />
+                <ImageView android:id="@id/ivMonthArrow" android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_18" android:src="@drawable/icon_arrow_down_gray_12" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/len_16" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <GridLayout android:id="@id/gridItems" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="4" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/llWeekHeader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+            <GridLayout android:id="@id/gridCalendar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="7" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btnConfirm" android:background="@drawable/selector_confirm_button" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_16" android:text="@string/common_button_ok" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:id="@id/topSpace" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+        <ProgressBar android:id="@id/viewStatusLoading" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_666666" android:id="@id/tvLoadingText" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

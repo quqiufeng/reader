@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/file_slide_external_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/tv_icon_text" android:tag="binding_1" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ivError" android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:src="@drawable/icon_outside_device_invalid" android:scaleType="centerInside" android:layout_alignTop="@id/tv_icon_text" android:layout_alignRight="@id/tv_icon_text" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_12" android:layout_toStartOf="@id/moreIv" android:layout_toEndOf="@id/tv_icon_text">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" style="@style/file_manage_333_14_title.wrap" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <ImageView android:id="@id/moreIv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_5" android:src="@drawable/icon_more_black_44_44" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

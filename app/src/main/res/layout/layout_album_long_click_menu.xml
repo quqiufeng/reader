@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:tag="layout/layout_album_long_click_menu_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Fellow.Travelers.S01.1080p.WEBRip.x265-KONTRAST" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="top" android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_8" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutLike" android:padding="@dimen/len_16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivLike" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_add_like" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:id="@id/tvLike" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_add_to_favirote" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMark" android:padding="@dimen/len_16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivMark" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_mark_viewed" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:id="@id/tvMark" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_mark_as_watched" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAddSeries" android:padding="@dimen/len_16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_video_add_to_series" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_add_to_collection" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutDelete" android:padding="@dimen/len_16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_delete_white" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_delete" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutDisband" android:padding="@dimen/len_16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_series_disband_white" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_disband_collection" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

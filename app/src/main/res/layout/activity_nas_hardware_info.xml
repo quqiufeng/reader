@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/activity_nas_hardware_info_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:layout_width="@dimen/len_165" android:layout_height="@dimen/len_165" android:layout_marginTop="@dimen/len_14" android:layout_marginBottom="@dimen/len_6" style="@style/ignore_dark_mode_style" />
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvHardware" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_34" android:nestedScrollingEnabled="false" />
+</LinearLayout>

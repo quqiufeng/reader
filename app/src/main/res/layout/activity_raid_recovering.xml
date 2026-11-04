@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_raid_recovering_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_28" android:textColor="@color/disk_page_title" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_52" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_128" android:layout_centerVertical="true">
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <include android:id="@id/layout_disk_1" android:layout_width="@dimen/len_128" android:layout_height="@dimen/len_128" layout="@layout/layout_raid_disk" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:tag="binding_3" android:layout_width="@dimen/len_33" android:layout_height="@dimen/len_14" android:layout_marginBottom="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_18" android:textColor="@color/button_blue" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <include android:id="@id/layout_disk_2" android:layout_width="@dimen/len_128" android:layout_height="@dimen/len_128" layout="@layout/layout_raid_disk" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_18" android:textColor="@color/common_title" android:gravity="center" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginRight="@dimen/len_32" android:layout_marginBottom="@dimen/len_6" android:layout_above="@id/tv_subdesc" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_red" android:id="@id/tv_subdesc" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_32" android:layout_marginRight="@dimen/len_32" android:layout_marginBottom="@dimen/len_123" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:tag="binding_7" android:background="@drawable/btn_selector_2" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_32" android:layout_marginRight="@dimen/len_32" android:layout_marginBottom="@dimen/len_60" android:text="@string/common_button_enter" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="horizontal" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_60" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:gravity="center" android:tag="binding_9" android:background="@drawable/shape_f4f4f4_radius_22" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:layout_marginRight="@dimen/len_35" android:text="@string/business_string_key_287" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:tag="binding_10" android:background="@drawable/btn_selector_2" android:layout_width="0.0dip" android:layout_height="@dimen/len_42" android:text="@string/business_string_key_121" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

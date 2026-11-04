@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_repeated_photo_tip_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/len_200" android:layout_centerInParent="true">
+        <com.zentraedi.basic.function.ui.textview.SDAdaptiveTextView android:textSize="@dimen/font_14" android:gravity="center" android:id="@id/tv_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_21" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_21" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <TextView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_cancel" />
+            <TextView android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_copy" android:layout_centerInParent="true" />
+            <TextView android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:text="@string/common_button_skip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <CheckBox android:textSize="@dimen/font_14" android:textColor="@color/delete_download_resource_color" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_15" android:button="@drawable/selector_delete_repeated_photo_cb" android:text="@string/common_nas_string_key_1649_res" />
+    </LinearLayout>
+</RelativeLayout>

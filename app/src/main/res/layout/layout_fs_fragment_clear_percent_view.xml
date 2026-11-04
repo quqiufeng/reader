@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_fs_fragment_clear_percent_view_0" android:paddingLeft="@dimen/apply_pad_common_left_right_0" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_storage_hdd_fragmentation" />
+        <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+        <ProgressBar android:tag="binding_1" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:indeterminate="true" android:indeterminateDrawable="@drawable/anim_blue_loading" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_666666_cccccc" android:tag="binding_3" android:paddingBottom="@dimen/len_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" layout="@layout/layout_fs_fragment_clear_disk_group" />
+    <View android:tag="binding_4" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_fs_fragment_clear_disk_group" />
+    <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/thumbnail" android:background="@drawable/thumbnail_border" android:layout_width="@dimen/preference_thumbnail_size" android:layout_height="@dimen/preference_thumbnail_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" app:srcCompat="@drawable/checker_background" />
+    <View android:id="@id/color_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" />
+</FrameLayout>

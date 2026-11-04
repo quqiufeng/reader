@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvEpisode" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:layout_marginBottom="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

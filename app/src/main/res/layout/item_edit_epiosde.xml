@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/transparent_bg" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/videoCoverLayout" android:background="@drawable/bg_film_radius_8" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_8" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvVideoName" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/len_45" android:includeFontPadding="false" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/len_4" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/len_45">
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:textColorHint="@color/color_42FFFFFF" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/etText" android:background="@drawable/collection_seek_text_bg" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="@dimen/len_95" android:layout_height="@dimen/len_24" android:hint="@string/common_movies_matched_status_unmatched" android:maxLines="1" android:lines="1" android:singleLine="true" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/input_edit_text_cursor_video" />
+    </FrameLayout>
+</LinearLayout>

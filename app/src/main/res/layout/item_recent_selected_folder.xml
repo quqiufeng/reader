@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_recent_selected_folder_0" android:paddingLeft="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingTop="@dimen/apply_pad_common_top_bottom_phone_0_pad_17" android:paddingRight="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingBottom="@dimen/apply_pad_common_top_bottom_phone_0_pad_17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/apply_pad_common_left_right_phone_0_pad_5" android:paddingVertical="@dimen/apply_pad_common_top_bottom_phone_0_pad_17"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/len_44" android:layout_height="wrap_content" android:layout_alignTop="@id/ll_head" android:layout_alignBottom="@id/ll_head">
+        <CheckBox android:enabled="false" android:gravity="center" android:id="@id/selectCB" android:tag="binding_1" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_32_32_circle_check_box" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_head" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_44">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_file_manage_cover" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:src="@drawable/icon_dir_common" android:scaleType="centerCrop" />
+        <RelativeLayout android:id="@id/ll_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginTop="@dimen/len_15">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:ellipsize="middle" android:id="@id/folderNameTv" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_45" android:maxLines="4" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_49" android:layout_marginBottom="@dimen/len_12" android:includeFontPadding="false" android:layout_below="@id/folderNameTv" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/line" android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/ll_head" android:layout_alignLeft="@id/ll_head" />
+    <View android:tag="binding_4" android:background="@color/transparent_white_foreground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/line" android:layout_alignParentTop="true" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_external_disk_detail_page_bottom_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="normal" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_file_system" style="@style/intl_text_title_font14" />
+    <RelativeLayout android:tag="binding_1" android:background="@drawable/shape_stroke_e4e4e4_radius_4" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_8">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_6" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_black_arrow_down" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20" android:text="@string/business_string_key_382" android:lineSpacingExtra="@dimen/len_5" />
+    <TextView android:textStyle="normal" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_file_name" style="@style/intl_text_title_font14" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center_vertical" android:tag="binding_3" android:background="@drawable/shape_stroke_e4e4e4_radius_4" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginTop="@dimen/len_8" android:maxLength="20" />
+</LinearLayout>

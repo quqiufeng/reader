@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/fragment_home_wallpaper_preview_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:forceDarkAllowed="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_gravity="center" android:id="@id/iv_preview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:proportHeight="252" app:proportWidth="375" />
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_gravity="center" android:id="@id/iv_preview_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:proportHeight="252" app:proportWidth="375" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="4.0" />
+        <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_gravity="center" android:id="@id/iv_nas_device" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_30" android:layout_weight="92.0" app:proportHeight="1" app:proportWidth="1" />
+        <View android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="279.0" />
+    </LinearLayout>
+</FrameLayout>

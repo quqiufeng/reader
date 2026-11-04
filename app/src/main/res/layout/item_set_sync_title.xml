@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_set_sync_title_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/intl_font_title_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_12" android:gravity="center" android:tag="binding_2" android:background="@drawable/shape_border_cccccc_radius_14" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_3" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_choose" />
+    </LinearLayout>
+    <View android:tag="binding_3" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <TextView android:textSize="@dimen/intl_font_content_14" android:textColor="@color/color_999999" android:tag="binding_4" android:padding="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_cloud_no_backup_folder_selected" android:includeFontPadding="false" />
+</LinearLayout>

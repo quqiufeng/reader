@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_wechat_setting_source_path_0" style="@style/item_more_line_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_backup_center_source" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6" android:text="@string/wechat_auto_backup_setting_file_title" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/wechat_auto_backup_setting_file_desc" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/wechat_auto_backup_setting_file_desc2" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/wechat_auto_backup_setting_pic_title" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:layout_marginBottom="@dimen/len_15" android:text="@string/wechat_auto_backup_setting_pic_desc" android:includeFontPadding="false" />
+</LinearLayout>

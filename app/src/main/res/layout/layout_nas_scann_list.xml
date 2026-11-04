@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_user_cannot_connect_unifydrive" app:medium_bold="true" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_pop" android:layout_alignParentRight="true" />
+        <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutScanning" android:background="@color/white" android:paddingBottom="@dimen/len_20" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/len_257">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ProgressBar android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_186" android:lineSpacingExtra="@dimen/len_5" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvScanCancel" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_cancel" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layoutScanEmpty" android:background="@color/white" android:paddingBottom="@dimen/len_20" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_257">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_warning" />
+        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_188" android:lineSpacingExtra="@dimen/len_5" app:medium_bold="true" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/white" android:gravity="center" android:id="@id/tvRetryScan" android:background="@drawable/bg_425fff_radius_22" android:layout_width="@dimen/len_78" android:layout_height="@dimen/len_28" android:text="@string/common_button_try_again" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:id="@id/tvInputIp" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_string_key_189" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutNasList" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_257">
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_43">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/app_string_key_190" android:layout_weight="1.0" app:medium_bold="true" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:gravity="center" android:id="@id/tvRetryScan2" android:background="@drawable/shape_border_cccccc_14" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:text="@string/common_button_scan" android:includeFontPadding="false" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvNasList" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/shape_webdav_edit_port" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/len_18" android:textColor="@color/common_title" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:id="@id/tv_one_label" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:gravity="center_vertical" android:id="@id/et_one_input" android:background="@drawable/shape_webdav_port" android:paddingLeft="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_10">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:id="@id/tv_two_label" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:gravity="center_vertical" android:id="@id/et_two_label" android:background="@drawable/shape_webdav_port" android:paddingLeft="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:inputType="number" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/error_text" android:layout_gravity="center_horizontal" android:id="@id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_45" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_25">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_bg" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:background="@drawable/shape_dialog_cancel_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_cancel" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_confirm" android:background="@drawable/selector_confirm_bg" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/pb" android:visibility="gone" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:layout_gravity="center_vertical" android:id="@id/tv_confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_ok" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_popup_filter_singer_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tv_popup_title" android:layout_width="wrap_content" android:layout_height="@dimen/len_56" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/res_string_filter_content" />
+    <ImageView android:id="@id/ivPopupClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_9" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    <View android:id="@id/v_divider_line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/tv_popup_title" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/v_divider_line">
+        <RelativeLayout android:id="@id/allSingerRl" android:background="@drawable/selector_bg_425fff_f4f6fa_radius_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_15" android:minWidth="@dimen/len_80">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/allSingerTv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_music_a72619200a" android:drawablePadding="@dimen/len_2" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <com.zentraedi.business.widget.flowlayout.TagFlowLayout android:id="@id/filterLetterTfl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_7" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_54" app:max_select="1" />
+    </LinearLayout>
+</RelativeLayout>

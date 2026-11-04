@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/activity_sleep_detection_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:layout_width="@dimen/len_295" android:layout_height="@dimen/len_220" android:layout_marginTop="@dimen/len_24" android:src="@drawable/icon_sleep_detection" android:forceDarkAllowed="false" />
+    <include android:id="@id/layoutStart" layout="@layout/layout_sleep_detection_start" />
+    <include android:id="@id/layoutNoTask" layout="@layout/layout_sleep_detection_no_task" />
+    <include android:id="@id/layoutExistTask" layout="@layout/layout_sleep_detection_exist_task" />
+</LinearLayout>

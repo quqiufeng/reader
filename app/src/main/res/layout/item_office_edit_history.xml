@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivIcon" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_2" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_8" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvName" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvSize" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:background="@color/color_999999" android:layout_width="@dimen/len_1" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_5" android:layout_marginTop="@dimen/len_4" android:layout_marginRight="@dimen/len_5" android:layout_marginBottom="@dimen/len_4" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvEditor" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvRestore" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_16" android:text="@string/common_button_recovery" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvPreview" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_24" android:text="@string/common_button_preview" />
+        </LinearLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_16" android:layout_marginBottom="@dimen/len_16" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_classification_manage_bar_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_16" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/layoutClassButton" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/white" android:gravity="center" android:id="@id/tvAdd" android:background="@drawable/shape_425fff_radius_22" android:paddingLeft="@dimen/len_28" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_28" android:paddingBottom="@dimen/len_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_add" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_e6ffffff" android:gravity="center" android:id="@id/tvEditName" android:background="@drawable/corners_08ffffff_stroke_26ffffff_15" android:paddingLeft="@dimen/len_28" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_28" android:paddingBottom="@dimen/len_8" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_movies_rename" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_e6ffffff" android:gravity="center" android:id="@id/tvDelete" android:background="@drawable/corners_08ffffff_stroke_26ffffff_15" android:paddingLeft="@dimen/len_28" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_28" android:paddingBottom="@dimen/len_8" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_movies_delete_category" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/white" android:gravity="center" android:id="@id/tvSystemAdd" android:background="@drawable/shape_425fff_radius_22" android:paddingLeft="@dimen/len_28" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_28" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_add" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_video_subtitle" android:gravity="right" android:id="@id/tvClassificationTips" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_aicategoriesnodelete" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@color/color_0fffffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSmartSkip" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_20" android:paddingBottom="@dimen/apply_pad_item_top_bottom_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_7f8d97548f" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_b3ffffff" android:id="@id/skip_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:includeFontPadding="false" />
+        <ImageView android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_light_gray" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutShowSet" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_20" android:paddingBottom="@dimen/apply_pad_item_top_bottom_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_categorydisplaysettings" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_99ffffff" android:id="@id/tvShowTips" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageView android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_light_gray" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutShare" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_20" android:paddingBottom="@dimen/apply_pad_item_top_bottom_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_e6ffffff" android:id="@id/tvShareTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_sharing_setting" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_99ffffff" android:id="@id/tvShareTips" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageView android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_light_gray" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAutoSeries" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_20" android:paddingBottom="@dimen/apply_pad_item_top_bottom_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_auto_collection_settings" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_99ffffff" android:id="@id/tvSeriesStatus" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageView android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_light_gray" />
+    </LinearLayout>
+    <View android:background="@color/color_0fffffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/dp_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_added_folders" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_99ffffff" android:id="@id/tvNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5" />
+            <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_e6ffffff" android:gravity="center" android:id="@id/ext_dev_scan_btn" android:background="@drawable/stroke_btn_bg" android:layout_width="@dimen/len_54" android:layout_height="@dimen/len_22" android:text="@string/common_movies_get" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ext_dev_scan_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15">
+            <ProgressBar android:id="@id/ext_loading_icon" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginRight="@dimen/len_8" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSuccess" android:visibility="gone" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginRight="@dimen/len_8" android:src="@drawable/icon_success_16_16" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_99ffffff" android:id="@id/ext_info" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_getting_new_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

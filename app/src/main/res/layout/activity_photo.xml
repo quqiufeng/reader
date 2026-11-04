@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:tag="layout/activity_photo_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.fragment.app.FragmentContainerView android:id="@id/fragment" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title" />
+    <RelativeLayout android:id="@id/title" android:tag="binding_1" android:background="@color/photo_navigation_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/iv_home" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_home_black" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_top_title" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:text="@string/common_photos_2738a1c6cc" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

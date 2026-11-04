@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rlMain" android:tag="layout/layout_album_operation_permission_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ll_head" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="end" android:gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:singleLine="true" android:layout_centerInParent="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_8" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+        <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/llPermissionInfo" android:layout_width="fill_parent" android:layout_height="@dimen/len_50" android:layout_below="@id/ll_head">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvPermissionInfo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/len_15" />
+        <ImageView android:id="@id/refresh" android:padding="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_refresh_black" />
+    </LinearLayout>
+    <View android:id="@id/line" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/llPermissionInfo" />
+    <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/rv_content" android:background="@color/common_white" android:paddingBottom="@dimen/len_90" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/len_560" android:layout_marginTop="@dimen/len_0_5" android:layout_below="@id/llPermissionInfo" />
+    <FrameLayout android:id="@id/layoutConfirm" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/rv_content">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tvConfirm" android:background="@drawable/selector_confirm_bg_corner_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/font_34" android:text="@string/common_button_ok" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:id="@id/llLoading" android:background="@color/color_33000000" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_head" android:layout_alignBottom="@id/layoutConfirm">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_circle_white_5_bg" android:layout_width="wrap_content" android:layout_height="@dimen/len_45" android:elevation="3.0dip">
+            <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/len_25" android:layout_height="@dimen/len_25" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/loading_gray_text" android:layout_gravity="center_vertical" android:id="@id/loadingTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_vm_df8be257c5" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:tag="layout/fragment_music_playlist_offline_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+    <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:layoutAnimation="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" tl:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

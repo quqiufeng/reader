@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/len_54"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvLabel" android:background="@drawable/corners_cc2f355c_5" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_28" android:layout_marginLeft="@dimen/len_15" />
+</FrameLayout>

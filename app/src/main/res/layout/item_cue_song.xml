@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_30" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.zspace.music.widget.SongPlayAnimView android:id="@id/playCueAnimView" android:visibility="gone" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_11" android:layout_marginRight="@dimen/len_5" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvCueTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+</LinearLayout>

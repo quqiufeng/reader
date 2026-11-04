@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_search_video_file_0" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivCover" android:background="@drawable/shape_333333_radius_5" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_5" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:id="@id/tvName" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvPath" android:paddingTop="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_video_subtitle" android:id="@id/tvAlbum" android:paddingTop="@dimen/len_12" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

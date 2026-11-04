@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/viewstub_video_home_rank_0" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTitle" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_e6ffffff" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_watchlist" android:maxLines="1" />
+        <ImageView android:layout_width="@dimen/len_12" android:layout_height="@dimen/len_12" android:src="@drawable/icon_arrow_gray_right" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layoutEmpty" android:paddingBottom="@dimen/len_10" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_dark_empty_3" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvMsg" android:paddingLeft="@dimen/len_5" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

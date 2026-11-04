@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_storage_manage_consumer_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleLayout" android:tag="binding_1" android:background="@color/file_manage_guide_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/toolbar_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_app_storage_manager" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titleLayout">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:paddingRight="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_storage_usage" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/tvCapacity" android:tag="binding_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvUserSize" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_cccccc" android:id="@id/viewLine" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_string_key_194" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/tvBackupSize" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_string_key_195" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/tvResidueSize" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tvTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_string_key_196" />
+        </LinearLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_21" />
+        <FrameLayout android:id="@id/layoutBackupDirectorySettings" android:tag="binding_5" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_65">
+            <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/setting_string_key_197" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:layout_gravity="center|right" android:id="@id/tvBackupDirectoryNumber" android:tag="binding_6" android:paddingRight="@dimen/len_28" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center|right" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_settings_select_enable" />
+            <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/statusView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titleLayout" />
+</RelativeLayout>

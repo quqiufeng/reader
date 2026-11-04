@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:id="@id/card_view" android:layout_width="wrap_content" android:layout_height="@dimen/page_number_indicator_padding_height" app:cardBackgroundColor="@color/page_number_indicator_bg" app:cardCornerRadius="@dimen/page_number_indicator_radius" app:cardElevation="@dimen/elevation_low" app:strokeColor="@color/page_number_indicator_outline" app:strokeWidth="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="?selectableItemBackground" android:paddingLeft="@dimen/page_number_indicator_padding_hor" android:paddingRight="@dimen/page_number_indicator_padding_hor" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/tools_pageindicator_number" android:id="@id/page_number_indicator_all_pages" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 of 10" style="@style/TextAppearance.MaterialComponents.Caption" />
+        <ProgressBar android:id="@id/page_number_indicator_spinner" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="@dimen/padding_small" android:indeterminate="true" android:indeterminateOnly="true" android:layout_marginStart="@dimen/padding_small" style="?android:indeterminateProgressStyle" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

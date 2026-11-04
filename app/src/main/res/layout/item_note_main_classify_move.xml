@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/item_note_main_classify_move_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_44"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_44">
+        <FrameLayout android:tag="binding_2" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_44">
+            <ImageView android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_19" android:src="@drawable/icon_gray_arrow_right_6_10" />
+            <ImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_6" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_gray_arrow_down_10_6" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_14" android:ellipsize="end" android:gravity="center_vertical" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="fill_parent" android:lines="1" android:layout_weight="1.0" />
+        <CheckBox android:id="@id/cbSelect" android:tag="binding_6" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginRight="@dimen/len_8" android:button="@drawable/checkbox_selector_rectangle" />
+    </LinearLayout>
+    <View android:tag="binding_7" android:background="@color/color_b3ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_gravity="bottom" android:background="@color/color_cce4e4e4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_35" />
+</FrameLayout>

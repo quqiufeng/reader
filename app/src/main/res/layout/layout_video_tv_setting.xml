@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/layout_video_tv_setting_0" android:background="@drawable/bg_1c1f33_radius_top_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_movies_category_terminal_display_settings" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_pop" />
+        </FrameLayout>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/webHideLayout" android:paddingLeft="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                    <CheckBox android:id="@id/cbWebHide" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_hideondesktop" android:layout_marginStart="@dimen/len_7" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mobileHideLayout" android:paddingLeft="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                    <CheckBox android:id="@id/cbMobileHide" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_hideonmobile" android:layout_marginStart="@dimen/len_7" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tvHideLayout" android:paddingLeft="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                    <CheckBox android:id="@id/cbTvHide" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:button="@drawable/select_blue_rect_30" />
+                    <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_e6ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_hideontv" android:layout_marginStart="@dimen/len_7" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textColor="@color/color_FF223D" android:gravity="bottom|center" android:id="@id/tvError" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.zentraedi.video.view.VideoButtonLayout android:id="@id/layoutButton" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91" />
+    </LinearLayout>
+</FrameLayout>

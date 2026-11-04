@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_webview_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleLayout" android:tag="binding_1" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/iv_back" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+            <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_black" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginLeft="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:layout_marginRight="@dimen/apply_pad_common_top_bottom_phone_88_pad_132" android:singleLine="true" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+            <ImageView android:id="@id/moreIv" android:padding="@dimen/len_7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_6" android:src="@drawable/icon_more_black_24_24_enable" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/iv_edit" android:visibility="gone" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_edit_mode" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/web_view" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_label_list_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:tag="binding_1" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:id="@id/isTopIv" android:tag="binding_2" android:paddingRight="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_16" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/labelNameTv" android:tag="binding_3" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_59" android:layout_toRightOf="@id/isTopIv" android:layout_centerVertical="true" />
+        <ImageView android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_more_black_44_44" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_5" />
+</LinearLayout>

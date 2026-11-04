@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/blurLayout" android:background="@drawable/bg_1c1f33_radius_top_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <TextView android:textSize="16.0dip" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvStyle" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_6" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_summary_style" />
+        <ImageView android:id="@id/ivArrow" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_5" android:src="@drawable/icon_arrow_down" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivChangeShowViewer" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_viewer" />
+        <ImageView android:id="@id/ivVideoListSort" android:padding="@dimen/len_10" android:visibility="visible" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_video_sort_name_asc" android:scaleType="center" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvNumber" android:layout_width="fill_parent" android:layout_height="@dimen/len_50" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="530.0dip">
+        <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/rvVideo" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="330.0dip" />
+    </FrameLayout>
+</LinearLayout>

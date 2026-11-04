@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:background="@color/white" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_64">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/setting_string_key_167" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutThree" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbThree" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_48e7afe7bd" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutEight" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbEight" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_b4631fc11a" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTwelve" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbHalfYear" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_39dadace7a" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutEighteen" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbEighteen" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_1a19a9f0f3" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTwentyTwo" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbTwentyTwo" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_bd0adea7ae" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_44" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutTwentyFour" android:paddingLeft="@dimen/apply_pad_common_left_right_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <CheckBox android:enabled="false" android:id="@id/cbTwentyFour" android:clickable="false" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:checked="false" android:button="@drawable/selector_32_32_circle_check_box" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_4d6dd78094" />
+    </LinearLayout>
+</LinearLayout>

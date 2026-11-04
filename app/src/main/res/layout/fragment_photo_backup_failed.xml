@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/fragment_photo_backup_failed_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ll_upload_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_46" android:layout_marginTop="@dimen/len_15">
+        <ImageView android:visibility="gone" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_upload_fail" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/left_task_tv" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_14" android:tag="binding_2" android:visibility="gone" android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:id="@id/tv_uploading_retry" android:tag="binding_3" android:background="@drawable/shape_border_cccccc_14" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+    <View android:id="@id/v_task_executing_divider" android:background="@color/color_cce4e4e4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_below="@id/ll_upload_status" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_backup" android:tag="binding_4" android:paddingBottom="@dimen/len_80" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/v_task_executing_divider" />
+    <androidx.core.widget.NestedScrollView android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/ll_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/include_show_task_no_content" />
+    </androidx.core.widget.NestedScrollView>
+    <androidx.core.widget.NestedScrollView android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

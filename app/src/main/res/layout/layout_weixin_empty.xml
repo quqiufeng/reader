@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_25" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechatbackup_string_key_25" android:lineSpacingExtra="@dimen/len_5" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_25" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechatbackup_string_key_26" android:lineSpacingExtra="@dimen/len_5" />
+        <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_30" android:layout_marginRight="@dimen/len_30" android:src="@drawable/image_weixin_empty" app:proportHeight="567" app:proportWidth="315" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivBigPhoto" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_gravity="right" android:id="@id/cbClickView" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" />
+    <CheckBox android:textColorHighlight="@color/transparent_bg" android:layout_gravity="right" android:id="@id/cbSelect" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_8" android:checked="false" android:button="@drawable/selector_check_circle_box" />
+</merge>

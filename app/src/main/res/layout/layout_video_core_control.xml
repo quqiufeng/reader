@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.player.widget.BlackSurfaceView android:id="@id/viewBlack" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.player.view.VlcVideoView android:id="@id/layoutVlcVideo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/iv_player_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_video_player_portrait_bg" android:scaleType="centerCrop" />
+    <ViewStub android:id="@id/sub_play_status" android:layout="@layout/layout_video_play_status" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

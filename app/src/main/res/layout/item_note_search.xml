@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="bottom" android:id="@id/line" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.zentraedi.business.widget.MarkView android:id="@id/markView" android:visibility="gone" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:layout_marginRight="@dimen/len_6" app:markColor="@color/color_D0021B" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvSummary" android:paddingBottom="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutClassify" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/classifyIcon" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:src="@drawable/icon_notebook_gray" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvClassifyName" android:paddingLeft="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="@dimen/len_44" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ivMarkdownIcon" android:visibility="visible" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginTop="@dimen/apply_pad_item_top_bottom_14" android:src="@drawable/icon_markdown_blue" android:layout_centerHorizontal="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <Space android:id="@id/spaceMarkdown" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_12" />
+                <ImageView android:id="@id/ivMore" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_toolbar_more" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

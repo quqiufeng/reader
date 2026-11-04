@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_usb_disk_pattern_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_100" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_usb_disk_pattern_action" />
+    <include layout="@layout/layout_usb_disk_pattern_closed" />
+    <include layout="@layout/layout_usb_disk_pattern_opened" />
+    <include layout="@layout/layout_usb_disk_pattern_pc_using" />
+    <include layout="@layout/layout_usb_disk_pattern_error" />
+    <include android:id="@id/layout_edit" layout="@layout/layout_usb_disk_pattern_edit" />
+    <include android:id="@id/phoneExternalLayout" layout="@layout/layout_usb_disk_pattern_phone_external" />
+    <include layout="@layout/layout_usb_disk_pattern_introduce" />
+    <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

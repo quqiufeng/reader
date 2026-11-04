@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_photo_album_detail_0" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/coordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_268" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/coverIv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:layout_collapseMode="parallax" app:translateY="0.5" />
+                <View android:id="@id/whiteBgV" android:background="@color/color_FFA5BDE3" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.zentraedi.business.widget.BlurBgImageView android:id="@id/blurIv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <View android:id="@id/blurMaskIv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.3" />
+                <RelativeLayout android:id="@id/bigPubInfoLl" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_90" android:layout_marginRight="@dimen/len_15" app:layout_collapseMode="parallax">
+                    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/smallCoverIv" android:tag="binding_2" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_60" android:scaleType="centerCrop" android:layout_marginEnd="@dimen/len_15" app:cornerRadius="@dimen/len_8" />
+                    <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:gravity="center_vertical" android:id="@id/tvCoverCenter" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/smallCoverIv" android:layout_alignTop="@id/smallCoverIv" android:layout_alignBottom="@id/smallCoverIv" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/albumNameLl" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/smallCoverIv">
+                        <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:ellipsize="middle" android:id="@id/navTitleTv" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="@dimen/len_10" android:layout_weight="1.0" />
+                        <ImageView android:layout_gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_photo_title_edit_w" android:layout_marginStart="@dimen/dp_5" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/font_14" android:ellipsize="end" android:id="@id/albumDescOrRoleTv" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:includeFontPadding="false" android:layout_toRightOf="@id/smallCoverIv" android:layout_below="@id/pubInfoLl" />
+                    <TextView android:textSize="@dimen/font_14" android:id="@id/tv_ai_album_num" android:tag="binding_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_toRightOf="@id/smallCoverIv" android:layout_below="@id/albumDescOrRoleTv" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pubInfoLl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_toRightOf="@id/smallCoverIv" android:layout_below="@id/albumNameLl">
+                        <TextView android:textSize="@dimen/font_14" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/albumOwnerTv" />
+                        <View android:id="@id/infoLineView" android:background="@color/color_50p_ffffff" android:layout_width="1.0dip" android:layout_height="@dimen/len_12" android:layout_marginLeft="6.0dip" />
+                        <TextView android:textSize="@dimen/font_14" android:id="@id/userNumTv" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_6" android:includeFontPadding="false" />
+                        <View android:layout_gravity="center_vertical" android:id="@id/permStatusView" android:background="@drawable/shape_ff8300_radius_5" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_6" android:layout_marginLeft="@dimen/len_6" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/layout_save" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_save_photo_to_file_state" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_top_action" android:background="@color/home_main_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+                        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:id="@id/tvSort" android:tag="binding_12" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" app:medium_bold="true" />
+                        <ImageView android:tag="binding_13" android:padding="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <ImageView android:id="@id/mapModeIv" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_5" />
+                        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:includeFontPadding="false" app:medium_bold="true" />
+                        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                        <ImageView android:tag="binding_16" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_view_position_44" />
+                        <ImageView android:tag="binding_17" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+                        <ImageView android:tag="binding_18" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_filter_black_selector" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout android:tag="binding_19" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/synchronizingLl" android:tag="binding_20" android:layout_width="fill_parent" android:layout_height="54.0dip">
+                <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" android:layout_alignParentRight="true" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_nas_string_key_551_res" />
+            </LinearLayout>
+            <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPagerDetail" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/emptyLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/synchronizingLl" layout="@layout/layout_photo_album_detail_empty" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <View android:id="@id/shadowBgView" android:background="@drawable/shape_gradient_black_bg_3" android:layout_width="fill_parent" android:layout_height="@dimen/len_70" />
+    <LinearLayout android:orientation="vertical" android:id="@id/titleLl" android:tag="binding_21" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/navigationBarLayout" layout="@layout/layout_photo_album_list_navigation_bar" />
+        <include android:id="@id/editNavigationBarLayout" layout="@layout/layout_common_edit_navigation_bar" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/timelineSwitchLl" android:tag="binding_22" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_13" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_10">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_40">
+            <View android:background="@drawable/shape_timeline_radio_group_bg2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/len_30" android:layout_margin="@dimen/len_5" android:fillViewport="true" android:overScrollMode="never">
+                <RadioGroup android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/rg_tab_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:checkedButton="@id/rb_day">
+                    <RadioButton android:id="@id/rb_file" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_files" android:singleLine="true" android:layout_marginEnd="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                    <RadioButton android:id="@id/rb_year" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_years" android:singleLine="true" android:layout_marginStart="@dimen/len_2_5" android:layout_marginEnd="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                    <RadioButton android:id="@id/rb_month" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_months" android:singleLine="true" android:layout_marginStart="@dimen/len_2_5" android:layout_marginEnd="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                    <RadioButton android:id="@id/rb_day" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_days" android:singleLine="true" android:layout_marginStart="@dimen/len_2_5" android:layout_marginEnd="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                    <RadioButton android:id="@id/rb_position" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_location" android:singleLine="true" android:layout_marginStart="@dimen/len_2_5" android:layout_marginEnd="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                    <RadioButton android:id="@id/rb_portrait" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_photos_face" android:singleLine="true" android:layout_marginStart="@dimen/len_2_5" style="@style/style_pic_text_timeline" />
+                </RadioGroup>
+            </HorizontalScrollView>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom" android:tag="binding_23" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/layoutBottom" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_photo_album_list_bottom_options" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_425FFF" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvPhotoRemove" android:tag="binding_24" android:background="@drawable/shape_dialog_cancel_bg" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/common_photos_363c9831f8" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <Space android:tag="binding_25" android:layout_width="@dimen/len_15" android:layout_height="0.0dip" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvPhotoMove" android:tag="binding_26" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/common_photos_d213da0d12" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvSceneRemove" android:tag="binding_27" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/common_photos_a63c1da020" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

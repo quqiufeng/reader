@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/layout_bt_download_main_load_0" android:background="@color/white" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_desc" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_error" />
+    <ProgressBar android:tag="binding_2" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_3" android:background="@drawable/shape_circle_blue_20_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_32" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_32" android:text="@string/common_button_try_again" />
+</LinearLayout>

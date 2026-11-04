@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutRootButton" android:background="@drawable/corners_0dffffff_22" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/buttonLoading" android:visibility="gone" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:layout_marginRight="@dimen/len_8" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/color_26ffffff" android:gravity="center" android:id="@id/buttonText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_ok" />
+</LinearLayout>

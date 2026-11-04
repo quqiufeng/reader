@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/cardRootLayout" android:tag="layout/layout_home_cards_edit_0" android:background="@drawable/shape_ffffff_radius_10" android:paddingTop="@dimen/len_15" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutCardTitle" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_7" android:paddingHorizontal="@dimen/len_15">
+        <CheckBox android:id="@id/cbSelect" android:background="@null" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:checked="false" android:button="@drawable/selector_24_24_blue_square" android:layout_marginEnd="@dimen/len_10" />
+        <TextView android:textSize="@dimen/len_18" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvCardTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivDrag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_card_checked" />
+        <ImageView android:id="@id/ivNext" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_right_30" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_220" />
+</LinearLayout>

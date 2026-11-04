@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_cache_switch_usage_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/nas_white" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/transparent_bg">
+            <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item_title" android:tag="binding_1" android:paddingTop="@dimen/len_88" android:text="@string/common_nas_string_key_1605_res" app:layout_collapseMode="parallax" app:medium_bold="true" style="@style/bigTitleTextView" />
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_2" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <ImageView android:gravity="center" android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black" />
+                    <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvBarTitle" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_nas_string_key_1605_res" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/tv_top_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:lineSpacingExtra="@dimen/len_5" />
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_20" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_20" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/tv_current_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_15" android:lineSpacingExtra="@dimen/len_5" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_30" android:text="@string/setting_string_key_476" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_10">
+                <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_storage_high_speed" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/tv_speed_storage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_24" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_15" android:lineSpacingExtra="@dimen/len_5" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_13">
+                <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_storage_read_write_cache" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/tv_rw_cache" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_24" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_15" android:lineSpacingExtra="@dimen/len_5" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_10">
+                <ImageView android:background="@drawable/shape_666666_point" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_4" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_storage_readonly_cache" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:id="@id/tv_r_cache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_24" android:layout_marginTop="@dimen/len_8" android:layout_marginRight="@dimen/len_15" android:lineSpacingExtra="@dimen/len_5" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_switch" android:background="@drawable/shape_circle_blue_20_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_34" android:text="@string/common_nas_string_key_1605_res" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

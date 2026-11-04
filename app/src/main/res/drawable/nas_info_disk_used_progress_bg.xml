@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/len_50" />
+            <solid android:color="@color/disk_volume" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/len_50" />
+                <gradient android:startColor="@color/nas_info_app_used_size" android:endColor="@color/nas_info_app_used_size" android:angle="0.0" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

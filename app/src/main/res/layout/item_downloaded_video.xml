@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/llItem" android:tag="layout/item_downloaded_video_0" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:enabled="false" android:id="@id/cb" android:tag="binding_1" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/len_8" android:layout_marginTop="@dimen/len_32" android:layout_marginRight="@dimen/len_5" android:button="@drawable/select_blue_rect_30" />
+    <Space android:tag="binding_2" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_0" />
+    <com.google.android.material.imageview.ShapeableImageView android:tag="binding_3" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45" android:layout_marginTop="@dimen/len_10" android:layout_marginBottom="@dimen/len_10" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_8" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingBottom="@dimen/apply_pad_item_top_bottom_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/nas_white" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:ellipsize="end" android:tag="binding_5" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_3" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivMore" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_more_black_44_44" />
+</LinearLayout>

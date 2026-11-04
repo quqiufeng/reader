@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_album_add_pic_type_select_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/navRl" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/closeIv" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:src="@drawable/icon_close_black" />
+        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/common_title" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_prompt_please_select" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_13" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_photos_select_added_content_to_add_to_album" android:lineSpacingMultiplier="1.2" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/allPicRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_all_pic" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_all" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/addDirRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_dir" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_added_folders" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/personalAlbumRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_personal_album" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_3c05b82e58" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/backupAlbumRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_backup_album" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_mobile_backup_album" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/backupBabyAlbum" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_baby_album" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_baby_album" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/aiAlbumRl" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_ai" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_portrait_recognition" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/aiSceneAlbum" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_ai_scene" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_scene_classification" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/aiFootprintsAlbum" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_footprints" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_my_footprints" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/aiHighlightsAlbum" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_add_pic_highlights" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_photos_memory_highlights" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_arrow_gray_16_24" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_15" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

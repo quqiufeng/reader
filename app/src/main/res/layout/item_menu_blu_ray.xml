@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:tag="layout/item_menu_blu_ray_0" android:background="@color/color_1ABBC5FF" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_4"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

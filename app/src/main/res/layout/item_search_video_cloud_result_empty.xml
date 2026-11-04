@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_b3ffffff" android:gravity="center" android:paddingBottom="@dimen/len_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_no_data" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_cccccc" android:gravity="center" android:id="@id/tvMatchingReporting" android:background="@drawable/shape_666666_radius_70" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_8" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_tell_us_what_you_are_looking_for" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/flRoot" android:tag="layout/activity_movie_version_add_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_10">
+        <FrameLayout android:id="@id/rl_nav" android:background="@drawable/corners_0affffff_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/dialog_dark_title" android:gravity="center" android:layout_gravity="center" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_movies_add_more_content_versions" app:medium_bold="true" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivClose" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_white_44" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/fl_main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56" android:layout_marginBottom="@dimen/len_91" />
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_56" />
+        <com.zentraedi.video.view.VideoButtonLayout android:layout_gravity="bottom" android:id="@id/button" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/video_popup_loading_title" android:paddingTop="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_getting_new_content" />
+    </LinearLayout>
+</FrameLayout>

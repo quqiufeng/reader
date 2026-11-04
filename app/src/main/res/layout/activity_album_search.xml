@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/rootView" android:tag="layout/activity_album_search_0" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:background="@color/photo_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <RelativeLayout android:orientation="horizontal" android:id="@id/llMiddleTitle" android:paddingTop="@dimen/len_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_20" android:layout_marginStart="@dimen/apply_pad_common_left_right_15">
+                    <TextView android:textSize="@dimen/navigation_title_text_size" android:textStyle="bold" android:textColor="@color/selector_text_333333_cccccc" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView android:layout_gravity="bottom" style="@style/topBigTitleSeparatorLine" />
+            <androidx.appcompat.widget.Toolbar android:tag="binding_4" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/toolbar" layout="@layout/album_search_toolbar" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/contentNSV" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="com.zentraedi.business.view.FixScrollingBehavior">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/layout_search" android:background="@color/white" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_edit" android:background="@drawable/bg_edit_input" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_36" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_toStartOf="@id/tv_search" android:forceDarkAllowed="false">
+                    <ImageView android:layout_gravity="center_vertical" android:tag="binding_5" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:src="@drawable/icon_home_page_search" android:layout_marginStart="@dimen/len_10" android:layout_marginEnd="@dimen/len_8" />
+                    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <com.zentraedi.business.view.BaseEditText android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:textColorHint="@color/common_subdesc" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/et_search_content" android:tag="binding_6" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/common_photos_search_placeholder" android:singleLine="true" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/input_edit_text_cursor" />
+                    </FrameLayout>
+                    <ImageView android:id="@id/iv_clear_input" android:tag="binding_7" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/selector_text_333333_cccccc" android:gravity="center_vertical" android:id="@id/tv_search" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_search" android:layout_alignTop="@id/layout_edit" android:layout_alignBottom="@id/layout_edit" android:paddingStart="@dimen/len_10" android:paddingEnd="@dimen/apply_pad_common_left_right_15" android:layout_alignParentEnd="true" />
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/selector_text_666666_cccccc" android:id="@id/tvSearchTips" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:text="@string/common_photos_desc" android:includeFontPadding="false" android:layout_below="@id/layout_edit" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/layout_ai_off_outer" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_search">
+                <include android:id="@id/layout_ai_off" layout="@layout/item_album_search_ai_off" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="binding_11" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_157" android:layout_below="@id/layout_ai_off_outer">
+                <ImageView android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:forceDarkAllowed="false" />
+                <TextView android:textColor="@color/common_desc" android:gravity="center" android:tag="binding_13" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="binding_14" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_ai_off_outer">
+                <com.flyco.tablayout.SlidingTabLayout android:id="@id/tab_layout" android:tag="binding_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" app:layout_constraintRight_toLeftOf="@id/addList" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/color_425FFF" app:tl_indicator_corner_radius="@dimen/len_1" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_margin_bottom="@dimen/len_5" app:tl_indicator_width="@dimen/len_20" app:tl_tab_padding="12.0dip" app:tl_tab_space_equal="false" app:tl_textBold="SELECT" app:tl_textDisableColor="@color/color_CCCCCC" app:tl_textSelectColor="@color/color_333333" app:tl_textSelectSize="@dimen/len_16" app:tl_textUnselectColor="@color/color_bf666666" app:tl_textUnselectSize="@dimen/len_16" />
+                <com.zentraedi.business.view.NoScrollViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <androidx.legacy.widget.Space android:tag="binding_16" android:layout_width="0.0dip" android:layout_height="@dimen/len_80" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:tag="binding_17" android:background="@color/white" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_80">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        <TextView android:textColor="@color/selector_text_333333_cccccc" android:id="@id/tv_share" android:tag="binding_18" android:padding="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_share" app:drawableTopCompat="@drawable/button_photo_home_tab_share_black" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/selector_text_333333_cccccc" android:id="@id/tv_download" android:tag="binding_19" android:padding="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_download" app:drawableTopCompat="@drawable/button_photo_home_tab_download_black" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+    </LinearLayout>
+    <androidx.cardview.widget.CardView android:id="@id/historyLl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15" app:cardBackgroundColor="@color/dialog_white_bg" app:cardCornerRadius="@dimen/len_15" app:cardElevation="@dimen/len_10">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.zentraedi.business.widget.MaxHeightRecyclerView android:id="@id/historyRv" android:tag="binding_20" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/clearHistoryIvRl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:ellipsize="end" android:paddingTop="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_empty" android:lines="1" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/len_30" />
+                <ImageView android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:src="@drawable/icon_delete_gray_28" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

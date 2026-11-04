@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_file_square_permission_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.view.AvatarImageView android:id="@id/iv_avatar" android:tag="binding_1" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_avatar_60" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/layoutSet" android:tag="binding_2" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="wrap_content" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:minWidth="@dimen/len_85" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="@dimen/len_6" android:layout_height="@dimen/len_6" android:layout_marginLeft="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_3" android:text="@string/common_file_permission_read_and_write" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:layout_marginRight="@dimen/intl_left_right_15" android:src="@drawable/icon_dark_folded_to_bottom" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/apply_pad_item_top_bottom_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/layoutSet" android:layout_toRightOf="@id/iv_avatar" android:layout_centerVertical="true">
+        <TextView android:ellipsize="end" android:id="@id/nickNameTv" android:tag="binding_5" android:maxLines="1" android:includeFontPadding="false" style="@style/intl_text_title_font16" />
+        <TextView android:tag="binding_6" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_3" style="@style/intl_common_setting_bottom_desc" />
+    </LinearLayout>
+    <ImageView android:layout_below="@id/layout" style="@style/intl_setting_item_line" />
+</RelativeLayout>

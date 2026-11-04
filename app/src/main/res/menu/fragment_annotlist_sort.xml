@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_search_white_24dp" android:id="@id/menu_annotlist_search" android:title="@string/action_search" app:actionViewClass="androidx.appcompat.widget.SearchView" app:showAsAction="always|collapseActionView" />
+    <item android:icon="@drawable/ic_sort_new" android:id="@id/action_sort" android:title="@string/action_sort" app:showAsAction="always">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@id/menu_annotlist_sort_by_date" android:title="@string/action_sort_annotlist_by_date" app:showAsAction="never" />
+                <item android:id="@id/menu_annotlist_sort_by_position" android:title="@string/action_sort_annotlist_by_position" app:showAsAction="never" />
+            </group>
+        </menu>
+    </item>
+    <item android:icon="@drawable/ic_filter" android:id="@id/action_filter" android:title="@string/action_filter" app:showAsAction="always" />
+</menu>

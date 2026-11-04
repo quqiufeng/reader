@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/vmLayout" android:tag="layout/dialog_note_list_filter_0" android:background="@drawable/shape_top_circle_white_15_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_filter" android:paddingStart="@dimen/apply_pad_common_left_right_15" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center" android:id="@id/classifySortTv" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_sort" android:drawablePadding="@dimen/len_5" android:layout_centerVertical="true" android:drawableStart="@drawable/icon_drag_sort" android:layout_marginEnd="@dimen/len_10" android:layout_toStartOf="@id/ivClose" />
+    </RelativeLayout>
+    <View android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_20" />
+</LinearLayout>

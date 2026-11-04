@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_user_center_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/white" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsingToolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+            <LinearLayout android:orientation="vertical" android:id="@id/headerLayout" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.zentraedi.business.widget.MediumTextView android:gravity="bottom" android:id="@id/tvTitle" android:text="@string/common_app_user_center" android:layout_marginEnd="@dimen/len_5" app:medium_bold="true" style="@style/bigTitleTextView" />
+                    <ImageView android:id="@id/ivHelper" android:src="@drawable/icon_helper" style="@style/topBigTitleHelper" />
+                </LinearLayout>
+                <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginTop="@dimen/len_14" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_2" android:background="@color/white" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+                    <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_home_black" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutBarTitle" android:layout_width="wrap_content" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_centerHorizontal="true" android:alpha="0.0">
+                        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvBarTitle" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_app_user_center" />
+                        <ImageView android:id="@id/ivBarHelper" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:src="@drawable/icon_helper" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/tvAdd" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_toolbar_add_2" android:scaleType="center" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <FrameLayout android:orientation="vertical" android:id="@id/topLayout" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingLeft="@dimen/len_20" android:paddingTop="@dimen/len_24" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+            <com.zentraedi.business.view.AvatarImageView android:id="@id/ivHeader" android:layout_width="@dimen/len_80" android:layout_height="@dimen/len_80" android:src="@drawable/icon_avatar_60" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_80">
+                <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tvUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/right_arrow" android:drawablePadding="@dimen/len_5" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_administrator" android:includeFontPadding="false" />
+                    <View android:background="@color/color_cccccc" android:layout_width="@dimen/len_0_5" android:layout_height="@dimen/len_10" android:layout_marginLeft="@dimen/len_6" android:layout_marginRight="@dimen/len_6" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/tv_role" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:id="@id/tvCreatUser" android:background="@drawable/shape_f4f4f4_radius_20" android:paddingLeft="@dimen/len_12" android:paddingTop="@dimen/len_6" android:paddingRight="@dimen/len_12" android:paddingBottom="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_create_account" />
+                    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_666666" android:id="@id/tvSizeUsage" android:background="@drawable/shape_f4f4f4_radius_20" android:paddingLeft="@dimen/len_12" android:paddingTop="@dimen/len_6" android:paddingRight="@dimen/len_12" android:paddingBottom="@dimen/len_6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_user_storage_usage" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_64" android:text="@string/nas_string_text_app_288" android:paddingStart="@dimen/len_15" />
+        <View android:background="@color/color_CCE4E4E4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/len_15" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

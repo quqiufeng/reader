@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/dialog_install_appstore_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:padding="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/tvTitle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_333333" android:id="@id/tvSize" android:tag="binding_2" android:paddingBottom="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ProgressBar android:id="@id/pbProgress" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/len_3" android:max="100" android:progressDrawable="@drawable/bg_progress_blue" style="?android:progressBarStyleHorizontal" />
+        <LinearLayout android:gravity="center" android:id="@id/buttonLayout" android:paddingTop="@dimen/len_32" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvDownloadCancel" android:tag="binding_4" android:background="@drawable/shape_f4f4f4_radius_20" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:minWidth="@dimen/len_130" android:text="@string/common_button_cancel" />
+            <Space android:id="@id/space" android:tag="binding_5" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvRetry" android:tag="binding_6" android:background="@drawable/bg_common_commit_btn" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:minWidth="@dimen/len_130" android:text="@string/common_button_background" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

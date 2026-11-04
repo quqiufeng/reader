@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout-sw600dp/item_home_files_card_0" android:background="@drawable/bg_eef2f7_radius_10" android:paddingLeft="@dimen/len_12" android:paddingRight="@dimen/len_12" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/len_228" android:layout_height="@dimen/len_75" android:layout_marginBottom="@dimen/len_10" android:paddingHorizontal="@dimen/len_12"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/lav_backingup" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" app:lottie_autoPlay="true" app:lottie_fileName="backingup.json" app:lottie_imageAssetsFolder="images/" app:lottie_loop="true" app:lottie_speed="1.0" />
+        <ImageView android:id="@id/iv_icon" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:scaleType="centerCrop" />
+        <ImageView android:layout_gravity="end" android:id="@id/ivError" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:layout_marginTop="@dimen/len_4f" android:src="@drawable/icon_outside_device_invalid_21" android:layout_marginEnd="@dimen/len_3f" />
+    </FrameLayout>
+    <FrameLayout android:orientation="vertical" android:paddingTop="@dimen/len_2" android:paddingBottom="@dimen/len_2" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_12" android:paddingVertical="@dimen/len_2">
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="@dimen/len_16" android:maxLines="1" android:includeFontPadding="false" />
+    </FrameLayout>
+    <ImageView android:id="@id/iv_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_more_black_24_24_enable" android:layout_marginStart="@dimen/len_12" />
+    <ImageView android:id="@id/iv_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_black_24" android:layout_marginStart="@dimen/len_12" />
+</LinearLayout>

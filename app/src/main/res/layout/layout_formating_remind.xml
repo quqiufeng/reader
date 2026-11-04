@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_formating_remind_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/button_red" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_30" android:layout_marginRight="@dimen/len_20" android:text="@string/common_disk_migration_9a5820844a" android:lineSpacingExtra="@dimen/len_8" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/button_red" android:id="@id/tvDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_6" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_40" android:lineSpacingExtra="@dimen/len_7" />
+</LinearLayout>

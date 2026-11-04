@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:tag="layout/layout_disk_progress_part_0" android:background="@drawable/shape_border_e4e4e4_circle_5" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/tvStatus" android:layout_alignParentStart="true">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:ellipsize="middle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_14" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:gravity="center_vertical" android:id="@id/tvStatus" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_storage_drive_status_unformatted" android:includeFontPadding="false" android:layout_centerVertical="true" android:paddingStart="@dimen/len_6" android:layout_alignParentEnd="true" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <ImageView android:tag="binding_4" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_formatting_error" />
+            <ImageView android:tag="binding_5" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:src="@drawable/icon_formatting_suc" />
+            <ProgressBar android:tag="binding_6" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+        </FrameLayout>
+    </RelativeLayout>
+    <ProgressBar android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/len_6" android:layout_marginTop="@dimen/len_10" android:progressDrawable="@drawable/bg_disk_progress" style="?android:progressBarStyleHorizontal" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:padding="10.0dip" android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tools_radio_button_selected_color" />
+    <corners android:topLeftRadius="@dimen/radio_button_conner_radius" android:topRightRadius="0.100000024dip" android:bottomLeftRadius="0.100000024dip" android:bottomRightRadius="@dimen/radio_button_conner_radius" />
+</shape>

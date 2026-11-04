@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingBottom="@dimen/len_5" android:layout_width="@dimen/len_345" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25">
+            <ImageView android:visibility="gone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1238_res" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_12" android:layout_gravity="right" android:id="@id/tv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_25" android:includeFontPadding="false" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pb_progress" android:layout_width="fill_parent" android:layout_height="@dimen/len_4" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_6" android:layout_marginRight="@dimen/len_25" android:layout_marginBottom="@dimen/len_20" android:max="100" android:progressDrawable="@drawable/bg_progress_blue" style="?android:progressBarStyleHorizontal" />
+    </LinearLayout>
+</LinearLayout>

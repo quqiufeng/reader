@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_login_account_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zentraedi.business.view.AvatarImageView android:layout_gravity="top" android:id="@id/iv_avatar" android:tag="binding_1" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:src="@drawable/icon_avatar_60" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:tag="binding_2" android:paddingLeft="@dimen/len_11" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_4" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_4" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_999999" android:gravity="center_vertical" android:tag="binding_5" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:textSize="12.0dip" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tvSwitch" android:tag="binding_6" android:paddingLeft="@dimen/len_30" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_button_switch" android:includeFontPadding="false" />
+        <ImageView android:textSize="12.0dip" android:id="@id/tvDelete" android:tag="binding_7" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:src="@drawable/icon_close_float" android:scaleType="center" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+</FrameLayout>

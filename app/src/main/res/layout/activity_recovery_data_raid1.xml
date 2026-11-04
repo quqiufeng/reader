@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/activity_recovery_data_raid1_0" android:background="@color/white" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_28" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/title" android:tag="binding_1" android:paddingTop="@dimen/len_62" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttonLayout" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:id="@id/tvButton" android:tag="binding_2" android:background="@drawable/bg_common_commit_btn" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:text="@string/common_button_enter" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_425FFF" android:gravity="center" android:id="@id/tvEnter" android:tag="binding_3" android:background="@drawable/bg_dialog_cancel_btn" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/business_string_key_287" android:layout_weight="1.0" />
+        <Space android:tag="binding_4" android:layout_width="@dimen/len_35" android:layout_height="0.0dip" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:id="@id/tvReboot" android:tag="binding_5" android:background="@drawable/bg_common_commit_btn" android:layout_width="0.0dip" android:layout_height="@dimen/len_44" android:text="@string/business_string_key_121" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/c_D0021B" android:gravity="center" android:id="@id/tvTips" android:tag="binding_6" android:paddingLeft="@dimen/len_20" android:paddingRight="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/buttonLayout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/tvTips" android:layout_below="@id/title">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_380">
+            <com.zentraedi.business.disk.view.RecoverDataLayout android:id="@id/rLayout1" android:paddingLeft="@dimen/len_65" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_65" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.zentraedi.business.disk.view.RecoverDataLayout android:id="@id/rLayout2" android:paddingLeft="@dimen/len_65" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_65" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center_horizontal" android:id="@id/tvTips1" android:tag="binding_7" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

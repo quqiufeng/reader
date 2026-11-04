@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_contacts_backup_main_0" android:background="@color/nas_white" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <include android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_no_recyclerview_top_title" />
+                <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="@dimen/len_0" app:layout_collapseMode="pin">
+                <include android:id="@id/layout_navigation_bar" layout="@layout/layout_common_navigation_bar_new" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivHead" android:layout_width="fill_parent" android:layout_height="@dimen/len_150" android:src="@drawable/icon_album_backup_ing_bg" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" app:cornerRadius="@dimen/len_15" />
+            <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_150" android:src="@drawable/icon_album_backup_tip" android:layout_centerHorizontal="true" />
+            <include android:id="@id/backup_declare" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_album_backup_declare" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginStart="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:gravity="center" android:background="@drawable/shape_425fff_radius_22" android:layout_width="@dimen/len_43" android:layout_height="@dimen/len_20" android:layout_marginTop="@dimen/len_6" android:text="@string/beta" android:layout_marginStart="@dimen/len_7" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_start_backup" android:tag="binding_4" android:background="@drawable/bg_425fff_radius_22" android:padding="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/backup_phone_contacts" android:layout_above="@id/tv_start_restore" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_start_restore" android:tag="binding_5" android:background="@drawable/bg_425fff_radius_22" android:padding="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/restore_phone_contacts" android:layout_above="@id/tv_backup_records" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_backup_records" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_100" android:text="@string/backup_records" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

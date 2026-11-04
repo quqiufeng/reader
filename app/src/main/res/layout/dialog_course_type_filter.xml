@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/dialog_course_type_filter_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_150">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/backIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/firstLevelTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/classroom_string_key_13" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/otherLevelTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/classroom_string_key_13" android:layout_centerInParent="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+            <ImageView android:id="@id/close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_5" android:src="@drawable/icon_close_pop" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/filterTypeRv" android:paddingBottom="@dimen/len_34" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <include android:id="@id/emptyLayout" android:visibility="gone" layout="@layout/layout_list_empty" />
+    </LinearLayout>
+</FrameLayout>

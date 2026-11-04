@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_file_list_file_content" android:tag="layout/item_file_compression_browser_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_64"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/cb_file_manage_select" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_65" />
+    <RelativeLayout android:id="@id/rl_file_manage_cover" android:tag="binding_2" android:layout_width="@dimen/len_38" android:layout_height="@dimen/len_38" android:layout_marginTop="@dimen/len_13" android:layout_marginBottom="@dimen/len_13" android:layout_toEndOf="@id/cb_file_manage_select">
+        <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:id="@id/folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_dir_common" />
+    </RelativeLayout>
+    <ImageView android:id="@id/downloadIv" android:tag="binding_3" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_gray_download_44" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/llTitleContent" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_15" android:layout_marginStart="@dimen/len_15" android:layout_toStartOf="@id/downloadIv" android:layout_toEndOf="@id/rl_file_manage_cover">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="middle" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginEnd="@dimen/len_15" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:id="@id/timeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

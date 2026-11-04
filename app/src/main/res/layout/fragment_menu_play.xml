@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/fragment_menu_play_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/llContent" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_player_speed" android:layout_marginStart="@dimen/len_25" />
+        <RadioGroup android:orientation="vertical" android:id="@id/rgSpeed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_20">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_32">
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:id="@id/rb_0_75" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/hdmi_string_key_9" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_18" />
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:id="@id/rb_1" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/hdmi_string_key_10" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_143" />
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:id="@id/rb_1_25" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/hdmi_string_key_11" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_268" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_32" android:layout_marginTop="@dimen/len_20">
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:id="@id/rb_1_5" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/hdmi_string_key_12" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_18" />
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:id="@id/rb_2" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/hdmi_string_key_13" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_143" />
+            </RelativeLayout>
+        </RadioGroup>
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_music_player_mode" android:layout_marginStart="@dimen/len_25" />
+        <RadioGroup android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_20">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_32">
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:tag="binding_6" android:layout_width="0.0px" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/common_player_sequential_play" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_18" />
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:tag="binding_7" android:layout_width="0.0px" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/common_player_repeat_one" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_30" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_32" android:layout_marginTop="@dimen/len_20">
+                <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_18">
+                    <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/common_player_repeat_all" android:includeFontPadding="false" />
+                </FrameLayout>
+                <RadioButton android:textSize="@dimen/font_16" android:textColor="@color/color_cccccc" android:tag="binding_9" android:layout_width="0.0px" android:layout_height="@dimen/len_32" android:button="@drawable/checkbox_transparent_selector" android:text="@string/common_music_shuffle" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_30" />
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

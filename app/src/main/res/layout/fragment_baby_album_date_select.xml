@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/fragment_baby_album_date_select_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fffbfbfb" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="72.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/yearRv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/age_bottom_view" android:background="@drawable/shape_baby_age_filter_year_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/yearRv" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="114.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/monthRv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/month_bottom_view" android:background="@drawable/shape_baby_date_filter_month_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/monthRv" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/dayRv" android:background="@color/common_white" android:layout_width="@dimen/len_0" android:layout_height="fill_parent" android:layout_weight="114.0" />
+</LinearLayout>

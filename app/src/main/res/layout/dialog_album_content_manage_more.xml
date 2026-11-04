@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_album_content_manage_more_0" android:background="@drawable/shape_white_top_radius_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_75">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_folder" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_dir_album_blue" android:scaleType="fitCenter" />
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/fl_album" android:layout_width="@dimen/len_35" android:layout_height="@dimen/len_35" android:layout_marginLeft="@dimen/len_15">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_album_place_holder" android:scaleType="fitCenter" />
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_gravity="bottom" android:id="@id/iv_album" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:scaleType="fitCenter" app:cornerRadius="@dimen/len_5" />
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_gravity="bottom" android:id="@id/iv_placeholder" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_album_placeholder" android:scaleType="fitCenter" app:cornerRadius="@dimen/len_5" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_close" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_42" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_sync" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_65">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_delete_enable" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_doc_sync_auto_sync" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_cancel_sync" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_65">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_delete_enable" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_photos_76feb5d756" />
+    </LinearLayout>
+    <ImageView android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_54" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_del" android:layout_width="fill_parent" android:layout_height="@dimen/len_65">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_remove_black_enable" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_music_content_management_remove" />
+    </LinearLayout>
+</LinearLayout>

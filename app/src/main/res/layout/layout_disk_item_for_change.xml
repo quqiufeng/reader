@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_disk_item_for_change_0" android:layout_width="@dimen/len_32" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_disk" android:tag="binding_1" android:layout_width="@dimen/len_33" android:layout_height="@dimen/len_66" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font_10" android:textColor="@color/common_subdesc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_6" android:layout_marginBottom="@dimen/len_5" android:includeFontPadding="false" android:layout_alignBottom="@id/iv_disk" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/font_11" android:textColor="@color/common_desc" android:gravity="right" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_7" android:maxLines="2" android:minLines="2" android:includeFontPadding="false" android:layout_below="@id/iv_disk" />
+</RelativeLayout>

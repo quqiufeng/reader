@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.reader.adapter.view.NovelLinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/ignore_dark_mode_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/len_50" layout="@layout/layout_page_header" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="@dimen/len_30" layout="@layout/layout_page_footer" />
+</com.zentraedi.reader.adapter.view.NovelLinearLayout>

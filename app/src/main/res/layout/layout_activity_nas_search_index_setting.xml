@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/layout_activity_nas_search_index_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:text="@string/common_file_settings_search_index" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <com.zentraedi.business.view.ExpandableTextView android:id="@id/searchDescTv" android:layout_marginTop="@dimen/len_12" android:text="@string/common_file_settings_search_index_detail" android:layout_below="@id/tv_item" style="@style/intl_top_desc" />
+                <ImageView android:layout_below="@id/searchDescTv" style="@style/topBigTitleSeparatorLine" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <RelativeLayout android:id="@id/layoutTitle" android:tag="binding_2" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+                    <ImageView android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_back_black" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutBarTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+                        <TextView android:textSize="@dimen/navigation_title_text_size" android:textColor="@color/text_color_day_111111_night_ffffff" android:gravity="center" android:id="@id/tv_top_title" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_file_settings_search_index" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:tag="binding_3" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:layout_marginBottom="@dimen/len_8" android:text="@string/common_file_settings_full_indexing_cycle" android:layout_marginStart="@dimen/len_15" />
+                <LinearLayout android:orientation="horizontal" style="@style/intl_setting_item">
+                    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:text="@string/common_file_settings_frequency" style="@style/intl_text_content_font14" />
+                    <RelativeLayout android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:tag="binding_5" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_toStartOf="@id/iv_arrow" style="@style/intl_common_setting_right_desc" />
+                        <ImageView android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:tag="binding_6" style="@style/intl_setting_item_line" />
+                <LinearLayout android:orientation="horizontal" android:tag="binding_7" style="@style/intl_setting_item">
+                    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:text="@string/common_file_settings_time" style="@style/intl_text_content_font14" />
+                    <RelativeLayout android:layout_gravity="center_vertical" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:tag="binding_9" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_toStartOf="@id/iv_arrow_time" style="@style/intl_common_setting_right_desc" />
+                        <ImageView android:id="@id/iv_arrow_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View style="@style/intl_setting_item_line" />
+                <LinearLayout android:orientation="horizontal" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_13" android:paddingStart="@dimen/len_8">
+                    <CheckBox android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_selector_30" />
+                    <TextView android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:tag="binding_12" android:text="@string/common_file_settings_when_disk_sleep_skip_indexing" style="@style/intl_text_content_font14" />
+                </LinearLayout>
+                <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" android:layout_marginTop="@dimen/len_10" />
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_16" android:text="@string/common_file_settings_manual_indexing" android:layout_marginStart="@dimen/len_15" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_14" android:layout_marginBottom="@dimen/len_16">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_111111_night_ffffff" android:tag="binding_13" android:background="@drawable/shape_f4f4f4_radius_50" android:paddingTop="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:text="@string/common_file_index_now" android:paddingStart="@dimen/len_32" android:paddingEnd="@dimen/len_32" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:id="@id/tvLastReindexTimeTitle" android:tag="binding_14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_15" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:id="@id/tvLastReindexTime" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginStart="@dimen/len_15">
+                    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/pbSearchReIndex" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+                    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" android:text="@string/common_file_settings_indexing_full_text" android:includeFontPadding="false" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="binding_17" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_settings_last_full_indexing_time" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_666666_night_bfffffff_level2" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" />
+            </LinearLayout>
+            <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <RelativeLayout android:id="@id/noCreateFolderRl" android:paddingTop="@dimen/len_16" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:id="@id/noCreateFolderTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_settings_folders_excluded_from_indexing" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:id="@id/noCreateFolderDescTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:text="@string/common_file_settings_can_set_certain_folders_to_never_indexes" android:layout_below="@id/noCreateFolderTv" android:layout_marginEnd="@dimen/len_13" />
+                <TextView android:textColor="@color/text_color_day_111111_night_ffffff" android:gravity="center" android:id="@id/settingTv" android:background="@drawable/shape_f4f4f4_radius_50" android:layout_width="wrap_content" android:layout_height="@dimen/len_34" android:layout_marginTop="@dimen/len_14" android:text="@string/common_button_settings" android:includeFontPadding="false" android:layout_below="@id/noCreateFolderDescTv" android:paddingStart="@dimen/len_32" android:paddingEnd="@dimen/len_32" />
+            </RelativeLayout>
+            <View android:background="@color/color_F4F6FA" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

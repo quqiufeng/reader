@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_root" android:tag="layout/float_music_play_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_left_content" android:tag="binding_1" android:paddingLeft="@dimen/len_7" android:paddingRight="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="@dimen/len_64" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_left_expand" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_left_close" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/float_music_close" />
+            <ImageView android:id="@id/iv_left_pre" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:src="@drawable/float_music_pre" />
+            <ImageView android:id="@id/iv_left_play" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_2" />
+            <ImageView android:id="@id/iv_left_next" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_2" android:src="@drawable/float_music_next" />
+            <com.zentraedi.zspace.music.service.floatplayer.view.FloatMusicMarqueeTextView android:textColor="@color/color_000000" android:id="@id/tv_left_marquee" android:tag="binding_7" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/len_85" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/pb_left_loading" android:tag="binding_8" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:indeterminateDrawable="@drawable/anim_white_loading" android:indeterminateBehavior="repeat" android:layout_centerInParent="true" />
+            <com.zentraedi.zspace.music.widget.RotatingImageView android:id="@id/iv_left_cover" android:tag="binding_9" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:scaleType="centerCrop" app:shapeAppearance="@style/MusicCircleStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_right_content" android:tag="binding_10" android:paddingLeft="@dimen/len_7" android:paddingRight="@dimen/len_7" android:layout_width="wrap_content" android:layout_height="@dimen/len_64" android:layout_centerVertical="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/pb_right_loading" android:tag="binding_11" android:layout_width="@dimen/len_18" android:layout_height="@dimen/len_18" android:indeterminateDrawable="@drawable/anim_white_loading" android:indeterminateBehavior="repeat" android:layout_centerInParent="true" />
+            <com.zentraedi.zspace.music.widget.RotatingImageView android:id="@id/iv_right_cover" android:tag="binding_12" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:scaleType="centerCrop" app:shapeAppearance="@style/MusicCircleStyle" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_right_expand" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.zentraedi.zspace.music.service.floatplayer.view.FloatMusicMarqueeTextView android:textColor="@color/color_000000" android:id="@id/tv_right_marquee" android:tag="binding_14" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/len_85" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+            <ImageView android:id="@id/iv_right_pre" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/float_music_pre" />
+            <ImageView android:id="@id/iv_right_play" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_2" />
+            <ImageView android:id="@id/iv_right_next" android:tag="binding_17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_2" android:src="@drawable/float_music_next" />
+            <ImageView android:id="@id/iv_right_close" android:tag="binding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:src="@drawable/float_music_close" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/fragment_song_play_page_0" android:background="@color/transparent_60_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="horizontal" android:background="@drawable/dialog_bottom_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingStart="@dimen/apply_pad_common_left_right_0" android:paddingEnd="@dimen/apply_pad_common_left_right_0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="16.0dip" android:gravity="center" android:id="@id/tvCurrentTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_10" android:text="@string/common_music_playlist" />
+                <View android:id="@id/line_left" android:background="@color/tab_indicator_day_425fff_night_657cff" android:layout_width="wrap_content" android:layout_height="@dimen/len_1" android:layout_alignLeft="@id/tvCurrentTitle" android:layout_alignRight="@id/tvCurrentTitle" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="16.0dip" android:gravity="center" android:id="@id/tvRecentTitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:text="@string/common_movies_recently_played" />
+                <View android:id="@id/line_right" android:background="@color/tab_indicator_day_425fff_night_657cff" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_1" android:layout_alignLeft="@id/tvRecentTitle" android:layout_alignRight="@id/tvRecentTitle" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="right" android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="fill_parent" android:src="@drawable/icon_close_pop" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_44">
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/selector_text_111111_cccccc" android:gravity="center" android:id="@id/tvBatch" android:background="@drawable/selector_button_grey" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/len_8" android:text="@string/common_button_batch" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/selector_text_111111_cccccc" android:gravity="center" android:id="@id/tvClear" android:background="@drawable/selector_button_grey" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="@dimen/len_22" android:text="@string/common_button_empty" android:includeFontPadding="false" />
+        </LinearLayout>
+    </FrameLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/listViewPager" android:background="@color/background_dialog_day_ffffff_night_2a2a2a" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56" android:layout_marginBottom="@dimen/len_47" android:overScrollMode="never" />
+    <View android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_56" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:background="@color/background_dialog_day_ffffff_night_2a2a2a" android:paddingTop="@dimen/len_5" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_47">
+        <com.zentraedi.business.widget.PointView android:id="@id/point_current" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" app:point_color="@color/text_color_day_333333_night_ffffff_level1" />
+        <Space android:layout_width="@dimen/len_10" android:layout_height="0.0dip" />
+        <com.zentraedi.business.widget.PointView android:id="@id/point_recent" android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" app:point_color="@color/text_color_day_cccccc_night_33ffffff_gray" />
+    </LinearLayout>
+</FrameLayout>

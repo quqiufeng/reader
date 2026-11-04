@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_compression_browser_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_top" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_comics_other_encodings" android:layout_weight="1.0" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/len_10" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:gravity="center" android:id="@id/select_charset" android:tag="binding_2" android:background="@drawable/shape_border_cccccc_14" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="@dimen/len_22" android:drawablePadding="@dimen/len_5" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15" app:drawableEndCompat="@drawable/icon_gray_arrow_down" />
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_top" app:srlEnableAutoLoadMore="true">
+        <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_View" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include layout="@layout/layout_empty_img_txt" />
+</RelativeLayout>

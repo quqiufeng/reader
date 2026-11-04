@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_file_and_share_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:tag="binding_1" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_afp" style="@style/intl_text_content_font16_marginLR15" />
+        <TextView android:text="@string/setting_string_key_294" style="@style/file_and_share_setting_item_content" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_2" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:tag="binding_3" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_smb" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_4" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_5" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_webdav" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_6" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_7" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_dlna" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_8" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_9" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_sftp" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_10" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:tag="binding_11" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_12" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_ftp" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_13" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:tag="binding_14" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_15" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_file_protocol_nfs" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_16" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:tag="binding_17" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <RelativeLayout android:tag="binding_18" android:paddingTop="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:paddingBottom="@dimen/apply_pad_common_left_right_phone_0_pad_12" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_54">
+        <TextView android:text="@string/common_settings_mount" android:layout_centerVertical="true" style="@style/intl_text_content_font16_marginLR15" />
+        <ImageView style="@style/file_and_share_setting_item_image_icon" />
+        <TextView android:tag="binding_19" style="@style/file_and_share_setting_item_switch" />
+    </RelativeLayout>
+    <ImageView android:tag="binding_20" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+</LinearLayout>

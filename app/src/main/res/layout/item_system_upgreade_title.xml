@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:medium_bold="true" />
+</FrameLayout>

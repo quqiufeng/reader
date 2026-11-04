@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/itemRootLayout" android:tag="layout/item_change_error_pool_0" android:background="@drawable/shape_error_pool" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/intl_font_title_14" android:textColor="@color/common_desc" android:id="@id/tvPoolName" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <com.zentraedi.basic.function.ui.widget.NoScrollRecyclerView android:id="@id/rvDisk" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/intl_font_content_12" android:textColor="@color/color_db4437" android:id="@id/tvPoolCacheError" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_12" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

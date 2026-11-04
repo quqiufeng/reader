@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_54" android:paddingStart="@dimen/apply_pad_common_left_right_15" android:paddingEnd="@dimen/apply_pad_common_left_right_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/panorama_render_title" android:ellipsize="end" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_transcoding_panorama_material_files" android:singleLine="true" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_425FFF" android:gravity="center" android:id="@id/btn_add_more" android:layout_width="wrap_content" android:layout_height="@dimen/len_48" android:text="@string/panorama_add_more" android:layout_marginStart="@dimen/len_12" />
+</LinearLayout>

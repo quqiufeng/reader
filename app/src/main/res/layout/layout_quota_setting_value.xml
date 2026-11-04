@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/valueSettingLayout" android:tag="layout/layout_quota_setting_value_0" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/common_dialog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56" android:text="@string/common_prompt_please_select" android:includeFontPadding="false" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" />
+    </FrameLayout>
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layoutMB" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <CheckBox android:enabled="false" android:id="@id/cbMB" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/checkbox_selector_24" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="MB" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layoutGB" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <CheckBox android:enabled="false" android:id="@id/cbGB" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/checkbox_selector_24" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="GB" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/layoutTB" android:paddingLeft="@dimen/len_15" android:paddingRight="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <CheckBox android:enabled="false" android:id="@id/cbTB" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/checkbox_selector_24" />
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:gravity="center_vertical" android:paddingLeft="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="TB" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_switch_interrupted_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_1" android:background="@drawable/shape_circle_white_10_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_70" android:layout_above="@id/llBottom">
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="150.0" />
+        <include layout="@layout/layout_disk_replace_status_error" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_title" android:id="@id/tvWarnTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_disk_migration_task_paused" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_20" android:text="@string/common_disk_migration_not_completed_due_to_shutdown" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="200.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" android:layout_marginBottom="@dimen/len_10" android:layout_above="@id/llBottom">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_2" android:background="@drawable/shape_circle_blue_20_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_cancel_task" android:layout_weight="1.0" android:layout_marginEnd="@dimen/len_20" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_3" android:background="@drawable/shape_circle_blue_20_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_disk_migration_continue_migration" android:layout_weight="1.0" />
+    </LinearLayout>
+    <include android:id="@id/llBottom" android:layout_width="fill_parent" android:layout_height="@dimen/len_34" android:layout_marginBottom="@dimen/len_10" android:layout_alignParentBottom="true" layout="@layout/layout_cancel_or_help" />
+    <include layout="@layout/layout_loading" />
+</RelativeLayout>

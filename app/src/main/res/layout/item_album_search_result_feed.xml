@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootRl" android:tag="layout/item_album_search_result_feed_0" android:background="@drawable/shape_f8fbff_radius_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/len_1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/ivContent" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:scaleType="centerCrop" app:imageHeight="1" app:imageWidth="1" />
+    <CheckBox android:id="@id/checkBox" android:tag="binding_2" android:clickable="false" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_margin="@dimen/len_10" android:button="@drawable/selector_16_16_blue_circle" android:layout_alignParentEnd="true" />
+</RelativeLayout>

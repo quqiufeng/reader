@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zentraedi.video.view.VideoBlurLayout android:id="@id/blurLayout" android:background="@drawable/bg_1c1f33_radius_top_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:id="@id/ivVideoListSort" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_video_sort_name_asc" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_video_list" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:src="@drawable/icon_popup_close" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_56">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_b3ffffff" android:id="@id/tvCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivChangeShowViewer" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_viewer" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="580.0dip" android:layout_marginTop="@dimen/len_100">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvNumber" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvVideo" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_56" />
+</com.zentraedi.video.view.VideoBlurLayout>

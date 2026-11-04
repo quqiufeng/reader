@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingRight="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="@dimen/len_72" android:layout_height="@dimen/len_96">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivActor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/video_rounded_8" />
+        <TextView android:textSize="@dimen/len_11" android:textColor="@color/white" android:gravity="center" android:id="@id/layoutGuide" android:background="@drawable/corners_80000000_8" android:paddingTop="@dimen/len_15" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_movies_8516859475" android:drawableTop="@drawable/icon_click_30" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tvActor" android:paddingTop="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tvWork" android:paddingTop="@dimen/len_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+</LinearLayout>

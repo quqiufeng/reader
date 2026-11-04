@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/page_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <RelativeLayout android:id="@id/circleProgressBarContainer" android:visibility="gone" android:layout_width="@dimen/len_83" android:layout_height="@dimen/len_24" android:layout_marginRight="@dimen/len_20" android:layout_marginBottom="@dimen/len_5" android:layout_toLeftOf="@id/iv_bookmark" android:layout_alignParentBottom="true" android:layout_marginEnd="@dimen/len_20" android:layout_toStartOf="@id/iv_bookmark">
+            <RelativeLayout android:id="@id/rlPoint" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24">
+                <com.zentraedi.reader.view.CircleProgressBar android:id="@id/circleProgressBar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:normal_color="#08000000" app:progress="0" app:progress_color="#10000000" app:progress_style="STROKE" app:stroke_width="@dimen/len_3" app:text_color="#ffff0000" app:text_size="30.0sp" />
+                <ImageView android:id="@id/iv_reward_icon" android:layout_width="@dimen/len_16" android:layout_height="@dimen/len_16" android:layout_centerInParent="true" />
+                <RelativeLayout android:id="@id/foreground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/font_9" android:textColor="@color/color_60000000" android:gravity="center" android:id="@id/tv_reward" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/rlPoint" android:layout_centerVertical="true" android:layout_toEndOf="@id/rlPoint" />
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_bookmark" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_20" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/len_20" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_12" android:id="@id/section_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_135" android:layout_marginBottom="@dimen/len_8" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_135" android:layout_alignParentStart="true" />
+</RelativeLayout>

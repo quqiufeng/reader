@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_file_info_content" android:tag="layout/dialog_remove_book_0" android:background="@drawable/dialog_bottom_background" android:paddingBottom="@dimen/len_13" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_delete" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_gray_40" />
+    </LinearLayout>
+    <ImageView android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llRemoveFromBook" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_move_enable_black" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_reader_4c8b0ca651" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llRemoveFromNas" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/ivRemoveFromNas" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/selector_delete_black_24_24_enabled" />
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/selector_bottom_menu_text_color" android:id="@id/tvRemoveFromNas" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_button_delete_from_device" />
+    </LinearLayout>
+</LinearLayout>

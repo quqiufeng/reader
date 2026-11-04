@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_backup_local_video_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_65" android:paddingStart="@dimen/apply_pad_common_left_right_0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_select" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_65" android:layout_centerVertical="true" />
+    <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_icon" android:tag="binding_2" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:scaleType="centerCrop" android:layout_toRightOf="@id/iv_select" android:layout_centerVertical="true" app:cornerRadius="@dimen/len_5" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_10" android:layout_toRightOf="@id/iv_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="15.0" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:ellipsize="middle" android:id="@id/tv_title" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="8.0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <Space android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="15.0" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_104" android:layout_alignParentBottom="true" />
+</RelativeLayout>

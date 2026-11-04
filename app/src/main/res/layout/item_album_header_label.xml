@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rootLabelLayout" android:background="@drawable/bg_tag_grad1" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/len_23" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivLabel" android:paddingLeft="@dimen/len_8" android:paddingTop="@dimen/len_3" android:paddingRight="@dimen/len_8" android:paddingBottom="@dimen/len_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/len_10" android:textColor="@color/color_99ffffff" android:layout_gravity="center_vertical" android:id="@id/tvLabel" android:paddingLeft="@dimen/len_5" android:paddingRight="@dimen/len_5" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+</FrameLayout>

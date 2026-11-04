@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_album_list_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="@dimen/len_109" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_album" android:tag="binding_1" android:background="@drawable/shape_album_thumb" android:layout_width="@dimen/len_109" android:layout_height="@dimen/len_109" android:scaleType="fitCenter" app:cornerRadius="@dimen/len_5" app:imageHeight="1" app:imageWidth="1" />
+        <ImageView android:tag="binding_2" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icon_album_placeholder" android:layout_alignTop="@id/iv_album" android:layout_alignBottom="@id/iv_album" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/add_album_name" android:ellipsize="end" android:id="@id/tv_album_name" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:singleLine="true" android:includeFontPadding="false" android:layout_below="@id/iv_album" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:singleLine="true" android:includeFontPadding="false" android:layout_below="@id/tv_album_name" />
+        <ImageView android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:src="@drawable/icon_add_album_unselected" android:layout_alignParentRight="true" />
+        <ImageView android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_5" android:src="@drawable/icon_add_album_selected" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

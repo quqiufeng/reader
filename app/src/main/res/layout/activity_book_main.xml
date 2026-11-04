@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:tag="layout/activity_book_main_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/contentFl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottomTabRl" />
+    <RelativeLayout android:id="@id/bottomTabRl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/bottomRGLayout" android:background="@color/nas_white" android:paddingTop="@dimen/len_5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkedButton="@id/mainRB">
+            <RadioButton android:id="@id/mainRB" android:text="@string/common_button_home" android:drawableTop="@drawable/radio_home_tab_book_main" style="@style/style_home_tab_radiobutton" />
+            <RadioButton android:id="@id/bookLibraryRB" android:text="@string/common_comics_library" android:drawableTop="@drawable/radio_home_tab_book_library" style="@style/style_home_tab_radiobutton" />
+            <RadioButton android:id="@id/settingRB" android:text="@string/common_button_settings" android:drawableTop="@drawable/radio_home_tab_book_setting" style="@style/style_home_tab_radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>

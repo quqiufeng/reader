@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fm_popup_music_play_device_select_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_music_57bf89a5b7" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llBlueTooth" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <ImageView android:id="@id/iv_blue_tooth" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/fm_music_blue_tooth_play" />
+        <TextView android:textSize="@dimen/font_18" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_music_edac6736c7" />
+    </LinearLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llPhoneDevice" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <ImageView android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/fm_music_phone_play" />
+        <TextView android:textSize="@dimen/font_18" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_music_3adcc4c984" />
+    </LinearLayout>
+</LinearLayout>

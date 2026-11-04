@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootLayout" android:tag="layout/activity_note_last_delete_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottomLayout">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:orientation="vertical" android:id="@id/appBarLayout" android:background="@color/transparent_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentScrim="@color/transparent_bg" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:statusBarScrim="@color/white">
+                <LinearLayout android:orientation="vertical" android:tag="binding_1" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0" app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/llMiddleTitle" android:paddingTop="@dimen/len_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15">
+                        <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:ellipsize="end" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <com.zentraedi.business.view.ExpandableTextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:id="@id/title_desc_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:lineSpacingExtra="@dimen/len_2" />
+                    <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/top_big_title_separate_line_margin_top" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <include android:id="@id/layoutActionBarListMain" layout="@layout/layout_action_bar_note_last_delete" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <View android:id="@id/titleLineView" android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_54" android:layout_below="@id/titleLineView">
+                <ImageView android:id="@id/iv_mul_sel" android:tag="binding_4" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_2" android:layout_toLeftOf="@id/rl_mark" android:layout_centerVertical="true" />
+                <FrameLayout android:id="@id/rl_mark" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:id="@id/ivFilter" android:tag="binding_5" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+                    <ImageView android:enabled="false" android:layout_gravity="center" android:id="@id/iv_mark" android:tag="binding_6" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginTop="@dimen/len_2" android:src="@drawable/note_mark_disable" />
+                </FrameLayout>
+                <TextView android:enabled="false" android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/selector_file_sort_text_color" android:id="@id/ivSort" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_properties_deleted" android:layout_toRightOf="@id/iv_sort_arrow" android:layout_centerVertical="true" />
+                <ImageView android:enabled="false" android:id="@id/iv_sort_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="-10.0dip" android:src="@drawable/arrow_list_dialog_down_disable_small" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <ViewSwitcher android:id="@id/view_switcher" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.zentraedi.business.refresh.WhiteRefreshHeader android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                    <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+                <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/statusLayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <View android:id="@id/shadow" android:background="@drawable/bg_safe_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_2" />
+            </RelativeLayout>
+        </ViewSwitcher>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <View android:tag="binding_7" android:background="@drawable/bottom_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/len_5" android:layout_above="@id/bottomLayout" />
+    <include android:id="@id/layoutSetting" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottomLayout" layout="@layout/layout_note_list_setting" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottomLayout" android:tag="binding_8" android:background="@color/white" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="@dimen/len_64" android:layout_alignParentBottom="true">
+        <TextView android:textSize="12.0dip" android:gravity="center_horizontal" android:id="@id/tvMove" android:tag="binding_9" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_move" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:gravity="center_horizontal" android:id="@id/tvReduction" android:tag="binding_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_recovery" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:gravity="center_horizontal" android:id="@id/tvDelete" android:tag="binding_11" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_delete" android:drawablePadding="@dimen/len_5" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

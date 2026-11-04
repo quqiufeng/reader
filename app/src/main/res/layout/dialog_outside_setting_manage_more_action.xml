@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_action" android:layout_weight="1.0" android:layout_marginStart="@dimen/len_15" />
+        <ImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_gray_44" />
+    </LinearLayout>
+    <View android:background="@color/share_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <TextView android:id="@id/remove" android:layout_width="fill_parent" android:text="@string/common_button_remove" app:drawableStartCompat="@drawable/icon_exit" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/restart_pool" android:layout_width="fill_parent" android:text="@string/common_storage_b71acf7877" app:drawableStartCompat="@drawable/icon_reset" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/safe_exit" android:text="@string/common_button_eject" app:drawableStartCompat="@drawable/icon_exit" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/start" android:text="@string/common_button_enable" app:drawableStartCompat="@drawable/icon_start_black_24_24" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/smart_status" android:text="@string/common_storage_smart_status" app:drawableStartCompat="@drawable/icon_view_smart_status" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/fragment_manage" android:text="@string/common_storage_disk_defragment" app:drawableStartCompat="@drawable/icon_fragment_manage" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/permission_set" android:text="@string/common_button_permission_settings" app:drawableStartCompat="@drawable/icon_file_square_permission_black_enable" style="@style/dialog_outside_manage_action_text" />
+    <TextView android:id="@id/format" android:text="@string/common_button_format" app:drawableStartCompat="@drawable/icon_format_hard_drive" style="@style/dialog_outside_manage_action_text" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_34" />
+</LinearLayout>

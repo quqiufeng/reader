@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_course_detail_0" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_150"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_nas_string_key_1423_res" android:layout_centerVertical="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <ImageView android:id="@id/close" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginTop="@dimen/len_5" android:layout_marginBottom="@dimen/len_5" android:src="@drawable/icon_close_pop" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line_80" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/apply_pad_common_left_right_0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_photos_category" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_1" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_file_name" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_2" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_nas_string_key_1424_res" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_3" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_filter_type" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_4" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_nas_string_key_1425_res" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_5" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_file_labels" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_6" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/common_photos_creator" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_7" style="@style/dialog_course_detail_right" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20">
+                <TextView android:text="@string/classroom_string_key_4" android:layout_marginEnd="@dimen/len_0" style="@style/dialog_course_detail_left" />
+                <TextView android:tag="binding_8" android:layout_marginBottom="@dimen/len_15" android:text="@string/classroom_string_key_5" android:layout_marginStart="@dimen/len_15" style="@style/dialog_course_detail_right" />
+                <androidx.recyclerview.widget.RecyclerView android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginStart="@dimen/len_86" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_34">
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_86" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

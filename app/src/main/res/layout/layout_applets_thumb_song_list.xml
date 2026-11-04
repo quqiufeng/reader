@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/layout_applets_thumb_song_list_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/llDisplay" android:layout_width="fill_parent" android:layout_height="@dimen/len_280">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_66">
+            <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_music" app:cornerRadius="@dimen/len_8" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:ellipsize="end" android:id="@id/tvSongListName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:maxLines="2" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/ivPw" android:visibility="gone" android:layout_width="@dimen/len_80" android:layout_height="@dimen/len_80" android:src="@drawable/icon_share_need_pw" android:scaleType="fitCenter" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_music_dlna_device_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:singleLine="true" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginRight="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/button_white" android:layout_gravity="center_vertical" android:tag="binding_4" android:background="@drawable/shape_circle_blue_13_bg" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_6" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:text="@string/common_nas_string_key_823_res" />
+</LinearLayout>

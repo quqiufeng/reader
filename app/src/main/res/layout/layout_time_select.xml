@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_483"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_57">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/dialog_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_doc_sync_pls_select_a_time" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_pop" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+    </LinearLayout>
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvTime" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

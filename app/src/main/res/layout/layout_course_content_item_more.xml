@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/layout_course_content_item_more_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/download" android:tag="binding_1" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_download_gray" />
+    <ImageView android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+    <ImageView android:id="@id/more" android:tag="binding_3" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_more_light_gray_44" />
+</LinearLayout>

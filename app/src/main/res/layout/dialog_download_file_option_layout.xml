@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_download_file_option_layout_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_75">
+        <ImageView android:id="@id/ivFileIcon" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_20" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:gravity="center_vertical" android:id="@id/tvFileName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_54" android:includeFontPadding="false" android:layout_toRightOf="@id/ivFileIcon" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/fileSizeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" android:layout_below="@id/tvFileName" android:layout_alignLeft="@id/tvFileName" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:id="@id/downloadPathTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:layout_marginRight="@dimen/len_54" android:layout_marginBottom="@dimen/len_21" android:includeFontPadding="false" android:layout_below="@id/fileSizeTv" android:layout_alignLeft="@id/tvFileName" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_7" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:id="@id/shareRl" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:id="@id/ShareIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_share_black" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_share" android:layout_toRightOf="@id/ShareIv" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlDelete" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:id="@id/ivDelete" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_delete_black_24_24_enable" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_delete" android:layout_toRightOf="@id/ivDelete" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlSeePhoneDir" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:id="@id/ivSeePhone" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_third_open_black" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_button_open_with_another_app" android:layout_toRightOf="@id/ivSeePhone" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlOpenInFileApp" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:id="@id/ivOpenInFileApp" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_doc_file" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" android:text="@string/common_file_open_the_files_app_on_your_phone" android:layout_toRightOf="@id/ivOpenInFileApp" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_edit_album_episode_0" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:tag="binding_1" android:background="@color/color_0AFFFFFF" android:paddingTop="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetEnd="0.0dip" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+        <FrameLayout android:id="@id/layoutTitle" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height">
+            <ImageView android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_close_white_44" />
+            <TextView android:textSize="@dimen/navigation_action_text_size" android:textColor="@color/white" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvBarTitle" android:paddingLeft="@dimen/len_88" android:paddingRight="@dimen/len_88" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_button_edit" android:singleLine="true" />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_13" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:gravity="center_vertical" android:paddingRight="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_file_list" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/radioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textSize="@dimen/len_14" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/rbAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@drawable/select_blue_30" android:text="@string/common_filter_all" android:includeFontPadding="false" />
+            <RadioButton android:textSize="@dimen/len_14" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/rbUnMatch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:button="@drawable/select_blue_30" android:text="@string/common_movies_no_matching_episode_number" android:includeFontPadding="false" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_cccccc" android:gravity="center_vertical" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_movies_settings_edit_episode_desc" android:lineSpacingExtra="@dimen/len_4" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvVideo" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.zentraedi.video.view.VideoPageStatusLayout android:id="@id/statusLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/len_91" />
+    <com.zentraedi.video.view.VideoButtonLayout android:layout_gravity="bottom" android:id="@id/layoutButton" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91" />
+</LinearLayout>

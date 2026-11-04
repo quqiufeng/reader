@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/vmLayout" android:tag="layout/dialog_note_classify_menu_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_title" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_9" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/noteInfoLayout" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_21" android:layout_toLeftOf="@id/ivClose">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tvName" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:lineSpacingExtra="@dimen/len_2" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tvDesc" android:tag="binding_2" android:paddingTop="@dimen/len_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_2" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <FrameLayout android:orientation="horizontal" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/selector_text_333333_cccccc" android:layout_gravity="center_vertical" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_button_multi_select" />
+    </FrameLayout>
+    <FrameLayout android:orientation="horizontal" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_move_enable_black" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_button_move" android:layout_marginStart="@dimen/len_51" />
+    </FrameLayout>
+    <FrameLayout android:orientation="horizontal" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_delete_black_24_24_enable" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_movies_delete_category" />
+    </FrameLayout>
+    <FrameLayout android:orientation="horizontal" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_rename_enable_black" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_51" android:text="@string/common_notepad_rename_category" />
+    </FrameLayout>
+    <FrameLayout android:orientation="horizontal" android:tag="binding_9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_black_edit" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_56" />
+        <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_56" />
+    </FrameLayout>
+</LinearLayout>

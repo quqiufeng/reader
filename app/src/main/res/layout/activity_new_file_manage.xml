@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/dl_content" android:tag="layout/activity_new_file_manage_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="binding_1" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <LinearLayout android:orientation="vertical" android:id="@id/rl_head" android:tag="binding_2" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                    <LinearLayout android:id="@id/searchLl" android:tag="binding_3" android:background="@android:color/transparent" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="showSearch">
+                        <RelativeLayout android:id="@id/rl_search_container" android:background="@drawable/bg_search_title_20" android:layout_width="fill_parent" android:layout_height="@dimen/len_34">
+                            <ImageView android:id="@id/none_iv_search_icon" android:layout_width="@dimen/len_20" android:layout_height="@dimen/len_20" android:layout_marginLeft="@dimen/len_10" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_nas_search" android:layout_centerVertical="true" />
+                            <TextView android:textSize="@dimen/font_14" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/len_20" android:layout_marginRight="@dimen/len_10" android:text="@string/common_button_search" android:layout_toRightOf="@id/none_iv_search_icon" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/topTitleRl" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:layout_marginBottom="@dimen/len_12" android:onClick="slideShow">
+                        <androidx.legacy.widget.Space android:id="@id/left_space" android:layout_width="@dimen/len_5" android:layout_height="@dimen/len_0" />
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_slide_pool" android:tag="binding_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_36" android:src="@drawable/selector_slide_pools" android:scaleType="fitCenter" android:layout_marginStart="@dimen/len_4" android:layout_toEndOf="@id/left_space" />
+                        <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_22" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/tv_item" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:singleLine="true" android:layout_marginStart="@dimen/len_10" app:medium_bold="true" />
+                        <ImageView android:id="@id/iv_help" android:tag="binding_7" android:layout_marginTop="@dimen/len_7" style="@style/topBigTitleHelper" />
+                    </LinearLayout>
+                    <View android:id="@id/topLine" android:visibility="gone" android:layout_marginTop="@dimen/len_6" style="@style/topBigTitleSeparatorLine" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:tag="binding_8" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                    <include android:id="@id/file_manage_title" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_new_file_navigation_bar_transparent" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <FrameLayout android:id="@id/fl_file_manage" android:paddingBottom="@dimen/len_60" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/showSwitchGuideRl" android:tag="binding_9" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="hideSwitchPoolView">
+            <FrameLayout android:background="@drawable/shape_stroke_425fff" android:layout_width="fill_parent" android:layout_height="@dimen/len_52" android:layout_marginTop="@dimen/len_45" android:onClick="slideShow" android:layout_marginStart="@dimen/len_1" android:layout_marginEnd="@dimen/len_1" />
+            <ImageView android:id="@id/switchBgIv" android:layout_width="@dimen/len_27" android:layout_height="@dimen/len_27" android:layout_marginTop="@dimen/len_66" android:src="@drawable/icon_open_pool_slide_view_bg" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/switchHandIv" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_32" android:layout_marginTop="@dimen/len_13" android:src="@drawable/icon_open_pool_hand" android:layout_alignTop="@id/switchBgIv" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/len_1_5" android:layout_alignStart="@id/switchBgIv" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_6e6e6e" android:gravity="center" android:background="@drawable/shape_switch_pool_guide_text_bg" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_7" android:minHeight="@dimen/len_34" android:text="@string/common_storage_switch_storage" android:layout_alignBottom="@id/switchHandIv" android:translationY="@dimen/len_21" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15" android:layout_marginStart="@dimen/len_7" android:layout_toEndOf="@id/switchHandIv" />
+        </RelativeLayout>
+        <include android:layout_gravity="bottom" android:id="@id/ll_item_option" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_file_list_bottom_options" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/toTopIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_84" android:src="@drawable/icon_file_list_to_top" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bottomNavigationLl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottom_navigation" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/len_60" app:elevation="@dimen/len_0" app:itemBackground="@color/white" app:itemTextColor="@drawable/selector_file_manager_navigation" app:labelVisibilityMode="labeled" app:menu="@menu/menu_navigation_file" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout android:layout_gravity="left" android:id="@id/fl_slide_content" android:layout_width="@dimen/len_280" android:layout_height="fill_parent" />
+</androidx.drawerlayout.widget.DrawerLayout>

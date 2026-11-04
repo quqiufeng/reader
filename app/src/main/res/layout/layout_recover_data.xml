@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:id="@id/groupLayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvTotalSize" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ivGroupState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_formatting_error" android:minWidth="@dimen/len_25" android:minHeight="@dimen/len_25" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_425FFF" android:id="@id/tvGroupProgress" android:paddingTop="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_90" android:src="@drawable/disk_icon_90_182" />
+        <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:id="@id/tvDoneSize" android:paddingTop="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

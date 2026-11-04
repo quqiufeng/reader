@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_portrait_sort_0" android:background="@drawable/shape_ffffff_top_radius_15" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_sort" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/numSortIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_size_desc_big" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+        <TextView android:enabled="false" android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/cb_num_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_photo_count" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/numSortIv" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_list_dialog_down" android:layout_centerVertical="true" android:layout_toEndOf="@id/cb_num_sort" />
+        <ImageView android:layout_gravity="right" android:id="@id/numberSelectedIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_item_selected" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_num_sort" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/timeSortIv" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_sort_time_asc_v2" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+        <TextView android:enabled="false" android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/cb_time_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_photos_recognition_time" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/timeSortIv" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_list_dialog_down" android:layout_centerVertical="true" android:layout_toEndOf="@id/cb_time_sort" />
+        <ImageView android:layout_gravity="right" android:id="@id/timeSelectedIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_item_selected" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_time_sort" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

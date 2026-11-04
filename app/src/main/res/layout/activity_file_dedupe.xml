@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:tag="layout/activity_file_dedupe_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/titleLayout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBack" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/startLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/contentLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zentraedi.business.widget.PageStatusViewGroup android:id="@id/statusLayout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

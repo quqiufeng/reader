@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_ffffff_top_radius_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/layout_title" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_sort" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSort" android:background="@drawable/selector_button_line" android:paddingLeft="@dimen/len_11" android:paddingRight="@dimen/len_8" android:layout_width="wrap_content" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/len_10">
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/font_12" android:textColor="@color/selector_button_line_text_color" android:gravity="center_vertical" android:id="@id/tvTitleSort" android:layout_width="wrap_content" android:layout_height="fill_parent" app:medium_bold="true" />
+                    <ImageView android:id="@id/ivTitleSort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_up_grey_14" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutAsc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/cbAsc" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/checkbox_selector_24" />
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_2" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_setting_sortasc" android:includeFontPadding="false" app:medium_bold="true" />
+                </LinearLayout>
+                <View android:background="@color/color_E4E4E4" android:layout_width="@dimen/len_1" android:layout_height="@dimen/len_18" android:layout_marginLeft="@dimen/len_25" android:layout_marginRight="@dimen/len_25" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutDesc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/cbDesc" android:clickable="false" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:button="@drawable/checkbox_selector_24" />
+                    <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_16" android:textColor="@color/color_333333" android:paddingLeft="@dimen/len_2" android:paddingRight="@dimen/len_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_setting_sortdesc" android:includeFontPadding="false" app:medium_bold="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:layout_gravity="center|right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_pop" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0" />
+        </FrameLayout>
+        <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvSort" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

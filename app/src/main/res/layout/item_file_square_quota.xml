@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:tag="layout/item_file_square_quota_0" android:paddingTop="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/len_15" android:paddingEnd="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/limitSizeLl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/ivHelper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_help_gray_14" />
+        <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvQuota" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray_right" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/contentLl" android:paddingRight="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/limitSizeLl">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvPathName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tvPoolName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4">
+            <ProgressBar android:id="@id/pbLoading" android:visibility="gone" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_15" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_425FFF" android:id="@id/tvCheckUsage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_user_view_used_capacity" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_16" android:layout_below="@id/contentLl" />
+</RelativeLayout>

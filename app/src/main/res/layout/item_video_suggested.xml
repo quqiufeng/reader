@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/itemRootLayout" android:tag="layout/item_video_suggested_0" android:background="@drawable/shape_11131e_radius_5" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_200">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivCover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:shapeAppearance="@style/video_top_rounded_5" />
+        <TextView android:textSize="@dimen/len_24" android:textColor="@color/color_F2CE8F" android:layout_gravity="bottom|center|right" android:id="@id/tvScore" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/len_20" android:textStyle="bold" android:textColor="@color/color_video_title" android:ellipsize="end" android:layout_gravity="center" android:id="@id/tvTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ivLike" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/icon_video_unlike_white" android:scaleType="center" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:id="@id/tvInfo" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_3" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:id="@id/tvDirectors" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_3" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_b3ffffff" android:ellipsize="end" android:id="@id/tvActors" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/len_3" />
+</LinearLayout>

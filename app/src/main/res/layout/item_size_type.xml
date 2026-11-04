@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_14" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/sizeTypeTv" android:tag="layout/item_size_type_0" android:paddingLeft="@dimen/len_25" android:paddingTop="@dimen/apply_pad_item_top_bottom_15" android:paddingRight="@dimen/len_25" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/business_string_key_59"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_comic_category_0" style="@style/comic_setting_layout_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:includeFontPadding="false" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:id="@id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:includeFontPadding="false" android:layout_below="@id/tv_title" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+    <ImageView style="@style/comic_setting_arrow_icon_style" />
+    <View android:background="@color/color_E4E4E4" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+</RelativeLayout>

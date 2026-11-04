@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/item_add_sub_folder_path_0" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_5" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_4" android:layout_height="@dimen/len_6" android:src="@drawable/icon_fold_path_separate" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_cccccc" android:gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_5" />
+</LinearLayout>

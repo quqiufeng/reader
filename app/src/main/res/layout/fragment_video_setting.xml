@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/layout_menu_root" android:tag="layout/fragment_video_setting_0" android:background="@drawable/bg_e611131e_radius_top_15" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layout_main_tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivCloseMenu" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:src="@drawable/icon_close_gray_40" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/len_16" android:textStyle="bold" android:textColor="@color/color_e6ffffff" android:gravity="center_vertical" android:id="@id/tvMenuTitle" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/common_player_playback_action" />
+        <View android:layout_gravity="bottom" android:id="@id/view_title_line" android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvMenu" android:paddingTop="@dimen/len_5" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56" />
+    <FrameLayout android:id="@id/container_secondary_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

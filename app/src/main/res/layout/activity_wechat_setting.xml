@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_wechat_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/color_F2F7FE" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_12" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_wechat" android:background="@drawable/bg_wechat_backup_top" android:layout_width="fill_parent" android:layout_height="@dimen/len_82" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:id="@id/tv_nas_devices_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_15" android:layout_alignBottom="@id/iv_wechat" android:layout_marginEnd="@dimen/len_15" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/iv_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_wechat_backup_loading" android:scaleType="centerInside" android:layout_alignTop="@id/tv_nas_devices_name" android:layout_alignBottom="@id/tv_nas_devices_name" android:layout_marginStart="@dimen/len_5" android:layout_marginEnd="@dimen/len_5" android:layout_toStartOf="@id/tv_nas_devices_name" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/white" android:id="@id/tv_photo_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/tv_nas_devices_name" android:layout_alignBottom="@id/tv_nas_devices_name" android:layout_toStartOf="@id/iv_divider" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_24">
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_blue" android:id="@id/tv_bottom" android:tag="binding_2" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_backup_bb3b735112" />
+            <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_12" android:src="@drawable/icon_arrow_gray_16_24" app:tint="@color/common_blue" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.zentraedi.wechatbackup.view.WeiXinEmptyLayout android:id="@id/layout_empty" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SurfaceView android:layout_gravity="center" android:id="@id/scanner_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/scannerContent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zentraedi.basic.component.zxing.view.ViewfinderView android:id="@id/viewfinder_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:corner_color="@color/nas_white" app:frame_color="@color/viewfinder_frame" app:label_text="" app:label_text_color="@color/message_num_red" app:laser_color="@color/laser_color" app:mask_color="@color/viewfinder_mask" app:result_color="@color/result_view" app:result_point_color="@color/result_point_color" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/scan_t_color" android:layout_gravity="bottom|center" android:id="@id/tv_handle_scan_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="108.0dip" android:text="@string/common_user_cant_scan_qrcode" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:layout_gravity="bottom|center" android:id="@id/tv_handle_scan_button" android:padding="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="68.0dip" android:text="@string/common_user_enter_device_sn" android:onClick="gotoRegister" />
+        <ImageButton android:layout_gravity="bottom|center" android:id="@id/btn_flash" android:background="?selectableItemBackground" android:padding="6.0dip" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="30.0dip" android:src="@drawable/flash_off" android:scaleType="centerInside" />
+    </FrameLayout>
+    <include android:id="@id/guideLayout" layout="@layout/layout_scan_qrcode_guide" />
+    <ImageView android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:layout_marginTop="@dimen/len_22" android:src="@drawable/delete_icon" android:onClick="finishActivity" />
+</RelativeLayout>

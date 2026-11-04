@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?android:colorBackground" android:padding="@dimen/padding_large" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rotationY="@integer/view_pager_rotation_y"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center_vertical" android:id="@id/recent_colors_title" android:paddingLeft="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="@dimen/quick_menu_button_size" android:text="@string/recent" android:paddingStart="@dimen/padding_large" android:paddingEnd="@dimen/padding_large" />
+        <com.pdftron.pdf.utils.ExpandableGridView android:id="@id/recent_colors" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/action_button_min_padding" android:layout_marginEnd="@dimen/action_button_min_padding" app:expanded="true" style="@style/PresetColorGridViewStyle" />
+        <TextView android:gravity="center_vertical" android:paddingLeft="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="@dimen/quick_menu_button_size" android:text="@string/standard" android:paddingStart="@dimen/padding_large" android:paddingEnd="@dimen/padding_large" />
+        <com.pdftron.pdf.controls.PresetColorGridView android:id="@id/preset_colors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/action_button_min_padding" android:layout_marginEnd="@dimen/action_button_min_padding" app:expanded="true" style="@style/PresetColorGridViewStyle" />
+    </LinearLayout>
+</ScrollView>

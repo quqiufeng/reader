@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_comic_content_management_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_folder_sync" android:scaleType="fitCenter" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_button_sync" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/apply_pad_common_left_right_15">
+            <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/anim_blue_18_18_loading" android:indeterminateBehavior="repeat" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_5" android:text="@string/common_nas_string_key_551_res" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/cancelSyncIv" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:src="@drawable/icon_close_14_14" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" />
+    <FrameLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/layout_list_empty" />
+    </FrameLayout>
+</LinearLayout>

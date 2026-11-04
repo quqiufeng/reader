@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_album_find_head_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:tag="binding_1" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/titleIv" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_gray" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_5" android:layout_toEndOf="@id/tv_title" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/titleIv" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_10" android:layout_toEndOf="@id/titleIv" />
+    </RelativeLayout>
+</LinearLayout>

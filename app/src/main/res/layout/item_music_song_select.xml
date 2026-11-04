@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_64">
+        <CheckBox android:id="@id/checkBox" android:clickable="false" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginRight="@dimen/len_5" android:button="@drawable/checkbox_selector_30" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSongCover" android:visibility="gone" android:layout_width="@dimen/len_45" android:layout_height="@dimen/len_45" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_song_45" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingRight="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:ellipsize="end" android:id="@id/tvSubtitle" android:paddingTop="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivStatus" android:visibility="gone" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_downloaded_3" />
+    </LinearLayout>
+</FrameLayout>

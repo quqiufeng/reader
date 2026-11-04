@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/dialog_storage_service_upgrade_fail_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginRight="@dimen/len_20">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_25" android:layout_marginRight="@dimen/len_20" android:text="@string/common_storage_7d7b8a27ea" />
+        <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/dialog_title" android:layout_gravity="center_horizontal" android:id="@id/descTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_22" android:layout_marginRight="@dimen/len_20" android:text="@string/dialog_storage_service_upgrade_fail_desc" />
+        <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/dockerLl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20">
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_storage_a46cec4df8" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/dialog_storage_service_upgrade_fail_content1_1" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/downloadLl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20">
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_storage_84f9d58361" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/common_storage_0011687a3f" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/docLl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20">
+                    <TextView android:textSize="@dimen/font_12" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_storage_ddecb70ccb" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/common_storage_dabd8f2d45" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:background="@drawable/selector_confirm_button" android:layout_width="@dimen/len_138" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_25" android:text="@string/common_button_got_it" />
+    </LinearLayout>
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+</LinearLayout>

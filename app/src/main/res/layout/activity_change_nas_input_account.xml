@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_change_nas_input_account_0" android:background="@color/nas_white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_close" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/action_bar_close" />
+    <TextView android:textSize="@dimen/font_26" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_64" android:layout_marginRight="@dimen/len_25" android:text="@string/common_migration_bc8417918c" android:includeFontPadding="false" />
+    <LinearLayout android:orientation="vertical" android:tag="binding_2" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title">
+        <com.zentraedi.basic.function.ui.edittext.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/len_25" app:counterEnabled="true" app:counterMaxLength="20" app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+            <com.zentraedi.business.view.BaseEditText android:id="@id/et_account" android:tag="binding_3" android:paddingRight="@dimen/len_32" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_migration_a105878305" android:singleLine="true" style="@style/CustomAppTheme_textInputEditText" />
+            <ImageView android:tag="binding_4" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/edit_clear_all" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </com.zentraedi.basic.function.ui.edittext.TextInputLayout>
+        <RelativeLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_50" android:layout_marginRight="@dimen/len_25">
+            <include android:layout_gravity="center_horizontal" android:id="@id/layout_confirm" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_loading_button" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/button_red" android:gravity="center" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_25" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_7" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title">
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="220.0" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:indeterminateDrawable="@drawable/anim_blue_loading" android:indeterminateBehavior="repeat" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/common_subtitle" android:layout_gravity="center_horizontal" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:includeFontPadding="false" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="377.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_9" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title">
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="46.0" />
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_common_option_failed" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_subtitle" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_25" android:text="@string/common_prompt_hard_drive_recognition_issue" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_9" />
+        <com.zentraedi.business.disk.view.ChangeNasDiskErrorMiddleLayout android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="290.0" />
+    </LinearLayout>
+    <include android:id="@id/layout_net_error" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title" layout="@layout/layout_error" />
+    <include android:id="@id/layout_input_sms" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title" layout="@layout/layout_input_sms_for_change" />
+    <LinearLayout android:orientation="vertical" android:tag="binding_11" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tv_title">
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="215.0" />
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_56" android:layout_height="@dimen/len_56" android:src="@drawable/icon_common_option_failed" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/common_subtitle" android:layout_gravity="center_horizontal" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25" android:layout_marginTop="@dimen/len_20" android:layout_marginRight="@dimen/len_25" android:includeFontPadding="false" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="215.0" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/button_white" android:gravity="center" android:tag="binding_13" android:background="@drawable/shape_425fff_radius_22" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_marginLeft="@dimen/len_25" android:layout_marginRight="@dimen/len_25" android:layout_marginBottom="@dimen/len_54" android:text="@string/common_button_try_again" />
+    </LinearLayout>
+</RelativeLayout>

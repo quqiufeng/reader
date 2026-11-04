@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_add_video_folder_popup_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:tag="binding_1" android:background="@color/color_video_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_10">
+        <FrameLayout android:id="@id/rl_nav" android:background="@drawable/corners_0affffff_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+            <TextView android:textSize="@dimen/navigation_action_text_size" android:textStyle="bold" android:textColor="@color/dialog_dark_title" android:gravity="center" android:layout_gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:layout_gravity="center|right" android:tag="binding_3" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56">
+            <com.zentraedi.business.widget.MediumTextView android:textSize="@dimen/len_14" android:textColor="@color/nas_white" android:gravity="center_vertical" android:id="@id/tv_title" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_54" android:text="@string/common_prompt_please_select" />
+            <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+            <FrameLayout android:id="@id/fl_main_content" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <com.zentraedi.video.view.VideoButtonLayout android:layout_gravity="bottom" android:id="@id/button" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="@dimen/len_91" />
+        </LinearLayout>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_56" />
+        <LinearLayout android:orientation="vertical" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_102">
+            <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_28" android:layout_height="@dimen/len_28" android:layout_marginTop="@dimen/len_50" android:layout_marginBottom="@dimen/len_15" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_blue" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/video_popup_loading_title" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_prompt_getting_new_content" />
+        </LinearLayout>
+        <include android:id="@id/ll_error" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56" layout="@layout/layout_dark_error" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_56" layout="@layout/layout_dark_empty" />
+    </FrameLayout>
+</FrameLayout>

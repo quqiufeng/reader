@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:tag="layout/layout_book_list_head_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_44"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="@dimen/len_1" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivSortIcon" android:tag="binding_1" android:layout_width="@dimen/len_15" android:layout_height="@dimen/len_16" android:layout_marginRight="@dimen/len_4" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/selector_text_666666_cccccc" android:layout_gravity="center_vertical" android:id="@id/tvSort" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:layout_gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_10" />
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <ImageView android:tag="binding_4" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+</LinearLayout>

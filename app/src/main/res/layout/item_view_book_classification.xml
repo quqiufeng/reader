@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:id="@id/itemRootLayout" android:tag="layout/item_view_book_classification_0" android:background="@color/background_day_ffffff_night_191919" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="@dimen/len_16" android:paddingBottom="@dimen/len_16" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_45">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_333333_night_ffffff_level1" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/text_color_day_999999_night_80ffffff_level3" android:id="@id/tvDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_2" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/len_15" android:src="@drawable/icon_gray_arrow_8_12" />
+    <View android:layout_gravity="bottom" android:background="@color/line_thin_e4e4e4_night_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+</FrameLayout>

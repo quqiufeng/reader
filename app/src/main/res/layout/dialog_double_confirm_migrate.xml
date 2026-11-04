@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="349.0" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_circle_white_10_bg" android:paddingBottom="@dimen/len_25" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/dialog_title" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_25" android:text="@string/common_disk_migration_012139df90" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/dialog_desc" android:layout_gravity="center_horizontal" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_16" android:layout_marginRight="@dimen/len_20" android:text="@string/common_disk_migration_50b95ccc72" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_not_remind" android:layout_width="fill_parent" android:layout_height="@dimen/len_32" android:layout_marginLeft="@dimen/len_15" android:layout_marginTop="@dimen/len_5" android:layout_marginRight="@dimen/len_15">
+            <ImageView android:id="@id/iv_select" android:layout_width="@dimen/len_32" android:layout_height="@dimen/len_32" android:src="@drawable/icon_32_32_circle_half_transparent_unselect" />
+            <TextView android:textColor="@color/color_666666" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_2" android:text="@string/common_disk_migration_657855e1e1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginLeft="@dimen/len_20" android:layout_marginTop="@dimen/len_10" android:layout_marginRight="@dimen/len_20">
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_bg" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_cancel" android:background="@drawable/shape_dialog_cancel_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_button_cancel" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <View android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_1" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/dialog_button_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_confirm" android:background="@drawable/selector_confirm_bg_corner_22" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/common_disk_migration_badd945878" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="275.0" />
+</LinearLayout>

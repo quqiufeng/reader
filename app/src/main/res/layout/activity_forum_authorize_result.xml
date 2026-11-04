@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_forum_authorize_result_0" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_back_black" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_28" android:textColor="@color/forum_authorize_title" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/forum_auth_fail_title" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_200" android:src="@drawable/icon_forum_authorize_fail" />
+    <TextView android:textSize="@dimen/font_18" android:textColor="@color/common_title" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_42" android:layout_marginTop="@dimen/len_15" android:layout_marginRight="@dimen/len_42" android:text="@string/forum_auth_fail_desc" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_40">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_retry_login_forum" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/new_blue" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_6" android:text="@string/common_nas_string_key_1249_res" />
+    </LinearLayout>
+</LinearLayout>

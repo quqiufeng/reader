@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom|center" android:background="#ffffffff" android:padding="@dimen/smart_ui_pullable_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/smart_ui_iv_pull_down_arrow" android:background="@drawable/a1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/smart_ui_iv_pull_down_loading" android:background="@drawable/refresh_imageview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/smart_ui_iv_pull_down_arrow" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <TextView android:textAppearance="?android:textAppearance" android:textSize="14.0dip" android:textColor="#ffa0a0a0" android:id="@id/smart_ui_tv_pull_down_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下拉刷新" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="10.0dip" android:textColor="#ffd3d3d3" android:id="@id/smart_ui_tv_pull_down_des1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pull_to_refresh_swipe_sub_label" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

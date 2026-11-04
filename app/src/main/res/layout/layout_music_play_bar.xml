@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/cleanStartLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="bottom" android:tag="layout/layout_music_play_bar_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_46" android:layout_marginLeft="@dimen/len_15" android:layout_marginRight="@dimen/len_15">
+        <com.zentraedi.zspace.music.widget.PaletteColorView android:id="@id/barBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:palette_default_color="#ff98b2d5" app:palette_radius="@dimen/len_8" />
+        <com.zentraedi.business.widget.NewScrollTextView android:textSize="@dimen/len_16" android:textColor="@color/white" android:layout_gravity="center|left" android:id="@id/tvSongName" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/len_62" android:layout_marginRight="@dimen/len_96" android:singleLine="true" app:clickEnable="false" app:isHorizontal="true" app:speed="1.3" app:textGravity="-1" app:text_color="@color/white" app:text_size="@dimen/len_16" />
+        <View android:background="@drawable/gradient_music_play_bar" android:visibility="gone" android:layout_width="@dimen/len_89" android:layout_height="fill_parent" />
+        <View android:layout_gravity="right" android:background="@drawable/gradient_music_play_bar_2" android:visibility="gone" android:layout_width="@dimen/len_89" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_46" />
+        <FrameLayout android:layout_gravity="center|right" android:id="@id/layoutLoading" android:visibility="gone" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_55">
+            <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/len_27" android:layout_height="@dimen/len_27" android:indeterminateDrawable="@drawable/anim_white_loading" android:indeterminateBehavior="repeat" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center|right" android:id="@id/layoutPlay" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_55">
+            <com.zentraedi.zspace.music.widget.MusicCircleSeekBar android:layout_gravity="center" android:id="@id/sbPlayBar" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:thumb="@color/transparent_bg" app:csb_max="100" app:csb_progress="10" app:csb_progress_width="@dimen/len_2" />
+            <ImageView android:layout_gravity="center" android:id="@id/ivBarPlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_music_player_pause" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center|right" android:id="@id/ivBarPlayList" android:layout_width="@dimen/len_40" android:layout_height="@dimen/len_40" android:layout_marginRight="@dimen/len_10" android:src="@drawable/icon_music_player_list_bar" android:scaleType="center" />
+    </FrameLayout>
+    <ImageView android:id="@id/ivBarRubber" android:tag="layout/layout_music_play_bar_1" android:layout_width="@dimen/len_52" android:layout_height="@dimen/len_52" android:layout_marginLeft="@dimen/len_22" android:src="@drawable/icon_rubber" android:scaleType="centerCrop" android:forceDarkAllowed="false" />
+    <com.zentraedi.business.widget.BlurImageView android:id="@id/ivBarCover" android:tag="layout/layout_music_play_bar_2" android:layout_width="@dimen/len_52" android:layout_height="@dimen/len_52" android:layout_marginLeft="@dimen/len_15" android:scaleType="centerCrop" app:bl_radius="@dimen/len_8" app:br_radius="@dimen/len_8" app:tl_radius="@dimen/len_8" app:tr_radius="@dimen/len_8" />
+</merge>

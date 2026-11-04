@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_head_filter_0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/len_46"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/intl_font_title_14" android:textStyle="bold" android:textColor="@color/common_title" android:tag="binding_1" android:paddingLeft="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" />
+    <Space android:layout_width="@dimen/len_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ImageView android:id="@id/ivFilter" android:tag="binding_4" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:scaleType="center" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:tag="binding_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_4" android:layout_marginRight="@dimen/len_15" android:text="@string/common_filter" android:includeFontPadding="false" />
+</LinearLayout>

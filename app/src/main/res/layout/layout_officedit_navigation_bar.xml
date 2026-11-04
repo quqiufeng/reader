@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_officedit_navigation_bar_0" android:background="@color/color_ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_78"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_nav_back" android:tag="binding_1" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center" android:id="@id/center_title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_img_width_and_height" android:maxLines="1" android:singleLine="true" android:alpha="0.0" android:layout_marginStart="@dimen/len_50" android:layout_marginEnd="@dimen/len_50" />
+    <ImageView android:id="@id/iv_nav_right" android:tag="binding_3" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_alignParentEnd="true" />
+</RelativeLayout>

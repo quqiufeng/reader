@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_remember_comment_up_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/len_40" />
+    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_999999" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nas_xml_string_key_101_temp" android:drawableRight="@drawable/icon_arrow_up_8" android:drawablePadding="@dimen/dp_5" android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:tag="layout/activity_my_account_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srlEnableAutoLoadMore="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+    <androidx.core.widget.NestedScrollView android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingTop="@dimen/len_30" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:paddingBottom="@dimen/len_30" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50">
+                    <com.zentraedi.business.view.AvatarImageView android:tag="binding_2" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" />
+                    <ImageView android:tag="binding_3" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:src="@drawable/icon_avatar_edit" android:forceDarkAllowed="false" />
+                </FrameLayout>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/color_333333" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+                    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_5" android:paddingTop="@dimen/len_6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                    <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_f4f4f4_radius_20" android:paddingLeft="@dimen/len_10" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/len_10" android:paddingVertical="@dimen/len_5">
+                            <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_425FFF" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                            <TextView android:textSize="@dimen/font_11" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                        </LinearLayout>
+                        <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_666666" android:gravity="center" android:id="@id/tv_role" android:tag="binding_8" android:background="@drawable/shape_f4f4f4_radius_20" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/common_user_login_to_the_family_edition" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_5" android:paddingHorizontal="@dimen/len_10" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_9" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_settings_nickname" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_10" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:tag="binding_11" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_12" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_user_authentication_phoneormail" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:tag="binding_13" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_14" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_settings_language" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:id="@id/tv_lan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_10" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_15" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_storage_used_capacity_2" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_999999" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_10" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_10" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_17" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_user_devices" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_18" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:tag="binding_19" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <LinearLayout android:gravity="center_vertical" android:tag="binding_20" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56" android:paddingHorizontal="@dimen/apply_pad_common_left_right_15">
+                <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_user_logout" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right_new" />
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/color_F4F4F4" android:layout_width="fill_parent" android:layout_height="@dimen/len_1" android:layout_marginStart="@dimen/apply_pad_common_left_right_15" />
+            <androidx.legacy.widget.Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_db4437" android:layout_gravity="center_horizontal" android:tag="binding_21" android:padding="@dimen/len_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:layout_marginBottom="@dimen/len_20" android:text="@string/common_user_account_cancellation" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

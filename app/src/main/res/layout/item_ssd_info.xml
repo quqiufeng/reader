@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_ssd_info_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zentraedi.basic.function.ui.imageview.ProportionImageView android:id="@id/ivSsd" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" app:proportHeight="50" app:proportWidth="155" />
+    <ImageView android:tag="binding_2" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_new_tag_24_24" />
+    <ImageView android:tag="binding_3" android:layout_width="@dimen/len_14" android:layout_height="@dimen/len_14" android:layout_marginLeft="@dimen/len_5" android:layout_marginTop="@dimen/len_5" android:src="@drawable/icon_error_14_14" />
+    <TextView android:textSize="@dimen/font_11" android:textColor="@color/color_999999" android:id="@id/tvTitle" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_10" android:includeFontPadding="false" android:layout_below="@id/ivSsd" />
+    <TextView android:textSize="@dimen/font_11" android:id="@id/tvSubtitle" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_8" android:includeFontPadding="false" android:layout_below="@id/tvTitle" />
+</RelativeLayout>

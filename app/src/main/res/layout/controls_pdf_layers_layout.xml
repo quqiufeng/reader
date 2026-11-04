@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceListItem" android:layout_width="fill_parent" android:layout_height="@dimen/list_line_height" android:text="@string/action_pdf_layers" />
+    <com.pdftron.pdf.dialog.pdflayer.PdfLayerView android:id="@id/pdf_layer_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

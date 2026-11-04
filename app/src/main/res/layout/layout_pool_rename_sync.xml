@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/layout_pool_rename_sync_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_mount_name_limit" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_DB4437" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20" />
+    <CheckBox android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:id="@id/check_box" android:layout_width="wrap_content" android:layout_height="@dimen/len_30" android:layout_marginTop="@dimen/len_9" android:button="@drawable/checkbox_selector_rectangle" android:text="@string/common_file_sync_mount_name" android:layout_marginStart="@dimen/len_13" android:layout_marginEnd="@dimen/len_20" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" android:text="@string/common_file_sync_mount_warning" android:layout_marginStart="@dimen/len_20" android:layout_marginEnd="@dimen/len_20" />
+</LinearLayout>

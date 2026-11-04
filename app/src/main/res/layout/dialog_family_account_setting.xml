@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_family_account_setting_0" android:background="@drawable/shape_top_circle_white_15_bg" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/len_56">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivClose" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <RelativeLayout android:id="@id/rl_forbid_account" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/iv_forbid" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_forbid_family_account" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:id="@id/tv_account_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_user_disable_account" android:layout_toRightOf="@id/iv_forbid" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_cancel_account" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/iv_detail" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_red_error_solid_26_26" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/cancel_account" android:layout_toRightOf="@id/iv_detail" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_cancel_fm_service" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_cancel_task_black_24" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_nas_string_key_867_res" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_security_manage" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/iv_safe_setting" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_safe_black_24" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_settings_hdmi_desktop_security" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_authority_manage" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/len_60">
+        <ImageView android:id="@id/iv_authority_manage" android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:src="@drawable/icon_file_square_permission_black_enable" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_nas_string_key_879_res" android:layout_centerVertical="true" />
+    </LinearLayout>
+</LinearLayout>

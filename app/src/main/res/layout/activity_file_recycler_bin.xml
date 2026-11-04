@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/activity_file_recycler_bin_0" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/len_0">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/headerLayout" android:tag="binding_1" android:background="@color/common_white" android:paddingTop="@dimen/len_78" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                <com.zentraedi.business.widget.MediumTextView android:id="@id/tv_item" android:tag="binding_2" app:medium_bold="true" style="@style/bigTitleTextView" />
+                <ImageView android:id="@id/iv_help" android:tag="binding_3" android:layout_toEndOf="@id/tv_item" style="@style/topBigTitleHelper" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip" app:layout_collapseMode="pin">
+                <include android:id="@id/file_list_title" layout="@layout/layout_navigation_recycler_bin" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.flyco.tablayout.SlidingTabLayout android:id="@id/tabLayout" android:tag="binding_5" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginBottom="@dimen/len_0_5" app:tl_indicator_bounce_enable="true" app:tl_indicator_color="@color/blue" app:tl_indicator_corner_radius="@dimen/len_1_5" app:tl_indicator_gravity="BOTTOM" app:tl_indicator_height="@dimen/len_2" app:tl_indicator_style="NORMAL" app:tl_indicator_width="@dimen/len_20" app:tl_tab_padding="15.0dip" app:tl_tab_space_equal="false" app:tl_textBold="SELECT" app:tl_textSelectColor="@color/color_333333" app:tl_textSelectSize="@dimen/font_16" app:tl_textUnselectColor="@color/color_bf666666" app:tl_textUnselectSize="@dimen/font_16" />
+        <View android:tag="binding_6" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_20" />
+        <RelativeLayout android:orientation="horizontal" android:tag="binding_7" android:background="@color/common_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_44">
+            <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_333333" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_recycle_bin_recently_deleted" android:layout_centerVertical="true" android:layout_marginStart="@dimen/len_15" />
+            <ImageView android:id="@id/externalAllRecoveryIv" android:tag="binding_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/clearAllIv" />
+            <ImageView android:id="@id/selectIv" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/clearAllIv" />
+            <ImageView android:id="@id/clearAllIv" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.zentraedi.business.adapter.CustomSlideViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+        <Space android:id="@id/sp_bottom" android:visibility="gone" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_60" />
+    </LinearLayout>
+    <include android:layout_gravity="bottom" android:id="@id/ll_item_option" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_bottom_options_height" android:layout_alignParentBottom="true" layout="@layout/layout_file_list_bottom_options" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

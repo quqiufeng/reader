@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:tag="layout/activity_nas_restarting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/icon_restart_background" android:layout_width="fill_parent" android:layout_height="@dimen/len_528">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/len_90" android:layout_height="@dimen/len_92" android:layout_marginTop="@dimen/len_177" android:src="@drawable/icon_restart_tig" />
+        <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_20" android:text="@string/common_prompt_restarting" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/color_666666" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:text="@string/common_prompt_restarting_pls_wait" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="@dimen/len_50" android:layout_height="@dimen/len_50" android:layout_marginTop="@dimen/len_20" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_nas_restart" />
+        <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

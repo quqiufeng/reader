@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_add_subtitle_operation_0" android:background="@color/video_player_more_option" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_icon" android:tag="binding_1" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/white" android:id="@id/tvTitle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" />
+</LinearLayout>

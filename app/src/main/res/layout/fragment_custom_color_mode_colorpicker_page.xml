@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/linear_layout_2">
+        <LinearLayout android:orientation="vertical" android:id="@id/scroll_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/color_picker_container" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <com.rarepebble.colorpicker.ColorPickerView android:id="@id/color_picker_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip">
+                <com.pdftron.pdf.utils.SegmentedGroup android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/colormode_comp_selector" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_small" android:layout_centerInParent="true">
+                    <RadioButton android:id="@id/colormode_bgcolor_selector" android:paddingLeft="9.0dip" android:paddingTop="2.0dip" android:paddingRight="9.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_colormode_custom_bg_color" style="@style/RadioButton" />
+                    <RadioButton android:id="@id/colormode_textcolor_selector" android:paddingLeft="9.0dip" android:paddingTop="2.0dip" android:paddingRight="9.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_colormode_custom_text_color" style="@style/RadioButton" />
+                </com.pdftron.pdf.utils.SegmentedGroup>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/gray" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="40.0dip">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/colormode_testchars" android:background="@android:color/white" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="25.0sp" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/colormode_testchar_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abc" android:textIsSelectable="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/linear_layout_2" android:paddingRight="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:paddingEnd="14.0dip" android:layout_alignParentStart="true">
+        <Button android:textSize="12.0sp" android:textColor="?colorAccent" android:id="@id/colormode_picker_cancelbtn" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="40.0sp" android:text="@string/cancel" />
+        <Button android:textSize="12.0sp" android:textColor="?colorAccent" android:id="@id/colormode_picker_okbtn" android:background="?selectableItemBackground" android:layout_width="48.0dip" android:layout_height="40.0sp" android:text="@string/ok" />
+    </LinearLayout>
+</RelativeLayout>

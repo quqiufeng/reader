@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_nas_monitor_0" android:background="@color/nas_monitor_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" layout="@layout/toolbar_setting_monitor" />
+    <RelativeLayout android:background="@drawable/shadow_setting_monitor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_100" android:layout_marginTop="@dimen/len_8">
+        <TextView android:id="@id/tv_setting" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/setting_run_desc" android:id="@id/tv_setting_work_desc" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_13" android:layout_toRightOf="@id/tv_setting" />
+        <TextView android:textSize="@dimen/font_14" android:textColor="@color/run_time_desc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_4" android:layout_toRightOf="@id/tv_setting" android:layout_below="@id/tv_setting_work_desc" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_3">
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_basic_index" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/tv_basic_index" android:tag="binding_5" android:text="@string/basic_index" style="@style/setting_monitor_tab_text" />
+            <ImageView android:tag="binding_6" android:layout_below="@id/tv_basic_index" android:layout_alignLeft="@id/tv_basic_index" android:layout_alignRight="@id/tv_basic_index" style="@style/setting_monitor_indicator" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_setting_visit" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25">
+            <TextView android:id="@id/tv_setting_visit" android:tag="binding_8" android:text="@string/setting_visit" style="@style/setting_monitor_tab_text" />
+            <ImageView android:tag="binding_9" android:layout_below="@id/tv_setting_visit" android:layout_alignLeft="@id/tv_setting_visit" android:layout_alignRight="@id/tv_setting_visit" style="@style/setting_monitor_indicator" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_disk_monitor" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_25">
+            <TextView android:id="@id/tv_disk_monitor" android:tag="binding_11" android:text="@string/common_nas_string_key_1542_res" style="@style/setting_monitor_tab_text" />
+            <ImageView android:tag="binding_12" android:layout_below="@id/tv_disk_monitor" android:layout_alignLeft="@id/tv_disk_monitor" android:layout_alignRight="@id/tv_disk_monitor" style="@style/setting_monitor_indicator" />
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/len_5" />
+</LinearLayout>

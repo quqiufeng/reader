@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:tag="layout/layout_comic_nav_menu_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:background="@drawable/bg_e606060a_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_44" android:layout_marginTop="@dimen/len_103" android:layout_marginStart="@dimen/len_15" android:layout_marginEnd="@dimen/len_15">
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_3" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_4" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_5" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_6" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:tag="binding_7" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_comic_filter" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

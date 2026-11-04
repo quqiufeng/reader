@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/activity_album_auto_backup_edit_0" android:background="@color/white" android:paddingBottom="@dimen/len_17" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tv_bottom">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/appBarLayout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <LinearLayout android:orientation="vertical" android:tag="binding_2" android:paddingTop="@dimen/len_78" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.0">
+                    <include android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_no_recyclerview_top_title" />
+                    <View android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="@dimen/len_0" app:layout_collapseMode="pin">
+                    <include android:id="@id/layout_navigation_bar" layout="@layout/common_toolbar" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_content" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/nas_white" android:gravity="center" android:id="@id/tv_bottom" android:tag="binding_5" android:background="@drawable/selector_bg_425fff_cfd6ff_corner_50" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_margin="@dimen/len_15" android:text="@string/common_cloud_start_backup" android:layout_alignParentBottom="true" />
+</RelativeLayout>

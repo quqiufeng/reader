@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/len_7" android:paddingTop="@dimen/apply_pad_item_top_bottom_10" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/apply_pad_item_top_bottom_15" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_45" />
+    <ImageView android:id="@id/ivFolder" android:layout_width="@dimen/len_60" android:layout_height="@dimen/len_45" android:layout_marginLeft="@dimen/len_5" android:src="@drawable/icon_video_folder" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/len_10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/len_45" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/len_14" android:textColor="@color/color_video_title" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingTop="@dimen/len_5" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/len_4" />
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/len_45" android:src="@drawable/icon_gray_arrow_8_12" />
+</LinearLayout>

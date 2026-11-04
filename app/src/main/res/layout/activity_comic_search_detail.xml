@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/activity_comic_search_detail_0" android:background="@color/nas_white" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/sv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:tag="binding_1" android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_78" />
+            <TextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="bottom" android:id="@id/tv_title" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/len_40" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:includeFontPadding="false" />
+            <ImageView android:tag="binding_3" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginTop="@dimen/len_20" />
+            <FrameLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/contentRefreshLayout" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.zentraedi.business.refresh.PhotoSyncRefreshHeader android:id="@id/content_smart_refresh_header" android:layout_width="fill_parent" android:layout_height="@dimen/len_66" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/contentRv" android:tag="binding_6" android:paddingTop="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <com.zentraedi.business.refresh.ReaderLoadMoreFooter android:id="@id/content_smart_loadmore_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+                <include layout="@layout/item_comic_search_empty" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:tag="binding_7" android:background="@color/nas_white" android:layout_width="fill_parent" android:layout_height="@dimen/len_78">
+        <ImageView android:id="@id/iv_home" android:layout_width="@dimen/len_44" android:layout_height="@dimen/len_44" android:src="@drawable/icon_back_page_44_44" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:gravity="center" android:id="@id/tv_top_title" android:tag="binding_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/len_44" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</FrameLayout>

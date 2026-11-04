@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zentraedi.zspace.music.widget.VerticalSeekBar android:id="@id/seekBar" android:background="@null" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:paddingBottom="@dimen/len_10" android:layout_width="fill_parent" android:layout_height="@dimen/len_300" android:maxHeight="@dimen/len_2" android:max="400" android:progress="200" android:progressDrawable="@drawable/bg_audio_vertical_seek_bar" android:minHeight="@dimen/len_2" android:thumb="@drawable/icon_music_seek" android:thumbOffset="5.0dip" android:splitTrack="false" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_999999" android:id="@id/tvNumber" android:paddingTop="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <TextView android:textSize="@dimen/len_12" android:textColor="@color/color_111111" android:id="@id/tvSeekValue" android:paddingTop="@dimen/len_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_string_key_158" />
+</merge>

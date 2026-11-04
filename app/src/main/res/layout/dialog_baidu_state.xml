@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/dialog_baidu_state_0" android:background="@color/nas_white" android:paddingBottom="@dimen/len_34" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/color_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_button_action" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_close" android:layout_width="@dimen/navigation_img_width_and_height" android:layout_height="@dimen/navigation_img_width_and_height" android:src="@drawable/icon_popup_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_login_baidu_net_disk" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_login_baidu_net_disk" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/netdisk_string_key_7" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_login_line" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_56" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_logout_baidu_net_disk" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/len_26" android:layout_height="@dimen/len_26" android:layout_marginLeft="@dimen/len_15" android:src="@drawable/icon_logout_baidu_net_disk" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:layout_gravity="center_vertical" android:id="@id/tv_account_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:text="@string/common_nas_string_key_1528_res" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_logout_line" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_marginLeft="@dimen/len_56" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/item_release_footer_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:textSize="@dimen/sp_16" android:textColor="#ffffffff" android:id="@id/bt_detail" android:tag="binding_1" android:background="@drawable/item_release_footer_view_button_bg" android:layout_width="fill_parent" android:layout_height="@dimen/len_42" android:layout_margin="@dimen/len_8" android:text="@string/common_button_see_all" />
+</LinearLayout>

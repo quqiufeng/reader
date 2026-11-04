@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/clPlayContent" android:tag="layout/dialog_music_play_list_layout_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tl="http://schemas.android.com/apk/res-auto">
+    <com.flyco.tablayout.SlidingTabLayout android:id="@id/listTabLayout" android:layout_width="fill_parent" android:layout_height="@dimen/len_62" tl:layout_constraintRight_toLeftOf="@id/addList" tl:tl_indicator_bounce_enable="true" tl:tl_indicator_color="@color/color_425FFF" tl:tl_indicator_corner_radius="@dimen/len_1_5" tl:tl_indicator_height="@dimen/len_1" tl:tl_indicator_margin_bottom="0.0dip" tl:tl_indicator_margin_left="15.0dip" tl:tl_indicator_margin_right="15.0dip" tl:tl_tab_padding="12.0dip" tl:tl_tab_space_equal="false" tl:tl_textSelectColor="@color/color_425FFF" tl:tl_textSelectSize="@dimen/font_16" tl:tl_textUnselectColor="@color/color_333333" tl:tl_textUnselectSize="@dimen/font_16" />
+    <RelativeLayout android:id="@id/songListTitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/len_62" android:layout_marginStart="@dimen/apply_pad_common_left_right_0" android:layout_marginEnd="@dimen/apply_pad_common_left_right_0">
+        <ImageView android:id="@id/iv_close" android:tag="binding_1" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:layout_marginRight="@dimen/len_5" android:src="@drawable/icon_close_gray_40" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/addList" android:tag="binding_2" android:layout_width="@dimen/len_36" android:layout_height="@dimen/len_36" android:src="@drawable/icon_add_music_list" android:layout_toLeftOf="@id/iv_close" android:layout_centerVertical="true" />
+        <View android:id="@id/addCover" android:background="@drawable/bg_music_song_list_cover" android:layout_width="@dimen/len_20" android:layout_height="fill_parent" android:layout_toLeftOf="@id/addList" />
+    </RelativeLayout>
+    <View android:id="@id/lineTitle" android:background="@color/separate_line" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/videoViewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+</LinearLayout>

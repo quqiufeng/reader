@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_course_type_manage_0" android:layout_width="fill_parent" android:layout_height="@dimen/len_44"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.legacy.widget.Space android:layout_width="@dimen/apply_pad_common_left_right_15" android:layout_height="@dimen/len_0" />
+    <FrameLayout android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/len_10">
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_10" android:src="@drawable/icon_black_arrow_down" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_title" android:ellipsize="end" android:tag="binding_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:gravity="center" android:tag="binding_4" android:paddingLeft="@dimen/len_10" android:paddingRight="@dimen/len_10" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="@dimen/apply_pad_common_left_right_5" android:text="@string/common_button_delete" />
+</LinearLayout>

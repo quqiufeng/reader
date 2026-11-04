@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/layout_path_dark_0" android:background="@color/color_222222" android:layout_width="fill_parent" android:layout_height="@dimen/len_42"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_move_to_up" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:layout_marginLeft="@dimen/len_10" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_move_to_up" android:tag="binding_1" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_move_to_up_level_dark_enable" android:scaleType="fitCenter" />
+        <ImageView android:tag="binding_2" android:layout_width="@dimen/len_30" android:layout_height="@dimen/len_30" android:src="@drawable/icon_move_to_up_level_dark_disable" android:scaleType="fitCenter" />
+    </FrameLayout>
+    <View android:id="@id/view_separate" android:background="@drawable/icon_bt_path_split" android:visibility="gone" android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_28" android:layout_marginLeft="@dimen/len_2" android:layout_toRightOf="@id/fl_move_to_up" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/button_blue" android:gravity="center" android:id="@id/tvRightButton" android:tag="binding_3" android:paddingLeft="@dimen/apply_pad_common_left_right_15" android:paddingRight="@dimen/apply_pad_common_left_right_15" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_path_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/len_69" android:layout_toRightOf="@id/view_separate" />
+    <View android:background="@color/color_333333" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" android:layout_alignParentBottom="true" />
+</RelativeLayout>

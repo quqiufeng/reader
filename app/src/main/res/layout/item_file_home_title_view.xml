@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_file_home_title_view_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/common_title" android:layout_gravity="center_vertical" android:id="@id/tvTitle" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_18" android:includeFontPadding="false" />
+    <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:id="@id/iconManageExternal" android:tag="binding_2" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="@dimen/len_66" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/len_15">
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/iconAddExternal" android:tag="binding_4" android:background="@drawable/shape_border_cccccc_radius_14" android:layout_width="@dimen/len_66" android:layout_height="@dimen/len_22" android:layout_marginEnd="@dimen/apply_pad_common_left_right_15">
+        <ImageView android:layout_width="@dimen/len_8" android:layout_height="@dimen/len_8" android:src="@drawable/icon_add_black_8" android:scaleType="fitCenter" />
+        <Space android:layout_width="@dimen/len_2" android:layout_height="@dimen/len_0" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_desc" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

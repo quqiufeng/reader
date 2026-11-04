@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/blurLayout" android:background="@drawable/bg_1c1f33_radius_top_15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/len_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/color_video_title" android:gravity="center_vertical" android:id="@id/tvName" android:paddingTop="@dimen/len_20" android:paddingBottom="@dimen/len_20" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_button_action" android:includeFontPadding="false" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/len_6" />
+            <ImageView android:layout_gravity="top" android:id="@id/ivClose" android:layout_width="@dimen/len_42" android:layout_height="@dimen/len_42" android:layout_marginTop="@dimen/len_8" android:src="@drawable/icon_close_white_40" />
+        </LinearLayout>
+        <View android:background="@color/color_1affffff" android:layout_width="fill_parent" android:layout_height="@dimen/len_0_5" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutChangeViewStyle" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_view_list" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_9ab0cb6943" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/color_99ffffff" android:id="@id/tvViewStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_vertical_poster" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutSelect" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_select_2" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_26c2b0de77" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutClear" android:paddingLeft="@dimen/len_15" android:paddingTop="@dimen/len_20" android:paddingRight="@dimen/len_15" android:paddingBottom="@dimen/len_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/len_24" android:layout_height="@dimen/len_24" android:src="@drawable/icon_clear_2" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/color_video_title" android:paddingLeft="@dimen/len_15" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_movies_clear_all_records" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

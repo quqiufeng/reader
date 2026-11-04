@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:tag="layout/item_pub_pop_filter_adder_0" android:layout_width="fill_parent" android:layout_height="@dimen/apply_pad_item_fixed_height_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_15" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@id/nickNameTv" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/len_56" android:singleLine="true" android:layout_centerVertical="true" />
+    <View android:background="@color/separate_line" android:layout_marginLeft="@dimen/len_56" android:layout_alignParentBottom="true" style="@style/separate_line_match" />
+</RelativeLayout>

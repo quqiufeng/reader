@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_dlna_setting_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingTop="@dimen/len_6" android:paddingBottom="@dimen/len_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_6">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_gravity="center_vertical" android:id="@id/tv_dlna_prompt" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" />
+        <Switch android:enabled="false" android:layout_gravity="center|right" android:id="@id/switch_toggle" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="@dimen/len_20" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:forceDarkAllowed="false" />
+        <RelativeLayout android:layout_gravity="center|right" android:id="@id/ll_switch" android:layout_width="@dimen/len_80" android:layout_height="@dimen/len_30" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/font_12" android:textColor="@color/color_FF8300" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_16" android:text="@string/common_settings_dlna_too_many_files_tip" android:lineSpacingExtra="@dimen/len_3" />
+    <View style="@style/separate_line_match_left_15" />
+    <LinearLayout android:orientation="vertical" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/text_color_day_111111_night_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_15" android:layout_marginTop="@dimen/len_16" android:text="@string/common_settings_dlna_anonymous_access_dir" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/llShare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_10" android:layout_marginTop="@dimen/len_12">
+            <ImageView android:layout_gravity="center_vertical" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_shared_folders" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/apply_pad_common_left_right_10" android:layout_marginTop="@dimen/len_12" android:layout_marginRight="@dimen/apply_pad_common_left_right_15" android:layout_marginBottom="@dimen/len_12">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ivCustom" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_desc" android:layout_gravity="center_vertical" android:id="@id/tvCustom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_movies_category_custom" />
+            <Space android:layout_width="@dimen/len_0" android:layout_height="@dimen/len_0" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_12" android:gravity="center" android:layout_gravity="center_vertical" android:tag="binding_6" android:layout_width="@dimen/len_68" android:layout_height="@dimen/len_24" android:text="@string/common_button_add" />
+        </LinearLayout>
+        <View android:tag="binding_7" style="@style/separate_line_match_left_15" />
+        <TextView android:textSize="@dimen/font_12" android:textColor="@color/common_subdesc" android:gravity="center" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_15" android:layout_marginBottom="@dimen/len_10" android:text="@string/common_file_no_data" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recycle_view" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_5" />
+    </LinearLayout>
+</LinearLayout>

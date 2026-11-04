@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/disk_container" android:tag="layout/layout_disk_group_for_replace_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/font_15"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+    <include android:layout_width="@dimen/len_67" android:layout_height="@dimen/len_185" layout="@layout/layout_disk_item_for_replace" />
+    <Space android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_1" />
+    <include android:layout_width="@dimen/len_67" android:layout_height="@dimen/len_185" layout="@layout/layout_disk_item_for_replace" />
+    <Space android:tag="binding_1" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_1" />
+    <include android:layout_width="@dimen/len_67" android:layout_height="@dimen/len_185" layout="@layout/layout_disk_item_for_replace" />
+    <Space android:tag="binding_2" android:layout_width="@dimen/len_10" android:layout_height="@dimen/len_1" />
+    <include android:layout_width="@dimen/len_67" android:layout_height="@dimen/len_185" layout="@layout/layout_disk_item_for_replace" />
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/len_1" android:layout_weight="1.0" />
+</LinearLayout>

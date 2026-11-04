@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:tag="layout/item_history_today_0" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/len_10" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_background" android:tag="binding_1" android:layout_width="@dimen/len_139" android:layout_height="@dimen/len_104">
+        <com.zentraedi.basic.function.ui.imageview.EqualRatioImageView android:id="@id/iv_year" android:tag="binding_2" android:background="@color/pic_thumb_default_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/len_5" android:scaleType="centerCrop" app:imageHeight="104" app:imageWidth="139" />
+        <View android:background="@drawable/shape_gradient_black_bg_9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/iv_year" android:layout_alignBottom="@id/iv_year" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/len_4" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/len_8">
+            <TextView android:textSize="@dimen/font_12" android:textColor="@color/nas_white" android:ellipsize="end" android:id="@id/tv_des" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageView android:id="@id/iv_close" android:tag="binding_4" android:padding="@dimen/len_4" android:layout_width="@dimen/len_22" android:layout_height="@dimen/len_22" android:layout_marginRight="@dimen/len_1" android:src="@drawable/icon_close_white_14" android:scaleType="fitXY" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="@dimen/font_16" android:textColor="@color/color_ffffff" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/len_4" android:includeFontPadding="false" android:layout_marginStart="@dimen/len_8" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

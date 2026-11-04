@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/fragment_picture_empty_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="80.0" />
+    <ImageView android:layout_gravity="center" android:layout_width="@dimen/len_220" android:layout_height="@dimen/len_150" android:src="@drawable/common_data_empty" android:forceDarkAllowed="false" />
+    <TextView android:textSize="@dimen/font_14" android:textColor="@color/common_subdesc" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_file_no_data" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/len_8" />
+    <View android:layout_width="@dimen/len_1" android:layout_height="0.0dip" android:layout_weight="250.0" />
+</LinearLayout>
