@@ -30,11 +30,12 @@ READER_LIBRARY=/path/to/books ./tools/run.sh
 - `launch.sh` 保证单实例；已在运行时会把窗口置前
 
 - 书库默认扫描 `~/Books` / `~/Downloads/book`，可用 `READER_LIBRARY` 指定
-- 阅读中 `Esc` 返回书库，`Q` 退出；`S` 设置，`T` 目录，`B` 书签，`/` 搜索
+- 阅读中 `Esc` 返回书库，`Q` 退出；`S` 设置，`T` 目录，`B` 书签，`/` 搜索，`O` 打开新书
+- 书库 `Delete` 清除选中书的历史，`Shift+Delete` 清空历史
 
 - 依赖：SDL2、LuaJIT、MuPDF、libmobi、libxml2、libzip、SDL2_ttf
 - 自动化：`tools/auto_core.lua`、`tools/auto_agent.lua`、`tools/auto_smoke.lua`；一键回归 `./tools/test.sh`
-- 外部 Agent：`reader-agent` / `reader-lua` / `automation/agent.lua`
+- 外部 Agent：`reader-agent open /path/book [page]`（未运行会自动启动，支持 `dav://`/`smb://`/`sftp://`）/ `reader-lua` / `automation/agent.lua`
 - 字体：仓耳今楷02（`assets/fonts/`）
 - 设计 / 迁移：`native_reader.md`；开发规范：`AGENTS.md`
 

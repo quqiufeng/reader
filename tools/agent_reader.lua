@@ -16,13 +16,16 @@ local script = arg[0] or ""
 local dir = script:match("^(.*)/[^/]+$") or "."
 package.path = dir .. "/../automation/?.lua;" .. dir .. "/../lua/?.lua;" .. package.path
 
+local ffi = require("ffi")
 local json = require("cjson")
 local Agent = require("agent")
 
-local a, err = Agent.new()
-if not a then
-    print(json.encode({ ok = false, error = tostring(err) }))
-    os.exit(1)
+ffi.cdef[[
+int usleep(unsigned int usec);
+]]
+local function sleep_sec(v)
+    local n = tonumber(v) or 0
+    if n > 0 then ffi.C.usleep(math.floor(math.min(n, 60) * 1000000)) end
 end
 
 local function num(i) return tonumber(arg[i]) end
@@ -32,10 +35,56 @@ end
 local function emit(v) print(encode(v or {})) end
 local cmd = arg[1] or "state"
 
+local function shq(s)
+    return "'" .. tostring(s):gsub("'", "'\\''") .. "'"
+end
+
+local function launch_app(path)
+    local launcher = os.getenv("READER_LAUNCH")
+    if not launcher or launcher == "" then
+        local root = os.getenv("READER_ROOT") or "."
+        for _, p in ipairs({ root .. "/run.sh", root .. "/tools/run.sh" }) do
+            local f = io.open(p, "rb")
+            if f then f:close(); launcher = p; break end
+        end
+    end
+    if not launcher then return false, "READER_LAUNCH not found" end
+    local args = shq(launcher)
+    if path and path ~= "" then args = args .. " " .. shq(path) end
+    os.execute("setsid " .. args ..
+        " >>/tmp/opencode/reader-agent-launch.log 2>&1 < /dev/null &")
+    return true
+end
+
+local a, err = Agent.new()
+if not a and (cmd == "open" or cmd == "launch") then
+    local ok, lerr = launch_app(arg[2])
+    if not ok then
+        print(encode({ ok = false, error = tostring(lerr) }))
+        os.exit(1)
+    end
+    for _ = 1, 60 do
+        sleep_sec(0.1)
+        a, err = Agent.new()
+        if a then break end
+    end
+end
+if not a then
+    print(encode({ ok = false, error = tostring(err),
+        hint = "reader not running; use: reader-agent open /path/book" }))
+    os.exit(1)
+end
+
 if cmd == "state" then
     emit(a:state())
 elseif cmd == "open" then
-    emit(a:openBook(arg[2], num(3)))
+    if arg[2] and arg[2] ~= "" then
+        emit(a:openBook(arg[2], num(3)))
+    else
+        emit(a:state())
+    end
+elseif cmd == "launch" then
+    emit(a:state())
 elseif cmd == "close" then
     emit(a:closeBook())
 elseif cmd == "next" then
@@ -107,6 +156,10 @@ elseif cmd == "library.activate" then
     emit(a:libraryActivate(num(2)))
 elseif cmd == "library.close" then
     emit(a:libraryClose())
+elseif cmd == "history.remove" then
+    emit(a:removeHistory(num(2), arg[3]))
+elseif cmd == "history.clear" then
+    emit(a:clearHistory())
 elseif cmd == "settings" then
     emit(a:settings())
 elseif cmd == "settings.open" then
@@ -143,7 +196,7 @@ elseif cmd == "raw" then
 elseif cmd == "quit" then
     emit(a:quit())
 else
-    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|search|bookmark|library|settings|scroll|zoom|pan|capture|snapshot|quit")
+    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|search|bookmark|library|history|settings|scroll|zoom|pan|capture|snapshot|quit")
     os.exit(2)
 end
 

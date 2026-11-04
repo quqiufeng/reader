@@ -1,6 +1,9 @@
 package.path = "./lua/?.lua;./lua/?/init.lua;" .. package.path
 
 local ffi = require("ffi")
+ffi.cdef[[
+unsigned int getuid(void);
+]]
 local sdl = require("ffi.sdl2")
 local ttf = require("ffi.sdl2_ttf")
 local rd = require("ffi.reader")
@@ -14,6 +17,7 @@ local zoom = tonumber(READER_ZOOM or "1.2") or 1.2
 local frames = tonumber(READER_FRAMES or "0") or 0
 local forced_ui_scale = tonumber(os.getenv("READER_UI_SCALE") or "")
 
+sdl.set_hint("SDL_MOUSE_FOCUS_CLICKTHROUGH", "1")
 if not sdl.init() then error("SDL_Init failed") end
 if not ttf.init() then error("TTF_Init failed") end
 
@@ -34,6 +38,7 @@ local v = {
     eye_tex = nil, eye_w = 0, eye_h = 0, eye_x = 0,
     dual_tex = nil, dual_w = 0, dual_h = 0, dual_x = 0,
     shot_tex = nil, shot_w = 0, shot_h = 0, shot_x = 0,
+    hdr_open_tex = nil, hdr_open_w = 0, hdr_open_h = 0, hdr_open_x = 0,
     rects = {}, links = {}, search_cache = {},
 }
 local win = assert(sdl.create_window("reader", W, H), "SDL_CreateWindow failed")
@@ -228,6 +233,8 @@ local lib = {
     line_h = S(44),
     visible = 12,
     top = S(120),
+    open_tex = nil, open_w = 0, open_h = 0, open_x = 0,
+    clear_tex = nil, clear_w = 0, clear_h = 0, clear_x = 0,
 }
 
 local refresh_lib_texts = nil
@@ -266,6 +273,7 @@ local function rebuild_header_actions()
     if v.eye_tex then sdl.destroy_texture(v.eye_tex); v.eye_tex = nil end
     if v.dual_tex then sdl.destroy_texture(v.dual_tex); v.dual_tex = nil end
     if v.shot_tex then sdl.destroy_texture(v.shot_tex); v.shot_tex = nil end
+    if v.hdr_open_tex then sdl.destroy_texture(v.hdr_open_tex); v.hdr_open_tex = nil end
     hdr_toc_tex, hdr_toc_w, hdr_toc_h = make_text("目录", f_page, theme.muted)
     hdr_bm_tex, hdr_bm_w, hdr_bm_h = make_text("书签", f_page, theme.muted)
     hdr_st_tex, hdr_st_w, hdr_st_h = make_text("设置", f_page, theme.muted)
@@ -276,14 +284,16 @@ local function rebuild_header_actions()
     v.dual_tex, v.dual_w, v.dual_h = make_text(
         (v.fs or v.dual) and "单栏" or "双栏", f_page, theme.muted)
     v.shot_tex, v.shot_w, v.shot_h = make_text("截图", f_page, theme.muted)
+    v.hdr_open_tex, v.hdr_open_w, v.hdr_open_h = make_text("打开", f_page, theme.muted)
     v.fs_x = W - S(24) - (v.fs_w or 0)
-    v.max_x = v.fs_x - S(16) - (v.max_w or 0)
-    v.eye_x = v.max_x - S(16) - (v.eye_w or 0)
-    v.dual_x = v.eye_x - S(16) - (v.dual_w or 0)
-    v.shot_x = v.dual_x - S(16) - (v.shot_w or 0)
-    hdr_bm_x = v.shot_x - S(16) - (hdr_bm_w or 0)
-    hdr_toc_x = hdr_bm_x - S(16) - (hdr_toc_w or 0)
-    hdr_st_x = hdr_toc_x - S(16) - (hdr_st_w or 0)
+    v.max_x = v.fs_x - S(14) - (v.max_w or 0)
+    v.eye_x = v.max_x - S(14) - (v.eye_w or 0)
+    v.dual_x = v.eye_x - S(14) - (v.dual_w or 0)
+    v.shot_x = v.dual_x - S(14) - (v.shot_w or 0)
+    v.hdr_open_x = v.shot_x - S(14) - (v.hdr_open_w or 0)
+    hdr_bm_x = v.hdr_open_x - S(14) - (hdr_bm_w or 0)
+    hdr_toc_x = hdr_bm_x - S(14) - (hdr_toc_w or 0)
+    hdr_st_x = hdr_toc_x - S(14) - (hdr_st_w or 0)
 end
 rebuild_header_actions()
 
@@ -597,8 +607,61 @@ local function load_page(n, keep_scroll)
     return true
 end
 
+local function url_decode(s)
+    return (s:gsub("%%(%x%x)", function(h)
+        return string.char(tonumber(h, 16))
+    end))
+end
+
+v.normalize_book_path = function(path)
+    if not path or path == "" or path:sub(1, 1) == "/" then return path end
+    local uid = tonumber(ffi.C.getuid()) or 1000
+    local gvfs = string.format("/run/user/%d/gvfs/", uid)
+    local p = path
+
+    if p:sub(1, 7) == "file://" then
+        local q = url_decode(p:sub(8))
+        local f = io.open(q, "rb")
+        if f then f:close(); return q end
+        return path
+    end
+
+    local scheme, host, port, rest = p:match("^(davs?)://([^/:]+):?(%d*)(/.*)$")
+    if scheme then
+        local ssl = (scheme == "davs") and "true" or "false"
+        local base
+        if port and port ~= "" then
+            base = string.format("%sdav:host=%s,port=%s,ssl=%s",
+                gvfs, host, port, ssl)
+        else
+            base = string.format("%sdav:host=%s,ssl=%s", gvfs, host, ssl)
+        end
+        local q = base .. url_decode(rest)
+        local f = io.open(q, "rb")
+        if f then f:close(); return q end
+    end
+
+    local smb_host, share, srest = p:match("^smb://([^/]+)/([^/]+)(/.*)$")
+    if smb_host then
+        local q = string.format("%ssmb-share:server=%s,share=%s%s",
+            gvfs, smb_host, share, url_decode(srest))
+        local f = io.open(q, "rb")
+        if f then f:close(); return q end
+    end
+
+    local shost, srest2 = p:match("^sftp://([^/]+)(/.*)$")
+    if shost then
+        local q = string.format("%ssftp:host=%s%s",
+            gvfs, shost, url_decode(srest2))
+        local f = io.open(q, "rb")
+        if f then f:close(); return q end
+    end
+    return path
+end
+
 local function open_book(path, start_page)
     if not path or path == "" then return false, "empty path" end
+    path = v.normalize_book_path(path)
     close_book()
     book = path
     local fmt = rd.detect(path)
@@ -633,7 +696,7 @@ local function open_book(path, start_page)
     v.pan_x = 0
     local name = path:match("([^/]+)$") or path
     name = name:gsub("%.%w+$", "")
-    title_text = truncate_utf8(name, 18)
+    title_text = truncate_utf8(name, 14)
     refresh_text()
     if not load_page(start) then return false, "render failed" end
     refresh_text()
@@ -762,6 +825,11 @@ local function draw_page()
             local r = ffi.new("SDL_Rect")
             r.x, r.y, r.w, r.h = v.shot_x, S(20), v.shot_w, v.shot_h
             sdl.render_copy(ren, v.shot_tex, nil, r)
+        end
+        if v.hdr_open_tex then
+            local r = ffi.new("SDL_Rect")
+            r.x, r.y, r.w, r.h = v.hdr_open_x, S(20), v.hdr_open_w, v.hdr_open_h
+            sdl.render_copy(ren, v.hdr_open_tex, nil, r)
         end
 
         set_color(theme.line)
@@ -1344,6 +1412,8 @@ local function destroy_lib()
     if lib.count_tex then sdl.destroy_texture(lib.count_tex); lib.count_tex = nil end
     if lib.hint_tex then sdl.destroy_texture(lib.hint_tex); lib.hint_tex = nil end
     if lib.empty_tex then sdl.destroy_texture(lib.empty_tex); lib.empty_tex = nil end
+    if lib.open_tex then sdl.destroy_texture(lib.open_tex); lib.open_tex = nil end
+    if lib.clear_tex then sdl.destroy_texture(lib.clear_tex); lib.clear_tex = nil end
 end
 
 local function scan_library()
@@ -1354,19 +1424,86 @@ local function scan_library()
     candidates[#candidates + 1] = home .. "/Downloads/book"
     candidates[#candidates + 1] = "/home/quqiufeng/Downloads/book"
 
-    lib.items = {}
+    local scanned = {}
     lib.dir = env or ""
     for _, d in ipairs(candidates) do
         local items = library.scan(d)
         if items and #items > 0 then
-            lib.items = items
+            scanned = items
             lib.dir = d
             break
         end
     end
-    for _, it in ipairs(lib.items) do
+
+    lib.items = {}
+    local seen = {}
+    for _, it in ipairs(scanned) do
+        seen[it.path] = true
         local rec = progress[it.path]
-        it.percent = rec and rec.percent or nil
+        local pct = (rec and rec.percent and rec.percent > 0) and rec.percent or 0
+        if pct > 0 then
+            it.percent = pct
+            it.updated = (rec and rec.updated and rec.updated > 0)
+                and rec.updated or 0
+            lib.items[#lib.items + 1] = it
+        end
+    end
+
+    -- 文件选择器/DAV 打开的书可能不在扫描目录里，也要进入历史列表。
+    local fmt_map = {
+        pdf = "PDF", epub = "EPUB", mobi = "MOBI", azw3 = "AZW3",
+        txt = "TXT", chm = "CHM", cbz = "CBZ", cbr = "CBR",
+    }
+    for path, rec in pairs(progress) do
+        local pct = (rec.percent and rec.percent > 0) and rec.percent or 0
+        if not seen[path] and pct > 0 then
+            local f = io.open(path, "rb")
+            if f then
+                f:close()
+                local ext = path:match("%.([%w]+)$")
+                ext = ext and ext:lower() or ""
+                lib.items[#lib.items + 1] = {
+                    path = path,
+                    name = path:match("([^/]+)$") or path,
+                    format = fmt_map[ext] or ext:upper(),
+                    percent = pct,
+                    updated = (rec.updated and rec.updated > 0) and rec.updated or 0,
+                }
+            end
+        end
+    end
+
+    table.sort(lib.items, function(a, b)
+        if (a.updated or 0) ~= (b.updated or 0) then
+            return (a.updated or 0) > (b.updated or 0)
+        end
+        return (a.name or "") < (b.name or "")
+    end)
+end
+
+v.choose_book = function()
+    local cmd
+    if os.execute("command -v zenity >/dev/null 2>&1") == 0 then
+        cmd = 'zenity --file-selection --title="选择电子书" ' ..
+            '--file-filter="电子书 | *.pdf *.epub *.mobi *.azw3 *.txt *.chm *.cbz *.cbr"'
+    elseif os.execute("command -v kdialog >/dev/null 2>&1") == 0 then
+        cmd = 'kdialog --getopenfilename "$HOME" "电子书 (*.pdf *.epub *.mobi *.azw3 *.txt *.chm *.cbz *.cbr)"'
+    else
+        return
+    end
+    local f = io.popen(cmd)
+    if not f then return end
+    local path = f:read("*l")
+    f:close()
+    if not path or path == "" then return end
+    lib.open = false
+    destroy_lib()
+    local ok, err = open_book(path, nil)
+    if not ok then
+        print("open failed: " .. tostring(err))
+        lib.open = true
+        scan_library()
+        refresh_lib_texts()
     end
 end
 
@@ -1396,20 +1533,55 @@ local function rebuild_lib_texs()
     end
 end
 
+local function clear_history_fields(rec)
+    if not rec then return end
+    rec.page = 0
+    rec.percent = nil
+    rec.updated = nil
+end
+
+v.remove_history = function(index)
+    local it = lib.items[index]
+    if not it then return false end
+    clear_history_fields(progress[it.path])
+    store.save_state(state_file, progress)
+    scan_library()
+    refresh_lib_texts()
+    print("history removed: " .. tostring(it.path))
+    return true
+end
+
+v.clear_history = function()
+    for _, rec in pairs(progress) do
+        clear_history_fields(rec)
+    end
+    store.save_state(state_file, progress)
+    scan_library()
+    refresh_lib_texts()
+    print("history cleared")
+    return true
+end
+
 refresh_lib_texts = function()
     if lib.title_tex then sdl.destroy_texture(lib.title_tex); lib.title_tex = nil end
     if lib.count_tex then sdl.destroy_texture(lib.count_tex); lib.count_tex = nil end
     if lib.hint_tex then sdl.destroy_texture(lib.hint_tex); lib.hint_tex = nil end
     if lib.empty_tex then sdl.destroy_texture(lib.empty_tex); lib.empty_tex = nil end
+    if lib.open_tex then sdl.destroy_texture(lib.open_tex); lib.open_tex = nil end
 
     lib.title_tex, lib.title_w, lib.title_h = make_text("书库", f_title, theme.ink)
     lib.count_tex, lib.count_w, lib.count_h = make_text(
         string.format("%d 本", #lib.items), f_page, theme.muted)
+    lib.open_tex, lib.open_w, lib.open_h = make_text("＋ 打开新书", f_page, theme.ink)
+    lib.clear_tex, lib.clear_w, lib.clear_h = make_text("清空历史", f_page, theme.muted)
+    lib.open_x = W - S(48) - lib.count_w - S(24) - lib.open_w
+    lib.clear_x = lib.open_x - S(16) - lib.clear_w
     lib.hint_tex, lib.hint_w, lib.hint_h = make_text(
-        "↑/↓ 选择 · Enter 打开 · Esc 退出", f_page, theme.muted)
+        "↑/↓ 选择 · Enter 打开 · Delete 清历史 · Shift+Delete 清空 · O 新书 · Esc 退出",
+        f_page, theme.muted)
     if #lib.items == 0 then
         lib.empty_tex, lib.empty_w, lib.empty_h = make_text(
-            "书库为空 · 用 READER_LIBRARY 指定目录", f_body, theme.muted)
+            "暂无阅读历史 · 打开新书开始阅读", f_body, theme.muted)
     end
     rebuild_lib_texs()
 end
@@ -1489,6 +1661,16 @@ end
 local function draw_library()
     panel.frame(ren, W, H, theme, v.ui_scale, lib.title_tex, lib.title_w, lib.title_h,
         lib.count_tex, lib.count_w, lib.count_h)
+    if lib.open_tex then
+        local r = ffi.new("SDL_Rect")
+        r.x, r.y, r.w, r.h = lib.open_x, S(50), lib.open_w, lib.open_h
+        sdl.render_copy(ren, lib.open_tex, nil, r)
+    end
+    if lib.clear_tex then
+        local r = ffi.new("SDL_Rect")
+        r.x, r.y, r.w, r.h = lib.clear_x, S(50), lib.clear_w, lib.clear_h
+        sdl.render_copy(ren, lib.clear_tex, nil, r)
+    end
     draw_lib_items()
     panel.hint(ren, H, v.ui_scale, lib.hint_tex, lib.hint_w, lib.hint_h)
     sdl.render_present(ren)
@@ -1590,6 +1772,7 @@ v.toggle_fs = function()
         W, H = v.win_w, v.win_h
     end
     rebuild_header_actions()
+    if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
     v.pending_layout = v.reflow
     if book then load_page(page) end
@@ -1620,6 +1803,7 @@ v.toggle_max = function()
         W, H = v.win_w, v.win_h
     end
     rebuild_header_actions()
+    if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
     v.pending_layout = v.reflow
     if book then load_page(page) end
@@ -1629,6 +1813,7 @@ end
 local function toggle_dual()
     v.dual = not v.dual
     rebuild_header_actions()
+    if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
     v.pending_layout = v.reflow
     if book then load_page(page) end
@@ -1687,7 +1872,11 @@ v.update_cursor = function(x, y)
             hand = true
         end
     elseif lib.open then
-        if y >= lib.top and y < lib.top + lib.visible * lib.line_h then
+        if y >= S(30) and y <= S(80) and x >= lib.open_x - S(12) then
+            hand = true
+        elseif y >= S(30) and y <= S(80) and x >= lib.clear_x - S(8) then
+            hand = true
+        elseif y >= lib.top and y < lib.top + lib.visible * lib.line_h then
             local idx = lib.first + math.floor((y - lib.top) / lib.line_h)
             hand = idx >= 1 and idx <= #lib.items
         end
@@ -1751,6 +1940,7 @@ local function apply_resize()
     end
 
     rebuild_header_actions()
+    if lib.open and refresh_lib_texts then refresh_lib_texts() end
     v.sy = 0
     v.pending_layout = v.reflow
     if book then load_page(page) end
@@ -1837,7 +2027,11 @@ v.on_mouse_down = function(x, y, button)
             end
         end
     elseif lib.open then
-        if y >= lib.top and y < lib.top + lib.visible * lib.line_h then
+        if y >= S(30) and y <= S(80) and x >= lib.open_x - S(12) then
+            v.choose_book()
+        elseif y >= S(30) and y <= S(80) and x >= lib.clear_x - S(8) then
+            v.clear_history()
+        elseif y >= lib.top and y < lib.top + lib.visible * lib.line_h then
             local idx = lib.first + math.floor((y - lib.top) / lib.line_h)
             if idx >= 1 and idx <= #lib.items then
                 lib.selected = idx
@@ -1922,7 +2116,7 @@ v.key_st = function(k)
     end
 end
 
-v.key_lib = function(k)
+v.key_lib = function(k, mod)
     if k == sdl.SDLK_UP then lib_move(-1)
     elseif k == sdl.SDLK_DOWN then lib_move(1)
     elseif k == sdl.SDLK_PAGEUP then lib_move(-10)
@@ -1930,6 +2124,13 @@ v.key_lib = function(k)
     elseif k == sdl.SDLK_RETURN or k == sdl.SDLK_RIGHT then lib_activate()
     elseif k == sdl.SDLK_ESCAPE or k == sdl.SDLK_Q then running = false
     elseif k == sdl.SDLK_S then open_settings()
+    elseif k == sdl.SDLK_O then v.choose_book()
+    elseif k == sdl.SDLK_DELETE then
+        if require("bit").band(mod or 0, 3) ~= 0 then
+            v.clear_history()
+        else
+            v.remove_history(lib.selected)
+        end
     end
 end
 
@@ -1952,6 +2153,7 @@ v.key_content = function(k, mod)
     elseif k == sdl.SDLK_DOWN then v.scroll_by(80)
     elseif k == sdl.SDLK_UP then v.scroll_by(-80)
     elseif k == sdl.SDLK_T then open_toc()
+    elseif k == sdl.SDLK_O then v.choose_book()
     elseif k == sdl.SDLK_B then open_bookmarks()
     elseif k == sdl.SDLK_S then open_settings()
     elseif k == sdl.SDLK_SLASH or k == sdl.SDLK_F then open_search()
@@ -1968,7 +2170,7 @@ v.on_key = function(k, mod)
     elseif toc.open then v.key_toc(k)
     elseif bm_open then v.key_bm(k)
     elseif st_open then v.key_st(k)
-    elseif lib.open then v.key_lib(k)
+    elseif lib.open then v.key_lib(k, mod)
     else v.key_content(k, mod)
     end
 end
@@ -2200,6 +2402,21 @@ v.extra_controls = function(fn, args)
         lib.open = false
         destroy_lib()
         return { ok = true, library = false }
+    elseif fn == "history.remove" then
+        local idx = tonumber(args.index or args.selected)
+        if not idx and args.path then
+            for i, it in ipairs(lib.items) do
+                if it.path == args.path then idx = i; break end
+            end
+        end
+        if not idx then return { ok = false, error = "missing index/path" } end
+        if not lib.open then open_library() end
+        local ok = v.remove_history(idx)
+        return { ok = ok, items = lib.items }
+    elseif fn == "history.clear" then
+        if not lib.open then open_library() end
+        v.clear_history()
+        return { ok = true, items = lib.items }
     end
     return nil
 end
@@ -2394,6 +2611,7 @@ local function cleanup()
     if v.eye_tex then sdl.destroy_texture(v.eye_tex); v.eye_tex = nil end
     if v.dual_tex then sdl.destroy_texture(v.dual_tex); v.dual_tex = nil end
     if v.shot_tex then sdl.destroy_texture(v.shot_tex); v.shot_tex = nil end
+    if v.hdr_open_tex then sdl.destroy_texture(v.hdr_open_tex); v.hdr_open_tex = nil end
     local seen = {}
     for _, f in ipairs({ f_title, f_page, f_body }) do
         if f and not seen[f] then

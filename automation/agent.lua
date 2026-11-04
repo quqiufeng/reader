@@ -115,6 +115,10 @@ function Agent:libraryActivate(index)
     return self:call("library.activate", { index = index })
 end
 function Agent:libraryClose() return self:call("library.close") end
+function Agent:removeHistory(index, path)
+    return self:call("history.remove", { index = index, path = path })
+end
+function Agent:clearHistory() return self:call("history.clear") end
 
 -- 目录
 function Agent:toggleToc() return decode(self.c:call("app.toc")) end

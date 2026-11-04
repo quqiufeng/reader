@@ -44,6 +44,7 @@ typedef union SDL_Event {
 } SDL_Event;
 
 int SDL_Init(uint32_t flags);
+int SDL_SetHint(const char *name, const char *value);
 void SDL_Quit(void);
 SDL_Window *SDL_CreateWindow(const char *title, int x, int y, int w, int h, uint32_t flags);
 typedef struct SDL_RWops SDL_RWops;
@@ -143,9 +144,14 @@ M.SDLK_BACKSPACE = 8
 M.SDLK_SLASH = 47
 M.SDLK_F = 102
 M.SDLK_Q = 113
+M.SDLK_O = 111
 
 function M.init()
     return lib.SDL_Init(M.INIT_VIDEO) == 0
+end
+
+function M.set_hint(name, value)
+    return lib.SDL_SetHint(name, value) ~= 0
 end
 
 function M.quit()

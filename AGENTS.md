@@ -210,7 +210,9 @@ native-reader/
 动态 -e：       reader-lua -e '...'       （自带 LuaJIT）
 ```
 
-- 阅读器必须已运行；默认 socket：`/tmp/native-reader-automation.sock`。
+- 默认 socket：`/tmp/native-reader-automation.sock`。
+- `open` 支持本地路径，也支持 `file://` / `dav://` / `davs://` / `smb://` / `sftp://`；后四者会自动转成 GVFS 挂载路径。
+- `reader-agent open <path> [page]` 会在阅读器未运行时**自动拉起**，再打开指定书；`reader-agent launch` 启动书库。
 - 可用 `READER_AUTOMATION_SOCK=/path.sock` 指定其他实例。
 - 仓库内直接用 `./tools/reader-agent`、`./tools/reader-lua`；安装后是 `~/.local/bin/reader-agent`、`~/.local/bin/reader-lua`。
 - 截图默认保存到 `$HOME`，文件名：`书名_左页_右页.png`（单页为 `书名_页.png`，同名自动 `-1`、`-2`）。
@@ -219,14 +221,17 @@ native-reader/
 
 ```bash
 # 已运行阅读器后
+reader-agent open /path/book.epub 1   # 没运行会自动启动
+reader-agent launch                   # 只启动书库
 reader-agent state
-reader-agent open /path/book.epub 1
 reader-agent text
 reader-agent read 5
 reader-agent toc.open
 reader-agent toc.select 3
 reader-agent toc.activate 3
 reader-agent search.open 罗马
+reader-agent open 'dav://192.168.1.53:5005/share/book.mobi' 25
+reader-agent history.clear
 reader-agent snapshot          # 只截书的内容页
 reader-agent zoom 1.25
 reader-agent pan 80
@@ -270,6 +275,8 @@ a:close()
 | `reader.bookmark.add/list/remove` | `{note}` / 无 / `{index}` |
 | `settings.get` / `settings.set` | 主题、font_size、line_factor、margin |
 | `library.scan/select/activate/close` | 书库 |
+| `history.remove` | `{index}` 或 `{path}`，清除阅读历史（保留书签） |
+| `history.clear` | 清空全部阅读历史（保留书签） |
 | `toc.open/select/activate/close` | 目录面板 |
 | `search.open/select/activate/close` | 搜索面板 |
 | `bookmark.open/select/activate/close` | 书签面板 |
@@ -293,6 +300,7 @@ a:search(q)              a:searchOpen(q)    a:searchSelect(i) a:searchActivate(i
 a:bookmarks()            a:bookmarkAdd(note) a:bookmarkRemove(index)
 a:settings()             a:setSettings(t)   a:settingsOpen(row) a:settingsAdjust(row, delta)
 a:library()              a:libraryOpen()    a:librarySelect(i)  a:libraryActivate(i)
+a:removeHistory(i, path) a:clearHistory()
 a:dual()                 a:maximize()       a:fullscreen()      a:eye()
 a:capture(path)          a:snapshot(path)   a:quit()
 a:read(count, opts)      a:turn(n, delay)   a:close()
@@ -399,8 +407,9 @@ tools/agent_reader.lua    # JSON CLI（改名复用）
 ./tools/package.sh
 ./tools/install.sh
 
+./tools/reader-agent open /path/book.epub 1   # 自动拉起 + 打开
+./tools/reader-agent launch
 ./tools/reader-agent state
-./tools/reader-agent open /path/book.epub 1
 ./tools/reader-agent text
 ./tools/reader-agent read 5
 ./tools/reader-agent snapshot
