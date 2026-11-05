@@ -247,22 +247,26 @@ header = require("ui.header").new({
 local function rebuild_header_actions() header:rebuild() end
 rebuild_header_actions()
 
+local textutil = require("ui.text")
+local utf8_chars = textutil.utf8_chars
+local truncate_utf8 = textutil.truncate_utf8
+
 chrome = require("ui.chrome").new({
-    v = v, sdl = sdl, ffi = ffi, S = S,
+    v = v, sdl = sdl, ffi = ffi, S = S, ttf = ttf, utf8_chars = utf8_chars,
     get_title = function() return title_text end,
     get_reader = function() return R end,
     get_fonts = function() return f_body, f_title, f_page end,
     get_theme = function() return theme end,
     get_w = function() return W end,
     get_h = function() return H end,
+    get_title_max_w = function()
+        return (header.st_x or W) - S(24) - S(16)
+    end,
 })
 v.refresh_text = function() chrome:refresh() end
 
 local epub = require("ui.epub")
-local textutil = require("ui.text")
 local txtmod = require("ui.txt")
-local utf8_chars = textutil.utf8_chars
-local truncate_utf8 = textutil.truncate_utf8
 
 local function txt_line_height()
     return txtmod.line_height(S(settings.font_size), settings.line_factor)
@@ -370,7 +374,11 @@ R = require("ui.reader").new({
     teardown_pages = function() teardown_pages() end,
     set_title = function(t) title_text = t end,
 })
-v.open_book = function(path, start) return R:open_book(path, start) end
+v.open_book = function(path, start)
+    local ok, err = R:open_book(path, start)
+    if not ok and err then v.show_toast(tostring(err), 5) end
+    return ok, err
+end
 v.open_chapter = function(idx, p) return R:open_chapter(idx, p) end
 v.normalize_book_path = function(path) return R:normalize(path) end
 

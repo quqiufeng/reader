@@ -18,6 +18,22 @@ function M:destroy()
     end
 end
 
+local function fit_width(ctx, font, text, max_w)
+    if not max_w or max_w <= 0 then return text end
+    local ttf, utf8_chars = ctx.ttf, ctx.utf8_chars
+    if not ttf or not utf8_chars or ttf.size(font, text) <= max_w then return text end
+    local ell = "…"
+    local ell_w = ttf.size(font, ell)
+    local out, acc = {}, 0
+    for ch in utf8_chars(text) do
+        local cw = ttf.size(font, ch)
+        if acc + cw + ell_w > max_w then break end
+        out[#out + 1] = ch
+        acc = acc + cw
+    end
+    return table.concat(out) .. ell
+end
+
 function M:refresh()
     local ctx = self.ctx
     local v, R = ctx.v, ctx.get_reader()
@@ -25,8 +41,10 @@ function M:refresh()
     local theme = ctx.get_theme()
 
     if self.title_tex then ctx.sdl.destroy_texture(self.title_tex); self.title_tex = nil end
+    local title = ctx.get_title()
+    local max_w = ctx.get_title_max_w and ctx.get_title_max_w()
     self.title_tex, self.title_w, self.title_h =
-        v.make_text(ctx.get_title(), f_title, theme.ink)
+        v.make_text(fit_width(ctx, f_title, title, max_w), f_title, theme.ink)
 
     local ptxt
     if R.chapter_mode then

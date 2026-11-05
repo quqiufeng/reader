@@ -125,6 +125,11 @@ do
     local path = os.tmpname()
     local f = assert(io.open(path, "w")); f:write("x"); f:close()
     check(r:normalize("file://" .. path) == path, "reader.normalize file://")
+
+    local max_bytes = reader.max_book_mb() * 1024 * 1024
+    check(reader.book_size(path) == 1, "reader.book_size")
+    check(not reader.exceeds_limit(max_bytes), "reader.size at limit")
+    check(reader.exceeds_limit(max_bytes + 1), "reader.size over limit")
     os.remove(path)
 end
 

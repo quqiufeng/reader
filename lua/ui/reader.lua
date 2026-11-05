@@ -11,6 +11,26 @@ local function url_decode(s)
     end))
 end
 
+local DEFAULT_MAX_MB = 200
+
+function M.max_book_mb()
+    local mb = tonumber(os.getenv("READER_MAX_BOOK_MB") or "")
+    if not mb or mb <= 0 then mb = DEFAULT_MAX_MB end
+    return mb
+end
+
+function M.book_size(path)
+    local f = io.open(path, "rb")
+    if not f then return nil end
+    local n = f:seek("end")
+    f:close()
+    return n
+end
+
+function M.exceeds_limit(size)
+    return size ~= nil and size > M.max_book_mb() * 1024 * 1024
+end
+
 function M.new(ctx)
     return setmetatable({
         ctx = ctx,
@@ -162,6 +182,11 @@ function M:open_book(path, start_page)
     local ctx = self.ctx
     local v = ctx.v
     path = self:normalize(path)
+    local size = M.book_size(path)
+    if M.exceeds_limit(size) then
+        return false, string.format("文件过大：%.1f MB（上限 %d MB）",
+            size / 1024 / 1024, M.max_book_mb())
+    end
     ctx.close_panels()
     ctx.reset_book()
     self.book = path
@@ -174,7 +199,7 @@ function M:open_book(path, start_page)
 
     local name = path:match("([^/]+)$") or path
     name = name:gsub("%.%w+$", "")
-    ctx.set_title(ctx.truncate_utf8(name, 14))
+    ctx.set_title(name)
     v.zoom = 1.0
     v.pan_x = 0
 
