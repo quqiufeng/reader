@@ -30,6 +30,8 @@ int   rd_render_region(void *handle, int page, float x0, float y0, float x1, flo
                        int max_w, int max_h, uint8_t **out, int *out_w, int *out_h, int *out_stride);
 int   rd_extract_book(const char *path, const char *out_dir);
 int   rd_touch_path(const char *path);
+int   rd_cache_remove_book(const char *book_path);
+int   rd_cache_clear(void);
 ]]
 
 local root = os.getenv("READER_ROOT") or "."
@@ -63,6 +65,14 @@ end
 
 function M.touch_path(path)
     return tonumber(lib.rd_touch_path(path))
+end
+
+function M.cache_remove_book(path)
+    return tonumber(lib.rd_cache_remove_book(path))
+end
+
+function M.cache_clear()
+    return tonumber(lib.rd_cache_clear())
 end
 
 function M.open(path, em, lf, margin)

@@ -289,6 +289,10 @@ char *rd_metadata_json(void *doc);
 int   rd_cover(void *doc, uint8_t **data, int *len);
 int   rd_thumbnail(void *doc, int w, int h, uint8_t **rgba);
 
+// 缓存（解包目录 / 转换出的 epub，删除历史时同步释放）
+int   rd_cache_remove_book(const char *book_path);
+int   rd_cache_clear(void);
+
 // 格式专用
 int   rd_mobi_to_epub(const char *in, const char *out);
 int   rd_mobi_raw_html(const char *in, char **html, char ***resources, int *n);

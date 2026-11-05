@@ -444,6 +444,67 @@ static const char *epub_cache_dir(void)
     return NULL;
 }
 
+static unsigned int cache_hash(const char *s)
+{
+    unsigned int h = 5381;
+    for (const unsigned char *p = (const unsigned char *)s; *p; p++)
+        h = h * 33u + *p;
+    return h;
+}
+
+/* 删除某本书的解包缓存；返回 1=已删除，0=不存在，<0=错误。 */
+int rd_cache_remove_book(const char *book_path)
+{
+    if (!book_path || !book_path[0]) return -1;
+    const char *cache = epub_cache_dir();
+    if (!cache) return -2;
+    char dir[PATH_MAX];
+    if (snprintf(dir, sizeof(dir), "%s/book_%08x", cache, cache_hash(book_path))
+        >= (int)sizeof(dir)) return -3;
+    struct stat st;
+    int removed = 0;
+    if (stat(dir, &st) == 0 && S_ISDIR(st.st_mode)) {
+        if (tree_remove(dir) != 0) return -4;
+        removed = 1;
+    }
+    const char *dot = strrchr(book_path, '.');
+    int src_is_epub = dot && strcasecmp(dot, ".epub") == 0;
+    if (!src_is_epub) {
+        char name[512];
+        path_basename_noext(book_path, name, sizeof(name));
+        char epub[PATH_MAX];
+        if (name[0] && snprintf(epub, sizeof(epub), "%s/%s.epub", cache, name)
+            < (int)sizeof(epub)) {
+            if (unlink(epub) == 0) removed = 1;
+        }
+    }
+    return removed;
+}
+
+/* 清空所有解包缓存（book_* 目录与转换出的 epub）；返回删除条目数。 */
+int rd_cache_clear(void)
+{
+    const char *cache = epub_cache_dir();
+    if (!cache) return -2;
+    DIR *d = opendir(cache);
+    if (!d) return -3;
+    int removed = 0;
+    struct dirent *de;
+    while ((de = readdir(d)) != NULL) {
+        if (de->d_name[0] == '.') continue;
+        int is_book = strncmp(de->d_name, "book_", 5) == 0;
+        size_t len = strlen(de->d_name);
+        int is_epub = len >= 5 && strcasecmp(de->d_name + len - 5, ".epub") == 0;
+        if (!is_book && !is_epub) continue;
+        char path[PATH_MAX];
+        if (snprintf(path, sizeof(path), "%s/%s", cache, de->d_name)
+            >= (int)sizeof(path)) continue;
+        if (tree_remove(path) == 0) removed++;
+    }
+    closedir(d);
+    return removed;
+}
+
 static int mobi_to_epub(const char *src, char *out, size_t outsz)
 {
     const char *cache = epub_cache_dir();

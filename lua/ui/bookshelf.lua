@@ -192,6 +192,8 @@ function M:remove_history(index)
     if not it then return false end
     clear_fields(self.ctx.get_progress()[it.path])
     self.ctx.save_state()
+    local rd = self.ctx.rd
+    if rd and rd.cache_remove_book then rd.cache_remove_book(it.path) end
     self:scan()
     self:refresh()
     print("history removed: " .. tostring(it.path))
@@ -204,6 +206,8 @@ function M:clear_history()
         clear_fields(rec)
     end
     self.ctx.save_state()
+    local rd = self.ctx.rd
+    if rd and rd.cache_clear then rd.cache_clear() end
     self:scan()
     self:refresh()
     print("history cleared")

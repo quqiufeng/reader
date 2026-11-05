@@ -427,7 +427,7 @@ st = require("ui.settings").new({
 
 lib = require("ui.bookshelf").new({
     v = v, sdl = sdl, ttf = ttf, panel = panel, ffi = ffi, ren = ren, S = S,
-    set_color = set_color, library = library,
+    set_color = set_color, library = library, rd = rd,
     get_theme = function() return theme end,
     get_wh = function() return W, H end,
     get_fonts = function() return f_body, f_title, f_page end,
