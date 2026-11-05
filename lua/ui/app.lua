@@ -46,6 +46,8 @@ local v = {
     toast = nil, toast_tex = nil, toast_w = 0, toast_h = 0, toast_until = 0,
     dialog = nil,
     rects = {}, links = {},
+    tex = nil, tex_w = 0, tex_h = 0, line_texs = {},
+    save_pending = false, save_due = 0,
 }
 v.pcache = require("ui.page_cache").new(sdl, 4)
 
@@ -172,24 +174,16 @@ end
 local progress = store.load(state_file)
 
 local R
+local render
+local chrome
+local settingsctl
 local running = true
 
-local tex, tex_w, tex_h = nil, 0, 0
-local line_texs = {}
 local title_text = ""
-local title_tex, title_w, title_h
-local page_tex, page_w, page_h
 
 local function teardown_pages()
-    if tex then sdl.destroy_texture(tex); tex = nil end
-    if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
-    if v.pcache then v.pcache:clear() end
-    for _, t in ipairs(line_texs) do sdl.destroy_texture(t.tex) end
-    line_texs = {}
-    if title_tex then sdl.destroy_texture(title_tex); title_tex = nil end
-    if page_tex then sdl.destroy_texture(page_tex); page_tex = nil end
-    tex_w, tex_h = 0, 0
-    v.p2w, v.p2h = 0, 0
+    if render then render:teardown() end
+    if chrome then chrome:destroy() end
 end
 
 local toc
@@ -212,20 +206,24 @@ local function book_rec()
     return rec
 end
 
-function v.save_progress()
+function v.save_progress(force)
     if not R.book then return end
     local rec = book_rec()
     rec.page = R.page
     rec.updated = os.time()
     if R.chapter_mode and R.chapters and #R.chapters > 0 then
         rec.chapter = R.chapter_idx
-        local frac = R.total > 0 and ((R.page + 1) / R.total) or 0
-        rec.percent = ((R.chapter_idx - 1) + frac) * 100.0 / #R.chapters
     else
         rec.chapter = nil
-        rec.percent = R.total > 0 and ((R.page + 1) * 100.0 / R.total) or 0
     end
-    store.save_state(state_file, progress)
+    if force then
+        store.save_state(state_file, progress)
+        v.save_pending = false
+        v.save_due = 0
+    elseif not v.save_pending then
+        v.save_pending = true
+        v.save_due = v.now() + 1.0
+    end
 end
 
 function v.make_text(text, font, c)
@@ -255,28 +253,16 @@ header = require("ui.header").new({
 local function rebuild_header_actions() header:rebuild() end
 rebuild_header_actions()
 
-function v.refresh_text()
-    if title_tex then sdl.destroy_texture(title_tex); title_tex = nil end
-    title_tex, title_w, title_h = v.make_text(title_text, f_title, theme.ink)
-
-    if page_tex then sdl.destroy_texture(page_tex); page_tex = nil end
-    local ptxt
-    if R.chapter_mode then
-        if (v.fs or v.dual) and R.page + 2 <= R.total then
-            ptxt = string.format("第 %d-%d 页", R.page + 1, R.page + 2)
-        else
-            ptxt = string.format("第 %d 页", R.page + 1)
-        end
-    elseif (v.fs or v.dual) and not R.is_txt and R.doc and R.page > 0 and R.page + 2 <= R.total then
-        ptxt = string.format("%d-%d / %d", R.page + 1, R.page + 2, R.total)
-    else
-        ptxt = string.format("%d / %d", R.page + 1, R.total)
-    end
-    if v.zoom and v.zoom ~= 1 then
-        ptxt = ptxt .. string.format(" · %d%%", math.floor(v.zoom * 100 + 0.5))
-    end
-    page_tex, page_w, page_h = v.make_text(ptxt, f_page, theme.muted)
-end
+chrome = require("ui.chrome").new({
+    v = v, sdl = sdl, ffi = ffi, S = S,
+    get_title = function() return title_text end,
+    get_reader = function() return R end,
+    get_fonts = function() return f_body, f_title, f_page end,
+    get_theme = function() return theme end,
+    get_w = function() return W end,
+    get_h = function() return H end,
+})
+v.refresh_text = function() chrome:refresh() end
 
 local epub = require("ui.epub")
 local textutil = require("ui.text")
@@ -319,7 +305,7 @@ local function close_book()
     toc:close()
     bm:close()
     st:close()
-    v.save_progress()
+    v.save_progress(true)
     R:close()
     teardown_pages()
     v.sy = 0
@@ -368,167 +354,6 @@ v.page_bg_rgb = function()
     return p[1], p[2], p[3]
 end
 
-v.content_sig = function()
-    local spread, _, _, avail_h, target_w = v.view_metrics()
-    return v.view.signature({
-        spread = spread, target_w = target_w, reflow = v.reflow,
-        avail_h = avail_h, zoom = v.zoom,
-        font_size = settings.font_size,
-        line_factor = settings.line_factor,
-        margin = settings.margin,
-        dark = settings.theme == "dark",
-        page_bg = (v.reflow and settings.theme ~= "dark") and settings.theme or 0,
-    })
-end
-
-v.max_scroll = function()
-    local _, _, _, avail_h = v.view_metrics()
-    local mh = math.max(tex_h or 0, v.p2h or 0)
-    return math.max(0, mh - avail_h)
-end
-
-v.relayout = function(frac)
-    if not v.reflow or not R.doc then return end
-    local _, _, _, avail_h, target_w = v.view_metrics()
-    local layout_w = v.view.layout_width(target_w)
-    local margin = math.min(settings.margin, math.floor(layout_w / 8))
-    local nt, hit = v.layout:apply(R.doc, layout_w, avail_h,
-        settings.font_size, settings.line_factor, margin)
-    if hit then return end
-    if nt and nt > 0 then
-        R.total = nt
-        R.page = math.max(0, math.min(R.total - 1,
-            math.floor((frac or 0) * R.total)))
-    end
-end
-
-v.load_links = function(idx)
-    local arr = {}
-    local raw = rd.page_links(R.doc, idx)
-    if raw then
-        for line in raw:gmatch("[^\n]+") do
-            local x0, y0, x1, y1, tp, ty = line:match(
-                "([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(%-?%d+)\t([^\t]+)")
-            if tp then
-                arr[#arr + 1] = {
-                    x0 = tonumber(x0), y0 = tonumber(y0),
-                    x1 = tonumber(x1), y1 = tonumber(y1),
-                    page = tonumber(tp), y = tonumber(ty) or 0,
-                }
-            end
-        end
-    end
-    v.links[idx] = arr
-end
-
-v.render_into = function(idx, target_w)
-    local pw = rd.page_size(R.doc, idx)
-    local z = tonumber(zoom) or 1.2
-    if pw and pw > 0 then z = target_w / pw end
-    z = math.max(0.05, math.min(8.0, z))
-    local br, bg, bb = v.page_bg_rgb()
-    local pixels, w, h, stride = rd.render_page(R.doc, idx, z, br, bg, bb)
-    if not pixels then return nil end
-    if settings.theme == "dark" then
-        invert_rgba(pixels, w, h, stride or (w * 4))
-    end
-    local t = sdl.create_texture(ren, w, h)
-    if not t then rd.free(pixels); return nil end
-    sdl.update_texture(t, pixels, stride or (w * 4))
-    rd.free(pixels)
-    return t, w, h
-end
-
-function v.load_page(n, keep_scroll)
-    local sig = v.content_sig()
-    local invalidate = v.pending_layout or sig ~= v.content_sig_value
-    if invalidate then
-        v.pcache:clear()
-        if tex then sdl.destroy_texture(tex); tex = nil end
-        if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
-    else
-        if tex then
-            v.pcache:put(sig .. ":" .. R.page, { tex = tex, w = tex_w, h = tex_h })
-            tex = nil
-        end
-        if v.p2 then
-            v.pcache:put(sig .. ":" .. (R.page + 1),
-                { tex = v.p2, w = v.p2w, h = v.p2h })
-            v.p2 = nil
-        end
-    end
-    for _, t in ipairs(line_texs) do sdl.destroy_texture(t.tex) end
-    line_texs = {}
-    tex_w, tex_h, v.p2w, v.p2h = 0, 0, 0, 0
-
-    if R.is_txt then
-        local lines = R.pages and R.pages[n + 1]
-        if not lines then return false end
-        for _, line in ipairs(lines) do
-            local w, h = ttf.size(f_body, line)
-            local t = ttf.render_texture(ren, f_body, line,
-                theme.text[1], theme.text[2], theme.text[3], 255)
-            if t then line_texs[#line_texs + 1] = { tex = t, w = w, h = h } end
-        end
-        tex_w, tex_h = W, H
-        R.page = n
-        v.sy = 0
-        v.refresh_text()
-        v.content_sig_value = v.content_sig()
-        print(string.format("[reader] txt page %d/%d", R.page + 1, R.total))
-        return true
-    end
-
-    if v.pending_layout and v.reflow then
-        v.pending_layout = false
-        local frac = R.total > 0 and (n / R.total) or 0
-        v.relayout(frac)
-        n = R.page
-    end
-
-    local spread, _, _, _, target_w = v.view_metrics()
-    if spread and n == 0 and not R.chapter_mode then
-        target_w = math.max(160, W - S(48))
-    end
-    target_w = math.floor(target_w * v.zoom)
-    sig = v.content_sig()
-    local ce = v.pcache:take(sig .. ":" .. n)
-    if ce then
-        tex, tex_w, tex_h = ce.tex, ce.w, ce.h
-    else
-        tex, tex_w, tex_h = v.render_into(n, target_w)
-    end
-    if not tex then return false end
-    if spread and (n > 0 or R.chapter_mode) and n + 1 < R.total then
-        local ce2 = v.pcache:take(sig .. ":" .. (n + 1))
-        if ce2 then
-            v.p2, v.p2w, v.p2h = ce2.tex, ce2.w, ce2.h
-        else
-            v.p2, v.p2w, v.p2h = v.render_into(n + 1, target_w)
-        end
-    end
-    R.page = n
-    v.pan_x = 0
-    v.links = {}
-    v.load_links(R.page)
-    if v.p2 then v.load_links(R.page + 1) end
-    v.sy = keep_scroll and (v.sy or 0) or 0
-    v.sy = math.max(0, math.min(v.max_scroll(), v.sy))
-    v.refresh_text()
-    v.content_sig_value = sig
-    v.prefetch = nil
-    if R.chapter_mode then
-        local step = spread and 2 or 1
-        local np = n + step
-        if np < R.total then
-            v.prefetch = { sig = sig, page = np, target_w = target_w }
-        end
-    end
-    print(string.format("[reader] page %d/%d  %dx%d%s", R.page + 1, R.total,
-        tex_w, tex_h, v.p2 and " (+1)" or ""))
-    return true
-end
-
 local function url_decode(s)
     return (s:gsub("%%(%x%x)", function(h)
         return string.char(tonumber(h, 16))
@@ -555,16 +380,31 @@ v.open_book = function(path, start) return R:open_book(path, start) end
 v.open_chapter = function(idx, p) return R:open_chapter(idx, p) end
 v.normalize_book_path = function(path) return R:normalize(path) end
 
+render = require("ui.render").new({
+    v = v, rd = rd, sdl = sdl, ttf = ttf, ren = ren, S = S, settings = settings,
+    get_reader = function() return R end,
+    get_w = function() return W end,
+    get_h = function() return H end,
+    get_font_body = function() return f_body end,
+    get_theme = function() return theme end,
+    invert_rgba = function(pixels, w, h, stride) invert_rgba(pixels, w, h, stride) end,
+})
+v.content_sig = function() return render:content_sig() end
+v.max_scroll = function() return render:max_scroll() end
+v.relayout = function(frac) return render:relayout(frac) end
+v.load_links = function(idx) return render:load_links(idx) end
+v.render_into = function(idx, tw) return render:render_into(idx, tw) end
+v.load_page = function(n, keep) return render:load_page(n, keep) end
+
 local function draw_page()
     v.content.draw({
         sdl = sdl, ffi = ffi, ren = ren, W = W, H = H, S = S,
         set_color = set_color,
         is_txt = R.is_txt, settings = settings, theme = theme,
-        line_texs = line_texs, tex = tex, tex_w = tex_w, tex_h = tex_h,
+        line_texs = v.line_texs, tex = v.tex, tex_w = v.tex_w, tex_h = v.tex_h,
         v = v, page = R.page, total = R.total,
         txt_line_height = txt_line_height,
-        title_tex = title_tex, title_w = title_w, title_h = title_h,
-        page_tex = page_tex, page_w = page_w, page_h = page_h,
+        chrome = chrome,
         header = header,
     })
 end
@@ -578,46 +418,7 @@ local function cycle(list, value, delta)
     return list[idx]
 end
 
-local function apply_settings()
-    local font_changed = body_size ~= settings.font_size
-    local line_changed = v.last_line ~= settings.line_factor
-    local margin_changed = v.last_margin ~= settings.margin
-    local old_dark = theme == THEMES.dark
-    local old_theme = v.last_theme
-
-    if font_changed then
-        local nf = ttf.open(font_regular, S(settings.font_size)) or f_page
-        local old = f_body
-        f_body = nf
-        body_size = settings.font_size
-        if old and old ~= f_page and old ~= nf then ttf.close(old) end
-    end
-    theme = THEMES[settings.theme] or THEMES.light
-    local new_dark = theme == THEMES.dark
-    v.last_line = settings.line_factor
-    v.last_margin = settings.margin
-    v.last_theme = settings.theme
-
-    rebuild_header_actions()
-    store.save_settings(settings_file, settings)
-
-    local style_changed = font_changed or line_changed or margin_changed
-    if R.total > 0 then
-        if R.is_txt then
-            R:build_txt(R.book)
-            R.page = math.max(0, math.min(R.total - 1, R.page))
-            v.load_page(R.page)
-        elseif R.reflow and style_changed then
-            R:restyle()
-        elseif v.pending_layout or old_dark ~= new_dark
-            or (v.reflow and old_theme ~= settings.theme) then
-            v.load_page(R.page)
-        end
-    end
-    v.refresh_text()
-    if st and st.open then st:refresh() end
-    if lib and lib.open then lib:refresh() end
-end
+local function apply_settings() return settingsctl:apply() end
 
 st = require("ui.settings").new({
     v = v, sdl = sdl, ttf = ttf, panel = panel, ren = ren, S = S,
@@ -648,6 +449,23 @@ lib = require("ui.bookshelf").new({
     quit = function() running = false end,
 })
 
+settingsctl = require("ui.settings_apply").new({
+    v = v, settings = settings, ttf = ttf, S = S,
+    font_regular = font_regular, themes = THEMES,
+    get_reader = function() return R end,
+    get_body_size = function() return body_size end,
+    set_body_size = function(n) body_size = n end,
+    get_font_body = function() return f_body end,
+    set_font_body = function(f) f_body = f end,
+    get_font_page = function() return f_page end,
+    get_theme = function() return theme end,
+    set_theme = function(t) theme = t end,
+    rebuild_header = function() rebuild_header_actions() end,
+    save_settings = function() store.save_settings(settings_file, settings) end,
+    get_st = function() return st end,
+    get_lib = function() return lib end,
+})
+
 browser = require("ui.browser").new({
     v = v, rd = rd, sdl = sdl, ttf = ttf, panel = panel, ffi = ffi, ren = ren, S = S,
     get_theme = function() return theme end,
@@ -664,27 +482,45 @@ browser = require("ui.browser").new({
 })
 v.open_browser = function(start) browser:show(start) end
 
-v.choose_book = function()
-    local cmd
-    if os.execute("command -v zenity >/dev/null 2>&1") == 0 then
-        cmd = string.format('zenity --file-selection --title=%q --filename=%q',
-            "选择电子书", (v.last_browse_dir or home) .. "/")
-    elseif os.execute("command -v kdialog >/dev/null 2>&1") == 0 then
-        cmd = string.format('kdialog --getopenfilename %q', v.last_browse_dir or home)
-    else
-        v.open_browser()
-        return
-    end
-    if v.dialog then return end
-    local out = os.tmpname()
-    local done = out .. ".done"
-    os.remove(out)
-    os.remove(done)
-    os.execute(string.format(
-        "( timeout 300 %s > %q 2>/dev/null; : > %q ) &", cmd, out, done))
-    v.dialog = { out = out, done = done, started = v.now() }
-    v.show_toast("请选择电子书…", 2)
-end
+local filedialog = require("ui.file_dialog").new({
+    v = v, home = home,
+    open_browser = function() v.open_browser() end,
+    open_book = function(path, start) return v.open_book(path, start) end,
+    show_toast = function(text, secs) v.show_toast(text, secs) end,
+    now = function() return v.now() end,
+})
+v.choose_book = function() filedialog:choose() end
+
+local nav = require("ui.nav").new({
+    v = v, settings = settings, S = S,
+    get_reader = function() return R end,
+    get_w = function() return W end,
+    apply_settings = function() apply_settings() end,
+    rebuild_header = function() rebuild_header_actions() end,
+    cycle = cycle, theme_order = THEME_ORDER,
+    lib = lib, toc = toc, bm = bm, st = st, browser = browser,
+})
+local function turn(delta) return nav:turn(delta) end
+v.scroll_by = function(dy) return nav:scroll(dy) end
+v.set_zoom = function(z) return nav:zoom(z) end
+v.pan = function(dx) return nav:pan(dx) end
+local function toggle_dual() nav:toggle_dual() end
+local function toggle_eye() nav:toggle_eye() end
+local function go_back(allow_window) return nav:go_back(allow_window) end
+
+local winmod = require("ui.window").new({
+    v = v, sdl = sdl, win = win, lib = lib, S = S,
+    get_reader = function() return R end,
+    get_w = function() return W end,
+    get_h = function() return H end,
+    set_wh = function(w, h) W, H = w, h end,
+    sync_scale = function() sync_scale() end,
+    rebuild_header = function() rebuild_header_actions() end,
+})
+v.toggle_fs = function() return winmod:toggle_fs() end
+v.toggle_max = function() return winmod:toggle_max() end
+v.ensure_content_size = function() return winmod:ensure_content_size() end
+local function apply_resize(nw, nh) return winmod:apply_resize(nw, nh) end
 
 v.close_panels = function()
     if toc.open then toc:close() end
@@ -720,232 +556,6 @@ local function draw()
     sdl.render_present(ren)
 end
 
-local function turn(delta)
-    local n
-    if v.spread_mode() then
-        if R.chapter_mode then
-            n = (delta > 0) and (R.page + 2) or (R.page - 2)
-        elseif delta > 0 then
-            n = (R.page == 0) and 1 or (R.page + 2)
-        else
-            n = (R.page <= 1) and 0 or (R.page - 2)
-        end
-    else
-        n = R.page + delta
-    end
-
-    if R.chapter_mode and R.chapters then
-        if delta > 0 and n >= R.total then
-            if R.chapter_idx < #R.chapters then
-                v.open_chapter(R.chapter_idx + 1, 0)
-                v.save_progress()
-            end
-            return
-        elseif delta < 0 and n < 0 then
-            if R.chapter_idx > 1 then
-                v.open_chapter(R.chapter_idx - 1, -1)
-                v.save_progress()
-            end
-            return
-        end
-    end
-
-    if n < 0 then n = 0 end
-    if n >= R.total then return end
-    if n ~= R.page then
-        v.load_page(n)
-        v.save_progress()
-    end
-end
-
-v.scroll_by = function(dy)
-    if R.is_txt or not tex then return end
-    local maxs = v.max_scroll()
-    if maxs <= 0 then
-        if dy > 0 then turn(1) elseif dy < 0 then turn(-1) end
-        return
-    end
-    if dy > 0 and v.sy >= maxs then
-        turn(1)
-    elseif dy < 0 and v.sy <= 0 then
-        turn(-1)
-    else
-        v.sy = math.max(0, math.min(maxs, v.sy + dy))
-    end
-end
-
-v.set_zoom = function(z)
-    z = math.max(0.5, math.min(3.0, z))
-    if math.abs(z - v.zoom) < 0.001 then return end
-    v.zoom = z
-    v.pan_x = 0
-    v.sy = 0
-    if R.book then v.load_page(R.page) end
-    v.dirty = true
-end
-
-v.pan = function(dx)
-    local total_w = tex_w + (v.p2 and (S(5) + v.p2w) or 0)
-    local maxp = math.max(0, math.floor((total_w - W) / 2))
-    v.pan_x = math.max(-maxp, math.min(maxp, (v.pan_x or 0) + dx))
-    v.dirty = true
-end
-
-v.toggle_fs = function()
-    if not v.fs and v.max then
-        v.max = false
-        sdl.restore_window(win)
-        sdl.delay(40)
-    end
-    v.fs = not v.fs
-    sdl.set_window_fullscreen(win, v.fs)
-    sdl.delay(60)
-    v.resize_pending = true
-    v.resize_due = v.now() + 0.05
-    v.resize_target_w, v.resize_target_h = v.window_target_size()
-    v.resize_last_w, v.resize_last_h = nil, nil
-    rebuild_header_actions()
-    if lib and lib.open then lib:refresh() end
-    v.dirty = true
-end
-
-v.toggle_max = function()
-    if v.fs then
-        v.fs = false
-        sdl.set_window_fullscreen(win, false)
-        sdl.delay(60)
-    end
-    v.max = not v.max
-    v.dual = v.max
-    v.auto_dual = v.max
-    if v.max then
-        sdl.maximize_window(win)
-    else
-        sdl.restore_window(win)
-    end
-    sdl.delay(80)
-    v.resize_pending = true
-    v.resize_due = v.now() + 0.05
-    v.resize_target_w, v.resize_target_h = v.window_target_size()
-    v.resize_last_w, v.resize_last_h = nil, nil
-    rebuild_header_actions()
-    if lib and lib.open then lib:refresh() end
-    v.dirty = true
-end
-
-local function toggle_dual()
-    v.dual = not v.dual
-    rebuild_header_actions()
-    if lib and lib.open then lib:refresh() end
-    v.sy = 0
-    v.pending_layout = v.reflow
-    if R.book then v.load_page(R.page) end
-    v.refresh_text()
-end
-
-local function toggle_eye()
-    settings.theme = cycle(THEME_ORDER, settings.theme, 1)
-    apply_settings()
-end
-
-local function go_back()
-    if browser.open then
-        browser:close()
-    elseif toc.open then
-        toc:close()
-    elseif bm.open then
-        bm:close()
-    elseif st.open then
-        st:close()
-    elseif v.fs then
-        v.toggle_fs()
-    elseif v.max then
-        v.toggle_max()
-    elseif R.book then
-        lib:show()
-    end
-end
-
-v.ensure_content_size = function()
-    local dirty = false
-    if lib.open and (lib.ui_w ~= W or lib.ui_h ~= H) then
-        lib:refresh()
-        dirty = true
-    end
-    if R.book and not R.is_txt and tex then
-        local spread, _, _, _, tw = v.view_metrics()
-        if spread and R.page == 0 then tw = math.max(160, W - S(48)) end
-        local expected = math.floor(tw * (v.zoom or 1) + 0.5)
-        if math.abs((tex_w or 0) - expected) > 2 or
-           (v.p2 and math.abs((v.p2w or 0) - expected) > 2) then
-            v.pending_layout = v.reflow
-            v.load_page(R.page)
-            dirty = true
-        end
-    end
-    return dirty
-end
-
-local function apply_resize(nw, nh)
-    local mode_changed = false
-    if not v.fs then
-        local flags = sdl.get_window_flags(win)
-        local ismax = require("bit").band(flags, sdl.WINDOW_MAXIMIZED) ~= 0
-        if ismax then
-            if not v.max then
-                v.auto_dual = not v.dual
-                mode_changed = true
-            end
-            v.max = true
-            v.dual = true
-        else
-            if v.max then
-                if v.auto_dual then v.dual = false end
-                v.auto_dual = false
-                mode_changed = true
-            end
-            v.max = false
-        end
-    end
-
-    if not nw or not nh or nw <= 0 or nh <= 0 then
-        nw, nh = v.window_target_size()
-    end
-    if not nw or nw <= 0 or nh <= 0 then
-        if not mode_changed then return false end
-        nw, nh = W, H
-    end
-    local size_changed = nw ~= W or nh ~= H
-    if not size_changed and not mode_changed and not v.pending_layout then
-        return false
-    end
-    W, H = nw, nh
-    sync_scale()
-    if not v.fs and not v.max then
-        local ww, wh = sdl.get_window_size(win)
-        v.win_w, v.win_h = ww or nw, wh or nh
-        v.win_x, v.win_y = sdl.get_window_position(win)
-    end
-
-    if R.is_txt and R.book and size_changed then
-        R:build_txt(R.book)
-        R.page = math.max(0, math.min(R.total - 1, R.page))
-    end
-    local sig = v.content_sig()
-    local content_changed = sig ~= v.content_sig_value or v.pending_layout
-    rebuild_header_actions()
-    if lib and lib.open then lib:refresh() end
-    v.sy = 0
-    if R.book and content_changed then
-        v.pending_layout = v.reflow
-        v.load_page(R.page)
-    else
-        v.content_sig_value = sig
-        v.refresh_text()
-    end
-    return true
-end
-
 if v.startup_sync and shot == "" then
     v.pending_initial = { book = initial_book, page = initial_page }
 elseif initial_book ~= "" then
@@ -960,7 +570,7 @@ local screenshot = require("ui.screenshot").new({
     get_w = function() return W end,
     get_h = function() return H end,
     get_page = function() return R.page end,
-    get_tex = function() return tex, tex_w end,
+    get_tex = function() return v.tex, v.tex_w end,
     get_is_txt = function() return R.is_txt end,
     get_doc = function() return R.doc end,
     get_book = function() return R.book end,
@@ -977,12 +587,12 @@ local input = require("ui.input").new({
     v = v, sdl = sdl, rd = rd, S = S, header = header,
     browser = browser, toc = toc, bm = bm, st = st, lib = lib,
     get_page = function() return R.page end,
-    get_tex_h = function() return tex_h end,
+    get_tex_h = function() return v.tex_h end,
     get_is_txt = function() return R.is_txt end,
     get_doc = function() return R.doc end,
     get_w = function() return W end,
     turn = function(n) turn(n) end,
-    go_back = function() go_back() end,
+    go_back = function(allow) go_back(allow) end,
     toggle_dual = function() toggle_dual() end,
     toggle_eye = function() toggle_eye() end,
     choose_book = function() v.choose_book() end,
@@ -1047,7 +657,6 @@ end
 local function cleanup()
     if server then server:stop(); server = nil end
     if browser.open then browser:close() end
-    v.save_progress()
     close_book()
     if lib.open then lib:destroy() end
     header:destroy()
@@ -1100,30 +709,11 @@ while running do
 
     local now = v.now()
     toast:tick(now)
-    if v.dialog then
-        local df = io.open(v.dialog.done, "rb")
-        if df then
-            df:close()
-            local pf = io.open(v.dialog.out, "rb")
-            local chosen = pf and pf:read("*l") or nil
-            if pf then pf:close() end
-            os.remove(v.dialog.out)
-            os.remove(v.dialog.done)
-            v.dialog = nil
-            if chosen and chosen ~= "" then
-                local ok, err = v.open_book(chosen, nil)
-                if not ok then
-                    print("open failed: " .. tostring(err))
-                    v.show_toast("打开失败：" .. tostring(err), 3)
-                end
-            end
-            v.dirty = true
-        elseif now >= (v.dialog.started or now) + 310 then
-            os.remove(v.dialog.out)
-            os.remove(v.dialog.done)
-            v.dialog = nil
-            v.dirty = true
-        end
+    if filedialog:poll(now) then v.dirty = true end
+    if v.save_pending and now >= v.save_due then
+        store.save_state(state_file, progress)
+        v.save_pending = false
+        v.save_due = 0
     end
     if v.startup_sync and now >= v.startup_at then
         v.startup_sync = false

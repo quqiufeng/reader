@@ -122,7 +122,7 @@ function M:mouse_down(x, y, button)
     local v, S = ctx.v, ctx.S
     local browser, toc, bm, st, lib = ctx.browser, ctx.toc, ctx.bm, ctx.st, ctx.lib
     if button == 3 then
-        ctx.go_back()
+        ctx.go_back(false)
     elseif browser.open then
         if y >= browser.top and y < browser.top + browser.visible * browser.line_h then
             local idx = browser.first + math.floor((y - browser.top) / browser.line_h)
@@ -290,7 +290,7 @@ end
 function M:key_content(k, mod)
     local ctx = self.ctx
     local v, sdl = ctx.v, ctx.sdl
-    if k == sdl.SDLK_ESCAPE then ctx.go_back()
+    if k == sdl.SDLK_ESCAPE then ctx.go_back(true)
     elseif k == sdl.SDLK_Q then ctx.quit()
     elseif k == sdl.SDLK_C then ctx.toggle_dual()
     elseif k == sdl.SDLK_E then ctx.toggle_eye()

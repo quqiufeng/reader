@@ -42,11 +42,6 @@ function M:data()
 end
 
 function M:page(b)
-    local total = self.ctx.get_total()
-    if b.percent and b.percent > 0 and total > 0 then
-        local p = math.floor((b.percent / 100) * total + 0.5) - 1
-        return math.max(0, math.min(total - 1, p))
-    end
     return b.page or 0
 end
 
@@ -74,13 +69,6 @@ function M:add(note)
             return false, "bookmark exists"
         end
     end
-    local pct
-    if R.chapter_mode and R.chapters and #R.chapters > 0 then
-        local frac = total > 0 and ((page + 1) / total) or 0
-        pct = ((R.chapter_idx - 1) + frac) * 100.0 / #R.chapters
-    else
-        pct = total > 0 and ((page + 1) * 100.0 / total) or 0
-    end
     local label
     if R.chapter_mode then
         label = string.format("第 %d 章 · 第 %d 页", R.chapter_idx, page + 1)
@@ -90,14 +78,14 @@ function M:add(note)
     rec.bookmarks[#rec.bookmarks + 1] = {
         page = page,
         chapter = cur_ch,
-        percent = pct,
         note = (note and note ~= "") and note or label,
         created = os.time(),
     }
     table.sort(rec.bookmarks, function(a, b)
-        local ap = a.percent or ((a.page or 0) + 1)
-        local bp = b.percent or ((b.page or 0) + 1)
-        return ap < bp
+        if (a.chapter or 1) ~= (b.chapter or 1) then
+            return (a.chapter or 1) < (b.chapter or 1)
+        end
+        return (a.page or 0) < (b.page or 0)
     end)
     ctx.store.save_state(ctx.state_file, ctx.get_progress())
     return true

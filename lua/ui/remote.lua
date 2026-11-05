@@ -23,13 +23,6 @@ function M:state()
         return { library = true, count = #lib.items, library_dir = lib.dir }
     end
     local page, total = ctx.get_page(), ctx.get_total()
-    local pct
-    if R.chapter_mode and R.chapters and #R.chapters > 0 then
-        local frac = total > 0 and ((page + 1) / total) or 0
-        pct = ((R.chapter_idx - 1) + frac) * 100.0 / #R.chapters
-    else
-        pct = total > 0 and ((page + 1) * 100.0 / total) or 0
-    end
     local s = ctx.settings
     return {
         book = ctx.get_book(),
@@ -38,7 +31,6 @@ function M:state()
         chapter = R.chapter_mode and R.chapter_idx or nil,
         chapters = R.chapter_mode and R.chapters and #R.chapters or nil,
         chapter_pages = R.chapter_mode and total or nil,
-        percent = math.floor(pct * 10 + 0.5) / 10,
         bookmarks = #bm:data(),
         format = ctx.get_is_txt() and "txt" or "doc",
         theme = s.theme,

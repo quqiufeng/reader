@@ -12,7 +12,6 @@ local FMT_MAP = {
 local function clear_fields(rec)
     if not rec then return end
     rec.page = 0
-    rec.percent = nil
     rec.updated = nil
 end
 
@@ -73,7 +72,6 @@ function M:scan()
         seen[it.path] = true
         local rec = progress[it.path]
         if rec then
-            it.percent = rec.percent or 0
             it.updated = (rec.updated and rec.updated > 0) and rec.updated or 0
             self.items[#self.items + 1] = it
         end
@@ -91,7 +89,6 @@ function M:scan()
                     path = path,
                     name = path:match("([^/]+)$") or path,
                     format = FMT_MAP[ext] or ext:upper(),
-                    percent = rec.percent or 0,
                     updated = (rec.updated and rec.updated > 0) and rec.updated or 0,
                 }
             end

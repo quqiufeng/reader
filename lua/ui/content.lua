@@ -10,8 +10,7 @@ function M.draw(c)
     local tex, tex_w, tex_h = c.tex, c.tex_w, c.tex_h
     local v, page, total = c.v, c.page, c.total
     local txt_line_height = c.txt_line_height
-    local title_tex, title_w, title_h = c.title_tex, c.title_w, c.title_h
-    local page_tex, page_w, page_h = c.page_tex, c.page_w, c.page_h
+    local chrome = c.chrome
 
     set_color(theme.paper)
     sdl.render_clear(ren)
@@ -93,24 +92,11 @@ function M.draw(c)
     end
 
     if not v.fs then
-        if title_tex then
-            local r = ffi.new("SDL_Rect")
-            r.x, r.y, r.w, r.h = S(24), S(18), title_w, title_h
-            sdl.render_copy(ren, title_tex, nil, r)
-        end
+        chrome:draw_title(ren)
         c.header:draw(ren)
     end
 
-    if page_tex then
-        local r = ffi.new("SDL_Rect")
-        if v.fs then
-            r.x, r.y = math.floor((W - page_w) / 2), H - page_h - S(12)
-        else
-            r.x, r.y = W - page_w - S(24), H - S(38)
-        end
-        r.w, r.h = page_w, page_h
-        sdl.render_copy(ren, page_tex, nil, r)
-    end
+    chrome:draw_footer(ren)
 
     local bar_x = v.fs and S(16) or S(24)
     local bar_w = W - 2 * bar_x
