@@ -96,8 +96,17 @@
 
 - MuPDF 默认使用 `/opt/mupdf/build/shared-release/libmupdf.so`；可用 `MUPDF_ROOT` / `MUPDF_LIB` 覆盖。
 - LuaJIT 已静态编入 `native-reader`，cjson 已随包内置，不需要系统 luajit。
-- 安装：`./tools/package.sh && ./tools/install.sh`；安装目录 `~/.local/share/native-reader`，命令 `~/.local/bin/native-reader`。
+- 发布包：`./tools/package.sh` 只生成 `dist/`；需要可分发安装时再执行 `./tools/install.sh`（安装到 `~/.local/share/native-reader`，覆盖应用文件、保留数据）。
 - 安装会保留 `settings.lua` / `state.lua` / `window.lua`。
+
+### 3.1 启动版本规则（桌面/命令启动 = 仓库最新构建）
+
+- 桌面图标、`~/.local/bin/native-reader` 指向仓库 `tools/launch.sh` → `tools/run.sh` → `build/native-reader` + 仓库 `lua/` / `assets/`。
+- 所以 `./tools/build.sh` 后**重启 app** 就用最新二进制；`./tools/run.sh` 与桌面启动是同一份，不再有“旧安装快照”。
+- `./tools/package.sh` 只生成 `dist/` 发布包，不覆盖运行版本；需要安装到 `~/.local/share/native-reader` 时才用 `./tools/install.sh`。
+- 数据目录仍是 `~/.local/share/native-reader/`（`state.lua` / `settings.lua` / `window.lua`）；清理该目录里的应用文件时不要删这三个。
+- 仓库路径变化后，要同步更新：`~/.local/bin/native-reader` 软链、桌面文件 `Exec` / `Icon`。
+- 验收：`readlink -f ~/.local/bin/native-reader` 应指向仓库 `tools/launch.sh`；C 改动后必须 `./tools/build.sh` 重编 `build/native-reader`。
 - 自动化验收优先用 `app.snapshot`（书内容）或 `app.capture`（整窗）。
 
 ## 4. 截图与视觉验收
@@ -105,7 +114,7 @@
 - **书内容验收**：`app.snapshot` → 只截页面内容，双栏合成一张，保存到 `$HOME`。
 - **UI 验收**：`app.capture` → 截整个窗口（含工具栏/页脚），用于调试布局。
 - **兜底**：`automation/x11.lua` 的 `w:capture(path)`（FFI `ak_capture`）。
-- 截图后用 **Read 读图**，检查：布局、字体、图片、主题、分页、目录、搜索结果。
+- 截图后用 **Read 读图**，检查：布局、字体、图片、主题、分页、目录。
 - 关键画面存 golden：`testdata/golden/<backend>/<case>.png`；视觉变更需人工确认后再更新 golden。
 - 失败时同时保存 `expected.png` 与 `actual.png`。
 
@@ -119,7 +128,7 @@
    - 本机样本：`/home/quqiufeng/Downloads/book`，清单 `testdata/samples.lua`；
      `READER_BOOK_DIR` 可覆盖；不把电子书复制进仓库。
    - 当前样本：2×PDF、1×EPUB、2×MOBI、1×AZW3（均无 DRM）。
-3. **交互**：next / prev、goto、TOC、搜索、书签、主题 / 字体、缩放、双页、RTL。
+3. **交互**：next / prev、goto、TOC、书签、主题 / 字体、缩放、双页、RTL。
 4. **视觉**：关键页截图 + golden 对比 / 读图。
 5. **回归矩阵**：格式 × 功能 × 主题。
 6. **健壮性**：损坏文件、超大文件、缺字体、DRM、路径穿越、ZIP 炸弹（限制解压大小 / 比例）。
@@ -229,7 +238,6 @@ reader-agent read 5
 reader-agent toc.open
 reader-agent toc.select 3
 reader-agent toc.activate 3
-reader-agent search.open 罗马
 reader-agent open 'dav://192.168.1.53:5005/share/book.mobi' 25
 reader-agent history.clear
 reader-agent snapshot          # 只截书的内容页
@@ -255,7 +263,7 @@ a:close()
 
 点击动作（`click(id)` / `reader-agent click <id>`）：
 `reader.next` `reader.prev` `app.toc` `app.bookmarks` `app.settings`
-`app.search` `app.library` `app.fullscreen` `app.maximize` `app.dual`
+`app.library` `app.fullscreen` `app.maximize` `app.dual`
 `app.eye` `app.quit`
 
 调用函数（`call(fn,args)`）：
@@ -271,14 +279,12 @@ a:close()
 | `reader.zoom` | `{zoom}` 或 `{z}`，0.5–3.0 |
 | `reader.pan` | `{dx}` 水平平移 |
 | `reader.toc` | 不打开面板；PDF/TXT 返回 `{page,title}`，EPUB/MOBI/AZW3 返回 `{chapter,title}` |
-| `reader.search` | `{q}`；PDF/TXT 全书搜索，EPUB/MOBI/AZW3 仅当前章（UI 搜索已关闭） |
 | `reader.bookmark.add/list/remove` | `{note}` / 无 / `{index}`；重排格式书签含 `chapter` |
 | `settings.get` / `settings.set` | 主题、font_size、line_factor、margin |
 | `library.scan/select/activate/close` | 书库 |
 | `history.remove` | `{index}` 或 `{path}`，清除阅读历史（保留书签） |
 | `history.clear` | 清空全部阅读历史（保留书签） |
 | `toc.open/select/activate/close` | 目录面板 |
-| `search.open/select/activate/close` | 搜索面板 |
 | `bookmark.open/select/activate/close` | 书签面板 |
 | `settings.open/adjust/close` | 设置面板 |
 | `app.capture` | `{path}` 截整个窗口（调试用） |
@@ -296,7 +302,6 @@ a:openBook(path, page)   a:closeBook()      a:state()
 a:next()                 a:prev()           a:goto(page) / a:gotoChapter(ch, page)
 a:text(page)             a:scroll(dy)      a:zoom(z)       a:pan(dx)
 a:toc()                  a:tocOpen()        a:tocSelect(i)  a:tocActivate(i)
-a:search(q)              a:searchOpen(q)    a:searchSelect(i) a:searchActivate(i)
 a:bookmarks()            a:bookmarkAdd(note) a:bookmarkRemove(index)
 a:settings()             a:setSettings(t)   a:settingsOpen(row) a:settingsAdjust(row, delta)
 a:library()              a:libraryOpen()    a:librarySelect(i)  a:libraryActivate(i)
@@ -401,11 +406,11 @@ tools/agent_reader.lua    # JSON CLI（改名复用）
 ## 11. 常用命令速查
 
 ```bash
-./tools/build.sh
-./tools/run.sh
+./tools/build.sh                # 编译；桌面启动直接用它（重启 app 生效）
+./tools/run.sh                  # 开发运行（仓库 build/）
 ./tools/test.sh
-./tools/package.sh
-./tools/install.sh
+./tools/package.sh              # 只生成发布包 dist/
+./tools/install.sh              # 可选：把发布包安装到 ~/.local/share/native-reader
 
 ./tools/reader-agent open /path/book.epub 1   # 自动拉起 + 打开
 ./tools/reader-agent launch

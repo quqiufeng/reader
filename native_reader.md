@@ -17,7 +17,6 @@
 - 打开 PDF / EPUB / MOBI / AZW3 / TXT / CHM / CBZ / CBR
 - 目录、翻页、跳转、阅读进度、书签
 - 字体、字号、行距、页边距、主题（日间/夜间/护眼）
-- 搜索（当前书内）
 - 图片、封面、表格、代码块、脚注链接
 - 高 DPI、鼠标/触控板/键盘、拖拽打开文件
 - 本地书库、最近阅读、封面缓存
@@ -397,7 +396,7 @@ end
 
 ### 9.2 阅读器 UI
 
-- 顶部：返回、书名、目录、搜索、更多
+- 顶部：返回、书名、目录、书签、设置、更多
 - 底部：进度条、页码、主题、字体
 - 侧栏：目录树、书签、笔记
 - 设置：字体、字号、行距、页边距、翻页动画、日夜模式
@@ -751,7 +750,6 @@ return M
 | `reader.next` / `reader.prev` | 下一页/上一页，章末自动切章 |
 | `reader.goto` | `{page}` 章内页；`{chapter,page}` 跳章；PDF/TXT 为全书页号 |
 | `reader.toc` | 目录 JSON；PDF/TXT 为 `page`，重排格式为 `chapter` |
-| `reader.search` | PDF/TXT 全书搜索；EPUB/MOBI/AZW3 仅当前章 |
 | `reader.bookmark.add/list/remove` | 书签 |
 | `reader.highlight.add/list` | 高亮/笔记 |
 | `settings.get/set` | 主题、字体、字号、行距、边距、单双页 |
@@ -769,10 +767,10 @@ return M
    - 本机样本：`/home/quqiufeng/Downloads/book`，清单 `testdata/samples.lua`；`READER_BOOK_DIR` 可覆盖。
    - 当前覆盖：2×PDF、1×EPUB、2×MOBI、1×AZW3（均无 DRM）；TXT/CHM/CBZ 待补样本。
 3. **交互测试**
-   - next/prev、goto chapter、TOC 跳转、搜索、书签、主题/字体、缩放、双页、RTL。
+   - next/prev、goto chapter、TOC 跳转、书签、主题/字体、缩放、双页、RTL。
 4. **视觉验收**
    - 固定窗口尺寸/DPI/字体，截图后与 golden 对比（像素 diff 或人工 Read）。
-   - 关键画面：封面、正文首屏、夜间模式、设置页、目录、搜索结果。
+   - 关键画面：封面、正文首屏、夜间模式、设置页、目录。
 5. **回归矩阵**
    - 格式 × 功能 × 主题；每次提交跑冒烟 + 关键视觉。
 6. **健壮性**

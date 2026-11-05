@@ -7,7 +7,6 @@
 --   reader-agent next 2
 --   reader-agent goto 3 | goto-chapter 5 1   # 章内页 / 第5章第1页
 --   reader-agent toc | toc.open | toc.select 3 | toc.activate 3
---   reader-agent search 关键词 | search.open 关键词
 --   reader-agent settings | settings.open 1 | settings.adjust 2 1
 --   reader-agent capture /tmp/page.png
 --
@@ -119,18 +118,6 @@ elseif cmd == "toc.select" then
     emit(a:tocSelect(num(2), num(3)))
 elseif cmd == "toc.activate" then
     emit(a:tocActivate(num(2)))
-elseif cmd == "search" then
-    emit(a:search(arg[2] or ""))
-elseif cmd == "search.open" then
-    emit(a:searchOpen(arg[2]))
-elseif cmd == "search.close" then
-    emit(a:searchClose())
-elseif cmd == "search.toggle" then
-    emit(a:toggleSearch())
-elseif cmd == "search.select" then
-    emit(a:searchSelect(num(2), num(3)))
-elseif cmd == "search.activate" then
-    emit(a:searchActivate(num(2)))
 elseif cmd == "bookmarks" then
     emit(a:bookmarks())
 elseif cmd == "bookmark" then
@@ -199,7 +186,7 @@ elseif cmd == "raw" then
 elseif cmd == "quit" then
     emit(a:quit())
 else
-    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|search|bookmark|library|history|settings|scroll|zoom|pan|capture|snapshot|quit")
+    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|bookmark|library|history|settings|scroll|zoom|pan|capture|snapshot|quit")
     os.exit(2)
 end
 

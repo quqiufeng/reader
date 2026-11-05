@@ -2,6 +2,7 @@ local ffi = require("ffi")
 
 ffi.cdef [[
 void *rd_open(const char *path, int *err);
+void *rd_open_styled(const char *path, float em, float lf, float margin, int *err);
 void  rd_close(void *handle);
 int   rd_page_count(void *handle);
 int   rd_page_size(void *handle, int page, float *w, float *h);
@@ -24,7 +25,6 @@ char *rd_page_text(void *handle, int page);
 char *rd_list_dir(const char *path);
 char *rd_page_fonts(void *handle, int page);
 char *rd_page_links(void *handle, int page);
-char *rd_search(void *handle, const char *query, int start_page, int max_hits);
 int   rd_extract_book(const char *path, const char *out_dir);
 int   rd_touch_path(const char *path);
 ]]
@@ -62,9 +62,14 @@ function M.touch_path(path)
     return tonumber(lib.rd_touch_path(path))
 end
 
-function M.open(path)
+function M.open(path, em, lf, margin)
     local err = ffi.new("int[1]")
-    local h = lib.rd_open(path, err)
+    local h
+    if em and em > 0 then
+        h = lib.rd_open_styled(path, em, lf or 1.6, margin or 72, err)
+    else
+        h = lib.rd_open(path, err)
+    end
     if h == nil then return nil, tonumber(err[0]) end
     return h
 end
@@ -166,18 +171,6 @@ function M.toc(h)
             level = tonumber(level),
             title = title,
         }
-    end
-    return out
-end
-
-function M.search(h, query, start_page, max_hits)
-    local p = lib.rd_search(h, query, start_page or 0, max_hits or 50)
-    if p == nil then return {} end
-    local s = ffi.string(p)
-    lib.rd_free(p)
-    local out = {}
-    for page, count in s:gmatch("(%d+)\t(%d+)\n") do
-        out[#out + 1] = { page = tonumber(page), count = tonumber(count) }
     end
     return out
 end

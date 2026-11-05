@@ -25,9 +25,4 @@ function M.layout_width(target_w)
     return math.max(600, target_w or 600)
 end
 
-function M.layout_key(layout_w, avail_h, font_size, line_factor, margin)
-    return string.format("%d:%d:%d:%.2f:%d",
-        layout_w, avail_h, font_size, line_factor, margin)
-end
-
 return M

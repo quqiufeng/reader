@@ -33,11 +33,13 @@ function M.save_state(path, progress)
     if not f then return false end
     f:write("return {\n")
     for p, rec in pairs(progress) do
-        f:write(string.format("[%q]={page=%d,updated=%d,percent=%.1f,bookmarks={\n",
-            p, rec.page or 0, rec.updated or 0, rec.percent or 0))
+        f:write(string.format("[%q]={page=%d,chapter=%s,updated=%d,percent=%.1f,bookmarks={\n",
+            p, rec.page or 0, rec.chapter and tostring(rec.chapter) or "nil",
+            rec.updated or 0, rec.percent or 0))
         for _, b in ipairs(rec.bookmarks or {}) do
-            f:write(string.format("{page=%d,percent=%.3f,note=%q,created=%d},\n",
-                b.page or 0, b.percent or 0, b.note or "", b.created or 0))
+            f:write(string.format("{page=%d,chapter=%s,percent=%.3f,note=%q,created=%d},\n",
+                b.page or 0, b.chapter and tostring(b.chapter) or "nil",
+                b.percent or 0, b.note or "", b.created or 0))
         end
         f:write("}},\n")
     end

@@ -16,7 +16,10 @@ end
 
 function M:put(key, entry)
     if not key or not entry or not entry.tex then return end
-    if self.map[key] then self:take(key) end
+    if self.map[key] then
+        local old = self:take(key)
+        if old and old.tex then self.sdl.destroy_texture(old.tex) end
+    end
     self.map[key] = entry
     self.order[#self.order + 1] = key
     while #self.order > self.max do

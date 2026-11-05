@@ -466,7 +466,27 @@ static int mobi_to_epub(const char *src, char *out, size_t outsz)
     return 0;
 }
 
-void *rd_open(const char *path, int *err)
+
+static void build_user_css(char *css, size_t n, float em, float lf, float margin)
+{
+    if (em < 4) em = 22;
+    if (lf < 1) lf = 1.6;
+    if (margin < 0) margin = 0;
+    snprintf(css, n,
+        "body{margin:0;padding:0 %.0fpx;font-size:%.0fpt !important;font-style:normal !important;}"
+        "p{font-size:%.0fpt !important;font-style:normal !important;margin:0 0 0.8em 0;line-height:%.2f !important;text-align:justify;}"
+        "i,em{font-style:normal !important;}"
+        "*{font-family:sans-serif !important;font-style:normal !important;}"
+        "p,div,section,li,blockquote,td{font-size:%.0fpt !important;line-height:%.2f !important;}"
+        "div,section{width:auto!important;max-width:100%%!important;}"
+        "img{max-width:100%%!important;height:auto!important;}"
+        "table{max-width:100%%!important;}"
+        "a{color:#1B365D;text-decoration:none;}"
+        "pre,code{white-space:pre-wrap;}",
+        margin, em, em, lf, em, lf);
+}
+
+static void *rd_open_impl(const char *path, int *err, float em, float lf, float margin)
 {
     if (err) *err = 0;
     if (!path) {
@@ -489,16 +509,22 @@ void *rd_open(const char *path, int *err)
     fz_install_load_system_font_funcs(h->ctx, rd_load_system_font,
                                       rd_load_cjk_font, rd_load_fallback_font);
     fz_register_document_handlers(h->ctx);
-    fz_set_user_css(h->ctx,
-        "body{margin:0;padding:0;font-style:normal !important;}"
-        "p{margin:0 0 0.8em 0;line-height:1.6;text-align:justify;font-style:normal !important;}"
-        "i,em{font-style:normal !important;}"
-        "div,section{width:auto!important;max-width:100%!important;}"
-        "img{max-width:100%!important;height:auto!important;}"
-        "table{max-width:100%!important;}"
-        "a{color:#1B365D;text-decoration:none;}"
-        "*{font-family:sans-serif !important;font-style:normal !important;}"
-        "pre,code{white-space:pre-wrap;}");
+    if (em > 0) {
+        char css[1024];
+        build_user_css(css, sizeof(css), em, lf, margin);
+        fz_set_user_css(h->ctx, css);
+    } else {
+        fz_set_user_css(h->ctx,
+            "body{margin:0;padding:0;font-style:normal !important;}"
+            "p{margin:0 0 0.8em 0;line-height:1.6;text-align:justify;font-style:normal !important;}"
+            "i,em{font-style:normal !important;}"
+            "div,section{width:auto!important;max-width:100%!important;}"
+            "img{max-width:100%!important;height:auto!important;}"
+            "table{max-width:100%!important;}"
+            "a{color:#1B365D;text-decoration:none;}"
+            "*{font-family:sans-serif !important;font-style:normal !important;}"
+            "pre,code{white-space:pre-wrap;}");
+    }
 
     char epub_path[PATH_MAX];
     const char *open_path = path;
@@ -516,7 +542,7 @@ void *rd_open(const char *path, int *err)
     fz_try(h->ctx) {
         h->doc = fz_open_document(h->ctx, open_path);
         if (fz_is_document_reflowable(h->ctx, h->doc)) {
-            fz_layout_document(h->ctx, h->doc, 600, 800, 12);
+            fz_layout_document(h->ctx, h->doc, 600, 800, em > 0 ? em : 12);
         }
     }
     fz_catch(h->ctx) {
@@ -526,6 +552,16 @@ void *rd_open(const char *path, int *err)
         return NULL;
     }
     return h;
+}
+
+void *rd_open(const char *path, int *err)
+{
+    return rd_open_impl(path, err, 0, 0, 0);
+}
+
+void *rd_open_styled(const char *path, float em, float lf, float margin, int *err)
+{
+    return rd_open_impl(path, err, em, lf, margin);
 }
 
 void rd_close(void *handle)
@@ -683,19 +719,7 @@ int rd_layout(void *handle, float w, float h, float em,
     if (margin < 0) margin = 0;
 
     char css[1024];
-    snprintf(css, sizeof(css),
-        "body{margin:0;padding:0 %.0fpx;font-size:%.1fpt !important;font-style:normal !important;}"
-        "p{margin:0 0 0.8em 0;line-height:%.2f;text-align:justify;font-size:1em !important;font-style:normal !important;}"
-        "i,em{font-style:normal !important;}"
-        "*{font-family:sans-serif !important;font-style:normal !important;}"
-        "div,li,blockquote,td{font-size:1em !important;}"
-        "div,section{width:auto!important;max-width:100%%!important;}"
-        "img{max-width:100%%!important;height:auto!important;}"
-        "table{max-width:100%%!important;}"
-        "a{color:#1B365D;text-decoration:none;}"
-        "pre,code{white-space:pre-wrap;}",
-        margin, em, line_factor);
-
+    build_user_css(css, sizeof(css), em, line_factor, margin);
     int n = -1;
     fz_try(d->ctx) {
         fz_set_user_css(d->ctx, css);
@@ -925,54 +949,6 @@ char *rd_page_text(void *handle, int page_no)
         fz_drop_buffer(h->ctx, buf);
     }
     return result;
-}
-
-char *rd_search(void *handle, const char *query, int start_page, int max_hits)
-{
-    rd_doc *h = (rd_doc *)handle;
-    if (!h || !h->doc || !query || query[0] == 0) return NULL;
-
-    int total = 0;
-    fz_try(h->ctx) {
-        total = fz_count_pages(h->ctx, h->doc);
-    }
-    fz_catch(h->ctx) {
-        return NULL;
-    }
-    if (total <= 0) return NULL;
-    if (start_page < 0 || start_page >= total) start_page = 0;
-    if (max_hits <= 0) max_hits = 50;
-
-    char *buf = NULL;
-    size_t len = 0, cap = 0;
-    int hits = 0;
-    clock_t t0 = clock();
-
-    fz_try(h->ctx) {
-        for (int k = 0; k < total && hits < max_hits; k++) {
-            int p = (start_page + k) % total;
-            int marks[16];
-            fz_quad quads[16];
-            int n = fz_search_page_number(h->ctx, h->doc, p, query,
-                                          marks, quads, 16);
-            if (n > 0) {
-                char line[64];
-                snprintf(line, sizeof(line), "%d\t%d\n", p, n);
-                buf_append(&buf, &len, &cap, line);
-                hits += n;
-            }
-            if ((clock() - t0) * 1000 / CLOCKS_PER_SEC > 5000) break;
-        }
-    }
-    fz_catch(h->ctx) {
-        /* return partial results */
-    }
-
-    if (!buf) {
-        buf = (char *)malloc(1);
-        if (buf) buf[0] = 0;
-    }
-    return buf;
 }
 
 int rd_render_page(void *handle, int page_no, float zoom,

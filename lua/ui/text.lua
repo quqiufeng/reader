@@ -29,13 +29,4 @@ function M.truncate_utf8(s, max_chars)
     return table.concat(out)
 end
 
-function M.remove_last_utf8(s)
-    local i = #s
-    while i > 0 and s:byte(i) >= 0x80 and s:byte(i) < 0xC0 do
-        i = i - 1
-    end
-    if i > 0 then i = i - 1 end
-    return s:sub(1, i)
-end
-
 return M

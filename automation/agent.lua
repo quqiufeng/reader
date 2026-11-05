@@ -73,11 +73,6 @@ end
 function Agent:text(page) return decode(self.c:text(page)) end
 function Agent:toc() return decode(self.c:call("reader.toc")) end
 
-function Agent:search(q)
-    return decode(self.c:call("reader.search",
-        ('{"q":%s}'):format(encode(q))))
-end
-
 function Agent:bookmarks() return decode(self.c:call("reader.bookmark.list")) end
 
 function Agent:bookmarkAdd(note)
@@ -138,17 +133,6 @@ function Agent:tocSelect(index, delta)
 end
 function Agent:tocActivate(index)
     return self:call("toc.activate", { index = index })
-end
-
--- 搜索
-function Agent:searchOpen(q) return self:call("search.open", { q = q }) end
-function Agent:searchClose() return self:call("search.close") end
-function Agent:toggleSearch() return decode(self.c:call("app.search")) end
-function Agent:searchSelect(index, delta)
-    return self:call("search.select", { index = index, delta = delta })
-end
-function Agent:searchActivate(index)
-    return self:call("search.activate", { index = index })
 end
 
 -- 书签

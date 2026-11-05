@@ -3,7 +3,6 @@ local M = {}
 
 local ORDER = {
     { "browser", "browser" },
-    { "search", "search" },
     { "toc", "toc" },
     { "bookmarks", "bookmarks" },
     { "settings", "settings" },

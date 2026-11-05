@@ -37,12 +37,6 @@ a:tocSelect(1)
 a:tocActivate(1)
 check((a:state() or {}).state ~= nil, "toc.activate")
 
-local s = a:search("the")
-check(s and s.results ~= nil, "search")
-local so = a:searchOpen("the")
-check(so and so.open == true, "search.open")
-a:searchClose()
-
 local before = (a:state() or {}).state
 local bm = a:bookmarkAdd("agent-ci")
 check(bm and bm.ok, "bookmark.add")

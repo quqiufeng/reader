@@ -101,9 +101,6 @@ function M:text(page)
   end
   return self:call('reader.text')
 end
-function M:search(q)
-  return self:call('reader.search', ('{"q":%s}'):format(jstr(q)))
-end
 function M:bookmarkAdd(note)
   return self:call('reader.bookmark.add', ('{"note":%s}'):format(jstr(note)))
 end
