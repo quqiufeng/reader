@@ -10,33 +10,55 @@ function M.read_text(p)
 end
 
 -- MuPDF 对空行内锚点 (<a id="x"></a>) 解析到页首；把 id 移到紧随其后的
--- 标签上，锚点才能落到真实位置。按文件加标记，只处理一次。
-function M.fix_anchors(path)
-    if not path then return false end
-    local ext = path:lower():match("%.([%w]+)$")
-    if ext ~= "html" and ext ~= "xhtml" and ext ~= "htm" then return false end
-    local marker = path .. ".anchors-v1"
-    local mf = io.open(marker, "rb")
-    if mf then mf:close(); return false end
-    local data = M.read_text(path)
-    if not data then return false end
-    local out, n = data:gsub(
+-- 标签上，锚点才能落到真实位置。行内 font-style: italic/oblique 还会让
+-- MuPDF 把整章渲染成斜体（用户 CSS 也压不住），一并去掉。
+-- 按文件加标记，只处理一次。
+local function strip_italic(style)
+    style = style:gsub("font%-style%s*:%s*[Ii][Tt][Aa][Ll][Ii][Cc]%s*;?", "")
+    style = style:gsub("font%-style%s*:%s*[Oo][Bb][Ll][Ii][Qq][Uu][Ee]%s*;?", "")
+    return style
+end
+
+local function normalize(data)
+    local out = data
+    out = out:gsub(
         '<a id="([^"]+)"></a>(%s*)<([%a][%w:_.-]*)([^>]*)>',
         function(id, ws, tag, attrs)
             if attrs:find("id=", 1, true) then return nil end
             return '<a></a>' .. ws .. "<" .. tag .. ' id="' .. id .. '"' .. attrs .. ">"
         end)
-    if n > 0 and out ~= data then
+    out = out:gsub('style="([^"]*)"', function(style)
+        return 'style="' .. strip_italic(style) .. '"'
+    end)
+    out = out:gsub("style='([^']*)'", function(style)
+        return "style='" .. strip_italic(style) .. "'"
+    end)
+    return out
+end
+
+function M.fix_anchors(path)
+    if not path then return false end
+    local ext = path:lower():match("%.([%w]+)$")
+    if ext ~= "html" and ext ~= "xhtml" and ext ~= "htm" then return false end
+    local marker = path .. ".normalize-v2"
+    local mf = io.open(marker, "rb")
+    if mf then mf:close(); return false end
+    local data = M.read_text(path)
+    if not data then return false end
+    local out = normalize(data)
+    if out ~= data then
         local tmp = path .. ".tmp"
         local w = io.open(tmp, "wb")
         if not w then return false end
         w:write(out)
         w:close()
-        os.rename(tmp, path)
+        local ok = os.rename(tmp, path)
+        if not ok then return false end
     end
     local mk = io.open(marker, "wb")
     if mk then mk:write("1\n"); mk:close() end
-    return n > 0
+    os.remove(path .. ".anchors-v1")
+    return out ~= data
 end
 
 function M.unescape(s)

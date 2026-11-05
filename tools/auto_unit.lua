@@ -57,15 +57,19 @@ do
 
     local path = os.tmpname() .. ".html"
     local f = assert(io.open(path, "wb"))
-    f:write('<p><a href="#x">x</a></p><a id="x"></a><p class="c">target</p>')
+    f:write('<p><a href="#x">x</a></p><a id="x"></a><p class="c">target</p>'
+        .. '<span style="font-style: italic;">en</span>'
+        .. "<span style='font-style: oblique;'>fr</span>"
+        .. '<p style="font-style: italic;">block</p>')
     f:close()
     check(epub.fix_anchors(path), "epub.fix_anchors rewrites")
     local s = assert(io.open(path, "rb")):read("*a")
-    check(s == '<p><a href="#x">x</a></p><a></a><p id="x" class="c">target</p>',
-        "epub.fix_anchors moves id")
+    check(s == '<p><a href="#x">x</a></p><a></a><p id="x" class="c">target</p>'
+        .. '<span style="">en</span><span style=\'\'>fr</span><p style="">block</p>',
+        "epub.fix_anchors moves id and strips italic")
     check(not epub.fix_anchors(path), "epub.fix_anchors idempotent")
     os.remove(path)
-    os.remove(path .. ".anchors-v1")
+    os.remove(path .. ".normalize-v2")
 end
 
 -- store: 保存/读取（保留 chapter，百分比已移除）
