@@ -836,6 +836,159 @@ char *rd_page_links(void *handle, int page_no)
     return buf;
 }
 
+char *rd_page_images(void *handle, int page_no)
+{
+    rd_doc *h = (rd_doc *)handle;
+    if (!h || !h->doc) return NULL;
+
+    fz_page *page = NULL;
+    fz_stext_page *text = NULL;
+    char *buf = NULL;
+    size_t len = 0, cap = 0;
+
+    fz_try(h->ctx) {
+        page = fz_load_page(h->ctx, h->doc, page_no);
+        fz_rect sb = fz_bound_page(h->ctx, page);
+        float sw = sb.x1 - sb.x0;
+        float sh = sb.y1 - sb.y0;
+        fz_stext_options opts = { 0 };
+        opts.flags = FZ_STEXT_PRESERVE_IMAGES;
+        text = fz_new_stext_page_from_page(h->ctx, page, &opts);
+        if (sw > 0 && sh > 0) {
+            for (fz_stext_block *b = text->first_block; b; b = b->next) {
+                if (b->type != FZ_STEXT_BLOCK_IMAGE) continue;
+                float x0 = (b->bbox.x0 - sb.x0) / sw;
+                float y0 = (b->bbox.y0 - sb.y0) / sh;
+                float x1 = (b->bbox.x1 - sb.x0) / sw;
+                float y1 = (b->bbox.y1 - sb.y0) / sh;
+                if (x1 - x0 <= 0.002f || y1 - y0 <= 0.002f) continue;
+                char line[128];
+                snprintf(line, sizeof(line), "%.6f\t%.6f\t%.6f\t%.6f\n",
+                         x0, y0, x1, y1);
+                buf_append(&buf, &len, &cap, line);
+            }
+        }
+    }
+    fz_catch(h->ctx) {
+    }
+
+    if (text) fz_drop_stext_page(h->ctx, text);
+    if (page) fz_drop_page(h->ctx, page);
+    if (!buf) {
+        buf = (char *)malloc(1);
+        if (buf) buf[0] = 0;
+    }
+    return buf;
+}
+
+int rd_render_region(void *handle, int page_no,
+                     float x0, float y0, float x1, float y1,
+                     int max_w, int max_h,
+                     uint8_t **out, int *out_w, int *out_h, int *out_stride)
+{
+    rd_doc *h = (rd_doc *)handle;
+    if (!h || !h->doc || !out || !out_w || !out_h || !out_stride) return -1;
+    if (max_w < 16) max_w = 1024;
+    if (max_h < 16) max_h = 1024;
+    if (x0 < 0) x0 = 0;
+    if (y0 < 0) y0 = 0;
+    if (x1 > 1) x1 = 1;
+    if (y1 > 1) y1 = 1;
+
+    fz_page *page = NULL;
+    fz_pixmap *pix = NULL;
+
+    fz_try(h->ctx) {
+        page = fz_load_page(h->ctx, h->doc, page_no);
+        fz_rect b = fz_bound_page(h->ctx, page);
+        float sw = b.x1 - b.x0, sh = b.y1 - b.y0;
+        if (sw <= 0 || sh <= 0) fz_throw(h->ctx, FZ_ERROR_ARGUMENT, "bad page");
+        float rx0 = b.x0 + x0 * sw, ry0 = b.y0 + y0 * sh;
+        float rx1 = b.x0 + x1 * sw, ry1 = b.y0 + y1 * sh;
+        float rw = rx1 - rx0, rh = ry1 - ry0;
+        if (rw <= 0 || rh <= 0) fz_throw(h->ctx, FZ_ERROR_ARGUMENT, "bad region");
+
+        float needw = (float)max_w / rw, needh = (float)max_h / rh;
+        float zoom = needw < needh ? needw : needh;
+        if (zoom < 0.1f) zoom = 0.1f;
+        if (zoom > 8.0f) zoom = 8.0f;
+        float cap = 3000.0f / (sw > sh ? sw : sh);
+        if (zoom > cap) zoom = cap;
+        if (zoom < 0.1f) zoom = 0.1f;
+
+        pix = fz_new_pixmap_from_page(h->ctx, page, fz_scale(zoom, zoom),
+                                      fz_device_rgb(h->ctx), 1);
+    }
+    fz_catch(h->ctx) {
+        if (pix) fz_drop_pixmap(h->ctx, pix);
+        if (page) fz_drop_page(h->ctx, page);
+        return -2;
+    }
+
+    fz_rect b = fz_bound_page(h->ctx, page);
+    float sw = b.x1 - b.x0, sh = b.y1 - b.y0;
+    float rx0 = b.x0 + x0 * sw, ry0 = b.y0 + y0 * sh;
+    float rx1 = b.x0 + x1 * sw, ry1 = b.y0 + y1 * sh;
+    float needw = (float)max_w / (rx1 - rx0), needh = (float)max_h / (ry1 - ry0);
+    float zoom = needw < needh ? needw : needh;
+    if (zoom < 0.1f) zoom = 0.1f;
+    if (zoom > 8.0f) zoom = 8.0f;
+    float cap = 3000.0f / (sw > sh ? sw : sh);
+    if (zoom > cap) zoom = cap;
+
+    int ox = (int)(rx0 * zoom + 0.5f) - pix->x;
+    int oy = (int)(ry0 * zoom + 0.5f) - pix->y;
+    int ow = (int)((rx1 - rx0) * zoom + 0.999f);
+    int oh = (int)((ry1 - ry0) * zoom + 0.999f);
+    if (ox < 0) { ow += ox; ox = 0; }
+    if (oy < 0) { oh += oy; oy = 0; }
+    if (ox + ow > pix->w) ow = pix->w - ox;
+    if (oy + oh > pix->h) oh = pix->h - oy;
+    if (ow < 1 || oh < 1) {
+        fz_drop_pixmap(h->ctx, pix);
+        fz_drop_page(h->ctx, page);
+        return -3;
+    }
+
+    int n = pix->n;
+    int pstride = (int)pix->stride;
+    uint8_t *buf = (uint8_t *)malloc((size_t)ow * (size_t)oh * 4);
+    if (!buf) {
+        fz_drop_pixmap(h->ctx, pix);
+        fz_drop_page(h->ctx, page);
+        return -4;
+    }
+    for (int y = 0; y < oh; y++) {
+        const uint8_t *src = pix->samples + (size_t)(oy + y) * (size_t)pstride + (size_t)ox * n;
+        uint8_t *dst = buf + (size_t)y * (size_t)ow * 4;
+        if (n >= 4) {
+            for (int x = 0; x < ow; x++) {
+                uint8_t a = src[x * n + 3];
+                int inv = 255 - a;
+                dst[x * 4 + 0] = (uint8_t)(src[x * n + 0] + (255 * inv + 127) / 255);
+                dst[x * 4 + 1] = (uint8_t)(src[x * n + 1] + (255 * inv + 127) / 255);
+                dst[x * 4 + 2] = (uint8_t)(src[x * n + 2] + (255 * inv + 127) / 255);
+                dst[x * 4 + 3] = 255;
+            }
+        } else {
+            for (int x = 0; x < ow; x++) {
+                uint8_t v = src[x * n];
+                dst[x * 4 + 0] = v;
+                dst[x * 4 + 1] = v;
+                dst[x * 4 + 2] = v;
+                dst[x * 4 + 3] = 255;
+            }
+        }
+    }
+    fz_drop_pixmap(h->ctx, pix);
+    fz_drop_page(h->ctx, page);
+    *out = buf;
+    *out_w = ow;
+    *out_h = oh;
+    *out_stride = ow * 4;
+    return 0;
+}
+
 char *rd_list_dir(const char *path)
 {
     DIR *dir = opendir(path ? path : ".");

@@ -64,6 +64,104 @@ function M:load_links(idx)
     v.links[idx] = arr
 end
 
+function M:load_images(idx)
+    local ctx = self.ctx
+    local v, R = ctx.v, ctx.get_reader()
+    local arr = {}
+    local raw = ctx.rd.page_images(R.doc, idx)
+    if raw then
+        for line in raw:gmatch("[^\n]+") do
+            local x0, y0, x1, y1 = line:match("([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)")
+            if x0 then
+                arr[#arr + 1] = {
+                    x0 = tonumber(x0), y0 = tonumber(y0),
+                    x1 = tonumber(x1), y1 = tonumber(y1),
+                }
+            end
+        end
+    end
+    v.images[idx] = arr
+end
+
+function M:preview(page, img)
+    local ctx = self.ctx
+    local v, R = ctx.v, ctx.get_reader()
+    local W, H, S = ctx.get_w(), ctx.get_h(), ctx.S
+    local maxw = W - S(96)
+    local maxh = H - S(160)
+    local px, w, h, stride = ctx.rd.render_region(R.doc, page,
+        img.x0, img.y0, img.x1, img.y1, maxw, maxh)
+    if not px then return false end
+    self:close_preview()
+    local t = ctx.sdl.create_texture(ctx.ren, w, h)
+    if not t then ctx.rd.free(px); return false end
+    ctx.sdl.update_texture(t, px, stride)
+    ctx.rd.free(px)
+    v.preview = { tex = t, w = w, h = h, zoom = 1, pan_x = 0, pan_y = 0 }
+    v.dirty = true
+    return true
+end
+
+function M:close_preview()
+    local v = self.ctx.v
+    if v.preview then
+        if v.preview.tex then self.ctx.sdl.destroy_texture(v.preview.tex) end
+        v.preview = nil
+        v.preview_drag = false
+        v.dirty = true
+    end
+end
+
+function M:preview_zoom(delta)
+    local v = self.ctx.v
+    if not v.preview then return end
+    v.preview.zoom = math.max(0.5, math.min(6.0, (v.preview.zoom or 1) + delta))
+    v.dirty = true
+end
+
+function M:preview_reset()
+    local p = self.ctx.v.preview
+    if not p then return end
+    p.zoom = 1
+    p.pan_x, p.pan_y = 0, 0
+    self.ctx.v.dirty = true
+end
+
+function M:preview_pan(dx, dy)
+    local v = self.ctx.v
+    if not v.preview then return end
+    v.preview.pan_x = (v.preview.pan_x or 0) + dx
+    v.preview.pan_y = (v.preview.pan_y or 0) + dy
+    v.dirty = true
+end
+
+function M:draw_preview(ren)
+    local ctx = self.ctx
+    local v = ctx.v
+    local p = v.preview
+    if not p then return end
+    local ffi, sdl = ctx.ffi, ctx.sdl
+    local W, H = ctx.get_w(), ctx.get_h()
+    sdl.set_draw_color(ren, 0, 0, 0, 255)
+    local bg = ffi.new("SDL_Rect")
+    bg.x, bg.y, bg.w, bg.h = 0, 0, W, H
+    sdl.render_fill_rect(ren, bg)
+
+    local dw = math.floor(p.w * p.zoom)
+    local dh = math.floor(p.h * p.zoom)
+    local dst = ffi.new("SDL_Rect")
+    dst.x = math.floor((W - dw) / 2 + (p.pan_x or 0))
+    dst.y = math.floor((H - dh) / 2 + (p.pan_y or 0))
+    dst.w, dst.h = dw, dh
+    sdl.render_copy(ren, p.tex, nil, dst)
+
+    local theme = ctx.get_theme()
+    if theme and theme.line then
+        sdl.set_draw_color(ren, theme.line[1], theme.line[2], theme.line[3], 255)
+        sdl.render_draw_rect(ren, dst)
+    end
+end
+
 function M:render_into(idx, target_w)
     local ctx = self.ctx
     local v, s, R = ctx.v, ctx.settings, ctx.get_reader()
@@ -88,6 +186,7 @@ end
 function M:teardown()
     local ctx = self.ctx
     local v, sdl = ctx.v, ctx.sdl
+    self:close_preview()
     if v.tex then sdl.destroy_texture(v.tex); v.tex = nil end
     if v.p2 then sdl.destroy_texture(v.p2); v.p2 = nil end
     if v.pcache then v.pcache:clear() end
@@ -137,6 +236,7 @@ function M:load_page(n, keep_scroll)
             if t then v.line_texs[#v.line_texs + 1] = { tex = t, w = w, h = h } end
         end
         v.tex_w, v.tex_h = W, H
+        v.images = {}
         R.page = n
         v.sy = 0
         v.refresh_text()
@@ -176,8 +276,13 @@ function M:load_page(n, keep_scroll)
     R.page = n
     v.pan_x = 0
     v.links = {}
+    v.images = {}
     self:load_links(R.page)
-    if v.p2 then self:load_links(R.page + 1) end
+    self:load_images(R.page)
+    if v.p2 then
+        self:load_links(R.page + 1)
+        self:load_images(R.page + 1)
+    end
     v.sy = keep_scroll and (v.sy or 0) or 0
     v.sy = math.max(0, math.min(self:max_scroll(), v.sy))
     v.refresh_text()

@@ -17,6 +17,7 @@ end
 function M:update_cursor(x, y)
     local ctx = self.ctx
     local v, S = ctx.v, ctx.S
+    if v.preview then self:set_cursor(false); return end
     local hand = false
     if ctx.browser.open then
         local browser = ctx.browser
@@ -82,6 +83,22 @@ function M:content_click(x, y)
     for _, r in ipairs(v.rects) do
         if x >= r.x and x < r.x + r.w and
            y >= r.y and y < r.y + r.h then
+            local nx = (x - r.x) / r.w
+            local ny = (y - r.y) / r.h
+            local imgs = (v.images and v.images[r.page]) or {}
+            for _, im in ipairs(imgs) do
+                if nx >= im.x0 and nx <= im.x1 and
+                   ny >= im.y0 and ny <= im.y1 then
+                    ctx.show_image(r.page, im)
+                    return
+                end
+            end
+            break
+        end
+    end
+    for _, r in ipairs(v.rects) do
+        if x >= r.x and x < r.x + r.w and
+           y >= r.y and y < r.y + r.h then
             if doc then
                 local nx = (x - r.x) / r.w
                 local ny = (y - r.y) / r.h
@@ -121,6 +138,24 @@ function M:mouse_down(x, y, button)
     local ctx = self.ctx
     local v, S = ctx.v, ctx.S
     local browser, toc, bm, st, lib = ctx.browser, ctx.toc, ctx.bm, ctx.st, ctx.lib
+    if v.preview then
+        if button == 3 then
+            ctx.close_preview()
+        else
+            local p = v.preview
+            local W, H = ctx.get_w(), ctx.get_h()
+            local dw, dh = p.w * p.zoom, p.h * p.zoom
+            local ix = (W - dw) / 2 + (p.pan_x or 0)
+            local iy = (H - dh) / 2 + (p.pan_y or 0)
+            if x < ix or x > ix + dw or y < iy or y > iy + dh then
+                ctx.close_preview()
+            else
+                v.preview_drag = true
+                v.preview_dx, v.preview_dy = x, y
+            end
+        end
+        return
+    end
     if button == 3 then
         ctx.go_back(false)
     elseif browser.open then
@@ -193,7 +228,15 @@ function M:mouse_down(x, y, button)
 end
 
 function M:motion(x, y)
-    local v = self.ctx.v
+    local ctx = self.ctx
+    local v = ctx.v
+    if v.preview then
+        if v.preview_drag then
+            ctx.preview_pan(x - v.preview_dx, y - v.preview_dy)
+            v.preview_dx, v.preview_dy = x, y
+        end
+        return
+    end
     if v.dragging then
         local dx = x - v.drag_x
         local dy = y - v.drag_y
@@ -209,6 +252,10 @@ end
 
 function M:wheel(dy)
     local ctx = self.ctx
+    if ctx.v.preview then
+        ctx.preview_zoom(dy * 0.2)
+        return
+    end
     if not ctx.toc.open and not ctx.bm.open and not ctx.st.open and not ctx.lib.open then
         if dy ~= 0 then ctx.v.scroll_by(-dy * 90) end
     end
@@ -241,6 +288,19 @@ end
 function M:key(k, mod)
     local ctx = self.ctx
     local v, sdl = ctx.v, ctx.sdl
+    if v.preview then
+        if k == sdl.SDLK_ESCAPE or k == sdl.SDLK_Q or k == sdl.SDLK_RETURN then
+            ctx.close_preview()
+        elseif k == sdl.SDLK_PLUS or k == sdl.SDLK_EQUALS or
+               k == sdl.SDLK_KP_PLUS then
+            ctx.preview_zoom(0.25)
+        elseif k == sdl.SDLK_MINUS or k == sdl.SDLK_KP_MINUS then
+            ctx.preview_zoom(-0.25)
+        elseif k == sdl.SDLK_0 then
+            ctx.preview_reset()
+        end
+        return
+    end
     if k == sdl.SDLK_F10 then v.toggle_max()
     elseif k == sdl.SDLK_F11 then v.toggle_fs()
     elseif ctx.browser.open then ctx.browser:key(k)
@@ -334,7 +394,7 @@ function M:handle(ev)
         local x = ev.button.x * v.scale_x
         local y = ev.button.y * v.scale_y
         local button = ev.button.button
-        if button == 2 then
+        if button == 2 and not v.preview then
             v.dragging = true
             v.drag_x, v.drag_y = x, y
             self:set_cursor(false)
@@ -342,7 +402,9 @@ function M:handle(ev)
             self:mouse_down(x, y, button)
         end
     elseif t == sdl.MOUSEBUTTONUP then
-        if ev.button.button == 2 then
+        if v.preview then
+            v.preview_drag = false
+        elseif ev.button.button == 2 then
             v.dragging = false
         end
     end

@@ -381,7 +381,7 @@ v.open_chapter = function(idx, p) return R:open_chapter(idx, p) end
 v.normalize_book_path = function(path) return R:normalize(path) end
 
 render = require("ui.render").new({
-    v = v, rd = rd, sdl = sdl, ttf = ttf, ren = ren, S = S, settings = settings,
+    v = v, rd = rd, sdl = sdl, ttf = ttf, ffi = ffi, ren = ren, S = S, settings = settings,
     get_reader = function() return R end,
     get_w = function() return W end,
     get_h = function() return H end,
@@ -548,6 +548,7 @@ local function render_frame()
         library = function() lib:draw() end,
         content = draw_page,
     })
+    render:draw_preview(ren)
     toast:draw()
 end
 
@@ -591,12 +592,22 @@ local input = require("ui.input").new({
     get_is_txt = function() return R.is_txt end,
     get_doc = function() return R.doc end,
     get_w = function() return W end,
+    get_h = function() return H end,
     turn = function(n) turn(n) end,
     go_back = function(allow) go_back(allow) end,
     toggle_dual = function() toggle_dual() end,
     toggle_eye = function() toggle_eye() end,
     choose_book = function() v.choose_book() end,
     take_snapshot = function() v.take_snapshot() end,
+    show_image = function(page, img)
+        if render:preview(page, img) then
+            v.show_toast("滚轮缩放 · 拖动平移 · Esc/右键关闭", 3)
+        end
+    end,
+    close_preview = function() render:close_preview() end,
+    preview_zoom = function(d) render:preview_zoom(d) end,
+    preview_pan = function(dx, dy) render:preview_pan(dx, dy) end,
+    preview_reset = function() render:preview_reset() end,
     quit = function() running = false end,
 })
 

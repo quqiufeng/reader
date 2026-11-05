@@ -25,6 +25,9 @@ char *rd_page_text(void *handle, int page);
 char *rd_list_dir(const char *path);
 char *rd_page_fonts(void *handle, int page);
 char *rd_page_links(void *handle, int page);
+char *rd_page_images(void *handle, int page);
+int   rd_render_region(void *handle, int page, float x0, float y0, float x1, float y1,
+                       int max_w, int max_h, uint8_t **out, int *out_w, int *out_h, int *out_stride);
 int   rd_extract_book(const char *path, const char *out_dir);
 int   rd_touch_path(const char *path);
 ]]
@@ -149,6 +152,25 @@ function M.page_fonts(h, page)
     local s = ffi.string(p)
     lib.rd_free(p)
     return s
+end
+
+function M.page_images(h, page)
+    local p = lib.rd_page_images(h, page)
+    if p == nil then return "" end
+    local s = ffi.string(p)
+    lib.rd_free(p)
+    return s
+end
+
+function M.render_region(h, page, x0, y0, x1, y1, max_w, max_h)
+    local out = ffi.new("uint8_t*[1]")
+    local ow = ffi.new("int[1]")
+    local oh = ffi.new("int[1]")
+    local os = ffi.new("int[1]")
+    local rc = lib.rd_render_region(h, page, x0, y0, x1, y1,
+        max_w, max_h, out, ow, oh, os)
+    if rc ~= 0 or out[0] == nil then return nil end
+    return out[0], tonumber(ow[0]), tonumber(oh[0]), tonumber(os[0])
 end
 
 function M.page_text(h, page)
