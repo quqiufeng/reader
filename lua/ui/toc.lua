@@ -1,5 +1,7 @@
 -- 目录面板：状态、列表渲染、跳转。
 local M = {}
+
+local list = require("ui.list")
 M.__index = M
 
 function M.new(ctx)
@@ -69,31 +71,15 @@ end
 
 function M:rebuild()
     local ctx = self.ctx
-    local sdl, ttf, ren = ctx.sdl, ctx.ttf, ctx.ren
-    for _, t in ipairs(self.texs) do sdl.destroy_texture(t.tex) end
-    self.texs = {}
-    if #self.items == 0 then return end
-
-    self.selected = math.max(1, math.min(#self.items, self.selected))
-    local first = math.max(1, self.selected - math.floor(self.visible / 2))
-    if first + self.visible - 1 > #self.items then
-        first = math.max(1, #self.items - self.visible + 1)
-    end
-    self.first = first
-    local last = math.min(#self.items, first + self.visible - 1)
-    local f_body = ctx.get_fonts()
-    local theme = ctx.get_theme()
-
-    for i = first, last do
-        local it = self.items[i]
-        local text = string.rep("  ", it.level or 0) .. (it.title or "")
-        local w, h = ttf.size(f_body, text)
-        local c = (i == self.selected) and theme.ink or theme.text
-        local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
-        if t then
-            self.texs[#self.texs + 1] = { tex = t, w = w, h = h, index = i }
-        end
-    end
+    for _, t in ipairs(self.texs) do ctx.sdl.destroy_texture(t.tex) end
+    self.texs, self.selected, self.first = list.rebuild({
+        ttf = ctx.ttf, ren = ctx.ren, font = ctx.get_fonts(),
+        theme = ctx.get_theme(), items = self.items,
+        selected = self.selected, visible = self.visible,
+        text = function(it)
+            return string.rep("  ", it.level or 0) .. (it.title or "")
+        end,
+    })
 end
 
 function M:show()

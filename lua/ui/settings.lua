@@ -2,6 +2,8 @@
 local themes = require("ui.themes")
 
 local M = {}
+
+local list = require("ui.list")
 M.__index = M
 
 local function cycle(list, value, delta)
@@ -49,19 +51,14 @@ end
 
 function M:rebuild()
     local ctx = self.ctx
-    local sdl, ttf, ren = ctx.sdl, ctx.ttf, ctx.ren
-    for _, t in ipairs(self.texs) do sdl.destroy_texture(t.tex) end
-    self.texs = {}
-    local f_body = ctx.get_fonts()
-    local theme = ctx.get_theme()
-    for i, text in ipairs(self:rows()) do
-        local w, h = ttf.size(f_body, text)
-        local c = (i == self.selected) and theme.ink or theme.text
-        local t = ttf.render_texture(ren, f_body, text, c[1], c[2], c[3], 255)
-        if t then
-            self.texs[#self.texs + 1] = { tex = t, w = w, h = h, index = i }
-        end
-    end
+    for _, t in ipairs(self.texs) do ctx.sdl.destroy_texture(t.tex) end
+    local rows = self:rows()
+    self.texs, self.selected = list.rebuild({
+        ttf = ctx.ttf, ren = ctx.ren, font = ctx.get_fonts(),
+        theme = ctx.get_theme(), items = rows,
+        selected = self.selected, visible = math.max(1, #rows),
+        text = function(row) return row end,
+    })
 end
 
 function M:build_texts()
