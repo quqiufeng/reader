@@ -54,6 +54,18 @@ do
     check(epub.hash("abc") ~= epub.hash("abd"), "epub.hash differs")
     check(epub.join("/root/OEBPS", "../Text/a.xhtml") == "/root/Text/a.xhtml", "epub.join")
     check(epub.strip(" <b>hi</b>  there ") == "hi there", "epub.strip")
+
+    local path = os.tmpname() .. ".html"
+    local f = assert(io.open(path, "wb"))
+    f:write('<p><a href="#x">x</a></p><a id="x"></a><p class="c">target</p>')
+    f:close()
+    check(epub.fix_anchors(path), "epub.fix_anchors rewrites")
+    local s = assert(io.open(path, "rb")):read("*a")
+    check(s == '<p><a href="#x">x</a></p><a></a><p id="x" class="c">target</p>',
+        "epub.fix_anchors moves id")
+    check(not epub.fix_anchors(path), "epub.fix_anchors idempotent")
+    os.remove(path)
+    os.remove(path .. ".anchors-v1")
 end
 
 -- store: 保存/读取（保留 chapter，百分比已移除）
@@ -110,6 +122,47 @@ do
     local f = assert(io.open(path, "w")); f:write("x"); f:close()
     check(r:normalize("file://" .. path) == path, "reader.normalize file://")
     os.remove(path)
+end
+
+-- input: 内容区点击优先级（链接 > 图片 > 翻页）
+do
+    local input = require("ui.input")
+
+    local function make_ctx(links, images)
+        local calls = { loaded = nil, image = false, turn = nil }
+        local v = {
+            rects = { { x = 0, y = 0, w = 100, h = 100, page = 0 } },
+            links = { [0] = links or {} },
+            images = { [0] = images or {} },
+        }
+        local ctx = {
+            v = v,
+            get_doc = function() return {} end,
+            get_page = function() return 0 end,
+            get_w = function() return 100 end,
+            get_tex_h = function() return 100 end,
+            rd = { link_at = function() return 7, nil, 0 end },
+            show_image = function() calls.image = true end,
+            turn = function(n) calls.turn = n end,
+        }
+        v.load_page = function(n) calls.loaded = n end
+        v.save_progress = function() end
+        return setmetatable({ ctx = ctx }, { __index = input }), calls
+    end
+
+    local inp, calls = make_ctx(
+        { { x0 = 0.1, y0 = 0.1, x1 = 0.9, y1 = 0.9, page = 7 } },
+        { { x0 = 0, y0 = 0, x1 = 1, y1 = 1 } })
+    inp:content_click(50, 50)
+    check(calls.loaded == 7 and not calls.image, "input.link wins over image")
+
+    inp, calls = make_ctx(nil, { { x0 = 0, y0 = 0, x1 = 1, y1 = 1 } })
+    inp:content_click(50, 50)
+    check(calls.image and not calls.loaded, "input.image when no link")
+
+    inp, calls = make_ctx(nil, nil)
+    inp:content_click(10, 50)
+    check(calls.turn == -1, "input.click left turns prev")
 end
 
 print(string.format("[unit] %d ok, %d fail", ok, fail))

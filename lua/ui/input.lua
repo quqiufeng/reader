@@ -79,23 +79,8 @@ function M:content_click(x, y)
     local v = ctx.v
     local doc = ctx.get_doc()
     local page, W = ctx.get_page(), ctx.get_w()
-    local linked = false
-    for _, r in ipairs(v.rects) do
-        if x >= r.x and x < r.x + r.w and
-           y >= r.y and y < r.y + r.h then
-            local nx = (x - r.x) / r.w
-            local ny = (y - r.y) / r.h
-            local imgs = (v.images and v.images[r.page]) or {}
-            for _, im in ipairs(imgs) do
-                if nx >= im.x0 and nx <= im.x1 and
-                   ny >= im.y0 and ny <= im.y1 then
-                    ctx.show_image(r.page, im)
-                    return
-                end
-            end
-            break
-        end
-    end
+
+    -- 链接优先：图片可能覆盖整页，不能先弹图片预览而吞掉章节跳转。
     for _, r in ipairs(v.rects) do
         if x >= r.x and x < r.x + r.w and
            y >= r.y and y < r.y + r.h then
@@ -117,20 +102,35 @@ function M:content_click(x, y)
                                 math.floor(oy * h) - 60))
                         end
                         v.save_progress()
-                        linked = true
-                        break
+                        return
                     end
                 end
             end
             break
         end
     end
-    if not linked then
-        if x < W / 3 then
-            ctx.turn(-1)
-        elseif x > W * 2 / 3 then
-            ctx.turn(1)
+
+    for _, r in ipairs(v.rects) do
+        if x >= r.x and x < r.x + r.w and
+           y >= r.y and y < r.y + r.h then
+            local nx = (x - r.x) / r.w
+            local ny = (y - r.y) / r.h
+            local imgs = (v.images and v.images[r.page]) or {}
+            for _, im in ipairs(imgs) do
+                if nx >= im.x0 and nx <= im.x1 and
+                   ny >= im.y0 and ny <= im.y1 then
+                    ctx.show_image(r.page, im)
+                    return
+                end
+            end
+            break
         end
+    end
+
+    if x < W / 3 then
+        ctx.turn(-1)
+    elseif x > W * 2 / 3 then
+        ctx.turn(1)
     end
 end
 
@@ -217,9 +217,7 @@ function M:mouse_down(x, y, button)
             elseif id == "shot" then ctx.take_snapshot()
             elseif id == "open" then ctx.choose_book()
             elseif id == "bm" then bm:show()
-            elseif id == "toc" then toc:show()
             elseif id == "st" then st:show()
-            else toc:show()
             end
         else
             self:content_click(x, y)

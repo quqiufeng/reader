@@ -28,6 +28,7 @@ end
 
 function M:open_doc(path)
     local ctx = self.ctx
+    if ctx.epub and ctx.epub.fix_anchors then ctx.epub.fix_anchors(path) end
     local s = ctx.settings
     return ctx.rd.open(path, s.font_size, s.line_factor, s.margin)
 end

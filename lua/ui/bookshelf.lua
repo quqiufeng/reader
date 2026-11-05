@@ -12,7 +12,12 @@ local FMT_MAP = {
 local function clear_fields(rec)
     if not rec then return end
     rec.page = 0
+    rec.chapter = nil
     rec.updated = nil
+end
+
+local function has_history(rec)
+    return rec and ((rec.updated or 0) > 0 or (rec.page or 0) > 0)
 end
 
 function M.new(ctx)
@@ -70,7 +75,7 @@ function M:scan()
     for _, it in ipairs(scanned) do
         seen[it.path] = true
         local rec = progress[it.path]
-        if rec then
+        if has_history(rec) then
             it.updated = (rec.updated and rec.updated > 0) and rec.updated or 0
             self.items[#self.items + 1] = it
         end
@@ -78,7 +83,7 @@ function M:scan()
 
     -- 文件选择器/DAV 打开的书可能不在扫描目录里，也要进入历史列表。
     for path, rec in pairs(progress) do
-        if not seen[path] then
+        if not seen[path] and has_history(rec) then
             local f = io.open(path, "rb")
             if f then
                 f:close()

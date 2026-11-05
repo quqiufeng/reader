@@ -9,6 +9,36 @@ function M.read_text(p)
     return s
 end
 
+-- MuPDF 对空行内锚点 (<a id="x"></a>) 解析到页首；把 id 移到紧随其后的
+-- 标签上，锚点才能落到真实位置。按文件加标记，只处理一次。
+function M.fix_anchors(path)
+    if not path then return false end
+    local ext = path:lower():match("%.([%w]+)$")
+    if ext ~= "html" and ext ~= "xhtml" and ext ~= "htm" then return false end
+    local marker = path .. ".anchors-v1"
+    local mf = io.open(marker, "rb")
+    if mf then mf:close(); return false end
+    local data = M.read_text(path)
+    if not data then return false end
+    local out, n = data:gsub(
+        '<a id="([^"]+)"></a>(%s*)<([%a][%w:_.-]*)([^>]*)>',
+        function(id, ws, tag, attrs)
+            if attrs:find("id=", 1, true) then return nil end
+            return '<a></a>' .. ws .. "<" .. tag .. ' id="' .. id .. '"' .. attrs .. ">"
+        end)
+    if n > 0 and out ~= data then
+        local tmp = path .. ".tmp"
+        local w = io.open(tmp, "wb")
+        if not w then return false end
+        w:write(out)
+        w:close()
+        os.rename(tmp, path)
+    end
+    local mk = io.open(marker, "wb")
+    if mk then mk:write("1\n"); mk:close() end
+    return n > 0
+end
+
 function M.unescape(s)
     s = s:gsub("&lt;", "<"):gsub("&gt;", ">"):gsub("&quot;", '"')
          :gsub("&apos;", "'"):gsub("&nbsp;", " ")
