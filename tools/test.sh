@@ -57,6 +57,9 @@ export READER_AUTOMATION_SOCK="$SOCK"
 export LUA_PATH="$ROOT/automation/?.lua;$ROOT/lua/?.lua;$ROOT/lua/?/init.lua;;"
 export LUA_CPATH="$ROOT/third_party/cjson/lua/5.1/?.so;;"
 
+echo "== unit =="
+"$LUAJIT" "$ROOT/tools/auto_unit.lua"
+
 echo "== core =="
 "$LUAJIT" "$ROOT/tools/auto_core.lua"
 

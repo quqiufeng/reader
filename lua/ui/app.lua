@@ -36,12 +36,6 @@ local v = {
     startup_sync = false, startup_at = 0,
     resize_target_w = nil, resize_target_h = nil, scale_ready = false,
     p2 = nil, p2w = 0, p2h = 0,
-    fs_tex = nil, fs_w = 0, fs_h = 0, fs_x = 0,
-    max_tex = nil, max_w = 0, max_h = 0, max_x = 0,
-    eye_tex = nil, eye_w = 0, eye_h = 0, eye_x = 0,
-    dual_tex = nil, dual_w = 0, dual_h = 0, dual_x = 0,
-    shot_tex = nil, shot_w = 0, shot_h = 0, shot_x = 0,
-    hdr_open_tex = nil, hdr_open_w = 0, hdr_open_h = 0, hdr_open_x = 0,
     last_browse_dir = nil,
     toast = nil, toast_tex = nil, toast_w = 0, toast_h = 0, toast_until = 0,
     dialog = nil,
@@ -709,90 +703,20 @@ if shot ~= "" then
     os.exit(0)
 end
 
-local ev = ffi.new("SDL_Event[1]")
-while running do
-    if server then server:poll() end
-
-    while sdl.poll_event(ev) ~= 0 do
-        if ev[0].type ~= sdl.MOUSEMOTION then v.had_event = true end
-        input:handle(ev[0])
-    end
-
-    local now = v.now()
-    toast:tick(now)
-    if filedialog:poll(now) then v.dirty = true end
-    if v.save_pending and now >= v.save_due then
-        store.save_state(state_file, progress)
-        v.save_pending = false
-        v.save_due = 0
-    end
-    if v.startup_sync and now >= v.startup_at then
-        v.startup_sync = false
-        local nw, nh = v.window_target_size()
-        if nw and nh and nw > 0 and nh > 0 then W, H = nw, nh end
-        rebuild_header_actions()
-        local pending = v.pending_initial
-        v.pending_initial = nil
-        if pending then
-            if pending.book and pending.book ~= "" then
-                local ok, err = v.open_book(pending.book, pending.page)
-                if not ok then error("open failed: " .. tostring(err)) end
-            else
-                lib:show()
-            end
-        else
-            if lib and lib.open then lib:refresh() end
-            v.sy = 0
-            v.pending_layout = v.reflow
-            if R.book then v.load_page(R.page) end
-            v.refresh_text()
-        end
-        v.dirty = true
-    end
-    if not v.resize_pending and now >= (v.sync_at or 0) then
-        v.sync_at = now + 0.5
-        if apply_resize() then v.dirty = true end
-        if v.ensure_content_size() then v.dirty = true end
-    end
-    if v.resize_pending and v.now() >= v.resize_due then
-        local nw, nh = v.resize_target_w, v.resize_target_h
-        if not nw or not nh then nw, nh = v.window_target_size() end
-        if nw and nh and nw > 0 and nh > 0 then
-            if v.resize_last_w ~= nw or v.resize_last_h ~= nh then
-                v.resize_target_w, v.resize_target_h = nw, nh
-                v.resize_last_w, v.resize_last_h = nw, nh
-                v.resize_due = v.now() + 0.10
-            else
-                v.resize_pending = false
-                apply_resize(nw, nh)
-                v.dirty = true
-            end
-        else
-            v.resize_pending = false
-        end
-    end
-    if v.had_event then
-        v.dirty = true
-        v.had_event = false
-    end
-    if not v.dirty and v.prefetch then
-        local P = v.prefetch
-        v.prefetch = nil
-        if R.doc and not R.is_txt and P.sig == v.content_sig() and P.page < R.total then
-            local key = P.sig .. ":" .. P.page
-            if not v.pcache.map[key] then
-                local t, w, h = v.render_into(P.page, P.target_w)
-                if t then v.pcache:put(key, { tex = t, w = w, h = h }) end
-            end
-        end
-    end
-    v.drew = false
-    if v.dirty then
-        draw()
-        v.dirty = false
-        v.drew = true
-    end
-    sdl.delay(v.drew and 16 or 30)
-end
-
+local loop = require("ui.loop").new({
+    sdl = sdl, ffi = ffi, v = v,
+    input = input, filedialog = filedialog, toast = toast, lib = lib,
+    get_reader = function() return R end,
+    is_running = function() return running end,
+    get_server = function() return server end,
+    set_wh = function(w, h) W, H = w, h end,
+    rebuild_header = function() rebuild_header_actions() end,
+    open_book = function(path, page) return v.open_book(path, page) end,
+    load_page = function(n, k) return v.load_page(n, k) end,
+    refresh_text = function() v.refresh_text() end,
+    apply_resize = function(nw, nh) return apply_resize(nw, nh) end,
+    save_state = function() store.save_state(state_file, progress) end,
+    draw = function() draw() end,
+})
+loop:run()
 cleanup()

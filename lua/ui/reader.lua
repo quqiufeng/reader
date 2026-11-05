@@ -1,4 +1,7 @@
 -- 当前书籍会话：文档状态、打开/关章、TXT 分页与进度入口。
+local ffi = require("ffi")
+pcall(ffi.cdef, "unsigned int getuid(void);")
+
 local M = {}
 M.__index = M
 

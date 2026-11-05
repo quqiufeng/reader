@@ -52,7 +52,6 @@ function M:scan()
     if env and env ~= "" then candidates[#candidates + 1] = env end
     candidates[#candidates + 1] = home .. "/Books"
     candidates[#candidates + 1] = home .. "/Downloads/book"
-    candidates[#candidates + 1] = "/home/quqiufeng/Downloads/book"
 
     local scanned = {}
     self.dir = env or ""
