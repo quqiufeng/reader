@@ -6,6 +6,16 @@ function M.new(ctx)
     return setmetatable({ ctx = ctx }, M)
 end
 
+local PROF = os.getenv("READER_PROF") ~= nil
+local function tnow()
+    local ffi = require("ffi")
+    pcall(ffi.cdef, "typedef struct { long tv_sec; long tv_nsec; } prof_ts2;"
+        .. "int clock_gettime(int, prof_ts2 *);")
+    local ts = ffi.new("prof_ts2")
+    ffi.C.clock_gettime(1, ts)
+    return tonumber(ts.tv_sec) + tonumber(ts.tv_nsec) / 1e9
+end
+
 function M:run()
     local ctx = self.ctx
     local sdl, ffi, v = ctx.sdl, ctx.ffi, ctx.v
@@ -98,7 +108,12 @@ function M:run()
 
         v.drew = false
         if v.dirty then
+            local t_draw = PROF and tnow() or 0
             ctx.draw()
+            if PROF then
+                io.stderr:write(string.format("[prof] draw %.1f ms\n",
+                    (tnow() - t_draw) * 1000))
+            end
             v.dirty = false
             v.drew = true
         end

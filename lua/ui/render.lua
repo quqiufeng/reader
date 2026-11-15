@@ -196,8 +196,19 @@ function M:teardown()
     v.p2w, v.p2h = 0, 0
 end
 
+local PROF = os.getenv("READER_PROF") ~= nil
+local tnow = function()
+    local ffi = require("ffi")
+    pcall(ffi.cdef, "typedef struct { long tv_sec; long tv_nsec; } prof_ts;"
+        .. "int clock_gettime(int, prof_ts *);")
+    local ts = ffi.new("prof_ts")
+    ffi.C.clock_gettime(1, ts)
+    return tonumber(ts.tv_sec) + tonumber(ts.tv_nsec) / 1e9
+end
+
 function M:load_page(n, keep_scroll)
     local ctx = self.ctx
+    local t_start = PROF and tnow() or 0
     local v, s, R = ctx.v, ctx.settings, ctx.get_reader()
     local W, H = ctx.get_w(), ctx.get_h()
     local S = ctx.S
@@ -297,6 +308,10 @@ function M:load_page(n, keep_scroll)
     end
     print(string.format("[reader] page %d/%d  %dx%d%s", R.page + 1, R.total,
         v.tex_w, v.tex_h, v.p2 and " (+1)" or ""))
+    if PROF then
+        io.stderr:write(string.format("[prof] load_page %.1f ms (page %d)\n",
+            (tnow() - t_start) * 1000, R.page + 1))
+    end
     return true
 end
 
