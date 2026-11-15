@@ -19,6 +19,8 @@
 typedef struct rd_doc {
     fz_context *ctx;
     fz_document *doc;
+    char accel_path[PATH_MAX];  /* EPUB/MOBI 布局加速缓存（页数），空表示不用 */
+    int reflowable;
 } rd_doc;
 
 int reader_mobi_to_epub(const char *src, const char *out);
@@ -547,7 +549,8 @@ static void build_user_css(char *css, size_t n, float em, float lf, float margin
         margin, em, em, lf, em, lf);
 }
 
-static void *rd_open_impl(const char *path, int *err, float em, float lf, float margin)
+static void *rd_open_impl(const char *path, const char *accel_path, int *err,
+                          float em, float lf, float margin)
 {
     if (err) *err = 0;
     if (!path) {
@@ -600,9 +603,21 @@ static void *rd_open_impl(const char *path, int *err, float em, float lf, float 
         open_path = epub_path;
     }
 
+    if (accel_path && accel_path[0]) {
+        snprintf(h->accel_path, sizeof(h->accel_path), "%s", accel_path);
+    }
+
     fz_try(h->ctx) {
-        h->doc = fz_open_document(h->ctx, open_path);
-        if (fz_is_document_reflowable(h->ctx, h->doc)) {
+        if (h->accel_path[0]) {
+            /* 有加速缓存时用它打开：分章页数直接从缓存读，免全书 reflow。
+             * accel 文件不存在时会自动新建空缓存。 */
+            h->doc = fz_open_accelerated_document(h->ctx, open_path,
+                                                  h->accel_path);
+        } else {
+            h->doc = fz_open_document(h->ctx, open_path);
+        }
+        h->reflowable = fz_is_document_reflowable(h->ctx, h->doc);
+        if (h->reflowable) {
             fz_layout_document(h->ctx, h->doc, 600, 800, em > 0 ? em : 12);
         }
     }
@@ -617,18 +632,51 @@ static void *rd_open_impl(const char *path, int *err, float em, float lf, float 
 
 void *rd_open(const char *path, int *err)
 {
-    return rd_open_impl(path, err, 0, 0, 0);
+    return rd_open_impl(path, NULL, err, 0, 0, 0);
 }
 
 void *rd_open_styled(const char *path, float em, float lf, float margin, int *err)
 {
-    return rd_open_impl(path, err, em, lf, margin);
+    return rd_open_impl(path, NULL, err, em, lf, margin);
+}
+
+/* 带布局加速缓存的打开：accel_path 在同布局参数下复用上次的分章页数。 */
+void *rd_open_accel(const char *path, const char *accel_path,
+                    float em, float lf, float margin, int *err)
+{
+    return rd_open_impl(path, accel_path, err, em, lf, margin);
+}
+
+/* 把分章页数写回加速缓存（先写临时文件再 rename，避免写坏）。
+ * 只有重排格式（EPUB/MOBI/AZW3）且有 accel_path 时才有意义。 */
+static void accel_save(rd_doc *h)
+{
+    if (!h || !h->doc || !h->reflowable || !h->accel_path[0]) return;
+
+    char tmp[PATH_MAX + 8];
+    snprintf(tmp, sizeof(tmp), "%s.tmp", h->accel_path);
+
+    fz_output *out = NULL;
+    int ok = 0;
+    fz_try(h->ctx) {
+        out = fz_new_output_with_path(h->ctx, tmp, 0);
+        fz_output_accelerator(h->ctx, h->doc, out);  /* 内部 close + drop */
+        out = NULL;
+        ok = 1;
+    }
+    fz_catch(h->ctx) {
+        if (out) fz_drop_output(h->ctx, out);
+        remove(tmp);
+        return;
+    }
+    if (ok && rename(tmp, h->accel_path) != 0) remove(tmp);
 }
 
 void rd_close(void *handle)
 {
     rd_doc *h = (rd_doc *)handle;
     if (!h) return;
+    accel_save(h);
     if (h->doc) fz_drop_document(h->ctx, h->doc);
     if (h->ctx) {
         clear_font_cache(h->ctx);
