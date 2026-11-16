@@ -16,6 +16,12 @@ if [ -f "$BUILD/libreader_ocr.so" ]; then
 fi
 cp -r "$ROOT/lua/." "$DIST/lua/"
 cp -r "$ROOT/assets/." "$DIST/assets/"
+# OCR 模型（PP-OCRv4）随包走，安装后无需系统路径；源目录可用 READER_OCR_MODELS 覆盖。
+OCR_MODELS="${READER_OCR_MODELS:-/data/models/ocr}"
+if [ -f "$BUILD/libreader_ocr.so" ] && [ -d "$OCR_MODELS" ]; then
+    mkdir -p "$DIST/assets/models/ocr"
+    cp "$OCR_MODELS"/*.onnx "$OCR_MODELS"/*.txt "$DIST/assets/models/ocr/"
+fi
 cp "$ROOT/testdata/sample.txt" "$DIST/testdata/"
 cp -r "$ROOT/automation" "$DIST/automation"
 cp "$ROOT/tools/run.sh" "$DIST/run.sh"

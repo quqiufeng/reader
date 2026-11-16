@@ -41,8 +41,9 @@ copy_one() {
 }
 
 # App binaries/libs
-for f in "$BUILD/native-reader" "$BUILD/libreader_native.so" "$BUILD/libreader_ctl.so"; do
-    copy_one "$(readlink -f "$f")"
+for f in "$BUILD/native-reader" "$BUILD/libreader_native.so" "$BUILD/libreader_ctl.so" \
+         "$BUILD/libreader_ocr.so"; do
+    [ -e "$f" ] && copy_one "$(readlink -f "$f")"
 done
 
 # SDL is loaded dynamically by LuaJIT FFI.

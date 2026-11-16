@@ -12,6 +12,10 @@ else
 fi
 
 export READER_ROOT="$ROOT"
+# 随包模型优先；没打包时交给 reader_ocr 的编译期默认目录。
+if [ -z "${READER_OCR_MODEL_DIR:-}" ] && [ -d "$ROOT/assets/models/ocr" ]; then
+    export READER_OCR_MODEL_DIR="$ROOT/assets/models/ocr"
+fi
 MUPDF_LIBDIR="${READER_MUPDF_LIBDIR:-/opt/mupdf/build/shared-release}"
 export LD_LIBRARY_PATH="$ROOT/lib:$ROOT/build:$MUPDF_LIBDIR:/usr/local/lib:${LD_LIBRARY_PATH:-}"
 
