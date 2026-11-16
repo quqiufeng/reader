@@ -43,3 +43,9 @@ reference/base/
 
 # Keep reader resource bundles
 !app/src/main/assets/reader/*.apk
+
+# lite agent memory / local bench
+tmpbench/
+mem.bin
+mem.idx
+mem.lock
