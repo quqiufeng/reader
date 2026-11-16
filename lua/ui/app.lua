@@ -615,6 +615,7 @@ local input = require("ui.input").new({
     toggle_eye = function() toggle_eye() end,
     choose_book = function() v.choose_book() end,
     take_snapshot = function() v.take_snapshot() end,
+    save_page_markdown = function(path) return v.save_page_markdown(path) end,
     show_image = function(page, img)
         if render:preview(page, img) then
             v.show_toast("滚轮缩放 · 拖动平移 · Esc/右键关闭", 3)

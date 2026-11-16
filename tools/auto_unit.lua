@@ -174,5 +174,37 @@ do
     check(calls.turn == -1, "input.click left turns prev")
 end
 
+-- 顶部工具栏：input 用到的每个 ctx 字段都必须在 app.lua 的 input.new 里提供。
+-- 少一个字段 → 点击对应按钮时 Lua 报错 → 主循环无 pcall → 应用直接退出。
+do
+    local base = dir .. "/../lua/ui/"
+    local function read(p)
+        local f = io.open(p, "rb")
+        if not f then return nil end
+        local s = f:read("*a")
+        f:close()
+        return s
+    end
+    local src_input, src_app = read(base .. "input.lua"), read(base .. "app.lua")
+    check(src_input and src_app, "ui input/app readable")
+    if src_input and src_app then
+        local block = src_app:match('require%("ui%.input"%)%.new%((%b{})%)')
+        check(block ~= nil, "app.lua builds input ctx")
+        if block then
+            local have = {}
+            for k in block:gmatch("([%w_]+)%s*=") do have[k] = true end
+            local missing, seen = {}, {}
+            for k in src_input:gmatch("ctx%.([%w_]+)") do
+                if not seen[k] then
+                    seen[k] = true
+                    if not have[k] then missing[#missing + 1] = k end
+                end
+            end
+            table.sort(missing)
+            check(#missing == 0, "input ctx fields complete (missing: " .. table.concat(missing, ",") .. ")")
+        end
+    end
+end
+
 print(string.format("[unit] %d ok, %d fail", ok, fail))
 os.exit(fail == 0 and 0 or 1)

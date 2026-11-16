@@ -20,7 +20,11 @@ function M:run()
 
         while sdl.poll_event(ev) ~= 0 do
             if ev[0].type ~= sdl.MOUSEMOTION then v.had_event = true end
-            ctx.input:handle(ev[0])
+            -- 单个事件处理失败（例如某个按钮回调报错）不该让整个应用退出。
+            local ok_ev, err_ev = pcall(ctx.input.handle, ctx.input, ev[0])
+            if not ok_ev then
+                io.stderr:write("[reader] input error: " .. tostring(err_ev) .. "\n")
+            end
         end
 
         local now = v.now()
