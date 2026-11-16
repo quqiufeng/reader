@@ -23,6 +23,8 @@ function M:toggle_fs()
     v.resize_due = v.now() + 0.05
     v.resize_target_w, v.resize_target_h = v.window_target_size()
     v.resize_last_w, v.resize_last_h = nil, nil
+    -- 全屏/最大化会改变可用高度，强制让内容按新尺寸重排重渲染
+    v.content_sig_value = nil
     ctx.rebuild_header()
     if ctx.lib and ctx.lib.open then ctx.lib:refresh() end
     v.dirty = true
@@ -49,6 +51,8 @@ function M:toggle_max()
     v.resize_due = v.now() + 0.05
     v.resize_target_w, v.resize_target_h = v.window_target_size()
     v.resize_last_w, v.resize_last_h = nil, nil
+    -- 全屏/最大化会改变可用高度，强制让内容按新尺寸重排重渲染
+    v.content_sig_value = nil
     ctx.rebuild_header()
     if ctx.lib and ctx.lib.open then ctx.lib:refresh() end
     v.dirty = true

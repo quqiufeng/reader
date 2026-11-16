@@ -1309,8 +1309,11 @@ int rd_render_page(void *handle, int page_no, float zoom,
                 }
             }
         }
+        /* 注意：ctm 已经交给 draw device（用户空间→像素空间），
+         * fz_run_page 必须用单位矩阵，否则 zoom 会被叠加两次
+         * （zoom=2 实际渲染成 4 倍宽，页面右侧被裁掉）。 */
         dev = fz_new_draw_device(ctx, ctm, pix);
-        fz_run_page(ctx, page, dev, ctm, NULL);
+        fz_run_page(ctx, page, dev, fz_identity, NULL);
         fz_close_device(ctx, dev);
         fz_drop_device(ctx, dev);
         dev = NULL;
