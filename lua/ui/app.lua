@@ -43,7 +43,8 @@ local v = {
     tex = nil, tex_w = 0, tex_h = 0, line_texs = {},
     save_pending = false, save_due = 0,
 }
-v.pcache = require("ui.page_cache").new(sdl, 4)
+-- 4 屏纹理：当前屏 + 预热的下一屏（双栏各 2 页），留余量翻回上一屏
+v.pcache = require("ui.page_cache").new(sdl, 8)
 
 local win = assert(sdl.create_window("reader", W, H), "SDL_CreateWindow failed")
 v.win_x, v.win_y = sdl.get_window_position(win)

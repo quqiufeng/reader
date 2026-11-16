@@ -2,7 +2,8 @@ local ffi = require("ffi")
 
 ffi.cdef [[
 void *rd_open(const char *path, int *err);
-void *rd_open_styled(const char *path, float em, float lf, float margin, int *err);
+void *rd_open_styled(const char *path, float w, float h,
+                     float em, float lf, float margin, int *err);
 void  rd_close(void *handle);
 int   rd_page_count(void *handle);
 int   rd_page_size(void *handle, int page, float *w, float *h);
@@ -32,6 +33,11 @@ int   rd_extract_book(const char *path, const char *out_dir);
 int   rd_touch_path(const char *path);
 int   rd_cache_remove_book(const char *book_path);
 int   rd_cache_clear(void);
+const char *rd_cache_dir(void);
+int   rd_mkdir_p(const char *path);
+void *rd_open_accel(const char *path, const char *accel_path,
+                    float w, float h, float em, float lf, float margin,
+                    int *err);
 ]]
 
 local root = os.getenv("READER_ROOT") or "."
@@ -75,15 +81,38 @@ function M.cache_clear()
     return tonumber(lib.rd_cache_clear())
 end
 
-function M.open(path, em, lf, margin)
+function M.cache_dir()
+    local p = lib.rd_cache_dir()
+    if p == nil then return nil end
+    return ffi.string(p)
+end
+
+function M.mkdir_p(path)
+    return tonumber(lib.rd_mkdir_p(path))
+end
+
+-- accel_path 非空时走 MuPDF 加速文档：同布局参数下复用上次的页数表，
+-- 省掉整本 reflow（EPUB/MOBI 冷开的主因）。
+-- w/h 为期望的布局尺寸；重排格式（EPUB/MOBI/AZW3）必须与阅览时一致，
+-- 否则加速缓存里的分章页数表会被 MuPDF 作废。
+function M.open(path, em, lf, margin, accel_path, w, hgt)
     local err = ffi.new("int[1]")
     local h
-    if em and em > 0 then
-        h = lib.rd_open_styled(path, em, lf or 1.6, margin or 72, err)
+    if accel_path and accel_path ~= "" then
+        h = lib.rd_open_accel(path, accel_path, w or 0, hgt or 0,
+                              em or 16, lf or 1.6, margin or 72, err)
+        if h == nil then
+            -- 缓存坏了就退回普通打开，不让它挡住打开书。
+            h = lib.rd_open_styled(path, 0, 0,
+                                   em or 16, lf or 1.6, margin or 72, err)
+        end
+    elseif em and em > 0 then
+        -- w = -1：先不布局（调用方会自己按真实尺寸布局）。
+        h = lib.rd_open_styled(path, w or 0, hgt or 0,
+                               em, lf or 1.6, margin or 72, err)
     else
         h = lib.rd_open(path, err)
     end
-    if h == nil then return nil, tonumber(err[0]) end
     return h
 end
 

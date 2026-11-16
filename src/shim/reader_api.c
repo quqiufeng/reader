@@ -1,6 +1,7 @@
 #include <mupdf/fitz.h>
 #include <mupdf/ucdn.h>
 
+#include <errno.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -154,11 +155,26 @@ static void path_basename_noext(const char *path, char *out, size_t outsz)
     out[n] = 0;
 }
 
+/* 递归建目录（等价 mkdir -p）；父目录缺失时逐级创建。 */
 static int ensure_dir(const char *path)
 {
     struct stat st;
+    if (!path || !path[0]) return -1;
     if (stat(path, &st) == 0) return S_ISDIR(st.st_mode) ? 0 : -1;
-    return mkdir(path, 0700);
+    char buf[PATH_MAX];
+    if (snprintf(buf, sizeof(buf), "%s", path) >= (int)sizeof(buf)) return -1;
+    for (char *p = buf + 1; *p; p++) {
+        if (*p != '/') continue;
+        *p = 0;
+        if (mkdir(buf, 0700) != 0 && errno != EEXIST) {
+            struct stat mid;
+            if (stat(buf, &mid) != 0 || !S_ISDIR(mid.st_mode)) { *p = '/'; return -1; }
+        }
+        *p = '/';
+    }
+    if (mkdir(buf, 0700) != 0 && errno != EEXIST) return -1;
+    if (stat(buf, &st) != 0 || !S_ISDIR(st.st_mode)) return -1;
+    return 0;
 }
 
 typedef struct cache_entry {
@@ -446,6 +462,19 @@ static const char *epub_cache_dir(void)
     return NULL;
 }
 
+/* 对 Lua 暴露当前解包缓存根目录（重排格式的 accel 缓存也放在这下面）。 */
+const char *rd_cache_dir(void)
+{
+    return epub_cache_dir();
+}
+
+/* 递归建目录，成功返回 0。 */
+int rd_mkdir_p(const char *path)
+{
+    if (!path || !path[0]) return -1;
+    return ensure_dir(path);
+}
+
 static unsigned int cache_hash(const char *s)
 {
     unsigned int h = 5381;
@@ -541,16 +570,21 @@ static void build_user_css(char *css, size_t n, float em, float lf, float margin
         "i,em{font-style:normal !important;}"
         "*{font-family:sans-serif !important;font-style:normal !important;}"
         "p,div,section,li,blockquote,td{font-size:%.0fpt !important;line-height:%.2f !important;}"
+        /* 代码块：字号略小于正文，行高与正文一致，避免高亮行被裁 */
+        "pre,pre *,code,code *{font-size:%.0fpt !important;line-height:%.2f !important;"
+        "text-align:left !important;}"
         "div,section{width:auto!important;max-width:100%%!important;}"
         "img{max-width:100%%!important;height:auto!important;}"
         "table{max-width:100%%!important;}"
         "a{color:#1B365D;text-decoration:none;}"
-        "pre,code{white-space:pre-wrap;}",
-        margin, em, em, lf, em, lf);
+        "pre{white-space:pre-wrap;}"
+        "code{white-space:normal;}"
+        "pre code{white-space:pre-wrap;}",
+        margin, em, em, lf, em, lf, em * 0.9f, lf);
 }
 
 static void *rd_open_impl(const char *path, const char *accel_path, int *err,
-                          float em, float lf, float margin)
+                          float em, float lf, float margin, float w, float hgt)
 {
     if (err) *err = 0;
     if (!path) {
@@ -587,7 +621,9 @@ static void *rd_open_impl(const char *path, const char *accel_path, int *err,
             "table{max-width:100%!important;}"
             "a{color:#1B365D;text-decoration:none;}"
             "*{font-family:sans-serif !important;font-style:normal !important;}"
-            "pre,code{white-space:pre-wrap;}");
+            "pre{white-space:pre-wrap;}"
+            "code{white-space:normal;}"
+            "pre code{white-space:pre-wrap;}");
     }
 
     char epub_path[PATH_MAX];
@@ -608,17 +644,24 @@ static void *rd_open_impl(const char *path, const char *accel_path, int *err,
     }
 
     fz_try(h->ctx) {
-        if (h->accel_path[0]) {
-            /* 有加速缓存时用它打开：分章页数直接从缓存读，免全书 reflow。
-             * accel 文件不存在时会自动新建空缓存。 */
+        if (h->accel_path[0]
+            && fz_file_exists(h->ctx, h->accel_path)) {
+            /* 有加速缓存时用它打开：页数表直接从缓存读，免全书 reflow。
+             * 缓存不存在/损坏时退回普通打开，首次布局后由 accel_save 生成。 */
             h->doc = fz_open_accelerated_document(h->ctx, open_path,
                                                   h->accel_path);
         } else {
             h->doc = fz_open_document(h->ctx, open_path);
         }
         h->reflowable = fz_is_document_reflowable(h->ctx, h->doc);
-        if (h->reflowable) {
-            fz_layout_document(h->ctx, h->doc, 600, 800, em > 0 ? em : 12);
+        /* 重排格式必须在这里就按目标尺寸布局：分章页数表（accelerator）
+         * 是按 (w,h,em,css) 记录的，布局参数不一致就会被整张作废。
+         * 上面已先设好 user css，所以 css_sum 与缓存一致，页数可直接命中。 */
+        if (h->reflowable && w >= 0) {
+            fz_layout_document(h->ctx, h->doc,
+                               w > 100 ? w : 600,
+                               hgt > 100 ? hgt : 800,
+                               em > 0 ? em : 12);
         }
     }
     fz_catch(h->ctx) {
@@ -632,19 +675,25 @@ static void *rd_open_impl(const char *path, const char *accel_path, int *err,
 
 void *rd_open(const char *path, int *err)
 {
-    return rd_open_impl(path, NULL, err, 0, 0, 0);
+    return rd_open_impl(path, NULL, err, 0, 0, 0, 0, 0);
 }
 
-void *rd_open_styled(const char *path, float em, float lf, float margin, int *err)
+/* w/h 语义：w < 0 表示先不布局（调用方随后一定自己布局，
+ * 这里再探测一遍等于白 reflow）；w/h > 100 按目标尺寸布局；
+ * 其余用 600x800 探测，保证 page_count 可用。 */
+void *rd_open_styled(const char *path, float w, float h,
+                     float em, float lf, float margin, int *err)
 {
-    return rd_open_impl(path, NULL, err, em, lf, margin);
+    return rd_open_impl(path, NULL, err, em, lf, margin, w, h);
 }
 
-/* 带布局加速缓存的打开：accel_path 在同布局参数下复用上次的分章页数。 */
+/* 带布局加速缓存的打开：(w,h,em,lf,margin) 必须与阅览时的布局一致，
+ * 才能复用上次记录的分章页数表（免整章 reflow）。 */
 void *rd_open_accel(const char *path, const char *accel_path,
-                    float em, float lf, float margin, int *err)
+                    float w, float h, float em, float lf, float margin,
+                    int *err)
 {
-    return rd_open_impl(path, accel_path, err, em, lf, margin);
+    return rd_open_impl(path, accel_path, err, em, lf, margin, w, h);
 }
 
 /* 把分章页数写回加速缓存（先写临时文件再 rename，避免写坏）。
@@ -656,16 +705,12 @@ static void accel_save(rd_doc *h)
     char tmp[PATH_MAX + 8];
     snprintf(tmp, sizeof(tmp), "%s.tmp", h->accel_path);
 
-    fz_output *out = NULL;
     int ok = 0;
     fz_try(h->ctx) {
-        out = fz_new_output_with_path(h->ctx, tmp, 0);
-        fz_output_accelerator(h->ctx, h->doc, out);  /* 内部 close + drop */
-        out = NULL;
+        fz_save_accelerator(h->ctx, h->doc, tmp);
         ok = 1;
     }
     fz_catch(h->ctx) {
-        if (out) fz_drop_output(h->ctx, out);
         remove(tmp);
         return;
     }
@@ -839,6 +884,9 @@ int rd_layout(void *handle, float w, float h, float em,
     fz_catch(d->ctx) {
         n = -1;
     }
+    /* 布局完成就落盘：下次同参数打开直接复用页数表，
+     * 不再依赖 rd_close（强杀/崩溃时也能保住）。 */
+    if (n > 0) accel_save(d);
     return n;
 }
 
@@ -1227,16 +1275,50 @@ int rd_render_page(void *handle, int page_no, float zoom,
     if (bg_g > 255) bg_g = 255;
     if (bg_b > 255) bg_b = 255;
 
+    fz_context *ctx = h->ctx;
     fz_page *page = NULL;
     fz_pixmap *pix = NULL;
+    fz_device *dev = NULL;
 
-    fz_try(h->ctx) {
-        page = fz_load_page(h->ctx, h->doc, page_no);
+    fz_var(page);
+    fz_var(pix);
+    fz_var(dev);
+
+    /* 直接渲染成不透明 RGBA：先建带 alpha 的 pixmap 并铺满背景色，
+     * 再让页面画上去。省掉旧实现里“渲染透明通道 + 逐像素混背景 +
+     * 逐像素转 RGBA”的两趟全图遍历（1261x1272 约 3-4ms），
+     * 输出可以直接 memcpy 给 SDL。 */
+    fz_try(ctx) {
+        page = fz_load_page(ctx, h->doc, page_no);
+        fz_rect bounds = fz_bound_page(ctx, page);
         fz_matrix ctm = fz_scale(zoom, zoom);
-        pix = fz_new_pixmap_from_page(h->ctx, page, ctm, fz_device_rgb(h->ctx), 1);
+        fz_irect bbox = fz_round_rect(fz_transform_rect(bounds, ctm));
+        pix = fz_new_pixmap_with_bbox(ctx, fz_device_rgb(ctx), bbox, NULL, 1);
+        if (bg_r == 255 && bg_g == 255 && bg_b == 255) {
+            fz_clear_pixmap_with_value(ctx, pix, 0xff);
+        } else {
+            int pw = pix->w, ph = pix->h, pn = pix->n;
+            unsigned char *sp = pix->samples;
+            for (int y = 0; y < ph; y++) {
+                unsigned char *row = sp + (size_t)y * (size_t)pix->stride;
+                for (int x = 0; x < pw; x++) {
+                    row[x * pn + 0] = (unsigned char)bg_r;
+                    row[x * pn + 1] = (unsigned char)bg_g;
+                    row[x * pn + 2] = (unsigned char)bg_b;
+                    row[x * pn + 3] = 255;
+                }
+            }
+        }
+        dev = fz_new_draw_device(ctx, ctm, pix);
+        fz_run_page(ctx, page, dev, ctm, NULL);
+        fz_close_device(ctx, dev);
+        fz_drop_device(ctx, dev);
+        dev = NULL;
     }
-    fz_catch(h->ctx) {
-        if (page) fz_drop_page(h->ctx, page);
+    fz_catch(ctx) {
+        if (dev) fz_drop_device(ctx, dev);
+        if (pix) fz_drop_pixmap(ctx, pix);
+        if (page) fz_drop_page(ctx, page);
         return -2;
     }
 
@@ -1245,50 +1327,54 @@ int rd_render_page(void *handle, int page_no, float zoom,
     int n = pix->n;
     int stride = (int)pix->stride;
     if (w <= 0 || hh <= 0) {
-        fz_drop_pixmap(h->ctx, pix);
-        fz_drop_page(h->ctx, page);
+        fz_drop_pixmap(ctx, pix);
+        fz_drop_page(ctx, page);
         return -3;
     }
 
     uint8_t *buf = (uint8_t *)malloc((size_t)w * (size_t)hh * 4);
     if (!buf) {
-        fz_drop_pixmap(h->ctx, pix);
-        fz_drop_page(h->ctx, page);
+        fz_drop_pixmap(ctx, pix);
+        fz_drop_page(ctx, page);
         return -4;
     }
 
-    for (int y = 0; y < hh; y++) {
-        const uint8_t *src = pix->samples + (size_t)y * (size_t)stride;
-        uint8_t *dst = buf + (size_t)y * (size_t)w * 4;
-        if (n >= 4) {
-            for (int x = 0; x < w; x++) {
-                uint8_t a = src[x * n + 3];
-                int inv = 255 - a;
-                dst[x * 4 + 0] = (uint8_t)(src[x * n + 0] + (bg_r * inv + 127) / 255);
-                dst[x * 4 + 1] = (uint8_t)(src[x * n + 1] + (bg_g * inv + 127) / 255);
-                dst[x * 4 + 2] = (uint8_t)(src[x * n + 2] + (bg_b * inv + 127) / 255);
-                dst[x * 4 + 3] = 255;
-            }
-        } else if (n == 3) {
-            for (int x = 0; x < w; x++) {
-                dst[x * 4 + 0] = src[x * 3 + 0];
-                dst[x * 4 + 1] = src[x * 3 + 1];
-                dst[x * 4 + 2] = src[x * 3 + 2];
-                dst[x * 4 + 3] = 255;
-            }
-        } else {
-            for (int x = 0; x < w; x++) {
-                uint8_t v = src[x];
-                dst[x * 4 + 0] = v;
-                dst[x * 4 + 1] = v;
-                dst[x * 4 + 2] = v;
-                dst[x * 4 + 3] = 255;
+    if (n == 4 && stride == w * 4) {
+        memcpy(buf, pix->samples, (size_t)w * (size_t)hh * 4);
+    } else {
+        for (int y = 0; y < hh; y++) {
+            const uint8_t *src = pix->samples + (size_t)y * (size_t)stride;
+            uint8_t *dst = buf + (size_t)y * (size_t)w * 4;
+            if (n >= 4) {
+                for (int x = 0; x < w; x++) {
+                    uint8_t a = src[x * n + 3];
+                    int inv = 255 - a;
+                    dst[x * 4 + 0] = (uint8_t)(src[x * n + 0] + (bg_r * inv + 127) / 255);
+                    dst[x * 4 + 1] = (uint8_t)(src[x * n + 1] + (bg_g * inv + 127) / 255);
+                    dst[x * 4 + 2] = (uint8_t)(src[x * n + 2] + (bg_b * inv + 127) / 255);
+                    dst[x * 4 + 3] = 255;
+                }
+            } else if (n == 3) {
+                for (int x = 0; x < w; x++) {
+                    dst[x * 4 + 0] = src[x * 3 + 0];
+                    dst[x * 4 + 1] = src[x * 3 + 1];
+                    dst[x * 4 + 2] = src[x * 3 + 2];
+                    dst[x * 4 + 3] = 255;
+                }
+            } else {
+                for (int x = 0; x < w; x++) {
+                    uint8_t v = src[x];
+                    dst[x * 4 + 0] = v;
+                    dst[x * 4 + 1] = v;
+                    dst[x * 4 + 2] = v;
+                    dst[x * 4 + 3] = 255;
+                }
             }
         }
     }
 
-    fz_drop_pixmap(h->ctx, pix);
-    fz_drop_page(h->ctx, page);
+    fz_drop_pixmap(ctx, pix);
+    fz_drop_page(ctx, page);
 
     *out = buf;
     *out_w = w;

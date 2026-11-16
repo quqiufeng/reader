@@ -1,5 +1,7 @@
 -- 页面渲染层：页纹理、页缓存、链接与分页加载。
 local M = {}
+local PROF_TS = os.getenv("READER_PROF") ~= nil
+local tnow = PROF_TS and require("core.clock").now or nil
 M.__index = M
 
 function M.new(ctx)
@@ -35,11 +37,24 @@ function M:relayout(frac)
     local margin = math.min(s.margin, math.floor(layout_w / 8))
     local nt, hit = v.layout:apply(R.doc, layout_w, avail_h,
         s.font_size, s.line_factor, margin)
-    if hit then return end
+    if hit then
+        local seek = v.seek_page
+        if seek then
+            v.seek_page = nil
+            R.page = math.max(0, math.min((R.total or 1) - 1, seek))
+        end
+        return
+    end
     if nt and nt > 0 then
         R.total = nt
-        R.page = math.max(0, math.min(R.total - 1,
-            math.floor((frac or 0) * R.total)))
+        local seek = v.seek_page            -- 开章时指定的页，布局完再夹取
+        if seek then
+            v.seek_page = nil
+            R.page = math.max(0, math.min(R.total - 1, seek))
+        else
+            R.page = math.max(0, math.min(R.total - 1,
+                math.floor((frac or 0) * R.total)))
+        end
     end
 end
 
@@ -171,14 +186,23 @@ function M:render_into(idx, target_w)
     if pw and pw > 0 then z = target_w / pw end
     z = math.max(0.05, math.min(8.0, z))
     local br, bg, bb = v.page_bg_rgb()
+    local t_rp = PROF_TS and tnow() or 0
     local pixels, w, h, stride = rd.render_page(R.doc, idx, z, br, bg, bb)
+    if PROF_TS then
+        io.stderr:write(string.format("[prof]   render_page %d %.1f ms %dx%d\n",
+            idx, (tnow() - t_rp) * 1000, w or 0, h or 0))
+    end
     if not pixels then return nil end
     if s.theme == "dark" then
         ctx.invert_rgba(pixels, w, h, stride or (w * 4))
     end
+    local t_tx = PROF_TS and tnow() or 0
     local t = ctx.sdl.create_texture(ctx.ren, w, h)
     if not t then rd.free(pixels); return nil end
     ctx.sdl.update_texture(t, pixels, stride or (w * 4))
+    if PROF_TS then
+        io.stderr:write(string.format("[prof]   upload %d %.1f ms\n", idx, (tnow() - t_tx) * 1000))
+    end
     rd.free(pixels)
     return t, w, h
 end
@@ -197,14 +221,8 @@ function M:teardown()
 end
 
 local PROF = os.getenv("READER_PROF") ~= nil
-local tnow = function()
-    local ffi = require("ffi")
-    pcall(ffi.cdef, "typedef struct { long tv_sec; long tv_nsec; } prof_ts;"
-        .. "int clock_gettime(int, prof_ts *);")
-    local ts = ffi.new("prof_ts")
-    ffi.C.clock_gettime(1, ts)
-    return tonumber(ts.tv_sec) + tonumber(ts.tv_nsec) / 1e9
-end
+local PROF_TS = PROF
+local tnow = PROF and require("core.clock").now or nil
 
 function M:load_page(n, keep_scroll)
     local ctx = self.ctx
@@ -270,6 +288,9 @@ function M:load_page(n, keep_scroll)
     target_w = math.floor(target_w * v.zoom)
     sig = self:content_sig()
     local ce = v.pcache:take(sig .. ":" .. n)
+    if PROF then
+        io.stderr:write(string.format("[prof] hit page %d %s\n", n, ce and "yes" or "no"))
+    end
     if ce then
         v.tex, v.tex_w, v.tex_h = ce.tex, ce.w, ce.h
     else
@@ -302,8 +323,13 @@ function M:load_page(n, keep_scroll)
     if R.chapter_mode then
         local step = spread and 2 or 1
         local np = n + step
-        if np < R.total then
-            v.prefetch = { sig = sig, page = np, target_w = target_w }
+        -- 双栏时把下一屏的两页都预热：逐页预热只暖一半，
+        -- 下一屏仍要现场渲染一页，翻页耗时居高不下。
+        local pages = {}
+        if np < R.total then pages[#pages + 1] = np end
+        if spread and np + 1 < R.total then pages[#pages + 1] = np + 1 end
+        if #pages > 0 then
+            v.prefetch = { sig = sig, pages = pages, target_w = target_w }
         end
     end
     print(string.format("[reader] page %d/%d  %dx%d%s", R.page + 1, R.total,

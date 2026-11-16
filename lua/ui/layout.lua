@@ -17,7 +17,15 @@ function M:apply(doc, width, height, em, line_factor, margin)
     if self.key == key then
         return self.total, true
     end
+    local t0
+    if os.getenv("READER_PROF") then t0 = require("core.clock").now() end
     local total = self.rd.layout(doc, width, height, em, line_factor, margin)
+    if t0 then
+        io.stderr:write(string.format(
+            "[prof] layout.apply %dx%d em=%.1f mg=%d %.1f ms\n",
+            width, height, em, margin,
+            (require("core.clock").now() - t0) * 1000))
+    end
     if total and total > 0 then
         self.key = key
         self.total = total
