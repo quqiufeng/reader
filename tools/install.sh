@@ -30,7 +30,19 @@ for f in settings.lua state.lua window.lua; do
     [ -f "$BK/$f" ] && cp "$BK/$f" "$APP/$f"
 done
 chmod +x "$APP/native-reader" "$APP/run.sh" "$APP/launch.sh" "$APP/reader-agent" "$APP/reader-lua" "$APP/lib/luajit"
-ln -sf "$APP/run.sh" "$PREFIX/bin/native-reader"
+
+# 启动入口指向哪一份：
+# - 在仓库里安装（存在 build/ + tools/launch.sh）：指向仓库，桌面/命令行启动
+#   始终是最近一次 ./tools/build.sh 的产物，不会跑到安装快照上（AGENTS §3.1）。
+# - 从 dist 安装（没有仓库）：指向安装目录，自成一体。
+if [ -x "$ROOT/tools/launch.sh" ] && [ -x "$ROOT/build/native-reader" ]; then
+    LAUNCH="$ROOT/tools/launch.sh"
+    LAUNCH_ICON="$ROOT/assets/icons/native-reader.png"
+else
+    LAUNCH="$APP/launch.sh"
+    LAUNCH_ICON="$APP/assets/icons/native-reader.png"
+fi
+ln -sf "$LAUNCH" "$PREFIX/bin/native-reader"
 ln -sf "$APP/reader-agent" "$PREFIX/bin/reader-agent"
 ln -sf "$APP/reader-lua" "$PREFIX/bin/reader-lua"
 
@@ -49,8 +61,8 @@ Version=1.0
 Name=reader
 GenericName=Ebook Reader
 Comment=本地电子书阅读器
-Exec=$APP/launch.sh %f
-Icon=$APP/assets/icons/native-reader.png
+Exec=$LAUNCH %f
+Icon=$LAUNCH_ICON
 Terminal=false
 Categories=Office;Viewer;
 MimeType=application/pdf;application/epub+zip;application/x-mobipocket-ebook;text/plain;

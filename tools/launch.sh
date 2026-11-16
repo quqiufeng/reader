@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 # launch.sh — 桌面图标入口：单实例、在图形会话内启动。
+# 注意：本脚本可能通过软链（~/.local/bin/native-reader）被调用，
+# 所以必须解析软链再定位 run.sh。
 set -uo pipefail
 
-HERE="$(cd "$(dirname "$0")" && pwd)"
+SELF="$(readlink -f "$0")"
+HERE="$(cd "$(dirname "$SELF")" && pwd)"
+ROOT="$(cd "$HERE/.." && pwd)"
 LOG=/tmp/native-reader_launch.log
 
 {
@@ -10,8 +14,17 @@ LOG=/tmp/native-reader_launch.log
     echo "DISPLAY=$DISPLAY XAUTHORITY=${XAUTHORITY:-} XDG_SESSION_TYPE=${XDG_SESSION_TYPE:-}"
 
     if pgrep -x native-reader >/dev/null 2>&1; then
-        xdotool search --class native-reader windowactivate 2>/dev/null || \
-            wmctrl -x -a native-reader 2>/dev/null || true
+        # 已运行：用 LuaJIT FFI 把窗口提到最前（不调 xdotool/wmctrl）
+        if [ -x "$HERE/reader-lua" ] && [ -f "$ROOT/automation/x11.lua" ]; then
+            READER_ROOT="$ROOT" "$HERE/reader-lua" -e '
+                package.path = (os.getenv("READER_ROOT") or ".").."/automation/?.lua;"..package.path
+                local ok, x11 = pcall(require, "x11")
+                if ok then
+                    local w = x11.window_class("native-reader")
+                    if w then w:activate(); w:raise() end
+                end
+            ' 2>/dev/null || true
+        fi
         echo "already running, bring to front"
         exit 0
     fi
