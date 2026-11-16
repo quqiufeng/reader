@@ -10,6 +10,10 @@ mkdir -p "$DIST/lib" "$DIST/lua" "$DIST/assets" "$DIST/testdata" "$DIST/tools"
 
 cp "$BUILD/native-reader" "$DIST/"
 cp "$BUILD/libreader_native.so" "$BUILD/libreader_ctl.so" "$DIST/lib/"
+# OCR 为可选组件：没有 ONNX Runtime 时构建不出 reader_ocr.so
+if [ -f "$BUILD/libreader_ocr.so" ]; then
+    cp "$BUILD/libreader_ocr.so" "$DIST/lib/"
+fi
 cp -r "$ROOT/lua/." "$DIST/lua/"
 cp -r "$ROOT/assets/." "$DIST/assets/"
 cp "$ROOT/testdata/sample.txt" "$DIST/testdata/"

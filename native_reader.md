@@ -499,6 +499,49 @@ find_package(SQLite3 REQUIRED)
 # libunibreak, stb, libjpeg-turbo, libpng, libwebp
 ```
 
+### 12.1.1 CPU OCR（PP-OCRv4 / ONNX Runtime）
+
+无文本层的扫描页 / 图片页需要 OCR。实现是 **CPU 模式**，不依赖 CUDA：
+
+| 位置 | 作用 |
+|---|---|
+| `src/ocr/ocr.{hpp,cpp}` + `stb_image*.h` | 引擎：DBNet 检测 + CRNN 识别（内置，无 OpenCV） |
+| `src/shim/ocr_api.cpp` | C ABI（`rd_ocr_*`），线程安全，强制 CPU provider |
+| `lua/ffi/ocr.lua` | LuaJIT FFI 封装：`text/boxes/init/available` |
+| 模型目录 | `READER_OCR_MODEL_DIR`，默认 `/data/models/ocr` |
+
+构建：CMake 目标 `reader_ocr`（`-DREADER_OCR=ON`，需 `ORT_INCLUDE`/`ORT_LIB`，
+默认探测 `/data/venv/onnxruntime-linux-x64-gpu-1.20.1/include` + `/usr/local/lib/libonnxruntime.so.1`）。
+缺 ONNX Runtime 时自动跳过，`ocr.available()==false`，调用方回退文本层。
+
+C ABI（`lua/ffi/ocr.lua` 的 `ffi.cdef` 与此一致）：
+
+```c
+int         rd_ocr_init(const char *model_dir);   /* 0=ok，NULL=自动 */
+const char *rd_ocr_provider(void);                /* "CPU" */
+const char *rd_ocr_model_dir(void);
+const char *rd_ocr_error(void);
+char       *rd_ocr_text(const char *image_path);  /* 行用 \n 连接；失败 NULL */
+char       *rd_ocr_boxes(const char *image_path); /* JSON [{x,y,w,h,score,text}] */
+void        rd_ocr_free(char *p);
+```
+
+Lua 用法：
+
+```lua
+local ocr = require("ffi.ocr")
+if ocr.available() then
+    local txt, err = ocr.text("/path/page.png")
+    for _, b in ipairs(ocr.boxes("/path/page.png") or {}) do
+        -- b.x, b.y, b.w, b.h, b.score, b.text
+    end
+end
+```
+
+排版还原：识别模型不输出英文词间空格，`ocr.cpp` 用裁剪图的**列墨迹空白**找回词边界，
+映射到 CTC 时间步插入空格，再由 `CleanSpaces()` 去掉标点前/括号旁/CJK 之间的多余空格。
+中文页不插空格。实测（6 核 CPU）：整页 1200×1600 约 3–6 s，可放后台线程。
+
 ### 12.2 授权
 
 | 库 | 授权 | 注意 |
@@ -758,6 +801,8 @@ return M
 | `reader.highlight.add/list` | 高亮/笔记 |
 | `settings.get/set` | 主题、字体、字号、行距、边距、单双页 |
 | `app.capture` | 截图到 `path` |
+| `app.snapshot` | 只截书页内容到 `path`（不传自动命名到 `$HOME`） |
+| `app.markdown` | `{path}` 当前页导出 Markdown 到 `$HOME`，无文本层自动 OCR，返回 `{ok,path}` |
 | `app.state` | 进程/窗口/内存状态 |
 | `app.quit` | 退出 |
 
