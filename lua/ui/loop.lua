@@ -7,14 +7,7 @@ function M.new(ctx)
 end
 
 local PROF = os.getenv("READER_PROF") ~= nil
-local function tnow()
-    local ffi = require("ffi")
-    pcall(ffi.cdef, "typedef struct { long tv_sec; long tv_nsec; } prof_ts2;"
-        .. "int clock_gettime(int, prof_ts2 *);")
-    local ts = ffi.new("prof_ts2")
-    ffi.C.clock_gettime(1, ts)
-    return tonumber(ts.tv_sec) + tonumber(ts.tv_nsec) / 1e9
-end
+local tnow = PROF and require("core.clock").now or nil
 
 function M:run()
     local ctx = self.ctx
@@ -97,11 +90,34 @@ function M:run()
             local P = v.prefetch
             v.prefetch = nil
             local R = ctx.get_reader()
-            if R.doc and not R.is_txt and P.sig == v.content_sig() and P.page < R.total then
-                local key = P.sig .. ":" .. P.page
-                if not v.pcache.map[key] then
-                    local t, w, h = v.render_into(P.page, P.target_w)
-                    if t then v.pcache:put(key, { tex = t, w = w, h = h }) end
+            if R.doc and not R.is_txt and P.sig == v.content_sig() then
+                for _, pg in ipairs(P.pages or {}) do
+                    local key = P.sig .. ":" .. pg
+                    if pg < R.total and not v.pcache.map[key] then
+                        local t_pf = PROF and tnow() or 0
+                        local t, w, h = v.render_into(pg, P.target_w)
+                        if t then v.pcache:put(key, { tex = t, w = w, h = h }) end
+                        if PROF then
+                            io.stderr:write(string.format(
+                                "[prof] prefetch page %d %.1f ms ok=%s\n",
+                                pg, (tnow() - t_pf) * 1000, tostring(t and true or false)))
+                        end
+                    end
+                end
+            end
+        end
+
+        -- 章末空闲时预打开下一章：切换章节省掉现场解析（大章节 100~200ms）
+        if not v.dirty and not v.chapter_prefetch_done then
+            local R = ctx.get_reader()
+            if R and R.chapter_mode and R.doc and R.next_chapter_idx then
+                local spread = v.view_metrics()
+                local step = spread and 2 or 1
+                if (R.page or 0) + step >= (R.total or 0) - 1 then
+                    local nx = R:next_chapter_idx()
+                    if nx and R:prefetch_chapter(nx) then
+                        v.chapter_prefetch_done = true
+                    end
                 end
             end
         end
@@ -117,7 +133,17 @@ function M:run()
             v.dirty = false
             v.drew = true
         end
-        sdl.delay(v.drew and 16 or 30)
+        -- 帧间隔切成 2ms 小片：有自动化命令在等就立刻醒来，
+        -- 否则命令往返最多白等一整帧（16ms），翻页手感直接受影响。
+        local wait = v.drew and 16 or 30
+        local step = 2
+        while wait > 0 do
+            local server2 = ctx.get_server()
+            if server2 and server2.has_pending and server2:has_pending() then break end
+            local d = wait < step and wait or step
+            sdl.delay(d)
+            wait = wait - d
+        end
     end
 end
 

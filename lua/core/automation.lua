@@ -40,6 +40,8 @@ local O_NONBLOCK = 0x800
 local EAGAIN = 11
 local EWOULDBLOCK = 35
 local MSG_NOSIGNAL = 0x4000
+local MSG_PEEK = 0x2
+local MSG_DONTWAIT = 0x40
 
 local function jesc(s)
     s = tostring(s or "")
@@ -168,6 +170,19 @@ function M:handle(line)
         return jser(H.call(fn, args))
     end
     return jser({ ok = false, error = "unknown cmd: " .. tostring(cmd) })
+end
+
+-- 是否有客户端有待读数据：主循环用它把 16ms 帧间隔切成小片，
+-- 避免自动化命令白等一帧（翻页时省下最多 16ms 往返）。
+function M:has_pending()
+    if not self.fd then return false end
+    local buf = ffi.new("char[1]")
+    for cfd in pairs(self.clients) do
+        -- MSG_PEEK | MSG_DONTWAIT：只看不取，不破坏 poll() 的读取逻辑
+        local n = C.recv(cfd, buf, 1, bit.bor(MSG_PEEK, MSG_DONTWAIT))
+        if n > 0 or n == 0 then return true end
+    end
+    return false
 end
 
 function M:poll()
