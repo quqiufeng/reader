@@ -334,6 +334,9 @@ function M:call(fn, args)
         ctx.draw()
         local ok = v.save_content_snapshot(path)
         return { ok = ok, path = path }
+    elseif fn == "app.markdown" then
+        local ok, path = v.save_page_markdown(args.path)
+        return { ok = ok, path = path }
     elseif fn == "app.capture" then
         local path = args.path or v.snapshot_path()
         local ok = ctx.capture(path)

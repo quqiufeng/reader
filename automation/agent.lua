@@ -99,6 +99,15 @@ function Agent:snapshot(path)
     return decode(self.c:call("app.snapshot", args))
 end
 
+-- 当前页（单页/双页）导出 Markdown，默认落在 ~；返回 {ok, path}
+function Agent:markdown(path)
+    local args = "{}"
+    if path then
+        args = ('{"path":%s}'):format(encode(path))
+    end
+    return decode(self.c:call("app.markdown", args))
+end
+
 function Agent:raw(req) return self.c:raw(req) end
 function Agent:ping() return decode(self.c:ping()) end
 function Agent:actions() return self.c:actions() end

@@ -241,6 +241,7 @@ reader-agent toc.activate 3
 reader-agent open 'dav://192.168.1.53:5005/share/book.mobi' 25
 reader-agent history.clear
 reader-agent snapshot          # 只截书的内容页
+reader-agent markdown          # 当前页存成 ~/书名_页码.md（扫描页自动 OCR）
 reader-agent zoom 1.25
 reader-agent pan 80
 reader-agent dual              # 双栏/单栏切换
@@ -289,6 +290,7 @@ a:close()
 | `settings.open/adjust/close` | 设置面板 |
 | `app.capture` | `{path}` 截整个窗口（调试用） |
 | `app.snapshot` | `{path}` 只截书的内容页；不传 path 自动命名 |
+| `app.markdown` | `{path}` 把当前页（双栏含右页）导出 Markdown 到 `$HOME`；无文本层时自动 OCR；返回 `{ok, path}` |
 | `app.maximize/fullscreen/dual/eye` | 视图切换 |
 | `app.quit` | 退出 |
 
@@ -307,12 +309,16 @@ a:settings()             a:setSettings(t)   a:settingsOpen(row) a:settingsAdjust
 a:library()              a:libraryOpen()    a:librarySelect(i)  a:libraryActivate(i)
 a:removeHistory(i, path) a:clearHistory()
 a:dual()                 a:maximize()       a:fullscreen()      a:eye()
-a:capture(path)          a:snapshot(path)   a:quit()
+a:capture(path)          a:snapshot(path)   a:markdown(path)   a:quit()
 a:read(count, opts)      a:turn(n, delay)   a:close()
 ```
 
 - `read(count)` 会按当前布局读取连续页；双栏时同时返回右页。
 - `snapshot` 只包含书的页面内容，不含工具栏、页脚、背景。
+- `markdown` 导出当前页纯文本为 Markdown（标题 + 页码/章节/来源元信息 + 按页分段），
+  文件名 `<书名>_<左页>_<右页>.md`（单页 `<书名>_<页>.md`），同名自动 `-1`、`-2`；
+  文本优先取内嵌文本层，扫描页（无文字层且 `ffi/ocr` 可用）自动回落到 OCR。
+  UI 上对应顶栏「文字」按钮（`click text`）。
 - `app.capture` 仍保留，用于 UI 验收/调试；内容页给 Agent 用 `snapshot`。
 
 ### 10.5 原始协议

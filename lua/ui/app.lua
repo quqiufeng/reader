@@ -583,6 +583,19 @@ local screenshot = require("ui.screenshot").new({
     draw = function() draw() end,
     show_toast = function(text, secs) v.show_toast(text, secs) end,
 })
+local pagemd = require("ui.page_md").new({
+    v = v, rd = rd, S = S, settings = settings, reader = R,
+    get_page = function() return R.page end,
+    get_total = function() return R.total end,
+    get_is_txt = function() return R.is_txt end,
+    get_pages = function() return R.pages end,
+    get_doc = function() return R.doc end,
+    get_book = function() return R.book end,
+    show_toast = function(text, secs) v.show_toast(text, secs) end,
+})
+v.markdown_path = function() return pagemd:path() end
+v.save_page_markdown = function(path) return pagemd:take(path) end
+
 v.snapshot_path = function() return screenshot:path() end
 v.save_content_snapshot = function(path) return screenshot:save_content(path) end
 v.take_snapshot = function() return screenshot:take() end

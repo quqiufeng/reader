@@ -2,8 +2,8 @@
 local M = {}
 M.__index = M
 
-local KEYS = { "bm", "st", "fs", "max", "eye", "dual", "shot", "open" }
-local DRAW_ORDER = { "st", "bm", "fs", "max", "eye", "dual", "shot", "open" }
+local KEYS = { "bm", "st", "fs", "max", "eye", "dual", "shot", "text", "open" }
+local DRAW_ORDER = { "st", "bm", "fs", "max", "eye", "dual", "shot", "text", "open" }
 
 function M.new(ctx)
     return setmetatable({ ctx = ctx }, M)
@@ -30,7 +30,7 @@ function M:rebuild()
         bm = "书签", st = "设置", fs = "全屏",
         max = v.max and "还原" or "最大化", eye = "换色",
         dual = (v.fs or v.dual) and "单栏" or "双栏",
-        shot = "截图", open = "打开",
+        shot = "截图", text = "文字", open = "打开",
     }
     for _, k in ipairs(KEYS) do
         local tex, w, h = v.make_text(labels[k], f_page, theme.muted)
@@ -42,7 +42,8 @@ function M:rebuild()
     self.eye_x = self.max_x - S(14) - (self.eye_w or 0)
     self.dual_x = self.eye_x - S(14) - (self.dual_w or 0)
     self.shot_x = self.dual_x - S(14) - (self.shot_w or 0)
-    self.open_x = self.shot_x - S(14) - (self.open_w or 0)
+    self.text_x = self.shot_x - S(14) - (self.text_w or 0)
+    self.open_x = self.text_x - S(14) - (self.open_w or 0)
     self.bm_x = self.open_x - S(14) - (self.bm_w or 0)
     self.st_x = self.bm_x - S(14) - (self.st_w or 0)
 end
@@ -77,6 +78,7 @@ function M:hit(x)
     elseif x >= self.eye_x then return "eye"
     elseif x >= self.dual_x then return "dual"
     elseif x >= self.shot_x then return "shot"
+    elseif x >= self.text_x then return "text"
     elseif x >= self.open_x then return "open"
     elseif x >= self.bm_x then return "bm"
     elseif x >= self.st_x then return "st"

@@ -352,6 +352,7 @@ function M:open_book(path, start_page)
     v.last_browse_dir = path:match("^(.*)/[^/]*$")
     local fmt = ctx.rd.detect(path)
     prof_mark("detect")
+    self.fmt = fmt
     self.is_txt = fmt == 5
     v.reflow = fmt == 2 or fmt == 3 or fmt == 4
 

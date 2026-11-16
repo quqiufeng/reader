@@ -181,12 +181,14 @@ elseif cmd == "capture" then
     emit(a:capture(arg[2] or "/tmp/opencode/reader_agent.png"))
 elseif cmd == "snapshot" then
     emit(a:snapshot(arg[2]))
+elseif cmd == "markdown" or cmd == "md" then
+    emit(a:markdown(arg[2]))
 elseif cmd == "raw" then
     print(a:raw(arg[2] or '{"cmd":"state"}') or "{}")
 elseif cmd == "quit" then
     emit(a:quit())
 else
-    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|bookmark|library|history|settings|scroll|zoom|pan|capture|snapshot|quit")
+    print("usage: reader-agent state|open|text|read|next|prev|goto|toc|bookmark|library|history|settings|scroll|zoom|pan|capture|snapshot|markdown|quit")
     os.exit(2)
 end
 

@@ -32,7 +32,8 @@ rdctl_t *rdctl_open(const char *path)
     }
 
     struct timeval tv;
-    tv.tv_sec = 2;
+    /* OCR 导出（app.markdown，PDF 走识别）单页可达数秒，超时放宽到 30s。 */
+    tv.tv_sec = 30;
     tv.tv_usec = 0;
     setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
     setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
